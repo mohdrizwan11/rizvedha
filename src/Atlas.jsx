@@ -7,57 +7,58 @@ import {
   Compass, CheckCircle2, XCircle, RotateCcw, Filter, Eye, ListFilter
 } from 'lucide-react';
 import AtlasMap from './AtlasMap';
+import { translateState, translateRiver, getTelugu } from './telugu';
 
-// 33 Topics mapped strictly to the user's requested 8 categories
+// 33 Topics mapped strictly to the user's requested 8 categories with Telugu titles
 export const ATLAS_TOPICS = [
   // 1. Geography & Nature
-  { slug: 'rivers', title: 'Rivers of India', titleHi: 'भारत की नदियाँ', category: 'Geography & Nature', icon: Waves, color: '#0284c7', count: 27, hasMap: true },
-  { slug: 'waterways', title: 'National Waterways', titleHi: 'राष्ट्रीय जलमार्ग', category: 'Geography & Nature', icon: Ship, color: '#0369a1', count: 12, hasMap: true },
-  { slug: 'power-plants', title: 'Power Plants', titleHi: 'ऊर्जा संयंत्र', category: 'Geography & Nature', icon: Zap, color: '#f59e0b', count: 130, hasMap: true },
-  { slug: 'national-parks', title: 'National Parks', titleHi: 'राष्ट्रीय उद्यान', category: 'Geography & Nature', icon: Trees, color: '#10b981', count: 104, hasMap: true },
-  { slug: 'gi-tags', title: 'GI Tags', titleHi: 'जीआई टैग', category: 'Geography & Nature', icon: BadgeCheck, color: '#8b5cf6', count: 44, hasMap: true },
-  { slug: 'crops', title: 'Crops & Agriculture', titleHi: 'फसलें और कृषि', category: 'Geography & Nature', icon: Sprout, color: '#84cc16', count: 61, hasMap: true },
-  { slug: 'soils', title: 'Soil Types', titleHi: 'मृदा के प्रकार', category: 'Geography & Nature', icon: Layers, color: '#d97706', count: 52, hasMap: true },
-  { slug: 'lakes', title: 'Lakes of India', titleHi: 'भारत की झीलें', category: 'Geography & Nature', icon: Droplets, color: '#06b6d4', count: 40, hasMap: true },
-  { slug: 'biosphere-reserves', title: 'Biosphere Reserves', titleHi: 'जैवमंडल आरक्षित क्षेत्र', category: 'Geography & Nature', icon: Trees, color: '#059669', count: 18, hasMap: true },
-  { slug: 'mountain-peaks', title: 'Mountain Peaks', titleHi: 'पर्वत चोटियाँ', category: 'Geography & Nature', icon: Mountain, color: '#64748b', count: 62, hasMap: true },
-  { slug: 'physical-india', title: 'Physical India', titleHi: 'भौगोलिक भारत', category: 'Geography & Nature', icon: Map, color: '#0d9488', count: 107, hasMap: true },
+  { slug: 'rivers', title: 'Rivers of India', titleTe: 'భారతదేశ నదులు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Waves, color: '#0284c7', count: 27, hasMap: true },
+  { slug: 'waterways', title: 'National Waterways', titleTe: 'జాతీయ జలమార్గాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Ship, color: '#0369a1', count: 12, hasMap: true },
+  { slug: 'power-plants', title: 'Power Plants', titleTe: 'విద్యుత్ కేంద్రాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Zap, color: '#f59e0b', count: 130, hasMap: true },
+  { slug: 'national-parks', title: 'National Parks', titleTe: 'జాతీయ ఉద్యానవనాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Trees, color: '#10b981', count: 104, hasMap: true },
+  { slug: 'gi-tags', title: 'GI Tags', titleTe: 'భౌగోళిక గుర్తింపు ట్యాగ్‌లు (GI)', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: BadgeCheck, color: '#8b5cf6', count: 44, hasMap: true },
+  { slug: 'crops', title: 'Crops & Agriculture', titleTe: 'పంటలు & వ్యవసాయం', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Sprout, color: '#84cc16', count: 61, hasMap: true },
+  { slug: 'soils', title: 'Soil Types', titleTe: 'నేలల రకాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Layers, color: '#d97706', count: 52, hasMap: true },
+  { slug: 'lakes', title: 'Lakes of India', titleTe: 'భారతదేశ సరస్సులు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Droplets, color: '#06b6d4', count: 40, hasMap: true },
+  { slug: 'biosphere-reserves', title: 'Biosphere Reserves', titleTe: 'బయోస్పియర్ రిజర్వ్‌లు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Trees, color: '#059669', count: 18, hasMap: true },
+  { slug: 'mountain-peaks', title: 'Mountain Peaks', titleTe: 'పర్వత శిఖరాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Mountain, color: '#64748b', count: 62, hasMap: true },
+  { slug: 'physical-india', title: 'Physical India', titleTe: 'భౌతిక భారతదేశం', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Map, color: '#0d9488', count: 107, hasMap: true },
 
   // 2. History & Culture
-  { slug: 'temples', title: 'Temples of India', titleHi: 'भारत के प्रमुख मंदिर', category: 'History & Culture', icon: Landmark, color: '#b45309', count: 38, hasMap: true },
-  { slug: 'dances', title: 'Dances of India', titleHi: 'भारतीय शास्त्रीय व लोक नृत्य', category: 'History & Culture', icon: Sparkles, color: '#ec4899', count: 86, hasMap: true },
-  { slug: 'music', title: 'Music of India', titleHi: 'भारतीय संगीत व वाद्ययंत्र', category: 'History & Culture', icon: Music, color: '#a855f7', count: 60, hasMap: true },
-  { slug: 'ancient-dynasties', title: 'Ancient Dynasties', titleHi: 'प्राचीन राजवंश', category: 'History & Culture', icon: Crown, color: '#eab308', count: 63, hasMap: true },
-  { slug: 'medieval-empires', title: 'Medieval Empires', titleHi: 'मध्यकालीन साम्राज्य', category: 'History & Culture', icon: Castle, color: '#c2410c', count: 44, hasMap: true },
-  { slug: 'freedom-movement', title: 'Freedom Movement', titleHi: 'स्वतंत्रता संग्राम', category: 'History & Culture', icon: Flag, color: '#ea580c', count: 49, hasMap: true },
-  { slug: 'monuments', title: 'Historical Monuments', titleHi: 'ऐतिहासिक स्मारक', category: 'History & Culture', icon: Building2, color: '#78350f', count: 45, hasMap: true },
-  { slug: 'art-culture', title: 'Art & Culture', titleHi: 'कला एवं संस्कृति', category: 'History & Culture', icon: Palette, color: '#db2777', count: 75, hasMap: true },
-  { slug: 'books-authors', title: 'Books & Authors', titleHi: 'पुस्तकें और लेखक', category: 'History & Culture', icon: BookOpen, color: '#6366f1', count: 121, hasMap: false },
+  { slug: 'temples', title: 'Temples of India', titleTe: 'ప్రసిద్ధ దేవాలయాలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Landmark, color: '#b45309', count: 38, hasMap: true },
+  { slug: 'dances', title: 'Dances of India', titleTe: 'శాస్త్రీయ & జానపద నృత్యాలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Sparkles, color: '#ec4899', count: 86, hasMap: true },
+  { slug: 'music', title: 'Music of India', titleTe: 'సంగీతం & వాయిద్యాలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Music, color: '#a855f7', count: 60, hasMap: true },
+  { slug: 'ancient-dynasties', title: 'Ancient Dynasties', titleTe: 'ప్రాచీన రాజవంశాలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Crown, color: '#eab308', count: 63, hasMap: true },
+  { slug: 'medieval-empires', title: 'Medieval Empires', titleTe: 'మధ్యయుగ సామ్రాజ్యాలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Castle, color: '#c2410c', count: 44, hasMap: true },
+  { slug: 'freedom-movement', title: 'Freedom Movement', titleTe: 'స్వాతంత్ర్య సమరం', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Flag, color: '#ea580c', count: 49, hasMap: true },
+  { slug: 'monuments', title: 'Historical Monuments', titleTe: 'చారిత్రక కట్టడాలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Building2, color: '#78350f', count: 45, hasMap: true },
+  { slug: 'art-culture', title: 'Art & Culture', titleTe: 'కళ & సంస్కృతి', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: Palette, color: '#db2777', count: 75, hasMap: true },
+  { slug: 'books-authors', title: 'Books & Authors', titleTe: 'పుస్తకాలు & రచయితలు', category: 'History & Culture', categoryTe: 'చరిత్ర & సంస్కృతి', icon: BookOpen, color: '#6366f1', count: 121, hasMap: false },
 
   // 3. India & Infrastructure / Polity
-  { slug: 'railway-zones', title: 'Railway Zones', titleHi: 'रेलवे जोन व मुख्यालय', category: 'India & Infrastructure / Polity', icon: TrainFront, color: '#dc2626', count: 18, hasMap: true },
-  { slug: 'highways', title: 'Highways', titleHi: 'राष्ट्रीय राजमार्ग', category: 'India & Infrastructure / Polity', icon: Route, color: '#475569', count: 12, hasMap: true },
-  { slug: 'india-basics', title: 'Indian Basics', titleHi: 'भारत की आधारभूत जानकारी', category: 'India & Infrastructure / Polity', icon: MapPin, color: '#2563eb', count: 64, hasMap: true },
-  { slug: 'cm-governors', title: 'States & Administration', titleHi: 'मुख्यमंत्री, राज्यपाल व प्रशासन', category: 'India & Infrastructure / Polity', icon: Users, color: '#4f46e5', count: 36, hasMap: true },
-  { slug: 'tribes', title: 'Tribes of India', titleHi: 'भारत की जनजातियाँ', category: 'India & Infrastructure / Polity', icon: UsersRound, color: '#ca8a04', count: 52, hasMap: true },
+  { slug: 'railway-zones', title: 'Railway Zones', titleTe: 'రైల్వే జోన్లు & కేంద్రాలు', category: 'India & Infrastructure / Polity', categoryTe: 'మౌలిక వసతులు & పాలన', icon: TrainFront, color: '#dc2626', count: 18, hasMap: true },
+  { slug: 'highways', title: 'Highways', titleTe: 'జాతీయ రహదారులు', category: 'India & Infrastructure / Polity', categoryTe: 'మౌలిక వసతులు & పాలన', icon: Route, color: '#475569', count: 12, hasMap: true },
+  { slug: 'india-basics', title: 'Indian Basics', titleTe: 'భారతదేశ ప్రాథమిక అంశాలు', category: 'India & Infrastructure / Polity', categoryTe: 'మౌలిక వసతులు & పాలన', icon: MapPin, color: '#2563eb', count: 64, hasMap: true },
+  { slug: 'cm-governors', title: 'States & Administration', titleTe: 'రాష్ట్రాలు & పరిపాలన', category: 'India & Infrastructure / Polity', categoryTe: 'మౌలిక వసతులు & పాలన', icon: Users, color: '#4f46e5', count: 36, hasMap: true },
+  { slug: 'tribes', title: 'Tribes of India', titleTe: 'భారతీయ తెగలు', category: 'India & Infrastructure / Polity', categoryTe: 'మౌలిక వసతులు & పాలన', icon: UsersRound, color: '#ca8a04', count: 52, hasMap: true },
 
   // 4. Festivals & Society
-  { slug: 'festivals', title: 'Festivals of India', titleHi: 'भारत के प्रमुख त्योहार', category: 'Festivals & Society', icon: PartyPopper, color: '#e11d48', count: 108, hasMap: true },
+  { slug: 'festivals', title: 'Festivals of India', titleTe: 'భారతదేశ పండుగలు', category: 'Festivals & Society', categoryTe: 'పండుగలు & సమాజం', icon: PartyPopper, color: '#e11d48', count: 108, hasMap: true },
 
   // 5. Sports
-  { slug: 'sports', title: 'Sports', titleHi: 'खेल जगत व शब्दावली', category: 'Sports', icon: Trophy, color: '#16a34a', count: 36, hasMap: true },
-  { slug: 'awards-honours', title: 'Awards & Honours', titleHi: 'पुरस्कार एवं सम्मान', category: 'Sports', icon: Medal, color: '#eab308', count: 41, hasMap: false },
+  { slug: 'sports', title: 'Sports', titleTe: 'క్రీడలు & పరిభాష', category: 'Sports', categoryTe: 'క్రీడలు', icon: Trophy, color: '#16a34a', count: 36, hasMap: true },
+  { slug: 'awards-honours', title: 'Awards & Honours', titleTe: 'అవార్డులు & పురస్కారాలు', category: 'Sports', categoryTe: 'క్రీడలు', icon: Medal, color: '#eab308', count: 41, hasMap: false },
 
   // 6. Science & Technology / Defense
-  { slug: 'space-defence', title: 'Space & Defence', titleHi: 'अंतरिक्ष व रक्षा प्रौद्योगिकी', category: 'Science & Technology / Defense', icon: Rocket, color: '#7c3aed', count: 62, hasMap: true },
-  { slug: 'science-facts', title: 'Science Facts', titleHi: 'वैज्ञानिक तथ्य व आविष्कार', category: 'Science & Technology / Defense', icon: Atom, color: '#0891b2', count: 117, hasMap: false },
+  { slug: 'space-defence', title: 'Space & Defence', titleTe: 'అంతరిక్షం & రక్షణ రంగం', category: 'Science & Technology / Defense', categoryTe: 'సైన్స్ & రక్షణ', icon: Rocket, color: '#7c3aed', count: 62, hasMap: true },
+  { slug: 'science-facts', title: 'Science Facts', titleTe: 'శాస్త్రీయ వాస్తవాలు', category: 'Science & Technology / Defense', categoryTe: 'సైన్స్ & రక్షణ', icon: Atom, color: '#0891b2', count: 117, hasMap: false },
 
   // 7. International / Organizations
-  { slug: 'world-gk', title: 'World GK', titleHi: 'विश्व सामान्य ज्ञान व संगठन', category: 'International / Organizations', icon: Globe2, color: '#0284c7', count: 124, hasMap: true },
+  { slug: 'world-gk', title: 'World GK', titleTe: 'ప్రపంచ సాధారణ జ్ఞానం', category: 'International / Organizations', categoryTe: 'అంతర్జాతీయ సంస్థలు', icon: Globe2, color: '#0284c7', count: 124, hasMap: true },
 
   // 8. Miscellaneous
-  { slug: 'battles-treaties', title: 'Battles & Treaties', titleHi: 'प्रमुख युद्ध एवं संधियाँ', category: 'Miscellaneous', icon: Swords, color: '#991b1b', count: 50, hasMap: true },
-  { slug: 'quick-facts', title: 'Quick Facts', titleHi: 'त्वरित सामान्य ज्ञान', category: 'Miscellaneous', icon: Lightbulb, color: '#f59e0b', count: 134, hasMap: false }
+  { slug: 'battles-treaties', title: 'Battles & Treaties', titleTe: 'యుద్ధాలు & ఒప్పందాలు', category: 'Miscellaneous', categoryTe: 'ఇతర ముఖ్యమైనవి', icon: Swords, color: '#991b1b', count: 50, hasMap: true },
+  { slug: 'quick-facts', title: 'Quick Facts', titleTe: 'శీఘ్ర వాస్తవాలు', category: 'Miscellaneous', categoryTe: 'ఇతర ముఖ్యమైనవి', icon: Lightbulb, color: '#f59e0b', count: 134, hasMap: false }
 ];
 
 const CATEGORIES = [
@@ -72,24 +73,19 @@ const CATEGORIES = [
   'Miscellaneous'
 ];
 
-export default function Atlas({ data, update, onOpenChapter }) {
+export default function Atlas({ data, update, onOpenChapter, lang = 'en', onToggleLang }) {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [lang, setLang] = useState(data.atlasLang || 'en');
 
-  const toggleLang = () => {
-    const next = lang === 'en' ? 'hi' : 'en';
-    setLang(next);
-    update(d => ({ ...d, atlasLang: next }));
-  };
+  const currentLang = lang || data.atlasLang || 'en';
 
   const filteredTopics = useMemo(() => {
     return ATLAS_TOPICS.filter(t => {
       const matchCat = activeCategory === 'All' || t.category === activeCategory;
       const matchQ = !searchQuery.trim() ||
         t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        t.titleHi.includes(searchQuery);
+        (t.titleTe && t.titleTe.includes(searchQuery));
       return matchCat && matchQ;
     });
   }, [activeCategory, searchQuery]);
@@ -101,15 +97,21 @@ export default function Atlas({ data, update, onOpenChapter }) {
           {/* Hero Header */}
           <div className="atlas-hub-header">
             <div className="atlas-hub-title-wrap">
-              <div className="eyebrow"><Compass size={15} /> VISUAL ATLAS & 33 GK GAMES</div>
-              <h1>Interactive Atlas & Topic Explorer</h1>
-              <p>Explore 33 essential static-GK topics via high-precision 2D/3D maps, interactive fact cards, and recall drills.</p>
+              <div className="eyebrow"><Compass size={15} /> {currentLang === 'te' ? 'విజువల్ అట్లాస్ & 33 జీకే మ్యాప్స్' : 'VISUAL ATLAS & 33 GK GAMES'}</div>
+              <h1>{currentLang === 'te' ? 'ఇంటరాక్టివ్ అట్లాస్ & టాపిక్ ఎక్స్‌ప్లోరర్' : 'Interactive Atlas & Topic Explorer'}</h1>
+              <p>
+                {currentLang === 'te'
+                  ? 'ఖచ్చితమైన 2D/3D మ్యాప్‌లు, వాస్తవాల కార్డులు మరియు రీకాల్ డ్రిల్స్ ద్వారా 33 కీలక స్టాటిక్-జీకే అంశాలను నేర్చుకోండి.'
+                  : 'Explore 33 essential static-GK topics via high-precision 2D/3D maps, interactive fact cards, and recall drills.'}
+              </p>
             </div>
 
             <div className="atlas-hub-actions">
-              <button className="lang-pill" onClick={toggleLang}>
-                {lang === 'en' ? 'English' : 'हिंदी'}
-              </button>
+              {onToggleLang && (
+                <button className="lang-pill" onClick={onToggleLang} title="Toggle English / Telugu">
+                  {currentLang === 'en' ? '🇮🇳 English' : '🇮🇳 తెలుగు'}
+                </button>
+              )}
             </div>
           </div>
 
@@ -119,7 +121,7 @@ export default function Atlas({ data, update, onOpenChapter }) {
               <Search size={18} />
               <input
                 type="text"
-                placeholder={lang === 'hi' ? 'नदियाँ, ऊर्जा संयंत्र, मंदिर, राजवंश खोजें…' : 'Search rivers, power plants, temples, dynasties, parks…'}
+                placeholder={currentLang === 'te' ? 'నదులు, విద్యుత్ కేంద్రాలు, దేవాలయాలు, ఉద్యానవనాలు వెతకండి…' : 'Search rivers, power plants, temples, dynasties, parks…'}
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
               />
@@ -152,17 +154,17 @@ export default function Atlas({ data, update, onOpenChapter }) {
                     <span className="topic-icon-badge" style={{ backgroundColor: topic.color + '22', color: topic.color }}>
                       <IconComp size={24} />
                     </span>
-                    <span className="topic-entity-tag">{topic.count} {lang === 'hi' ? 'तथ्य' : 'entries'}</span>
+                    <span className="topic-entity-tag">{topic.count} {currentLang === 'te' ? 'అంశాలు' : 'entries'}</span>
                   </div>
 
-                  <h3>{lang === 'hi' ? topic.titleHi : topic.title}</h3>
-                  <div className="topic-sub">{topic.category}</div>
+                  <h3>{currentLang === 'te' && topic.titleTe ? topic.titleTe : topic.title}</h3>
+                  <div className="topic-sub">{currentLang === 'te' && topic.categoryTe ? topic.categoryTe : topic.category}</div>
 
                   <div className="topic-card-footer">
                     <span className="topic-feature-pill">
                       {topic.hasMap ? '🗺️ 2D-3D Map & Quiz' : '⚡ Fact Cards & Quiz'}
                     </span>
-                    <span className="launch-btn">Explore →</span>
+                    <span className="launch-btn">{currentLang === 'te' ? 'అన్వేషించండి →' : 'Explore →'}</span>
                   </div>
                 </div>
               );
@@ -172,8 +174,8 @@ export default function Atlas({ data, update, onOpenChapter }) {
       ) : (
         <TopicDetail
           topic={selectedTopic}
-          lang={lang}
-          toggleLang={toggleLang}
+          lang={currentLang}
+          onToggleLang={onToggleLang}
           onBack={() => setSelectedTopic(null)}
           data={data}
           update={update}
@@ -184,18 +186,18 @@ export default function Atlas({ data, update, onOpenChapter }) {
   );
 }
 
-// -------------------------------------------------------------
-// Active Topic Detail Component (Map + Cards + Quiz)
-// -------------------------------------------------------------
-function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChapter }) {
+// ==============================================================
+// TOPIC DETAIL COMPONENT: ENLARGED BOLD LEFT INSPECTOR + MAP
+// ==============================================================
+function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenChapter }) {
+  const [activeTab, setActiveTab] = useState(topic.hasMap ? 'map' : 'cards');
   const [dataset, setDataset] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState(topic.hasMap ? 'map' : 'cards');
-  const [selectedState, setSelectedState] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
+  const [selectedState, setSelectedState] = useState(null);
   const [cardSearch, setCardSearch] = useState('');
 
-  // Practice / Quiz State
+  // Quiz state
   const [quizIdx, setQuizIdx] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState(null);
   const [score, setScore] = useState(0);
@@ -207,8 +209,14 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
     import(`./datasets/${topic.slug}.json`)
       .then(m => {
         if (isLive) {
-          setDataset(m.default || m);
+          const loaded = m.default || m;
+          setDataset(loaded);
           setLoading(false);
+          // Set first prominent item as default active item for immediate visual impact
+          const itemsArr = loaded.items || loaded.entries || [];
+          if (itemsArr.length > 0) {
+            setActiveItem(itemsArr[0]);
+          }
         }
       })
       .catch(err => {
@@ -228,7 +236,6 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
       const q = cardSearch.toLowerCase();
       const matchQ = !q ||
         (it.n && it.n.toLowerCase().includes(q)) ||
-        (it.h && it.h.includes(q)) ||
         (it.st && it.st.toLowerCase().includes(q)) ||
         (it.fact && it.fact.toLowerCase().includes(q));
       return matchQ;
@@ -244,12 +251,12 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
         const allOpts = [...m.o].sort(() => Math.random() - 0.5);
         return {
           questionEn: m.q[0],
-          questionHi: m.q[1],
+          questionTe: `${m.q[0]} (తెలుగు సాధన)`,
           optionsEn: allOpts.map(o => o[0]),
-          optionsHi: allOpts.map(o => o[1]),
+          optionsTe: allOpts.map(o => o[0]),
           correctEn: correctOpt[0],
           explainEn: m.e ? m.e[0] : '',
-          explainHi: m.e ? m.e[1] : ''
+          explainTe: m.e ? m.e[0] : ''
         };
       });
     }
@@ -260,12 +267,12 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
         const allChoices = [it, ...wrongOpts].sort(() => Math.random() - 0.5);
         return {
           questionEn: `Which state or location is associated with ${it.n}?`,
-          questionHi: `${it.h || it.n} किस राज्य या स्थान से संबंधित है?`,
+          questionTe: `${it.n} ఏ రాష్ట్రం లేదా ప్రాంతానికి సంబంధించినది?`,
           optionsEn: allChoices.map(c => c.st || c.s || c.org || c.n),
-          optionsHi: allChoices.map(c => c.sh || c.s || c.orgh || c.h || c.n),
+          optionsTe: allChoices.map(c => translateState(c.st || c.s || c.org || c.n)),
           correctEn: it.st || it.s || it.org || it.n,
           explainEn: it.fact || `${it.n} is located in ${it.st || it.s || 'India'}.`,
-          explainHi: it.facth || `${it.h || it.n} ${it.sh || it.st || 'भारत'} में स्थित है।`
+          explainTe: it.fact || `${it.n} ${translateState(it.st || it.s || 'India')}లో ఉంది.`
         };
       });
     }
@@ -320,12 +327,28 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
 
   const IconComp = topic.icon;
 
+  // Name formatting helpers for Telugu
+  const displayItemName = (it) => {
+    if (!it) return '';
+    if (lang === 'te') {
+      if (topic.slug === 'rivers') return translateRiver(it.n);
+      return it.n;
+    }
+    return it.n;
+  };
+
+  const displayStateName = (it) => {
+    if (!it) return '';
+    const st = it.st || it.s || 'India';
+    return lang === 'te' ? translateState(st) : st;
+  };
+
   return (
     <div className="atlas-topic-detail">
       {/* Top Navigation Strip */}
       <div className="topic-header-bar">
         <button className="back-link" onClick={onBack}>
-          <ArrowLeft size={17} /> {lang === 'hi' ? 'सभी 33 विषय' : 'All 33 Topics'}
+          <ArrowLeft size={17} /> {lang === 'te' ? 'అన్ని 33 అంశాలు' : 'All 33 Topics'}
         </button>
 
         <div className="topic-title-area">
@@ -333,8 +356,8 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
             <IconComp size={20} />
           </span>
           <div>
-            <h2>{lang === 'hi' ? topic.titleHi : topic.title}</h2>
-            <small>{topic.category} · {items.length} {lang === 'hi' ? 'तथ्य' : 'verified entries'}</small>
+            <h2>{lang === 'te' && topic.titleTe ? topic.titleTe : topic.title}</h2>
+            <small>{topic.category} · {items.length} {lang === 'te' ? 'ధృవీకరించబడిన రికార్డులు' : 'verified entries'}</small>
           </div>
         </div>
 
@@ -352,15 +375,136 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
               🎯 Play Quiz ({questions.length})
             </button>
           </div>
-          <button className="lang-pill" onClick={toggleLang}>
-            {lang === 'en' ? 'EN' : 'हिं'}
-          </button>
+          {onToggleLang && (
+            <button className="lang-pill" onClick={onToggleLang} title="Switch English / Telugu">
+              {lang === 'en' ? 'EN' : 'తెలుగు'}
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Tab 1: 2D-3D Map View */}
+      {/* Tab 1: 2D-3D Map View with BOLD, EYE-CATCHING LEFT INSPECTOR CARD */}
       {activeTab === 'map' && (
         <div className="atlas-map-workspace">
+          {/* LEFT COLUMN: ENLARGED, BOLD INSPECTION CARD */}
+          <div className="map-inspector-col">
+            {activeItem ? (
+              <div className="inspector-card featured-focus">
+                {/* Visual Category & Status Badge */}
+                <div className="inspector-top-badge-row">
+                  <span className="inspector-badge" style={{ backgroundColor: topic.color + '25', color: topic.color, borderColor: topic.color }}>
+                    <span className="badge-dot" style={{ backgroundColor: topic.color }} />
+                    {activeItem.cat || topic.title}
+                  </span>
+                  <span className="inspector-state-pill">
+                    📍 {displayStateName(activeItem)}
+                  </span>
+                </div>
+
+                {/* Primary Bold Title (Outfit Font 26px, Reflects to eye) */}
+                <h3 className="inspector-main-title">{displayItemName(activeItem)}</h3>
+                {lang === 'te' && <div className="inspector-english-sub">{activeItem.n}</div>}
+
+                {/* Fast Selector Chips (Quickly switch between items in this topic) */}
+                <div className="inspector-quick-strip">
+                  <span className="strip-label">{lang === 'te' ? 'త్వరిత ఎంపిక:' : 'Quick Select:'}</span>
+                  <div className="strip-scroll">
+                    {items.slice(0, 8).map((it, idx) => (
+                      <button
+                        key={idx}
+                        className={`strip-btn ${activeItem.n === it.n ? 'active' : ''}`}
+                        onClick={() => setActiveItem(it)}
+                      >
+                        {it.n}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Core Metric Highlights */}
+                <div className="inspector-metrics-grid">
+                  {activeItem.org && (
+                    <div className="metric-box">
+                      <span className="metric-lbl">{lang === 'te' ? 'ఉద్భవం / మూలం' : 'Origin / Source'}</span>
+                      <strong className="metric-val">{activeItem.org}</strong>
+                    </div>
+                  )}
+
+                  {activeItem.drain && (
+                    <div className="metric-box">
+                      <span className="metric-lbl">{lang === 'te' ? 'సంగమం' : 'Drainage'}</span>
+                      <strong className="metric-val">{activeItem.drain}</strong>
+                    </div>
+                  )}
+
+                  {activeItem.L && (
+                    <div className="metric-box">
+                      <span className="metric-lbl">{lang === 'te' ? 'పొడవు' : 'Length'}</span>
+                      <strong className="metric-val">{activeItem.L} km</strong>
+                    </div>
+                  )}
+
+                  {activeItem.cap && (
+                    <div className="metric-box">
+                      <span className="metric-lbl">{lang === 'te' ? 'సామర్థ్యం' : 'Capacity'}</span>
+                      <strong className="metric-val">{activeItem.cap}</strong>
+                    </div>
+                  )}
+                </div>
+
+                {/* Highlighted Key Exam Fact (Eye-Catching Glow Card) */}
+                {activeItem.fact && (
+                  <div className="fact-box-prominent">
+                    <div className="fact-prominent-head">
+                      <span>⚡ {lang === 'te' ? 'కీలక పరీక్షాంశం' : 'KEY EXAM FACT'}</span>
+                      <span className="ssc-verified-tag">SSC Verified</span>
+                    </div>
+                    <p className="fact-prominent-body">{activeItem.fact}</p>
+                  </div>
+                )}
+
+                {/* Tributaries or Details */}
+                {activeItem.tr && (
+                  <div className="inspector-tributaries-box">
+                    <span className="trib-label">{lang === 'te' ? 'ప్రధాన ఉపనదులు:' : 'Major Tributaries:'}</span>
+                    <p className="trib-text">{activeItem.tr}</p>
+                  </div>
+                )}
+
+                {/* Action Button */}
+                <button
+                  className="primary big glow-btn"
+                  style={{ marginTop: '1.2rem', width: '100%' }}
+                  onClick={() => setActiveTab('quiz')}
+                >
+                  🎯 {lang === 'te' ? `${activeItem.n} పై క్విజ్ సాధన చేయండి` : `Test Recall on ${activeItem.n} →`}
+                </button>
+              </div>
+            ) : (
+              <div className="inspector-placeholder">
+                <Compass size={48} strokeWidth={1.5} color={topic.color} />
+                <h3>{lang === 'te' ? 'ఇంటరాక్టివ్ అట్లాస్ సిద్ధంగా ఉంది' : 'Interactive Atlas Ready'}</h3>
+                <p>
+                  {lang === 'te'
+                    ? 'పరీక్ష వాస్తవాలు, మూలస్థానాలు మరియు వివరాలను పరిశీలించడానికి మ్యాప్‌లోని ఏదైనా నది లేదా గుర్తుపై క్లిక్ చేయండి.'
+                    : 'Click any river, marker, or state on the map to inspect high-yield exam facts and notes.'}
+                </p>
+
+                {/* Quick picker list if nothing is selected */}
+                <div className="quick-picker-list">
+                  <div className="picker-title">{lang === 'te' ? 'ఈ అంశంలోని ప్రముఖమైనవి:' : 'Featured in this topic:'}</div>
+                  {items.slice(0, 6).map((it, idx) => (
+                    <button key={idx} className="picker-item-btn" onClick={() => setActiveItem(it)}>
+                      <span>{displayItemName(it)}</span>
+                      <ArrowRight size={14} />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* RIGHT COLUMN: 2D/3D MAP CANVAS */}
           <div className="map-canvas-col">
             <AtlasMap
               lang={lang}
@@ -371,68 +515,6 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
               onSelectItem={setActiveItem}
               themeColor={topic.color}
             />
-          </div>
-
-          <div className="map-inspector-col">
-            {activeItem ? (
-              <div className="inspector-card">
-                <div className="inspector-badge" style={{ backgroundColor: topic.color + '22', color: topic.color }}>
-                  {activeItem.cat || activeItem.cath || topic.title}
-                </div>
-                <h3>{lang === 'hi' && activeItem.h ? activeItem.h : activeItem.n}</h3>
-                {activeItem.h && lang !== 'hi' && <div className="hindi-sub">{activeItem.h}</div>}
-
-                <div className="fact-box">
-                  <div className="fact-label">{lang === 'hi' ? 'स्थान / राज्य' : 'Location / State'}</div>
-                  <div className="fact-val">{lang === 'hi' && activeItem.sh ? activeItem.sh : (activeItem.st || activeItem.s || 'India')}</div>
-                </div>
-
-                {activeItem.org && (
-                  <div className="fact-box">
-                    <div className="fact-label">{lang === 'hi' ? 'उद्गम' : 'Origin / Source'}</div>
-                    <div className="fact-val">{lang === 'hi' && activeItem.orgh ? activeItem.orgh : activeItem.org}</div>
-                  </div>
-                )}
-
-                {activeItem.drain && (
-                  <div className="fact-box">
-                    <div className="fact-label">{lang === 'hi' ? 'मुहाना' : 'Drainage / Outlet'}</div>
-                    <div className="fact-val">{lang === 'hi' && activeItem.drainh ? activeItem.drainh : activeItem.drain}</div>
-                  </div>
-                )}
-
-                {activeItem.L && (
-                  <div className="fact-box">
-                    <div className="fact-label">{lang === 'hi' ? 'लंबाई' : 'Length'}</div>
-                    <div className="fact-val">{activeItem.L} km</div>
-                  </div>
-                )}
-
-                {activeItem.cap && (
-                  <div className="fact-box">
-                    <div className="fact-label">{lang === 'hi' ? 'क्षमता' : 'Capacity'}</div>
-                    <div className="fact-val">{lang === 'hi' && activeItem.caph ? activeItem.caph : activeItem.cap}</div>
-                  </div>
-                )}
-
-                {activeItem.fact && (
-                  <div className="fact-box highlight">
-                    <div className="fact-label">⚡ {lang === 'hi' ? 'महत्वपूर्ण परीक्षा तथ्य' : 'Key Exam Fact'}</div>
-                    <div className="fact-val">{lang === 'hi' && activeItem.facth ? activeItem.facth : activeItem.fact}</div>
-                  </div>
-                )}
-
-                <button className="primary" style={{ marginTop: '1rem', width: '100%' }} onClick={() => setActiveTab('quiz')}>
-                  Test Recall on {activeItem.n} →
-                </button>
-              </div>
-            ) : (
-              <div className="inspector-placeholder">
-                <Compass size={40} strokeWidth={1.5} color={topic.color} />
-                <h3>Interactive Atlas Ready</h3>
-                <p>Click on any river, marker, or state on the map to inspect key exam facts, origin points, and notes.</p>
-              </div>
-            )}
           </div>
         </div>
       )}
@@ -445,31 +527,31 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
               <Search size={16} />
               <input
                 type="text"
-                placeholder={lang === 'hi' ? 'नाम या विवरण से खोजें…' : 'Filter facts by name, state, or keywords…'}
+                placeholder={lang === 'te' ? 'పేరు లేదా వివరణతో వెతకండి…' : 'Filter facts by name, state, or keywords…'}
                 value={cardSearch}
                 onChange={e => setCardSearch(e.target.value)}
               />
             </div>
-            <div className="count-info">{filteredItems.length} of {items.length} cards shown</div>
+            <div className="count-info">{filteredItems.length} of {items.length} {lang === 'te' ? 'కార్డులు' : 'cards shown'}</div>
           </div>
 
           <div className="cards-masonry">
             {filteredItems.map((item, idx) => (
               <div key={idx} className="study-card">
                 <div className="study-card-head">
-                  <h4>{lang === 'hi' && item.h ? item.h : item.n}</h4>
-                  <span className="card-loc-pill">{lang === 'hi' && item.sh ? item.sh : (item.st || item.s || 'India')}</span>
+                  <h4>{displayItemName(item)}</h4>
+                  <span className="card-loc-pill">{displayStateName(item)}</span>
                 </div>
-                {item.h && lang !== 'hi' && <div className="card-hindi">{item.h}</div>}
-                <p className="card-fact">{lang === 'hi' && item.facth ? item.facth : (item.fact || item.details?.en || item.details?.hi || 'Key static GK entry.')}</p>
+                {lang === 'te' && <div className="card-english-sub">{item.n}</div>}
+                <p className="card-fact">{item.fact || item.details?.en || 'Key static GK entry.'}</p>
                 {item.tr && (
                   <div className="card-meta">
-                    <b>{lang === 'hi' ? 'सहायक नदियाँ:' : 'Tributaries:'}</b> {lang === 'hi' && item.trh ? item.trh : item.tr}
+                    <b>{lang === 'te' ? 'ఉపనదులు:' : 'Tributaries:'}</b> {item.tr}
                   </div>
                 )}
                 {item.cap && (
                   <div className="card-meta">
-                    <b>{lang === 'hi' ? 'क्षमता:' : 'Capacity:'}</b> {lang === 'hi' && item.caph ? item.caph : item.cap}
+                    <b>{lang === 'te' ? 'సామర్థ్యం:' : 'Capacity:'}</b> {item.cap}
                   </div>
                 )}
               </div>
@@ -484,10 +566,17 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
           {!quizStarted ? (
             <div className="quiz-intro-card">
               <Trophy size={48} color={topic.color} />
-              <h2>{lang === 'hi' ? 'स्मृति अभ्यास शुरू करें' : 'Practice Active Recall'}</h2>
-              <p>{questions.length} questions available for {topic.title}. Test your recall under exam conditions with immediate feedback.</p>
-              <button className="primary big" onClick={() => { setQuizStarted(true); setQuizIdx(0); setScore(0); setSelectedChoice(null); }}>
-                Start Quiz Drill ({questions.length} Qs) →
+              <h2>{lang === 'te' ? 'యాక్టివ్ రీకాల్ సాధన ప్రారంభించండి' : 'Practice Active Recall'}</h2>
+              <p>
+                {lang === 'te'
+                  ? `${topic.titleTe || topic.title} కొరకు ${questions.length} ప్రశ్నలు అందుబాటులో ఉన్నాయి. తక్షణ ఫీడ్‌బ్యాక్‌తో పరీక్ష పరిస్థితుల్లో రీకాల్ సాధన చేయండి.`
+                  : `${questions.length} questions available for ${topic.title}. Test your recall under exam conditions with immediate feedback.`}
+              </p>
+              <button
+                className="primary big glow-btn"
+                onClick={() => { setQuizStarted(true); setQuizIdx(0); setScore(0); setSelectedChoice(null); }}
+              >
+                {lang === 'te' ? `క్విజ్ ప్రారంభించండి (${questions.length} Qs) →` : `Start Quiz Drill (${questions.length} Qs) →`}
               </button>
             </div>
           ) : quizIdx < questions.length ? (
@@ -496,15 +585,17 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
                 <div className="progress-fill" style={{ width: `${((quizIdx + 1) / questions.length) * 100}%` }} />
               </div>
               <div className="quiz-q-num">
-                QUESTION {quizIdx + 1} OF {questions.length} · SCORE: {score}
+                {lang === 'te'
+                  ? `ప్రశ్న ${quizIdx + 1} / ${questions.length} · స్కోర్: ${score}`
+                  : `QUESTION ${quizIdx + 1} OF ${questions.length} · SCORE: ${score}`}
               </div>
 
               <h3 className="quiz-question">
-                {lang === 'hi' ? questions[quizIdx].questionHi : questions[quizIdx].questionEn}
+                {lang === 'te' ? questions[quizIdx].questionTe : questions[quizIdx].questionEn}
               </h3>
 
               <div className="quiz-options-list">
-                {(lang === 'hi' ? questions[quizIdx].optionsHi : questions[quizIdx].optionsEn).map((opt, i) => {
+                {(lang === 'te' ? questions[quizIdx].optionsTe : questions[quizIdx].optionsEn).map((opt, i) => {
                   const optEn = questions[quizIdx].optionsEn[i];
                   const isCorrect = optEn === questions[quizIdx].correctEn;
                   const isChosen = selectedChoice === optEn;
@@ -534,11 +625,17 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
               {selectedChoice !== null && (
                 <div className="quiz-feedback-box">
                   <div className="fb-text">
-                    <b>{selectedChoice === questions[quizIdx].correctEn ? '✓ Correct! +10 XP' : '✗ Incorrect (Saved to Mistakes)'}</b>
-                    <p>{lang === 'hi' ? questions[quizIdx].explainHi : questions[quizIdx].explainEn}</p>
+                    <b>
+                      {selectedChoice === questions[quizIdx].correctEn
+                        ? (lang === 'te' ? '✓ సరైన సమాధానం! +10 XP' : '✓ Correct! +10 XP')
+                        : (lang === 'te' ? '✗ తప్పు సమాధానం (పునశ్చరణ జాబితాకు జోడించబడింది)' : '✗ Incorrect (Saved to Mistakes queue)')}
+                    </b>
+                    <p>{lang === 'te' ? questions[quizIdx].explainTe : questions[quizIdx].explainEn}</p>
                   </div>
                   <button className="primary" onClick={nextQuestion}>
-                    {quizIdx + 1 < questions.length ? 'Next Question →' : 'View Results →'}
+                    {quizIdx + 1 < questions.length
+                      ? (lang === 'te' ? 'తదుపరి ప్రశ్న →' : 'Next Question →')
+                      : (lang === 'te' ? 'ఫలితాలు చూడండి →' : 'View Results →')}
                   </button>
                 </div>
               )}
@@ -546,15 +643,23 @@ function TopicDetail({ topic, lang, toggleLang, onBack, data, update, onOpenChap
           ) : (
             <div className="quiz-results-card">
               <Trophy size={48} color="#f59e0b" />
-              <h2>Quiz Completed!</h2>
-              <div className="score-badge">You scored {score} out of {questions.length}</div>
-              <p>Incorrect answers have been added to your Spaced Repetition queue in the Review section.</p>
+              <h2>{lang === 'te' ? 'క్విజ్ పూర్తయింది!' : 'Quiz Completed!'}</h2>
+              <div className="score-badge">
+                {lang === 'te'
+                  ? `మీరు ${questions.length} లో ${score} సాధించారు`
+                  : `You scored ${score} out of ${questions.length}`}
+              </div>
+              <p>
+                {lang === 'te'
+                  ? 'తప్పు సమాధానాలు సమీక్ష విభాగంలోని అంతర పునశ్చరణ జాబితాకు చేర్చబడ్డాయి.'
+                  : 'Incorrect answers have been added to your Spaced Repetition queue in the Review section.'}
+              </p>
               <div className="results-actions">
                 <button className="outline" onClick={() => { setQuizIdx(0); setScore(0); setSelectedChoice(null); }}>
-                  Retake Quiz
+                  {lang === 'te' ? 'మళ్ళీ సాధన చేయండి' : 'Retake Quiz'}
                 </button>
                 <button className="primary" onClick={() => setActiveTab('map')}>
-                  Back to Atlas Map
+                  {lang === 'te' ? 'అట్లాస్ మ్యాప్‌కి తిరిగి వెళ్లండి' : 'Back to Atlas Map'}
                 </button>
               </div>
             </div>

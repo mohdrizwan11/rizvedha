@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  BookOpen, Target, Compass, RotateCcw, Settings,
+  House, BookOpen, Target, Compass, RotateCcw, Settings,
   PanelLeftClose, PanelLeft, Maximize2, Minimize2,
   Moon, Sun, Search, ArrowRight, ArrowUpRight, CheckCircle2,
-  Flame, Zap, Trophy, ShieldCheck, ChevronRight
+  Flame, Zap, Trophy, ShieldCheck, ChevronRight, Languages
 } from 'lucide-react';
 
 import { subjects, lessons, tools } from './data';
@@ -13,6 +13,8 @@ import { migrateMistakes, reconcileMistakes } from './v3/mistakes';
 import { ErrorBoundary } from './v22/shared';
 
 // Lazy loaded subviews
+const HomeView = lazy(() => import('./HomeView'));
+const LearnView = lazy(() => import('./LearnView'));
 const Atlas = lazy(() => import('./Atlas'));
 const Play = lazy(() => import('./Play'));
 const Review = lazy(() => import('./Review'));
@@ -56,11 +58,10 @@ function load() {
 
 const localDay = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const day = () => localDay(new Date());
-const qid = (l, i) => `${l.id}-${i}`;
 
 function App() {
   const [data, setData] = useState(load);
-  const [page, setPage] = useState('Learn'); // Learn | Play | Atlas | Review | Settings
+  const [page, setPage] = useState('Home'); // Home | Learn | Play | Atlas | Review | Settings
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
@@ -70,7 +71,9 @@ function App() {
   const [query, setQuery] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const [tab, setTab] = useState('Learn');
-  const [subjectFilter, setSubjectFilter] = useState('All');
+  const [lang, setLang] = useState(() => {
+    return localStorage.getItem('vedha-lang') || 'en';
+  });
 
   // Persistence effect
   useEffect(() => {
@@ -82,6 +85,13 @@ function App() {
   useEffect(() => {
     localStorage.setItem('kosha-sidebar-collapsed', String(sidebarCollapsed));
   }, [sidebarCollapsed]);
+
+  // Language toggle
+  const toggleLang = () => {
+    const next = lang === 'en' ? 'te' : 'en';
+    setLang(next);
+    localStorage.setItem('vedha-lang', next);
+  };
 
   // Fullscreen change listener
   useEffect(() => {
@@ -157,7 +167,7 @@ function App() {
         .map(l => ({ type: 'LESSON', label: l.title, sub: l.topic, action: () => openLesson(l) })),
       ...subjects
         .flatMap(s => s.topics.split(', ').filter(t => t.toLowerCase().includes(q)).map(t => ({
-          type: 'TOPIC', label: t, sub: s.name, action: () => { go('Learn'); setSubjectFilter(s.id); }
+          type: 'TOPIC', label: t, sub: s.name, action: () => { go('Learn'); }
         }))),
       ...tools
         .filter(t => t.name.toLowerCase().includes(q))
@@ -165,13 +175,14 @@ function App() {
     ].slice(0, 8);
   }, [query]);
 
-  // Navigation Items (Max 5, clean & focused)
+  // Navigation Items (6 Focused Sections Max: Home, Learn, Play, Atlas, Review, Settings)
   const navItems = [
-    { id: 'Learn', label: 'Learn', icon: BookOpen, desc: 'Visual textbook & syllabus' },
-    { id: 'Play', label: 'Play', icon: Target, desc: 'Drills, bosses & exam mode' },
-    { id: 'Atlas', label: 'Atlas', icon: Compass, desc: '33 2D-3D map games' },
-    { id: 'Review', label: 'Review', icon: RotateCcw, desc: 'Mistake clinic & flashcards', badge: (data.mistakes || []).length || null },
-    { id: 'Settings', label: 'Settings', icon: Settings, desc: 'Appearance & backup' }
+    { id: 'Home', label: lang === 'te' ? 'హోమ్' : 'Home', icon: House, desc: 'Dashboard & daily recall' },
+    { id: 'Learn', label: lang === 'te' ? 'నేర్చుకోండి' : 'Learn', icon: BookOpen, desc: 'Visual curriculum & infographics' },
+    { id: 'Play', label: lang === 'te' ? 'సాధన' : 'Play', icon: Target, desc: 'Drills, bosses & exam mode' },
+    { id: 'Atlas', label: lang === 'te' ? 'అట్లాస్' : 'Atlas', icon: Compass, desc: '33 2D-3D map games' },
+    { id: 'Review', label: lang === 'te' ? 'పునశ్చరణ' : 'Review', icon: RotateCcw, desc: 'Mistake clinic & flashcards', badge: (data.mistakes || []).length || null },
+    { id: 'Settings', label: lang === 'te' ? 'అమరికలు' : 'Settings', icon: Settings, desc: 'Appearance & backup' }
   ];
 
   return (
@@ -179,12 +190,12 @@ function App() {
       {/* Sleek Collapsible Sidebar (ChatGPT Style) */}
       <aside className={`sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
         <div className="sidebar-header">
-          <button className="brand" onClick={() => go('Learn')} title="Kosha GK">
-            <span className="brandmark">k<span>•</span></span>
+          <button className="brand" onClick={() => go('Home')} title="Vedha GK">
+            <span className="brandmark">V<span>•</span></span>
             {!sidebarCollapsed && (
               <span>
-                <strong>kosha</strong>
-                <small>VISUAL GK PLATFORM</small>
+                <strong>Vedha</strong>
+                <small>{lang === 'te' ? 'విజువల్ జీకే ప్లాట్‌ఫారమ్' : 'VISUAL GK PLATFORM'}</small>
               </span>
             )}
           </button>
@@ -224,18 +235,18 @@ function App() {
             <div className="side-note">
               <span className="side-spark"><Flame size={20} color="#f59e0b" /></span>
               <div>
-                <strong>{streak} Day Streak</strong>
-                <p>{data.xp} XP earned locally</p>
+                <strong>{streak} {lang === 'te' ? 'రోజుల స్ట్రీక్' : 'Day Streak'}</strong>
+                <p>{data.xp} {lang === 'te' ? 'XP ఆర్జించారు' : 'XP earned locally'}</p>
               </div>
             </div>
           )}
 
           <button className="profile" onClick={() => go('Settings')}>
-            <span className="avatar">G</span>
+            <span className="avatar">V</span>
             {!sidebarCollapsed && (
               <span>
-                <strong>Guest Learner</strong>
-                <small>Local Storage Encrypted</small>
+                <strong>{lang === 'te' ? 'విద్యార్థి ప్రొఫైల్' : 'Vedha Learner'}</strong>
+                <small>{lang === 'te' ? 'స్థానిక డేటా భద్రం' : 'Local Storage Encrypted'}</small>
               </span>
             )}
           </button>
@@ -246,7 +257,7 @@ function App() {
       <div className={`main ${sidebarCollapsed ? 'collapsed' : ''}`}>
         <header className="topbar">
           <div className="crumb">
-            <span>KOSHA</span>
+            <span>VEDHA</span>
             <ChevronRight size={14} />
             <b>{selectedChapter ? 'Textbook' : selectedLesson ? 'Lesson' : page}</b>
           </div>
@@ -257,7 +268,7 @@ function App() {
               <Search size={16} />
               <input
                 value={query}
-                placeholder="Search GK facts, rivers, topics..."
+                placeholder={lang === 'te' ? 'జీకే వాస్తవాలు, నదులు వెతకండి…' : 'Search GK facts, rivers, topics...'}
                 onFocus={() => setSearchOpen(true)}
                 onChange={e => { setQuery(e.target.value); setSearchOpen(true); }}
                 aria-label="Search"
@@ -267,7 +278,7 @@ function App() {
               {searchOpen && query && (
                 <div className="search-results">
                   <div className="search-head">
-                    <span>SEARCH RESULTS</span>
+                    <span>{lang === 'te' ? 'శోధన ఫలితాలు' : 'SEARCH RESULTS'}</span>
                     <button onClick={() => setSearchOpen(false)}>Close</button>
                   </div>
                   {matches.length > 0 ? (
@@ -281,11 +292,20 @@ function App() {
                       </button>
                     ))
                   ) : (
-                    <p>No matching content found.</p>
+                    <p>{lang === 'te' ? 'ఏమీ కనుగొనబడలేదు.' : 'No matching content found.'}</p>
                   )}
                 </div>
               )}
             </div>
+
+            {/* Language Switcher Button (English / Telugu) */}
+            <button
+              className="lang-pill header-lang-btn"
+              onClick={toggleLang}
+              title="Switch between English and Telugu"
+            >
+              {lang === 'en' ? '🇮🇳 English' : '🇮🇳 తెలుగు'}
+            </button>
 
             {/* Distraction-Free Fullscreen Button */}
             <button
@@ -309,110 +329,42 @@ function App() {
 
             {/* User Profile */}
             <button className="header-avatar" onClick={() => go('Settings')} aria-label="Profile">
-              G
+              V
             </button>
           </div>
         </header>
 
         {/* Content Body */}
         <main className="content">
-          {/* Section 1: LEARN (Visual Textbook & Syllabus) */}
+          {/* Section 0: HOME (Dashboard, Daily Streak, Yesterday's Revision Quiz) */}
+          {page === 'Home' && (
+            <Suspense fallback={<div className="panel">Loading Vedha Dashboard…</div>}>
+              <HomeView
+                data={data}
+                update={update}
+                onOpenTopic={(topicSlug) => {
+                  go('Atlas');
+                }}
+                onOpenLesson={openLesson}
+                onOpenChapter={openChapter}
+                onNavigate={go}
+                lang={lang}
+              />
+            </Suspense>
+          )}
+
+          {/* Section 1: LEARN (Visual Curriculum, SVG Infographics, Cover & Recall Tables) */}
           {page === 'Learn' && (
-            <div className="learn-page">
-              <div className="welcome">
-                <div>
-                  <div className="eyebrow"><ShieldCheck size={14} /> COMPLETE SSC CGL GA SYLLABUS</div>
-                  <h1>Master GK Visually</h1>
-                  <p>7 comprehensive subjects, 84 curriculum chapters, and 387 structured lesson topics designed for memory retention.</p>
-                </div>
-              </div>
-
-              {/* Subject Roadmap Grid */}
-              <div className="section-head">
-                <div>
-                  <div className="overline">7 CORE SUBJECT TRACKS</div>
-                  <h2>Choose a Subject Track</h2>
-                </div>
-                <div className="filter-row">
-                  {['All', ...subjects.map(s => s.short)].map(x => (
-                    <button
-                      key={x}
-                      className={subjectFilter === x ? 'selected' : ''}
-                      onClick={() => setSubjectFilter(x)}
-                    >
-                      {x}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="subject-grid">
-                {subjects
-                  .filter(s => subjectFilter === 'All' || s.short === subjectFilter)
-                  .map((s, i) => {
-                    const l = lessons.find(x => x.subject === s.id);
-                    const done = l && data.completed.includes(l.id);
-                    return (
-                      <div className="subject-card" key={s.id} onClick={() => l && openLesson(l)}>
-                        <div className="subject-top">
-                          <span className="subject-icon" style={{ background: s.color }}>
-                            {s.short[0]}
-                          </span>
-                          <span className="card-arrow"><ArrowUpRight size={16} /></span>
-                        </div>
-                        <div className="subject-no">TRACK 0{i + 1}</div>
-                        <h3>{s.name}</h3>
-                        <p>{s.desc}</p>
-                        <div className="card-bottom">
-                          <div className="progress">
-                            <i style={{ width: done ? '100%' : '15%' }} />
-                          </div>
-                          <span>{done ? 'Completed' : 'Explore Track →'}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-              </div>
-
-              {/* Visual Textbook Pilots Showcase */}
-              <div className="section-head" style={{ marginTop: '2.5rem' }}>
-                <div>
-                  <div className="overline">V3 VISUAL TEXTBOOK CHAPTERS</div>
-                  <h2>Deep-Dive Concept Chapters</h2>
-                  <p>Interactive story cards, compare tables with "cover and recall", and 2-HP chapter boss challenges.</p>
-                </div>
-              </div>
-
-              <div className="directory-grid">
-                <div className="directory-card" onClick={() => openChapter('history-mauryan-empire')}>
-                  <small style={{ color: '#bb7655' }}>HISTORY · ANCIENT</small>
-                  <h3>Mauryan Empire</h3>
-                  <p>Chandragupta to Ashoka, Kalinga edicts, and imperial administration.</p>
-                  <div><span>Open Visual Chapter</span><ArrowRight size={15} /></div>
-                </div>
-
-                <div className="directory-card" onClick={() => openChapter('geography-rivers-of-india')}>
-                  <small style={{ color: '#0284c7' }}>GEOGRAPHY · DRAINAGE</small>
-                  <h3>Rivers of India</h3>
-                  <p>Himalayan confluences, peninsular basins, and major tributaries.</p>
-                  <div><span>Open Visual Chapter</span><ArrowRight size={15} /></div>
-                </div>
-
-                <div className="directory-card" onClick={() => openChapter('polity-fundamental-rights')}>
-                  <small style={{ color: '#7c3aed' }}>POLITY · CONSTITUTION</small>
-                  <h3>Fundamental Rights & DPSP</h3>
-                  <p>Parts III & IV, Articles 14, 17, 21, 21A, 32 writs, and state directives.</p>
-                  <div><span>Open Visual Chapter</span><ArrowRight size={15} /></div>
-                </div>
-
-                <div className="directory-card" onClick={() => openChapter('economics-banking-payment-systems')}>
-                  <small style={{ color: '#d97706' }}>ECONOMICS · BANKING</small>
-                  <h3>RBI, Banking & Monetary Policy</h3>
-                  <p>Repo, reverse repo, CRR, SLR, SDF, and liquidity operations.</p>
-                  <div><span>Open Visual Chapter</span><ArrowRight size={15} /></div>
-                </div>
-              </div>
-            </div>
+            <Suspense fallback={<div className="panel">Loading Visual Learning Modules…</div>}>
+              <LearnView
+                data={data}
+                update={update}
+                onOpenChapter={openChapter}
+                onOpenLesson={openLesson}
+                onNavigate={go}
+                lang={lang}
+              />
+            </Suspense>
           )}
 
           {/* Section 2: PLAY (Practice, Bosses, Exam Mode) */}
@@ -423,17 +375,20 @@ function App() {
                 update={update}
                 onOpenLesson={openLesson}
                 onOpenChapter={openChapter}
+                lang={lang}
               />
             </Suspense>
           )}
 
-          {/* Section 3: ATLAS (33 2D-3D Map Games Inspired by ssc-focus.web.app) */}
+          {/* Section 3: ATLAS (33 2D-3D Map Games with Bold Left Inspector) */}
           {page === 'Atlas' && (
             <Suspense fallback={<div className="panel">Loading Visual Atlas & 33 Topic Games…</div>}>
               <Atlas
                 data={data}
                 update={update}
                 onOpenChapter={openChapter}
+                lang={lang}
+                onToggleLang={toggleLang}
               />
             </Suspense>
           )}
@@ -446,6 +401,7 @@ function App() {
                 update={update}
                 onOpenLesson={openLesson}
                 onOpenChapter={openChapter}
+                lang={lang}
               />
             </Suspense>
           )}
@@ -463,6 +419,7 @@ function App() {
                 }}
                 isFullscreen={isFullscreen}
                 onToggleFullscreen={toggleFullscreen}
+                lang={lang}
               />
             </Suspense>
           )}
@@ -478,6 +435,7 @@ function App() {
                   update={update}
                   onBack={() => go('Learn')}
                   onTool={() => go('Atlas')}
+                  lang={lang}
                 />
               </Suspense>
             </ErrorBoundary>
@@ -504,19 +462,20 @@ function App() {
                       activity: addActivity(d)
                     }));
                   }}
+                  lang={lang}
                 />
               </Suspense>
             </ErrorBoundary>
           )}
 
           <footer>
-            <span>✳ KOSHA · LOCAL-FIRST VISUAL GK LEARNING</span>
-            <span>All 33 Atlas Topics Live · No ads · No tracking</span>
+            <span>✳ VEDHA · LOCAL-FIRST VISUAL GK LEARNING</span>
+            <span>{lang === 'te' ? 'అన్ని 33 అట్లాస్ విజువల్ టాపిక్స్ ప్రత్యక్షంగా ఉన్నాయి' : 'All 33 Atlas Topics Live · No ads · No tracking'}</span>
           </footer>
         </main>
       </div>
 
-      {/* Mobile Bottom Navigation (5 Core Sections) */}
+      {/* Mobile Bottom Navigation (6 Core Sections) */}
       <div className="mobile-nav">
         {navItems.map(item => {
           const IconC = item.icon;

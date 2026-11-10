@@ -4,6 +4,7 @@ import { feature } from 'topojson-client';
 import { select } from 'd3-selection';
 import { zoom, zoomIdentity } from 'd3-zoom';
 import topo from './v22/india-states.topo.json';
+import { translateRiver, translateState } from './telugu';
 
 const shapes = feature(topo, topo.objects.states);
 const projection = geoMercator().fitExtent([[20, 20], [480, 520]], shapes);
@@ -34,6 +35,7 @@ export default function AtlasMap({
   const zoomRef = useRef(null);
   const [transform, setTransform] = useState(zoomIdentity);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [is3D, setIs3D] = useState(false);
 
   useEffect(() => {
     const behavior = zoom()
@@ -54,8 +56,15 @@ export default function AtlasMap({
   const pointItems = useMemo(() => items.filter(it => (it.lng != null && it.lat != null) || (it.olng != null && it.olat != null)), [items]);
 
   return (
-    <div className="atlas-map-container">
+    <div className={`atlas-map-container ${is3D ? 'view-3d' : ''}`}>
       <div className="atlas-map-controls">
+        <button
+          onClick={() => setIs3D(!is3D)}
+          className={`control-3d-btn ${is3D ? 'active' : ''}`}
+          title="Toggle 2D / 3D Isometric View"
+        >
+          {is3D ? '3D' : '2D'}
+        </button>
         <button onClick={zoomIn} title="Zoom in" aria-label="Zoom in">+</button>
         <button onClick={zoomOut} title="Zoom out" aria-label="Zoom out">−</button>
         <button onClick={resetZoom} title="Reset zoom" aria-label="Reset zoom">↺</button>
@@ -150,6 +159,7 @@ export default function AtlasMap({
                     strokeLinejoin="round"
                     fill="none"
                     cursor="pointer"
+                    className="atlas-line-flow"
                     vectorEffect="non-scaling-stroke"
                   />
                 </g>
@@ -194,7 +204,7 @@ export default function AtlasMap({
                       className="marker-label"
                       fill="var(--text-primary, #0f172a)"
                     >
-                      {lang === 'hi' && pt.h ? pt.h : pt.n}
+                      {lang === 'te' ? translateRiver(pt.n) || pt.n : pt.n}
                     </text>
                   )}
                 </g>
@@ -207,12 +217,15 @@ export default function AtlasMap({
       {/* Floating State or Item Inspector Pill */}
       {(hoveredItem || activeItem) && (
         <div className="atlas-floating-tooltip">
-          <b>{lang === 'hi' ? ((hoveredItem || activeItem).h || (hoveredItem || activeItem).n) : ((hoveredItem || activeItem).n)}</b>
+          <b>{lang === 'te' ? (translateRiver((hoveredItem || activeItem).n) || (hoveredItem || activeItem).n) : ((hoveredItem || activeItem).n)}</b>
           <small>
-            {(hoveredItem || activeItem).st || (hoveredItem || activeItem).s || (hoveredItem || activeItem).org || (hoveredItem || activeItem).cat || ''}
+            {lang === 'te'
+              ? translateState((hoveredItem || activeItem).st || (hoveredItem || activeItem).s)
+              : ((hoveredItem || activeItem).st || (hoveredItem || activeItem).s || (hoveredItem || activeItem).org || (hoveredItem || activeItem).cat || '')}
           </small>
         </div>
       )}
     </div>
   );
 }
+

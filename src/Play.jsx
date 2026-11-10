@@ -403,3 +403,4 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter }) {
     </div>
   );
 }
+

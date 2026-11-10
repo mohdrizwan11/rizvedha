@@ -110,3 +110,4 @@ export default function SettingsView({ data, update, onReset, isFullscreen, onTo
     </div>
   );
 }
+
