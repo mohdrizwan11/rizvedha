@@ -69,7 +69,7 @@ export const TELUGU_RIVERS = {
 };
 
 export const TELUGU_STRINGS = {
-  brandName: 'వేద',
+  brandName: 'రిజ్ వేద',
   brandSubtitle: 'విజువల్ జీకే ప్లాట్‌ఫారమ్',
   navHome: 'హోమ్',
   navLearn: 'నేర్చుకోండి',
@@ -117,3 +117,4 @@ export function translateRiver(name) {
   if (!name) return '';
   return TELUGU_RIVERS[name] || name;
 }
+

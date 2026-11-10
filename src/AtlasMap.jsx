@@ -39,7 +39,11 @@ export default function AtlasMap({
 
   useEffect(() => {
     const behavior = zoom()
-      .scaleExtent([1, 6])
+      .scaleExtent([1, 8])
+      .wheelDelta(event => {
+        // Significantly reduced zoom speed for smooth, controlled scrolling
+        return -event.deltaY * 0.00065;
+      })
       .on('zoom', e => setTransform(e.transform));
     zoomRef.current = behavior;
     const svg = select(svgRef.current);
@@ -129,8 +133,10 @@ export default function AtlasMap({
           {/* Line Features (Rivers, Waterways, Highways) */}
           <g className="atlas-lines-group">
             {lineItems.map((line, idx) => {
-              const isLineActive = (activeItem && (activeItem.n === line.n || activeItem.id === line.id)) ||
-                                   (hoveredItem && (hoveredItem.n === line.n || hoveredItem.id === line.id));
+              const isLineActive = Boolean(
+                (activeItem && ((activeItem.n && line.n && activeItem.n === line.n) || (activeItem.id && line.id && activeItem.id === line.id))) ||
+                (hoveredItem && ((hoveredItem.n && line.n && hoveredItem.n === line.n) || (hoveredItem.id && line.id && hoveredItem.id === line.id)))
+              );
               const dStr = geo({ type: 'LineString', coordinates: line.wp });
               if (!dStr) return null;
               return (
@@ -175,8 +181,14 @@ export default function AtlasMap({
               const coords = projection([lng, lat]);
               if (!coords) return null;
               const [cx, cy] = coords;
-              const isPointActive = (activeItem && (activeItem.n === pt.n || activeItem.id === pt.id)) ||
-                                    (hoveredItem && (hoveredItem.n === pt.n || hoveredItem.id === pt.id));
+
+              const isPointHovered = Boolean(
+                hoveredItem && ((hoveredItem.n && pt.n && hoveredItem.n === pt.n) || (hoveredItem.id && pt.id && hoveredItem.id === pt.id))
+              );
+              const isPointSelected = Boolean(
+                activeItem && ((activeItem.n && pt.n && activeItem.n === pt.n) || (activeItem.id && pt.id && activeItem.id === pt.id))
+              );
+              const isPointActive = isPointHovered || isPointSelected;
 
               return (
                 <g
@@ -192,20 +204,36 @@ export default function AtlasMap({
                     <circle r="12" fill={themeColor} opacity="0.3" className="marker-pulse" />
                   )}
                   <circle
-                    r={isPointActive ? 6.5 : 4.5}
+                    r={isPointActive ? 7 : (pointItems.length > 50 ? 3.5 : 4.5)}
                     fill={isPointActive ? '#ffffff' : themeColor}
                     stroke={isPointActive ? themeColor : '#ffffff'}
-                    strokeWidth="1.8"
+                    strokeWidth={isPointActive ? 2.5 : 1.2}
+                    opacity={isPointActive ? 1 : 0.88}
                   />
-                  {isPointActive && (
-                    <text
-                      y="-10"
-                      textAnchor="middle"
-                      className="marker-label"
-                      fill="var(--text-primary, #0f172a)"
-                    >
-                      {lang === 'te' ? translateRiver(pt.n) || pt.n : pt.n}
-                    </text>
+                  {/* Show clean tag ONLY for single hovered item */}
+                  {isPointHovered && (
+                    <g transform="translate(0, -12)" pointerEvents="none">
+                      <rect
+                        x="-60"
+                        y="-16"
+                        width="120"
+                        height="20"
+                        rx="4"
+                        fill="rgba(15, 23, 42, 0.94)"
+                        stroke="rgba(255, 255, 255, 0.25)"
+                        strokeWidth="0.8"
+                      />
+                      <text
+                        x="0"
+                        y="-3"
+                        textAnchor="middle"
+                        fill="#ffffff"
+                        fontSize="9.5"
+                        fontWeight="700"
+                      >
+                        {((lang === 'te' ? translateRiver(pt.n) : pt.n) || '').slice(0, 20)}
+                      </text>
+                    </g>
                   )}
                 </g>
               );

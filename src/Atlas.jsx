@@ -383,10 +383,23 @@ function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenCh
         </div>
       </div>
 
-      {/* Tab 1: 2D-3D Map View with BOLD, EYE-CATCHING LEFT INSPECTOR CARD */}
+      {/* Tab 1: 2D-3D Map View with LEFT MAP and RIGHT SIDE INFO */}
       {activeTab === 'map' && (
         <div className="atlas-map-workspace">
-          {/* LEFT COLUMN: ENLARGED, BOLD INSPECTION CARD */}
+          {/* LEFT COLUMN: 2D/3D MAP CANVAS */}
+          <div className="map-canvas-col">
+            <AtlasMap
+              lang={lang}
+              selectedState={selectedState}
+              onSelectState={setSelectedState}
+              items={items}
+              activeItem={activeItem}
+              onSelectItem={setActiveItem}
+              themeColor={topic.color}
+            />
+          </div>
+
+          {/* RIGHT COLUMN: ENLARGED, BOLD INSPECTION CARD */}
           <div className="map-inspector-col">
             {activeItem ? (
               <div className="inspector-card featured-focus">
@@ -502,19 +515,6 @@ function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenCh
                 </div>
               </div>
             )}
-          </div>
-
-          {/* RIGHT COLUMN: 2D/3D MAP CANVAS */}
-          <div className="map-canvas-col">
-            <AtlasMap
-              lang={lang}
-              selectedState={selectedState}
-              onSelectState={setSelectedState}
-              items={items}
-              activeItem={activeItem}
-              onSelectItem={setActiveItem}
-              themeColor={topic.color}
-            />
           </div>
         </div>
       )}

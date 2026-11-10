@@ -634,7 +634,7 @@ export const LEARN_TOPICS = [
   }
 ];
 
-export default function LearnView({ onOpenChapter, onNavigate, lang = 'en' }) {
+export default function LearnView({ data = {}, update = () => {}, onOpenChapter, onNavigate, lang = 'en' }) {
   // Always default to the first rich visual topic for immediate high-impact presentation!
   const [activeTopic, setActiveTopic] = useState(LEARN_TOPICS[0]);
   const [selectedSubject, setSelectedSubject] = useState('All');
@@ -642,6 +642,8 @@ export default function LearnView({ onOpenChapter, onNavigate, lang = 'en' }) {
   const [tableRevealed, setTableRevealed] = useState(false);
   const [quizIdx, setQuizIdx] = useState(0);
   const [selectedOpt, setSelectedOpt] = useState(null);
+
+  const completedList = data.completed || [];
 
   const subjectsList = ['All', 'History', 'Geography', 'Indian Polity & Constitution', 'Economics', 'General Science'];
 
@@ -682,21 +684,25 @@ export default function LearnView({ onOpenChapter, onNavigate, lang = 'en' }) {
           </div>
 
           <div className="curriculum-track-scroll">
-            {LEARN_TOPICS.map(topic => (
-              <button
-                key={topic.id}
-                className={`track-pill ${activeTopic.id === topic.id ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveTopic(topic);
-                  setTableRevealed(false);
-                  setQuizIdx(0);
-                  setSelectedOpt(null);
-                }}
-              >
-                <span className="track-subj-tag">{topic.subject.slice(0, 4)}</span>
-                <span className="track-name">{lang === 'te' ? topic.titleTe.split(' ')[0] : topic.title.split(' ')[0]}</span>
-              </button>
-            ))}
+            {LEARN_TOPICS.map(topic => {
+              const isTopicDone = completedList.includes(topic.id);
+              return (
+                <button
+                  key={topic.id}
+                  className={`track-pill ${activeTopic.id === topic.id ? 'active' : ''} ${isTopicDone ? 'done' : ''}`}
+                  onClick={() => {
+                    setActiveTopic(topic);
+                    setTableRevealed(false);
+                    setQuizIdx(0);
+                    setSelectedOpt(null);
+                  }}
+                >
+                  <span className="track-subj-tag">{topic.subject.slice(0, 4)}</span>
+                  <span className="track-name">{lang === 'te' ? topic.titleTe.split(' ')[0] : topic.title.split(' ')[0]}</span>
+                  {isTopicDone && <CheckCircle2 size={13} color="#10b981" />}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

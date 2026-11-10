@@ -175,12 +175,12 @@ function App() {
     ].slice(0, 8);
   }, [query]);
 
-  // Navigation Items (6 Focused Sections Max: Home, Learn, Play, Atlas, Review, Settings)
+  // Navigation Items (6 Focused Sections: Home, Learn, Atlas, Play, Review, Settings)
   const navItems = [
     { id: 'Home', label: lang === 'te' ? 'హోమ్' : 'Home', icon: House, desc: 'Dashboard & daily recall' },
     { id: 'Learn', label: lang === 'te' ? 'నేర్చుకోండి' : 'Learn', icon: BookOpen, desc: 'Visual curriculum & infographics' },
-    { id: 'Play', label: lang === 'te' ? 'సాధన' : 'Play', icon: Target, desc: 'Drills, bosses & exam mode' },
     { id: 'Atlas', label: lang === 'te' ? 'అట్లాస్' : 'Atlas', icon: Compass, desc: '33 2D-3D map games' },
+    { id: 'Play', label: lang === 'te' ? 'సాధన' : 'Play', icon: Target, desc: 'Drills, bosses & exam mode' },
     { id: 'Review', label: lang === 'te' ? 'పునశ్చరణ' : 'Review', icon: RotateCcw, desc: 'Mistake clinic & flashcards', badge: (data.mistakes || []).length || null },
     { id: 'Settings', label: lang === 'te' ? 'అమరికలు' : 'Settings', icon: Settings, desc: 'Appearance & backup' }
   ];
@@ -190,11 +190,11 @@ function App() {
       {/* Sleek Collapsible Sidebar (ChatGPT Style) */}
       <aside className={`sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
         <div className="sidebar-header">
-          <button className="brand" onClick={() => go('Home')} title="Vedha GK">
-            <span className="brandmark">V<span>•</span></span>
+          <button className="brand" onClick={() => go('Home')} title="RizVedha GK">
+            <span className="brandmark">RV<span>•</span></span>
             {!sidebarCollapsed && (
               <span>
-                <strong>Vedha</strong>
+                <strong>RizVedha</strong>
                 <small>{lang === 'te' ? 'విజువల్ జీకే ప్లాట్‌ఫారమ్' : 'VISUAL GK PLATFORM'}</small>
               </span>
             )}
@@ -242,10 +242,10 @@ function App() {
           )}
 
           <button className="profile" onClick={() => go('Settings')}>
-            <span className="avatar">V</span>
+            <span className="avatar">R</span>
             {!sidebarCollapsed && (
               <span>
-                <strong>{lang === 'te' ? 'విద్యార్థి ప్రొఫైల్' : 'Vedha Learner'}</strong>
+                <strong>{lang === 'te' ? 'రిజ్వాన్ (విద్యార్థి)' : 'Rizwan'}</strong>
                 <small>{lang === 'te' ? 'స్థానిక డేటా భద్రం' : 'Local Storage Encrypted'}</small>
               </span>
             )}
@@ -257,7 +257,7 @@ function App() {
       <div className={`main ${sidebarCollapsed ? 'collapsed' : ''}`}>
         <header className="topbar">
           <div className="crumb">
-            <span>VEDHA</span>
+            <span>RIZVEDHA</span>
             <ChevronRight size={14} />
             <b>{selectedChapter ? 'Textbook' : selectedLesson ? 'Lesson' : page}</b>
           </div>
@@ -329,7 +329,7 @@ function App() {
 
             {/* User Profile */}
             <button className="header-avatar" onClick={() => go('Settings')} aria-label="Profile">
-              V
+              R
             </button>
           </div>
         </header>
@@ -338,7 +338,7 @@ function App() {
         <main className="content">
           {/* Section 0: HOME (Dashboard, Daily Streak, Yesterday's Revision Quiz) */}
           {page === 'Home' && (
-            <Suspense fallback={<div className="panel">Loading Vedha Dashboard…</div>}>
+            <Suspense fallback={<div className="panel">Loading RizVedha Dashboard…</div>}>
               <HomeView
                 data={data}
                 update={update}
@@ -469,7 +469,7 @@ function App() {
           )}
 
           <footer>
-            <span>✳ VEDHA · LOCAL-FIRST VISUAL GK LEARNING</span>
+            <span>✳ RIZVEDHA · LOCAL-FIRST VISUAL GK LEARNING</span>
             <span>{lang === 'te' ? 'అన్ని 33 అట్లాస్ విజువల్ టాపిక్స్ ప్రత్యక్షంగా ఉన్నాయి' : 'All 33 Atlas Topics Live · No ads · No tracking'}</span>
           </footer>
         </main>

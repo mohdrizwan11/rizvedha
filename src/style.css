@@ -1427,7 +1427,7 @@ kbd { font-size: 10px; font-weight: 700; white-space: nowrap; border: 1px solid 
    ============================================================ */
 .atlas-map-workspace {
   display: grid;
-  grid-template-columns: 440px minmax(0, 1fr) !important;
+  grid-template-columns: minmax(0, 1fr) 420px !important;
   gap: 24px !important;
   align-items: start !important;
   margin-bottom: 30px !important;
