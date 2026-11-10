@@ -1,0 +1,3166 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "science-facts",
+  "file": "science_facts_app.html",
+  "mode": "deck",
+  "storageKey": "ssc_science_facts_v1",
+  "icon": "🔬",
+  "description": "Bilingual study app on static science GK for SSC: inventions and discoveries, SI units, measuring instruments and branches of science, with quick quizzes and exam notes.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Science Facts",
+      "विज्ञान तथ्य"
+    ],
+    "hSub": [
+      "SSC Focus · Inventions, units, instruments and branches",
+      "SSC फोकस · आविष्कार, इकाइयाँ, यंत्र और शाखाएँ"
+    ],
+    "learnTtl": [
+      "Learn science facts",
+      "विज्ञान तथ्य सीखें"
+    ],
+    "learnSub": [
+      "Open any card to read who discovered it, its SI unit, what an instrument measures or what a branch studies.",
+      "किसी भी कार्ड को खोलकर पढ़ें कि इसकी खोज किसने की, इसकी SI इकाई, कोई यंत्र क्या मापता है या कोई शाखा क्या अध्ययन करती है।"
+    ],
+    "lvlLabel": [
+      "Level · Science GK rank",
+      "स्तर · विज्ञान GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search science facts",
+      "विज्ञान तथ्य खोजें"
+    ],
+    "searchPh": [
+      "Invention, scientist, unit or instrument",
+      "आविष्कार, वैज्ञानिक, इकाई या यंत्र"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Cards",
+      "कार्ड"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten quick questions: who discovered what, SI units, what instruments measure and what branches study. Each answer comes with an explanation.",
+      "दस छोटे प्रश्न: किसने क्या खोजा, SI इकाइयाँ, यंत्र क्या मापते हैं और शाखाएँ क्या अध्ययन करती हैं। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "howto": [
+      "Play: ten quick questions with four options and an explanation for each. Choose a topic, or \"My mistakes\" to revise the questions you got wrong (also saved in the app's Mistake Diary).\nLearn → Cards: 117 entries on inventions and discoveries, SI units, instruments and branches of science.\nLearn → Exam notes: Indian scientists, the seven SI base units, units and conversions, and easily confused pairs.\nStats: your accuracy, best streak, level and badges.\nFacts were checked in October 2026.",
+      "खेलें: चार विकल्पों वाले दस छोटे प्रश्न, हर एक की व्याख्या के साथ। कोई विषय चुनें, या गलत हुए प्रश्न दोहराने के लिए \"मेरी गलतियाँ\" (ये ऐप की गलती डायरी में भी सुरक्षित होते हैं)।\nसीखें → कार्ड: 117 प्रविष्टियाँ आविष्कारों और खोजों, SI इकाइयों, यंत्रों और विज्ञान की शाखाओं पर।\nसीखें → परीक्षा नोट्स: भारतीय वैज्ञानिक, सात SI मूल इकाइयाँ, इकाइयाँ और रूपांतरण, और भ्रमित करने वाली जोड़ियाँ।\nआँकड़े: आपकी सटीकता, सबसे लंबी स्ट्रीक, स्तर और बैज।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "invent",
+      "icon": "💡",
+      "col": "#F57F17",
+      "t": [
+        "Invention & discovery",
+        "आविष्कार और खोज"
+      ]
+    },
+    {
+      "k": "unit",
+      "icon": "📏",
+      "col": "#1565C0",
+      "t": [
+        "SI unit",
+        "SI इकाई"
+      ]
+    },
+    {
+      "k": "instr",
+      "icon": "🌡️",
+      "col": "#C62828",
+      "t": [
+        "Instrument",
+        "यंत्र"
+      ]
+    },
+    {
+      "k": "branch",
+      "icon": "🧬",
+      "col": "#2E7D32",
+      "t": [
+        "Branch of science",
+        "विज्ञान की शाखा"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "by",
+      "t": [
+        "By",
+        "किसने"
+      ]
+    },
+    {
+      "k": "yr",
+      "t": [
+        "Year",
+        "वर्ष"
+      ]
+    },
+    {
+      "k": "un",
+      "t": [
+        "SI unit",
+        "SI इकाई"
+      ]
+    },
+    {
+      "k": "ms",
+      "t": [
+        "Measures",
+        "मापता है"
+      ]
+    },
+    {
+      "k": "sd",
+      "t": [
+        "Study of",
+        "अध्ययन"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Lab Assistant",
+      "hi": "प्रयोगशाला सहायक"
+    },
+    {
+      "min": 60,
+      "en": "Experimenter",
+      "hi": "प्रयोगकर्ता"
+    },
+    {
+      "min": 150,
+      "en": "Researcher",
+      "hi": "शोधकर्ता"
+    },
+    {
+      "min": 320,
+      "en": "Inventor",
+      "hi": "आविष्कारक"
+    },
+    {
+      "min": 560,
+      "en": "Scientist",
+      "hi": "वैज्ञानिक"
+    },
+    {
+      "min": 900,
+      "en": "Professor",
+      "hi": "प्रोफ़ेसर"
+    },
+    {
+      "min": 1400,
+      "en": "Science GK Champion",
+      "hi": "विज्ञान GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🔬",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🎯",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "units",
+      "icon": "📏",
+      "t": [
+        "Unit Master",
+        "इकाई विशेषज्ञ"
+      ],
+      "d": [
+        "Study every SI unit card",
+        "सभी SI इकाई कार्ड पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "unit"
+        ]
+      }
+    },
+    {
+      "id": "instr",
+      "icon": "🌡️",
+      "t": [
+        "Gadget Guru",
+        "यंत्र गुरु"
+      ],
+      "d": [
+        "Study every instrument",
+        "सभी यंत्र पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "instr"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Science GK Champion",
+        "विज्ञान GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "iv",
+        "field": "by",
+        "ask": [
+          "Who invented or discovered it?",
+          "इसका आविष्कार या खोज किसने की?"
+        ],
+        "reverseId": "wi",
+        "reverseAsk": [
+          "Which of these is credited to",
+          "इनमें से किसका श्रेय इन्हें है:"
+        ]
+      },
+      {
+        "id": "un",
+        "field": "un",
+        "ask": [
+          "What is its SI unit?",
+          "इसकी SI इकाई क्या है?"
+        ],
+        "reverseId": "wu",
+        "reverseAsk": [
+          "Which quantity is measured in",
+          "कौन-सी राशि इसमें मापी जाती है:"
+        ]
+      },
+      {
+        "id": "ms",
+        "field": "ms",
+        "ask": [
+          "What does it measure?",
+          "यह क्या मापता है?"
+        ],
+        "reverseId": "wm",
+        "reverseAsk": [
+          "Which instrument measures",
+          "कौन-सा यंत्र मापता है:"
+        ]
+      },
+      {
+        "id": "sd",
+        "field": "sd",
+        "ask": [
+          "What does it study?",
+          "यह किसका अध्ययन है?"
+        ],
+        "reverseId": "ws",
+        "reverseAsk": [
+          "Which branch studies",
+          "कौन-सी शाखा अध्ययन करती है:"
+        ],
+        "pairs": [
+          [
+            "Fish",
+            "Fish farming"
+          ],
+          [
+            "Bee-keeping",
+            "Insects"
+          ],
+          [
+            "Silkworm rearing for silk",
+            "Insects"
+          ],
+          [
+            "Birds",
+            "Birds' eggs"
+          ],
+          [
+            "Cells",
+            "Tissues"
+          ],
+          [
+            "Heredity and variation",
+            "Cells"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "q": "iv",
+            "n": 3
+          },
+          {
+            "q": "un",
+            "n": 2
+          },
+          {
+            "q": "ms",
+            "n": 2
+          },
+          {
+            "q": "sd",
+            "n": 1
+          },
+          {
+            "fixed": [
+              "invent",
+              "unit",
+              "instr",
+              "branch"
+            ],
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "invent",
+        "t": [
+          "Inventions & discoveries",
+          "आविष्कार और खोज"
+        ],
+        "mix": [
+          {
+            "q": "iv",
+            "n": 5
+          },
+          {
+            "q": "wi",
+            "n": 2
+          },
+          {
+            "fixed": [
+              "invent"
+            ],
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "units",
+        "t": [
+          "Units & instruments",
+          "इकाइयाँ और यंत्र"
+        ],
+        "mix": [
+          {
+            "q": "un",
+            "n": 3
+          },
+          {
+            "q": "ms",
+            "n": 3
+          },
+          {
+            "q": "wm",
+            "n": 1
+          },
+          {
+            "fixed": [
+              "unit",
+              "instr"
+            ],
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "branch",
+        "t": [
+          "Branches of science",
+          "विज्ञान की शाखाएँ"
+        ],
+        "mix": [
+          {
+            "q": "sd",
+            "n": 5
+          },
+          {
+            "q": "ws",
+            "n": 3
+          },
+          {
+            "fixed": [
+              "branch"
+            ],
+            "n": 2
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Telephone",
+      "h": "टेलीफ़ोन",
+      "c": "invent",
+      "d": 1,
+      "st": "Alexander Graham Bell",
+      "sh": "अलेक्ज़ेंडर ग्राहम बेल",
+      "by": "Alexander Graham Bell",
+      "byh": "अलेक्ज़ेंडर ग्राहम बेल",
+      "yr": "1876",
+      "yrh": "1876",
+      "tag": "Alexander Graham Bell (1876)",
+      "tagh": "अलेक्ज़ेंडर ग्राहम बेल (1876)",
+      "fact": "Alexander Graham Bell patented the telephone in 1876.",
+      "facth": "अलेक्ज़ेंडर ग्राहम बेल ने 1876 में टेलीफ़ोन का पेटेंट कराया।"
+    },
+    {
+      "n": "Electric bulb",
+      "h": "विद्युत बल्ब",
+      "c": "invent",
+      "d": 1,
+      "st": "Thomas Edison",
+      "sh": "थॉमस एडिसन",
+      "by": "Thomas Edison",
+      "byh": "थॉमस एडिसन",
+      "yr": "1879",
+      "yrh": "1879",
+      "tag": "Thomas Edison (1879)",
+      "tagh": "थॉमस एडिसन (1879)",
+      "fact": "Thomas Edison made a long-lasting incandescent bulb in 1879; he also invented the phonograph.",
+      "facth": "थॉमस एडिसन ने 1879 में लंबे समय तक चलने वाला तापदीप्त बल्ब बनाया; उन्होंने फ़ोनोग्राफ़ भी बनाया।"
+    },
+    {
+      "n": "Radio",
+      "h": "रेडियो",
+      "c": "invent",
+      "d": 1,
+      "st": "Guglielmo Marconi",
+      "sh": "गुग्लिएल्मो मारकोनी",
+      "by": "Guglielmo Marconi",
+      "byh": "गुग्लिएल्मो मारकोनी",
+      "yr": "1895",
+      "yrh": "1895",
+      "tag": "Guglielmo Marconi (1895)",
+      "tagh": "गुग्लिएल्मो मारकोनी (1895)",
+      "fact": "Guglielmo Marconi developed radio telegraphy; J. C. Bose also did pioneering work on radio waves.",
+      "facth": "गुग्लिएल्मो मारकोनी ने रेडियो टेलीग्राफ़ी विकसित की; जे. सी. बोस ने भी रेडियो तरंगों पर अग्रणी कार्य किया।"
+    },
+    {
+      "n": "Television",
+      "h": "टेलीविज़न",
+      "c": "invent",
+      "d": 1,
+      "st": "John Logie Baird",
+      "sh": "जॉन लोगी बेयर्ड",
+      "by": "John Logie Baird",
+      "byh": "जॉन लोगी बेयर्ड",
+      "yr": "1926",
+      "yrh": "1926",
+      "tag": "John Logie Baird (1926)",
+      "tagh": "जॉन लोगी बेयर्ड (1926)",
+      "fact": "John Logie Baird gave the first public demonstration of television in 1926.",
+      "facth": "जॉन लोगी बेयर्ड ने 1926 में टेलीविज़न का पहला सार्वजनिक प्रदर्शन किया।"
+    },
+    {
+      "n": "World Wide Web",
+      "h": "वर्ल्ड वाइड वेब",
+      "c": "invent",
+      "d": 1,
+      "st": "Tim Berners-Lee",
+      "sh": "टिम बर्नर्स-ली",
+      "by": "Tim Berners-Lee",
+      "byh": "टिम बर्नर्स-ली",
+      "yr": "1989",
+      "yrh": "1989",
+      "tag": "Tim Berners-Lee (1989)",
+      "tagh": "टिम बर्नर्स-ली (1989)",
+      "fact": "Tim Berners-Lee proposed the World Wide Web at CERN in 1989.",
+      "facth": "टिम बर्नर्स-ली ने 1989 में CERN में वर्ल्ड वाइड वेब का प्रस्ताव रखा।"
+    },
+    {
+      "n": "Penicillin",
+      "h": "पेनिसिलिन",
+      "c": "invent",
+      "d": 1,
+      "st": "Alexander Fleming",
+      "sh": "अलेक्ज़ेंडर फ़्लेमिंग",
+      "by": "Alexander Fleming",
+      "byh": "अलेक्ज़ेंडर फ़्लेमिंग",
+      "yr": "1928",
+      "yrh": "1928",
+      "tag": "Alexander Fleming (1928)",
+      "tagh": "अलेक्ज़ेंडर फ़्लेमिंग (1928)",
+      "fact": "Alexander Fleming discovered penicillin, the first antibiotic, in 1928.",
+      "facth": "अलेक्ज़ेंडर फ़्लेमिंग ने 1928 में पहली एंटीबायोटिक पेनिसिलिन खोजी।"
+    },
+    {
+      "n": "Smallpox vaccine",
+      "h": "चेचक का टीका",
+      "c": "invent",
+      "d": 1,
+      "st": "Edward Jenner",
+      "sh": "एडवर्ड जेनर",
+      "by": "Edward Jenner",
+      "byh": "एडवर्ड जेनर",
+      "yr": "1796",
+      "yrh": "1796",
+      "tag": "Edward Jenner (1796)",
+      "tagh": "एडवर्ड जेनर (1796)",
+      "fact": "Edward Jenner developed the first vaccine, against smallpox, in 1796; he is called the father of immunology.",
+      "facth": "एडवर्ड जेनर ने 1796 में चेचक का पहला टीका बनाया; उन्हें प्रतिरक्षा विज्ञान का जनक कहा जाता है।"
+    },
+    {
+      "n": "Rabies vaccine",
+      "h": "रेबीज़ का टीका",
+      "c": "invent",
+      "d": 1,
+      "st": "Louis Pasteur",
+      "sh": "लुई पाश्चर",
+      "by": "Louis Pasteur",
+      "byh": "लुई पाश्चर",
+      "yr": "1885",
+      "yrh": "1885",
+      "tag": "Louis Pasteur (1885)",
+      "tagh": "लुई पाश्चर (1885)",
+      "fact": "Louis Pasteur made the rabies vaccine and the process of pasteurisation.",
+      "facth": "लुई पाश्चर ने रेबीज़ का टीका और पाश्चरीकरण की विधि बनाई।"
+    },
+    {
+      "n": "Polio vaccine",
+      "h": "पोलियो का टीका",
+      "c": "invent",
+      "d": 2,
+      "st": "Jonas Salk",
+      "sh": "जोनास साल्क",
+      "by": "Jonas Salk",
+      "byh": "जोनास साल्क",
+      "yr": "1955",
+      "yrh": "1955",
+      "tag": "Jonas Salk (1955)",
+      "tagh": "जोनास साल्क (1955)",
+      "fact": "Jonas Salk developed the injected polio vaccine; Albert Sabin developed the oral one.",
+      "facth": "जोनास साल्क ने इंजेक्शन वाला पोलियो टीका बनाया; अल्बर्ट साबिन ने मुँह से दिया जाने वाला।"
+    },
+    {
+      "n": "Insulin",
+      "h": "इंसुलिन",
+      "c": "invent",
+      "d": 2,
+      "st": "Frederick Banting and Charles Best",
+      "sh": "फ़्रेडरिक बैंटिंग और चार्ल्स बेस्ट",
+      "by": "Frederick Banting and Charles Best",
+      "byh": "फ़्रेडरिक बैंटिंग और चार्ल्स बेस्ट",
+      "yr": "1921",
+      "yrh": "1921",
+      "tag": "Frederick Banting and Charles Best (1921)",
+      "tagh": "फ़्रेडरिक बैंटिंग और चार्ल्स बेस्ट (1921)",
+      "fact": "Frederick Banting and Charles Best isolated insulin in 1921 to treat diabetes.",
+      "facth": "फ़्रेडरिक बैंटिंग और चार्ल्स बेस्ट ने 1921 में मधुमेह के उपचार के लिए इंसुलिन अलग किया।"
+    },
+    {
+      "n": "Theory of relativity",
+      "h": "सापेक्षता का सिद्धांत",
+      "c": "invent",
+      "d": 1,
+      "st": "Albert Einstein",
+      "sh": "अल्बर्ट आइंस्टीन",
+      "by": "Albert Einstein",
+      "byh": "अल्बर्ट आइंस्टीन",
+      "yr": "1905 / 1915",
+      "yrh": "1905 / 1915",
+      "tag": "Albert Einstein (1905 / 1915)",
+      "tagh": "अल्बर्ट आइंस्टीन (1905 / 1915)",
+      "fact": "Albert Einstein gave special (1905) and general (1915) relativity; he won the 1921 Nobel for the photoelectric effect.",
+      "facth": "अल्बर्ट आइंस्टीन ने विशेष (1905) और सामान्य (1915) सापेक्षता दी; उन्हें 1921 का नोबेल प्रकाश-विद्युत प्रभाव के लिए मिला।"
+    },
+    {
+      "n": "Laws of motion and gravitation",
+      "h": "गति और गुरुत्वाकर्षण के नियम",
+      "c": "invent",
+      "d": 1,
+      "st": "Isaac Newton",
+      "sh": "आइज़क न्यूटन",
+      "by": "Isaac Newton",
+      "byh": "आइज़क न्यूटन",
+      "yr": "1687",
+      "yrh": "1687",
+      "tag": "Isaac Newton (1687)",
+      "tagh": "आइज़क न्यूटन (1687)",
+      "fact": "Isaac Newton set out the laws of motion and universal gravitation in the Principia (1687).",
+      "facth": "आइज़क न्यूटन ने प्रिंसिपिया (1687) में गति और सार्वत्रिक गुरुत्वाकर्षण के नियम दिए।"
+    },
+    {
+      "n": "Electron",
+      "h": "इलेक्ट्रॉन",
+      "c": "invent",
+      "d": 1,
+      "st": "J. J. Thomson",
+      "sh": "जे. जे. थॉमसन",
+      "by": "J. J. Thomson",
+      "byh": "जे. जे. थॉमसन",
+      "yr": "1897",
+      "yrh": "1897",
+      "tag": "J. J. Thomson (1897)",
+      "tagh": "जे. जे. थॉमसन (1897)",
+      "fact": "J. J. Thomson discovered the electron in 1897 using cathode rays.",
+      "facth": "जे. जे. थॉमसन ने 1897 में कैथोड किरणों से इलेक्ट्रॉन खोजा।"
+    },
+    {
+      "n": "Atomic nucleus and proton",
+      "h": "परमाणु नाभिक और प्रोटॉन",
+      "c": "invent",
+      "d": 1,
+      "st": "Ernest Rutherford",
+      "sh": "अर्नेस्ट रदरफ़ोर्ड",
+      "by": "Ernest Rutherford",
+      "byh": "अर्नेस्ट रदरफ़ोर्ड",
+      "yr": "1911 / 1919",
+      "yrh": "1911 / 1919",
+      "tag": "Ernest Rutherford (1911 / 1919)",
+      "tagh": "अर्नेस्ट रदरफ़ोर्ड (1911 / 1919)",
+      "fact": "Ernest Rutherford discovered the atomic nucleus with his gold foil experiment and later the proton.",
+      "facth": "अर्नेस्ट रदरफ़ोर्ड ने स्वर्ण पत्र प्रयोग से परमाणु नाभिक और बाद में प्रोटॉन खोजा।"
+    },
+    {
+      "n": "Neutron",
+      "h": "न्यूट्रॉन",
+      "c": "invent",
+      "d": 1,
+      "st": "James Chadwick",
+      "sh": "जेम्स चैडविक",
+      "by": "James Chadwick",
+      "byh": "जेम्स चैडविक",
+      "yr": "1932",
+      "yrh": "1932",
+      "tag": "James Chadwick (1932)",
+      "tagh": "जेम्स चैडविक (1932)",
+      "fact": "James Chadwick discovered the neutron in 1932.",
+      "facth": "जेम्स चैडविक ने 1932 में न्यूट्रॉन खोजा।"
+    },
+    {
+      "n": "X-rays",
+      "h": "एक्स-किरणें",
+      "c": "invent",
+      "d": 1,
+      "st": "Wilhelm Röntgen",
+      "sh": "विल्हेल्म रॉन्टजन",
+      "by": "Wilhelm Röntgen",
+      "byh": "विल्हेल्म रॉन्टजन",
+      "yr": "1895",
+      "yrh": "1895",
+      "tag": "Wilhelm Röntgen (1895)",
+      "tagh": "विल्हेल्म रॉन्टजन (1895)",
+      "fact": "Wilhelm Röntgen discovered X-rays in 1895 and won the first Nobel Prize in Physics (1901).",
+      "facth": "विल्हेल्म रॉन्टजन ने 1895 में एक्स-किरणें खोजीं और भौतिकी का पहला नोबेल (1901) जीता।"
+    },
+    {
+      "n": "Radioactivity",
+      "h": "रेडियोधर्मिता",
+      "c": "invent",
+      "d": 1,
+      "st": "Henri Becquerel",
+      "sh": "हेनरी बेकरेल",
+      "by": "Henri Becquerel",
+      "byh": "हेनरी बेकरेल",
+      "yr": "1896",
+      "yrh": "1896",
+      "tag": "Henri Becquerel (1896)",
+      "tagh": "हेनरी बेकरेल (1896)",
+      "fact": "Henri Becquerel discovered radioactivity in uranium in 1896; the SI unit of radioactivity is named after him.",
+      "facth": "हेनरी बेकरेल ने 1896 में यूरेनियम में रेडियोधर्मिता खोजी; रेडियोधर्मिता की SI इकाई उनके नाम पर है।"
+    },
+    {
+      "n": "Radium and polonium",
+      "h": "रेडियम और पोलोनियम",
+      "c": "invent",
+      "d": 1,
+      "st": "Marie and Pierre Curie",
+      "sh": "मैरी और पियरे क्यूरी",
+      "by": "Marie and Pierre Curie",
+      "byh": "मैरी और पियरे क्यूरी",
+      "yr": "1898",
+      "yrh": "1898",
+      "tag": "Marie and Pierre Curie (1898)",
+      "tagh": "मैरी और पियरे क्यूरी (1898)",
+      "fact": "Marie and Pierre Curie discovered radium and polonium; Marie Curie won Nobel Prizes in both physics and chemistry.",
+      "facth": "मैरी और पियरे क्यूरी ने रेडियम और पोलोनियम खोजे; मैरी क्यूरी ने भौतिकी और रसायन दोनों के नोबेल जीते।"
+    },
+    {
+      "n": "Dynamite",
+      "h": "डायनामाइट",
+      "c": "invent",
+      "d": 1,
+      "st": "Alfred Nobel",
+      "sh": "अल्फ़्रेड नोबेल",
+      "by": "Alfred Nobel",
+      "byh": "अल्फ़्रेड नोबेल",
+      "yr": "1867",
+      "yrh": "1867",
+      "tag": "Alfred Nobel (1867)",
+      "tagh": "अल्फ़्रेड नोबेल (1867)",
+      "fact": "Alfred Nobel invented dynamite; his will founded the Nobel Prizes.",
+      "facth": "अल्फ़्रेड नोबेल ने डायनामाइट बनाया; उनकी वसीयत से नोबेल पुरस्कार शुरू हुए।"
+    },
+    {
+      "n": "Steam engine (improved)",
+      "h": "भाप इंजन (उन्नत)",
+      "c": "invent",
+      "d": 1,
+      "st": "James Watt",
+      "sh": "जेम्स वाट",
+      "by": "James Watt",
+      "byh": "जेम्स वाट",
+      "yr": "1769",
+      "yrh": "1769",
+      "tag": "James Watt (1769)",
+      "tagh": "जेम्स वाट (1769)",
+      "fact": "James Watt greatly improved the steam engine; the watt, unit of power, is named after him.",
+      "facth": "जेम्स वाट ने भाप इंजन को बहुत बेहतर बनाया; शक्ति की इकाई वाट उनके नाम पर है।"
+    },
+    {
+      "n": "Printing press",
+      "h": "छापाख़ाना",
+      "c": "invent",
+      "d": 1,
+      "st": "Johannes Gutenberg",
+      "sh": "योहानेस गुटेनबर्ग",
+      "by": "Johannes Gutenberg",
+      "byh": "योहानेस गुटेनबर्ग",
+      "yr": "c. 1440",
+      "yrh": "c. 1440",
+      "tag": "Johannes Gutenberg (c. 1440)",
+      "tagh": "योहानेस गुटेनबर्ग (c. 1440)",
+      "fact": "Johannes Gutenberg built a printing press with movable metal type around 1440.",
+      "facth": "योहानेस गुटेनबर्ग ने लगभग 1440 में चल धातु अक्षरों वाला छापाख़ाना बनाया।"
+    },
+    {
+      "n": "Aeroplane",
+      "h": "हवाई जहाज़",
+      "c": "invent",
+      "d": 1,
+      "st": "Wright brothers",
+      "sh": "राइट बंधु",
+      "by": "Wright brothers",
+      "byh": "राइट बंधु",
+      "yr": "1903",
+      "yrh": "1903",
+      "tag": "Wright brothers (1903)",
+      "tagh": "राइट बंधु (1903)",
+      "fact": "Orville and Wilbur Wright made the first powered, controlled flight at Kitty Hawk in 1903.",
+      "facth": "ऑरविल और विल्बर राइट ने 1903 में किटी हॉक में पहली संचालित, नियंत्रित उड़ान भरी।"
+    },
+    {
+      "n": "Analytical Engine (computer)",
+      "h": "एनालिटिकल इंजन (कंप्यूटर)",
+      "c": "invent",
+      "d": 1,
+      "st": "Charles Babbage",
+      "sh": "चार्ल्स बैबेज",
+      "by": "Charles Babbage",
+      "byh": "चार्ल्स बैबेज",
+      "yr": "1837",
+      "yrh": "1837",
+      "tag": "Charles Babbage (1837)",
+      "tagh": "चार्ल्स बैबेज (1837)",
+      "fact": "Charles Babbage designed the Analytical Engine and is called the father of the computer; Ada Lovelace wrote programs for it.",
+      "facth": "चार्ल्स बैबेज ने एनालिटिकल इंजन डिज़ाइन किया और उन्हें कंप्यूटर का जनक कहा जाता है; एडा लवलेस ने इसके लिए प्रोग्राम लिखे।"
+    },
+    {
+      "n": "Periodic table",
+      "h": "आवर्त सारणी",
+      "c": "invent",
+      "d": 1,
+      "st": "Dmitri Mendeleev",
+      "sh": "दिमित्री मेंडेलीफ़",
+      "by": "Dmitri Mendeleev",
+      "byh": "दिमित्री मेंडेलीफ़",
+      "yr": "1869",
+      "yrh": "1869",
+      "tag": "Dmitri Mendeleev (1869)",
+      "tagh": "दिमित्री मेंडेलीफ़ (1869)",
+      "fact": "Dmitri Mendeleev arranged the elements in a periodic table by atomic mass in 1869; the modern table is by atomic number (Moseley).",
+      "facth": "दिमित्री मेंडेलीफ़ ने 1869 में तत्वों को परमाणु द्रव्यमान के अनुसार आवर्त सारणी में रखा; आधुनिक सारणी परमाणु क्रमांक (मोज़ले) पर है।"
+    },
+    {
+      "n": "Atomic theory",
+      "h": "परमाणु सिद्धांत",
+      "c": "invent",
+      "d": 1,
+      "st": "John Dalton",
+      "sh": "जॉन डाल्टन",
+      "by": "John Dalton",
+      "byh": "जॉन डाल्टन",
+      "yr": "1808",
+      "yrh": "1808",
+      "tag": "John Dalton (1808)",
+      "tagh": "जॉन डाल्टन (1808)",
+      "fact": "John Dalton proposed the atomic theory of matter in 1808.",
+      "facth": "जॉन डाल्टन ने 1808 में पदार्थ का परमाणु सिद्धांत दिया।"
+    },
+    {
+      "n": "Raman effect",
+      "h": "रमन प्रभाव",
+      "c": "invent",
+      "d": 1,
+      "st": "C. V. Raman",
+      "sh": "सी. वी. रमन",
+      "by": "C. V. Raman",
+      "byh": "सी. वी. रमन",
+      "yr": "1928",
+      "yrh": "1928",
+      "tag": "C. V. Raman (1928)",
+      "tagh": "सी. वी. रमन (1928)",
+      "fact": "C. V. Raman discovered the scattering of light named after him on 28 February 1928, now National Science Day; he won the 1930 Nobel.",
+      "facth": "सी. वी. रमन ने 28 फ़रवरी 1928 को अपने नाम वाला प्रकाश प्रकीर्णन खोजा, जो अब राष्ट्रीय विज्ञान दिवस है; उन्हें 1930 का नोबेल मिला।"
+    },
+    {
+      "n": "Bose–Einstein statistics",
+      "h": "बोस–आइंस्टीन सांख्यिकी",
+      "c": "invent",
+      "d": 2,
+      "st": "Satyendra Nath Bose",
+      "sh": "सत्येंद्र नाथ बोस",
+      "by": "Satyendra Nath Bose",
+      "byh": "सत्येंद्र नाथ बोस",
+      "yr": "1924",
+      "yrh": "1924",
+      "tag": "Satyendra Nath Bose (1924)",
+      "tagh": "सत्येंद्र नाथ बोस (1924)",
+      "fact": "Satyendra Nath Bose developed the statistics later extended by Einstein; particles called bosons are named after him.",
+      "facth": "सत्येंद्र नाथ बोस ने वह सांख्यिकी विकसित की जिसे आइंस्टीन ने आगे बढ़ाया; बोसॉन कणों का नाम उन पर है।"
+    },
+    {
+      "n": "Crescograph",
+      "h": "क्रेस्कोग्राफ़",
+      "c": "invent",
+      "d": 1,
+      "st": "Jagadish Chandra Bose",
+      "sh": "जगदीश चंद्र बोस",
+      "by": "Jagadish Chandra Bose",
+      "byh": "जगदीश चंद्र बोस",
+      "yr": "1900s",
+      "yrh": "1900s",
+      "tag": "Jagadish Chandra Bose (1900s)",
+      "tagh": "जगदीश चंद्र बोस (1900s)",
+      "fact": "Jagadish Chandra Bose invented the crescograph to measure plant growth and showed that plants respond to stimuli.",
+      "facth": "जगदीश चंद्र बोस ने पौधों की वृद्धि मापने के लिए क्रेस्कोग्राफ़ बनाया और दिखाया कि पौधे उद्दीपनों पर प्रतिक्रिया करते हैं।"
+    },
+    {
+      "n": "DNA double helix",
+      "h": "DNA दोहरी कुंडली",
+      "c": "invent",
+      "d": 1,
+      "st": "James Watson and Francis Crick",
+      "sh": "जेम्स वॉटसन और फ़्रांसिस क्रिक",
+      "by": "James Watson and Francis Crick",
+      "byh": "जेम्स वॉटसन और फ़्रांसिस क्रिक",
+      "yr": "1953",
+      "yrh": "1953",
+      "tag": "James Watson and Francis Crick (1953)",
+      "tagh": "जेम्स वॉटसन और फ़्रांसिस क्रिक (1953)",
+      "fact": "James Watson and Francis Crick described the double-helix structure of DNA in 1953, using Rosalind Franklin's X-ray images.",
+      "facth": "जेम्स वॉटसन और फ़्रांसिस क्रिक ने 1953 में रोज़लिंड फ़्रैंकलिन के एक्स-रे चित्रों की मदद से DNA की दोहरी कुंडली संरचना बताई।"
+    },
+    {
+      "n": "Blood groups",
+      "h": "रक्त समूह",
+      "c": "invent",
+      "d": 1,
+      "st": "Karl Landsteiner",
+      "sh": "कार्ल लैंडस्टीनर",
+      "by": "Karl Landsteiner",
+      "byh": "कार्ल लैंडस्टीनर",
+      "yr": "1900",
+      "yrh": "1900",
+      "tag": "Karl Landsteiner (1900)",
+      "tagh": "कार्ल लैंडस्टीनर (1900)",
+      "fact": "Karl Landsteiner discovered the ABO blood groups in 1900.",
+      "facth": "कार्ल लैंडस्टीनर ने 1900 में ABO रक्त समूह खोजे।"
+    },
+    {
+      "n": "Cell",
+      "h": "कोशिका",
+      "c": "invent",
+      "d": 1,
+      "st": "Robert Hooke",
+      "sh": "रॉबर्ट हुक",
+      "by": "Robert Hooke",
+      "byh": "रॉबर्ट हुक",
+      "yr": "1665",
+      "yrh": "1665",
+      "tag": "Robert Hooke (1665)",
+      "tagh": "रॉबर्ट हुक (1665)",
+      "fact": "Robert Hooke first described cells in cork in 1665.",
+      "facth": "रॉबर्ट हुक ने 1665 में कॉर्क में पहली बार कोशिकाओं का वर्णन किया।"
+    },
+    {
+      "n": "Bacteria (first seen)",
+      "h": "जीवाणु (पहली बार देखे)",
+      "c": "invent",
+      "d": 2,
+      "st": "Antonie van Leeuwenhoek",
+      "sh": "एंटोनी वान ल्यूवेनहॉक",
+      "by": "Antonie van Leeuwenhoek",
+      "byh": "एंटोनी वान ल्यूवेनहॉक",
+      "yr": "1676",
+      "yrh": "1676",
+      "tag": "Antonie van Leeuwenhoek (1676)",
+      "tagh": "एंटोनी वान ल्यूवेनहॉक (1676)",
+      "fact": "Antonie van Leeuwenhoek first saw bacteria with his own microscopes and is called the father of microbiology.",
+      "facth": "एंटोनी वान ल्यूवेनहॉक ने अपने सूक्ष्मदर्शी से पहली बार जीवाणु देखे और उन्हें सूक्ष्मजीव विज्ञान का जनक कहा जाता है।"
+    },
+    {
+      "n": "Oxygen",
+      "h": "ऑक्सीजन",
+      "c": "invent",
+      "d": 2,
+      "st": "Joseph Priestley",
+      "sh": "जोसेफ़ प्रीस्टले",
+      "by": "Joseph Priestley",
+      "byh": "जोसेफ़ प्रीस्टले",
+      "yr": "1774",
+      "yrh": "1774",
+      "tag": "Joseph Priestley (1774)",
+      "tagh": "जोसेफ़ प्रीस्टले (1774)",
+      "fact": "Joseph Priestley discovered oxygen in 1774 (Carl Scheele found it independently); Lavoisier named it.",
+      "facth": "जोसेफ़ प्रीस्टले ने 1774 में ऑक्सीजन खोजी (कार्ल शीले ने स्वतंत्र रूप से); लावोज़िए ने इसका नाम रखा।"
+    },
+    {
+      "n": "Hydrogen",
+      "h": "हाइड्रोजन",
+      "c": "invent",
+      "d": 2,
+      "st": "Henry Cavendish",
+      "sh": "हेनरी कैवेंडिश",
+      "by": "Henry Cavendish",
+      "byh": "हेनरी कैवेंडिश",
+      "yr": "1766",
+      "yrh": "1766",
+      "tag": "Henry Cavendish (1766)",
+      "tagh": "हेनरी कैवेंडिश (1766)",
+      "fact": "Henry Cavendish identified hydrogen as a distinct element in 1766.",
+      "facth": "हेनरी कैवेंडिश ने 1766 में हाइड्रोजन को अलग तत्व के रूप में पहचाना।"
+    },
+    {
+      "n": "Electric battery",
+      "h": "विद्युत बैटरी",
+      "c": "invent",
+      "d": 1,
+      "st": "Alessandro Volta",
+      "sh": "एलेसांद्रो वोल्टा",
+      "by": "Alessandro Volta",
+      "byh": "एलेसांद्रो वोल्टा",
+      "yr": "1800",
+      "yrh": "1800",
+      "tag": "Alessandro Volta (1800)",
+      "tagh": "एलेसांद्रो वोल्टा (1800)",
+      "fact": "Alessandro Volta built the first battery (voltaic pile) in 1800; the volt is named after him.",
+      "facth": "एलेसांद्रो वोल्टा ने 1800 में पहली बैटरी (वोल्टीय पुंज) बनाई; वोल्ट उनके नाम पर है।"
+    },
+    {
+      "n": "Electromagnetic induction",
+      "h": "विद्युत चुंबकीय प्रेरण",
+      "c": "invent",
+      "d": 1,
+      "st": "Michael Faraday",
+      "sh": "माइकल फ़ैराडे",
+      "by": "Michael Faraday",
+      "byh": "माइकल फ़ैराडे",
+      "yr": "1831",
+      "yrh": "1831",
+      "tag": "Michael Faraday (1831)",
+      "tagh": "माइकल फ़ैराडे (1831)",
+      "fact": "Michael Faraday discovered electromagnetic induction in 1831, the principle of the dynamo and transformer.",
+      "facth": "माइकल फ़ैराडे ने 1831 में विद्युत चुंबकीय प्रेरण खोजा, जो डायनेमो और ट्रांसफ़ॉर्मर का सिद्धांत है।"
+    },
+    {
+      "n": "Theory of evolution",
+      "h": "विकास का सिद्धांत",
+      "c": "invent",
+      "d": 1,
+      "st": "Charles Darwin",
+      "sh": "चार्ल्स डार्विन",
+      "by": "Charles Darwin",
+      "byh": "चार्ल्स डार्विन",
+      "yr": "1859",
+      "yrh": "1859",
+      "tag": "Charles Darwin (1859)",
+      "tagh": "चार्ल्स डार्विन (1859)",
+      "fact": "Charles Darwin explained evolution by natural selection in On the Origin of Species (1859).",
+      "facth": "चार्ल्स डार्विन ने ऑन द ओरिजिन ऑफ़ स्पीशीज़ (1859) में प्राकृतिक वरण द्वारा विकास समझाया।"
+    },
+    {
+      "n": "Laws of inheritance",
+      "h": "वंशागति के नियम",
+      "c": "invent",
+      "d": 1,
+      "st": "Gregor Mendel",
+      "sh": "ग्रेगर मेंडल",
+      "by": "Gregor Mendel",
+      "byh": "ग्रेगर मेंडल",
+      "yr": "1866",
+      "yrh": "1866",
+      "tag": "Gregor Mendel (1866)",
+      "tagh": "ग्रेगर मेंडल (1866)",
+      "fact": "Gregor Mendel found the laws of inheritance through pea plant experiments and is called the father of genetics.",
+      "facth": "ग्रेगर मेंडल ने मटर के पौधों पर प्रयोगों से वंशागति के नियम खोजे और उन्हें आनुवंशिकी का जनक कहा जाता है।"
+    },
+    {
+      "n": "Quantum theory",
+      "h": "क्वांटम सिद्धांत",
+      "c": "invent",
+      "d": 2,
+      "st": "Max Planck",
+      "sh": "मैक्स प्लांक",
+      "by": "Max Planck",
+      "byh": "मैक्स प्लांक",
+      "yr": "1900",
+      "yrh": "1900",
+      "tag": "Max Planck (1900)",
+      "tagh": "मैक्स प्लांक (1900)",
+      "fact": "Max Planck proposed that energy comes in quanta in 1900, starting quantum theory.",
+      "facth": "मैक्स प्लांक ने 1900 में प्रस्ताव रखा कि ऊर्जा क्वांटा में आती है, जिससे क्वांटम सिद्धांत शुरू हुआ।"
+    },
+    {
+      "n": "Ballpoint pen",
+      "h": "बॉलपॉइंट पेन",
+      "c": "invent",
+      "d": 2,
+      "st": "László Bíró",
+      "sh": "लास्लो बीरो",
+      "by": "László Bíró",
+      "byh": "लास्लो बीरो",
+      "yr": "1938",
+      "yrh": "1938",
+      "tag": "László Bíró (1938)",
+      "tagh": "लास्लो बीरो (1938)",
+      "fact": "László Bíró patented the modern ballpoint pen in 1938.",
+      "facth": "लास्लो बीरो ने 1938 में आधुनिक बॉलपॉइंट पेन का पेटेंट कराया।"
+    },
+    {
+      "n": "Force",
+      "h": "बल",
+      "c": "unit",
+      "d": 1,
+      "st": "Newton (N)",
+      "sh": "न्यूटन (N)",
+      "un": "Newton (N)",
+      "unh": "न्यूटन (N)",
+      "tag": "SI unit: Newton (N)",
+      "tagh": "SI इकाई: न्यूटन (N)",
+      "fact": "One newton is the force that gives a 1 kg mass an acceleration of 1 m/s².",
+      "facth": "एक न्यूटन वह बल है जो 1 किग्रा द्रव्यमान को 1 मी/से² त्वरण देता है।"
+    },
+    {
+      "n": "Work and energy",
+      "h": "कार्य और ऊर्जा",
+      "c": "unit",
+      "d": 1,
+      "st": "Joule (J)",
+      "sh": "जूल (J)",
+      "un": "Joule (J)",
+      "unh": "जूल (J)",
+      "tag": "SI unit: Joule (J)",
+      "tagh": "SI इकाई: जूल (J)",
+      "fact": "One joule is the work done when a force of 1 N moves a body 1 m; 1 kWh = 3.6 × 10⁶ J.",
+      "facth": "एक जूल वह कार्य है जब 1 N बल किसी वस्तु को 1 मी खिसकाता है; 1 kWh = 3.6 × 10⁶ J।"
+    },
+    {
+      "n": "Power",
+      "h": "शक्ति",
+      "c": "unit",
+      "d": 1,
+      "st": "Watt (W)",
+      "sh": "वाट (W)",
+      "un": "Watt (W)",
+      "unh": "वाट (W)",
+      "tag": "SI unit: Watt (W)",
+      "tagh": "SI इकाई: वाट (W)",
+      "fact": "One watt is one joule per second; 1 horsepower is about 746 W.",
+      "facth": "एक वाट एक जूल प्रति सेकंड है; 1 अश्वशक्ति लगभग 746 W है।"
+    },
+    {
+      "n": "Pressure",
+      "h": "दाब",
+      "c": "unit",
+      "d": 1,
+      "st": "Pascal (Pa)",
+      "sh": "पास्कल (Pa)",
+      "un": "Pascal (Pa)",
+      "unh": "पास्कल (Pa)",
+      "tag": "SI unit: Pascal (Pa)",
+      "tagh": "SI इकाई: पास्कल (Pa)",
+      "fact": "One pascal is one newton per square metre; atmospheric pressure is about 1.013 × 10⁵ Pa.",
+      "facth": "एक पास्कल एक न्यूटन प्रति वर्ग मीटर है; वायुमंडलीय दाब लगभग 1.013 × 10⁵ Pa है।"
+    },
+    {
+      "n": "Frequency",
+      "h": "आवृत्ति",
+      "c": "unit",
+      "d": 1,
+      "st": "Hertz (Hz)",
+      "sh": "हर्ट्ज़ (Hz)",
+      "un": "Hertz (Hz)",
+      "unh": "हर्ट्ज़ (Hz)",
+      "tag": "SI unit: Hertz (Hz)",
+      "tagh": "SI इकाई: हर्ट्ज़ (Hz)",
+      "fact": "Frequency is measured in hertz, cycles per second; human hearing is about 20 Hz to 20 kHz.",
+      "facth": "आवृत्ति हर्ट्ज़ (प्रति सेकंड चक्र) में मापी जाती है; मनुष्य लगभग 20 Hz से 20 kHz तक सुनता है।"
+    },
+    {
+      "n": "Electric charge",
+      "h": "विद्युत आवेश",
+      "c": "unit",
+      "d": 1,
+      "st": "Coulomb (C)",
+      "sh": "कूलॉम (C)",
+      "un": "Coulomb (C)",
+      "unh": "कूलॉम (C)",
+      "tag": "SI unit: Coulomb (C)",
+      "tagh": "SI इकाई: कूलॉम (C)",
+      "fact": "One coulomb is the charge carried by a current of 1 ampere in 1 second.",
+      "facth": "एक कूलॉम वह आवेश है जो 1 एम्पियर धारा 1 सेकंड में ले जाती है।"
+    },
+    {
+      "n": "Electric current",
+      "h": "विद्युत धारा",
+      "c": "unit",
+      "d": 1,
+      "st": "Ampere (A)",
+      "sh": "एम्पियर (A)",
+      "un": "Ampere (A)",
+      "unh": "एम्पियर (A)",
+      "tag": "SI unit: Ampere (A)",
+      "tagh": "SI इकाई: एम्पियर (A)",
+      "fact": "The ampere is one of the seven SI base units.",
+      "facth": "एम्पियर सात SI मूल इकाइयों में से एक है।"
+    },
+    {
+      "n": "Potential difference",
+      "h": "विभवांतर",
+      "c": "unit",
+      "d": 1,
+      "st": "Volt (V)",
+      "sh": "वोल्ट (V)",
+      "un": "Volt (V)",
+      "unh": "वोल्ट (V)",
+      "tag": "SI unit: Volt (V)",
+      "tagh": "SI इकाई: वोल्ट (V)",
+      "fact": "One volt is one joule per coulomb.",
+      "facth": "एक वोल्ट एक जूल प्रति कूलॉम है।"
+    },
+    {
+      "n": "Electrical resistance",
+      "h": "विद्युत प्रतिरोध",
+      "c": "unit",
+      "d": 1,
+      "st": "Ohm (Ω)",
+      "sh": "ओम (Ω)",
+      "un": "Ohm (Ω)",
+      "unh": "ओम (Ω)",
+      "tag": "SI unit: Ohm (Ω)",
+      "tagh": "SI इकाई: ओम (Ω)",
+      "fact": "Resistance is measured in ohms; by Ohm's law V = IR.",
+      "facth": "प्रतिरोध ओम में मापा जाता है; ओम के नियम से V = IR।"
+    },
+    {
+      "n": "Capacitance",
+      "h": "धारिता",
+      "c": "unit",
+      "d": 2,
+      "st": "Farad (F)",
+      "sh": "फ़ैराड (F)",
+      "un": "Farad (F)",
+      "unh": "फ़ैराड (F)",
+      "tag": "SI unit: Farad (F)",
+      "tagh": "SI इकाई: फ़ैराड (F)",
+      "fact": "Capacitance is measured in farads, named after Michael Faraday.",
+      "facth": "धारिता फ़ैराड में मापी जाती है, जो माइकल फ़ैराडे के नाम पर है।"
+    },
+    {
+      "n": "Inductance",
+      "h": "प्रेरकत्व",
+      "c": "unit",
+      "d": 3,
+      "st": "Henry (H)",
+      "sh": "हेनरी (H)",
+      "un": "Henry (H)",
+      "unh": "हेनरी (H)",
+      "tag": "SI unit: Henry (H)",
+      "tagh": "SI इकाई: हेनरी (H)",
+      "fact": "Inductance is measured in henrys, named after Joseph Henry.",
+      "facth": "प्रेरकत्व हेनरी में मापा जाता है, जो जोसेफ़ हेनरी के नाम पर है।"
+    },
+    {
+      "n": "Magnetic flux",
+      "h": "चुंबकीय फ़्लक्स",
+      "c": "unit",
+      "d": 2,
+      "st": "Weber (Wb)",
+      "sh": "वेबर (Wb)",
+      "un": "Weber (Wb)",
+      "unh": "वेबर (Wb)",
+      "tag": "SI unit: Weber (Wb)",
+      "tagh": "SI इकाई: वेबर (Wb)",
+      "fact": "Magnetic flux is measured in webers.",
+      "facth": "चुंबकीय फ़्लक्स वेबर में मापा जाता है।"
+    },
+    {
+      "n": "Magnetic flux density",
+      "h": "चुंबकीय फ़्लक्स घनत्व",
+      "c": "unit",
+      "d": 2,
+      "st": "Tesla (T)",
+      "sh": "टेस्ला (T)",
+      "un": "Tesla (T)",
+      "unh": "टेस्ला (T)",
+      "tag": "SI unit: Tesla (T)",
+      "tagh": "SI इकाई: टेस्ला (T)",
+      "fact": "Magnetic field strength (flux density) is measured in teslas; 1 T = 1 Wb/m².",
+      "facth": "चुंबकीय क्षेत्र की तीव्रता (फ़्लक्स घनत्व) टेस्ला में मापी जाती है; 1 T = 1 Wb/m²।"
+    },
+    {
+      "n": "Luminous intensity",
+      "h": "ज्योति तीव्रता",
+      "c": "unit",
+      "d": 2,
+      "st": "Candela (cd)",
+      "sh": "कैंडेला (cd)",
+      "un": "Candela (cd)",
+      "unh": "कैंडेला (cd)",
+      "tag": "SI unit: Candela (cd)",
+      "tagh": "SI इकाई: कैंडेला (cd)",
+      "fact": "The candela, an SI base unit, measures luminous intensity.",
+      "facth": "SI मूल इकाई कैंडेला ज्योति तीव्रता मापती है।"
+    },
+    {
+      "n": "Amount of substance",
+      "h": "पदार्थ की मात्रा",
+      "c": "unit",
+      "d": 2,
+      "st": "Mole (mol)",
+      "sh": "मोल (mol)",
+      "un": "Mole (mol)",
+      "unh": "मोल (mol)",
+      "tag": "SI unit: Mole (mol)",
+      "tagh": "SI इकाई: मोल (mol)",
+      "fact": "One mole contains about 6.022 × 10²³ particles (Avogadro's number).",
+      "facth": "एक मोल में लगभग 6.022 × 10²³ कण (आवोगाद्रो संख्या) होते हैं।"
+    },
+    {
+      "n": "Thermodynamic temperature",
+      "h": "ऊष्मागतिक ताप",
+      "c": "unit",
+      "d": 1,
+      "st": "Kelvin (K)",
+      "sh": "केल्विन (K)",
+      "un": "Kelvin (K)",
+      "unh": "केल्विन (K)",
+      "tag": "SI unit: Kelvin (K)",
+      "tagh": "SI इकाई: केल्विन (K)",
+      "fact": "Temperature in kelvin = °C + 273.15; 0 K is absolute zero.",
+      "facth": "केल्विन में ताप = °C + 273.15; 0 K परम शून्य है।"
+    },
+    {
+      "n": "Activity of a radioactive source",
+      "h": "रेडियोधर्मी स्रोत की सक्रियता",
+      "c": "unit",
+      "d": 2,
+      "st": "Becquerel (Bq)",
+      "sh": "बेकरेल (Bq)",
+      "un": "Becquerel (Bq)",
+      "unh": "बेकरेल (Bq)",
+      "tag": "SI unit: Becquerel (Bq)",
+      "tagh": "SI इकाई: बेकरेल (Bq)",
+      "fact": "One becquerel is one decay per second; the older unit is the curie.",
+      "facth": "एक बेकरेल प्रति सेकंड एक विघटन है; पुरानी इकाई क्यूरी है।"
+    },
+    {
+      "n": "Absorbed radiation dose",
+      "h": "अवशोषित विकिरण मात्रा",
+      "c": "unit",
+      "d": 3,
+      "st": "Gray (Gy)",
+      "sh": "ग्रे (Gy)",
+      "un": "Gray (Gy)",
+      "unh": "ग्रे (Gy)",
+      "tag": "SI unit: Gray (Gy)",
+      "tagh": "SI इकाई: ग्रे (Gy)",
+      "fact": "The absorbed dose of radiation is measured in grays.",
+      "facth": "विकिरण की अवशोषित मात्रा ग्रे में मापी जाती है।"
+    },
+    {
+      "n": "Electrical conductance",
+      "h": "विद्युत चालकता",
+      "c": "unit",
+      "d": 3,
+      "st": "Siemens (S)",
+      "sh": "सीमेंस (S)",
+      "un": "Siemens (S)",
+      "unh": "सीमेंस (S)",
+      "tag": "SI unit: Siemens (S)",
+      "tagh": "SI इकाई: सीमेंस (S)",
+      "fact": "Conductance, the inverse of resistance, is measured in siemens (once called mho).",
+      "facth": "प्रतिरोध की व्युत्क्रम चालकता सीमेंस (पहले म्हो) में मापी जाती है।"
+    },
+    {
+      "n": "Illuminance",
+      "h": "प्रदीप्ति",
+      "c": "unit",
+      "d": 3,
+      "st": "Lux (lx)",
+      "sh": "लक्स (lx)",
+      "un": "Lux (lx)",
+      "unh": "लक्स (lx)",
+      "tag": "SI unit: Lux (lx)",
+      "tagh": "SI इकाई: लक्स (lx)",
+      "fact": "Illuminance, light falling on a surface, is measured in lux.",
+      "facth": "किसी सतह पर पड़ने वाला प्रकाश, प्रदीप्ति, लक्स में मापा जाता है।"
+    },
+    {
+      "n": "Power of a lens",
+      "h": "लेंस की क्षमता",
+      "c": "unit",
+      "d": 1,
+      "st": "Dioptre (D)",
+      "sh": "डायॉप्टर (D)",
+      "un": "Dioptre (D)",
+      "unh": "डायॉप्टर (D)",
+      "tag": "SI unit: Dioptre (D)",
+      "tagh": "SI इकाई: डायॉप्टर (D)",
+      "fact": "The power of a lens is measured in dioptres: P = 1/f with f in metres.",
+      "facth": "लेंस की क्षमता डायॉप्टर में मापी जाती है: P = 1/f, जहाँ f मीटर में है।"
+    },
+    {
+      "n": "Plane angle",
+      "h": "समतल कोण",
+      "c": "unit",
+      "d": 2,
+      "st": "Radian (rad)",
+      "sh": "रेडियन (rad)",
+      "un": "Radian (rad)",
+      "unh": "रेडियन (rad)",
+      "tag": "SI unit: Radian (rad)",
+      "tagh": "SI इकाई: रेडियन (rad)",
+      "fact": "Plane angle is measured in radians; π radians = 180°.",
+      "facth": "समतल कोण रेडियन में मापा जाता है; π रेडियन = 180°।"
+    },
+    {
+      "n": "Barometer",
+      "h": "बैरोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Atmospheric pressure",
+      "sh": "वायुमंडलीय दाब",
+      "ms": "Atmospheric pressure",
+      "msh": "वायुमंडलीय दाब",
+      "tag": "Measures: Atmospheric pressure",
+      "tagh": "मापता है: वायुमंडलीय दाब",
+      "fact": "A barometer measures atmospheric pressure; Torricelli made the mercury barometer. A sudden fall signals a storm.",
+      "facth": "बैरोमीटर वायुमंडलीय दाब मापता है; टॉरिसेली ने पारा बैरोमीटर बनाया। अचानक गिरावट तूफ़ान का संकेत है।"
+    },
+    {
+      "n": "Hygrometer",
+      "h": "हाइग्रोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Relative humidity of air",
+      "sh": "वायु की सापेक्ष आर्द्रता",
+      "ms": "Relative humidity of air",
+      "msh": "वायु की सापेक्ष आर्द्रता",
+      "tag": "Measures: Relative humidity of air",
+      "tagh": "मापता है: वायु की सापेक्ष आर्द्रता",
+      "fact": "A hygrometer measures the relative humidity of the air.",
+      "facth": "हाइग्रोमीटर वायु की सापेक्ष आर्द्रता मापता है।"
+    },
+    {
+      "n": "Hydrometer",
+      "h": "हाइड्रोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Relative density of liquids",
+      "sh": "द्रवों का आपेक्षिक घनत्व",
+      "ms": "Relative density of liquids",
+      "msh": "द्रवों का आपेक्षिक घनत्व",
+      "tag": "Measures: Relative density of liquids",
+      "tagh": "मापता है: द्रवों का आपेक्षिक घनत्व",
+      "fact": "A hydrometer measures the relative density (specific gravity) of liquids.",
+      "facth": "हाइड्रोमीटर द्रवों का आपेक्षिक घनत्व (विशिष्ट गुरुत्व) मापता है।"
+    },
+    {
+      "n": "Lactometer",
+      "h": "लैक्टोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Purity of milk (its density)",
+      "sh": "दूध की शुद्धता (घनत्व)",
+      "ms": "Purity of milk (its density)",
+      "msh": "दूध की शुद्धता (घनत्व)",
+      "tag": "Measures: Purity of milk (its density)",
+      "tagh": "मापता है: दूध की शुद्धता (घनत्व)",
+      "fact": "A lactometer checks the purity of milk by measuring its density.",
+      "facth": "लैक्टोमीटर घनत्व मापकर दूध की शुद्धता जाँचता है।"
+    },
+    {
+      "n": "Anemometer",
+      "h": "एनीमोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Wind speed",
+      "sh": "पवन की गति",
+      "ms": "Wind speed",
+      "msh": "पवन की गति",
+      "tag": "Measures: Wind speed",
+      "tagh": "मापता है: पवन की गति",
+      "fact": "An anemometer measures wind speed; a wind vane shows its direction.",
+      "facth": "एनीमोमीटर पवन की गति मापता है; पवन दिक्सूचक उसकी दिशा दिखाता है।"
+    },
+    {
+      "n": "Ammeter",
+      "h": "एमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Electric current",
+      "sh": "विद्युत धारा",
+      "ms": "Electric current",
+      "msh": "विद्युत धारा",
+      "tag": "Measures: Electric current",
+      "tagh": "मापता है: विद्युत धारा",
+      "fact": "An ammeter measures electric current and is connected in series.",
+      "facth": "एमीटर विद्युत धारा मापता है और श्रेणीक्रम में जोड़ा जाता है।"
+    },
+    {
+      "n": "Voltmeter",
+      "h": "वोल्टमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Potential difference",
+      "sh": "विभवांतर",
+      "ms": "Potential difference",
+      "msh": "विभवांतर",
+      "tag": "Measures: Potential difference",
+      "tagh": "मापता है: विभवांतर",
+      "fact": "A voltmeter measures potential difference and is connected in parallel.",
+      "facth": "वोल्टमीटर विभवांतर मापता है और समांतर क्रम में जोड़ा जाता है।"
+    },
+    {
+      "n": "Galvanometer",
+      "h": "गैल्वेनोमीटर",
+      "c": "instr",
+      "d": 2,
+      "st": "Detects small electric currents",
+      "sh": "सूक्ष्म विद्युत धारा का पता",
+      "ms": "Detects small electric currents",
+      "msh": "सूक्ष्म विद्युत धारा का पता",
+      "tag": "Measures: Detects small electric currents",
+      "tagh": "मापता है: सूक्ष्म विद्युत धारा का पता",
+      "fact": "A galvanometer detects and measures small electric currents.",
+      "facth": "गैल्वेनोमीटर सूक्ष्म विद्युत धारा का पता लगाता और मापता है।"
+    },
+    {
+      "n": "Odometer",
+      "h": "ओडोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Distance travelled by a vehicle",
+      "sh": "वाहन द्वारा तय दूरी",
+      "ms": "Distance travelled by a vehicle",
+      "msh": "वाहन द्वारा तय दूरी",
+      "tag": "Measures: Distance travelled by a vehicle",
+      "tagh": "मापता है: वाहन द्वारा तय दूरी",
+      "fact": "An odometer records the distance travelled by a vehicle.",
+      "facth": "ओडोमीटर वाहन द्वारा तय की गई दूरी दर्ज करता है।"
+    },
+    {
+      "n": "Speedometer",
+      "h": "स्पीडोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Speed of a vehicle",
+      "sh": "वाहन की गति",
+      "ms": "Speed of a vehicle",
+      "msh": "वाहन की गति",
+      "tag": "Measures: Speed of a vehicle",
+      "tagh": "मापता है: वाहन की गति",
+      "fact": "A speedometer shows the instantaneous speed of a vehicle.",
+      "facth": "स्पीडोमीटर वाहन की तात्कालिक गति दिखाता है।"
+    },
+    {
+      "n": "Seismograph",
+      "h": "सिस्मोग्राफ़",
+      "c": "instr",
+      "d": 1,
+      "st": "Earthquake waves",
+      "sh": "भूकंपीय तरंगें",
+      "ms": "Earthquake waves",
+      "msh": "भूकंपीय तरंगें",
+      "tag": "Measures: Earthquake waves",
+      "tagh": "मापता है: भूकंपीय तरंगें",
+      "fact": "A seismograph records the waves of an earthquake; magnitude is given on the Richter scale.",
+      "facth": "सिस्मोग्राफ़ भूकंप की तरंगें दर्ज करता है; परिमाण रिक्टर पैमाने पर बताया जाता है।"
+    },
+    {
+      "n": "Pyrometer",
+      "h": "पाइरोमीटर",
+      "c": "instr",
+      "d": 2,
+      "st": "Very high temperatures",
+      "sh": "बहुत ऊँचे ताप",
+      "ms": "Very high temperatures",
+      "msh": "बहुत ऊँचे ताप",
+      "tag": "Measures: Very high temperatures",
+      "tagh": "मापता है: बहुत ऊँचे ताप",
+      "fact": "A pyrometer measures very high temperatures, such as in furnaces, from a distance.",
+      "facth": "पाइरोमीटर भट्टियों जैसे बहुत ऊँचे ताप को दूर से मापता है।"
+    },
+    {
+      "n": "Manometer",
+      "h": "मैनोमीटर",
+      "c": "instr",
+      "d": 2,
+      "st": "Pressure of gases",
+      "sh": "गैसों का दाब",
+      "ms": "Pressure of gases",
+      "msh": "गैसों का दाब",
+      "tag": "Measures: Pressure of gases",
+      "tagh": "मापता है: गैसों का दाब",
+      "fact": "A manometer measures the pressure of gases.",
+      "facth": "मैनोमीटर गैसों का दाब मापता है।"
+    },
+    {
+      "n": "Sphygmomanometer",
+      "h": "स्फ़िग्मोमैनोमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Blood pressure",
+      "sh": "रक्तचाप",
+      "ms": "Blood pressure",
+      "msh": "रक्तचाप",
+      "tag": "Measures: Blood pressure",
+      "tagh": "मापता है: रक्तचाप",
+      "fact": "A sphygmomanometer measures blood pressure; normal is about 120/80 mm Hg.",
+      "facth": "स्फ़िग्मोमैनोमीटर रक्तचाप मापता है; सामान्य लगभग 120/80 mm Hg है।"
+    },
+    {
+      "n": "Altimeter",
+      "h": "अल्टीमीटर",
+      "c": "instr",
+      "d": 1,
+      "st": "Altitude (height above sea level)",
+      "sh": "ऊँचाई (समुद्र तल से)",
+      "ms": "Altitude (height above sea level)",
+      "msh": "ऊँचाई (समुद्र तल से)",
+      "tag": "Measures: Altitude (height above sea level)",
+      "tagh": "मापता है: ऊँचाई (समुद्र तल से)",
+      "fact": "An altimeter, used in aircraft, measures altitude.",
+      "facth": "विमानों में प्रयुक्त अल्टीमीटर ऊँचाई मापता है।"
+    },
+    {
+      "n": "Tachometer",
+      "h": "टैकोमीटर",
+      "c": "instr",
+      "d": 2,
+      "st": "Rotational speed (rpm)",
+      "sh": "घूर्णन गति (rpm)",
+      "ms": "Rotational speed (rpm)",
+      "msh": "घूर्णन गति (rpm)",
+      "tag": "Measures: Rotational speed (rpm)",
+      "tagh": "मापता है: घूर्णन गति (rpm)",
+      "fact": "A tachometer measures the rotational speed of a shaft or engine in revolutions per minute.",
+      "facth": "टैकोमीटर किसी शाफ़्ट या इंजन की घूर्णन गति प्रति मिनट चक्करों में मापता है।"
+    },
+    {
+      "n": "Fathometer",
+      "h": "फ़ैदोमीटर",
+      "c": "instr",
+      "d": 2,
+      "st": "Depth of the sea",
+      "sh": "समुद्र की गहराई",
+      "ms": "Depth of the sea",
+      "msh": "समुद्र की गहराई",
+      "tag": "Measures: Depth of the sea",
+      "tagh": "मापता है: समुद्र की गहराई",
+      "fact": "A fathometer (echo sounder) measures sea depth using sound waves.",
+      "facth": "फ़ैदोमीटर (प्रतिध्वनि मापी) ध्वनि तरंगों से समुद्र की गहराई मापता है।"
+    },
+    {
+      "n": "Audiometer",
+      "h": "ऑडियोमीटर",
+      "c": "instr",
+      "d": 2,
+      "st": "Hearing ability",
+      "sh": "सुनने की क्षमता",
+      "ms": "Hearing ability",
+      "msh": "सुनने की क्षमता",
+      "tag": "Measures: Hearing ability",
+      "tagh": "मापता है: सुनने की क्षमता",
+      "fact": "An audiometer tests a person's hearing.",
+      "facth": "ऑडियोमीटर किसी व्यक्ति की सुनने की क्षमता जाँचता है।"
+    },
+    {
+      "n": "Rain gauge",
+      "h": "वर्षामापी",
+      "c": "instr",
+      "d": 1,
+      "st": "Rainfall",
+      "sh": "वर्षा",
+      "ms": "Rainfall",
+      "msh": "वर्षा",
+      "tag": "Measures: Rainfall",
+      "tagh": "मापता है: वर्षा",
+      "fact": "A rain gauge (udometer) measures the amount of rainfall.",
+      "facth": "वर्षामापी (उडोमीटर) वर्षा की मात्रा मापता है।"
+    },
+    {
+      "n": "Stethoscope",
+      "h": "स्टेथोस्कोप",
+      "c": "instr",
+      "d": 1,
+      "st": "Sounds of the heart and lungs",
+      "sh": "हृदय और फेफड़ों की ध्वनि",
+      "ms": "Sounds of the heart and lungs",
+      "msh": "हृदय और फेफड़ों की ध्वनि",
+      "tag": "Measures: Sounds of the heart and lungs",
+      "tagh": "मापता है: हृदय और फेफड़ों की ध्वनि",
+      "fact": "René Laennec invented the stethoscope to hear sounds of the heart and lungs.",
+      "facth": "रेने लेनेक ने हृदय और फेफड़ों की ध्वनि सुनने के लिए स्टेथोस्कोप बनाया।"
+    },
+    {
+      "n": "Electrocardiograph (ECG)",
+      "h": "इलेक्ट्रोकार्डियोग्राफ़ (ECG)",
+      "c": "instr",
+      "d": 1,
+      "st": "Electrical activity of the heart",
+      "sh": "हृदय की विद्युत गतिविधि",
+      "ms": "Electrical activity of the heart",
+      "msh": "हृदय की विद्युत गतिविधि",
+      "tag": "Measures: Electrical activity of the heart",
+      "tagh": "मापता है: हृदय की विद्युत गतिविधि",
+      "fact": "An ECG records the electrical activity of the heart.",
+      "facth": "ECG हृदय की विद्युत गतिविधि दर्ज करता है।"
+    },
+    {
+      "n": "Saccharimeter",
+      "h": "सैकेरीमीटर",
+      "c": "instr",
+      "d": 3,
+      "st": "Concentration of sugar in a solution",
+      "sh": "विलयन में शर्करा की सांद्रता",
+      "ms": "Concentration of sugar in a solution",
+      "msh": "विलयन में शर्करा की सांद्रता",
+      "tag": "Measures: Concentration of sugar in a solution",
+      "tagh": "मापता है: विलयन में शर्करा की सांद्रता",
+      "fact": "A saccharimeter measures the concentration of sugar in a solution.",
+      "facth": "सैकेरीमीटर किसी विलयन में शर्करा की सांद्रता मापता है।"
+    },
+    {
+      "n": "Ornithology",
+      "h": "पक्षी विज्ञान (ऑर्निथोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Birds",
+      "sh": "पक्षी",
+      "sd": "Birds",
+      "sdh": "पक्षी",
+      "tag": "Study of birds",
+      "tagh": "अध्ययन का विषय: पक्षी",
+      "fact": "Ornithology is the study of birds. Salim Ali is called the Birdman of India.",
+      "facth": "पक्षी विज्ञान — अध्ययन का विषय: पक्षी। सालिम अली को भारत का पक्षी पुरुष कहा जाता है।"
+    },
+    {
+      "n": "Entomology",
+      "h": "कीट विज्ञान (एंटोमोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Insects",
+      "sh": "कीट",
+      "sd": "Insects",
+      "sdh": "कीट",
+      "tag": "Study of insects",
+      "tagh": "अध्ययन का विषय: कीट",
+      "fact": "Entomology is the study of insects.",
+      "facth": "कीट विज्ञान — अध्ययन का विषय: कीट।"
+    },
+    {
+      "n": "Ichthyology",
+      "h": "मत्स्य विज्ञान (इक्थियोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Fish",
+      "sh": "मछलियाँ",
+      "sd": "Fish",
+      "sdh": "मछलियाँ",
+      "tag": "Study of fish",
+      "tagh": "अध्ययन का विषय: मछलियाँ",
+      "fact": "Ichthyology is the study of fish.",
+      "facth": "मत्स्य विज्ञान — अध्ययन का विषय: मछलियाँ।"
+    },
+    {
+      "n": "Herpetology",
+      "h": "सरीसृप विज्ञान (हर्पेटोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "Reptiles and amphibians",
+      "sh": "सरीसृप और उभयचर",
+      "sd": "Reptiles and amphibians",
+      "sdh": "सरीसृप और उभयचर",
+      "tag": "Study of reptiles and amphibians",
+      "tagh": "अध्ययन का विषय: सरीसृप और उभयचर",
+      "fact": "Herpetology is the study of reptiles and amphibians.",
+      "facth": "सरीसृप विज्ञान — अध्ययन का विषय: सरीसृप और उभयचर।"
+    },
+    {
+      "n": "Mycology",
+      "h": "कवक विज्ञान (माइकोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Fungi",
+      "sh": "कवक",
+      "sd": "Fungi",
+      "sdh": "कवक",
+      "tag": "Study of fungi",
+      "tagh": "अध्ययन का विषय: कवक",
+      "fact": "Mycology is the study of fungi.",
+      "facth": "कवक विज्ञान — अध्ययन का विषय: कवक।"
+    },
+    {
+      "n": "Phycology",
+      "h": "शैवाल विज्ञान (फ़ाइकोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "Algae",
+      "sh": "शैवाल",
+      "sd": "Algae",
+      "sdh": "शैवाल",
+      "tag": "Study of algae",
+      "tagh": "अध्ययन का विषय: शैवाल",
+      "fact": "Phycology is the study of algae.",
+      "facth": "शैवाल विज्ञान — अध्ययन का विषय: शैवाल।"
+    },
+    {
+      "n": "Virology",
+      "h": "विषाणु विज्ञान (वायरोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Viruses",
+      "sh": "विषाणु",
+      "sd": "Viruses",
+      "sdh": "विषाणु",
+      "tag": "Study of viruses",
+      "tagh": "अध्ययन का विषय: विषाणु",
+      "fact": "Virology is the study of viruses.",
+      "facth": "विषाणु विज्ञान — अध्ययन का विषय: विषाणु।"
+    },
+    {
+      "n": "Cardiology",
+      "h": "हृदय विज्ञान (कार्डियोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "The heart",
+      "sh": "हृदय",
+      "sd": "The heart",
+      "sdh": "हृदय",
+      "tag": "Study of the heart",
+      "tagh": "अध्ययन का विषय: हृदय",
+      "fact": "Cardiology is the study of the heart.",
+      "facth": "हृदय विज्ञान — अध्ययन का विषय: हृदय।"
+    },
+    {
+      "n": "Nephrology",
+      "h": "वृक्क विज्ञान (नेफ़्रोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "The kidneys",
+      "sh": "गुर्दे",
+      "sd": "The kidneys",
+      "sdh": "गुर्दे",
+      "tag": "Study of the kidneys",
+      "tagh": "अध्ययन का विषय: गुर्दे",
+      "fact": "Nephrology is the study of the kidneys.",
+      "facth": "वृक्क विज्ञान — अध्ययन का विषय: गुर्दे।"
+    },
+    {
+      "n": "Dermatology",
+      "h": "त्वचा विज्ञान (डर्मेटोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "The skin",
+      "sh": "त्वचा",
+      "sd": "The skin",
+      "sdh": "त्वचा",
+      "tag": "Study of the skin",
+      "tagh": "अध्ययन का विषय: त्वचा",
+      "fact": "Dermatology is the study of the skin.",
+      "facth": "त्वचा विज्ञान — अध्ययन का विषय: त्वचा।"
+    },
+    {
+      "n": "Ophthalmology",
+      "h": "नेत्र विज्ञान (ऑफ़्थैल्मोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "The eyes",
+      "sh": "आँखें",
+      "sd": "The eyes",
+      "sdh": "आँखें",
+      "tag": "Study of the eyes",
+      "tagh": "अध्ययन का विषय: आँखें",
+      "fact": "Ophthalmology is the study of the eyes.",
+      "facth": "नेत्र विज्ञान — अध्ययन का विषय: आँखें।"
+    },
+    {
+      "n": "Hepatology",
+      "h": "यकृत विज्ञान (हेपेटोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "The liver",
+      "sh": "यकृत",
+      "sd": "The liver",
+      "sdh": "यकृत",
+      "tag": "Study of the liver",
+      "tagh": "अध्ययन का विषय: यकृत",
+      "fact": "Hepatology is the study of the liver.",
+      "facth": "यकृत विज्ञान — अध्ययन का विषय: यकृत।"
+    },
+    {
+      "n": "Haematology",
+      "h": "रुधिर विज्ञान (हीमेटोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Blood",
+      "sh": "रक्त",
+      "sd": "Blood",
+      "sdh": "रक्त",
+      "tag": "Study of blood",
+      "tagh": "अध्ययन का विषय: रक्त",
+      "fact": "Haematology is the study of blood.",
+      "facth": "रुधिर विज्ञान — अध्ययन का विषय: रक्त।"
+    },
+    {
+      "n": "Oncology",
+      "h": "कैंसर विज्ञान (ऑन्कोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Cancer",
+      "sh": "कैंसर",
+      "sd": "Cancer",
+      "sdh": "कैंसर",
+      "tag": "Study of cancer",
+      "tagh": "अध्ययन का विषय: कैंसर",
+      "fact": "Oncology is the study of cancer.",
+      "facth": "कैंसर विज्ञान — अध्ययन का विषय: कैंसर।"
+    },
+    {
+      "n": "Osteology",
+      "h": "अस्थि विज्ञान (ऑस्टियोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Bones",
+      "sh": "हड्डियाँ",
+      "sd": "Bones",
+      "sdh": "हड्डियाँ",
+      "tag": "Study of bones",
+      "tagh": "अध्ययन का विषय: हड्डियाँ",
+      "fact": "Osteology is the study of bones.",
+      "facth": "अस्थि विज्ञान — अध्ययन का विषय: हड्डियाँ।"
+    },
+    {
+      "n": "Pedology",
+      "h": "मृदा विज्ञान (पेडोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "Soil",
+      "sh": "मिट्टी",
+      "sd": "Soil",
+      "sdh": "मिट्टी",
+      "tag": "Study of soil",
+      "tagh": "अध्ययन का विषय: मिट्टी",
+      "fact": "Pedology is the study of soil.",
+      "facth": "मृदा विज्ञान — अध्ययन का विषय: मिट्टी।"
+    },
+    {
+      "n": "Seismology",
+      "h": "भूकंप विज्ञान (सिस्मोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Earthquakes",
+      "sh": "भूकंप",
+      "sd": "Earthquakes",
+      "sdh": "भूकंप",
+      "tag": "Study of earthquakes",
+      "tagh": "अध्ययन का विषय: भूकंप",
+      "fact": "Seismology is the study of earthquakes.",
+      "facth": "भूकंप विज्ञान — अध्ययन का विषय: भूकंप।"
+    },
+    {
+      "n": "Anthropology",
+      "h": "मानव विज्ञान (एंथ्रोपोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Human beings and their cultures",
+      "sh": "मनुष्य और उनकी संस्कृतियाँ",
+      "sd": "Human beings and their cultures",
+      "sdh": "मनुष्य और उनकी संस्कृतियाँ",
+      "tag": "Study of human beings and their cultures",
+      "tagh": "अध्ययन का विषय: मनुष्य और उनकी संस्कृतियाँ",
+      "fact": "Anthropology is the study of human beings and their cultures.",
+      "facth": "मानव विज्ञान — अध्ययन का विषय: मनुष्य और उनकी संस्कृतियाँ।"
+    },
+    {
+      "n": "Numismatics",
+      "h": "मुद्रा शास्त्र (न्यूमिस्मैटिक्स)",
+      "c": "branch",
+      "d": 1,
+      "st": "Coins and currency",
+      "sh": "सिक्के और मुद्रा",
+      "sd": "Coins and currency",
+      "sdh": "सिक्के और मुद्रा",
+      "tag": "Study of coins and currency",
+      "tagh": "अध्ययन का विषय: सिक्के और मुद्रा",
+      "fact": "Numismatics is the study of coins and currency.",
+      "facth": "मुद्रा शास्त्र — अध्ययन का विषय: सिक्के और मुद्रा।"
+    },
+    {
+      "n": "Philately",
+      "h": "डाक टिकट संग्रह (फ़िलैटली)",
+      "c": "branch",
+      "d": 1,
+      "st": "Postage stamps",
+      "sh": "डाक टिकट",
+      "sd": "Postage stamps",
+      "sdh": "डाक टिकट",
+      "tag": "Study of postage stamps",
+      "tagh": "अध्ययन का विषय: डाक टिकट",
+      "fact": "Philately is the study of postage stamps.",
+      "facth": "डाक टिकट संग्रह — अध्ययन का विषय: डाक टिकट।"
+    },
+    {
+      "n": "Palaeontology",
+      "h": "जीवाश्म विज्ञान (पैलियंटोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Fossils",
+      "sh": "जीवाश्म",
+      "sd": "Fossils",
+      "sdh": "जीवाश्म",
+      "tag": "Study of fossils",
+      "tagh": "अध्ययन का विषय: जीवाश्म",
+      "fact": "Palaeontology is the study of fossils.",
+      "facth": "जीवाश्म विज्ञान — अध्ययन का विषय: जीवाश्म।"
+    },
+    {
+      "n": "Genetics",
+      "h": "आनुवंशिकी (जेनेटिक्स)",
+      "c": "branch",
+      "d": 1,
+      "st": "Heredity and variation",
+      "sh": "वंशागति और विभिन्नता",
+      "sd": "Heredity and variation",
+      "sdh": "वंशागति और विभिन्नता",
+      "tag": "Study of heredity and variation",
+      "tagh": "अध्ययन का विषय: वंशागति और विभिन्नता",
+      "fact": "Genetics is the study of heredity and variation.",
+      "facth": "आनुवंशिकी — अध्ययन का विषय: वंशागति और विभिन्नता।"
+    },
+    {
+      "n": "Cytology",
+      "h": "कोशिका विज्ञान (साइटोलॉजी)",
+      "c": "branch",
+      "d": 1,
+      "st": "Cells",
+      "sh": "कोशिकाएँ",
+      "sd": "Cells",
+      "sdh": "कोशिकाएँ",
+      "tag": "Study of cells",
+      "tagh": "अध्ययन का विषय: कोशिकाएँ",
+      "fact": "Cytology is the study of cells.",
+      "facth": "कोशिका विज्ञान — अध्ययन का विषय: कोशिकाएँ।"
+    },
+    {
+      "n": "Histology",
+      "h": "ऊतक विज्ञान (हिस्टोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "Tissues",
+      "sh": "ऊतक",
+      "sd": "Tissues",
+      "sdh": "ऊतक",
+      "tag": "Study of tissues",
+      "tagh": "अध्ययन का विषय: ऊतक",
+      "fact": "Histology is the study of tissues.",
+      "facth": "ऊतक विज्ञान — अध्ययन का विषय: ऊतक।"
+    },
+    {
+      "n": "Pomology",
+      "h": "फल विज्ञान (पोमोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "Fruits",
+      "sh": "फल",
+      "sd": "Fruits",
+      "sdh": "फल",
+      "tag": "Study of fruits",
+      "tagh": "अध्ययन का विषय: फल",
+      "fact": "Pomology is the study of fruits.",
+      "facth": "फल विज्ञान — अध्ययन का विषय: फल।"
+    },
+    {
+      "n": "Apiculture",
+      "h": "मधुमक्खी पालन (एपीकल्चर)",
+      "c": "branch",
+      "d": 1,
+      "st": "Bee-keeping",
+      "sh": "मधुमक्खी पालन",
+      "sd": "Bee-keeping",
+      "sdh": "मधुमक्खी पालन",
+      "tag": "Study of bee-keeping",
+      "tagh": "अध्ययन का विषय: मधुमक्खी पालन",
+      "fact": "Apiculture is the study of bee-keeping.",
+      "facth": "मधुमक्खी पालन — अध्ययन का विषय: मधुमक्खी पालन।"
+    },
+    {
+      "n": "Sericulture",
+      "h": "रेशम कीट पालन (सेरीकल्चर)",
+      "c": "branch",
+      "d": 1,
+      "st": "Silkworm rearing for silk",
+      "sh": "रेशम के लिए रेशम कीट पालन",
+      "sd": "Silkworm rearing for silk",
+      "sdh": "रेशम के लिए रेशम कीट पालन",
+      "tag": "Study of silkworm rearing for silk",
+      "tagh": "अध्ययन का विषय: रेशम के लिए रेशम कीट पालन",
+      "fact": "Sericulture is the study of silkworm rearing for silk.",
+      "facth": "रेशम कीट पालन — अध्ययन का विषय: रेशम के लिए रेशम कीट पालन।"
+    },
+    {
+      "n": "Pisciculture",
+      "h": "मत्स्य पालन (पिसीकल्चर)",
+      "c": "branch",
+      "d": 1,
+      "st": "Fish farming",
+      "sh": "मछली पालन",
+      "sd": "Fish farming",
+      "sdh": "मछली पालन",
+      "tag": "Study of fish farming",
+      "tagh": "अध्ययन का विषय: मछली पालन",
+      "fact": "Pisciculture is the study of fish farming.",
+      "facth": "मत्स्य पालन — अध्ययन का विषय: मछली पालन।"
+    },
+    {
+      "n": "Oology",
+      "h": "अंड विज्ञान (ऊलॉजी)",
+      "c": "branch",
+      "d": 3,
+      "st": "Birds' eggs",
+      "sh": "पक्षियों के अंडे",
+      "sd": "Birds' eggs",
+      "sdh": "पक्षियों के अंडे",
+      "tag": "Study of birds' eggs",
+      "tagh": "अध्ययन का विषय: पक्षियों के अंडे",
+      "fact": "Oology is the study of birds' eggs.",
+      "facth": "अंड विज्ञान — अध्ययन का विषय: पक्षियों के अंडे।"
+    },
+    {
+      "n": "Etymology",
+      "h": "शब्द व्युत्पत्ति (एटिमोलॉजी)",
+      "c": "branch",
+      "d": 2,
+      "st": "The origin of words",
+      "sh": "शब्दों की उत्पत्ति",
+      "sd": "The origin of words",
+      "sdh": "शब्दों की उत्पत्ति",
+      "tag": "Study of the origin of words",
+      "tagh": "अध्ययन का विषय: शब्दों की उत्पत्ति",
+      "fact": "Etymology is the study of the origin of words.",
+      "facth": "शब्द व्युत्पत्ति — अध्ययन का विषय: शब्दों की उत्पत्ति।"
+    },
+    {
+      "n": "Selenology",
+      "h": "चंद्र विज्ञान (सेलेनोलॉजी)",
+      "c": "branch",
+      "d": 3,
+      "st": "The Moon",
+      "sh": "चंद्रमा",
+      "sd": "The Moon",
+      "sdh": "चंद्रमा",
+      "tag": "Study of the Moon",
+      "tagh": "अध्ययन का विषय: चंद्रमा",
+      "fact": "Selenology is the study of the Moon.",
+      "facth": "चंद्र विज्ञान — अध्ययन का विषय: चंद्रमा।"
+    },
+    {
+      "n": "Horology",
+      "h": "समय मापन विज्ञान (होरोलॉजी)",
+      "c": "branch",
+      "d": 3,
+      "st": "Measuring time and making clocks",
+      "sh": "समय मापन और घड़ी निर्माण",
+      "sd": "Measuring time and making clocks",
+      "sdh": "समय मापन और घड़ी निर्माण",
+      "tag": "Study of measuring time and making clocks",
+      "tagh": "अध्ययन का विषय: समय मापन और घड़ी निर्माण",
+      "fact": "Horology is the study of measuring time and making clocks.",
+      "facth": "समय मापन विज्ञान — अध्ययन का विषय: समय मापन और घड़ी निर्माण।"
+    },
+    {
+      "n": "Cryogenics",
+      "h": "निम्न ताप विज्ञान (क्रायोजेनिक्स)",
+      "c": "branch",
+      "d": 2,
+      "st": "Very low temperatures",
+      "sh": "बहुत कम ताप",
+      "sd": "Very low temperatures",
+      "sdh": "बहुत कम ताप",
+      "tag": "Study of very low temperatures",
+      "tagh": "अध्ययन का विषय: बहुत कम ताप",
+      "fact": "Cryogenics is the study of very low temperatures.",
+      "facth": "निम्न ताप विज्ञान — अध्ययन का विषय: बहुत कम ताप।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "indian",
+      "icon": "🇮🇳",
+      "t": [
+        "Indian scientists to remember",
+        "याद रखने योग्य भारतीय वैज्ञानिक"
+      ],
+      "cols": [
+        [
+          "Scientist",
+          "वैज्ञानिक"
+        ],
+        [
+          "Known for",
+          "किसके लिए प्रसिद्ध"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "C. V. Raman",
+            "सी. वी. रमन"
+          ],
+          [
+            "Raman effect; Nobel 1930; National Science Day 28 February",
+            "रमन प्रभाव; नोबेल 1930; राष्ट्रीय विज्ञान दिवस 28 फ़रवरी"
+          ]
+        ],
+        [
+          [
+            "Jagadish Chandra Bose",
+            "जगदीश चंद्र बोस"
+          ],
+          [
+            "Crescograph; plant response; radio waves",
+            "क्रेस्कोग्राफ़; पौधों की प्रतिक्रिया; रेडियो तरंगें"
+          ]
+        ],
+        [
+          [
+            "Satyendra Nath Bose",
+            "सत्येंद्र नाथ बोस"
+          ],
+          [
+            "Bose–Einstein statistics; bosons",
+            "बोस–आइंस्टीन सांख्यिकी; बोसॉन"
+          ]
+        ],
+        [
+          [
+            "Homi J. Bhabha",
+            "होमी जे. भाभा"
+          ],
+          [
+            "Father of the Indian nuclear programme; first chairman of the Atomic Energy Commission",
+            "भारतीय परमाणु कार्यक्रम के जनक; परमाणु ऊर्जा आयोग के पहले अध्यक्ष"
+          ]
+        ],
+        [
+          [
+            "Srinivasa Ramanujan",
+            "श्रीनिवास रामानुजन"
+          ],
+          [
+            "Mathematician; 1729 (Hardy–Ramanujan number); National Mathematics Day 22 December",
+            "गणितज्ञ; 1729 (हार्डी–रामानुजन संख्या); राष्ट्रीय गणित दिवस 22 दिसंबर"
+          ]
+        ],
+        [
+          [
+            "Meghnad Saha",
+            "मेघनाद साहा"
+          ],
+          [
+            "Saha ionisation equation in astrophysics",
+            "खगोलभौतिकी में साहा आयनन समीकरण"
+          ]
+        ],
+        [
+          [
+            "M. S. Swaminathan",
+            "एम. एस. स्वामीनाथन"
+          ],
+          [
+            "Father of the Green Revolution in India",
+            "भारत में हरित क्रांति के जनक"
+          ]
+        ],
+        [
+          [
+            "Verghese Kurien",
+            "वर्गीज़ कुरियन"
+          ],
+          [
+            "Father of the White Revolution (Operation Flood, Amul); National Milk Day 26 November",
+            "श्वेत क्रांति के जनक (ऑपरेशन फ़्लड, अमूल); राष्ट्रीय दुग्ध दिवस 26 नवंबर"
+          ]
+        ],
+        [
+          [
+            "Aryabhata",
+            "आर्यभट"
+          ],
+          [
+            "Ancient astronomer-mathematician; Aryabhatiya; India's first satellite named after him",
+            "प्राचीन खगोलशास्त्री-गणितज्ञ; आर्यभटीय; भारत का पहला उपग्रह उनके नाम पर"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "base",
+      "icon": "📏",
+      "t": [
+        "The seven SI base units",
+        "सात SI मूल इकाइयाँ"
+      ],
+      "cols": [
+        [
+          "Quantity",
+          "राशि"
+        ],
+        [
+          "Unit",
+          "इकाई"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Length",
+            "लंबाई"
+          ],
+          [
+            "Metre (m)",
+            "मीटर (m)"
+          ]
+        ],
+        [
+          [
+            "Mass",
+            "द्रव्यमान"
+          ],
+          [
+            "Kilogram (kg)",
+            "किलोग्राम (kg)"
+          ]
+        ],
+        [
+          [
+            "Time",
+            "समय"
+          ],
+          [
+            "Second (s)",
+            "सेकंड (s)"
+          ]
+        ],
+        [
+          [
+            "Electric current",
+            "विद्युत धारा"
+          ],
+          [
+            "Ampere (A)",
+            "एम्पियर (A)"
+          ]
+        ],
+        [
+          [
+            "Temperature",
+            "ताप"
+          ],
+          [
+            "Kelvin (K)",
+            "केल्विन (K)"
+          ]
+        ],
+        [
+          [
+            "Amount of substance",
+            "पदार्थ की मात्रा"
+          ],
+          [
+            "Mole (mol)",
+            "मोल (mol)"
+          ]
+        ],
+        [
+          [
+            "Luminous intensity",
+            "ज्योति तीव्रता"
+          ],
+          [
+            "Candela (cd)",
+            "कैंडेला (cd)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "convert",
+      "icon": "🔁",
+      "t": [
+        "Units and conversions",
+        "इकाइयाँ और रूपांतरण"
+      ],
+      "cols": [
+        [
+          "Unit",
+          "इकाई"
+        ],
+        [
+          "Value",
+          "मान"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Light year",
+            "प्रकाश वर्ष"
+          ],
+          [
+            "Unit of distance (about 9.46 × 10¹⁵ m), not time",
+            "दूरी की इकाई (लगभग 9.46 × 10¹⁵ मी), समय की नहीं"
+          ]
+        ],
+        [
+          [
+            "Parsec",
+            "पारसेक"
+          ],
+          [
+            "About 3.26 light years",
+            "लगभग 3.26 प्रकाश वर्ष"
+          ]
+        ],
+        [
+          [
+            "Astronomical unit",
+            "खगोलीय इकाई"
+          ],
+          [
+            "Mean Earth–Sun distance, about 1.5 × 10¹¹ m",
+            "पृथ्वी–सूर्य की औसत दूरी, लगभग 1.5 × 10¹¹ मी"
+          ]
+        ],
+        [
+          [
+            "Angstrom (Å)",
+            "एंगस्ट्रॉम (Å)"
+          ],
+          [
+            "10⁻¹⁰ m",
+            "10⁻¹⁰ मी"
+          ]
+        ],
+        [
+          [
+            "Nautical mile",
+            "समुद्री मील"
+          ],
+          [
+            "1,852 m; a knot is one nautical mile per hour",
+            "1,852 मी; नॉट एक समुद्री मील प्रति घंटा है"
+          ]
+        ],
+        [
+          [
+            "Fathom",
+            "फ़ैदम"
+          ],
+          [
+            "6 feet (about 1.83 m), used for sea depth",
+            "6 फ़ुट (लगभग 1.83 मी), समुद्र की गहराई के लिए"
+          ]
+        ],
+        [
+          [
+            "Horsepower",
+            "अश्वशक्ति"
+          ],
+          [
+            "About 746 watts",
+            "लगभग 746 वाट"
+          ]
+        ],
+        [
+          [
+            "Kilowatt-hour (unit of electricity)",
+            "किलोवाट-घंटा (बिजली की यूनिट)"
+          ],
+          [
+            "3.6 × 10⁶ joules",
+            "3.6 × 10⁶ जूल"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "confuse",
+      "icon": "⚖️",
+      "t": [
+        "Easily confused",
+        "आसानी से भ्रमित"
+      ],
+      "cols": [
+        [
+          "Pair",
+          "जोड़ी"
+        ],
+        [
+          "Tell them apart",
+          "अंतर"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Hygrometer and hydrometer",
+            "हाइग्रोमीटर और हाइड्रोमीटर"
+          ],
+          [
+            "Hygrometer: humidity of air. Hydrometer: density of liquids",
+            "हाइग्रोमीटर: वायु की आर्द्रता। हाइड्रोमीटर: द्रवों का घनत्व"
+          ]
+        ],
+        [
+          [
+            "Altimeter and ammeter",
+            "अल्टीमीटर और एमीटर"
+          ],
+          [
+            "Altimeter: height. Ammeter: current",
+            "अल्टीमीटर: ऊँचाई। एमीटर: धारा"
+          ]
+        ],
+        [
+          [
+            "Manometer and sphygmomanometer",
+            "मैनोमीटर और स्फ़िग्मोमैनोमीटर"
+          ],
+          [
+            "Manometer: gas pressure. Sphygmomanometer: blood pressure",
+            "मैनोमीटर: गैस का दाब। स्फ़िग्मोमैनोमीटर: रक्तचाप"
+          ]
+        ],
+        [
+          [
+            "Odometer and speedometer",
+            "ओडोमीटर और स्पीडोमीटर"
+          ],
+          [
+            "Odometer: distance. Speedometer: speed",
+            "ओडोमीटर: दूरी। स्पीडोमीटर: गति"
+          ]
+        ],
+        [
+          [
+            "Entomology and etymology",
+            "एंटोमोलॉजी और एटिमोलॉजी"
+          ],
+          [
+            "Entomology: insects. Etymology: origin of words",
+            "एंटोमोलॉजी: कीट। एटिमोलॉजी: शब्दों की उत्पत्ति"
+          ]
+        ],
+        [
+          [
+            "Herpetology and hepatology",
+            "हर्पेटोलॉजी और हेपेटोलॉजी"
+          ],
+          [
+            "Herpetology: reptiles. Hepatology: liver",
+            "हर्पेटोलॉजी: सरीसृप। हेपेटोलॉजी: यकृत"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "invent",
+      "q": [
+        "Who discovered penicillin?",
+        "पेनिसिलिन की खोज किसने की?"
+      ],
+      "o": [
+        [
+          "Alexander Fleming",
+          "अलेक्ज़ेंडर फ़्लेमिंग"
+        ],
+        [
+          "Louis Pasteur",
+          "लुई पाश्चर"
+        ],
+        [
+          "Edward Jenner",
+          "एडवर्ड जेनर"
+        ],
+        [
+          "Robert Koch",
+          "रॉबर्ट कोच"
+        ]
+      ],
+      "e": [
+        "Fleming discovered it in 1928.",
+        "फ़्लेमिंग ने इसे 1928 में खोजा।"
+      ]
+    },
+    {
+      "t": "invent",
+      "q": [
+        "National Science Day (28 February) marks the discovery of",
+        "राष्ट्रीय विज्ञान दिवस (28 फ़रवरी) किसकी खोज की याद में है?"
+      ],
+      "o": [
+        [
+          "Raman effect",
+          "रमन प्रभाव"
+        ],
+        [
+          "Bose–Einstein statistics",
+          "बोस–आइंस्टीन सांख्यिकी"
+        ],
+        [
+          "Chandrasekhar limit",
+          "चंद्रशेखर सीमा"
+        ],
+        [
+          "Saha equation",
+          "साहा समीकरण"
+        ]
+      ],
+      "e": [
+        "C. V. Raman discovered it on 28 February 1928.",
+        "सी. वी. रमन ने इसे 28 फ़रवरी 1928 को खोजा।"
+      ]
+    },
+    {
+      "t": "invent",
+      "q": [
+        "Who is called the father of genetics?",
+        "आनुवंशिकी का जनक किसे कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Gregor Mendel",
+          "ग्रेगर मेंडल"
+        ],
+        [
+          "Charles Darwin",
+          "चार्ल्स डार्विन"
+        ],
+        [
+          "Hugo de Vries",
+          "ह्यूगो डी व्रीज़"
+        ],
+        [
+          "Thomas Morgan",
+          "थॉमस मॉर्गन"
+        ]
+      ],
+      "e": [
+        "Mendel found the laws of inheritance with pea plants.",
+        "मेंडल ने मटर के पौधों से वंशागति के नियम खोजे।"
+      ]
+    },
+    {
+      "t": "invent",
+      "q": [
+        "Who discovered the neutron?",
+        "न्यूट्रॉन की खोज किसने की?"
+      ],
+      "o": [
+        [
+          "James Chadwick",
+          "जेम्स चैडविक"
+        ],
+        [
+          "J. J. Thomson",
+          "जे. जे. थॉमसन"
+        ],
+        [
+          "Ernest Rutherford",
+          "अर्नेस्ट रदरफ़ोर्ड"
+        ],
+        [
+          "Niels Bohr",
+          "नील्स बोर"
+        ]
+      ],
+      "e": [
+        "Chadwick found it in 1932; Thomson found the electron.",
+        "चैडविक ने इसे 1932 में खोजा; थॉमसन ने इलेक्ट्रॉन।"
+      ]
+    },
+    {
+      "t": "invent",
+      "q": [
+        "Who invented the crescograph?",
+        "क्रेस्कोग्राफ़ का आविष्कार किसने किया?"
+      ],
+      "o": [
+        [
+          "Jagadish Chandra Bose",
+          "जगदीश चंद्र बोस"
+        ],
+        [
+          "C. V. Raman",
+          "सी. वी. रमन"
+        ],
+        [
+          "Satyendra Nath Bose",
+          "सत्येंद्र नाथ बोस"
+        ],
+        [
+          "Prafulla Chandra Ray",
+          "प्रफुल्ल चंद्र राय"
+        ]
+      ],
+      "e": [
+        "It measures the growth of plants.",
+        "यह पौधों की वृद्धि मापता है।"
+      ]
+    },
+    {
+      "t": "invent",
+      "q": [
+        "Who first described the cell?",
+        "कोशिका का पहली बार वर्णन किसने किया?"
+      ],
+      "o": [
+        [
+          "Robert Hooke",
+          "रॉबर्ट हुक"
+        ],
+        [
+          "Robert Brown",
+          "रॉबर्ट ब्राउन"
+        ],
+        [
+          "Schleiden and Schwann",
+          "श्लाइडेन और श्वान"
+        ],
+        [
+          "Leeuwenhoek",
+          "ल्यूवेनहॉक"
+        ]
+      ],
+      "e": [
+        "Hooke saw cells in cork in 1665; Robert Brown found the nucleus (1831).",
+        "हुक ने 1665 में कॉर्क में कोशिकाएँ देखीं; रॉबर्ट ब्राउन ने केंद्रक (1831) खोजा।"
+      ]
+    },
+    {
+      "t": "unit",
+      "q": [
+        "What is the SI unit of power?",
+        "शक्ति की SI इकाई क्या है?"
+      ],
+      "o": [
+        [
+          "Watt",
+          "वाट"
+        ],
+        [
+          "Joule",
+          "जूल"
+        ],
+        [
+          "Newton",
+          "न्यूटन"
+        ],
+        [
+          "Pascal",
+          "पास्कल"
+        ]
+      ],
+      "e": [
+        "One watt is one joule per second.",
+        "एक वाट एक जूल प्रति सेकंड है।"
+      ]
+    },
+    {
+      "t": "unit",
+      "q": [
+        "Light year is a unit of",
+        "प्रकाश वर्ष किसकी इकाई है?"
+      ],
+      "o": [
+        [
+          "Distance",
+          "दूरी"
+        ],
+        [
+          "Time",
+          "समय"
+        ],
+        [
+          "Speed of light",
+          "प्रकाश की गति"
+        ],
+        [
+          "Brightness",
+          "चमक"
+        ]
+      ],
+      "e": [
+        "It is the distance light travels in a year, about 9.46 × 10¹⁵ m.",
+        "यह प्रकाश द्वारा एक वर्ष में तय दूरी है, लगभग 9.46 × 10¹⁵ मी।"
+      ]
+    },
+    {
+      "t": "unit",
+      "q": [
+        "Which of these is NOT an SI base unit?",
+        "इनमें से कौन SI मूल इकाई नहीं है?"
+      ],
+      "o": [
+        [
+          "Newton",
+          "न्यूटन"
+        ],
+        [
+          "Kelvin",
+          "केल्विन"
+        ],
+        [
+          "Candela",
+          "कैंडेला"
+        ],
+        [
+          "Mole",
+          "मोल"
+        ]
+      ],
+      "e": [
+        "The newton is a derived unit (kg m/s²).",
+        "न्यूटन एक व्युत्पन्न इकाई (kg m/s²) है।"
+      ]
+    },
+    {
+      "t": "unit",
+      "q": [
+        "The power of a lens is measured in",
+        "लेंस की क्षमता किसमें मापी जाती है?"
+      ],
+      "o": [
+        [
+          "Dioptre",
+          "डायॉप्टर"
+        ],
+        [
+          "Lux",
+          "लक्स"
+        ],
+        [
+          "Candela",
+          "कैंडेला"
+        ],
+        [
+          "Metre",
+          "मीटर"
+        ]
+      ],
+      "e": [
+        "P = 1/f, with f in metres.",
+        "P = 1/f, जहाँ f मीटर में है।"
+      ]
+    },
+    {
+      "t": "unit",
+      "q": [
+        "1 horsepower is approximately equal to",
+        "1 अश्वशक्ति लगभग कितनी होती है?"
+      ],
+      "o": [
+        [
+          "746 W",
+          "746 W"
+        ],
+        [
+          "1,000 W",
+          "1,000 W"
+        ],
+        [
+          "500 W",
+          "500 W"
+        ],
+        [
+          "846 W",
+          "846 W"
+        ]
+      ],
+      "e": [
+        "Horsepower is an old unit of power.",
+        "अश्वशक्ति शक्ति की पुरानी इकाई है।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Which instrument measures the relative humidity of air?",
+        "कौन-सा यंत्र वायु की सापेक्ष आर्द्रता मापता है?"
+      ],
+      "o": [
+        [
+          "Hygrometer",
+          "हाइग्रोमीटर"
+        ],
+        [
+          "Hydrometer",
+          "हाइड्रोमीटर"
+        ],
+        [
+          "Barometer",
+          "बैरोमीटर"
+        ],
+        [
+          "Manometer",
+          "मैनोमीटर"
+        ]
+      ],
+      "e": [
+        "A hydrometer measures the density of liquids.",
+        "हाइड्रोमीटर द्रवों का घनत्व मापता है।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "A lactometer is used to test",
+        "लैक्टोमीटर का उपयोग किसकी जाँच में होता है?"
+      ],
+      "o": [
+        [
+          "Purity of milk",
+          "दूध की शुद्धता"
+        ],
+        [
+          "Sugar in blood",
+          "रक्त में शर्करा"
+        ],
+        [
+          "Density of sea water",
+          "समुद्री जल का घनत्व"
+        ],
+        [
+          "Fat in butter",
+          "मक्खन में वसा"
+        ]
+      ],
+      "e": [
+        "It measures the density of milk.",
+        "यह दूध का घनत्व मापता है।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "A sudden fall in the reading of a barometer indicates",
+        "बैरोमीटर का पाठ अचानक गिरना किसका संकेत है?"
+      ],
+      "o": [
+        [
+          "A storm",
+          "तूफ़ान"
+        ],
+        [
+          "Fair weather",
+          "साफ़ मौसम"
+        ],
+        [
+          "Rain stopping",
+          "बारिश रुकना"
+        ],
+        [
+          "Cold wave",
+          "शीत लहर"
+        ]
+      ],
+      "e": [
+        "Falling pressure brings stormy weather.",
+        "गिरता दाब तूफ़ानी मौसम लाता है।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "An odometer measures",
+        "ओडोमीटर क्या मापता है?"
+      ],
+      "o": [
+        [
+          "Distance travelled by a vehicle",
+          "वाहन द्वारा तय दूरी"
+        ],
+        [
+          "Speed of a vehicle",
+          "वाहन की गति"
+        ],
+        [
+          "Fuel used",
+          "उपयोग हुआ ईंधन"
+        ],
+        [
+          "Engine speed",
+          "इंजन की गति"
+        ]
+      ],
+      "e": [
+        "A speedometer shows speed; a tachometer shows engine rpm.",
+        "स्पीडोमीटर गति दिखाता है; टैकोमीटर इंजन का rpm।"
+      ]
+    },
+    {
+      "t": "branch",
+      "q": [
+        "Ornithology is the study of",
+        "ऑर्निथोलॉजी किसका अध्ययन है?"
+      ],
+      "o": [
+        [
+          "Birds",
+          "पक्षी"
+        ],
+        [
+          "Insects",
+          "कीट"
+        ],
+        [
+          "Fish",
+          "मछलियाँ"
+        ],
+        [
+          "Reptiles",
+          "सरीसृप"
+        ]
+      ],
+      "e": [
+        "Salim Ali is called the Birdman of India.",
+        "सालिम अली को भारत का पक्षी पुरुष कहा जाता है।"
+      ]
+    },
+    {
+      "t": "branch",
+      "q": [
+        "Numismatics is the study of",
+        "न्यूमिस्मैटिक्स किसका अध्ययन है?"
+      ],
+      "o": [
+        [
+          "Coins",
+          "सिक्के"
+        ],
+        [
+          "Stamps",
+          "डाक टिकट"
+        ],
+        [
+          "Fossils",
+          "जीवाश्म"
+        ],
+        [
+          "Inscriptions",
+          "शिलालेख"
+        ]
+      ],
+      "e": [
+        "Philately is the study and collection of stamps; epigraphy is the study of inscriptions.",
+        "फ़िलैटली डाक टिकटों का अध्ययन और संग्रह है; एपिग्राफ़ी शिलालेखों का अध्ययन है।"
+      ]
+    },
+    {
+      "t": "branch",
+      "q": [
+        "Sericulture is related to",
+        "सेरीकल्चर किससे संबंधित है?"
+      ],
+      "o": [
+        [
+          "Silkworm rearing",
+          "रेशम कीट पालन"
+        ],
+        [
+          "Bee-keeping",
+          "मधुमक्खी पालन"
+        ],
+        [
+          "Fish farming",
+          "मछली पालन"
+        ],
+        [
+          "Fruit growing",
+          "फल उत्पादन"
+        ]
+      ],
+      "e": [
+        "Apiculture is bee-keeping; pisciculture is fish farming.",
+        "एपीकल्चर मधुमक्खी पालन है; पिसीकल्चर मछली पालन।"
+      ]
+    },
+    {
+      "t": "branch",
+      "q": [
+        "Mycology is the study of",
+        "माइकोलॉजी किसका अध्ययन है?"
+      ],
+      "o": [
+        [
+          "Fungi",
+          "कवक"
+        ],
+        [
+          "Algae",
+          "शैवाल"
+        ],
+        [
+          "Bacteria",
+          "जीवाणु"
+        ],
+        [
+          "Mosses",
+          "मॉस"
+        ]
+      ],
+      "e": [
+        "Phycology is the study of algae.",
+        "फ़ाइकोलॉजी शैवाल का अध्ययन है।"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "rivers-india",
+  "title": "Rivers of India",
+  "title_hi": "भारत की नदियाँ",
+  "description": "Connect a river with its origin state and key facts.",
+  "description_hi": "नदी को उसके उद्गम राज्य और प्रमुख तथ्यों से जोड़ें।",
+  "entries": [
+    {
+      "id": "river-ganga",
+      "name": "Ganga",
+      "name_hi": "गंगा",
+      "kind": "River",
+      "region": "India",
+      "state": "Uttarakhand",
+      "state_hi": "उत्तराखंड",
+      "state_lgd": 5,
+      "difficulty": "Moderate",
+      "hook": "Ganga → origin: Uttarakhand",
+      "hook_hi": "गंगा → उद्गम: उत्तराखंड",
+      "details": {
+        "en": "Bhagirathi and Alaknanda meet at Devprayag; the river continues as the Ganga. It ultimately reaches the Bay of Bengal.",
+        "hi": "भागीरथी और अलकनंदा देवप्रयाग में मिलती हैं; इसके बाद नदी गंगा कहलाती है। अंततः यह बंगाल की खाड़ी तक पहुँचती है।"
+      },
+      "source": "https://indiawris.gov.in/wiki/doku.php?id=ganga",
+      "last_verified": "2026-11-09",
+      "review_status": "needs_independent_review",
+      "ambiguous_map": false
+    },
+    {
+      "id": "river-yamuna",
+      "name": "Yamuna",
+      "name_hi": "यमुना",
+      "kind": "River",
+      "region": "India",
+      "state": "Uttarakhand",
+      "state_hi": "उत्तराखंड",
+      "state_lgd": 5,
+      "difficulty": "Moderate",
+      "hook": "Yamuna → origin: Uttarakhand",
+      "hook_hi": "यमुना → उद्गम: उत्तराखंड",
+      "details": {
+        "en": "The Yamuna originates near the Yamunotri glacier and joins the Ganga at Prayagraj.",
+        "hi": "यमुना यमुनोत्री हिमनद के पास से निकलती है और प्रयागराज में गंगा से मिलती है।"
+      },
+      "source": "https://indiawris.gov.in/wiki/doku.php?id=river_info",
+      "last_verified": "2026-11-09",
+      "review_status": "needs_independent_review",
+      "ambiguous_map": false
+    },
+    {
+      "id": "river-godavari",
+      "name": "Godavari",
+      "name_hi": "गोदावरी",
+      "kind": "River",
+      "region": "India",
+      "state": "Maharashtra",
+      "state_hi": "महाराष्ट्र",
+      "state_lgd": 27,
+      "difficulty": "Moderate",
+      "hook": "Godavari → origin: Maharashtra",
+      "hook_hi": "गोदावरी → उद्गम: महाराष्ट्र",
+      "details": {
+        "en": "The Godavari rises near Trimbakeshwar and flows towards the Bay of Bengal.",
+        "hi": "गोदावरी त्र्यंबकेश्वर के पास से निकलती है और बंगाल की खाड़ी की ओर बहती है।"
+      },
+      "source": "https://indiawris.gov.in/wiki/doku.php?id=godavari",
+      "last_verified": "2026-11-09",
+      "review_status": "needs_independent_review",
+      "ambiguous_map": false
+    },
+    {
+      "id": "river-krishna",
+      "name": "Krishna",
+      "name_hi": "कृष्णा",
+      "kind": "River",
+      "region": "India",
+      "state": "Maharashtra",
+      "state_hi": "महाराष्ट्र",
+      "state_lgd": 27,
+      "difficulty": "Moderate",
+      "hook": "Krishna → origin: Maharashtra",
+      "hook_hi": "कृष्णा → उद्गम: महाराष्ट्र",
+      "details": {
+        "en": "The Krishna rises near Mahabaleshwar and flows towards the Bay of Bengal.",
+        "hi": "कृष्णा महाबलेश्वर के पास से निकलती है और बंगाल की खाड़ी की ओर बहती है।"
+      },
+      "source": "https://indiawris.gov.in/wiki/doku.php?id=major_river_system_in_india",
+      "last_verified": "2026-11-09",
+      "review_status": "needs_independent_review",
+      "ambiguous_map": false
+    },
+    {
+      "id": "river-narmada",
+      "name": "Narmada",
+      "name_hi": "नर्मदा",
+      "kind": "River",
+      "region": "India",
+      "state": "Madhya Pradesh",
+      "state_hi": "मध्य प्रदेश",
+      "state_lgd": 23,
+      "difficulty": "Moderate",
+      "hook": "Narmada → origin: Madhya Pradesh",
+      "hook_hi": "नर्मदा → उद्गम: मध्य प्रदेश",
+      "details": {
+        "en": "The Narmada rises near Amarkantak and flows west to the Arabian Sea through the Gulf of Khambhat.",
+        "hi": "नर्मदा अमरकंटक के पास से निकलती है और पश्चिम की ओर खंभात की खाड़ी से अरब सागर में जाती है।"
+      },
+      "source": "https://indiawris.gov.in/wiki/doku.php?id=narmada",
+      "last_verified": "2026-11-09",
+      "review_status": "needs_independent_review",
+      "ambiguous_map": false
+    },
+    {
+      "id": "river-tapi",
+      "name": "Tapi",
+      "name_hi": "तापी",
+      "kind": "River",
+      "region": "India",
+      "state": "Madhya Pradesh",
+      "state_hi": "मध्य प्रदेश",
+      "state_lgd": 23,
+      "difficulty": "Moderate",
+      "hook": "Tapi → origin: Madhya Pradesh",
+      "hook_hi": "तापी → उद्गम: मध्य प्रदेश",
+      "details": {
+        "en": "The Tapi rises near Multai and flows west to the Arabian Sea.",
+        "hi": "तापी मुलताई के पास से निकलती है और पश्चिम की ओर अरब सागर में मिलती है।"
+      },
+      "source": "https://indiawris.gov.in/wiki/doku.php?id=tapi",
+      "last_verified": "2026-11-09",
+      "review_status": "needs_independent_review",
+      "ambiguous_map": false
+    }
+  ]
+}

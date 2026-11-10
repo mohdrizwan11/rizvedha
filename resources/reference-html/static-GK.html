@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SSC CGL Static GK — Master Study Guide</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --accent: #ff6f00;
+    --accent2: #00897b;
+    --accent3: #c62828;
+    --bg: #f0f4ff;
+    --card: #ffffff;
+    --sidebar-w: 260px;
+    --header-h: 60px;
+    --text: #1a1a2e;
+    --muted: #5c6bc0;
+    --success: #2e7d32;
+    --warning: #f57f17;
+    --danger: #b71c1c;
+    --shadow: 0 4px 24px rgba(26,35,126,0.10);
+    --radius: 14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+  /* HEADER */
+  #header{position:fixed;top:0;left:0;right:0;height:var(--header-h);background:var(--primary);color:#fff;display:flex;align-items:center;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+  #hamburger{font-size:1.6rem;cursor:pointer;padding:0 18px;transition:transform .2s;}
+  #hamburger:hover{transform:scale(1.15);}
+  #header h1{font-size:1.1rem;font-weight:700;letter-spacing:.5px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  #header .badge{background:var(--accent);color:#fff;font-size:.7rem;padding:3px 10px;border-radius:20px;margin-right:14px;font-weight:700;white-space:nowrap;}
+
+  /* SIDEBAR */
+  #sidebar{position:fixed;top:var(--header-h);left:0;width:var(--sidebar-w);height:calc(100vh - var(--header-h));background:linear-gradient(180deg,#1a237e 0%,#283593 60%,#1565c0 100%);overflow-y:auto;z-index:900;transition:transform .3s cubic-bezier(.4,0,.2,1);box-shadow:4px 0 18px rgba(0,0,0,0.18);}
+  #sidebar.closed{transform:translateX(calc(-1 * var(--sidebar-w)));}
+  .sb-section{padding:8px 0 2px 14px;font-size:.68rem;font-weight:800;letter-spacing:2px;color:#90caf9;text-transform:uppercase;margin-top:10px;}
+  .sb-item{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:pointer;color:#e8eaf6;font-size:.88rem;border-left:3px solid transparent;transition:all .18s;border-radius:0 8px 8px 0;margin:1px 6px 1px 0;}
+  .sb-item:hover{background:rgba(255,255,255,0.12);border-left-color:var(--accent);}
+  .sb-item.active{background:rgba(255,111,0,0.22);border-left-color:var(--accent);color:#fff;font-weight:700;}
+  .sb-item .icon{font-size:1.1rem;min-width:24px;text-align:center;}
+
+  /* MAIN */
+  #main{margin-top:var(--header-h);margin-left:var(--sidebar-w);padding:28px 22px 50px;transition:margin-left .3s;min-height:calc(100vh - var(--header-h));}
+  #main.full{margin-left:0;}
+  .screen{display:none;animation:fadeIn .35s ease;}
+  .screen.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+
+  /* CARDS & LAYOUT */
+  .page-title{font-size:1.7rem;font-weight:800;color:var(--primary);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+  .page-sub{color:var(--muted);margin-bottom:20px;font-size:.95rem;}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin-bottom:20px;}
+  .card h3{color:var(--primary);margin-bottom:12px;font-size:1.1rem;border-bottom:2px solid var(--bg);padding-bottom:6px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  @media(max-width:768px){.grid2,.grid3{grid-template-columns:1fr;} #main{margin-left:0;padding:14px 10px 40px;} #sidebar{transform:translateX(calc(-1 * var(--sidebar-w)));} #sidebar.open{transform:translateX(0);} }
+
+  /* TABLES */
+  .tbl{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px;}
+  .tbl th{background:var(--primary);color:#fff;padding:9px 12px;text-align:left;}
+  .tbl td{padding:8px 12px;border-bottom:1px solid #e8eaf6;}
+  .tbl tr:nth-child(even) td{background:#f5f7ff;}
+  .tbl tr:hover td{background:#e8f5e9;}
+  .tbl td:first-child{font-weight:600;color:var(--primary);}
+
+  /* BADGES & TAGS */
+  .tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.72rem;font-weight:700;margin:2px;}
+  .tag-red{background:#ffebee;color:#c62828;}
+  .tag-blue{background:#e8eaf6;color:#1a237e;}
+  .tag-green{background:#e8f5e9;color:#2e7d32;}
+  .tag-orange{background:#fff3e0;color:#e65100;}
+  .tag-purple{background:#f3e5f5;color:#6a1b9a;}
+  .hot{background:#ff6f00;color:#fff;font-size:.65rem;padding:2px 7px;border-radius:10px;font-weight:800;margin-left:6px;vertical-align:middle;}
+
+  /* MNEMONICS */
+  .mnemonic{background:linear-gradient(135deg,#fff3e0,#fffde7);border-left:4px solid var(--accent);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:.92rem;}
+  .mnemonic strong{color:var(--accent);font-size:1rem;}
+
+  /* TIMELINE */
+  .timeline{position:relative;padding-left:24px;}
+  .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--primary),var(--accent2));}
+  .tl-item{position:relative;margin-bottom:14px;padding:10px 14px;background:var(--card);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.07);}
+  .tl-item::before{content:'';position:absolute;left:-20px;top:14px;width:12px;height:12px;background:var(--accent);border-radius:50%;border:2px solid #fff;}
+  .tl-year{font-weight:800;color:var(--accent);font-size:.85rem;}
+
+  /* FLOWCHART */
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;}
+  .flow-box{background:var(--primary);color:#fff;padding:8px 14px;border-radius:8px;font-size:.82rem;font-weight:600;}
+  .flow-box.green{background:var(--accent2);}
+  .flow-box.orange{background:var(--accent);}
+  .flow-box.red{background:var(--accent3);}
+  .flow-arrow{color:var(--muted);font-size:1.2rem;font-weight:700;}
+
+  /* MINDMAP */
+  .mindmap{background:linear-gradient(135deg,#e8eaf6,#e0f2f1);border-radius:14px;padding:18px;text-align:center;}
+  .mm-center{display:inline-block;background:var(--primary);color:#fff;padding:12px 28px;border-radius:30px;font-weight:800;font-size:1rem;margin-bottom:14px;}
+  .mm-branches{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+  .mm-node{background:var(--card);border:2px solid var(--primary);border-radius:10px;padding:8px 14px;font-size:.82rem;font-weight:600;color:var(--primary);cursor:default;transition:all .2s;}
+  .mm-node:hover{background:var(--primary);color:#fff;transform:scale(1.05);}
+
+  /* ALERTS / TIPS */
+  .tip{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.88rem;}
+  .tip strong{color:#1565c0;}
+  .warn{background:#fff8e1;border-left:4px solid var(--warning);border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.88rem;}
+  .warn strong{color:var(--warning);}
+
+  /* QUIZ */
+  .quiz-header{display:flex;justify-content:space-between;align-items:center;background:var(--primary);color:#fff;padding:14px 20px;border-radius:12px;margin-bottom:18px;}
+  #timer-display{font-size:1.4rem;font-weight:800;color:var(--accent);}
+  .q-card{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:20px;margin-bottom:16px;}
+  .q-num{font-size:.75rem;font-weight:800;color:var(--muted);margin-bottom:6px;}
+  .q-text{font-size:.97rem;font-weight:600;color:var(--text);margin-bottom:14px;line-height:1.5;}
+  .q-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+  @media(max-width:500px){.q-options{grid-template-columns:1fr;}}
+  .opt-btn{padding:10px 14px;border:2px solid #c5cae9;border-radius:9px;background:var(--card);cursor:pointer;font-size:.88rem;text-align:left;transition:all .18s;font-family:inherit;}
+  .opt-btn:hover{border-color:var(--primary);background:#e8eaf6;}
+  .opt-btn.correct{background:#e8f5e9;border-color:#2e7d32;color:#2e7d32;font-weight:700;}
+  .opt-btn.wrong{background:#ffebee;border-color:#c62828;color:#c62828;font-weight:700;}
+  .opt-btn.selected{background:#e8eaf6;border-color:var(--primary);}
+  .feedback{font-size:.82rem;margin-top:8px;padding:8px 12px;border-radius:8px;}
+  .feedback.correct{background:#e8f5e9;color:#2e7d32;}
+  .feedback.wrong{background:#ffebee;color:#c62828;}
+  .btn{padding:10px 24px;border:none;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:700;font-size:.92rem;transition:all .18s;}
+  .btn-primary{background:var(--primary);color:#fff;}
+  .btn-primary:hover{background:#283593;}
+  .btn-accent{background:var(--accent);color:#fff;}
+  .btn-accent:hover{background:#e65100;}
+  .btn-green{background:var(--accent2);color:#fff;}
+  .score-box{text-align:center;padding:30px;background:linear-gradient(135deg,var(--primary),#1565c0);border-radius:16px;color:#fff;}
+  .score-box .big{font-size:3rem;font-weight:900;}
+  .progress-bar{height:8px;background:#e8eaf6;border-radius:4px;margin-top:8px;}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:4px;transition:width .4s;}
+
+  /* HOME SCREEN */
+  .hero{background:linear-gradient(135deg,#1a237e 0%,#283593 50%,#1565c0 100%);color:#fff;border-radius:18px;padding:32px 28px;margin-bottom:22px;position:relative;overflow:hidden;}
+  .hero::after{content:'📚';position:absolute;right:20px;top:10px;font-size:5rem;opacity:.15;}
+  .hero h2{font-size:1.6rem;font-weight:900;margin-bottom:8px;}
+  .hero p{opacity:.88;line-height:1.6;font-size:.95rem;}
+  .stat-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;}
+  .stat-card{background:rgba(255,255,255,.15);border-radius:10px;padding:12px 18px;text-align:center;flex:1;min-width:100px;}
+  .stat-card .num{font-size:1.6rem;font-weight:900;}
+  .stat-card .lbl{font-size:.72rem;opacity:.8;}
+  .topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:6px;}
+  .topic-card{background:var(--card);border-radius:12px;padding:18px 14px;text-align:center;cursor:pointer;box-shadow:var(--shadow);border:2px solid transparent;transition:all .2s;}
+  .topic-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .topic-card .tc-icon{font-size:2rem;margin-bottom:8px;}
+  .topic-card .tc-name{font-weight:700;font-size:.88rem;color:var(--primary);}
+  .topic-card .tc-count{font-size:.72rem;color:var(--muted);margin-top:3px;}
+
+  /* POLITY */
+  .article-box{background:linear-gradient(135deg,#e8eaf6,#fce4ec);border-radius:12px;padding:16px;margin:8px 0;}
+  .article-box .art-num{font-size:1.8rem;font-weight:900;color:var(--primary);}
+  .article-box .art-desc{font-size:.9rem;color:var(--text);}
+
+  /* REVISION SHEET */
+  .rev-section{margin-bottom:24px;}
+  .rev-section h3{background:var(--primary);color:#fff;padding:10px 16px;border-radius:8px 8px 0 0;font-size:.95rem;}
+  .rev-list{background:var(--card);border-radius:0 0 8px 8px;padding:14px 18px;box-shadow:var(--shadow);}
+  .rev-list li{padding:5px 0;font-size:.88rem;border-bottom:1px dashed #e8eaf6;line-height:1.5;}
+  .rev-list li:last-child{border-bottom:none;}
+
+  /* SCROLL */
+  ::-webkit-scrollbar{width:5px;}
+  ::-webkit-scrollbar-thumb{background:var(--muted);border-radius:3px;}
+
+  /* OVERLAY */
+  #overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:850;}
+  #overlay.show{display:block;}
+
+  .emoji-divider{text-align:center;font-size:1.4rem;margin:16px 0;letter-spacing:6px;}
+  .highlight{background:linear-gradient(120deg,#fff9c4,#fffde7);border-radius:4px;padding:1px 6px;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+  <span id="hamburger" onclick="toggleSidebar()">☰</span>
+  <h1>🎯 SSC CGL & IB ACIO — Static GK Master Guide</h1>
+  <span class="badge">2025 Edition</span>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div style="padding:14px 14px 6px;color:#fff;font-size:.82rem;opacity:.7;">Navigate Topics</div>
+
+  <div class="sb-section">🏠 Start</div>
+  <div class="sb-item active" onclick="showScreen('home')"><span class="icon">🏠</span> Home Dashboard</div>
+
+  <div class="sb-section">📅 Static GK</div>
+  <div class="sb-item" onclick="showScreen('days')"><span class="icon">📅</span> Important Days</div>
+  <div class="sb-item" onclick="showScreen('books')"><span class="icon">📖</span> Books & Authors</div>
+  <div class="sb-item" onclick="showScreen('dances')"><span class="icon">💃</span> Classical Dances</div>
+  <div class="sb-item" onclick="showScreen('monuments')"><span class="icon">🏛️</span> Monuments</div>
+  <div class="sb-item" onclick="showScreen('capitals')"><span class="icon">🌍</span> Capitals & Countries</div>
+  <div class="sb-item" onclick="showScreen('geography')"><span class="icon">🗺️</span> Rivers, Mountains & Geo</div>
+  <div class="sb-item" onclick="showScreen('awards')"><span class="icon">🏆</span> Awards & Honours</div>
+  <div class="sb-item" onclick="showScreen('orgs')"><span class="icon">🏢</span> Organizations & HQ</div>
+  <div class="sb-item" onclick="showScreen('science')"><span class="icon">🔬</span> Science & Discoveries</div>
+  <div class="sb-item" onclick="showScreen('misc')"><span class="icon">🎲</span> Miscellaneous</div>
+
+  <div class="sb-section">⚖️ Polity</div>
+  <div class="sb-item" onclick="showScreen('polity')"><span class="icon">⚖️</span> Indian Polity Guide</div>
+
+  <div class="sb-section">📋 Revision</div>
+  <div class="sb-item" onclick="showScreen('revision')"><span class="icon">📋</span> Quick Revision Sheet</div>
+
+  <div class="sb-section">📝 Practice</div>
+  <div class="sb-item" onclick="showScreen('quiz-timed')"><span class="icon">⏱️</span> Timed Mock Test</div>
+  <div class="sb-item" onclick="showScreen('quiz-practice')"><span class="icon">✅</span> Practice with Feedback</div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+<!-- ============================================================ HOME ============================================================ -->
+<div id="screen-home" class="screen active">
+  <div class="hero">
+    <h2>🎯 Master Static GK — SSC CGL & IB ACIO</h2>
+    <p>Your all-in-one, exam-focused study companion. Every topic is mapped to actual past-year question patterns from the last 20 years.</p>
+    <div class="stat-row">
+      <div class="stat-card"><div class="num">10</div><div class="lbl">Core Topics</div></div>
+      <div class="stat-card"><div class="num">50</div><div class="lbl">Practice Qs</div></div>
+      <div class="stat-card"><div class="num">500+</div><div class="lbl">Key Facts</div></div>
+      <div class="stat-card"><div class="num">20</div><div class="lbl">Years PYQs</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>⚡ How to Use This Guide</h3>
+    <div class="flow">
+      <div class="flow-box orange">Pick a Topic</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">Study Mind Map</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green">Read Tables</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box red">Memorise Mnemonics</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box orange">Quick Revision</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">Take Mock Test</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🗺️ Topic Navigation — Click to Jump</h3>
+    <div class="topic-grid">
+      <div class="topic-card" onclick="showScreen('days')"><div class="tc-icon">📅</div><div class="tc-name">Important Days</div><div class="tc-count">35+ Key Days</div></div>
+      <div class="topic-card" onclick="showScreen('books')"><div class="tc-icon">📖</div><div class="tc-name">Books & Authors</div><div class="tc-count">50+ Pairs</div></div>
+      <div class="topic-card" onclick="showScreen('dances')"><div class="tc-icon">💃</div><div class="tc-name">Classical Dances</div><div class="tc-count">8 Classical + Folk</div></div>
+      <div class="topic-card" onclick="showScreen('monuments')"><div class="tc-icon">🏛️</span></div><div class="tc-name">Monuments</div><div class="tc-count">UNESCO + India</div></div>
+      <div class="topic-card" onclick="showScreen('capitals')"><div class="tc-icon">🌍</div><div class="tc-name">Capitals & Countries</div><div class="tc-count">All Continents</div></div>
+      <div class="topic-card" onclick="showScreen('geography')"><div class="tc-icon">🗺️</div><div class="tc-name">Geography</div><div class="tc-count">Rivers, Mountains</div></div>
+      <div class="topic-card" onclick="showScreen('awards')"><div class="tc-icon">🏆</div><div class="tc-name">Awards & Honours</div><div class="tc-count">Bharat Ratna etc.</div></div>
+      <div class="topic-card" onclick="showScreen('orgs')"><div class="tc-icon">🏢</div><div class="tc-name">Organizations</div><div class="tc-count">UN, WHO, IMF...</div></div>
+      <div class="topic-card" onclick="showScreen('science')"><div class="tc-icon">🔬</div><div class="tc-name">Science</div><div class="tc-count">Discoveries + Inventions</div></div>
+      <div class="topic-card" onclick="showScreen('misc')"><div class="tc-icon">🎲</div><div class="tc-name">Miscellaneous</div><div class="tc-count">Sports, Currencies...</div></div>
+      <div class="topic-card" onclick="showScreen('polity')"><div class="tc-icon">⚖️</div><div class="tc-name">Indian Polity</div><div class="tc-count">Articles, Rights</div></div>
+      <div class="topic-card" onclick="showScreen('revision')"><div class="tc-icon">📋</div><div class="tc-name">Quick Revision</div><div class="tc-count">PYQ Patterns</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🔥 Most Frequently Asked Areas in SSC CGL (Last 20 Years)</h3>
+    <div class="grid2">
+      <div>
+        <div class="tip"><strong>Static GK Hot Zones:</strong><br>
+        🥇 Books & Authors — 3–4 Qs/year<br>
+        🥈 Important Days — 2–3 Qs/year<br>
+        🥉 Awards (Bharat Ratna/Nobel) — 2 Qs/year<br>
+        🏅 Organization HQs — 2 Qs/year<br>
+        🏅 Classical Dances — 1–2 Qs/year
+        </div>
+      </div>
+      <div>
+        <div class="warn"><strong>Polity Hot Zones:</strong><br>
+        🥇 Fundamental Rights (Art 12–35) — 4–5 Qs/year<br>
+        🥈 Constitutional Amendments — 2–3 Qs/year<br>
+        🥉 Parliament & President — 2–3 Qs/year<br>
+        🏅 DPSP & Duties — 1–2 Qs/year
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ IMPORTANT DAYS ============================================================ -->
+<div id="screen-days" class="screen">
+  <div class="page-title">📅 Important Days & Dates</div>
+  <div class="page-sub">Exam focus: National & International Days are asked every year. Theme-based questions are a new trend.</div>
+
+  <div class="mindmap">
+    <div class="mm-center">📅 IMPORTANT DAYS</div>
+    <div class="mm-branches">
+      <div class="mm-node">January</div>
+      <div class="mm-node">February</div>
+      <div class="mm-node">March</div>
+      <div class="mm-node">April–June</div>
+      <div class="mm-node">July–September</div>
+      <div class="mm-node">October–December</div>
+      <div class="mm-node">UN Days</div>
+      <div class="mm-node">National Days</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>January – March <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Date</th><th>Day</th><th>Theme/Note</th></tr>
+      <tr><td>Jan 9</td><td>NRI Day / Pravasi Bharatiya Divas</td><td>Gandhi's return from S. Africa 1915</td></tr>
+      <tr><td>Jan 10</td><td>World Hindi Day</td><td>First World Hindi Conf. 1975 – Nagpur</td></tr>
+      <tr><td>Jan 12</td><td>National Youth Day</td><td>Swami Vivekananda's Birthday</td></tr>
+      <tr><td>Jan 15</td><td>Army Day</td><td>Gen. K.M. Cariappa became 1st CinC, 1949</td></tr>
+      <tr><td>Jan 25</td><td>National Voters Day / National Tourism Day</td><td>ECI founded Jan 25, 1950</td></tr>
+      <tr><td>Jan 26</td><td>Republic Day</td><td>Constitution came into force, 1950</td></tr>
+      <tr><td>Jan 30</td><td>Martyrs' Day / World Leprosy Day</td><td>Gandhi's assassination, 1948</td></tr>
+      <tr><td>Feb 4</td><td>World Cancer Day</td><td>UICC founded</td></tr>
+      <tr><td>Feb 14</td><td>Valentine's Day / Eco-friendly Day</td><td>—</td></tr>
+      <tr><td>Feb 21</td><td>International Mother Language Day</td><td>UNESCO 1999 – Bangladesh language movement</td></tr>
+      <tr><td>Feb 28</td><td>National Science Day</td><td>C.V. Raman discovered Raman Effect, 1928</td></tr>
+      <tr><td>Mar 4</td><td>National Security Day</td><td>NSC founded 1966</td></tr>
+      <tr><td>Mar 8</td><td>International Women's Day</td><td>UN officially recognised 1977</td></tr>
+      <tr><td>Mar 15</td><td>World Consumer Rights Day</td><td>JFK speech 1962</td></tr>
+      <tr><td>Mar 20</td><td>World Sparrow Day / World Happiness Day</td><td>—</td></tr>
+      <tr><td>Mar 21</td><td>World Forestry Day / World Poetry Day</td><td>UN proclaimed</td></tr>
+      <tr><td>Mar 22</td><td>World Water Day</td><td>UN declared 1993</td></tr>
+      <tr><td>Mar 23</td><td>World Meteorological Day / Bhagat Singh's Martyrdom Day</td><td>WMO Convention 1950</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>April – June <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Date</th><th>Day</th><th>Key Fact</th></tr>
+      <tr><td>Apr 5</td><td>National Maritime Day</td><td>SS Loyalty voyage to London, 1919</td></tr>
+      <tr><td>Apr 7</td><td>World Health Day</td><td>WHO founded April 7, 1948</td></tr>
+      <tr><td>Apr 14</td><td>Ambedkar Jayanti / Fire Service Day</td><td>B.R. Ambedkar born 1891</td></tr>
+      <tr><td>Apr 18</td><td>World Heritage Day</td><td>ICOMOS proclaimed 1982</td></tr>
+      <tr><td>Apr 22</td><td>Earth Day</td><td>First celebrated 1970, USA</td></tr>
+      <tr><td>Apr 23</td><td>World Book & Copyright Day</td><td>UNESCO — Shakespeare & Cervantes died Apr 23</td></tr>
+      <tr><td>May 1</td><td>International Labour Day / Maharashtra Day / Gujarat Day</td><td>1886 Haymarket affair</td></tr>
+      <tr><td>May 3</td><td>World Press Freedom Day</td><td>UNESCO 1991</td></tr>
+      <tr><td>May 11</td><td>National Technology Day</td><td>Pokhran Nuclear Test, 1998</td></tr>
+      <tr><td>May 12</td><td>International Nurses Day</td><td>Florence Nightingale born 1820</td></tr>
+      <tr><td>May 31</td><td>World No Tobacco Day</td><td>WHO 1987</td></tr>
+      <tr><td>Jun 5</td><td>World Environment Day</td><td>Stockholm Conference 1972</td></tr>
+      <tr><td>Jun 21</td><td>World Music Day / International Yoga Day</td><td>Yoga Day — UN declared 2014 (India proposed)</td></tr>
+      <tr><td>Jun 26</td><td>International Day against Drug Abuse</td><td>UNODC</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>July – December <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Date</th><th>Day</th><th>Key Fact</th></tr>
+      <tr><td>Jul 1</td><td>National Doctors Day</td><td>Dr. B.C. Roy — physician + 2nd CM West Bengal</td></tr>
+      <tr><td>Jul 11</td><td>World Population Day</td><td>UNDP 1989 — world pop. hit 5 billion July 11, 1987</td></tr>
+      <tr><td>Aug 6</td><td>Hiroshima Day</td><td>Atomic bomb dropped 1945</td></tr>
+      <tr><td>Aug 12</td><td>International Youth Day</td><td>UN 1999</td></tr>
+      <tr><td>Aug 15</td><td>Independence Day / World Humanitarian Day</td><td>1947</td></tr>
+      <tr><td>Sep 5</td><td>Teachers' Day</td><td>Dr. Sarvepalli Radhakrishnan's Birthday</td></tr>
+      <tr><td>Sep 8</td><td>International Literacy Day</td><td>UNESCO 1966</td></tr>
+      <tr><td>Sep 16</td><td>World Ozone Day</td><td>Montreal Protocol 1987</td></tr>
+      <tr><td>Sep 27</td><td>World Tourism Day</td><td>UNWTO Statute adopted 1970</td></tr>
+      <tr><td>Oct 2</td><td>Gandhi Jayanti / International Non-Violence Day</td><td>Gandhiji born 1869</td></tr>
+      <tr><td>Oct 9</td><td>World Post Day</td><td>UPU founded 1874</td></tr>
+      <tr><td>Oct 16</td><td>World Food Day</td><td>FAO founded 1945</td></tr>
+      <tr><td>Oct 24</td><td>United Nations Day</td><td>UN Charter came into force 1945</td></tr>
+      <tr><td>Nov 14</td><td>Children's Day / Diabetes Day</td><td>Nehru's Birthday</td></tr>
+      <tr><td>Nov 19</td><td>International Men's Day / World Toilet Day</td><td>—</td></tr>
+      <tr><td>Dec 1</td><td>World AIDS Day</td><td>WHO 1988</td></tr>
+      <tr><td>Dec 11</td><td>World UNICEF Day / International Mountain Day</td><td>UNICEF founded 1946</td></tr>
+      <tr><td>Dec 10</td><td>Human Rights Day</td><td>UDHR adopted 1948</td></tr>
+      <tr><td>Dec 22</td><td>National Mathematics Day</td><td>Ramanujan's Birthday</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Mnemonics for Important Days</h3>
+    <div class="mnemonic">
+      <strong>🔑 "Raman's Science — Feb 28"</strong><br>
+      C.V. Raman → Raman Effect → Feb 28, 1928 → National Science Day<br>
+      <em>Memory trick: 2+8 = 10 letters in "RAMAN EFFECT" ✓</em>
+    </div>
+    <div class="mnemonic">
+      <strong>🔑 Teachers-Doctors-Youth: Sep 5 → Jul 1 → Aug 12</strong><br>
+      "S before J before A" → Sep, Jul, Aug → Teachers, Doctors, Youth
+    </div>
+    <div class="mnemonic">
+      <strong>🔑 WHO=Apr 7, FAO=Oct 16, UNESCO=Nov 4, UNICEF=Dec 11</strong><br>
+      "WHen FArming UNder UNreachable stars" → WHO, FAO, UNESCO, UNICEF
+    </div>
+    <div class="mnemonic">
+      <strong>🔑 Earth → Environment → Ozone → Habitat</strong><br>
+      Apr 22 → Jun 5 → Sep 16 → Oct 31<br>
+      "A problem Gets Serious Often" → April, June, September, October
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ BOOKS & AUTHORS ============================================================ -->
+<div id="screen-books" class="screen">
+  <div class="page-title">📖 Books & Authors</div>
+  <div class="page-sub">3–4 questions per year in SSC CGL. Focus on Indian politicians' autobiographies + freedom struggle books.</div>
+
+  <div class="mindmap">
+    <div class="mm-center">📖 BOOKS & AUTHORS</div>
+    <div class="mm-branches">
+      <div class="mm-node">Freedom Fighters</div>
+      <div class="mm-node">Prime Ministers</div>
+      <div class="mm-node">Presidents</div>
+      <div class="mm-node">Nobel Prize Winners</div>
+      <div class="mm-node">Ancient/Medieval</div>
+      <div class="mm-node">International</div>
+      <div class="mm-node">Science Books</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🇮🇳 Freedom Fighters & National Leaders <span class="hot">MOST ASKED</span></h3>
+    <table class="tbl">
+      <tr><th>Book</th><th>Author</th><th>Key Fact</th></tr>
+      <tr><td>My Experiments with Truth (Autobiography)</td><td>M.K. Gandhi</td><td>Mahatma Gandhi's autobiography</td></tr>
+      <tr><td>Hind Swaraj</td><td>M.K. Gandhi</td><td>Written in 1909 on ship</td></tr>
+      <tr><td>The Discovery of India</td><td>Jawaharlal Nehru</td><td>Written in Ahmednagar Fort jail, 1944</td></tr>
+      <tr><td>Glimpses of World History</td><td>Jawaharlal Nehru</td><td>Letters to Indira Gandhi from prison</td></tr>
+      <tr><td>An Autobiography (Toward Freedom)</td><td>Jawaharlal Nehru</td><td>—</td></tr>
+      <tr><td>The Indian Struggle</td><td>Subhas Chandra Bose</td><td>History of Indian independence movement</td></tr>
+      <tr><td>An Unfinished Autobiography</td><td>Lala Lajpat Rai</td><td>—</td></tr>
+      <tr><td>India Wins Freedom</td><td>Maulana Abul Kalam Azad</td><td>Partition of India</td></tr>
+      <tr><td>Gita Rahasya</td><td>Bal Gangadhar Tilak</td><td>Written in Mandalay jail</td></tr>
+      <tr><td>The Arctic Home in the Vedas</td><td>Bal Gangadhar Tilak</td><td>—</td></tr>
+      <tr><td>Poverty and Un-British Rule in India</td><td>Dadabhai Naoroji</td><td>"Drain of Wealth" theory</td></tr>
+      <tr><td>Annihilation of Caste</td><td>B.R. Ambedkar</td><td>1936</td></tr>
+      <tr><td>Waiting for a Visa</td><td>B.R. Ambedkar</td><td>Autobiography</td></tr>
+      <tr><td>Satyartha Prakash</td><td>Swami Dayananda Saraswati</td><td>Arya Samaj foundation text</td></tr>
+      <tr><td>The Story of My Deportations</td><td>Lala Lajpat Rai</td><td>—</td></tr>
+      <tr><td>We Indians</td><td>Khushwant Singh</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🏛️ Indian Prime Ministers & Presidents</h3>
+    <table class="tbl">
+      <tr><th>Book</th><th>Author / PM/President</th></tr>
+      <tr><td>Wings of Fire (Autobiography)</td><td>A.P.J. Abdul Kalam</td></tr>
+      <tr><td>Ignited Minds</td><td>A.P.J. Abdul Kalam</td></tr>
+      <tr><td>India 2020</td><td>A.P.J. Abdul Kalam</td></tr>
+      <tr><td>My Presidential Years</td><td>R. Venkataraman</td></tr>
+      <tr><td>Courage and Conviction</td><td>Gen. V.K. Singh</td></tr>
+      <tr><td>A Call to Honour</td><td>Jaswant Singh</td></tr>
+      <tr><td>My Music My Life</td><td>Pandit Ravi Shankar</td></tr>
+      <tr><td>Courage, Conviction & Compromise (Autobiography)</td><td>I.K. Gujral</td></tr>
+      <tr><td>The Accidental Prime Minister</td><td>Sanjaya Baru (about Manmohan Singh)</td></tr>
+      <tr><td>My Country My Life</td><td>L.K. Advani</td></tr>
+      <tr><td>Exam Warriors</td><td>Narendra Modi</td></tr>
+      <tr><td>Decisive Decade</td><td>Narendra Modi</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>✍️ Nobel Prize Winners in Literature (Indian Connection) <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Book / Work</th><th>Author</th><th>Nobel Year</th></tr>
+      <tr><td>Gitanjali</td><td>Rabindranath Tagore</td><td>1913 — First Asian Nobel Literature</td></tr>
+      <tr><td>The God of Small Things</td><td>Arundhati Roy</td><td>Booker Prize 1997</td></tr>
+      <tr><td>Midnight's Children</td><td>Salman Rushdie</td><td>Booker 1981</td></tr>
+      <tr><td>The White Tiger</td><td>Aravind Adiga</td><td>Booker 2008</td></tr>
+      <tr><td>Train to Pakistan</td><td>Khushwant Singh</td><td>—</td></tr>
+      <tr><td>A Passage to India</td><td>E.M. Forster</td><td>—</td></tr>
+      <tr><td>Kim</td><td>Rudyard Kipling</td><td>Nobel 1907</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>📜 Ancient & Medieval Indian Literature <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Book</th><th>Author</th><th>Period/Dynasty</th></tr>
+      <tr><td>Arthashastra</td><td>Kautilya (Chanakya)</td><td>Mauryan — Political Science & Economics</td></tr>
+      <tr><td>Indica</td><td>Megasthenes</td><td>Mauryan — Greek Ambassador</td></tr>
+      <tr><td>Mudrarakshasa (Play)</td><td>Vishakhadatta</td><td>Gupta period</td></tr>
+      <tr><td>Mricchakatika (Little Clay Cart)</td><td>Shudraka</td><td>Sanskrit drama</td></tr>
+      <tr><td>Abhijnanasakuntalam</td><td>Kalidasa</td><td>Gupta — Greatest Sanskrit poet</td></tr>
+      <tr><td>Meghaduta, Raghuvamsa, Kumarasambhava</td><td>Kalidasa</td><td>Gupta period</td></tr>
+      <tr><td>Panchatantra</td><td>Vishnu Sharma</td><td>Animal fables — 3rd century BCE</td></tr>
+      <tr><td>Ashtadhyayi</td><td>Panini</td><td>Sanskrit grammar — 4th century BCE</td></tr>
+      <tr><td>Harshacharita</td><td>Banabhatta</td><td>Harsha's biography, 7th century</td></tr>
+      <tr><td>Kadambari</td><td>Banabhatta</td><td>First Sanskrit novel</td></tr>
+      <tr><td>Rajatarangini</td><td>Kalhana</td><td>Kashmir history, 12th century</td></tr>
+      <tr><td>Kitab-ul-Hind</td><td>Al-Biruni</td><td>Arrived with Mahmud of Ghazni</td></tr>
+      <tr><td>Ain-i-Akbari / Akbarnama</td><td>Abul Fazl</td><td>Mughal — Akbar's period</td></tr>
+      <tr><td>Tuzuk-i-Baburi (Baburnama)</td><td>Babur</td><td>First Mughal autobiography</td></tr>
+      <tr><td>Humayunnama</td><td>Gulbadan Begum</td><td>Humayun's sister</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌍 International Authors — Frequently Asked</h3>
+    <table class="tbl">
+      <tr><th>Book</th><th>Author</th><th>Country</th></tr>
+      <tr><td>The Origin of Species</td><td>Charles Darwin</td><td>UK</td></tr>
+      <tr><td>A Brief History of Time</td><td>Stephen Hawking</td><td>UK</td></tr>
+      <tr><td>The Republic</td><td>Plato</td><td>Greece</td></tr>
+      <tr><td>Wealth of Nations</td><td>Adam Smith</td><td>UK</td></tr>
+      <tr><td>Das Kapital</td><td>Karl Marx</td><td>Germany</td></tr>
+      <tr><td>The Diary of a Young Girl</td><td>Anne Frank</td><td>Netherlands/Germany</td></tr>
+      <tr><td>Long Walk to Freedom</td><td>Nelson Mandela</td><td>South Africa</td></tr>
+      <tr><td>My Inventions</td><td>Nikola Tesla</td><td>USA/Serbia</td></tr>
+      <tr><td>Silent Spring</td><td>Rachel Carson</td><td>USA — Environmental movement</td></tr>
+      <tr><td>1984 / Animal Farm</td><td>George Orwell</td><td>UK</td></tr>
+    </table>
+  </div>
+
+  <div class="mnemonic">
+    <strong>🔑 Mnemonic — Kautilya, Kalidasa, Kalhana</strong><br>
+    The 3 K's of Ancient India:<br>
+    <strong>K</strong>autilya = <strong>K</strong>ingdom (Politics / Arthashastra)<br>
+    <strong>K</strong>alidasa = <strong>K</strong>hwaab (Poetry / Abhijnanasakuntalam)<br>
+    <strong>K</strong>alhana = <strong>K</strong>ashmir (History / Rajatarangini)
+  </div>
+</div>
+
+<!-- ============================================================ DANCES ============================================================ -->
+<div id="screen-dances" class="screen">
+  <div class="page-title">💃 Classical Dances of India</div>
+  <div class="page-sub">1–2 questions per year. Classical vs Folk is the most common distinction asked.</div>
+
+  <div class="card">
+    <h3>🌟 The 8 Sangeet Natak Akademi Recognised Classical Dances <span class="hot">CORE</span></h3>
+    <div class="tip"><strong>Memory Trick:</strong> <span class="highlight">"Bharata Katha Manipuri Odissi, Kuchipudi Mohiniyattam Sattriya"</span> — use first letters: <strong>B K M O K M S + Kathak</strong></div>
+    <table class="tbl">
+      <tr><th>Dance</th><th>State</th><th>Key Features</th><th>Famous Exponents</th></tr>
+      <tr><td>Bharatanatyam</td><td>Tamil Nadu</td><td>Oldest classical dance; from Devadasi tradition; Natya Shastra based</td><td>Rukmini Devi Arundale, Padma Subrahmanyam</td></tr>
+      <tr><td>Kathak</td><td>UP (North India)</td><td>Mughal influence; Ghungroo + fast spins (chakkar); two gharanas: Jaipur & Lucknow</td><td>Birju Maharaj, Sitara Devi</td></tr>
+      <tr><td>Kathakali</td><td>Kerala</td><td>Elaborate face makeup; male performers; night-long performances; stories from Ramayana/Mahabharata</td><td>Kalamandalam Gopi</td></tr>
+      <tr><td>Mohiniyattam</td><td>Kerala</td><td>"Dance of the enchantress Mohini"; feminine; white & gold costume</td><td>Shanta Rao</td></tr>
+      <tr><td>Kuchipudi</td><td>Andhra Pradesh</td><td>Named after Kuchipudi village; Bhama Kalapam is signature piece; pot-balancing</td><td>Yamini Krishnamurti, Raja Reddy</td></tr>
+      <tr><td>Manipuri</td><td>Manipur</td><td>Ras Leela; gentle; no elaborate footwork; Vaishnavism based</td><td>Darshana Jhaveri</td></tr>
+      <tr><td>Odissi</td><td>Odisha</td><td>Oldest surviving dance form; Tribhangi posture; from temple tradition; Maharis</td><td>Sonal Mansingh, Kelucharan Mohapatra</td></tr>
+      <tr><td>Sattriya</td><td>Assam</td><td>Newest classical recognition (2000); from Sattras (Vaishnavite monasteries); Shankaradeva</td><td>Indira P.P. Bora</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🎭 Folk Dances — State-wise <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>State</th><th>Folk Dances</th></tr>
+      <tr><td>Rajasthan</td><td>Ghoomar, Kalbeliya, Bhavai, Chari, Teratali</td></tr>
+      <tr><td>Gujarat</td><td>Garba, Dandiya Raas, Tippani</td></tr>
+      <tr><td>Punjab</td><td>Bhangra (Men), Giddha (Women)</td></tr>
+      <tr><td>Haryana</td><td>Jhumar, Phag, Daph</td></tr>
+      <tr><td>Maharashtra</td><td>Lavani, Tamasha, Koli, Dhangari Gaja</td></tr>
+      <tr><td>West Bengal</td><td>Chhau, Gambhira, Jatra</td></tr>
+      <tr><td>Assam</td><td>Bihu (Bohag Bihu/Rongali), Barpeta</td></tr>
+      <tr><td>Kerala</td><td>Theyyam, Thiruvathira, Padayani</td></tr>
+      <tr><td>Tamil Nadu</td><td>Kolattam, Kummi, Kavadi</td></tr>
+      <tr><td>Himachal Pradesh</td><td>Nati (Guinness Record for largest folk dance)</td></tr>
+      <tr><td>Jharkhand/Bihar</td><td>Jhumair, Chhau (Seraikella), Karma</td></tr>
+      <tr><td>Odisha</td><td>Chhau (Mayurbhanj), Gotipua</td></tr>
+      <tr><td>Andhra Pradesh</td><td>Kolattam, Vilasini Natyam, Dhimsa</td></tr>
+      <tr><td>Goa</td><td>Fugdi, Dhalo, Dekhni</td></tr>
+      <tr><td>Uttarakhand</td><td>Langvir Nritya, Chholiya</td></tr>
+      <tr><td>Mizoram/Northeast</td><td>Cheraw (Bamboo Dance)</td></tr>
+      <tr><td>Manipur</td><td>Thang Ta, Pung Cholom</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Quick Mnemonics for Classical Dances</h3>
+    <div class="mnemonic">
+      <strong>🔑 "B-KOK-MOS" — 8 Classical Dances</strong><br>
+      <strong>B</strong>haratanatyam (TN) · <strong>K</strong>athak (UP) · <strong>O</strong>dissi (Odisha) · <strong>K</strong>uchipudi (AP) · <strong>M</strong>ohiniyattam (Kerala) · <strong>O</strong>... wait—<br>
+      Better: <strong>"BKKOMMS"</strong> = Bharatanatyam, Kathak, Kathakali, Odissi, Manipuri, Mohiniyattam, Sattriya (+ Kuchipudi)
+    </div>
+    <div class="mnemonic">
+      <strong>🔑 Kerala has 2 Classical Dances: K+M</strong><br>
+      <strong>K</strong>athakali = <strong>K</strong>ing's drama (elaborate, male, Ramayana)<br>
+      <strong>M</strong>ohiniyattam = <strong>M</strong>ohini (feminine, enchanting)
+    </div>
+    <div class="mnemonic">
+      <strong>🔑 Sattriya = Assam = Shankaradeva = 2000</strong><br>
+      "S-A-S-2000" — Sattriya, Assam, Shankaradeva, Year 2000 recognition
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>⚡ Comparison: Classical vs Folk</h3>
+    <table class="tbl">
+      <tr><th>Feature</th><th>Classical Dance</th><th>Folk Dance</th></tr>
+      <tr><td>Recognition</td><td>Sangeet Natak Akademi</td><td>Regional tradition</td></tr>
+      <tr><td>Number</td><td>8 (officially)</td><td>Hundreds</td></tr>
+      <tr><td>Training</td><td>Formal, years of training</td><td>Community-based</td></tr>
+      <tr><td>Base Text</td><td>Natya Shastra (Bharata Muni)</td><td>Oral tradition</td></tr>
+      <tr><td>Costumes</td><td>Elaborate, codified</td><td>Regional attire</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================ MONUMENTS ============================================================ -->
+<div id="screen-monuments" class="screen">
+  <div class="page-title">🏛️ Monuments of India & World</div>
+  <div class="page-sub">Focus on builder, year, location, material, UNESCO status. 1–2 Qs per year in SSC CGL.</div>
+
+  <div class="card">
+    <h3>🇮🇳 Iconic Indian Monuments <span class="hot">CORE</span></h3>
+    <table class="tbl">
+      <tr><th>Monument</th><th>Location</th><th>Builder</th><th>Year</th><th>Key Fact</th></tr>
+      <tr><td>Taj Mahal</td><td>Agra, UP</td><td>Shah Jahan</td><td>1632–1653</td><td>Built for Mumtaz Mahal; UNESCO 1983; White Makrana marble</td></tr>
+      <tr><td>Red Fort (Lal Qila)</td><td>Delhi</td><td>Shah Jahan</td><td>1638–1648</td><td>UNESCO 2007; PM's I-Day speech; Red sandstone</td></tr>
+      <tr><td>Qutub Minar</td><td>Delhi</td><td>Qutub-ud-din Aibak (started), Iltutmish (completed)</td><td>1193–1368</td><td>UNESCO 1993; Tallest brick minaret (72.5m)</td></tr>
+      <tr><td>Humayun's Tomb</td><td>Delhi</td><td>Haji Begum (wife)</td><td>1565–1572</td><td>UNESCO 1993; First garden tomb; Inspired Taj Mahal</td></tr>
+      <tr><td>Fatehpur Sikri</td><td>Agra, UP</td><td>Akbar</td><td>1571</td><td>UNESCO 1986; Capital for 14 years; abandoned due to water scarcity</td></tr>
+      <tr><td>Agra Fort</td><td>Agra, UP</td><td>Akbar</td><td>1565</td><td>UNESCO 1983; Shah Jahan imprisoned here by Aurangzeb</td></tr>
+      <tr><td>Sanchi Stupa</td><td>Madhya Pradesh</td><td>Ashoka</td><td>3rd century BCE</td><td>UNESCO 1989; Oldest stone structure in India</td></tr>
+      <tr><td>Khajuraho Temples</td><td>MP</td><td>Chandela dynasty</td><td>950–1050 CE</td><td>UNESCO 1986; Erotic sculptures; Nagara style</td></tr>
+      <tr><td>Konark Sun Temple</td><td>Odisha</td><td>Narasimhadeva I (Eastern Ganga)</td><td>13th century</td><td>UNESCO 1984; "Black Pagoda"; chariot with 24 wheels</td></tr>
+      <tr><td>Ajanta Caves</td><td>Maharashtra</td><td>Various Buddhist kings</td><td>2nd BCE – 6th CE</td><td>UNESCO 1983; Buddhist paintings & sculptures</td></tr>
+      <tr><td>Ellora Caves</td><td>Maharashtra</td><td>Rashtrakutas, Vakatakas</td><td>6th–11th CE</td><td>UNESCO 1983; Hindu, Buddhist, Jain — 34 caves</td></tr>
+      <tr><td>Gateway of India</td><td>Mumbai</td><td>British (George Wittet)</td><td>1924</td><td>Built for King George V & Queen Mary's visit; Basalt</td></tr>
+      <tr><td>Victoria Memorial</td><td>Kolkata</td><td>Lord Curzon</td><td>1906–1921</td><td>White Makrana marble; Museum now</td></tr>
+      <tr><td>Charminar</td><td>Hyderabad</td><td>Muhammad Quli Qutb Shah</td><td>1591</td><td>Built to commemorate end of plague</td></tr>
+      <tr><td>Golconda Fort</td><td>Hyderabad</td><td>Qutb Shahi dynasty</td><td>16th century</td><td>Known for diamonds (Kohinoor mined here)</td></tr>
+      <tr><td>Statue of Unity</td><td>Gujarat</td><td>Govt of India</td><td>2018</td><td>World's tallest statue (182m); Sardar Vallabhbhai Patel</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌍 World's Famous Monuments</h3>
+    <table class="tbl">
+      <tr><th>Monument</th><th>Country</th><th>Key Fact</th></tr>
+      <tr><td>Great Wall of China</td><td>China</td><td>UNESCO 1987; 21,196 km; Qin Shi Huang started</td></tr>
+      <tr><td>Eiffel Tower</td><td>France</td><td>Built 1889; Gustave Eiffel; 330m; World Expo</td></tr>
+      <tr><td>Colosseum</td><td>Italy (Rome)</td><td>72 CE; Vespasian & Titus; UNESCO 1980</td></tr>
+      <tr><td>Machu Picchu</td><td>Peru</td><td>Inca civilization; UNESCO 1983; New 7 Wonders</td></tr>
+      <tr><td>Chichen Itza</td><td>Mexico</td><td>Mayan civilization; New 7 Wonders</td></tr>
+      <tr><td>Christ the Redeemer</td><td>Brazil (Rio)</td><td>1931; New 7 Wonders</td></tr>
+      <tr><td>Petra</td><td>Jordan</td><td>Rose city; New 7 Wonders</td></tr>
+      <tr><td>Big Ben</td><td>UK (London)</td><td>1859; Houses of Parliament clock tower</td></tr>
+      <tr><td>Statue of Liberty</td><td>USA</td><td>Gift from France 1886; Frederic Bartholdi</td></tr>
+      <tr><td>Pyramids of Giza</td><td>Egypt</td><td>Original 7 Wonders; Only surviving ancient wonder</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🏆 New Seven Wonders of the World (2007)</h3>
+    <div class="flow">
+      <div class="flow-box">Taj Mahal 🇮🇳</div>
+      <div class="flow-box green">Great Wall 🇨🇳</div>
+      <div class="flow-box orange">Machu Picchu 🇵🇪</div>
+      <div class="flow-box red">Chichen Itza 🇲🇽</div>
+      <div class="flow-box">Colosseum 🇮🇹</div>
+      <div class="flow-box green">Christ Redeemer 🇧🇷</div>
+      <div class="flow-box orange">Petra 🇯🇴</div>
+    </div>
+    <div class="mnemonic">
+      <strong>🔑 "Tom Gave Mick Cocaine, Christ Picked Jesus"</strong><br>
+      Taj Mahal · Great Wall · Machu Picchu · Chichen Itza · Colosseum · Christ Redeemer · Petra (Jordan)
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏯 Architectural Styles — Quick Reference</h3>
+    <table class="tbl">
+      <tr><th>Style</th><th>Features</th><th>Examples</th></tr>
+      <tr><td>Nagara (North Indian)</td><td>Curvilinear Shikhara (tower)</td><td>Khajuraho, Konark, Somnath</td></tr>
+      <tr><td>Dravidian (South Indian)</td><td>Pyramidal Vimana, Gopuram</td><td>Brihadeeswara (Thanjavur), Meenakshi</td></tr>
+      <tr><td>Vesara (Mixed)</td><td>Mix of Nagara + Dravidian</td><td>Hoysala temples (Karnataka)</td></tr>
+      <tr><td>Indo-Islamic</td><td>Domes, minarets, arches</td><td>Taj Mahal, Qutub Minar</td></tr>
+      <tr><td>Colonial</td><td>Neo-Gothic, Indo-Saracenic</td><td>Victoria Memorial, Gateway of India</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================ CAPITALS ============================================================ -->
+<div id="screen-capitals" class="screen">
+  <div class="page-title">🌍 Capitals & Countries</div>
+  <div class="page-sub">Focus on recently changed capitals, SAARC nations, and tricky capitals (non-obvious ones).</div>
+
+  <div class="card">
+    <h3>🌏 Asian Countries & Capitals <span class="hot">MOST ASKED</span></h3>
+    <table class="tbl">
+      <tr><th>Country</th><th>Capital</th><th>Key Fact</th></tr>
+      <tr><td>India</td><td>New Delhi</td><td>—</td></tr>
+      <tr><td>Pakistan</td><td>Islamabad</td><td>Not Karachi (Karachi was first capital)</td></tr>
+      <tr><td>Bangladesh</td><td>Dhaka</td><td>—</td></tr>
+      <tr><td>Nepal</td><td>Kathmandu</td><td>—</td></tr>
+      <tr><td>Bhutan</td><td>Thimphu</td><td>—</td></tr>
+      <tr><td>Sri Lanka</td><td>Sri Jayawardenepura Kotte (legislative) / Colombo (commercial)</td><td>Two capitals</td></tr>
+      <tr><td>Maldives</td><td>Malé</td><td>—</td></tr>
+      <tr><td>Afghanistan</td><td>Kabul</td><td>—</td></tr>
+      <tr><td>China</td><td>Beijing</td><td>—</td></tr>
+      <tr><td>Japan</td><td>Tokyo</td><td>—</td></tr>
+      <tr><td>South Korea</td><td>Seoul</td><td>—</td></tr>
+      <tr><td>North Korea</td><td>Pyongyang</td><td>—</td></tr>
+      <tr><td>Myanmar</td><td>Naypyidaw</td><td>Changed from Yangon in 2006</td></tr>
+      <tr><td>Thailand</td><td>Bangkok</td><td>—</td></tr>
+      <tr><td>Indonesia</td><td>Jakarta → Nusantara</td><td>Capital being shifted to Nusantara (Borneo)</td></tr>
+      <tr><td>Malaysia</td><td>Kuala Lumpur</td><td>Putrajaya = Administrative capital</td></tr>
+      <tr><td>Vietnam</td><td>Hanoi</td><td>—</td></tr>
+      <tr><td>Cambodia</td><td>Phnom Penh</td><td>—</td></tr>
+      <tr><td>Philippines</td><td>Manila</td><td>—</td></tr>
+      <tr><td>Saudi Arabia</td><td>Riyadh</td><td>—</td></tr>
+      <tr><td>UAE</td><td>Abu Dhabi</td><td>Not Dubai!</td></tr>
+      <tr><td>Iran</td><td>Tehran</td><td>—</td></tr>
+      <tr><td>Iraq</td><td>Baghdad</td><td>—</td></tr>
+      <tr><td>Israel</td><td>Jerusalem (claimed) / Tel Aviv (internationally)</td><td>Disputed</td></tr>
+      <tr><td>Turkey</td><td>Ankara</td><td>Not Istanbul!</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌍 African Countries & Capitals</h3>
+    <table class="tbl">
+      <tr><th>Country</th><th>Capital</th><th>Note</th></tr>
+      <tr><td>South Africa</td><td>Pretoria (exec) / Cape Town (legislative) / Bloemfontein (judicial)</td><td>3 capitals!</td></tr>
+      <tr><td>Egypt</td><td>Cairo</td><td>—</td></tr>
+      <tr><td>Nigeria</td><td>Abuja</td><td>Not Lagos!</td></tr>
+      <tr><td>Kenya</td><td>Nairobi</td><td>—</td></tr>
+      <tr><td>Ethiopia</td><td>Addis Ababa</td><td>Also HQ of African Union</td></tr>
+      <tr><td>Tanzania</td><td>Dodoma (official) / Dar es Salaam (largest)</td><td>—</td></tr>
+      <tr><td>Zimbabwe</td><td>Harare</td><td>—</td></tr>
+      <tr><td>Morocco</td><td>Rabat</td><td>Not Casablanca!</td></tr>
+      <tr><td>Libya</td><td>Tripoli</td><td>—</td></tr>
+      <tr><td>Ghana</td><td>Accra</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌎 Americas & Europe <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Country</th><th>Capital</th><th>Note</th></tr>
+      <tr><td>USA</td><td>Washington D.C.</td><td>Not New York!</td></tr>
+      <tr><td>Canada</td><td>Ottawa</td><td>Not Toronto!</td></tr>
+      <tr><td>Brazil</td><td>Brasília</td><td>Not Rio de Janeiro! (capital shifted 1960)</td></tr>
+      <tr><td>Australia</td><td>Canberra</td><td>Not Sydney! (capital since 1913)</td></tr>
+      <tr><td>New Zealand</td><td>Wellington</td><td>Not Auckland!</td></tr>
+      <tr><td>Germany</td><td>Berlin</td><td>—</td></tr>
+      <tr><td>France</td><td>Paris</td><td>—</td></tr>
+      <tr><td>Spain</td><td>Madrid</td><td>—</td></tr>
+      <tr><td>Italy</td><td>Rome</td><td>—</td></tr>
+      <tr><td>Russia</td><td>Moscow</td><td>—</td></tr>
+      <tr><td>Switzerland</td><td>Bern</td><td>Not Zurich or Geneva!</td></tr>
+      <tr><td>Netherlands</td><td>Amsterdam (official) / The Hague (government)</td><td>Two cities</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>⚡ Tricky Capitals — Most Exam-Repeated</h3>
+    <div class="warn">
+      <strong>⚠️ Capitals that are NOT the largest/famous city:</strong><br>
+      • Australia → Canberra (not Sydney) 🇦🇺<br>
+      • USA → Washington D.C. (not New York) 🇺🇸<br>
+      • Brazil → Brasília (not Rio) 🇧🇷<br>
+      • Canada → Ottawa (not Toronto) 🇨🇦<br>
+      • New Zealand → Wellington (not Auckland) 🇳🇿<br>
+      • Turkey → Ankara (not Istanbul) 🇹🇷<br>
+      • UAE → Abu Dhabi (not Dubai) 🇦🇪<br>
+      • Morocco → Rabat (not Casablanca) 🇲🇦<br>
+      • Nigeria → Abuja (not Lagos) 🇳🇬<br>
+      • Switzerland → Bern (not Zurich/Geneva) 🇨🇭<br>
+      • Myanmar → Naypyidaw (not Yangon) 🇲🇲
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🇮🇳 Indian States & Capitals</h3>
+    <table class="tbl">
+      <tr><th>State</th><th>Capital</th><th>State</th><th>Capital</th></tr>
+      <tr><td>Andhra Pradesh</td><td>Amaravati (proposed) / Hyderabad (de facto)</td><td>Arunachal Pradesh</td><td>Itanagar</td></tr>
+      <tr><td>Assam</td><td>Dispur</td><td>Bihar</td><td>Patna</td></tr>
+      <tr><td>Chhattisgarh</td><td>Raipur</td><td>Goa</td><td>Panaji</td></tr>
+      <tr><td>Gujarat</td><td>Gandhinagar</td><td>Haryana</td><td>Chandigarh</td></tr>
+      <tr><td>Himachal Pradesh</td><td>Shimla</td><td>Jharkhand</td><td>Ranchi</td></tr>
+      <tr><td>Karnataka</td><td>Bengaluru</td><td>Kerala</td><td>Thiruvananthapuram</td></tr>
+      <tr><td>Madhya Pradesh</td><td>Bhopal</td><td>Maharashtra</td><td>Mumbai</td></tr>
+      <tr><td>Manipur</td><td>Imphal</td><td>Meghalaya</td><td>Shillong</td></tr>
+      <tr><td>Mizoram</td><td>Aizawl</td><td>Nagaland</td><td>Kohima</td></tr>
+      <tr><td>Odisha</td><td>Bhubaneswar</td><td>Punjab</td><td>Chandigarh</td></tr>
+      <tr><td>Rajasthan</td><td>Jaipur</td><td>Sikkim</td><td>Gangtok</td></tr>
+      <tr><td>Tamil Nadu</td><td>Chennai</td><td>Telangana</td><td>Hyderabad</td></tr>
+      <tr><td>Tripura</td><td>Agartala</td><td>Uttar Pradesh</td><td>Lucknow</td></tr>
+      <tr><td>Uttarakhand</td><td>Dehradun (temp) / Gairsain (summer)</td><td>West Bengal</td><td>Kolkata</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================ GEOGRAPHY ============================================================ -->
+<div id="screen-geography" class="screen">
+  <div class="page-title">🗺️ Rivers, Mountains & Geography</div>
+  <div class="page-sub">High-value section — both Indian & World Geography. Focus on longest, highest, deepest, largest.</div>
+
+  <div class="card">
+    <h3>🏔️ Major Mountain Ranges of India</h3>
+    <table class="tbl">
+      <tr><th>Range</th><th>Location</th><th>Highest Peak</th><th>Key Fact</th></tr>
+      <tr><td>Himalayas</td><td>North India border</td><td>Mt. Everest (8848.86m)</td><td>Youngest fold mountains; 3 parallel ranges</td></tr>
+      <tr><td>Karakoram</td><td>J&K/Ladakh</td><td>K2 (8611m) — India's highest</td><td>K2 = 2nd highest in world</td></tr>
+      <tr><td>Aravalli Range</td><td>Rajasthan–Gujarat–Haryana</td><td>Guru Shikhar (1722m)</td><td>Oldest fold mountains in India</td></tr>
+      <tr><td>Vindhya Range</td><td>MP/UP border</td><td>—</td><td>Divides India into North & South</td></tr>
+      <tr><td>Satpura Range</td><td>MP (north of Narmada)</td><td>Dhupgarh (1350m)</td><td>Highest point in MP</td></tr>
+      <tr><td>Western Ghats</td><td>West coast (Gujarat to Kerala)</td><td>Anamudi (2695m) — Highest in South India</td><td>UNESCO — Biodiversity hotspot</td></tr>
+      <tr><td>Eastern Ghats</td><td>East coast (Odisha to TN)</td><td>Jindhagada (1690m)</td><td>Discontinuous; lower than Western Ghats</td></tr>
+      <tr><td>Nilgiri Hills</td><td>TN/Kerala/Karnataka</td><td>Doddabetta (2637m)</td><td>Junction of Western & Eastern Ghats</td></tr>
+      <tr><td>Shivalik (Outer Himalaya)</td><td>Foothills of Himalayas</td><td>—</td><td>Youngest sub-Himalayan range</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌊 Major Rivers of India <span class="hot">CORE</span></h3>
+    <table class="tbl">
+      <tr><th>River</th><th>Origin</th><th>Flows Into</th><th>Length (India)</th><th>Key Facts</th></tr>
+      <tr><td>Ganga</td><td>Gangotri Glacier (Uttarakhand)</td><td>Bay of Bengal</td><td>2525 km</td><td>National River; longest in India; Devprayag = Bhagirathi + Alaknanda</td></tr>
+      <tr><td>Yamuna</td><td>Yamunotri Glacier</td><td>Ganga (Prayagraj)</td><td>1376 km</td><td>Largest Ganga tributary; passes through Delhi</td></tr>
+      <tr><td>Brahmaputra</td><td>Chemayungdung Glacier (Tibet)</td><td>Bay of Bengal</td><td>916 km (in India)</td><td>Called Tsangpo in Tibet; Yarlung in China; longest in Assam region</td></tr>
+      <tr><td>Godavari</td><td>Trimbakeshwar, Nashik (Maharashtra)</td><td>Bay of Bengal</td><td>1465 km</td><td>"Dakshin Ganga" — Longest river in peninsular India</td></tr>
+      <tr><td>Krishna</td><td>Mahabaleshwar (Maharashtra)</td><td>Bay of Bengal</td><td>1400 km</td><td>2nd longest peninsular river</td></tr>
+      <tr><td>Cauvery (Kaveri)</td><td>Talakaveri, Coorg (Karnataka)</td><td>Bay of Bengal</td><td>800 km</td><td>"Dakshin Ganga of South"; disputed TN & Karnataka</td></tr>
+      <tr><td>Narmada</td><td>Amarkantak (MP)</td><td>Arabian Sea</td><td>1312 km</td><td>Flows west; divides Deccan Plateau from North India</td></tr>
+      <tr><td>Tapti (Tapi)</td><td>Betul (MP)</td><td>Arabian Sea</td><td>724 km</td><td>Flows west like Narmada; Surat lies on it</td></tr>
+      <tr><td>Mahanadi</td><td>Raipur (Chhattisgarh)</td><td>Bay of Bengal</td><td>858 km</td><td>Hirakud Dam — longest dam in India</td></tr>
+      <tr><td>Indus</td><td>Tibetan Plateau (near Lake Mansarovar)</td><td>Arabian Sea (Pakistan)</td><td>3180 km total; 1114 km in India</td><td>Longest river of Asia; flows through J&K</td></tr>
+      <tr><td>Sutlej</td><td>Rakshas Tal (Tibet)</td><td>Indus</td><td>—</td><td>Bhakra-Nangal Dam; largest Indus tributary</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌏 World's Superlatives — Geography <span class="hot">MOST ASKED</span></h3>
+    <div class="grid2">
+      <div>
+        <table class="tbl">
+          <tr><th colspan="2">🏔️ Highest Mountains</th></tr>
+          <tr><td>Mt. Everest</td><td>8848.86m — World's Highest (Nepal/China)</td></tr>
+          <tr><td>K2 (Godwin Austin)</td><td>8611m — 2nd highest; India's highest</td></tr>
+          <tr><td>Kangchenjunga</td><td>8586m — 3rd; India-Nepal border</td></tr>
+          <tr><td>Mt. Aconcagua</td><td>Highest in Americas (Argentina)</td></tr>
+          <tr><td>Mt. Kilimanjaro</td><td>Highest in Africa (Tanzania)</td></tr>
+          <tr><td>Mt. Elbrus</td><td>Highest in Europe (Russia)</td></tr>
+          <tr><td>Mauna Kea</td><td>Tallest from ocean floor (Hawaii)</td></tr>
+        </table>
+      </div>
+      <div>
+        <table class="tbl">
+          <tr><th colspan="2">🌊 Rivers</th></tr>
+          <tr><td>Nile</td><td>Longest in World (6650 km) — Africa</td></tr>
+          <tr><td>Amazon</td><td>Largest by discharge (South America)</td></tr>
+          <tr><td>Yangtze</td><td>Longest in Asia & China</td></tr>
+          <tr><td>Mississippi-Missouri</td><td>Longest in North America</td></tr>
+          <tr><td>Volga</td><td>Longest in Europe</td></tr>
+          <tr><th colspan="2">🏜️ Deserts</th></tr>
+          <tr><td>Sahara</td><td>Largest hot desert (Africa)</td></tr>
+          <tr><td>Antarctic Desert</td><td>Largest overall desert (cold)</td></tr>
+          <tr><td>Arabian</td><td>Largest in Asia</td></tr>
+          <tr><td>Thar</td><td>India's only hot desert (Rajasthan)</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🌊 Important Lakes & Waterfalls</h3>
+    <table class="tbl">
+      <tr><th>Lake/Waterfall</th><th>Location</th><th>Key Fact</th></tr>
+      <tr><td>Caspian Sea</td><td>Central Asia</td><td>World's largest lake (landlocked sea)</td></tr>
+      <tr><td>Lake Baikal</td><td>Russia</td><td>Deepest lake in world (1642m)</td></tr>
+      <tr><td>Lake Superior</td><td>USA-Canada</td><td>Largest freshwater lake by area</td></tr>
+      <tr><td>Dead Sea</td><td>Jordan/Israel</td><td>Saltiest lake; lowest point on Earth (-430m)</td></tr>
+      <tr><td>Wular Lake</td><td>J&K, India</td><td>Largest freshwater lake in India</td></tr>
+      <tr><td>Chilika Lake</td><td>Odisha, India</td><td>Largest brackish water lake in India; Ramsar site</td></tr>
+      <tr><td>Angel Falls</td><td>Venezuela</td><td>World's highest waterfall (979m)</td></tr>
+      <tr><td>Victoria Falls</td><td>Zimbabwe/Zambia</td><td>World's largest by volume</td></tr>
+      <tr><td>Jog Falls</td><td>Karnataka, India</td><td>Highest waterfall in India (253m)</td></tr>
+      <tr><td>Niagara Falls</td><td>USA-Canada</td><td>Most powerful in North America</td></tr>
+    </table>
+  </div>
+
+  <div class="mnemonic">
+    <strong>🔑 Remember Peninsular Rivers: "God Krishna Came, My Tail"</strong><br>
+    <strong>God</strong>avari · <strong>Krishna</strong> · <strong>Ca</strong>uvery · <strong>M</strong>ahanadi · <strong>T</strong>ungabhadra + <strong>Tai</strong>l = Penninsula
+  </div>
+</div>
+
+<!-- ============================================================ AWARDS ============================================================ -->
+<div id="screen-awards" class="screen">
+  <div class="page-title">🏆 Awards & Honours</div>
+  <div class="page-sub">Bharat Ratna, Nobel Prize, and Filmfare/Dadasaheb awards are most frequently asked. 2–3 Qs/year.</div>
+
+  <div class="card">
+    <h3>🇮🇳 Bharat Ratna — India's Highest Civilian Award <span class="hot">CORE</span></h3>
+    <div class="tip"><strong>Established:</strong> 1954 | <strong>Shape:</strong> Peepal leaf | <strong>Max per year:</strong> 3 | <strong>First:</strong> C. Rajagopalachari, S. Radhakrishnan, C.V. Raman (1954)</div>
+    <table class="tbl">
+      <tr><th>Year</th><th>Recipient</th><th>Field</th></tr>
+      <tr><td>1954</td><td>C. Rajagopalachari</td><td>Statesman — Last Governor-General of India</td></tr>
+      <tr><td>1954</td><td>Dr. S. Radhakrishnan</td><td>Philosopher — 2nd President of India</td></tr>
+      <tr><td>1954</td><td>Dr. C.V. Raman</td><td>Science — Raman Effect — Nobel 1930</td></tr>
+      <tr><td>1955</td><td>Dr. M. Visvesvaraya</td><td>Engineer — Karnataka Ratna; Engineer's Day Sep 15</td></tr>
+      <tr><td>1955</td><td>Pt. Jawaharlal Nehru</td><td>1st PM of India</td></tr>
+      <tr><td>1958</td><td>Govind Ballabh Pant</td><td>Home Minister — Hindi as official language</td></tr>
+      <tr><td>1962</td><td>Dr. Rajendra Prasad</td><td>1st President of India</td></tr>
+      <tr><td>1963</td><td>Dr. Zakir Husain</td><td>3rd President</td></tr>
+      <tr><td>1971</td><td>Indira Gandhi</td><td>First woman PM</td></tr>
+      <tr><td>1980</td><td>Mother Teresa</td><td>Nobel Peace Prize 1979 — born in Macedonia</td></tr>
+      <tr><td>1983</td><td>Vinoba Bhave</td><td>First Bharat Ratna posthumously</td></tr>
+      <tr><td>1987</td><td>Khan Abdul Ghaffar Khan</td><td>First non-Indian recipient — "Frontier Gandhi"</td></tr>
+      <tr><td>1990</td><td>Dr. B.R. Ambedkar</td><td>Posthumous — Father of Indian Constitution</td></tr>
+      <tr><td>1990</td><td>Nelson Mandela</td><td>South Africa — 2nd non-Indian</td></tr>
+      <tr><td>1991</td><td>Rajiv Gandhi</td><td>Posthumous — 7th PM</td></tr>
+      <tr><td>1991</td><td>Sardar Vallabhbhai Patel</td><td>Posthumous — Iron Man of India</td></tr>
+      <tr><td>1997</td><td>Gulzarilal Nanda</td><td>Twice acting PM</td></tr>
+      <tr><td>1997</td><td>A.P.J. Abdul Kalam</td><td>Missile Man — 11th President</td></tr>
+      <tr><td>1999</td><td>Amartya Sen</td><td>Nobel Economics 1998</td></tr>
+      <tr><td>1999</td><td>Ravi Shankar</td><td>Sitar maestro</td></tr>
+      <tr><td>2001</td><td>Bismillah Khan</td><td>Shehnai maestro</td></tr>
+      <tr><td>2001</td><td>Lata Mangeshkar</td><td>"Nightingale of India"</td></tr>
+      <tr><td>2009</td><td>Pt. Bhimsen Joshi</td><td>Hindustani vocalist</td></tr>
+      <tr><td>2014</td><td>Sachin Tendulkar</td><td>First sportsperson & youngest recipient</td></tr>
+      <tr><td>2014</td><td>C.N.R. Rao</td><td>Scientist</td></tr>
+      <tr><td>2015</td><td>Madan Mohan Malaviya</td><td>Posthumous — BHU founder</td></tr>
+      <tr><td>2015</td><td>Atal Bihari Vajpayee</td><td>10th PM</td></tr>
+      <tr><td>2019</td><td>Nanaji Deshmukh</td><td>Posthumous</td></tr>
+      <tr><td>2019</td><td>Bhupen Hazarika</td><td>Posthumous — Assamese musician</td></tr>
+      <tr><td>2019</td><td>Pranab Mukherjee</td><td>13th President</td></tr>
+      <tr><td>2024</td><td>M.S. Swaminathan</td><td>Posthumous — Father of Green Revolution in India</td></tr>
+      <tr><td>2024</td><td>Karpoori Thakur</td><td>Posthumous — Bihar CM "Jan Nayak"</td></tr>
+      <tr><td>2024</td><td>P.V. Narasimha Rao</td><td>Posthumous — 9th PM</td></tr>
+      <tr><td>2024</td><td>Chaudhary Charan Singh</td><td>Posthumous — 5th PM</td></tr>
+      <tr><td>2024</td><td>L.K. Advani</td><td>BJP senior leader</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🎖️ Other Civilian Awards of India</h3>
+    <table class="tbl">
+      <tr><th>Award</th><th>Established</th><th>For</th></tr>
+      <tr><td>Padma Vibhushan</td><td>1954</td><td>2nd highest civilian award</td></tr>
+      <tr><td>Padma Bhushan</td><td>1954</td><td>3rd highest civilian award</td></tr>
+      <tr><td>Padma Shri</td><td>1954</td><td>4th — Distinguished service</td></tr>
+      <tr><td>Arjuna Award</td><td>1961</td><td>Outstanding sports achievement (last 4 years)</td></tr>
+      <tr><td>Dhyan Chand Khel Ratna</td><td>1991 (renamed 2021)</td><td>Highest sports honour in India</td></tr>
+      <tr><td>Dronacharya Award</td><td>1985</td><td>Outstanding sports coaches</td></tr>
+      <tr><td>Rashtriya Khel Protsahan Puraskar</td><td>2009</td><td>Sports institutions/corporates</td></tr>
+      <tr><td>Sahitya Akademi Award</td><td>1954</td><td>Literary contribution</td></tr>
+      <tr><td>Sangeet Natak Akademi Award</td><td>1952</td><td>Music, dance, drama</td></tr>
+      <tr><td>Dadasaheb Phalke Award</td><td>1969</td><td>Highest Film award; Cinema contributions; Lifetime</td></tr>
+      <tr><td>Shanti Swarup Bhatnagar Award</td><td>1958</td><td>Scientific research (under 45 years)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌏 Nobel Prize — Key Indian/Indian-origin Winners <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Name</th><th>Year</th><th>Category</th><th>Key Work</th></tr>
+      <tr><td>Rabindranath Tagore</td><td>1913</td><td>Literature</td><td>Gitanjali — First Asian Nobel</td></tr>
+      <tr><td>C.V. Raman</td><td>1930</td><td>Physics</td><td>Raman Effect (scattering of light)</td></tr>
+      <tr><td>Har Gobind Khorana</td><td>1968</td><td>Medicine</td><td>Genetic code interpretation</td></tr>
+      <tr><td>Mother Teresa</td><td>1979</td><td>Peace</td><td>Service to poor in Kolkata</td></tr>
+      <tr><td>Subramanyan Chandrasekhar</td><td>1983</td><td>Physics</td><td>Chandrasekhar Limit (white dwarfs)</td></tr>
+      <tr><td>Amartya Sen</td><td>1998</td><td>Economics</td><td>Welfare economics, social choice</td></tr>
+      <tr><td>Venkatraman Ramakrishnan</td><td>2009</td><td>Chemistry</td><td>Ribosome structure</td></tr>
+      <tr><td>Kailash Satyarthi</td><td>2014</td><td>Peace</td><td>Child labour abolition</td></tr>
+      <tr><td>Abhijit Banerjee</td><td>2019</td><td>Economics</td><td>Poverty alleviation — MIT</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌍 International Awards — Frequently Asked</h3>
+    <table class="tbl">
+      <tr><th>Award</th><th>Field</th><th>Given By</th><th>Key Facts</th></tr>
+      <tr><td>Nobel Prize</td><td>Physics, Chemistry, Medicine, Literature, Peace, Economics</td><td>Sweden (Peace: Norway)</td><td>Established by Alfred Nobel; given since 1901; Economics since 1969</td></tr>
+      <tr><td>Booker Prize</td><td>Literature (English)</td><td>UK</td><td>Annual; for best novel in English</td></tr>
+      <tr><td>Pulitzer Prize</td><td>Journalism, Arts, Literature</td><td>USA</td><td>Columbia University; annual</td></tr>
+      <tr><td>Oscar (Academy Award)</td><td>Films</td><td>AMPAS, USA</td><td>Since 1929; held in Hollywood</td></tr>
+      <tr><td>Grammy Award</td><td>Music</td><td>Recording Academy, USA</td><td>Since 1959</td></tr>
+      <tr><td>Magsaysay Award</td><td>Various public service</td><td>Philippines</td><td>"Asian Nobel"; named after Ramon Magsaysay</td></tr>
+      <tr><td>Man Booker International</td><td>Literature (translated)</td><td>UK</td><td>Translated fiction</td></tr>
+      <tr><td>Fields Medal</td><td>Mathematics</td><td>IMU</td><td>Given every 4 years; under 40 years</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================ ORGANIZATIONS ============================================================ -->
+<div id="screen-orgs" class="screen">
+  <div class="page-title">🏢 Organizations & Headquarters</div>
+  <div class="page-sub">2 questions minimum every year. HQ city + founding year are both asked frequently.</div>
+
+  <div class="card">
+    <h3>🌐 UN & Major International Organizations <span class="hot">CORE</span></h3>
+    <table class="tbl">
+      <tr><th>Organization</th><th>Full Form</th><th>HQ</th><th>Founded</th><th>Key Fact</th></tr>
+      <tr><td>UN</td><td>United Nations</td><td>New York, USA</td><td>1945</td><td>193 member states; 6 principal organs</td></tr>
+      <tr><td>WHO</td><td>World Health Organization</td><td>Geneva, Switzerland</td><td>1948</td><td>April 7 = World Health Day</td></tr>
+      <tr><td>FAO</td><td>Food & Agriculture Organization</td><td>Rome, Italy</td><td>1945</td><td>Oct 16 = World Food Day</td></tr>
+      <tr><td>UNESCO</td><td>UN Educational, Scientific & Cultural Org</td><td>Paris, France</td><td>1945</td><td>World Heritage Sites designation</td></tr>
+      <tr><td>UNICEF</td><td>UN Children's Fund</td><td>New York, USA</td><td>1946</td><td>Dec 11 = UNICEF Day</td></tr>
+      <tr><td>IMF</td><td>International Monetary Fund</td><td>Washington D.C., USA</td><td>1944</td><td>Bretton Woods; SDR (Special Drawing Rights)</td></tr>
+      <tr><td>World Bank</td><td>—</td><td>Washington D.C., USA</td><td>1944</td><td>Bretton Woods; IBRD + IDA main arms</td></tr>
+      <tr><td>WTO</td><td>World Trade Organization</td><td>Geneva, Switzerland</td><td>1995</td><td>Replaced GATT (1947)</td></tr>
+      <tr><td>ILO</td><td>International Labour Organization</td><td>Geneva, Switzerland</td><td>1919</td><td>Oldest UN agency; Nobel Peace 1969</td></tr>
+      <tr><td>IAEA</td><td>International Atomic Energy Agency</td><td>Vienna, Austria</td><td>1957</td><td>Nuclear safety; Nobel Peace 2005</td></tr>
+      <tr><td>INTERPOL</td><td>International Criminal Police Organization</td><td>Lyon, France</td><td>1923</td><td>International criminal cooperation</td></tr>
+      <tr><td>NATO</td><td>North Atlantic Treaty Organization</td><td>Brussels, Belgium</td><td>1949</td><td>Military alliance; Article 5 collective defense</td></tr>
+      <tr><td>WEF</td><td>World Economic Forum</td><td>Geneva, Switzerland</td><td>1971</td><td>Davos summit; Annual January meeting</td></tr>
+      <tr><td>ICC</td><td>International Criminal Court</td><td>The Hague, Netherlands</td><td>2002</td><td>War crimes; Rome Statute</td></tr>
+      <tr><td>OPEC</td><td>Organization of Petroleum Exporting Countries</td><td>Vienna, Austria</td><td>1960</td><td>13 members; oil pricing cartel</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌏 Regional Organizations <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Organization</th><th>HQ</th><th>Founded</th><th>Members</th></tr>
+      <tr><td>SAARC</td><td>Kathmandu, Nepal</td><td>1985</td><td>8 (India, Pak, Ban, Nepal, Bhutan, SL, Maldives, Afghanistan)</td></tr>
+      <tr><td>ASEAN</td><td>Jakarta, Indonesia</td><td>1967</td><td>10 Southeast Asian nations</td></tr>
+      <tr><td>African Union (AU)</td><td>Addis Ababa, Ethiopia</td><td>2002</td><td>55 member states</td></tr>
+      <tr><td>BRICS</td><td>No permanent HQ</td><td>2009 (formal)</td><td>Brazil, Russia, India, China, S. Africa</td></tr>
+      <tr><td>SCO</td><td>Beijing, China</td><td>2001</td><td>India joined 2017</td></tr>
+      <tr><td>G20</td><td>No permanent HQ</td><td>1999</td><td>India hosted in 2023 (New Delhi)</td></tr>
+      <tr><td>G7</td><td>No permanent HQ</td><td>1975</td><td>USA, UK, Canada, France, Germany, Italy, Japan</td></tr>
+      <tr><td>Commonwealth</td><td>London, UK</td><td>1931</td><td>56 nations (former British territories)</td></tr>
+      <tr><td>EU</td><td>Brussels, Belgium</td><td>1993</td><td>27 members; Euro currency</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🇮🇳 Indian Organizations & Their HQ</h3>
+    <table class="tbl">
+      <tr><th>Organization</th><th>HQ</th><th>Role</th></tr>
+      <tr><td>RBI (Reserve Bank of India)</td><td>Mumbai</td><td>Central bank; monetary policy</td></tr>
+      <tr><td>SEBI</td><td>Mumbai</td><td>Securities & stock market regulation</td></tr>
+      <tr><td>NABARD</td><td>Mumbai</td><td>Agricultural & rural development bank</td></tr>
+      <tr><td>IRDA</td><td>Hyderabad</td><td>Insurance regulation</td></tr>
+      <tr><td>ISRO</td><td>Bengaluru (Bangalore)</td><td>Space research</td></tr>
+      <tr><td>DRDO</td><td>New Delhi</td><td>Defence research</td></tr>
+      <tr><td>CSIR</td><td>New Delhi</td><td>Scientific & industrial research</td></tr>
+      <tr><td>NASSCOM</td><td>New Delhi</td><td>IT industry body</td></tr>
+      <tr><td>CBI</td><td>New Delhi</td><td>Central investigation agency</td></tr>
+      <tr><td>NIA</td><td>New Delhi</td><td>National Investigation Agency — terrorism</td></tr>
+      <tr><td>NITI Aayog</td><td>New Delhi</td><td>Replaced Planning Commission (2015)</td></tr>
+      <tr><td>CAG</td><td>New Delhi</td><td>Audit of govt accounts; Art 148</td></tr>
+    </table>
+  </div>
+
+  <div class="mnemonic">
+    <strong>🔑 Geneva has WHO, ILO, WTO, WEF — "GWIW"</strong><br>
+    "<strong>G</strong>eneva <strong>W</strong>atches <strong>I</strong>nternational <strong>W</strong>orkers" = Geneva→WHO, ILO, WTO, WEF (4 major orgs in one city!)
+  </div>
+</div>
+
+<!-- ============================================================ SCIENCE ============================================================ -->
+<div id="screen-science" class="screen">
+  <div class="page-title">🔬 Science & Discoveries</div>
+  <div class="page-sub">Inventions, discoverers, instruments, and scientific principles — all high-frequency areas.</div>
+
+  <div class="card">
+    <h3>⚡ Important Inventions & Inventors <span class="hot">CORE</span></h3>
+    <table class="tbl">
+      <tr><th>Invention/Discovery</th><th>Inventor</th><th>Year</th><th>Country</th></tr>
+      <tr><td>Telephone</td><td>Alexander Graham Bell</td><td>1876</td><td>USA/UK</td></tr>
+      <tr><td>Electricity (Bulb)</td><td>Thomas Edison</td><td>1879</td><td>USA</td></tr>
+      <tr><td>Radio</td><td>Guglielmo Marconi</td><td>1895</td><td>Italy</td></tr>
+      <tr><td>Television</td><td>John Logie Baird</td><td>1926</td><td>UK</td></tr>
+      <tr><td>X-Ray</td><td>Wilhelm Roentgen</td><td>1895</td><td>Germany</td></tr>
+      <tr><td>Penicillin</td><td>Alexander Fleming</td><td>1928</td><td>UK</td></tr>
+      <tr><td>DNA Structure (Double Helix)</td><td>Watson & Crick (+ Rosalind Franklin)</td><td>1953</td><td>UK/USA</td></tr>
+      <tr><td>Gravity (Universal Law)</td><td>Isaac Newton</td><td>1687</td><td>UK</td></tr>
+      <tr><td>Relativity</td><td>Albert Einstein</td><td>1905/1915</td><td>Germany</td></tr>
+      <tr><td>Theory of Evolution</td><td>Charles Darwin</td><td>1859</td><td>UK</td></tr>
+      <tr><td>Radioactivity</td><td>Henri Becquerel</td><td>1896</td><td>France</td></tr>
+      <tr><td>Radium & Polonium</td><td>Marie & Pierre Curie</td><td>1898</td><td>France/Poland</td></tr>
+      <tr><td>Electron</td><td>J.J. Thomson</td><td>1897</td><td>UK</td></tr>
+      <tr><td>Proton</td><td>Ernest Rutherford</td><td>1919</td><td>New Zealand/UK</td></tr>
+      <tr><td>Neutron</td><td>James Chadwick</td><td>1932</td><td>UK</td></tr>
+      <tr><td>Raman Effect</td><td>C.V. Raman</td><td>1928</td><td>India</td></tr>
+      <tr><td>Wireless Telegraphy</td><td>Jagadish Chandra Bose (first demo)</td><td>1895</td><td>India</td></tr>
+      <tr><td>Airplane</td><td>Wright Brothers (Orville & Wilbur)</td><td>1903</td><td>USA</td></tr>
+      <tr><td>Steam Engine</td><td>James Watt</td><td>1769</td><td>UK</td></tr>
+      <tr><td>Printing Press</td><td>Johannes Gutenberg</td><td>1440</td><td>Germany</td></tr>
+      <tr><td>Computer (ENIAC)</td><td>Eckert & Mauchly</td><td>1945</td><td>USA</td></tr>
+      <tr><td>WWW (Internet)</td><td>Tim Berners-Lee</td><td>1989</td><td>UK</td></tr>
+      <tr><td>Vaccination</td><td>Edward Jenner</td><td>1796</td><td>UK (smallpox)</td></tr>
+      <tr><td>Thermometer</td><td>Galileo Galilei</td><td>1592</td><td>Italy</td></tr>
+      <tr><td>Telescope</td><td>Galileo (improved Hans Lippershey)</td><td>1608</td><td>Netherlands/Italy</td></tr>
+      <tr><td>Nuclear Fission</td><td>Otto Hahn & Strassman</td><td>1938</td><td>Germany</td></tr>
+      <tr><td>Laser</td><td>Theodore Maiman</td><td>1960</td><td>USA</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🔭 Scientific Instruments & Their Uses <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Instrument</th><th>Measures/Used For</th></tr>
+      <tr><td>Ammeter</td><td>Electric current (Amperes)</td></tr>
+      <tr><td>Voltmeter</td><td>Electric potential difference (Volts)</td></tr>
+      <tr><td>Barometer</td><td>Atmospheric pressure</td></tr>
+      <tr><td>Hygrometer</td><td>Humidity in air</td></tr>
+      <tr><td>Seismograph</td><td>Earthquake intensity</td></tr>
+      <tr><td>Lactometer</td><td>Purity of milk (relative density)</td></tr>
+      <tr><td>Manometer</td><td>Gas pressure</td></tr>
+      <tr><td>Stethoscope</td><td>Heartbeat / lung sounds</td></tr>
+      <tr><td>Sphygmomanometer</td><td>Blood pressure</td></tr>
+      <tr><td>Thermometer</td><td>Temperature</td></tr>
+      <tr><td>Anemometer</td><td>Wind speed</td></tr>
+      <tr><td>Altimeter</td><td>Altitude above sea level</td></tr>
+      <tr><td>Odometer</td><td>Distance traveled by vehicle</td></tr>
+      <tr><td>Tachometer</td><td>RPM of engine</td></tr>
+      <tr><td>Electroencephalograph (EEG)</td><td>Brain electrical activity</td></tr>
+      <tr><td>Electrocardiograph (ECG)</td><td>Heart electrical activity</td></tr>
+      <tr><td>Spectrometer</td><td>Light wavelength / spectrum analysis</td></tr>
+      <tr><td>Calorimeter</td><td>Heat of chemical reactions</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌡️ Science — Quick Facts for SSC</h3>
+    <div class="grid2">
+      <div>
+        <table class="tbl">
+          <tr><th colspan="2">⚗️ Chemistry</th></tr>
+          <tr><td>Chemical formula of water</td><td>H₂O</td></tr>
+          <tr><td>Chemical formula of common salt</td><td>NaCl</td></tr>
+          <tr><td>Baking soda</td><td>NaHCO₃</td></tr>
+          <tr><td>Washing soda</td><td>Na₂CO₃</td></tr>
+          <tr><td>Plaster of Paris</td><td>CaSO₄·½H₂O</td></tr>
+          <tr><td>Vinegar</td><td>Acetic acid (CH₃COOH)</td></tr>
+          <tr><td>Heaviest metal</td><td>Osmium</td></tr>
+          <tr><td>Lightest metal</td><td>Lithium</td></tr>
+          <tr><td>Hardest natural substance</td><td>Diamond (Carbon)</td></tr>
+          <tr><td>Laughing gas</td><td>Nitrous oxide (N₂O)</td></tr>
+        </table>
+      </div>
+      <div>
+        <table class="tbl">
+          <tr><th colspan="2">🔬 Biology</th></tr>
+          <tr><td>Largest organ</td><td>Skin</td></tr>
+          <tr><td>Largest gland</td><td>Liver</td></tr>
+          <tr><td>Largest cell</td><td>Nerve cell (neuron)</td></tr>
+          <tr><td>Smallest bone</td><td>Stapes (ear)</td></tr>
+          <tr><td>Largest bone</td><td>Femur (thigh)</td></tr>
+          <tr><td>Blood group O</td><td>Universal donor</td></tr>
+          <tr><td>Blood group AB</td><td>Universal recipient</td></tr>
+          <tr><td>Vitamin C deficiency</td><td>Scurvy</td></tr>
+          <tr><td>Vitamin D deficiency</td><td>Rickets</td></tr>
+          <tr><td>Insulin produced by</td><td>Beta cells of Islets of Langerhans (Pancreas)</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🌌 ISRO Missions — India's Space Achievements <span class="hot">VERY HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Mission</th><th>Year</th><th>Achievement</th></tr>
+      <tr><td>Aryabhata</td><td>1975</td><td>India's first satellite</td></tr>
+      <tr><td>Chandrayaan-1</td><td>2008</td><td>First lunar mission; discovered water on Moon</td></tr>
+      <tr><td>Chandrayaan-2</td><td>2019</td><td>Vikram lander, Pragyan rover; lander crashed</td></tr>
+      <tr><td>Chandrayaan-3</td><td>2023</td><td>Successful Moon landing — South Pole; 4th nation</td></tr>
+      <tr><td>Mangalyaan (MOM)</td><td>2013/2014</td><td>Mars Orbiter Mission; First Asian nation to reach Mars orbit in first attempt</td></tr>
+      <tr><td>Aditya-L1</td><td>2023</td><td>India's first solar mission; L1 Lagrange point</td></tr>
+      <tr><td>PSLV-C37</td><td>2017</td><td>Record 104 satellites in single launch</td></tr>
+      <tr><td>Gaganyaan</td><td>Planned 2025+</td><td>India's first human spaceflight mission</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================ MISCELLANEOUS ============================================================ -->
+<div id="screen-misc" class="screen">
+  <div class="page-title">🎲 Miscellaneous — High-Value Topics</div>
+  <div class="page-sub">Sports, currencies, national symbols, firsts in India — all commonly asked in SSC CGL.</div>
+
+  <div class="card">
+    <h3>🇮🇳 National Symbols of India <span class="hot">CORE</span></h3>
+    <table class="tbl">
+      <tr><th>Symbol</th><th>Name</th><th>Scientific Name / Key Fact</th></tr>
+      <tr><td>National Animal</td><td>Bengal Tiger</td><td>Panthera tigris tigris; Project Tiger 1973</td></tr>
+      <tr><td>National Bird</td><td>Indian Peacock</td><td>Pavo cristatus; National bird since 1963</td></tr>
+      <tr><td>National Flower</td><td>Lotus</td><td>Nelumbo nucifera</td></tr>
+      <tr><td>National Fruit</td><td>Mango</td><td>Mangifera indica — "King of Fruits"</td></tr>
+      <tr><td>National Tree</td><td>Indian Banyan</td><td>Ficus benghalensis</td></tr>
+      <tr><td>National Aquatic Animal</td><td>Gangetic River Dolphin</td><td>Platanista gangetica</td></tr>
+      <tr><td>National River</td><td>Ganga</td><td>Declared National River 2008</td></tr>
+      <tr><td>National Currency</td><td>Indian Rupee (₹)</td><td>Symbol designed by D. Udaya Kumar, 2010</td></tr>
+      <tr><td>National Anthem</td><td>Jana Gana Mana</td><td>Rabindranath Tagore; adopted Jan 24, 1950; duration 52 sec</td></tr>
+      <tr><td>National Song</td><td>Vande Mataram</td><td>Bankim Chandra Chattopadhyay; from novel Anandmath</td></tr>
+      <tr><td>National Calendar</td><td>Saka Calendar</td><td>Adopted March 22, 1957; starts Chaitra</td></tr>
+      <tr><td>National Emblem</td><td>Lion Capital of Ashoka</td><td>From Sarnath; adopted Jan 26, 1950; "Satyamev Jayate"</td></tr>
+      <tr><td>National Sport</td><td>Hockey (Field Hockey)</td><td>De facto — no official declaration</td></tr>
+      <tr><td>National Reptile</td><td>King Cobra</td><td>Ophiophagus hannah</td></tr>
+      <tr><td>National Heritage Animal</td><td>Elephant</td><td>Elephas maximus indicus; Project Elephant 1992</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>💰 World Currencies <span class="hot">HOT</span></h3>
+    <table class="tbl">
+      <tr><th>Country</th><th>Currency</th><th>Country</th><th>Currency</th></tr>
+      <tr><td>USA</td><td>Dollar ($)</td><td>UK</td><td>Pound Sterling (£)</td></tr>
+      <tr><td>EU Countries</td><td>Euro (€)</td><td>Japan</td><td>Yen (¥)</td></tr>
+      <tr><td>China</td><td>Renminbi/Yuan (¥)</td><td>Russia</td><td>Ruble</td></tr>
+      <tr><td>India</td><td>Rupee (₹)</td><td>Pakistan</td><td>Pakistani Rupee</td></tr>
+      <tr><td>Bangladesh</td><td>Taka</td><td>Nepal</td><td>Nepalese Rupee</td></tr>
+      <tr><td>Bhutan</td><td>Ngultrum</td><td>Sri Lanka</td><td>Sri Lankan Rupee</td></tr>
+      <tr><td>Saudi Arabia</td><td>Riyal</td><td>UAE</td><td>Dirham</td></tr>
+      <tr><td>Israel</td><td>Shekel</td><td>Thailand</td><td>Baht</td></tr>
+      <tr><td>South Korea</td><td>Won</td><td>Brazil</td><td>Real</td></tr>
+      <tr><td>Australia</td><td>Australian Dollar</td><td>Canada</td><td>Canadian Dollar</td></tr>
+      <tr><td>Malaysia</td><td>Ringgit</td><td>Vietnam</td><td>Dong</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🏏 Sports — Stadiums, Trophies & Records</h3>
+    <table class="tbl">
+      <tr><th>Sport</th><th>Key Trophy/Cup</th><th>India's Stadium</th></tr>
+      <tr><td>Cricket</td><td>ICC World Cup, Ashes, Border-Gavaskar Trophy</td><td>Narendra Modi Stadium, Ahmedabad (largest cricket stadium world)</td></tr>
+      <tr><td>Football</td><td>FIFA World Cup, UEFA Champions League</td><td>Salt Lake Stadium, Kolkata (largest football stadium India)</td></tr>
+      <tr><td>Hockey</td><td>Hockey World Cup, Sultan Azlan Shah</td><td>Major Dhyan Chand National Stadium, Delhi</td></tr>
+      <tr><td>Tennis</td><td>Grand Slams (Australian, French, Wimbledon, US Open)</td><td>—</td></tr>
+      <tr><td>Badminton</td><td>Thomas Cup (men), Uber Cup (women), BWF Championships</td><td>—</td></tr>
+      <tr><td>Chess</td><td>FIDE World Chess Championship</td><td>—</td></tr>
+      <tr><td>Boxing</td><td>Olympic, World Amateur Championships</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🚀 Firsts in India — Exam Favourites <span class="hot">VERY HOT</span></h3>
+    <table class="tbl">
+      <tr><th>First</th><th>Person/Event</th></tr>
+      <tr><td>First President of India</td><td>Dr. Rajendra Prasad (1950–1962)</td></tr>
+      <tr><td>First PM of India</td><td>Pt. Jawaharlal Nehru (1947–1964)</td></tr>
+      <tr><td>First Woman PM</td><td>Indira Gandhi (1966–1977, 1980–1984)</td></tr>
+      <tr><td>First Woman President</td><td>Pratibha Patil (2007–2012)</td></tr>
+      <tr><td>First CJI of India</td><td>Justice H.J. Kania (1950)</td></tr>
+      <tr><td>First ICS Officer (Indian)</td><td>Satyendranath Tagore (1864)</td></tr>
+      <tr><td>First Indian in Space</td><td>Rakesh Sharma (1984, Soviet Soyuz T-11)</td></tr>
+      <tr><td>First Indian Woman in Space</td><td>Kalpana Chawla (Indian-American, 1997)</td></tr>
+      <tr><td>First Indian to win Nobel</td><td>Rabindranath Tagore (1913, Literature)</td></tr>
+      <tr><td>First Indian to win Oscar</td><td>Bhanu Athaiya (1983, Costume Design — Gandhi film)</td></tr>
+      <tr><td>First Governor-General (Indian)</td><td>C. Rajagopalachari (1948–1950)</td></tr>
+      <tr><td>First Indian to cross English Channel</td><td>Mihir Sen (1958)</td></tr>
+      <tr><td>First Indian to climb Everest</td><td>Tenzing Norgay & Edmund Hillary (1953) — Tenzing was Indian</td></tr>
+      <tr><td>First woman to climb Everest (India)</td><td>Bachendri Pal (1984)</td></tr>
+      <tr><td>First newspaper in India</td><td>Hickey's Bengal Gazette (1780)</td></tr>
+      <tr><td>First Five Year Plan</td><td>1951–56 (Nehru era, Planning Commission)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🌿 Tiger Reserves & National Parks — SSC Favourites</h3>
+    <table class="tbl">
+      <tr><th>Park/Reserve</th><th>State</th><th>Known For</th></tr>
+      <tr><td>Jim Corbett National Park</td><td>Uttarakhand</td><td>Oldest national park (1936); First tiger reserve (1973)</td></tr>
+      <tr><td>Kaziranga National Park</td><td>Assam</td><td>One-horned Rhinoceros; UNESCO World Heritage</td></tr>
+      <tr><td>Sundarbans</td><td>West Bengal</td><td>Largest mangrove; Royal Bengal Tiger; UNESCO</td></tr>
+      <tr><td>Gir National Park</td><td>Gujarat</td><td>Only home of Asiatic Lion</td></tr>
+      <tr><td>Keoladeo Ghana</td><td>Rajasthan</td><td>Migratory birds (Bharatpur Bird Sanctuary); UNESCO</td></tr>
+      <tr><td>Periyar</td><td>Kerala</td><td>Elephants; Tiger reserve</td></tr>
+      <tr><td>Sariska</td><td>Rajasthan</td><td>Tiger reserve — first to reintroduce tigers</td></tr>
+      <tr><td>Namdapha</td><td>Arunachal Pradesh</td><td>Cloud leopard; Hoolock gibbon</td></tr>
+      <tr><td>Bandipur</td><td>Karnataka</td><td>Tiger, Elephant; Nilgiri Biosphere</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================ POLITY ============================================================ -->
+<div id="screen-polity" class="screen">
+  <div class="page-title">⚖️ Indian Polity — SSC Success Guide</div>
+  <div class="page-sub">4–5 Qs on Fundamental Rights alone in each SSC CGL exam. Articles + Amendments = Gold Mine.</div>
+
+  <div class="card">
+    <h3>📜 Constitutional Basics</h3>
+    <div class="flow">
+      <div class="flow-box orange">Constituent Assembly</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">Dec 9, 1946 (first meeting)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green">Nov 26, 1949 (adopted)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box red">Jan 26, 1950 (enforced)</div>
+    </div>
+    <div class="grid2" style="margin-top:14px;">
+      <div class="article-box">
+        <div class="art-num">395</div>
+        <div class="art-desc">Total Articles originally | Currently 470+ articles</div>
+      </div>
+      <div class="article-box">
+        <div class="art-num">12</div>
+        <div class="art-desc">Original Schedules | Currently 12 Schedules</div>
+      </div>
+      <div class="article-box">
+        <div class="art-num">22</div>
+        <div class="art-desc">Parts in Constitution</div>
+      </div>
+      <div class="article-box">
+        <div class="art-num">106</div>
+        <div class="art-desc">Constitutional Amendments so far (approx.)</div>
+      </div>
+    </div>
+    <div class="tip" style="margin-top:12px;"><strong>Key People:</strong> Dr. B.R. Ambedkar = Father/Chief Architect of Constitution | B.N. Rau = Constitutional Advisor | Dr. Rajendra Prasad = President of Constituent Assembly</div>
+  </div>
+
+  <div class="card">
+    <h3>🔵 Fundamental Rights (Articles 12–35) <span class="hot">HIGHEST PRIORITY</span></h3>
+    <table class="tbl">
+      <tr><th>Right</th><th>Articles</th><th>Key Points</th></tr>
+      <tr><td>Right to Equality</td><td>Art. 14–18</td><td>14: Equality before law | 15: No discrimination (sex, religion, race, caste, place) | 16: Equal opportunity in public employment | 17: Abolition of untouchability | 18: Abolition of titles (except military/academic)</td></tr>
+      <tr><td>Right to Freedom</td><td>Art. 19–22</td><td>19: 6 freedoms (speech, assembly, movement, residence, profession) | 20: Protection in conviction | 21: Right to Life & Personal Liberty | 21A: Right to Education (6–14 yrs) | 22: Protection against arrest</td></tr>
+      <tr><td>Right Against Exploitation</td><td>Art. 23–24</td><td>23: Prohibition of traffic in humans, forced labour | 24: No child labour in factories/mines (under 14)</td></tr>
+      <tr><td>Right to Freedom of Religion</td><td>Art. 25–28</td><td>25: Freedom of conscience & practice | 26: Manage religious affairs | 27: No tax for religion | 28: No religious instruction in state schools</td></tr>
+      <tr><td>Cultural & Educational Rights</td><td>Art. 29–30</td><td>29: Protection of interests of minorities | 30: Right to establish educational institutions</td></tr>
+      <tr><td>Right to Constitutional Remedies</td><td>Art. 32</td><td>"Heart & Soul of Constitution" — Ambedkar | Writs: Habeas Corpus, Mandamus, Quo Warranto, Certiorari, Prohibition</td></tr>
+    </table>
+    <div class="mnemonic">
+      <strong>🔑 "Every Freedom Enables Cultural Rights" — 6 Fundamental Rights</strong><br>
+      <strong>E</strong>quality (14–18) · <strong>F</strong>reedom (19–22) · <strong>E</strong>xploitation (23–24) · <strong>C</strong>onscience/Religion (25–28) · <strong>C</strong>ultural (29–30) · <strong>R</strong>emedies (32)
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>⚡ Most Important Articles — Must Memorise <span class="hot">EXAM CRITICAL</span></h3>
+    <table class="tbl">
+      <tr><th>Article</th><th>Subject</th><th>Exam Trick</th></tr>
+      <tr><td>Art. 1</td><td>India = Union of States (Bharat)</td><td>—</td></tr>
+      <tr><td>Art. 12</td><td>Definition of State (for FRs)</td><td>—</td></tr>
+      <tr><td>Art. 13</td><td>Laws inconsistent with FRs are void</td><td>Judicial Review basis</td></tr>
+      <tr><td>Art. 21</td><td>Right to Life & Personal Liberty</td><td>Most litigated Article</td></tr>
+      <tr><td>Art. 21A</td><td>Right to Education (6–14 yrs)</td><td>Added by 86th Amendment 2002</td></tr>
+      <tr><td>Art. 32</td><td>Right to Constitutional Remedies</td><td>Ambedkar: "Heart & Soul"</td></tr>
+      <tr><td>Art. 39A</td><td>Equal Justice & Free Legal Aid</td><td>DPSP</td></tr>
+      <tr><td>Art. 44</td><td>Uniform Civil Code</td><td>DPSP — most debated</td></tr>
+      <tr><td>Art. 51A</td><td>Fundamental Duties (11 duties)</td><td>Added by 42nd Amendment 1976</td></tr>
+      <tr><td>Art. 72</td><td>President's pardoning power</td><td>—</td></tr>
+      <tr><td>Art. 74</td><td>Council of Ministers headed by PM</td><td>Aid & advice to President</td></tr>
+      <tr><td>Art. 76</td><td>Attorney General of India</td><td>—</td></tr>
+      <tr><td>Art. 79</td><td>Parliament = President + LS + RS</td><td>—</td></tr>
+      <tr><td>Art. 110</td><td>Definition of Money Bill</td><td>Lok Sabha only; Speaker certifies</td></tr>
+      <tr><td>Art. 112</td><td>Annual Financial Statement (Budget)</td><td>—</td></tr>
+      <tr><td>Art. 123</td><td>President's Ordinance making power</td><td>When Parliament not in session</td></tr>
+      <tr><td>Art. 124</td><td>Establishment of Supreme Court</td><td>—</td></tr>
+      <tr><td>Art. 148</td><td>Comptroller & Auditor General (CAG)</td><td>Guardian of public purse</td></tr>
+      <tr><td>Art. 153</td><td>Governors of States</td><td>—</td></tr>
+      <tr><td>Art. 161</td><td>Governor's pardoning power</td><td>—</td></tr>
+      <tr><td>Art. 170</td><td>State Legislative Assembly (Vidhan Sabha)</td><td>—</td></tr>
+      <tr><td>Art. 226</td><td>High Court's writ jurisdiction</td><td>Broader than SC (Art 32)</td></tr>
+      <tr><td>Art. 243</td><td>Panchayati Raj</td><td>73rd Amendment 1992</td></tr>
+      <tr><td>Art. 280</td><td>Finance Commission</td><td>Centre–State financial relations</td></tr>
+      <tr><td>Art. 300A</td><td>Right to Property</td><td>Legal right (not FR) — 44th Amendment</td></tr>
+      <tr><td>Art. 312</td><td>All India Services</td><td>IAS, IPS, IFS</td></tr>
+      <tr><td>Art. 324</td><td>Election Commission of India</td><td>—</td></tr>
+      <tr><td>Art. 343</td><td>Official Language = Hindi (Devanagari)</td><td>—</td></tr>
+      <tr><td>Art. 352</td><td>National Emergency</td><td>"Mined" most in exams!</td></tr>
+      <tr><td>Art. 356</td><td>President's Rule in State</td><td>Most misused article</td></tr>
+      <tr><td>Art. 360</td><td>Financial Emergency</td><td>Never proclaimed so far</td></tr>
+      <tr><td>Art. 368</td><td>Amendment Procedure</td><td>—</td></tr>
+      <tr><td>Art. 370</td><td>Special status of J&K (Abrogated 2019)</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🔧 Important Constitutional Amendments <span class="hot">CORE</span></h3>
+    <table class="tbl">
+      <tr><th>Amendment</th><th>Year</th><th>Key Change</th></tr>
+      <tr><td>1st Amendment</td><td>1951</td><td>Land reforms; restrictions on FR 19; 9th Schedule created</td></tr>
+      <tr><td>7th Amendment</td><td>1956</td><td>Reorganisation of states on linguistic basis</td></tr>
+      <tr><td>24th Amendment</td><td>1971</td><td>Parliament can amend FRs; overruled Golaknath case</td></tr>
+      <tr><td>42nd Amendment</td><td>1976</td><td>"Mini Constitution" — Preamble: Socialist, Secular, Integrity added; Fundamental Duties; 10th Schedule</td></tr>
+      <tr><td>44th Amendment</td><td>1978</td><td>Right to Property → Legal Right (not FR); Art 19(1)(f) deleted</td></tr>
+      <tr><td>52nd Amendment</td><td>1985</td><td>Anti-Defection Law — 10th Schedule</td></tr>
+      <tr><td>61st Amendment</td><td>1989</td><td>Voting age 21 → 18 years</td></tr>
+      <tr><td>73rd Amendment</td><td>1992</td><td>Panchayati Raj (Local Self Governance) — Art 243</td></tr>
+      <tr><td>74th Amendment</td><td>1992</td><td>Municipalities (Urban Local Bodies)</td></tr>
+      <tr><td>86th Amendment</td><td>2002</td><td>Art 21A — Free & compulsory education 6–14 years</td></tr>
+      <tr><td>91st Amendment</td><td>2003</td><td>Council of Ministers ≤ 15% of Lok Sabha strength</td></tr>
+      <tr><td>97th Amendment</td><td>2011</td><td>Cooperative Societies — Right to form cooperatives</td></tr>
+      <tr><td>99th Amendment</td><td>2014</td><td>NJAC (National Judicial Appointments Commission) — struck down by SC 2015</td></tr>
+      <tr><td>101st Amendment</td><td>2016</td><td>GST (Goods & Services Tax)</td></tr>
+      <tr><td>102nd Amendment</td><td>2018</td><td>Constitutional status to OBC Commission (NCBC)</td></tr>
+      <tr><td>103rd Amendment</td><td>2019</td><td>10% EWS (Economically Weaker Sections) reservation</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🏛️ 5 Writs — Article 32 (SC) & Article 226 (HC)</h3>
+    <table class="tbl">
+      <tr><th>Writ</th><th>Meaning</th><th>Used For</th></tr>
+      <tr><td>Habeas Corpus</td><td>"You have the body" (Latin)</td><td>Illegal detention/arrest; produce person before court</td></tr>
+      <tr><td>Mandamus</td><td>"We command" (Latin)</td><td>Directing public official to perform duty</td></tr>
+      <tr><td>Quo Warranto</td><td>"By what authority?"</td><td>Challenging illegal occupation of public office</td></tr>
+      <tr><td>Certiorari</td><td>"To certify" / "To be informed"</td><td>Quashing lower court's order; transfer of cases</td></tr>
+      <tr><td>Prohibition</td><td>"To forbid"</td><td>Preventing lower court from exceeding jurisdiction</td></tr>
+    </table>
+    <div class="mnemonic">
+      <strong>🔑 "Hira Moti Queen Can Play" — 5 Writs</strong><br>
+      <strong>H</strong>abeas Corpus · <strong>M</strong>andamus · <strong>Q</strong>uo Warranto · <strong>C</strong>ertiorari · <strong>P</strong>rohibition
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏛️ Schedules of Constitution</h3>
+    <table class="tbl">
+      <tr><th>Schedule</th><th>Subject</th></tr>
+      <tr><td>1st</td><td>Names of States and UTs</td></tr>
+      <tr><td>2nd</td><td>Salaries of President, Governors, Judges, CAG, etc.</td></tr>
+      <tr><td>3rd</td><td>Oaths and Affirmations</td></tr>
+      <tr><td>4th</td><td>Allocation of seats in Rajya Sabha</td></tr>
+      <tr><td>5th</td><td>Administration of Scheduled Areas</td></tr>
+      <tr><td>6th</td><td>Tribal areas (Assam, Meghalaya, Tripura, Mizoram)</td></tr>
+      <tr><td>7th</td><td>Union List, State List, Concurrent List</td></tr>
+      <tr><td>8th</td><td>22 Official Languages</td></tr>
+      <tr><td>9th</td><td>Acts protected from judicial review (1st Amendment)</td></tr>
+      <tr><td>10th</td><td>Anti-Defection Law (52nd Amendment, 1985)</td></tr>
+      <tr><td>11th</td><td>Panchayati Raj (73rd Amendment)</td></tr>
+      <tr><td>12th</td><td>Municipalities (74th Amendment)</td></tr>
+    </table>
+    <div class="mnemonic">
+      <strong>🔑 7th Schedule — Union 100, State 61, Concurrent 52</strong><br>
+      "UN-ST-CO" → 100 subjects, 61 subjects, 52 subjects (approx current numbers)
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🔴 Emergency Provisions — Must Know</h3>
+    <table class="tbl">
+      <tr><th>Type</th><th>Article</th><th>Ground</th><th>Duration</th><th>Effect on FRs</th></tr>
+      <tr><td>National Emergency</td><td>352</td><td>War/External aggression/Armed Rebellion</td><td>Initially 6 months; indefinitely extended</td><td>Art 19 suspended; Art 20, 21 cannot be suspended</td></tr>
+      <tr><td>State Emergency (President's Rule)</td><td>356</td><td>Failure of constitutional machinery in state</td><td>Initially 6 months; max 3 years</td><td>—</td></tr>
+      <tr><td>Financial Emergency</td><td>360</td><td>Threat to financial stability/credit of India</td><td>Indefinitely</td><td>Never declared so far</td></tr>
+    </table>
+    <div class="tip"><strong>National Emergency History:</strong> 1962 (China War) | 1971 (Pakistan War) | 1975–77 (Internal disturbance — most controversial)</div>
+  </div>
+</div>
+
+<!-- ============================================================ REVISION ============================================================ -->
+<div id="screen-revision" class="screen">
+  <div class="page-title">📋 Quick Revision Sheet — PYQ Patterns</div>
+  <div class="page-sub">Identified patterns from SSC CGL & IB ACIO past 20 years. Memorise before exam day!</div>
+
+  <div class="rev-section">
+    <h3>🔥 TOP 20 PATTERN OBSERVATIONS — SSC CGL Static GK</h3>
+    <div class="rev-list">
+      <ol>
+        <li><strong>Books & Authors:</strong> Autobiographies of freedom fighters asked almost every year — Gandhi, Nehru, Bose, Ambedkar.</li>
+        <li><strong>Important Days:</strong> "Who/what event caused this day?" type questions — Feb 28 (Raman Effect), Sep 5 (Radhakrishnan), Nov 14 (Nehru).</li>
+        <li><strong>Classical Dances:</strong> "Which dance belongs to which state?" + Odissi vs Odisha distinction. Sattriya (Assam) is a hot pick.</li>
+        <li><strong>UNESCO World Heritage:</strong> Correct year/location pairings — Ajanta (1983), Konark (1984), Khajuraho (1986), Fatehpur Sikri (1986).</li>
+        <li><strong>Bharat Ratna:</strong> First recipient, first woman, first sportsperson, first non-Indian are 4 direct Q-types.</li>
+        <li><strong>Nobel Prize:</strong> Indian/Indian-origin winners — Tagore 1913, Raman 1930, Mother Teresa 1979, Amartya Sen 1998, Kailash Satyarthi 2014.</li>
+        <li><strong>Organization HQ:</strong> WHO-Geneva, FAO-Rome, UNESCO-Paris, UNICEF-New York — these 4 asked every alternate year.</li>
+        <li><strong>Rivers:</strong> Longest peninsular river = Godavari, "Dakshin Ganga" = Godavari (same answer!)</li>
+        <li><strong>Mountains:</strong> Highest peak in India = K2 (not Everest!), Highest in South India = Anamudi.</li>
+        <li><strong>National Symbols:</strong> "Which is NOT a national symbol?" type negative questions. Hockey is NOT officially declared.</li>
+        <li><strong>ISRO:</strong> Chandrayaan-3 (2023 South Pole landing), Mangalyaan (first attempt success), Aditya-L1 are very hot topics now.</li>
+        <li><strong>Tricky Capitals:</strong> UAE=Abu Dhabi, Turkey=Ankara, Switzerland=Bern asked repeatedly. NEVER Delhi for India type question.</li>
+        <li><strong>Polity — FRs:</strong> Article 21 (Life & Liberty), 21A (Education), 32 (Constitutional Remedies) are in almost every paper.</li>
+        <li><strong>Polity — Amendments:</strong> 42nd (Socialist+Secular+Integrity), 44th (Property), 61st (Voting age 18), 86th (RTE) are gold.</li>
+        <li><strong>Writs:</strong> Habeas Corpus definition + use asked repeatedly. "Which writ for illegal detention?" = Habeas Corpus.</li>
+        <li><strong>Schedules:</strong> 8th Schedule (languages), 10th Schedule (anti-defection), 7th Schedule (3 lists) — all hot.</li>
+        <li><strong>Ancient Books:</strong> Arthashastra=Kautilya, Indica=Megasthenes, Abhijnanasakuntalam=Kalidasa — foundation questions.</li>
+        <li><strong>Instruments:</strong> "Which instrument measures X?" — Barometer (pressure), Seismograph (earthquake), Lactometer (milk purity).</li>
+        <li><strong>Firsts in India:</strong> First to climb Everest (Tenzing+Edmund), First woman Everest (Bachendri Pal), First Indian space (Rakesh Sharma).</li>
+        <li><strong>Emergency:</strong> Art 356 (President's Rule) "most misused" + Art 352 history (1975 Emergency) — conceptual questions asked.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="rev-section">
+    <h3>⚡ LIGHTNING FACTS — READ ALOUD 10 TIMES</h3>
+    <div class="rev-list">
+      <ul>
+        <li>Raman Effect → Feb 28 → National Science Day → Nobel 1930 → C.V. Raman</li>
+        <li>Arthashastra → Kautilya (Chanakya) → Mauryan period → Political science</li>
+        <li>Sattriya → Assam → Shankaradeva → Newest Classical Dance → 2000</li>
+        <li>Anamudi (2695m) → Western Ghats → Highest peak in South India</li>
+        <li>Godavari → Longest peninsular river → "Dakshin Ganga" → Maharashtra to Bay of Bengal</li>
+        <li>Wular Lake → J&K → Largest freshwater lake India | Chilika → Odisha → Largest brackish</li>
+        <li>Bharat Ratna 1954 → C. Rajagopalachari + Radhakrishnan + C.V. Raman</li>
+        <li>First non-Indian Bharat Ratna → Khan Abdul Ghaffar Khan (1987) → "Frontier Gandhi"</li>
+        <li>Sachin Tendulkar → Youngest + First sportsperson → Bharat Ratna 2014</li>
+        <li>Statue of Unity → 182m → Sardar Patel → Gujarat → World's tallest statue</li>
+        <li>SAARC → Kathmandu, Nepal → 1985 → 8 members</li>
+        <li>ILO → Geneva → 1919 → Oldest UN agency → Nobel Peace Prize 1969</li>
+        <li>42nd Amendment 1976 → Socialist + Secular + Integrity (added to Preamble)</li>
+        <li>Art 21A → Right to Education (6–14 yrs) → 86th Amendment 2002</li>
+        <li>Habeas Corpus → "You have the body" → For illegal detention</li>
+        <li>10th Schedule → Anti-Defection → 52nd Amendment 1985</li>
+        <li>8th Schedule → 22 Official Languages of India</li>
+        <li>Chandrayaan-3 → 2023 → First to land on Moon's South Pole → India 4th nation</li>
+        <li>Nile → Longest river in world | Amazon → Largest by discharge</li>
+        <li>Kaziranga → Assam → One-horned Rhinoceros → UNESCO World Heritage</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rev-section">
+    <h3>🧠 ALL MNEMONICS COLLECTED</h3>
+    <div class="rev-list">
+      <ul>
+        <li><strong>8 Classical Dances (BKOKM+MS):</strong> Bharatanatyam-Kathak-Odissi-Kuchipudi-Manipuri-Mohiniyattam-Sattriya (+Kathakali)</li>
+        <li><strong>Writs (HMQCP):</strong> "Hira Moti Queen Can Play" → Habeas Corpus, Mandamus, Quo Warranto, Certiorari, Prohibition</li>
+        <li><strong>6 Fundamental Rights (EFERR → EFECRR):</strong> Equality-Freedom-Exploitation-Conscience-Cultural-Remedies</li>
+        <li><strong>New 7 Wonders:</strong> "Tom Gave Mick Cocaine, Christ Picked Jesus" → Taj, Great Wall, Machu Picchu, Chichen Itza, Colosseum, Christ, Petra</li>
+        <li><strong>Geneva Organizations (4):</strong> WHO, ILO, WTO, WEF → "Geneva Watches International Workers"</li>
+        <li><strong>Peninsular Rivers:</strong> "God Krishna Came, My Tail" → Godavari, Krishna, Cauvery, Mahanadi, (Tungabhadra)</li>
+        <li><strong>Tricky Capitals:</strong> "ALL BANC" → Abu Dhabi(UAE), Ankara(Turkey), Bern(Switzerland), Canberra(Australia), Naypyidaw(Myanmar)</li>
+        <li><strong>Kautilya-Kalidasa-Kalhana:</strong> K-Kingdom (Politics), K-Khwaab (Poetry), K-Kashmir (History)</li>
+        <li><strong>3 K's of Ancient India:</strong> Kautilya=Arthashastra, Kalidasa=Abhijnanasakuntalam, Kalhana=Rajatarangini</li>
+        <li><strong>Emergency Articles:</strong> 352=National, 356=State, 360=Financial → "National State Finance" = 352, 356, 360</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ QUIZ TIMED ============================================================ -->
+<div id="screen-quiz-timed" class="screen">
+  <div class="page-title">⏱️ Timed Mock Test — 60 Questions (60 Minutes)</div>
+  <div class="page-sub">Real exam simulation. No feedback during test. Submit at end for score.</div>
+  <div id="timed-start-panel">
+    <div class="card" style="text-align:center;padding:40px;">
+      <div style="font-size:3rem;">⏱️</div>
+      <h2 style="margin:14px 0 8px;color:var(--primary);">Timed Mock Test</h2>
+      <p style="color:var(--muted);margin-bottom:20px;">60 Questions | 60 Minutes | Based on SSC CGL PYQ Patterns</p>
+      <p style="color:var(--danger);font-weight:700;">⚠️ No feedback during the test. Results shown only at the end.</p>
+      <br>
+      <button class="btn btn-accent" onclick="startTimedQuiz()" style="font-size:1.1rem;padding:14px 36px;">🚀 Start Mock Test</button>
+    </div>
+  </div>
+  <div id="timed-quiz-panel" style="display:none;">
+    <div class="quiz-header">
+      <div><span id="timed-q-count">Q 1/60</span></div>
+      <div><span id="timer-display">60:00</span></div>
+      <div><button class="btn btn-accent" onclick="submitTimedQuiz()" style="padding:8px 18px;font-size:.85rem;">Submit</button></div>
+    </div>
+    <div id="timed-progress" class="progress-bar"><div id="timed-pfill" class="progress-fill" style="width:0%"></div></div>
+    <div id="timed-q-container"></div>
+    <div style="display:flex;gap:12px;margin-top:14px;">
+      <button class="btn btn-primary" onclick="timedPrev()">← Prev</button>
+      <button class="btn btn-accent" onclick="timedNext()">Next →</button>
+    </div>
+  </div>
+  <div id="timed-result-panel" style="display:none;"></div>
+</div>
+
+<!-- ============================================================ QUIZ PRACTICE ============================================================ -->
+<div id="screen-quiz-practice" class="screen">
+  <div class="page-title">✅ Practice Quiz — Instant Feedback</div>
+  <div class="page-sub">Answer each question and get immediate explanation. Learn as you go!</div>
+  <div id="practice-quiz-container"></div>
+  <div id="practice-score" style="display:none;"></div>
+</div>
+
+</div><!-- end main -->
+
+<script>
+// ============================================================
+// NAVIGATION
+// ============================================================
+let sidebarOpen = true;
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  document.querySelectorAll('.sb-item').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sb-item').forEach(s => {
+    if (s.getAttribute('onclick') && s.getAttribute('onclick').includes("'" + id + "'")) s.classList.add('active');
+  });
+  if (window.innerWidth <= 768) closeSidebar();
+  window.scrollTo(0,0);
+  if(id === 'quiz-practice') buildPracticeQuiz();
+}
+
+function toggleSidebar() {
+  const sb = document.getElementById('sidebar');
+  const main = document.getElementById('main');
+  const ov = document.getElementById('overlay');
+  if (window.innerWidth <= 768) {
+    sb.classList.toggle('open');
+    ov.classList.toggle('show');
+  } else {
+    sidebarOpen = !sidebarOpen;
+    if (sidebarOpen) {
+      sb.classList.remove('closed');
+      main.classList.remove('full');
+    } else {
+      sb.classList.add('closed');
+      main.classList.add('full');
+    }
+  }
+}
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+}
+
+// ============================================================
+// QUESTION BANK (60 Questions based on SSC CGL PYQ Patterns)
+// ============================================================
+const questions = [
+  { q: "National Science Day is celebrated on which date?", opts: ["Feb 14", "Feb 28", "Mar 4", "Jan 30"], ans: 1, exp: "C.V. Raman discovered the Raman Effect on Feb 28, 1928. National Science Day is observed on Feb 28." },
+  { q: "Which is the oldest classical dance form of India?", opts: ["Kathak", "Odissi", "Bharatanatyam", "Kuchipudi"], ans: 2, exp: "Bharatanatyam from Tamil Nadu is considered the oldest surviving classical dance form, rooted in Devadasi tradition and Natya Shastra." },
+  { q: "The book 'Discovery of India' was written by:", opts: ["M.K. Gandhi", "Jawaharlal Nehru", "B.R. Ambedkar", "Subhas Chandra Bose"], ans: 1, exp: "Jawaharlal Nehru wrote 'The Discovery of India' while imprisoned in Ahmednagar Fort in 1944." },
+  { q: "Headquarters of WHO is located in:", opts: ["New York", "Vienna", "Geneva", "Paris"], ans: 2, exp: "WHO (World Health Organization) is headquartered in Geneva, Switzerland. It was founded on April 7, 1948." },
+  { q: "Which article of the Indian Constitution is called the 'Heart and Soul' of the Constitution?", opts: ["Article 14", "Article 19", "Article 21", "Article 32"], ans: 3, exp: "Article 32 (Right to Constitutional Remedies) was called the 'Heart and Soul of the Constitution' by Dr. B.R. Ambedkar." },
+  { q: "The Taj Mahal was built by:", opts: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"], ans: 2, exp: "Shah Jahan built the Taj Mahal (1632–1653) in memory of his wife Mumtaz Mahal in Agra." },
+  { q: "International Yoga Day is celebrated on:", opts: ["June 5", "June 21", "July 1", "June 25"], ans: 1, exp: "International Yoga Day is celebrated on June 21, declared by the United Nations in 2014 on India's proposal." },
+  { q: "The Arthashastra was written by:", opts: ["Kalidasa", "Kalhana", "Kautilya", "Megasthenes"], ans: 2, exp: "Arthashastra was written by Kautilya (also known as Chanakya or Vishnugupta) during the Mauryan period. It deals with statecraft and economic policy." },
+  { q: "Which is the highest civilian award in India?", opts: ["Padma Vibhushan", "Bharat Ratna", "Padma Shri", "Padma Bhushan"], ans: 1, exp: "Bharat Ratna is India's highest civilian honour, established in 1954." },
+  { q: "India's first mission to Mars was called:", opts: ["Chandrayaan-1", "Mangalyaan (MOM)", "Aditya-L1", "Aryabhata"], ans: 1, exp: "Mangalyaan (Mars Orbiter Mission/MOM) launched in 2013 made India the first Asian nation to reach Mars orbit in the first attempt." },
+  { q: "Which writ is issued to secure the release of an illegally detained person?", opts: ["Mandamus", "Certiorari", "Habeas Corpus", "Quo Warranto"], ans: 2, exp: "Habeas Corpus (meaning 'you have the body') is issued to produce a detained person before court to examine the legality of their detention." },
+  { q: "The capital of Australia is:", opts: ["Sydney", "Melbourne", "Canberra", "Brisbane"], ans: 2, exp: "Canberra is the capital of Australia. It was purpose-built as the capital, chosen as a compromise between Sydney and Melbourne, and has been the capital since 1913." },
+  { q: "Kaziranga National Park is famous for:", opts: ["Bengal Tiger", "One-horned Rhinoceros", "Asiatic Lion", "Snow Leopard"], ans: 1, exp: "Kaziranga National Park in Assam is renowned for its population of the Indian One-horned Rhinoceros. It is a UNESCO World Heritage Site." },
+  { q: "42nd Constitutional Amendment added which words to the Preamble?", opts: ["Democratic, Republic", "Socialist, Secular, Integrity", "Justice, Liberty", "Fraternity, Unity"], ans: 1, exp: "The 42nd Amendment (1976) added 'Socialist', 'Secular', and 'Integrity' to the Preamble of the Indian Constitution." },
+  { q: "Which is the longest river on the Indian Peninsula?", opts: ["Krishna", "Cauvery", "Mahanadi", "Godavari"], ans: 3, exp: "Godavari is the longest river in Peninsular India (1465 km), also called 'Dakshin Ganga' or the Ganges of the South." },
+  { q: "C.V. Raman won the Nobel Prize in Physics in:", opts: ["1928", "1930", "1932", "1935"], ans: 1, exp: "C.V. Raman won the Nobel Prize in Physics in 1930 for his discovery of the Raman Effect (scattering of light) on February 28, 1928." },
+  { q: "The first Indian to go to space was:", opts: ["Kalpana Chawla", "Rakesh Sharma", "Sunita Williams", "Ravish Malhotra"], ans: 1, exp: "Rakesh Sharma became the first Indian to travel to space in 1984 aboard the Soviet Soyuz T-11 spacecraft." },
+  { q: "The Sattriya classical dance belongs to which state?", opts: ["Odisha", "Manipur", "Assam", "Kerala"], ans: 2, exp: "Sattriya is a classical dance from Assam, introduced by Vaishnavite saint Shankaradeva. It received classical dance recognition in 2000." },
+  { q: "Which article of the Constitution provides Right to Education?", opts: ["Article 19", "Article 21", "Article 21A", "Article 45"], ans: 2, exp: "Article 21A provides free and compulsory education to children between 6–14 years, added by the 86th Constitutional Amendment Act in 2002." },
+  { q: "The headquarters of SAARC is located at:", opts: ["Dhaka, Bangladesh", "New Delhi, India", "Kathmandu, Nepal", "Colombo, Sri Lanka"], ans: 2, exp: "The South Asian Association for Regional Cooperation (SAARC) was founded in 1985 and is headquartered in Kathmandu, Nepal." },
+  { q: "Which instrument is used to measure atmospheric pressure?", opts: ["Anemometer", "Barometer", "Hygrometer", "Manometer"], ans: 1, exp: "A Barometer measures atmospheric pressure. Anemometer measures wind speed, hygrometer measures humidity, and manometer measures gas pressure." },
+  { q: "Who was the first recipient of the Bharat Ratna award in 1954?", opts: ["Jawaharlal Nehru", "Dr. Rajendra Prasad", "C. Rajagopalachari", "Dr. B.R. Ambedkar"], ans: 2, exp: "C. Rajagopalachari, along with Dr. S. Radhakrishnan and Dr. C.V. Raman, received the first ever Bharat Ratna awards in 1954." },
+  { q: "The currency of Japan is:", opts: ["Yuan", "Yen", "Won", "Baht"], ans: 1, exp: "The Yen (¥) is the official currency of Japan. The Yuan belongs to China, Won to Korea, and Baht to Thailand." },
+  { q: "Which is the highest peak in South India?", opts: ["Doddabetta", "Anamudi", "Guru Shikhar", "Kalsubai"], ans: 1, exp: "Anamudi (2,695 metres) in Kerala is the highest peak in the Western Ghats and all of South India. Doddabetta is the second highest." },
+  { q: "Who is known as the 'Father of the Indian Constitution'?", opts: ["Dr. Rajendra Prasad", "Mahatma Gandhi", "Dr. B.R. Ambedkar", "Jawaharlal Nehru"], ans: 2, exp: "Dr. B.R. Ambedkar was the Chairman of the Drafting Committee and is recognized as the chief architect and Father of the Indian Constitution." },
+  { q: "In which year did the United Nations officially declare International Youth Day?", opts: ["1995", "1999", "2002", "2005"], ans: 1, exp: "International Youth Day is observed annually on August 12, as recommended by the World Conference of Ministers Responsible for Youth and endorsed by the UN General Assembly in 1999." },
+  { q: "The Konark Sun Temple is also known as:", opts: ["White Pagoda", "Black Pagoda", "Golden Pagoda", "Sun Palace"], ans: 1, exp: "The 13th-century Konark Sun Temple in Odisha was called the 'Black Pagoda' by European sailors due to its dark color and magnetic properties that disrupted ship navigation." },
+  { q: "The book 'Glimpses of World History' is a collection of letters written by Jawaharlal Nehru to:", opts: ["Mahatma Gandhi", "Indira Gandhi", "Motilal Nehru", "Sardar Patel"], ans: 1, exp: "'Glimpses of World History' consists of 196 letters written by Nehru to his young daughter Indira Gandhi from various prisons between 1930 and 1933." },
+  { q: "Which classical dance features elaborate face makeup, colored masks, and heavy costumes?", opts: ["Kathak", "Kathakali", "Mohiniyattam", "Bharatanatyam"], ans: 1, exp: "Kathakali from Kerala is celebrated for its highly stylized, elaborate face makeup, vibrant paint codes, large headdresses, and silent facial expressions." },
+  { q: "Which lake is the deepest lake in the world?", opts: ["Lake Superior", "Caspian Sea", "Lake Baikal", "Dead Sea"], ans: 2, exp: "Lake Baikal in Russia is the deepest lake in the world (1,642 meters) and holds the largest volume of fresh surface water on Earth." },
+  { q: "The 61st Constitutional Amendment Act (1989) is famous for:", opts: ["Adding Fundamental Duties", "Reducing voting age from 21 to 18", "Introducing GST", "Enacting Panchayati Raj"], ans: 1, exp: "The 61st Amendment lowered the voting age for Lok Sabha and State Legislative Assembly elections from 21 to 18 years." },
+  { q: "Who discovered Penicillin in 1928?", opts: ["Edward Jenner", "Alexander Fleming", "Louis Pasteur", "Robert Koch"], ans: 1, exp: "Scottish scientist Alexander Fleming discovered Penicillin, the world's first effective broad-spectrum antibiotic, at St. Mary's Hospital, London, in 1928." },
+  { q: "The official capital of Switzerland is:", opts: ["Zurich", "Geneva", "Bern", "Basel"], ans: 2, exp: "Bern is the federal city and de facto capital of Switzerland, whereas Zurich is its largest city and Geneva is its major diplomatic hub." },
+  { q: "Which article empowers the President to declare a National Emergency?", opts: ["Article 352", "Article 356", "Article 360", "Article 368"], ans: 0, exp: "Article 352 governs National Emergency (War, External Aggression, or Armed Rebellion). Article 356 is President's Rule, and Article 360 is Financial Emergency." },
+  { q: "The first non-Indian recipient of the Bharat Ratna was:", opts: ["Nelson Mandela", "Mother Teresa", "Khan Abdul Ghaffar Khan", "Martin Luther King Jr."], ans: 2, exp: "Khan Abdul Ghaffar Khan, also known as 'Frontier Gandhi', was a Pakistani national who received the Bharat Ratna in 1987. Nelson Mandela received it later in 1990." },
+  { q: "Which national symbol of India has the scientific name 'Nelumbo nucifera'?", opts: ["Banyan Tree", "Lotus", "Peacock", "Mango"], ans: 1, exp: "Nelumbo nucifera is the botanical name for the Lotus, India's national flower. Mango is Mangifera indica, and Peacock is Pavo cristatus." },
+  { q: "The first newspaper published in India was:", opts: ["The Times of India", "Hickey's Bengal Gazette", "The Hindu", "Samachar Darpan"], ans: 1, exp: "Hickey's Bengal Gazette was an English newspaper published in Kolkata by James Augustus Hicky starting in 1780. It was the first printing in Asia." },
+  { q: "Which instrument measures relative humidity in the air?", opts: ["Barometer", "Hygrometer", "Hydrometer", "Anemometer"], ans: 1, exp: "A Hygrometer measures relative atmospheric moisture. A Hydrometer measures the specific gravity (relative density) of liquids." },
+  { q: "The Anti-Defection Law was passed under which Constitutional Amendment?", opts: ["42nd Amendment", "44th Amendment", "52nd Amendment", "73rd Amendment"], ans: 2, exp: "The 52nd Constitutional Amendment Act of 1985 introduced the Anti-Defection Law and added the 10th Schedule to the Indian Constitution." },
+  { q: "The oldest fold mountain range in India is:", opts: ["Himalayas", "Western Ghats", "Aravalli Range", "Satpura Range"], ans: 2, exp: "The Aravalli Range in northwestern India is one of the oldest geological fold mountain systems in the world, now highly eroded as residual mountains." },
+  { q: "The book 'Poverty and Un-British Rule in India' which exposed the British wealth drain was by:", opts: ["Dadabhai Naoroji", "Gopal Krishna Gokhale", "Bal Gangadhar Tilak", "Lala Lajpat Rai"], ans: 0, exp: "Dadabhai Naoroji, the 'Grand Old Man of India', published this book in 1901, formalizing the 'Drain of Wealth' theory." },
+  { q: "The headquarters of INTERPOL is located in which city?", opts: ["Brussels", "Vienna", "Lyon", "London"], ans: 2, exp: "The International Criminal Police Organization (INTERPOL) is headquartered in Lyon, France, having moved from Saint-Cloud in 1989." },
+  { q: "The first Indian woman to climb Mount Everest was:", opts: ["Santosh Yadav", "Bachendri Pal", "Arunima Sinha", "Premlata Agarwal"], ans: 1, exp: "Bachendri Pal became the first Indian woman to scale Mount Everest in 1984. Santosh Yadav was the first woman to climb it twice." },
+  { q: "Which city is the capital of the United Arab Emirates (UAE)?", opts: ["Dubai", "Abu Dhabi", "Sharjah", "Doha"], ans: 1, exp: "Abu Dhabi is the federal capital and second most populous city of the UAE. Dubai is the largest city but not the capital." },
+  { q: "The standard time duration required to sing the full version of Jana Gana Mana is:", opts: ["48 seconds", "52 seconds", "56 seconds", "60 seconds"], ans: 1, exp: "By law and military protocol, the formal playing or vocal rendition of the full version of India's National Anthem takes approximately 52 seconds." },
+  { q: "Which vitamin deficiency is responsible for causing Rickets?", opts: ["Vitamin A", "Vitamin B1", "Vitamin C", "Vitamin D"], ans: 3, exp: "Vitamin D deficiency causes rickets in children (softening and weakening of bones) and osteomalacia in adults. Vitamin C causes scurvy." },
+  { q: "Which dynamic Indian space mission successfully landed a rover near the Moon's South Pole in 2023?", opts: ["Chandrayaan-1", "Chandrayaan-2", "Chandrayaan-3", "Mangalyaan"], ans: 2, exp: "ISRO's Chandrayaan-3 achieved a historic landing on the lunar south pole region on August 23, 2023, making India the fourth country to soft-land on the Moon." },
+  { q: "The 8th Schedule of the Indian Constitution recognizes how many official languages?", opts: ["14 languages", "18 languages", "22 languages", "25 languages"], ans: 2, exp: "The Eighth Schedule originally contained 14 languages but currently recognizes 22 official regional languages of India following subsequent amendments." },
+  { q: "Which river is famously referred to as the 'Dakshin Ganga'?", opts: ["Krishna River", "Mahanadi River", "Godavari River", "Narmada River"], ans: 2, exp: "The Godavari River is named 'Dakshin Ganga' (Southern Ganges) because it is the largest, longest, and most revered river system in Peninsular India." },
+  { q: "The famous 'Chhau' folk dance belongs to which group of states?", opts: ["Punjab and Haryana", "Jharkhand, Odisha, and West Bengal", "Kerala and Tamil Nadu", "Rajasthan and Gujarat"], ans: 1, exp: "Chhau is a major semi-classical tribal martial dance found across three regional variations: Purulia Chhau (WB), Seraikella Chhau (Jharkhand), and Mayurbhanj Chhau (Odisha)." },
+  { q: "The headquarters of FAO (Food and Agriculture Organization) is in:", opts: ["Geneva", "Rome", "Paris", "Washington D.C."], ans: 1, exp: "FAO is headquartered in Rome, Italy. October 16 is marked globally as World Food Day to honor its founding anniversary." },
+  { q: "Which fundamental right can never be suspended even during a National Emergency?", opts: ["Right to Speech", "Right to Assembly", "Right to Life & Personal Liberty", "Right to Equality"], ans: 2, exp: "Following the 44th Amendment Act, Articles 20 (Protection in conviction) and 21 (Right to life and liberty) cannot be suspended during an emergency." },
+  { q: "The world's highest waterfall, Angel Falls, is located in:", opts: ["Brazil", "Venezuela", "Canada", "South Africa"], ans: 1, exp: "Angel Falls is the highest uninterrupted waterfall on earth (979 meters) and is located inside Canaima National Park, Venezuela." },
+  { q: "Which landmark Constitutional Amendment introduced the comprehensive Goods and Services Tax (GST)?", opts: ["100th Amendment", "101st Amendment", "102nd Amendment", "103rd Amendment"], ans: 1, exp: "The 101st Constitutional Amendment Act of 2016 introduced GST across India, replacing a collection of cascading central and state indirect taxes." },
+  { q: "Who wrote the historical Sanskrit novel 'Harshacharita'?", opts: ["Banabhatta", "Kalidasa", "Harsha", "Kalhana"], ans: 0, exp: "Banabhatta was the court poet of King Harsha and wrote 'Harshacharita', the earliest surviving historical biography in Sanskrit literature." },
+  { q: "Which specialized instrument is used to determine the purity of milk?", opts: ["Hygrometer", "Hydrometer", "Lactometer", "Manometer"], ans: 2, exp: "A Lactometer operates on Archimedes' principle to evaluate the relative density and exact moisture purity of milk samples." },
+  { q: "The first historical treaty or document establishing a structural base for the United Nations was signed in:", opts: ["1919", "1944", "1945", "1948"], ans: 2, exp: "The formal UN Charter was signed on June 26, 1945, in San Francisco, officially establishing the United Nations Organization on October 24, 1945." },
+  { q: "Which official state dance form is considered the newest addition to the Sangeet Natak Akademi classical list?", opts: ["Kuchipudi", "Sattriya", "Mohiniyattam", "Odissi"], ans: 1, exp: "Sattriya from Assam was formally recognized as a classical dance form in the year 2000 by Sangeet Natak Akademi." },
+  { q: "Who was the first Indian woman to win an Academy Award (Oscar)?", opts: ["Arundhati Roy", "Bhanu Athaiya", "Lata Mangeshkar", "Mother Teresa"], ans: 1, exp: "Bhanu Athaiya won an Oscar for Best Costume Design for Richard Attenborough’s film 'Gandhi' in 1983." },
+  { q: "The capital city of Canada is:", opts: ["Toronto", "Vancouver", "Montreal", "Ottawa"], ans: 3, exp: "Ottawa is the political capital of Canada. Toronto is the largest city, and Montreal is the commercial hub." }
+];
+
+const QUESTION_COUNT = questions.length;
+
+// ============================================================
+// TIMED QUIZ STATE
+// ============================================================
+let timedActive = false;
+let timedIndex = 0;
+let timedAnswers = Array(QUESTION_COUNT).fill(null);
+let timedTimeLeft = 3600; // 60 minutes
+let timedTimerInterval = null;
+
+function startTimedQuiz() {
+  document.getElementById('timed-start-panel').style.display = 'none';
+  document.getElementById('timed-quiz-panel').style.display = 'block';
+  timedActive = true;
+  timedIndex = 0;
+  timedAnswers = Array(QUESTION_COUNT).fill(null);
+  timedTimeLeft = 3600;
+  renderTimedQuestion();
+  
+  clearInterval(timedTimerInterval);
+  timedTimerInterval = setInterval(() => {
+    timedTimeLeft--;
+    if (timedTimeLeft <= 0) {
+      clearInterval(timedTimerInterval);
+      submitTimedQuiz();
+    } else {
+      let m = Math.floor(timedTimeLeft / 60);
+      let s = timedTimeLeft % 60;
+      document.getElementById('timer-display').innerText = `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+    }
+  }, 1000);
+}
+
+function renderTimedQuestion() {
+  document.getElementById('timed-q-count').innerText = `Q ${timedIndex + 1} / ${QUESTION_COUNT}`;
+  const progressPercent = ((timedIndex + 1) / QUESTION_COUNT) * 100;
+  document.getElementById('timed-pfill').style.width = progressPercent + '%';
+  
+  const qData = questions[timedIndex];
+  let html = `
+    <div class="q-card">
+      <div class="q-num">QUESTION ${timedIndex + 1}</div>
+      <div class="q-text">${qData.q}</div>
+      <div class="q-options">
+  `;
+  qData.opts.forEach((opt, idx) => {
+    let activeClass = (timedAnswers[timedIndex] === idx) ? 'selected' : '';
+    html += `<button class="opt-btn ${activeClass}" onclick="selectTimedOption(${idx})">${String.fromCharCode(65+idx)}. ${opt}</button>`;
+  });
+  html += `</div></div>`;
+  document.getElementById('timed-q-container').innerHTML = html;
+}
+
+function selectTimedOption(optIdx) {
+  timedAnswers[timedIndex] = optIdx;
+  renderTimedQuestion();
+}
+
+function timedPrev() {
+  if (timedIndex > 0) { timedIndex--; renderTimedQuestion(); }
+}
+
+function timedNext() {
+  if (timedIndex < QUESTION_COUNT - 1) { timedIndex++; renderTimedQuestion(); }
+}
+
+function submitTimedQuiz() {
+  clearInterval(timedTimerInterval);
+  timedActive = false;
+  
+  let score = 0;
+  questions.forEach((q, idx) => {
+    if (timedAnswers[idx] === q.ans) score++;
+  });
+  
+  let html = `
+    <div class="score-box">
+      <div class="big">${score} / ${QUESTION_COUNT}</div>
+      <div style="font-weight:700;margin-top:6px;">Mock Test Evaluation Complete!</div>
+      <p style="font-size:.85rem;opacity:.8;margin-top:4px;">Time taken: ${Math.floor((3600-timedTimeLeft)/60)}m ${(3600-timedTimeLeft)%60}s</p>
+      <button class="btn btn-accent" onclick="resetTimedView()" style="margin-top:16px;">Re-take Test</button>
+    </div>
+    <h3 style="color:var(--primary);margin:24px 0 12px;">Detailed Report Card</h3>
+  `;
+  
+  questions.forEach((q, idx) => {
+    let userAnsText = timedAnswers[idx] !== null ? q.opts[timedAnswers[idx]] : "Not Answered";
+    let correctAnsText = q.opts[q.ans];
+    let statusText = (timedAnswers[idx] === q.ans) ? `<span class="tag tag-green">✓ Correct</span>` : `<span class="tag tag-red">✗ Incorrect</span>`;
+    
+    html += `
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <span style="font-size:.75rem;font-weight:800;color:var(--muted)">Q ${idx+1}</span>
+          ${statusText}
+        </div>
+        <div class="q-text" style="margin-bottom:6px;">${q.q}</div>
+        <div style="font-size:.88rem;margin-bottom:4px;"><strong>Your Selection:</strong> ${userAnsText}</div>
+        <div style="font-size:.88rem;color:var(--success);margin-bottom:6px;"><strong>Correct Key:</strong> ${correctAnsText}</div>
+        <div class="feedback correct" style="font-size:.82rem;">💡 ${q.exp}</div>
+      </div>
+    `;
+  });
+  
+  document.getElementById('timed-result-panel').innerHTML = html;
+  document.getElementById('timed-quiz-panel').style.display = 'none';
+  document.getElementById('timed-result-panel').style.display = 'block';
+}
+
+function resetTimedView() {
+  document.getElementById('timed-result-panel').style.display = 'none';
+  document.getElementById('timed-start-panel').style.display = 'block';
+}
+
+// ============================================================
+// PRACTICE QUIZ (Immediate Feedback Mode)
+// ============================================================
+let practiceAnswers = Array(QUESTION_COUNT).fill(null);
+
+function buildPracticeQuiz() {
+  practiceAnswers = Array(QUESTION_COUNT).fill(null);
+  let html = "";
+  questions.forEach((q, qIdx) => {
+    html += `
+      <div class="q-card" id="prac-card-${qIdx}">
+        <div class="q-num">PRACTICE QUESTION ${qIdx + 1}</div>
+        <div class="q-text">${q.q}</div>
+        <div class="q-options" id="prac-opts-${qIdx}">
+    `;
+    q.opts.forEach((opt, oIdx) => {
+      html += `<button class="opt-btn" onclick="checkPracticeOption(${qIdx}, ${oIdx})">${String.fromCharCode(65+oIdx)}. ${opt}</button>`;
+    });
+    html += `
+        </div>
+        <div id="prac-fb-${qIdx}" style="display:none;"></div>
+      </div>
+    `;
+  });
+  document.getElementById('practice-quiz-container').innerHTML = html;
+}
+
+function checkPracticeOption(qIdx, oIdx) {
+  if (practiceAnswers[qIdx] !== null) return; // already answered
+  practiceAnswers[qIdx] = oIdx;
+  
+  const qData = questions[qIdx];
+  const buttons = document.getElementById(`prac-opts-${qIdx}`).getElementsByTagName('button');
+  
+  // Highlight options
+  if (oIdx === qData.ans) {
+    buttons[oIdx].classList.add('correct');
+  } else {
+    buttons[oIdx].classList.add('wrong');
+    buttons[qData.ans].classList.add('correct');
+  }
+  
+  // Disable all options for this question
+  for (let btn of buttons) {
+    btn.style.cursor = 'default';
+  }
+  
+  // Show explanations instantly
+  const fbDiv = document.getElementById(`prac-fb-${qIdx}`);
+  fbDiv.className = (oIdx === qData.ans) ? 'feedback correct' : 'feedback wrong';
+  fbDiv.innerHTML = `<strong>${oIdx === qData.ans ? '🎉 Correct!' : '❌ Incorrect.'}</strong> ${qData.exp}`;
+  fbDiv.style.display = 'block';
+}
+
+// Initialize
+window.onload = function() {
+  if (window.innerWidth <= 768) {
+    sidebarOpen = false;
+    document.getElementById('sidebar').classList.add('closed');
+    document.getElementById('main').classList.add('full');
+  }
+};
+</script>
+</body>
+</html>

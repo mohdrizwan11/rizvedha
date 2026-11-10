@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC CGL History Exam Simulator | 20 Years PYQ Engine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        html, body { height: 100%; background: #0f172a; overflow: hidden; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* Navigation transitions */
+        .sidebar-btn, .nav-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); border-left: 3px solid transparent; }
+        .sidebar-btn.active-nav {
+            color: #f59e0b;
+            background: rgba(245,158,11,0.08);
+            border-left-color: #f59e0b;
+        }
+        .nav-btn.active-nav { color: #f59e0b; }
+        
+        .card { transition: all 0.2s ease; }
+        
+        /* Question Palette Indicators */
+        .status-unvisited { background-color: #334155; color: #cbd5e1; }
+        .status-answered { background-color: #10b981; color: white; }
+        .status-review { background-color: #8b5cf6; color: white; }
+        .status-skipped { background-color: #ef4444; color: white; }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .pulse-timer { animation: pulse-soft 2s infinite; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 flex flex-col h-full select-none">
+
+<div id="app-wrapper" class="flex flex-1 h-full overflow-hidden">
+
+    <aside id="sidebar" class="hidden lg:flex flex-col w-64 bg-slate-950 border-r border-slate-800 z-50 flex-shrink-0">
+        <div class="px-5 py-5 border-b border-slate-800">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="w-9 h-9 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-xl">⚔️</div>
+                <div>
+                    <h1 class="text-sm font-black text-amber-400 tracking-wide uppercase leading-tight">CGL Test Engine</h1>
+                    <p class="text-[10px] text-slate-500 font-medium">20 Years History Mocks</p>
+                </div>
+            </div>
+            <div class="mt-3 bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1 flex items-center justify-between">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Engine Build</span>
+                <span class="text-[10px] font-mono font-bold text-amber-500 bg-amber-500/10 px-1.5 py-0.5 rounded">v2026.2</span>
+            </div>
+        </div>
+
+        <div class="px-4 py-4 border-b border-slate-800 space-y-2 bg-slate-950/40">
+            <div class="flex items-center justify-between text-xs">
+                <span class="text-slate-400">Total Items Pool</span>
+                <span class="font-mono font-bold text-slate-200" id="sb-total-pool">120 PYQs</span>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+                <span class="text-slate-400">Avg Efficiency</span>
+                <span class="font-mono font-bold text-emerald-400" id="sb-accuracy">0%</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 py-4 px-2 space-y-1 overflow-y-auto">
+            <button onclick="router('dashboard')" class="sidebar-btn active-nav w-full flex items-center gap-3 px-4 py-3 rounded-r-xl text-left text-slate-400 hover:text-slate-200" id="route-dashboard">
+                <span class="text-lg">📊</span>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wide">Dashboard</div>
+                    <div class="text-[10px] text-slate-500">Mocks & Diagnostic Data</div>
+                </div>
+            </button>
+
+            <button onclick="initiateQuiz('all')" class="sidebar-btn w-full flex items-center gap-3 px-4 py-3 rounded-r-xl text-left text-slate-400 hover:text-slate-200" id="route-all">
+                <span class="text-lg">📝</span>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wide">Full Mock Exam</div>
+                    <div class="text-[10px] text-slate-500">Balanced 25 Question Set</div>
+                </div>
+            </button>
+
+            <div class="pt-4 px-4 pb-2 text-[10px] font-extrabold uppercase tracking-widest text-slate-600">Categorical Modules</div>
+
+            <button onclick="initiateQuiz('ancient')" class="sidebar-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-r-xl text-left text-slate-400 hover:text-blue-400" id="route-ancient">
+                <span class="text-md">🏛️</span>
+                <div class="text-xs font-semibold">Ancient History</div>
+            </button>
+
+            <button onclick="initiateQuiz('medieval')" class="sidebar-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-r-xl text-left text-slate-400 hover:text-purple-400" id="route-medieval">
+                <span class="text-md">🏰</span>
+                <div class="text-xs font-semibold">Medieval History</div>
+            </button>
+
+            <button onclick="initiateQuiz('modern')" class="sidebar-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-r-xl text-left text-slate-400 hover:text-emerald-400" id="route-modern">
+                <span class="text-md">⚔️</span>
+                <div class="text-xs font-semibold">Modern History</div>
+            </button>
+        </nav>
+
+        <div class="p-4 border-t border-slate-800">
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 text-[11px] text-slate-400">
+                <span class="text-amber-400 font-bold">TCS Pattern Tip:</span> History counts for roughly 3-5 high-yield questions in Tier-1 General Awareness.
+            </div>
+        </div>
+    </aside>
+
+    <main id="content-area" class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+        <div class="lg:hidden bg-slate-950 border-b border-slate-800 px-4 py-3 flex items-center justify-between flex-shrink-0 z-40">
+            <div>
+                <h1 class="text-sm font-black text-amber-400 uppercase tracking-wider">CGL Test Engine</h1>
+                <p class="text-[10px] text-slate-500">120+ History PYQ Mock</p>
+            </div>
+            <span class="text-[10px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-bold">2026 ED.</span>
+        </div>
+
+        <div id="screen-dashboard" class="flex-1 overflow-y-auto hidden p-4 lg:p-8 space-y-6 pb-24 lg:pb-8">
+            <div class="max-w-5xl mx-auto space-y-6">
+                
+                <div class="bg-gradient-to-br from-slate-950 to-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <h2 class="text-2xl font-black tracking-tight text-white sm:text-3xl">Launch Examination Simulator</h2>
+                            <p class="text-sm text-slate-400 max-w-xl">Configure and execute an automated testing session compiled from 120 authenticated SSC CGL, IB ACIO, and CPO history matrices over the last two decades.</p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-[11px] font-medium text-slate-300">🏛️ Indus, Vedic, Mauryan</span>
+                                <span class="bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-[11px] font-medium text-slate-300">🏰 Delhi Sultanate, Mughals</span>
+                                <span class="bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1 text-[11px] font-medium text-slate-300">⚔️ British Era, INC, Movements</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex flex-col gap-3 min-w-[200px]">
+                            <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Simulation Configuration</label>
+                            <select id="config-mode" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
+                                <option value="exam">Exam Mode (Timed / Graded)</option>
+                                <option value="practice">Practice Mode (Instant Feedback)</option>
+                            </select>
+                            <button onclick="initiateQuiz('all')" class="w-full bg-amber-500 hover:bg-amber-600 active:scale-[0.98] text-slate-950 font-bold text-xs py-2.5 px-4 rounded-xl shadow-lg transition-all text-center uppercase tracking-wider">
+                                Start Comprehensive Test
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                        <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">Total Completed</div>
+                        <div class="text-2xl font-mono font-bold text-slate-100" id="stat-completed">0</div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                        <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">High Score Metric</div>
+                        <div class="text-2xl font-mono font-bold text-amber-400" id="stat-highscore">0%</div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                        <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">Global Target Accuracy</div>
+                        <div class="text-2xl font-mono font-bold text-emerald-400" id="stat-accuracy">0%</div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                        <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">Avg Test Tempo</div>
+                        <div class="text-2xl font-mono font-bold text-blue-400" id="stat-tempo">--</div>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                        <span>🎯</span> Sectional Target Portals
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div onclick="initiateQuiz('ancient')" class="card bg-slate-950 border border-slate-800 hover:border-blue-500/30 rounded-xl p-5 text-left cursor-pointer group">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-xl">🏛️</div>
+                                <span class="text-[10px] font-mono bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded font-bold">40 PYQs</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-slate-200 group-hover:text-blue-400 transition-colors">Ancient History Unit</h4>
+                            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Indus sites architectural profiles, Vedic structural matrices, Mauryan administrative layouts, and Gupta records.</p>
+                        </div>
+
+                        <div onclick="initiateQuiz('medieval')" class="card bg-slate-950 border border-slate-800 hover:border-purple-500/30 rounded-xl p-5 text-left cursor-pointer group">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-xl">🏰</div>
+                                <span class="text-[10px] font-mono bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded font-bold">40 PYQs</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-slate-200 group-hover:text-purple-400 transition-colors">Medieval History Unit</h4>
+                            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">Slave Dynasty administrative lineages, Khilji economic strategies, Mughal building profiles, and Bhakti records.</p>
+                        </div>
+
+                        <div onclick="initiateQuiz('modern')" class="card bg-slate-950 border border-slate-800 hover:border-emerald-500/30 rounded-xl p-5 text-left cursor-pointer group">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center text-xl">⚔️</div>
+                                <span class="text-[10px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-bold">40 PYQs</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-slate-200 group-hover:text-emerald-400 transition-colors">Modern History Unit</h4>
+                            <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">INC operational sessions, Gandhian strategic operations, constitutional architectures, and major battles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                        <span>📊</span> Empirical Blueprint Weightage (20-Year Trend)
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1.5">
+                                <span class="text-slate-400">Modern Core Era (National Struggles, Treaties, Acts)</span>
+                                <span class="text-emerald-400 font-bold font-mono">45% [~2-3 Questions]</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1.5">
+                                <span class="text-slate-400">Ancient Core Era (Megalithic, Sectarian Councils, Texts)</span>
+                                <span class="text-blue-400 font-bold font-mono">30% [~1-2 Questions]</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-blue-500 h-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1.5">
+                                <span class="text-slate-400">Medieval Core Era (Sultanates, Mansabs, Epics)</span>
+                                <span class="text-purple-400 font-bold font-mono">25% [~1 Question]</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-purple-500 h-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="screen-quiz" class="flex-1 flex flex-col h-full overflow-hidden hidden bg-slate-950">
+            <div class="bg-slate-900 border-b border-slate-800 px-4 py-3 flex items-center justify-between flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <span id="quiz-badge" class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded font-mono">EXAM MODE</span>
+                    <div class="h-4 w-[1px] bg-slate-800"></div>
+                    <span id="quiz-scope" class="text-xs text-slate-300 font-medium">All Units Mock</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2 font-mono bg-slate-950 px-3 py-1 border border-slate-800 rounded-lg text-amber-400 text-sm font-bold shadow-inner" id="timer-box">
+                        <span class="pulse-timer text-amber-500 text-xs">⏱️</span>
+                        <span id="test-timer">25:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 flex overflow-hidden">
+                
+                <div class="flex-1 flex flex-col h-full overflow-y-auto p-4 lg:p-6 space-y-4">
+                    <div class="w-full bg-slate-900 h-1 rounded-full overflow-hidden flex-shrink-0">
+                        <div id="quiz-progress" class="bg-amber-500 h-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 lg:p-6 space-y-6 shadow-xl">
+                        <div class="flex items-center justify-between border-b border-slate-800/60 pb-3">
+                            <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest" id="q-index-label">Question 01 of 25</span>
+                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-400" id="q-weightage-tag">PYQ REPEATED</span>
+                        </div>
+
+                        <h3 class="text-base sm:text-lg font-medium text-slate-100 leading-relaxed" id="quiz-question-text">
+                            Loading current item prompt string...
+                        </h3>
+
+                        <div class="grid grid-cols-1 gap-3 pt-2" id="quiz-options-matrix">
+                            </div>
+
+                        <div id="quiz-explanation-box" class="hidden bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                            <div class="text-xs font-bold text-amber-400 flex items-center gap-2">
+                                <span>💡</span> Analysis Breakdown
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed" id="quiz-explanation-text">
+                                Fact validation context parsed natively from verified historical data vectors.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-3 pt-2 pb-12 lg:pb-0">
+                        <div class="flex items-center gap-2">
+                            <button onclick="handleOptionAction('review')" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-purple-400 hover:text-purple-300 font-bold text-xs py-2 px-4 rounded-xl transition-all uppercase tracking-wider">
+                                Mark for Review
+                            </button>
+                            <button onclick="handleOptionAction('clear')" class="bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 text-xs py-2 px-3 rounded-xl transition-all">
+                                Clear
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="navigateQuestionIndex('prev')" id="btn-quiz-prev" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-bold text-xs py-2 px-4 rounded-xl transition-all">
+                                ← Back
+                            </button>
+                            <button onclick="navigateQuestionIndex('next')" id="btn-quiz-next" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs py-2 px-5 rounded-xl shadow-md transition-all uppercase tracking-wider">
+                                Save & Next →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex flex-col w-64 bg-slate-950 border-l border-slate-800 p-4 h-full overflow-hidden flex-shrink-0">
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-3">Question Navigator Palette</h3>
+                    
+                    <div class="flex-1 overflow-y-auto pr-1">
+                        <div class="grid grid-cols-4 gap-2" id="desktop-palette-grid">
+                            </div>
+                    </div>
+
+                    <div class="border-t border-slate-800 pt-4 mt-4 space-y-2 text-[10px] font-bold uppercase tracking-wide text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded status-answered flex-shrink-0"></span>
+                            <span>Answered</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded status-review flex-shrink-0"></span>
+                            <span>Marked for Review</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded status-unvisited flex-shrink-0"></span>
+                            <span>Not Visited</span>
+                        </div>
+                    </div>
+
+                    <button onclick="terminateSimulationConfirm()" class="w-full mt-4 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-400 font-bold text-xs py-2.5 px-4 rounded-xl transition-all uppercase tracking-widest text-center">
+                        Submit Examination
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="screen-results" class="flex-1 overflow-y-auto hidden p-4 lg:p-8 space-y-6 pb-24 lg:pb-8 bg-gradient-to-b from-slate-900 to-slate-950">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 text-center space-y-3 relative overflow-hidden">
+                    <div class="text-4xl">🏆</div>
+                    <h2 class="text-xl font-black uppercase tracking-wider text-slate-200">Simulation Processing Finalized</h2>
+                    <p class="text-xs text-slate-400 max-w-md mx-auto">Analytical compilation of your responsive accuracy relative to competitive SSC benchmarks.</p>
+                    
+                    <div class="inline-flex flex-col items-center justify-center p-6 bg-slate-900 border border-slate-800 rounded-full w-32 h-32 my-2 shadow-inner">
+                        <span class="text-3xl font-mono font-black text-amber-400 leading-none" id="res-score-pct">0%</span>
+                        <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Accuracy</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 max-w-sm mx-auto text-center font-mono pt-2">
+                        <div class="bg-slate-900/60 p-2 border border-slate-800 rounded-xl">
+                            <div class="text-[10px] font-bold text-slate-500 uppercase">Correct</div>
+                            <div class="text-sm font-bold text-emerald-400" id="res-correct">0</div>
+                        </div>
+                        <div class="bg-slate-900/60 p-2 border border-slate-800 rounded-xl">
+                            <div class="text-[10px] font-bold text-slate-500 uppercase">Incorrect</div>
+                            <div class="text-sm font-bold text-red-400" id="res-wrong">0</div>
+                        </div>
+                        <div class="bg-slate-900/60 p-2 border border-slate-800 rounded-xl">
+                            <div class="text-[10px] font-bold text-slate-500 uppercase">Skipped</div>
+                            <div class="text-sm font-bold text-slate-400" id="res-skipped">0</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center justify-center gap-3">
+                        <button onclick="router('dashboard')" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold py-2 px-4 rounded-xl transition-all uppercase tracking-wide">
+                            Return to Dashboard
+                        </button>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Granular Evaluation Matrix Logs</h3>
+                    <div id="results-review-ledger" class="space-y-4">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800 flex-shrink-0">
+    <div class="flex justify-around items-center py-2 px-1">
+        <button onclick="router('dashboard')" class="nav-btn active-nav flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl text-slate-500" id="mb-route-dashboard">
+            <span class="text-base">📊</span>
+            <span class="text-[9px] font-medium tracking-wide">Dashboard</span>
+        </button>
+        <button onclick="initiateQuiz('ancient')" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl text-slate-500" id="mb-route-ancient">
+            <span class="text-base">🏛️</span>
+            <span class="text-[9px] font-medium tracking-wide">Ancient</span>
+        </button>
+        <button onclick="initiateQuiz('medieval')" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl text-slate-500" id="mb-route-medieval">
+            <span class="text-base">🏰</span>
+            <span class="text-[9px] font-medium tracking-wide">Medieval</span>
+        </button>
+        <button onclick="initiateQuiz('modern')" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl text-slate-500" id="mb-route-modern">
+            <span class="text-base">⚔️</span>
+            <span class="text-[9px] font-medium tracking-wide">Modern</span>
+        </button>
+    </div>
+</div>
+
+<script>
+    const MasterDatasetPool = [
+        // ==========================================
+        // ANCIENT HISTORY (40 ITEMS)
+        // ==========================================
+        { id: 1, category: "ancient", question: "Which Harappan site is the largest in India?", options: ["Dholavira", "Rakhigarhi", "Lothal", "Kalibangan"], correct: 1, explanation: "Rakhigarhi (Haryana) is verified as the largest Harappan site in India. Dholavira and Lothal are in Gujarat; Kalibangan is in Rajasthan." },
+        { id: 2, category: "ancient", question: "The Great Bath of Mohenjo-Daro was made water-tight using a lining of bricks coated with plaster and a layer of:", options: ["Natural tar", "Quicklime mortar", "Gypsum cement", "Resinous bitumen"], correct: 0, explanation: "The Great Bath achieved impermeability using burnt bricks laid in gypsum plaster and sealed with natural tar (bitumen)." },
+        { id: 3, category: "ancient", question: "Most Harappan seals were primarily manufactured from which material?", options: ["Terracotta", "Chert", "Steatite", "Agate"], correct: 2, explanation: "Steatite, a soft soapstone, was the primary material for carving typical square/rectangular Indus valley trade stamp seals." },
+        { id: 4, category: "ancient", question: "Which peripheral Harappan trading post is located in modern Afghanistan?", options: ["Shortughai", "Sutkagen-dor", "Chanhudaro", "Kot Diji"], correct: 0, explanation: "Shortughai was a remote Indus Valley outpost in northern Afghanistan, established to secure access to lapis lazuli." },
+        { id: 5, category: "ancient", question: "Which Harappan site is situated geographically on the bank of the river Sutlej?", options: ["Banawali", "Ropar", "Harappa", "Alamgirpur"], correct: 1, explanation: "Ropar is located along the Sutlej in Punjab. Harappa is on the Ravi, Mohenjo-Daro on the Indus." },
+        { id: 6, category: "ancient", question: "Evidence of ritual fire altars has been discovered in which pair of Harappan sites?", options: ["Harappa & Mohenjo-Daro", "Kalibangan & Lothal", "Dholavira & Banawali", "Rakhigarhi & Chanhudaro"], correct: 1, explanation: "Kalibangan and Lothal feature distinctive row structures containing ritualistic clay brick fire altars." },
+        { id: 7, category: "ancient", question: "Which metal was primarily utilized to fashion tools and weapons in Harappan cities?", options: ["Iron", "Copper", "Tin", "Gold"], correct: 1, explanation: "As a Bronze Age civilization, the Indus Valley lacked iron. Copper (often mixed with tin) was heavily used." },
+        { id: 8, category: "ancient", question: "The moniker 'India' is derived from the river 'Sindhu' mentioned prominently in which Veda?", options: ["Rigveda", "Samaveda", "Yajurveda", "Atharvaveda"], correct: 0, explanation: "The Rigveda details the 'Sapta Sindhu' (Seven Rivers), from which Persian and Greek variations of 'India' evolved." },
+        { id: 9, category: "ancient", question: "How many canonical Vedas form the baseline of classical Hindu scriptural literature?", options: ["Three", "Four", "Six", "Eight"], correct: 1, explanation: "Four compositions compose the Vedic core: Rigveda, Samaveda, Yajurveda, and Atharvaveda." },
+        { id: 10, category: "ancient", question: "How many 'Mandalas' compose the complete textual body of the Rigveda?", options: ["8 Mandalas", "10 Mandalas", "12 Mandalas", "15 Mandalas"], correct: 1, explanation: "The Rigveda is organized systematically into exactly 10 books or Mandalas." },
+        { id: 11, category: "ancient", question: "Which major river is referred to by the Vedic designation 'Vitasta'?", options: ["Chenab", "Jhelum", "Ravi", "Beas"], correct: 1, explanation: "The ancient hydronym map identifies Vitasta as the modern Jhelum River. Asikni is Chenab, Parushni is Ravi." },
+        { id: 12, category: "ancient", question: "Which deity is lauded as the 'Lord of the Plough' or rain-bringer in Vedic texts?", options: ["Varuna", "Agni", "Indra", "Prajapati"], correct: 2, explanation: "Indra, the preeminent warrior deity of thunder and storms, was frequently invoked to break droughts." },
+        { id: 13, category: "ancient", question: "Which dynasty marks the classical 'Golden Age' of ancient Indian art and science?", options: ["Mauryan", "Gupta", "Kushan", "Vardhana"], correct: 1, explanation: "The Gupta Empire orchestrated a cultural renaissance under sovereigns like Chandragupta II and Samudragupta." },
+        { id: 14, category: "ancient", question: "Who laid the geopolitical foundation of the Maurya Empire with Chanakya's aid?", options: ["Ashoka", "Bindusara", "Chandragupta Maurya", "Chandragupta I"], correct: 2, explanation: "Chandragupta Maurya overthrew the Nanda dynasty around 322 BCE under Kautilya's (Chanakya's) strategies." },
+        { id: 15, category: "ancient", question: "The Third Buddhist Council was convoked at Pataliputra under which ruler?", options: ["Kanishka", "Ajatashatru", "Ashoka", "Kalashoka"], correct: 2, explanation: "1st: Ajatashatru. 2nd: Kalashoka. 3rd: Ashoka. 4th: Kanishka." },
+        { id: 16, category: "ancient", question: "The ancient university of Nalanda was founded under the patronage of which ruler?", options: ["Dharampal", "Kumaragupta I", "Harsha", "Skandagupta"], correct: 1, explanation: "Kumaragupta I of the Gupta line established the primary endowments for Nalanda Mahavihara." },
+        { id: 17, category: "ancient", question: "Which is NOT a valid stage within the quadripartite Ashrama system?", options: ["Brahmacharya", "Grihastha", "Parmarth", "Sanyasa"], correct: 2, explanation: "The four stages are Brahmacharya, Grihastha, Vanaprastha, and Sanyasa. Parmarth means ultimate truth." },
+        { id: 18, category: "ancient", question: "Wheel-turned pottery is first traceably anchored to which prehistoric age?", options: ["Palaeolithic", "Mesolithic", "Neolithic", "Chalcolithic"], correct: 2, explanation: "The transition to sedentary food production in the Neolithic period catalyzed the invention of the potter's wheel." },
+        { id: 19, category: "ancient", question: "The ancient metropolis of Dholavira, known for its water harvesting, is in which state?", options: ["Rajasthan", "Haryana", "Punjab", "Gujarat"], correct: 3, explanation: "Dholavira is situated on Khadir Bet island in the Rann of Kutch, Gujarat." },
+        { id: 20, category: "ancient", question: "Which of these prehistoric agricultural sites is NOT located in modern India?", options: ["Burzahom", "Mehrgarh", "Chirand", "Koldihwa"], correct: 1, explanation: "Mehrgarh is situated in the Balochistan province of Pakistan." },
+        { id: 21, category: "ancient", question: "Who is the author of the ancient grammatical text 'Ashtadhyayi'?", options: ["Patanjali", "Panini", "Kalidasa", "Vishakhadatta"], correct: 1, explanation: "Panini authored Ashtadhyayi, a foundational text of Sanskrit grammar. Patanjali wrote the Mahabhashya." },
+        { id: 22, category: "ancient", question: "The monolithic 'Rathas' of Mahabalipuram were constructed by which dynasty?", options: ["Cholas", "Cheras", "Pallavas", "Pandyas"], correct: 2, explanation: "The Pallava king Narasimhavarman I built the monolithic rock-cut Rathas (chariots) at Mahabalipuram." },
+        { id: 23, category: "ancient", question: "Which Mauryan ruler is referred to as 'Amitraghata' (Slayer of Foes) by the Greeks?", options: ["Chandragupta Maurya", "Bindusara", "Ashoka", "Dasharatha"], correct: 1, explanation: "Bindusara, the son of Chandragupta Maurya and father of Ashoka, was known as Amitraghata to the Greeks." },
+        { id: 24, category: "ancient", question: "In Buddhism, the term 'Nirvana' specifically refers to:", options: ["Attainment of Heaven", "Extinction of desire and suffering", "Physical death", "Rebirth as a deity"], correct: 1, explanation: "Nirvana translates to 'blowing out' or quenching, referring to the extinction of ignorance, desire, and suffering." },
+        { id: 25, category: "ancient", question: "Who was the 24th and last Tirthankara of Jainism?", options: ["Rishabhanatha", "Parshvanatha", "Mahavira", "Ajitanatha"], correct: 2, explanation: "Vardhamana Mahavira was the 24th Tirthankara. Rishabhanatha was the 1st, and Parshvanatha was the 23rd." },
+        { id: 26, category: "ancient", question: "The Hathigumpha inscription provides biographical details of which ancient king?", options: ["Kharavela", "Ashoka", "Samudragupta", "Rudradaman"], correct: 0, explanation: "The Hathigumpha inscription at Udayagiri caves was inscribed by King Kharavela of Kalinga (modern Odisha)." },
+        { id: 27, category: "ancient", question: "Which ancient physician is known as the 'Father of Indian Medicine' and wrote a foundational Ayurvedic text?", options: ["Sushruta", "Charaka", "Patanjali", "Dhanvantari"], correct: 1, explanation: "Charaka authored the Charaka Samhita. Sushruta is recognized as the Father of Indian Surgery." },
+        { id: 28, category: "ancient", question: "The silver coin issued by the Gupta rulers was known as:", options: ["Dinara", "Rupaka", "Nishka", "Karshapana"], correct: 1, explanation: "Gupta silver coins were called Rupaka, while their gold coins were known as Dinara." },
+        { id: 29, category: "ancient", question: "Which Chinese Buddhist pilgrim visited India during the reign of Chandragupta II?", options: ["Hiuen Tsang", "I-Tsing", "Fa-Hien", "Sung Yun"], correct: 2, explanation: "Fa-Hien (Faxian) visited during Chandragupta II's reign. Hiuen Tsang (Xuanzang) visited later during Harsha's reign." },
+        { id: 30, category: "ancient", question: "The earliest evidence of agriculture in the Indian subcontinent is found at:", options: ["Kalibangan", "Mehrgarh", "Harappa", "Mohenjo-Daro"], correct: 1, explanation: "Mehrgarh (circa 7000 BCE) provides the earliest evidence of farming (wheat and barley) and herding in South Asia." },
+        { id: 31, category: "ancient", question: "Who was the founder of the Shunga dynasty, which succeeded the Mauryas?", options: ["Vasudeva", "Pushyamitra Shunga", "Simuka", "Gautamiputra"], correct: 1, explanation: "Pushyamitra Shunga, the commander-in-chief of the last Mauryan king Brihadratha, assassinated him and founded the dynasty." },
+        { id: 32, category: "ancient", question: "Which of the following Mahajanapadas was situated on the banks of the Godavari river?", options: ["Avanti", "Vatsa", "Assaka", "Kamboja"], correct: 2, explanation: "Assaka (or Ashmaka) was the only Mahajanapada situated south of the Vindhyas, along the Godavari river." },
+        { id: 33, category: "ancient", question: "The Indus Valley site known for lacking a citadel is:", options: ["Chanhudaro", "Lothal", "Surkotada", "Dholavira"], correct: 0, explanation: "Chanhudaro is uniquely recognized in Harappan archaeology as the only major city without a fortified citadel structure." },
+        { id: 34, category: "ancient", question: "Which ancient text is primarily a treatise on statecraft, economic policy, and military strategy?", options: ["Manusmriti", "Arthashastra", "Kamasutra", "Natya Shastra"], correct: 1, explanation: "The Arthashastra, authored by Chanakya (Kautilya), is a comprehensive ancient Indian treatise on statecraft." },
+        { id: 35, category: "ancient", question: "Which rock edict of Ashoka explicitly details the horrors of the Kalinga War?", options: ["Rock Edict XIII", "Rock Edict X", "Rock Edict VII", "Pillar Edict II"], correct: 0, explanation: "Major Rock Edict XIII mentions Ashoka's deep remorse over the devastation of the Kalinga war and his shift towards Dhamma." },
+        { id: 36, category: "ancient", question: "The philosophy of 'Advaita Vedanta' was systematically propounded by:", options: ["Ramanuja", "Madhvacharya", "Adi Shankaracharya", "Nimbarka"], correct: 2, explanation: "Adi Shankaracharya established the doctrine of Advaita Vedanta (non-dualism) in the 8th century CE." },
+        { id: 37, category: "ancient", question: "Which ruler defeated Harshavardhana on the banks of the Narmada river?", options: ["Pulakeshin II", "Mahendravarman I", "Vikramaditya", "Rajaraja Chola"], correct: 0, explanation: "The Chalukyan king Pulakeshin II successfully halted Harsha's southward expansion at the Narmada river." },
+        { id: 38, category: "ancient", question: "In ancient Indian history, 'Amatyas' referred to:", options: ["Military generals", "High-ranking civil officials", "Village headmen", "Spies"], correct: 1, explanation: "In the Mauryan and Gupta administrative frameworks, Amatyas were high-ranking civil servants or ministers." },
+        { id: 39, category: "ancient", question: "The Kailasanatha Temple at Ellora, carved out of a single rock, was built by which dynasty?", options: ["Chalukyas", "Rashtrakutas", "Pallavas", "Cholas"], correct: 1, explanation: "The Rashtrakuta king Krishna I commissioned the monumental monolithic Kailasanatha Temple at Ellora." },
+        { id: 40, category: "ancient", question: "Which era marks the beginning of the Saka Samvat (Saka Calendar) used by the Government of India?", options: ["58 BCE", "78 CE", "319 CE", "606 CE"], correct: 1, explanation: "The Saka era, which serves as the Indian national calendar, was established in 78 CE, historically associated with King Kanishka." },
+
+        // ==========================================
+        // MEDIEVAL HISTORY (40 ITEMS)
+        // ==========================================
+        { id: 41, category: "medieval", question: "Who was the military founder of the independent Delhi Sultanate (Slave Dynasty)?", options: ["Iltutmish", "Balban", "Qutub-ud-din Aibak", "Nasir-ud-din Mahmud"], correct: 2, explanation: "Following Muhammad Ghori's death in 1206, Qutub-ud-din Aibak assumed sovereign command over Lahore and Delhi." },
+        { id: 42, category: "medieval", question: "Which ruler completed the structural construction of the Qutub Minar?", options: ["Aibak", "Aram Shah", "Iltutmish", "Alauddin Khilji"], correct: 2, explanation: "Aibak initiated the foundation, but his successor Shams-ud-din Iltutmish added three storeys to complete it." },
+        { id: 43, category: "medieval", question: "Who introduced centralized market control and price regulation during the Delhi Sultanate?", options: ["Balban", "Jalaluddin Khilji", "Alauddin Khilji", "Firoz Shah Tughlaq"], correct: 2, explanation: "Alauddin Khilji created 'Shahna-i-Mandi' to regulate prices and maintain a massive standing army." },
+        { id: 44, category: "medieval", question: "Who was the first and only de jure woman ruler of the Delhi Sultanate?", options: ["Chand Bibi", "Razia Sultan", "Nur Jahan", "Rani Rudrama Devi"], correct: 1, explanation: "Razia Sultan, nominated by her father Iltutmish, governed the Sultanate from 1236 to 1240." },
+        { id: 45, category: "medieval", question: "Which Sultan issued token copper/brass coins to replace silver?", options: ["Ghiyasuddin Tughlaq", "Muhammad bin Tughlaq", "Firoz Shah Tughlaq", "Sikandar Lodi"], correct: 1, explanation: "Muhammad bin Tughlaq's token coinage standard collapsed due to widespread illegal forging." },
+        { id: 46, category: "medieval", question: "Which iron-willed Sultan crushed the elite political collective known as the 'Chahalgani'?", options: ["Iltutmish", "Razia", "Balban", "Alauddin Khilji"], correct: 2, explanation: "Balban systematically eliminated the Forty Nobles to restore absolute autocratic power to the monarchy." },
+        { id: 47, category: "medieval", question: "Which Mughal sovereign transferred the capital from Agra to Delhi in 1638?", options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"], correct: 2, explanation: "Shah Jahan commissioned Shahjahanabad (Old Delhi) and the Red Fort, shifting the capital." },
+        { id: 48, category: "medieval", question: "Who introduced the military-bureaucratic Mansabdari ranking matrix?", options: ["Babur", "Sher Shah Suri", "Akbar", "Shah Jahan"], correct: 2, explanation: "Akbar implemented the Mansabdari system. Officials held a dual score: Zat (rank) and Sawar (cavalry)." },
+        { id: 49, category: "medieval", question: "Which ruler is widely referred to as the 'Prince of Builders'?", options: ["Akbar", "Shah Jahan", "Jahangir", "Aurangzeb"], correct: 1, explanation: "Shah Jahan's reign is the peak of Indo-Islamic architecture (Taj Mahal, Pearl Mosque)." },
+        { id: 50, category: "medieval", question: "In which year was the 'Khalsa Panth' created by Guru Gobind Singh?", options: ["1526", "1675", "1699", "1708"], correct: 2, explanation: "On Baisakhi day in 1699, Guru Gobind Singh established the Khalsa order." },
+        { id: 51, category: "medieval", question: "The Bhakti Saint Kabir was born in which spiritual center?", options: ["Mathura", "Varanasi", "Prayagraj", "Haridwar"], correct: 1, explanation: "Saint Kabir lived and composed his influential verses in Varanasi (Kashi)." },
+        { id: 52, category: "medieval", question: "Which European traveler provided a detailed description of the Peacock Throne?", options: ["Tavernier", "Bernier", "Manucci", "Barbosa"], correct: 0, explanation: "Jean-Baptiste Tavernier, a French gem merchant, documented Shah Jahan's Peacock Throne." },
+        { id: 53, category: "medieval", question: "Which language evolved as a 'Camp Language' (Lashkari) within medieval barracks?", options: ["Persian", "Arabic", "Urdu", "Turkish"], correct: 2, explanation: "Urdu developed as a bridge, blending Khari Boli with Persian, Arabic, and Turkish." },
+        { id: 54, category: "medieval", question: "The poet-saint Meerabai belonged to the royal line of which state?", options: ["Marwar", "Mewar", "Amber", "Bundelkhand"], correct: 1, explanation: "Meerabai was born in Marwar but married into the premier royal clan of Mewar." },
+        { id: 55, category: "medieval", question: "The Battle of Talikota (1565) precipitated the collapse of which empire?", options: ["Bahmani Sultanate", "Chola Empire", "Vijayanagar Empire", "Maratha Confederacy"], correct: 2, explanation: "The Deccan Sultanates defeated Vijayanagar at Talikota, destroying the capital Hampi." },
+        { id: 56, category: "medieval", question: "Who was the founder of the Bahmani Sultanate?", options: ["Mahmud Gawan", "Alauddin Hasan Bahman Shah", "Firuz Shah Bahmani", "Quli Qutb Shah"], correct: 1, explanation: "Hasan Gangu established the Bahmani Sultanate in 1347, taking the title Alauddin Hasan Bahman Shah." },
+        { id: 57, category: "medieval", question: "Which Delhi Sultan is credited with establishing a separate department for slaves (Diwan-i-Bandagan)?", options: ["Iltutmish", "Alauddin Khilji", "Muhammad bin Tughlaq", "Firoz Shah Tughlaq"], correct: 3, explanation: "Firoz Shah Tughlaq maintained a massive contingent of slaves and established the Diwan-i-Bandagan to manage them." },
+        { id: 58, category: "medieval", question: "The First Battle of Panipat (1526) was fought between Babur and:", options: ["Rana Sanga", "Ibrahim Lodi", "Hem Chandra Vikramaditya", "Sikandar Lodi"], correct: 1, explanation: "Babur utilized artillery and the Tulughma formation to defeat Ibrahim Lodi, effectively ending the Delhi Sultanate." },
+        { id: 59, category: "medieval", question: "Which ruler built the Grand Trunk Road connecting Bengal to Peshawar?", options: ["Akbar", "Sher Shah Suri", "Shah Jahan", "Alauddin Khilji"], correct: 1, explanation: "Sher Shah Suri of the Sur Empire built the 'Sadak-e-Azam' (Grand Trunk Road) to facilitate imperial trade and military movement." },
+        { id: 60, category: "medieval", question: "Tansen, the legendary musician, adorned the court of which Mughal Emperor?", options: ["Babur", "Humayun", "Akbar", "Jahangir"], correct: 2, explanation: "Tansen (Ramtanu Pandey) was one of the Navaratnas (Nine Gems) in the court of Emperor Akbar." },
+        { id: 61, category: "medieval", question: "The revenue system 'Zabt' or 'Dahsala' under Akbar was devised by:", options: ["Abul Fazl", "Man Singh", "Todar Mal", "Birbal"], correct: 2, explanation: "Raja Todar Mal, Akbar's finance minister, devised the Dahsala system based on a 10-year average of crop yields and prices." },
+        { id: 62, category: "medieval", question: "Who wrote 'Humayun-nama', an authoritative biographical account of Emperor Humayun?", options: ["Abul Fazl", "Gulbadan Begum", "Badauni", "Jahangir"], correct: 1, explanation: "Gulbadan Begum, Babur's daughter and Humayun's half-sister, authored the Humayun-nama at Akbar's request." },
+        { id: 63, category: "medieval", question: "Chhatrapati Shivaji Maharaj was crowned formally in 1674 at which fort?", options: ["Pune", "Raigad", "Pratapgad", "Shivneri"], correct: 1, explanation: "Shivaji was formally crowned as the Chhatrapati (Emperor) of the Maratha Empire at Raigad fort." },
+        { id: 64, category: "medieval", question: "In the Maratha administration (Ashtapradhan), the 'Peshwa' was equivalent to:", options: ["Commander-in-Chief", "Foreign Minister", "Prime Minister", "Finance Minister"], correct: 2, explanation: "The Peshwa served as the Prime Minister or Chief Minister, the highest administrative post under the Chhatrapati." },
+        { id: 65, category: "medieval", question: "Who was the Sikh Guru executed by the Mughal Emperor Aurangzeb?", options: ["Guru Arjan Dev", "Guru Har Gobind", "Guru Tegh Bahadur", "Guru Gobind Singh"], correct: 2, explanation: "The 9th Sikh Guru, Guru Tegh Bahadur, was executed by Aurangzeb in Delhi (1675) for refusing to convert." },
+        { id: 66, category: "medieval", question: "The famous Gol Gumbaz, possessing one of the largest domes in the world, is located in:", options: ["Hyderabad", "Bijapur", "Bidar", "Golconda"], correct: 1, explanation: "Gol Gumbaz is the mausoleum of Mohammed Adil Shah, located in Bijapur (Vijayapura), Karnataka." },
+        { id: 67, category: "medieval", question: "Which Sufi saint's dargah is located at Ajmer?", options: ["Nizamuddin Auliya", "Moinuddin Chishti", "Salim Chishti", "Baba Farid"], correct: 1, explanation: "The dargah of the revered Sufi saint Khwaja Moinuddin Chishti, founder of the Chishti order in India, is in Ajmer." },
+        { id: 68, category: "medieval", question: "The Battle of Haldighati (1576) was fought between the forces of Akbar and:", options: ["Rana Sanga", "Maharana Pratap", "Hem Chandra", "Shivaji"], correct: 1, explanation: "The Mughal army, led by Man Singh I, fought against the Rajput forces of Maharana Pratap of Mewar." },
+        { id: 69, category: "medieval", question: "During whose reign did the Moroccan traveler Ibn Battuta visit India?", options: ["Alauddin Khilji", "Muhammad bin Tughlaq", "Firoz Shah Tughlaq", "Sikandar Lodi"], correct: 1, explanation: "Ibn Battuta visited India during the reign of Muhammad bin Tughlaq, who appointed him as a Qazi in Delhi." },
+        { id: 70, category: "medieval", question: "Which Rajput king built the astronomical observatories known as Jantar Mantar?", options: ["Rana Kumbha", "Raja Man Singh", "Sawai Jai Singh II", "Prithviraj Chauhan"], correct: 2, explanation: "Maharaja Sawai Jai Singh II of Jaipur constructed five astronomical observatories, including the famous ones in Jaipur and Delhi." },
+        { id: 71, category: "medieval", question: "The silver coin 'Rupiya' was first issued by:", options: ["Akbar", "Sher Shah Suri", "Alauddin Khilji", "Iltutmish"], correct: 1, explanation: "Sher Shah Suri introduced the heavy silver coin called the 'Rupiya', which became the precursor to the modern Rupee." },
+        { id: 72, category: "medieval", question: "Who among the following was a contemporary of Genghis Khan?", options: ["Iltutmish", "Balban", "Alauddin Khilji", "Muhammad bin Tughlaq"], correct: 0, explanation: "Iltutmish tactfully saved the Delhi Sultanate from the wrath of Genghis Khan by refusing asylum to the fugitive Jalal al-Din Mangburni." },
+        { id: 73, category: "medieval", question: "What was the official language of the Delhi Sultanate?", options: ["Arabic", "Urdu", "Persian", "Turkish"], correct: 2, explanation: "Persian was the official court and administrative language of both the Delhi Sultanate and the Mughal Empire." },
+        { id: 74, category: "medieval", question: "The foreign traveler Abdur Razzaq visited Vijayanagar during the reign of:", options: ["Harihara I", "Krishnadevaraya", "Deva Raya II", "Achyuta Raya"], correct: 2, explanation: "Abdur Razzaq, a Persian ambassador, visited the magnificent Vijayanagar Empire during the reign of Deva Raya II." },
+        { id: 75, category: "medieval", question: "The 'Ibadat Khana' (House of Worship) at Fatehpur Sikri was built by Akbar to:", options: ["Train military generals", "Discuss religious and spiritual matters", "House foreign diplomats", "Store the royal treasury"], correct: 1, explanation: "Akbar built the Ibadat Khana to facilitate theological and philosophical debates among scholars of various religions." },
+        { id: 76, category: "medieval", question: "Which dynasty ruled the Delhi Sultanate for the shortest duration?", options: ["Slave", "Khilji", "Tughlaq", "Lodi"], correct: 1, explanation: "The Khilji dynasty ruled for the shortest period (1290-1320), while the Tughlaq dynasty ruled the longest." },
+        { id: 77, category: "medieval", question: "The capital of the Chola Empire under Rajendra I was shifted to:", options: ["Tanjore", "Gangaikonda Cholapuram", "Madurai", "Kanchipuram"], correct: 1, explanation: "After his victorious campaign to the Ganges, Rajendra Chola I built the new capital, Gangaikonda Cholapuram." },
+        { id: 78, category: "medieval", question: "Which Mughal emperor assumed the title 'Alamgir' (Conqueror of the World)?", options: ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"], correct: 3, explanation: "Aurangzeb adopted the regal title Alamgir upon ascending the Mughal throne." },
+        { id: 79, category: "medieval", question: "The Treaty of Purandar (1665) was signed between Shivaji and which Mughal commander?", options: ["Shaista Khan", "Jai Singh I", "Afzal Khan", "Dilir Khan"], correct: 1, explanation: "Raja Jai Singh I, acting on behalf of Aurangzeb, forced Shivaji to sign the Treaty of Purandar, surrendering several forts." },
+        { id: 80, category: "medieval", question: "Which architectural marvel is widely regarded as the 'Magna Carta' of Islamic architecture in India?", options: ["Taj Mahal", "Qutub Minar", "Alai Darwaza", "Jama Masjid"], correct: 2, explanation: "The Alai Darwaza, built by Alauddin Khilji, is celebrated for its perfect symmetry and early use of the true arch and dome." },
+
+        // ==========================================
+        // MODERN HISTORY (40 ITEMS)
+        // ==========================================
+        { id: 81, category: "modern", question: "Who initiated the formation of the Indian National Congress in 1885?", options: ["Lord Dufferin", "A.O. Hume", "Sir William Wedderburn", "Dinshaw Wacha"], correct: 1, explanation: "A.O. Hume acted as a key catalyst to organize the Indian National Congress." },
+        { id: 82, category: "modern", question: "The Cabinet Mission of 1946 was formally led by:", options: ["Stafford Cripps", "A.V. Alexander", "Pethick Lawrence", "Lord Wavell"], correct: 2, explanation: "The three-member Cabinet Mission was headed directly by Sir Pethick Lawrence." },
+        { id: 83, category: "modern", question: "'Swaraj is my birthright and I shall have it' was declared by:", options: ["Gokhale", "Bal Gangadhar Tilak", "Bipin Chandra Pal", "Lala Lajpat Rai"], correct: 1, explanation: "Lokmanya Tilak used this slogan to energize the radical nationalist wing." },
+        { id: 84, category: "modern", question: "The Jallianwala Bagh massacre occurred on which date?", options: ["April 13, 1919", "March 18, 1919", "August 15, 1920", "January 26, 1919"], correct: 0, explanation: "On Baisakhi, April 13, 1919, General Dyer fired on a peaceful gathering in Amritsar." },
+        { id: 85, category: "modern", question: "The 'Quit India Movement' was launched in which year?", options: ["1920", "1930", "1942", "1946"], correct: 2, explanation: "On August 8, 1942, the AICC passed the Quit India Resolution ('Do or Die')." },
+        { id: 86, category: "modern", question: "Which agreement preserved general electorates while granting reserved seats for depressed classes?", options: ["Lucknow Pact", "Gandhi-Irwin Pact", "Poona Pact", "Simla Accord"], correct: 2, explanation: "The Poona Pact (1932) was signed by Ambedkar and Malaviya to reject the Communal Award." },
+        { id: 87, category: "modern", question: "Which military engagement laid the political foundation of the British in Bengal?", options: ["Buxar (1764)", "Plassey (1757)", "Panipat (1761)", "Wandiwash (1760)"], correct: 1, explanation: "Clive's victory at the Battle of Plassey (1757) established Company military dominance." },
+        { id: 88, category: "modern", question: "Who founded the 'Brahmo Samaj' in Calcutta in 1828?", options: ["Vivekananda", "Raja Ram Mohan Roy", "Vidyasagar", "Keshub Chandra Sen"], correct: 1, explanation: "Raja Ram Mohan Roy, 'Father of the Indian Renaissance,' founded the Brahmo Samaj." },
+        { id: 89, category: "modern", question: "The administrative system of 'Dyarchy' was introduced by:", options: ["Indian Councils Act 1909", "Govt of India Act 1919", "Govt of India Act 1935", "Independence Act 1947"], correct: 1, explanation: "The Govt of India Act 1919 (Mont-Ford Reforms) split provincial portfolios." },
+        { id: 90, category: "modern", question: "Who was the last prominent ruling Peshwa of the Maratha Empire?", options: ["Baji Rao I", "Balaji Baji Rao", "Madhavrao I", "Baji Rao II"], correct: 3, explanation: "Baji Rao II was defeated in 1818, after which the British exiled him on pension." },
+        { id: 91, category: "modern", question: "Which Mughal Emperor abolished the Jaziya tax?", options: ["Babur", "Akbar", "Shah Jahan", "Aurangzeb"], correct: 1, explanation: "Akbar abolished Jaziya in 1564. Aurangzeb later re-imposed it." },
+        { id: 92, category: "modern", question: "Who was the Governor-General during the Revolt of 1857?", options: ["Dalhousie", "Canning", "Elgin", "Lawrence"], correct: 1, explanation: "Lord Canning was the final Governor-General under EIC and the first Viceroy." },
+        { id: 93, category: "modern", question: "Which coastal location was the primary French settlement?", options: ["Goa", "Calicut", "Pondicherry", "Surat"], correct: 2, explanation: "Francois Martin established Pondicherry in 1674 for the French." },
+        { id: 94, category: "modern", question: "The 'Bardoli Satyagraha' (1928) was led by:", options: ["Gandhi", "Sardar Vallabhbhai Patel", "Nehru", "Morarji Desai"], correct: 1, explanation: "Vallabhbhai Patel's success here earned him the title 'Sardar'." },
+        { id: 95, category: "modern", question: "Who was the final executive British Viceroy of India?", options: ["Linlithgow", "Wavell", "Mountbatten", "Rajagopalachari"], correct: 2, explanation: "Lord Mountbatten oversaw the partition and transition of power in 1947." },
+        { id: 96, category: "modern", question: "What was the original name of Swami Dayanand Saraswati?", options: ["Narendra Nath", "Mula Shankar", "Ghadadhar", "Vardhamana"], correct: 1, explanation: "The Arya Samaj founder was born Mula Shankar in Gujarat." },
+        { id: 97, category: "modern", question: "Who was the first Indian to pass the Indian Civil Service (ICS) examination?", options: ["Satyendranath Tagore", "Subhas Chandra Bose", "Surendranath Banerjee", "Dadabhai Naoroji"], correct: 0, explanation: "Satyendranath Tagore, elder brother of Rabindranath Tagore, was the first Indian to join the ICS in 1863." },
+        { id: 98, category: "modern", question: "The Vernacular Press Act, which curtailed the freedom of Indian-language press, was enacted by:", options: ["Lord Lytton", "Lord Ripon", "Lord Curzon", "Lord Dalhousie"], correct: 0, explanation: "Lord Lytton passed the draconian Vernacular Press Act in 1878. It was later repealed by Lord Ripon." },
+        { id: 99, category: "modern", question: "Who is known as the 'Grand Old Man of India' and authored 'Poverty and Un-British Rule in India'?", options: ["Gopal Krishna Gokhale", "W.C. Banerjee", "Dadabhai Naoroji", "Badruddin Tyabji"], correct: 2, explanation: "Dadabhai Naoroji formulated the 'Drain of Wealth' theory exposing British economic exploitation." },
+        { id: 100, category: "modern", question: "The Partition of Bengal (1905) was executed during the viceroyalty of:", options: ["Lord Minto", "Lord Curzon", "Lord Hardinge", "Lord Chelmsford"], correct: 1, explanation: "Lord Curzon partitioned Bengal in 1905, officially for administrative convenience but practically to divide nationalist sentiment." },
+        { id: 101, category: "modern", question: "Who founded the 'Ghadar Party' in San Francisco in 1913?", options: ["Lala Hardayal", "Bhagat Singh", "V.D. Savarkar", "Chandra Shekhar Azad"], correct: 0, explanation: "Lala Hardayal and Sohan Singh Bhakna founded the Ghadar Party to orchestrate an armed rebellion against British rule." },
+        { id: 102, category: "modern", question: "The historic Lucknow Pact of 1916 achieved a political alliance between the INC and:", options: ["The British Government", "The Muslim League", "The Swaraj Party", "The Justice Party"], correct: 1, explanation: "The Lucknow Pact united the moderate and extremist INC factions and forged a joint platform with the All India Muslim League." },
+        { id: 103, category: "modern", question: "Which movement was launched by Mahatma Gandhi in 1920 in support of the Ottoman Caliphate?", options: ["Civil Disobedience", "Champaran Satyagraha", "Non-Cooperation-Khilafat", "Quit India"], correct: 2, explanation: "Gandhi merged the Khilafat Movement with the Non-Cooperation Movement to forge Hindu-Muslim unity against the British." },
+        { id: 104, category: "modern", question: "The incident at Chauri Chaura (1922) led to the abrupt suspension of which movement?", options: ["Swadeshi Movement", "Non-Cooperation Movement", "Civil Disobedience Movement", "Quit India Movement"], correct: 1, explanation: "Following mob violence against police in Chauri Chaura, a distressed Gandhi halted the Non-Cooperation Movement." },
+        { id: 105, category: "modern", question: "Who were the primary founders of the Swaraj Party in 1923?", options: ["Gandhi & Nehru", "C.R. Das & Motilal Nehru", "Subhas Bose & Patel", "Tilak & Annie Besant"], correct: 1, explanation: "C.R. Das and Motilal Nehru founded the Swaraj Party to advocate fighting the British system from within the legislative councils." },
+        { id: 106, category: "modern", question: "The demand for 'Purna Swaraj' (Complete Independence) was formalized at which INC session in 1929?", options: ["Surat", "Calcutta", "Lahore", "Karachi"], correct: 2, explanation: "Under Jawaharlal Nehru's presidency, the Lahore session declared Purna Swaraj as the ultimate goal of the Congress." },
+        { id: 107, category: "modern", question: "Mahatma Gandhi's famous Dandi March (1930) marked the beginning of:", options: ["Non-Cooperation Movement", "Civil Disobedience Movement", "Quit India Movement", "Rowlatt Satyagraha"], correct: 1, explanation: "The Salt March to Dandi systematically broke the British salt monopoly, launching the nationwide Civil Disobedience Movement." },
+        { id: 108, category: "modern", question: "Who was the first Indian woman to become the President of the Indian National Congress?", options: ["Annie Besant", "Sarojini Naidu", "Aruna Asaf Ali", "Sucheta Kriplani"], correct: 1, explanation: "Sarojini Naidu presided over the Kanpur session in 1925. (Annie Besant was the first woman, but not Indian)." },
+        { id: 109, category: "modern", question: "The Forward Bloc political party was established by whom after resigning from the INC presidency?", options: ["Jawaharlal Nehru", "C. Rajagopalachari", "Subhas Chandra Bose", "Jayaprakash Narayan"], correct: 2, explanation: "Subhas Chandra Bose founded the Forward Bloc in 1939 to consolidate leftist and radical forces within the national movement." },
+        { id: 110, category: "modern", question: "Which British plan formally proposed the partition of India into two independent dominions?", options: ["Cripps Mission", "Wavell Plan", "Cabinet Mission", "Mountbatten Plan (June 3 Plan)"], correct: 3, explanation: "The Mountbatten Plan (June 3, 1947) outlined the final mechanism for partitioning British India into India and Pakistan." },
+        { id: 111, category: "modern", question: "The 'Doctrine of Lapse', used to annex Indian princely states lacking biological heirs, was devised by:", options: ["Lord Wellesley", "Lord Dalhousie", "Lord Hastings", "Lord Cornwallis"], correct: 1, explanation: "Lord Dalhousie aggressively utilized the Doctrine of Lapse to annex states like Satara, Jhansi, and Nagpur." },
+        { id: 112, category: "modern", question: "Who was the founder of the Ramakrishna Mission?", options: ["Ramakrishna Paramahamsa", "Swami Vivekananda", "Raja Ram Mohan Roy", "Dayanand Saraswati"], correct: 1, explanation: "Swami Vivekananda founded the Mission in 1897 to propagate the humanitarian and spiritual teachings of his guru, Ramakrishna." },
+        { id: 113, category: "modern", question: "The historic 'Kakori Train Robbery' (1925) was executed by revolutionaries belonging to which organization?", options: ["Anushilan Samiti", "Ghadar Party", "Hindustan Republican Association (HRA)", "Indian National Army"], correct: 2, explanation: "Ram Prasad Bismil, Ashfaqulla Khan, and other HRA members orchestrated the Kakori conspiracy to fund armed rebellion." },
+        { id: 114, category: "modern", question: "Who introduced the Permanent Settlement of Bengal in 1793 to stabilize land revenue?", options: ["Warren Hastings", "Lord Cornwallis", "Lord Wellesley", "Thomas Munro"], correct: 1, explanation: "Lord Cornwallis introduced the Zamindari system (Permanent Settlement), making Zamindars hereditary owners of land." },
+        { id: 115, category: "modern", question: "The First Anglo-Mysore War (1767-1769) was fought between the British and:", options: ["Tipu Sultan", "Hyder Ali", "The Nizam of Hyderabad", "The Marathas"], correct: 1, explanation: "Hyder Ali, the ruler of Mysore, fought the British in the First Anglo-Mysore War, concluding with the Treaty of Madras." },
+        { id: 116, category: "modern", question: "Who authored the patriotic song 'Vande Mataram'?", options: ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Muhammad Iqbal", "Sarojini Naidu"], correct: 1, explanation: "Bankim Chandra Chatterjee composed 'Vande Mataram' in Sanskritized Bengali within his seminal novel, Anandamath." },
+        { id: 117, category: "modern", question: "Which Governor-General abolished the practice of Sati in 1829?", options: ["Lord William Bentinck", "Lord Dalhousie", "Lord Hastings", "Lord Ripon"], correct: 0, explanation: "Supported by Raja Ram Mohan Roy, Lord William Bentinck enacted the Bengal Sati Regulation outlawing the practice." },
+        { id: 118, category: "modern", question: "The first passenger railway train in India (1853) ran between:", options: ["Calcutta to Hooghly", "Bombay to Thane", "Madras to Arcot", "Delhi to Agra"], correct: 1, explanation: "Under Lord Dalhousie, the first commercial railway line operated along a 34 km route from Bombay to Thane." },
+        { id: 119, category: "modern", question: "Who was the defense lawyer for the Indian National Army (INA) trials at the Red Fort in 1945?", options: ["Bhulabhai Desai", "Jawaharlal Nehru", "Tej Bahadur Sapru", "All of the above"], correct: 3, explanation: "The INA Defense Committee prominently featured Bhulabhai Desai, alongside Nehru, Sapru, and K.N. Katju, defending the captured officers." },
+        { id: 120, category: "modern", question: "Who was the first Governor-General of independent, post-partition India?", options: ["C. Rajagopalachari", "Lord Mountbatten", "Jawaharlal Nehru", "Rajendra Prasad"], correct: 1, explanation: "Lord Mountbatten stayed on as the first Governor-General of free India. C. Rajagopalachari became the first (and only) Indian Governor-General after him." }
+    ];
+
+    // Core Runtime Application State Architecture
+    let EngineState = {
+        activeRoute: "dashboard",
+        activeMode: "exam", // exam | practice
+        activeCategory: "all",
+        activeQuestionsList: [],
+        currentQuestionIndex: 0,
+        userResponses: {}, // questionId -> selectedOptionIndex
+        markedForReview: new Set(),
+        timerInterval: null,
+        secondsRemaining: 0,
+        metricsHistory: { completed: 0, highestScore: 0, sumAccuracy: 0 }
+    };
+
+    // Initialize metrics on startup
+    document.addEventListener("DOMContentLoaded", () => {
+        loadMetricsFromStorage();
+        router("dashboard");
+    });
+
+    function loadMetricsFromStorage() {
+        const cache = localStorage.getItem("cgl_engine_cache");
+        if (cache) {
+            EngineState.metricsHistory = JSON.parse(cache);
+        }
+        updateDashboardMetricsUI();
+    }
+
+    function saveMetricsToStorage() {
+        localStorage.setItem("cgl_engine_cache", JSON.stringify(EngineState.metricsHistory));
+        updateDashboardMetricsUI();
+    }
+
+    function updateDashboardMetricsUI() {
+        document.getElementById("stat-completed").innerText = EngineState.metricsHistory.completed;
+        document.getElementById("stat-highscore").innerText = EngineState.metricsHistory.highestScore + "%";
+        
+        let avgAcc = EngineState.metricsHistory.completed > 0 
+            ? Math.round(EngineState.metricsHistory.sumAccuracy / EngineState.metricsHistory.completed) 
+            : 0;
+            
+        document.getElementById("stat-accuracy").innerText = avgAcc + "%";
+        document.getElementById("sb-accuracy").innerText = avgAcc + "%";
+        document.getElementById("sb-total-pool").innerText = MasterDatasetPool.length + " Items";
+    }
+
+    // Central Route Orchestrator Switch
+    function router(targetRoute) {
+        EngineState.activeRoute = targetRoute;
+        
+        // UI visibility sync
+        document.querySelectorAll("[id^='screen-']").forEach(el => el.classList.add("hidden"));
+        document.getElementById("screen-" + targetRoute).classList.remove("hidden");
+
+        // Sync routing button style indicators
+        document.querySelectorAll(".sidebar-btn, .nav-btn").forEach(btn => btn.classList.remove("active-nav"));
+        
+        const deskBtn = document.getElementById("route-" + targetRoute);
+        const mobBtn = document.getElementById("mb-route-" + targetRoute);
+        if (deskBtn) deskBtn.classList.add("active-nav");
+        if (mobBtn) mobBtn.classList.add("active-nav");
+
+        // If shifting back out of active quiz, break interval loops safely
+        if (targetRoute !== "quiz" && EngineState.timerInterval) {
+            clearInterval(EngineState.timerInterval);
+        }
+    }
+
+    // Simulation Assembly Engine: builds a balanced or custom question set
+    function initiateQuiz(category) {
+        EngineState.activeCategory = category;
+        const selectedMode = document.getElementById("config-mode") ? document.getElementById("config-mode").value : "exam";
+        EngineState.activeMode = selectedMode;
+
+        let trackingPool = [];
+        if (category === "all") {
+            // Build a balanced 25-question set (e.g., 9 Ancient, 8 Medieval, 8 Modern)
+            let anc = MasterDatasetPool.filter(q => q.category === "ancient").sort(() => 0.5 - Math.random()).slice(0, 9);
+            let med = MasterDatasetPool.filter(q => q.category === "medieval").sort(() => 0.5 - Math.random()).slice(0, 8);
+            let mod = MasterDatasetPool.filter(q => q.category === "modern").sort(() => 0.5 - Math.random()).slice(0, 8);
+            trackingPool = [...anc, ...med, ...mod].sort(() => 0.5 - Math.random());
+        } else {
+            // Load the entire section pool for targeted practice
+            trackingPool = MasterDatasetPool.filter(q => q.category === category).sort(() => 0.5 - Math.random());
+        }
+
+        // Reset runtime matrices arrays
+        EngineState.activeQuestionsList = trackingPool;
+        EngineState.currentQuestionIndex = 0;
+        EngineState.userResponses = {};
+        EngineState.markedForReview.clear();
+
+        // Configure UI Mode variants
+        const badge = document.getElementById("quiz-badge");
+        const scope = document.getElementById("quiz-scope");
+        scope.innerText = (category === "all" ? "Comprehensive Mock" : category.toUpperCase() + " Unit Module");
+
+        if (EngineState.activeMode === "exam") {
+            badge.innerText = "EXAM MODE";
+            badge.className = "text-[10px] font-bold font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/30";
+            document.getElementById("timer-box").classList.remove("hidden");
+            // Set allocation time to 1 minute per question
+            EngineState.secondsRemaining = EngineState.activeQuestionsList.length * 60; 
+            startTimerCountdown();
+        } else {
+            badge.innerText = "PRACTICE MODE";
+            badge.className = "text-[10px] font-bold font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30";
+            document.getElementById("timer-box").classList.add("hidden");
+        }
+
+        renderPaletteMatrix();
+        renderActiveQuestionCard();
+        router("quiz");
+    }
+
+    // Timer Thread Loop Operations
+    function startTimerCountdown() {
+        if (EngineState.timerInterval) clearInterval(EngineState.timerInterval);
+        
+        updateTimerDisplay();
+        EngineState.timerInterval = setInterval(() => {
+            EngineState.secondsRemaining--;
+            updateTimerDisplay();
+            
+            if (EngineState.secondsRemaining <= 0) {
+                clearInterval(EngineState.timerInterval);
+                alert("Time limit reached. Processing responses automatically.");
+                evaluateSimulationAndCompileReport();
+            }
+        }, 1000);
+    }
+
+    function updateTimerDisplay() {
+        const m = Math.floor(EngineState.secondsRemaining / 60).toString().padStart(2, '0');
+        const s = (EngineState.secondsRemaining % 60).toString().padStart(2, '0');
+        document.getElementById("test-timer").innerText = `${m}:${s}`;
+        
+        // Alert styling for final 2 minutes
+        if (EngineState.secondsRemaining < 120) {
+            document.getElementById("timer-box").classList.add("border-red-500/40", "text-red-400");
+        } else {
+            document.getElementById("timer-box").classList.remove("border-red-500/40", "text-red-400");
+        }
+    }
+
+    // Active Card Construction Core Rendering
+    function renderActiveQuestionCard() {
+        const qIdx = EngineState.currentQuestionIndex;
+        const question = EngineState.activeQuestionsList[qIdx];
+        if (!question) return;
+
+        // Progress Metrics Rendering updates
+        const progressPct = ((qIdx + 1) / EngineState.activeQuestionsList.length) * 100;
+        document.getElementById("quiz-progress").style.width = progressPct + "%";
+        document.getElementById("q-index-label").innerText = `Question ${String(qIdx + 1).padStart(2, '0')} of ${EngineState.activeQuestionsList.length}`;
+        document.getElementById("quiz-question-text").innerText = question.question;
+        document.getElementById("q-weightage-tag").innerText = `20-YR PYQ [${question.category.toUpperCase()}]`;
+
+        // Clear and reconstruct options
+        const matrixContainer = document.getElementById("quiz-options-matrix");
+        matrixContainer.innerHTML = "";
+
+        const savedSelection = EngineState.userResponses[question.id];
+
+        question.options.forEach((opt, idx) => {
+            const btn = document.createElement("button");
+            btn.className = "w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between text-xs sm:text-sm font-medium ";
+            
+            // Layout styling matrices arrays definitions
+            let baseStyles = "border-slate-800 bg-slate-900/40 hover:bg-slate-800/60 hover:border-slate-700 text-slate-300";
+            let selectStyles = "border-amber-500 bg-amber-500/5 text-amber-400 font-bold shadow-md";
+            let correctStyles = "border-emerald-500 bg-emerald-500/10 text-emerald-400 font-bold";
+            let failureStyles = "border-red-500 bg-red-500/10 text-red-400 font-bold";
+
+            btn.className += baseStyles;
+
+            // Prefix labeling options matching index values
+            const letterPrefix = String.fromCharCode(65 + idx);
+            btn.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <span class="mono text-xs px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400 font-bold">${letterPrefix}</span>
+                    <span>${opt}</span>
+                </div>
+                <div class="option-indicator font-mono text-xs"></div>
+            `;
+
+            // Interaction evaluation hooks depend on configuration profiles
+            if (EngineState.activeMode === "practice") {
+                if (savedSelection !== undefined) {
+                    // Lock input arrays, evaluate layout visually
+                    btn.disabled = true;
+                    if (idx === question.correct) {
+                        btn.className = btn.className.replace(baseStyles, correctStyles);
+                        btn.querySelector(".option-indicator").innerText = "✓ CORRECT";
+                    } else if (idx === savedSelection) {
+                        btn.className = btn.className.replace(baseStyles, failureStyles);
+                        btn.querySelector(".option-indicator").innerText = "✕ WRONG";
+                    }
+                } else {
+                    // Click handler for unattempted option
+                    btn.onclick = () => selectOptionPracticeMode(question.id, idx);
+                }
+            } else {
+                // Exam Mode configuration profiles
+                if (savedSelection === idx) {
+                    btn.className = btn.className.replace(baseStyles, selectStyles);
+                    btn.querySelector(".option-indicator").innerHTML = `<span class="text-amber-400">● SELECTED</span>`;
+                }
+                btn.onclick = () => selectOptionExamMode(question.id, idx);
+            }
+
+            matrixContainer.appendChild(btn);
+        });
+
+        // Toggle explanation containers under practice modules explicitly
+        const expBox = document.getElementById("quiz-explanation-box");
+        if (EngineState.activeMode === "practice" && savedSelection !== undefined) {
+            document.getElementById("quiz-explanation-text").innerText = question.explanation;
+            expBox.classList.remove("hidden");
+        } else {
+            expBox.classList.add("hidden");
+        }
+
+        // Enable or disable functional navigation endpoints matching position thresholds
+        document.getElementById("btn-quiz-prev").disabled = (qIdx === 0);
+        
+        const nextBtn = document.getElementById("btn-quiz-next");
+        if (qIdx === EngineState.activeQuestionsList.length - 1) {
+            nextBtn.innerText = "Finish Simulation";
+            nextBtn.className = nextBtn.className.replace("bg-amber-500", "bg-emerald-600").replace("text-slate-950", "text-white");
+        } else {
+            nextBtn.innerText = "Save & Next →";
+            nextBtn.className = nextBtn.className.replace("bg-emerald-600", "bg-amber-500").replace("text-white", "text-slate-950");
+        }
+    }
+
+    // Option selection in Practice Mode
+    function selectOptionPracticeMode(qId, optIdx) {
+        EngineState.userResponses[qId] = optIdx;
+        renderActiveQuestionCard();
+        renderPaletteMatrix();
+    }
+
+    // Option selection in Exam Mode
+    function selectOptionExamMode(qId, optIdx) {
+        EngineState.userResponses[qId] = optIdx;
+        renderActiveQuestionCard();
+        renderPaletteMatrix();
+    }
+
+    // Nav Action Panel handlers
+    function handleOptionAction(action) {
+        const question = EngineState.activeQuestionsList[EngineState.currentQuestionIndex];
+        if (!question) return;
+
+        if (action === "clear") {
+            delete EngineState.userResponses[question.id];
+            EngineState.markedForReview.delete(question.id);
+        } else if (action === "review") {
+            EngineState.markedForReview.add(question.id);
+        }
+        renderActiveQuestionCard();
+        renderPaletteMatrix();
+    }
+
+    // Position Increment Navigation Index Orchestrator
+    function navigateQuestionIndex(direction) {
+        if (direction === "prev" && EngineState.currentQuestionIndex > 0) {
+            EngineState.currentQuestionIndex--;
+            renderActiveQuestionCard();
+        } else if (direction === "next") {
+            if (EngineState.currentQuestionIndex < EngineState.activeQuestionsList.length - 1) {
+                EngineState.currentQuestionIndex++;
+                renderActiveQuestionCard();
+            } else {
+                terminateSimulationConfirm();
+            }
+        }
+    }
+
+    // Palette Matrix Grid Processing Engine
+    function renderPaletteMatrix() {
+        const gridContainer = document.getElementById("desktop-palette-grid");
+        if (!gridContainer) return;
+        gridContainer.innerHTML = "";
+
+        EngineState.activeQuestionsList.forEach((q, idx) => {
+            const block = document.createElement("button");
+            block.className = "h-9 w-full rounded-lg font-mono text-xs font-bold transition-all flex items-center justify-center border border-transparent ";
+            
+            // Evaluate state definitions matrices patterns
+            if (EngineState.currentQuestionIndex === idx) {
+                block.className += " ring-2 ring-amber-400 ring-offset-2 ring-offset-slate-950 ";
+            }
+
+            if (EngineState.markedForReview.has(q.id)) {
+                block.className += "status-review";
+            } else if (EngineState.userResponses[q.id] !== undefined) {
+                block.className += "status-answered";
+            } else {
+                block.className += "status-unvisited";
+            }
+
+            block.innerText = String(idx + 1).padStart(2, '0');
+            block.onclick = () => {
+                EngineState.currentQuestionIndex = idx;
+                renderActiveQuestionCard();
+            };
+
+            gridContainer.appendChild(block);
+        });
+    }
+
+    // Termination Prompt Safeguards verification layers
+    function terminateSimulationConfirm() {
+        let total = EngineState.activeQuestionsList.length;
+        let answered = Object.keys(EngineState.userResponses).length;
+        let unattempted = total - answered;
+
+        let promptMsg = `Are you sure you want to submit this examination?\n\nTotal Questions: ${total}\nAnswered: ${answered}\nUnattempted: ${unattempted}`;
+        if (confirm(promptMsg)) {
+            evaluateSimulationAndCompileReport();
+        }
+    }
+
+    // Evaluator Matrix Engine processing
+    function evaluateSimulationAndCompileReport() {
+        if (EngineState.timerInterval) clearInterval(EngineState.timerInterval);
+
+        let correctCount = 0;
+        let wrongCount = 0;
+        let skippedCount = 0;
+
+        const ledgerContainer = document.getElementById("results-review-ledger");
+        ledgerContainer.innerHTML = "";
+
+        EngineState.activeQuestionsList.forEach((question, idx) => {
+            const userAns = EngineState.userResponses[question.id];
+            let statusCardClass = "bg-slate-950 border border-slate-800";
+            let statusBadge = `<span class="text-xs font-bold text-slate-500 font-mono">⚠️ SKIPPED</span>`;
+
+            if (userAns === undefined) {
+                skippedCount++;
+            } else if (userAns === question.correct) {
+                correctCount++;
+                statusCardClass = "bg-emerald-950/20 border border-emerald-800/40";
+                statusBadge = `<span class="text-xs font-bold text-emerald-400 font-mono">✓ CORRECT</span>`;
+            } else {
+                wrongCount++;
+                statusCardClass = "bg-red-950/20 border border-red-800/40";
+                statusBadge = `<span class="text-xs font-bold text-red-400 font-mono">✕ INCORRECT</span>`;
+            }
+
+            // Construct structural card component
+            const card = document.createElement("div");
+            card.className = `${statusCardClass} rounded-xl p-5 space-y-4`;
+            
+            let optionsBreakdownHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">`;
+            question.options.forEach((opt, oIdx) => {
+                let optStyle = "p-2.5 rounded-lg border border-slate-800 bg-slate-900/40 text-slate-400";
+                if (oIdx === question.correct) {
+                    optStyle = "p-2.5 rounded-lg border border-emerald-800/60 bg-emerald-500/10 text-emerald-400 font-bold";
+                } else if (oIdx === userAns) {
+                    optStyle = "p-2.5 rounded-lg border border-red-800/60 bg-red-500/10 text-red-400 font-bold";
+                }
+                optionsBreakdownHTML += `<div class="${optStyle}"><strong>${String.fromCharCode(65 + oIdx)}:</strong> ${opt}</div>`;
+            });
+            optionsBreakdownHTML += `</div>`;
+
+            card.innerHTML = `
+                <div class="flex items-start justify-between border-b border-slate-800/60 pb-2.5 gap-4">
+                    <div class="space-y-0.5">
+                        <span class="text-[10px] font-mono text-slate-500 font-bold uppercase tracking-widest">Question ${idx+1} [${question.category.toUpperCase()}]</span>
+                        <h4 class="text-sm font-medium text-slate-200 leading-relaxed">${question.question}</h4>
+                    </div>
+                    ${statusBadge}
+                </div>
+                ${optionsBreakdownHTML}
+                <div class="bg-slate-900/60 rounded-lg p-3 text-xs text-slate-400 leading-relaxed border border-slate-800/40">
+                    <strong class="text-slate-300 font-semibold block mb-1">Key Context:</strong> ${question.explanation}
+                </div>
+            `;
+            ledgerContainer.appendChild(card);
+        });
+
+        // Calculate and cache performance metrics
+        let scorePct = Math.round((correctCount / EngineState.activeQuestionsList.length) * 100);
+        document.getElementById("res-score-pct").innerText = scorePct + "%";
+        document.getElementById("res-correct").innerText = correctCount;
+        document.getElementById("res-wrong").innerText = wrongCount;
+        document.getElementById("res-skipped").innerText = skippedCount;
+
+        // Commit analytics to persistent memory storage layers
+        EngineState.metricsHistory.completed += 1;
+        EngineState.metricsHistory.sumAccuracy += scorePct;
+        if (scorePct > EngineState.metricsHistory.highestScore) {
+            EngineState.metricsHistory.highestScore = scorePct;
+        }
+        saveMetricsToStorage();
+
+        router("results");
+    }
+</script>
+
+</body>
+</html>

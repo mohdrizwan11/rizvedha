@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📊 Indian Economy Master Guide — SSC CGL</title>
+  <style>
+    /* ---------- CORE SYSTEM & RESET ---------- */
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    
+    :root {
+      --bg-dark: #0f172a;
+      --sidebar-bg: #1e293b;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --bg-light: #f1f5f9;
+      --brand-blue: #2563eb;
+      --alert-red: #ef4444;
+      --brand-purple: #8b5cf6;
+      --border-gray: #e2e8f0;
+    }
+
+    body { 
+      background: var(--bg-light); 
+      min-height: 100vh; 
+      overflow-x: hidden; 
+      color: var(--text-main);
+    }
+
+    /* ---------- LAYOUT: SIDEBAR ---------- */
+    .sidebar { 
+      width: 260px; 
+      background: var(--sidebar-bg); 
+      color: #cbd5e1; 
+      position: fixed;
+      top: 0; 
+      left: 0; 
+      height: 100vh; 
+      overflow-y: auto; 
+      z-index: 50; 
+      transition: transform 0.3s ease;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .sidebar h1 { 
+      font-size: 15px; 
+      color: #fff; 
+      padding: 20px 16px; 
+      background: var(--bg-dark);
+      border-bottom: 2px solid var(--accent-amber);
+      line-height: 1.4;
+    }
+    
+    .sidebar h1 span { 
+      color: var(--accent-amber);
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ---------- NAVIGATION ELEMENTS ---------- */
+    .nav-group {
+      padding: 10px 0;
+    }
+
+    .nav-btn { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      width: 100%; 
+      padding: 12px 16px;
+      background: none; 
+      border: none; 
+      color: #cbd5e1; 
+      font-size: 13.5px; 
+      cursor: pointer;
+      text-align: left; 
+      border-left: 4px solid transparent; 
+      transition: all 0.2s ease;
+    }
+    
+    .nav-btn:hover { 
+      background: #334155; 
+      color: #fff;
+      padding-left: 20px;
+    }
+    
+    .nav-btn.active { 
+      background: #334155; 
+      color: var(--accent-amber); 
+      border-left-color: var(--accent-amber); 
+      font-weight: 600;
+    }
+    
+    .nav-btn.quiz-link { 
+      background: linear-gradient(90deg, #7c2d12, #9a3412); 
+      color: #fde68a; 
+      margin: 15px 10px 0; 
+      width: calc(100% - 20px);
+      border-radius: 6px;
+      border-left: none;
+      font-weight: 700;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-btn.quiz-link:hover {
+      background: linear-gradient(90deg, #9a3412, #b45309);
+      padding-left: 16px;
+    }
+
+    /* ---------- LAYOUT: MAIN CONTENT AREA ---------- */
+    .main { 
+      margin-left: 260px; 
+      padding: 30px; 
+      width: calc(100% - 260px); 
+      max-width: 1400px;
+    }
+    
+    .screen { 
+      display: none; 
+      animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .screen.active { 
+      display: block; 
+    }
+    
+    @keyframes fadeInUp { 
+      from { opacity: 0; transform: translateY(15px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+
+    /* ---------- HERO COMPONENTS ---------- */
+    .hero { 
+      background: linear-gradient(135deg, #1e3a8a, #7c3aed); 
+      color: #fff; 
+      border-radius: 16px;
+      padding: 32px; 
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
+    }
+    
+    .hero h2 { 
+      font-size: 28px; 
+      margin-bottom: 8px; 
+      font-weight: 700;
+    }
+    
+    .hero p { 
+      opacity: 0.9; 
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+
+    /* ---------- SECTION HEADERS ---------- */
+    h3.sec { 
+      font-size: 20px; 
+      color: var(--bg-dark); 
+      margin: 32px 0 16px; 
+      border-left: 6px solid var(--accent-amber);
+      padding-left: 12px;
+      font-weight: 700;
+    }
+
+    /* ---------- LAYOUT GRID SYSTEMS ---------- */
+    .grid { display: grid; gap: 16px; }
+    .g2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+    .g3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+    /* ---------- CARDS MODIFIERS ---------- */
+    .card { 
+      background: var(--card-bg); 
+      border-radius: 12px; 
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+      border-top: 4px solid var(--brand-blue); 
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .card.green { border-top-color: var(--accent-emerald); } 
+    .card.orange { border-top-color: var(--accent-amber); }
+    .card.red { border-top-color: var(--alert-red); } 
+    .card.purple { border-top-color: var(--brand-purple); }
+    
+    .card h4 { 
+      font-size: 16px; 
+      margin-bottom: 12px; 
+      color: var(--bg-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .card li { 
+      margin: 8px 0 8px 20px; 
+    }
+
+    /* ---------- DATA PRESENTATION TABLES ---------- */
+    .table-container {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      background: #fff; 
+      font-size: 14px; 
+      text-align: left;
+    }
+    
+    th { 
+      background: var(--bg-dark); 
+      color: #fff; 
+      padding: 12px 16px; 
+      font-weight: 600;
+    }
+    
+    td { 
+      padding: 12px 16px; 
+      border-bottom: 1px solid var(--border-gray);
+    }
+    
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td { background: #f8fafc; }
+    tr:hover td { background: #fef3c7; }
+
+    /* ---------- VISUAL MINDMAPS & FLOWS ---------- */
+    .mindmap { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 12px; 
+      justify-content: center; 
+      margin: 20px 0;
+      padding: 16px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 16px;
+    }
+    
+    .node { 
+      background: #fff; 
+      border: 2px solid var(--brand-blue); 
+      border-radius: 30px; 
+      padding: 10px 20px;
+      font-size: 13.5px; 
+      font-weight: 600; 
+      color: var(--text-main); 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    
+    .node.root { 
+      background: var(--bg-dark); 
+      color: #fff; 
+      border-color: var(--accent-amber); 
+      font-size: 15px;
+    }
+    
+    .node.g { border-color: var(--accent-emerald); } 
+    .node.o { border-color: var(--accent-amber); } 
+    .node.r { border-color: var(--alert-red); }
+
+    /* ---------- PEDAGOGICAL INFOBASES ---------- */
+    .memory { 
+      background: linear-gradient(90deg, #fef9c3, #fef3c7); 
+      border-left: 5px solid var(--accent-amber);
+      border-radius: 8px; 
+      padding: 16px; 
+      margin: 20px 0; 
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+    
+    .memory b { color: #92400e; }
+
+    /* ---------- PERFORMANCE VISUAL PROGRESS BARS ---------- */
+    .bar-container {
+      background: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .bar { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      margin: 12px 0; 
+      font-size: 13.5px;
+    }
+    
+    .bar .fill { 
+      height: 26px; 
+      border-radius: 6px; 
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      color: #fff; 
+      display: flex; 
+      align-items: center; 
+      padding-left: 12px; 
+      font-weight: 600; 
+      font-size: 12px;
+      transition: width 0.5s ease;
+    }
+
+    /* ---------- ASSESSMENT PLATFORM ENGINE ---------- */
+    .mode-box { 
+      display: flex; 
+      gap: 20px; 
+      flex-wrap: wrap; 
+      margin: 24px 0;
+    }
+    
+    .mode-card { 
+      flex: 1; 
+      min-width: 280px; 
+      background: #fff; 
+      border-radius: 16px; 
+      padding: 30px;
+      text-align: center; 
+      cursor: pointer; 
+      border: 3px solid transparent; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+      transition: all 0.25s ease;
+    }
+    
+    .mode-card:hover { 
+      transform: translateY(-5px); 
+      border-color: var(--accent-amber);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .mode-card .big { 
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .mode-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--bg-dark);
+    }
+
+    .mode-card p {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    
+    .quiz-top { 
+      position: sticky; 
+      top: 0; 
+      background: var(--bg-dark); 
+      color: #fff; 
+      padding: 16px 20px;
+      border-radius: 12px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      z-index: 10; 
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    #timer { 
+      font-size: 18px; 
+      font-weight: 700; 
+      color: #fde68a; 
+    }
+    
+    .qcard { 
+      background: #fff; 
+      border-radius: 14px; 
+      padding: 24px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+      margin-bottom: 20px;
+    }
+    
+    .qcard .qtext { 
+      font-weight: 600; 
+      margin-bottom: 16px; 
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    .opt { 
+      display: block; 
+      width: 100%; 
+      text-align: left; 
+      padding: 12px 16px; 
+      margin: 10px 0;
+      border: 2px solid var(--border-gray); 
+      border-radius: 8px; 
+      background: #f8fafc; 
+      cursor: pointer; 
+      font-size: 14px; 
+      transition: all 0.15s ease;
+    }
+    
+    .opt:hover:not([disabled]) { 
+      border-color: var(--brand-blue); 
+      background: #eff6ff; 
+    }
+    
+    .opt.sel { 
+      border-color: var(--brand-blue); 
+      background: #dbeafe; 
+      font-weight: 600;
+    }
+    
+    .opt.correct { 
+      border-color: var(--accent-emerald); 
+      background: #d1fae5; 
+      color: #065f46;
+      font-weight: 700;
+    }
+    
+    .opt.wrong { 
+      border-color: var(--alert-red); 
+      background: #fee2e2; 
+      color: #991b1b;
+    }
+    
+    .expl { 
+      background: #ecfdf5; 
+      border-left: 4px solid var(--accent-emerald); 
+      padding: 14px; 
+      border-radius: 8px;
+      margin-top: 16px; 
+      font-size: 13.5px; 
+      line-height: 1.5;
+    }
+    
+    .btn { 
+      background: var(--accent-amber); 
+      color: #1e293b; 
+      border: none; 
+      padding: 12px 24px; 
+      border-radius: 8px;
+      font-weight: 700; 
+      cursor: pointer; 
+      font-size: 14px; 
+      transition: transform 0.1s, filter 0.2s;
+    }
+    
+    .btn.dark { 
+      background: var(--bg-dark); 
+      color: #fff; 
+    }
+    
+    .btn:hover { 
+      filter: brightness(1.05);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+    
+    #result { display: none; }
+    
+    .score-ring { 
+      width: 160px; 
+      height: 160px; 
+      border-radius: 50%; 
+      margin: 24px auto;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-size: 32px; 
+      font-weight: 800; 
+      color: #fff;
+      background: conic-gradient(var(--accent-emerald) var(--p,0%), #334155 0);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .score-ring span { 
+      background: var(--bg-dark); 
+      width: 120px; 
+      height: 120px; 
+      border-radius: 50%;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+    }
+    
+    .navarrow { 
+      display: flex; 
+      justify-content: space-between; 
+      margin-top: 24px;
+    }
+
+    /* ---------- GLOBAL UTILITIES & RESPONSIVE INTERFACES ---------- */
+    .menu-toggle { 
+      display: none; 
+      position: fixed; 
+      top: 14px; 
+      right: 14px; 
+      z-index: 60;
+      background: var(--bg-dark); 
+      color: #fff; 
+      border: none; 
+      padding: 10px 16px; 
+      border-radius: 8px; 
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    
+    @media (max-width: 960px) {
+      .sidebar { transform: translateX(-100%); } 
+      .sidebar.open { transform: translateX(0); }
+      .main { margin-left: 0; padding: 16px; width: 100%; pt: 60px; } 
+      .menu-toggle { display: block; }
+    }
+  </style>
+  <!-- Math rendering: MathJax configured to process $...$ and $$...$$ delimiters -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+
+  <button class="menu-toggle" aria-label="Toggle Navigation Menu" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+  <nav class="sidebar" id="sidebar" aria-label="Main Classroom Directory">
+    <h1>📊 INDIAN ECONOMY <span>SSC CGL Master Compendium</span></h1>
+    <div class="nav-group">
+      <button class="nav-btn active" onclick="go('home',this)">🏠 Home & Strategic Map</button>
+      <button class="nav-btn" onclick="go('basics',this)">📘 Basics & Production Sectors</button>
+      <button class="nav-btn" onclick="go('ni',this)">💰 National Income Engines</button>
+      <button class="nav-btn" onclick="go('bank',this)">🏦 Currency & Central Banking</button>
+      <button class="nav-btn" onclick="go('infl',this)">📈 Macro Inflation Frameworks</button>
+      <button class="nav-btn" onclick="go('fiscal',this)">🧾 Fiscal Architecture & Budget</button>
+      <button class="nav-btn" onclick="go('tax',this)">💳 Public Revenue & GST System</button>
+      <button class="nav-btn" onclick="go('plan',this)">🗓️ Planning Legacy & NITI Aayog</button>
+      <button class="nav-btn" onclick="go('pov',this)">👥 Demographics, Poverty & HDI</button>
+      <button class="nav-btn" onclick="go('agri',this)">🌾 Primary Agrarian & Industry</button>
+      <button class="nav-btn" onclick="go('ext',this)">🌍 External Sector & Global Balance</button>
+      <button class="nav-btn" onclick="go('reform',this)">🚀 Structural Reforms & Committees</button>
+      <button class="nav-btn" onclick="go('rapid',this)">⚡ Ultra-Rapid Revision Matrix</button>
+      <button class="nav-btn quiz-link" onclick="go('quiz',this)">📝 PYQ MOCK EXAMINATION (55 Qs)</button>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <section class="screen active" id="home">
+      <div class="hero">
+        <h2>🇮🇳 Indian Economy — Photographic Structural Guide</h2>
+        <p>Engineered from 20 continuous years of authentic SSC CGL / CHSL / CPO / MTS / IB ACIO question matrices. Distilled explicitly from NCERT Foundations, Ramesh Singh Economics, and active Economic Surveys.</p>
+      </div>
+      
+      <h3 class="sec">📊 Historical Blueprint: Weightage Mapping Matrix</h3>
+      <div class="bar-container">
+        <div class="bar"><div class="fill" style="width:90%">Core Structural Basics, Demand-Supply Architecture, Market Formations — ★★★★★</div></div>
+        <div class="bar"><div class="fill" style="width:80%">Monetary Systems, Commercial Banking, and RBI Governance — ★★★★</div></div>
+        <div class="bar"><div class="fill" style="width:75%">National Income Accounting & Macro GDP Engineering — ★★★★</div></div>
+        <div class="bar"><div class="fill" style="width:70%">Fiscal Outlays, Public Finance Frameworks, Taxation & GST Protocols — ★★★★</div></div>
+        <div class="bar"><div class="fill" style="width:60%">Five-Year Planning Legacies & Modern NITI Aayog Mandates — ★★★</div></div>
+        <div class="bar"><div class="fill" style="width:55%">Inflation Indicators & Labor Force Underutilization Indices — ★★★</div></div>
+        <div class="bar"><div class="fill" style="width:45%">International Financial Conglomerates & Trade Multilaterals — ★★</div></div>
+      </div>
+      
+      <h3 class="sec">🧠 Active Cognitive Pedagogy</h3>
+      <div class="grid g3">
+        <div class="card green">
+          <h4>1️⃣ Structural Synthesis</h4>
+          Process each distinct sub-interface as an individual slide vector. Mind-map hubs establish precise visuospatial memory anchors.
+        </div>
+        <div class="card orange">
+          <h4>2️⃣ High-Velocity Iteration</h4>
+          Utilize the ⚡ Rapid Matrix dynamically before rest cycles to solidify immediate neurological pattern recognition.
+        </div>
+        <div class="card red">
+          <h4>3️⃣ Diagnostic Testing</h4>
+          Engage the 55-question structural mock suite. Alternate between Exam Timed Vector and Immediate Feedback Mode to build spatial resilience.
+        </div>
+      </div>
+      
+      <div class="memory">
+        💡 <b>Topper Analytical Protocol:</b> SSC platforms prioritize factual stability over complex fluid theory. Chronologies, institutional architectures, investigative committees, operational global headquarters, and absolute comparative metrics comprise up to 80% of active test vectors.
+      </div>
+    </section>
+
+    <section class="screen" id="basics">
+      <div class="hero">
+        <h2>📘 Epistemological Foundations of Economics</h2>
+        <p>Microeconomics vs Macroeconomics · Systemic Formations · Price Elasticity Mechanisms · Market Architectures</p>
+      </div>
+      
+      <div class="mindmap">
+        <div class="node root">ECONOMICAL SPECTRUM</div>
+        <div class="node g">Micro-Dynamics (Individual Vectors 🌳 — Coined: Ragnar Frisch)</div>
+        <div class="node g">Macro-Dynamics (Aggregate Formations 🌲🌲)</div>
+        <div class="node o">Foundational Patriarch: Adam Smith — "Wealth of Nations" (1776)</div>
+        <div class="node r">Patriarch of Aggregates: J.M. Keynes</div>
+      </div>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Systemic Classification</th>
+              <th>Ownership Architecture</th>
+              <th>Sovereign Representative</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Capitalist Engine (Laissez-faire 🆓)</td><td>Private Sovereignty; Allocations via Free Price Intersect</td><td>United States of America</td></tr>
+            <tr><td>Socialist Core</td><td>State Sovereignty; Centrally Guided Allocations</td><td>Historical USSR, Republic of Cuba</td></tr>
+            <tr><td>Mixed Configuration ⚖️</td><td>Sovereign Co-existence (Adopted via Industrial Policy Resolution 1948)</td><td>Union of India</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <h3 class="sec">🔁 Structural Sectors of Production</h3>
+      <div class="grid g3">
+        <div class="card green">
+          <h4>🌾 Primary Vector</h4>
+          Extraction and raw gathering: Agriculture, Mining, Deep-Sea Foraging. Operates as India's <b>dominant occupational employer</b>.
+        </div>
+        <div class="card orange">
+          <h4>🏭 Secondary Vector</h4>
+          Value-addition engineering: Structural Industrial Manufacturing, Refineries, Commercial Construction.
+        </div>
+        <div class="card purple">
+          <h4>🛎️ Tertiary Vector</h4>
+          Intangible Utility Output: Financial Intermediation, Logistics, Services. Delivers the <b>highest contribution to Sovereign GDP (~55%)</b>.
+        </div>
+      </div>
+      <div class="memory">🧠 <b>Advanced Typologies:</b> <b>Quaternary Spectrum</b> = Knowledge management (Information Architecture, Specialized R&D); <b>Quinary Spectrum</b> = Executive Decision Infrastructure ("Gold Collar Mandates").</div>
+      
+      <h3 class="sec">⚖️ Demand Elasticity & Anomalous Material Goods</h3>
+      <div class="grid g2">
+        <div class="card">
+          <h4>📉 Fundamental Law of Demand</h4>
+          Price Acceleration ($P \uparrow$) leads to Quantity Contraction ($Q \downarrow$). Curve maintains a negative downward slope. Supply Corollary: Price Acceleration ($P \uparrow$) prompts Output Expansion ($S \uparrow$).
+        </div>
+        <div class="card red">
+          <h4>🎩 Structural Violations of Demand Law</h4>
+          <ul>
+            <li><b>Giffen Commodities:</b> Non-luxury inferior base goods — Price acceleration triggers quantity consumption increases (Observed by Sir Robert Giffen).</li>
+            <li><b>Veblen Commodities:</b> Positional/Snob status markers (e.g., Rare cut diamonds 💎).</li>
+          </ul>
+        </div>
+        <div class="card green">
+          <h4>📐 Elasticity Coefficients</h4>
+          <ul>
+            <li>Inelastic Absolute Necessities (e.g., Edible Halite / Salt) $\rightarrow \epsilon < 1$.</li>
+            <li>Elastic Discretionary Luxury Items $\rightarrow \epsilon > 1$.</li>
+            <li>Perfect Inelastic Profile maps as a strict vertical vector line.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🍞 Engel's Empirical Law</h4>
+          Household Income Accrual $\uparrow$ correlates directly with a percentage decline in raw aggregate food expenditure $\downarrow$. <br><b>Gresham's Law Core:</b> "Artificially overvalued currency drives historically undervalued legal tender out of transactional circulation."
+        </div>
+      </div>
+      
+      <h3 class="sec">🏪 Market Morphologies</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Morphology</th>
+              <th>Sovereign Sellers</th>
+              <th>Defining Market Attribute</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Perfect Competition</td><td>Infinite Volume</td><td>Homogeneous outputs; individual economic unit operates strictly as a <b>Price Taker</b></td></tr>
+            <tr><td>Absolute Monopoly</td><td>Unitary Vector</td><td>Total <b>Price Maker</b> control; typical structural benchmark: Indian Railways</td></tr>
+            <tr><td>Monopolistic Competition</td><td>High Density</td><td>Asymmetric product differentiation with high branding overheads (e.g., Oral Hygiene 🪥)</td></tr>
+            <tr><td>Oligopoly Matrix</td><td>Concentrated Elite</td><td>High strategic interdependence; typical benchmarks: Telecommunications, Commercial Airlines ✈️</td></tr>
+            <tr><td>Monopsony Variant</td><td>Diffuse Volume</td><td>Maintains a <b>Unitary Buyer</b> architecture across asymmetric supply chains</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="screen" id="ni">
+      <div class="hero">
+        <h2>💰 National Income Accounting Metrics</h2>
+        <p>Gross Domestic Product · Net National Output · Mathematical Conversions · Base Devolutions</p>
+      </div>
+      
+      <div class="mindmap">
+        <div class="node root">NATIONAL OUTCOME</div>
+        <div class="node g">GDP = Aggregate Internal Geography 🗺️</div>
+        <div class="node o">GNP = GDP + Net Factor Income from Abroad (NFIA) 🌏</div>
+        <div class="node">NNP = GNP − Machine Capital Depreciation</div>
+        <div class="node r">NNP evaluated at Factor Cost = Authentic National Income</div>
+      </div>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Macroeconomic Indicator</th>
+              <th>Algorithmic Base / Empirical Fact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Gross Domestic Product (GDP)</td><td>Aggregate market value of all finalized economic goods and services rendered within internal lines over a fiscal period.</td></tr>
+            <tr><td>Gross National Product (GNP)</td><td>GDP + Net Factor Income from Abroad (NFIA)</td></tr>
+            <tr><td>Net National Product (NNP)</td><td>GNP - Asset Capital Depreciation</td></tr>
+            <tr><td>Market Price Conversion to Factor Cost</td><td>Market Price - Indirect Taxes + Fiscal Subsidies</td></tr>
+            <tr><td>Per Capita Income Vector</td><td>Authentic National Income / Total Sovereign Population</td></tr>
+            <tr><td>Realized Production Output (Real GDP)</td><td>Calculated relative to constant parameters via indexation base year: <b>2011-12</b>.</td></tr>
+            <tr><td>Sovereign GDP Deflator Index</td><td>(Nominal GDP / Real GDP) × 100</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>🏛️ Sovereign Assessment Frameworks</h4>
+          <ul>
+            <li>Calculations executed by the <b>National Statistical Office (NSO)</b> under MoSPI governance.</li>
+            <li>Inaugural historical valuation: Calculated by <b>Dadabhai Naoroji</b> (1868, "Poverty and Un-British Rule in India").</li>
+            <li>Inaugural formal framework committee (1949): Presided over by <b>P.C. Mahalanobis</b>; structural data validation led by Dr. V.K.R.V. Rao.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🧮 Structural Evaluation Methodologies</h4>
+          <ul>
+            <li><b>Production Route:</b> Gross value-added summation mapping across production chains.</li>
+            <li><b>Income Route:</b> Summation of operational returns: $$\text{Economic Rent} + \text{Labor Wages} + \text{Capital Interest} + \text{Corporate Profit}$$</li>
+            <li><b>Expenditure Route:</b> Aggregated outflow mapping: $$Y = C + I + G + (X - M)$$</li>
+          </ul>
+        </div>
+      </div>
+      <div class="memory">🧠 <b>Visuospatial Conceptual Anchor:</b> GDP represents aggregate internal geo-production. Integrating cross-border asset inflows shifts the metric to GNP. Factoring in equipment wear and tear via Depreciation yields NNP.</div>
+    </section>
+
+    <section class="screen" id="bank">
+      <div class="hero">
+        <h2>🏦 Monetary Systems, Liquidity Architecture & RBI</h2>
+        <p>Sovereign Central Banking · Quantitative Adjustment Levers · Capital Allocations · Regulatory Nodes</p>
+      </div>
+      
+      <div class="mindmap">
+        <div class="node root">CENTRAL BANKING CORE 🏛️</div>
+        <div class="node g">Operational Genesis: 1 April 1935 (RBI Act 1934)</div>
+        <div class="node o">Inception Guidance: Royal Commission on Indian Currency & Finance (Hilton Young 1926)</div>
+        <div class="node">Sovereign Conversion: 1 January 1949</div>
+        <div class="node r">Inaugural Executive: Sir Osborne Smith · Inaugural Domestic Executive: C.D. Deshmukh</div>
+        <div class="node g">Command Center: Mumbai</div>
+      </div>
+      
+      <h3 class="sec">🔧 Quantitative Regulation Instruments</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Instrument Lever</th>
+              <th>Operational Protocol</th>
+              <th>Counter-Inflationary Stance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Repo Funding Rate</b></td><td>Interest baseline for short-duration central lending to banks against collateral</td><td>Scale Up ⬆️</td></tr>
+            <tr><td><b>Reverse Repo Rate</b></td><td>Interest baseline yielded to banks for parking short-duration funds inside RBI</td><td>Scale Up ⬆️</td></tr>
+            <tr><td><b>Cash Reserve Ratio (CRR)</b></td><td>Mandatory unencumbered liquid cash reserves held directly inside RBI vaults</td><td>Scale Up ⬆️</td></tr>
+            <tr><td><b>Statutory Liquidity Ratio (SLR)</b></td><td>Self-held domestic bank allocation reserves in Gold, Cash, or Approved Sovereigns</td><td>Scale Up ⬆️</td></tr>
+            <tr><td><b>Primary Bank Rate</b></td><td>Long-duration baseline central lending facility; acts as penalty indicator frame</td><td>Scale Up ⬆️</td></tr>
+            <tr><td><b>Open Market Operations (OMO)</b></td><td>Direct structural market injection or extraction of sovereign debt instruments</td><td>Liquidate Sovereign Debt Instruments</td></tr>
+            <tr><td><b>Marginal Standing Facility (MSF)</b></td><td>Emergency overnight window providing liquidity up to statutory banking limits</td><td>Scale Up ⬆️</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>🎯 Monetary Policy Committee Framework (2016)</h4>
+          <ul>
+            <li>6-member configuration (3 Central Bank Executives + 3 Sovereign Appointees); chaired by the active Governor of RBI.</li>
+            <li>Statutory Anchor Inflation Objective: <b>4% with a systemic tolerance bracket of $\pm 2\%$</b> (Consumer Price Index Tracking via Urjit Patel Mandate).</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🏦 Structural Consolidation Milestones</h4>
+          <ul>
+            <li><b>Phase I (1969):</b> 14 financial institutions nationalized (Threshold: Deposits exceeding ₹50 Crore) under Prime Minister Indira Gandhi.</li>
+            <li><b>Phase II (1980):</b> 6 additional banking institutions consolidated.</li>
+            <li>State Bank of India established via the conversion of the Imperial Bank of India (1955).</li>
+            <li>First joint-stock entity managed by a purely Indian board: Punjab National Bank (1894).</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>🏛️ Developmental Financial Anchors</h4>
+          <ul>
+            <li><b>NABARD<small> (National Bank for Agriculture and Rural Development)</small>:</b> 1982 (Formed via B. Shivaraman Committee Oversight) — Rural development credit engine.</li>
+            <li><b>SEBI:<small> (Securities and Exchange Board of India)</small>: </b> Founded 1988; achieved full statutory enforcement powers in 1992 to govern capital markets 📈.</li>
+            <li><b>IRDAI:<small> (Insurance Regulatory and Development Authority)</small></b>:  1999 (Insurance Regulation Framework) · 
+            <li><b>SIDBI:<small> (Small Industries Development Bank of India)</small></b> 1990 (Small Enterprise Capital Refinancing).</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>💵 Legal Tender Systemics</h4>
+          <ul>
+            <li>Sovereign Metallic Coinage & ₹1 Currency Note Issued via <b>Ministry of Finance</b>; notes $\ge$ ₹2 fall under RBI authorization.</li>
+            <li>Minimum Reserve System (1956 protocol): Fixed backup baseline of ₹200 Crore (comprising at least ₹115 Crore in physical gold bullion).</li>
+            <li>Structural Demonetization Episode: <b>8 November 2016</b> (Withdrawal of legacy ₹500 and ₹1000 configurations).</li>
+            <li>M1 classification behaves as Narrow Transactional Velocity; M3 maps as Broad Macro Money Supply.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="memory">🧠 <b>Liquidity Rule of Thumb:</b> Systematic Inflation 🔥 requires tightening money supply. Increasing policy reserve ratios and baseline interest rates effectively drains speculative liquidity out of commercial circulation.</div>
+    </section>
+
+    <section class="screen" id="infl">
+      <div class="hero">
+        <h2>📈 Price Instability Indexes & Labor Underutilization</h2>
+        <p>Demand-Pull Dynamics · Structural Sourcing Constraints · Macro-Stagflation Profiles · Index Devolutions</p>
+      </div>
+      
+      <div class="mindmap">
+        <div class="node root">INFLATION VECTORS 🔥</div>
+        <div class="node g">Demand-Pull Vector (Aggregate Liquidity outpacing Output Capacity)</div>
+        <div class="node o">Cost-Push Variant (Supply-side input cost surges)</div>
+        <div class="node r">Structural Stagflation = Stagnant Production Output + Systemic Inflation + Labor Disruption</div>
+        <div class="node">Deflationary Phase = Persistent baseline price corrections downwards</div>
+        <div class="node g">Disinflation = deceleration in active inflation velocity rates</div>
+      </div>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Velocity Profile</th>
+              <th>Empirical Rate Characteristics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Creeping Baseline</td><td>Muted, low-impact progression ($< 3\%$) 🐌</td></tr>
+            <tr><td>Walking / Trotting</td><td>Moderate, warning-tier escalation ($3\% - 10\%$)</td></tr>
+            <tr><td>Galloping Runway</td><td>Accelerating, disruptive momentum ($10\% - 20\%+$) 🐎</td></tr>
+            <tr><td>Hyperinflationary Rupture</td><td>Uncontrolled systemic monetary debasement (e.g., Historical Weimar Republic, Zimbabwe) 💥</td></tr>
+            <tr><td>Reflationary Volatility</td><td>Calculated sovereign liquidity expansion intended to counteract deflationary stagnation</td></tr>
+            <tr><td>The Phillips Relationship Curve</td><td>Plots the typical short-run inverse structural ratio: Price Inflation $\leftrightarrow$ Unemployment Rate</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>📊 Wholesale Price Index (WPI) Architecture</h4>
+          <ul>
+            <li>Compiled and distributed monthly via the <b>Office of Economic Adviser, DPIIT</b> (Ministry of Commerce & Industry).</li>
+            <li>Current baseline indexing year: <b>2011-12</b>. Purely excludes the service index sector.</li>
+            <li>Dominant structural allocation subweight: Manufactured Commodities ($\sim 64\%$).</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🛒 Consumer Price Index (WPI) Architecture</h4>
+          <ul>
+            <li>Computed and tracked via the <b>National Statistical Office (NSO, MoSPI)</b> using base year 2012.</li>
+            <li>Serves as the structural anchor index for central bank policy targeting 🎯.</li>
+            <li>Labor specialized sub-indices (CPI-IW / CPI-AL) are calculated via the dedicated Labour Bureau.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="memory">🧠 <b>Socio-Economic Distribution Matrix:</b> Unexpected systemic inflation benefits active debtholders/borrowers while directly penalizing fixed-wage workers and credit providers. Core Inflation strictly isolates raw baseline performance by removing highly volatile food and energy vectors.</div>
+    </section>
+
+    <section class="screen" id="fiscal">
+      <div class="hero">
+        <h2>🧾 Fiscal Management Architecture & Public Accounting</h2>
+        <p>Constitutional Mandate 112 · Imbalance Metrics · Fiscal Rectification Acts · Public Account Classifications</p>
+      </div>
+      
+      <div class="mindmap">
+        <div class="node root">BUDGETARY BLUEPRINT (Art. 112: "Annual Financial Statement")</div>
+        <div class="node g">Revenue Operations Balance</div>
+        <div class="node o">Capital Formations Balance</div>
+        <div class="node">Sovereign Presentation led by Union Finance Minister</div>
+        <div class="node r">Indian Fiscal Operational Window: 1 April – 31 March</div>
+      </div>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Imbalance Classification</th>
+              <th>Structural Calculation Protocol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Revenue Deficit Account</td><td>$$\text{Revenue Outlays} - \text{Regular Revenue Inflows}$$</td></tr>
+            <tr><td><b>Primary Fiscal Deficit</b> ⭐</td><td>$$\text{Aggregate Outlays} - \text{Total Receipts (strictly isolating debt debt accumulation flows)}$$</td></tr>
+            <tr><td>Net Primary Deficit</td><td>$$\text{Primary Fiscal Deficit} - \text{Sovereign Interest Liabilities}$$</td></tr>
+            <tr><td>Aggregated Budgetary Deficit</td><td>$$\text{Aggregate Outlays} - \text{Aggregate Financial Receipts}$$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>📜 Historical Milestones in Public Budgeting</h4>
+          <ul>
+            <li>Inaugural formal budget presentation in British India: <b>James Wilson, 1860</b>.</li>
+            <li>Inaugural budget presentation for Independent India: <b>R.K. Shanmukham Chetty (26 November 1947)</b>.</li>
+            <li>The historic integration of the separate Railway Budget back into the unified Union Budget took place in <b>2017</b>, which also shifted presentation day to 1 February.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>⚖️ FRBM Statutory Mandate 2003</h4>
+          <ul>
+            <li>Fiscal Responsibility and Budget Management Act — Designed to enforce structural discipline and counter excessive public spending.</li>
+            <li>Target: Structural stabilization of long-run Fiscal Deficit at an optimal $\sim 3\%$ of GDP.</li>
+            <li>Eminent Review Committee Head: <b>N.K. Singh</b>.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>💼 Strategic Public Finance Terminology</h4>
+          <ul>
+            <li><b>Deficit Financing:</b> Targeted central bank monetization or debt allocation used to close structural budget gaps.</li>
+            <li><b>Sovereign Disinvestment:</b> Structured state liquidation or strategic sale of public sector enterprise equity.</li>
+            <li><b>Zero-Based Budgeting (ZBB):</b> Operational budgeting paradigm where every expense item must be justified from a zero baseline for each cycle (Pioneered by Peter Pyhrr).</li>
+            <li>Finance Commission (Constitutional Art. 280): Formed every five years; 1st Commission Head: <b>K.C. Neogy</b>; 16th Commission Head: Dr. Arvind Panagariya.</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>🏦 Constitutional Fund Classifications</h4>
+          <ul>
+            <li>Consolidated Fund of India — Explicitly authorized under Article 266(1).</li>
+            <li>Contingency Fund of India — Authorized under Article 267 (Held directly under the custody of the Sovereign Executive/President).</li>
+            <li>Public Account of India — Authorized under Article 266(2).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="memory">🧠 <b>High-Yield Testing Target:</b> Primary Fiscal Deficit represents the aggregate net borrowing requirement of the state. This is the single most tested deficit metric across historical CGL platforms.</div>
+    </section>
+
+    <section class="screen" id="tax">
+      <div class="hero">
+        <h2>💳 Public Revenues Framework & GST Architecture</h2>
+        <p>Direct vs Indirect Tax Systems · Laffer Optimization · Constitutional Transformations · GST Council Protocols</p>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>🎯 Direct Tax Architectures (Non-Shiftable Incidence)</h4>
+          <ul>
+            <li>Personal Income Tax, Corporate Profits Tax, Realized Capital Gains Tax.</li>
+            <li>Historical Wealth Tax phased out in 2015; historical Estate Duty dropped in 1985.</li>
+            <li>Administrative Command Node: <b>Central Board of Direct Taxes (CBDT)</b>.</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>🔁 Indirect Tax Architectures (Shiftable Economic Incidence)</h4>
+          <ul>
+            <li>Goods and Services Tax (GST), Border Customs Tariffs, Non-merged State Excise (e.g., Petroleum Fractions, Potable Alcohol Products).</li>
+            <li>Administrative Command Node: <b>Central Board of Indirect Taxes and Customs (CBIC)</b>.</li>
+            <li>Indirect tax collection structures exhibit a regressive socio-economic profile.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 class="sec">🧩 Goods & Services Tax (GST) Integrated Network</h3>
+      <div class="mindmap">
+        <div class="node root">GST UNIFIED SYSTEM 🇮🇳</div>
+        <div class="node g">System Launch Inception: 1 July 2017</div>
+        <div class="node o">Enabled via 101st Constitutional Amendment Act (Introduced via 122nd Legislative Bill)</div>
+        <div class="node">Constitutional Art. 279A: Established the GST Council — Presided over by Union Finance Minister</div>
+        <div class="node r">Standard Operational Slabs: 0%, 5%, 12%, 18%, 28%</div>
+        <div class="node g">Inaugural Ratifying Federal Sub-unit: Assam · Global System Pioneer: France (1954 implementation)</div>
+      </div>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>GST Component Mapping</th>
+              <th>Jurisdictional Transaction Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CGST + SGST Combination</td><td>Intra-State market transactions within unified state borders</td></tr>
+            <tr><td>Integrated GST (IGST) Protocol</td><td>Inter-State commerce transactions and international import streams</td></tr>
+            <tr><td>UTGST Framework</td><td>Assigned Union Territory territorial transactions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card orange">
+          <h4>📈 Comparative Structural Profiles</h4>
+          <ul>
+            <li><b>Progressive:</b> Marginal tax rate accelerates relative to asset base expansions (e.g., India's personal income tax system).</li>
+            <li><b>Regressive:</b> Effective financial burden scales down as individual income grows.</li>
+            <li><b>Proportional:</b> Unvarying, fixed rate profile across all income tiers.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>🗝️ Specialized Analytical Core</h4>
+          <ul>
+            <li><b>The Laffer Optimization Relationship:</b> Parabolic graphical function mapping tax rate settings against gross revenue generation 🔔.</li>
+            <li>Value Added Tax (VAT) initial system roll-out in India: 2005.</li>
+            <li>Strategic baseline roadmap framework for structural indirect transformation driven by the historical <b>Vijay Kelkar Committee Blueprint</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="plan">
+      <div class="hero">
+        <h2>🗓️ Sovereign Planning Legacies & Modern NITI Aayog</h2>
+        <p>Pre-Independence Structural Proposals · Five-Year Layout Models · Structural Shifts</p>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>🏛️ Legacy Planning Commission Matrix</h4>
+          <ul>
+            <li>Formed on <b>15 March 1950</b> as an extra-constitutional, advisory body via Cabinet Resolution.</li>
+            <li>Ex-officio Chair: Prime Minister; Inaugural Vice-Chairperson: Gulzarilal Nanda.</li>
+            <li>Formally dissolved and transformed into <b>NITI Aayog on 1 January 2015</b> (Operating via a policy think-tank model with a CEO and Vice-Chair structure).</li>
+            <li>National Development Council (NDC) validation node created in 1952.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>📜 Historical Pre-1950 Planning Milestones</h4>
+          <ul>
+            <li>1934: "Planned Economy for India" — Published by engineering statesman <b>M. Visvesvaraya</b>.</li>
+            <li>1944: <b>The Bombay Plan Blueprint</b> (Jointly authored by 8 leading industrialists, including J.R.D. Tata and G.D. Birla).</li>
+            <li>1944: The Gandhian Plan Variant (S.N. Agarwal); 1945: The People's Plan Model (M.N. Roy).</li>
+            <li>1950: The Sarvodaya Movement Plan (Jaiprakash Narayan).</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 class="sec">📊 High-Yield Five-Year Plan Compendium ⭐⭐⭐</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Plan Iteration</th>
+              <th>Operational Window</th>
+              <th>Theoretical Model / Strategic Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Inaugural Plan (1st)</td><td>1951–1956</td><td><b>Harrod-Domar Formulation;</b> Targeted primary agrarian capitalization — Highly successful.</td></tr>
+            <tr><td>2nd Iteration</td><td>1956–1961</td><td><b>P.C. Mahalanobis Model;</b> Prioritized capital-intensive heavy industries (Established major steel assets: Bhilai-USSR, Rourkela-Germany, Durgapur-UK).</td></tr>
+            <tr><td>3rd Iteration</td><td>1961–1966</td><td>"Gadgil Yojana Frame"; Severely disrupted by border conflicts (1962/1965) and subcontinental drought cycles — Target failed.</td></tr>
+            <tr><td>—</td><td>1966–1969</td><td><b>Systemic Plan Holidays</b> (Three independent annual operations); Launchpad of the High-Yield Agrarian Shift / Green Revolution 🌱.</td></tr>
+            <tr><td>4th Iteration</td><td>1969–1974</td><td>"Growth with Stability Paradigm"; Commenced major commercial bank nationalization in 1969.</td></tr>
+            <tr><td>5th Iteration</td><td>1974–1978</td><td>"Garibi Hatao" Poverty Alleviation Mandate — Designed by D.P. Dhar; terminated early by a shift in political administration.</td></tr>
+            <tr><td>—</td><td>1978–1980</td><td><b>Rolling Plan Intermission</b> (Janata Administration — Theoretical concepts drawn from Gunnar Myrdal).</td></tr>
+            <tr><td>6th Iteration</td><td>1980–1985</td><td>Targeted rural poverty eradication metrics; saw the launch of NABARD in 1982.</td></tr>
+            <tr><td>7th Iteration</td><td>1985–1990</td><td>"Food, Work & Productivity Framework"; Launched the extensive Jawahar Rozgar Yojana.</td></tr>
+            <tr><td>8th Iteration</td><td>1992–1997</td><td>Post-Structural Reform Execution; <b>Rao-Manmohan Model;</b> Prioritized human capital development.</td></tr>
+            <tr><td>9th Iteration</td><td>1997–2002</td><td>"Social Justice & Equitable Distribution Framework".</td></tr>
+            <tr><td>10th Iteration</td><td>2002–2007</td><td>Targeted an 8% growth baseline; aimed to double sovereign Per Capita Income within 10 years.</td></tr>
+            <tr><td>11th Iteration</td><td>2007–2012</td><td>"Towards Faster & More Inclusive Growth Paradigm".</td></tr>
+            <tr><td>Final Iteration (12th)</td><td>2012–2017</td><td>"Faster, Sustainable & More Inclusive Development Layout".</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="memory">
+        🧠 <b>Memory Technique:</b> Progression follows: 1-Agrarian focus, 2-Heavy Industry focus, followed by a systemic "Holiday after the 3rd Plan," and a "Rolling Intermission after the 5th." The term <b>"Hindu Rate of Growth"</b> ($\sim 3.5\%$) was originally coined by economist <b>Raj Krishna</b> to classify early stagnation cycles.
+      </div>
+    </section>
+
+    <section class="screen" id="pov">
+      <div class="hero">
+        <h2>👥 Socio-Economic Indicators, Poverty & Human Development</h2>
+        <p>Labor Force Underutilization Typologies · Investigative Poverty Committecs · HDI Matrix Classifications</p>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card red">
+          <h4>📉 Structural Typologies of Unemployment</h4>
+          <ul>
+            <li><b>Disguised Unemployment:</b> Labor deployment exceeding real technical requirements (Highly prevalent in the agrarian primary sector 🌾). Marginal Productivity ($MP$) of surplus labor approaches zero ($MP_L \to 0$).</li>
+            <li><b>Structural:</b> Long-run mismatch between labor force skills and evolving corporate demand profiles.</li>
+            <li><b>Frictional:</b> Short-run transition periods during worker job changes.</li>
+            <li><b>Cyclical:</b> Driven by macroeconomic contractions and recessions (Characteristic of capitalist economic engines).</li>
+          </ul>
+        </div>
+        <div class="card green">
+          <h4>🧮 Historical Investigative Poverty Committees</h4>
+          <ul>
+            <li>Y.K. Alagh Taskforce Framework (1979)</li>
+            <li>D.T. Lakdawala Methodology Committee (1993)</li>
+            <li><b>Suresh Tendulkar Committee Report (2009):</b> Fixed daily expenditure benchmarks at ₹27 rural and ₹33 urban.</li>
+            <li><b>C. Rangarajan Committee Revision (2014):</b> Recalibrated daily benchmarks to ₹32 rural and ₹47 urban.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🌐 International Assessment Benchmarks</h4>
+          <ul>
+            <li>World Bank Absolute Poverty Baseline: <b>$2.15/Day</b> evaluated via Purchasing Power Parity (PPP 2022 recalibration).</li>
+            <li>Multidimensional Poverty Index (MPI): Computed jointly via UNDP and the Oxford Poverty and Human Development Initiative (OPHI).</li>
+            <li>The Gini Coefficient Scale: Maps from 0 (Absolute Equality) to 1 (Absolute Inequality).</li>
+            <li>The Lorenz Curve Vector: Visual graphical representation mapping real wealth inequality distribution.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>📊 Human Development Index (HDI) Structural Metrics</h4>
+          <ul>
+            <li>Launched by the <b>UNDP in 1990</b> — Originally designed by Pakistani economist Mahbub ul Haq in collaboration with Amartya Sen.</li>
+            <li>3 Core Evaluation Dimensions: Lifespan longevity (Life expectancy at birth), Knowledge acquisition (Mean & Expected Years of Schooling), and Standard of living (Real GNI Per Capita).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="memory">🧠 <b>Core Diagnostic Insight:</b> Disguised unemployment equates to a marginal product of zero. This structural pattern is frequently tested on SSC platforms. In India, unemployment is primarily structural rather than cyclical.</div>
+    </section>
+
+    <section class="screen" id="agri">
+      <div class="hero">
+        <h2>🌾 Primary Agrarian Optimization & Industrial Frameworks</h2>
+        <p>High-Yield Agrarian Shifts · Institutional Land Restructuring · Core Industrial Resolutions · Index Systems</p>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>🌱 The High-Yield Agrarian Shift (Green Revolution)</h4>
+          <ul>
+            <li>Domestic Roll-out: Late 1960s — Led by <b>Dr. M.S. Swaminathan</b> (National Patriarch); globally founded by Dr. Norman Borlaug.</li>
+            <li>Introduced High-Yielding Variety (HYV) seed matrices, primarily targeting Wheat lines in the northwestern plains.</li>
+            <li><b>White Revolution (Operation Flood 1970):</b> Directed by <b>Dr. Verghese Kurien</b>, transforming dairy systems via the AMUL cooperative framework.</li>
+            <li>Blue Revolution: Aquaculture / Yellow Revolution: Oilseeds / Pink Revolution: Poultry & Alliums.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🏛️ Institutional Land Restructuring (Post-Independence)</h4>
+          <ul>
+            <li>Legislative Abolition of Middlemen / Zamindari Systems (Early 1950s).</li>
+            <li>Land Ceiling Legislation: Capped maximum real estate holdings per individual unit.</li>
+            <li>The Bhoodan Voluntary Movement: Initiated by <b>Acharya Vinoba Bhave</b> in 1951 at Pochampalli.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>🏭 Core Industrial Policy Resolutions (IPR)</h4>
+          <ul>
+            <li><b>IPR 1948:</b> Formulated India's foundational mixed-economy architecture.</li>
+            <li><b>IPR 1956:</b> Known as the <b>"Economic Constitution of India"</b> — Segmented industrial oversight into 3 distinct schedules.</li>
+            <li>New Industrial Policy <b>1991</b>: Introduced LPG liberalization reforms, phased out industrial licensing, and opened FDI routes.</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>📊 High-Yield Agrarian Facts</h4>
+          <ul>
+            <li>Minimum Support Price (MSP) metrics are calculated and recommended by the <b>Commission for Agricultural Costs and Prices (CACP)</b>.</li>
+            <li>Food Corporation of India (FCI) supply-side management infrastructure established in 1965.</li>
+            <li>The Index of Industrial Production (IIP) is published monthly by the NSO using base year 2011-12.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 class="sec">🏭 Key Industrial Infrastructure Points</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Industrial Asset Node</th>
+              <th>Core Historical Fact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Inaugural Sovereign Steel Unit</td><td>Bhilai Steel Plant (Operationalized 1959 via integrated Soviet Union technical collaboration).</td></tr>
+            <tr><td>First Multipurpose River Valley Asset</td><td>Damodar Valley Corporation — 1948 (Modelled explicitly after the Tennessee Valley Authority, USA).</td></tr>
+            <tr><td>SAIL Incorporation</td><td>Steel Authority of India Limited unified in 1973.</td></tr>
+            <li>Micro, Small, and Medium Enterprise definitions updated under the revised MSMED structural guidelines.</li>
+          </tbody>
+        </table>
+      </div>
+      <div class="memory">🧠 <b>High-Priority Exam Anchor:</b> The Industrial Policy Resolution of 1956 is frequently referred to as the "Economic Constitution of India." Expect questions testing this milestone.</div>
+    </section>
+
+    <section class="screen" id="ext">
+      <div class="hero">
+        <h2>🌍 External Sector Dynamics & Global Financial Multilaterals</h2>
+        <p>Balance of Payments Accounts · Exchange Rate Paradigms · Bretton Woods Agreements · Trade Frameworks</p>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>⚖️ Balance of Payments (BoP) Accounting Matrix</h4>
+          <ul>
+            <li><b>Current Account Vector:</b> Tracks visible merchandise trade (Balance of Trade), invisible services, and unilateral transfer streams.</li>
+            <li><b>Capital Account Vector:</b> Captures Foreign Direct Investment (FDI), Foreign Portfolio Investment (FPI), and external sovereign borrowing.</li>
+            <li>Balance of Trade (BoT) isolates visible merchandise transactions only ($$\text{Exports} - \text{Imports}$$).</li>
+            <li>India's largest single net export earner is the software services sector.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>💱 Exchange Rate Mechanics</h4>
+          <ul>
+            <li>Fixed Pegged Regime vs Market-Driven Floating Regime (Adopted post-1991 market transition).</li>
+            <li>Managed Float System: Active central bank intervention to curb extreme currency volatility.</li>
+            <li>Sovereign currency depreciation makes domestic exports more competitive while increasing import costs.</li>
+            <li>India maintains full convertibility on the Current Account, but partial convertibility on the Capital Account.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 class="sec">🏛️ Global Financial & Trade Governance Institutions</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Global Institution</th>
+              <th>Inception</th>
+              <th>Command HQ</th>
+              <th>Strategic Mandate / India Relationship Fact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>IMF</b></td><td>1944</td><td>Washington D.C.</td><td>Acts as a lender of last resort for Balance of Payments crises. Utilizes Special Drawing Rights (SDR) as reserve units.</td></tr>
+            <tr><td><b>World Bank (IBRD)</b></td><td>1944</td><td>Washington D.C.</td><td>Provides long-term capital for developmental financing. Includes the International Development Association (IDA), known for soft-loan windows.</td></tr>
+            <tr><td><b>WTO</b></td><td>1995</td><td>Geneva</td><td>Administers global trade rules. Replaced the historical 1948 General Agreement on Tariffs and Trade (GATT).</td></tr>
+            <tr><td><b>ADB</b></td><td>1966</td><td>Manila</td><td>Regional development bank. Japan holds the largest single share, followed by the United States.</td></tr>
+            <tr><td><b>New Development Bank</b></td><td>2015</td><td>Shanghai</td><td>Multilateral financial institution established by the BRICS bloc. Inaugural President: K.V. Kamath of India.</td></tr>
+            <tr><td><b>AIIB</b></td><td>2016</td><td>Beijing</td><td>Asian Infrastructure Investment Bank. China functions as the primary shareholder, with India holding the second largest stake.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="memory">🧠 <b>Analytical Invariant:</b> The IMF and World Bank are known collectively as the Bretton Woods Twins (1944). The establishment year of the WTO (1995) is a highly repeated factual anchor on SSC platforms.</div>
+    </section>
+
+    <section class="screen" id="reform">
+      <div class="hero">
+        <h2>🚀 Structural Reforms of 1991 & Investigative Panels</h2>
+        <p>The LPG Policy Paradigm · Structural Adjustments · High-Yield Commission Reference Table</p>
+      </div>
+      
+      <div class="mindmap">
+        <div class="node root">1991 MACRO TRANSFORMATION ⚡</div>
+        <div class="node g">Prime Minister: P.V. Narasimha Rao</div>
+        <div class="node o">Finance Minister: Dr. Manmohan Singh</div>
+        <div class="node r">Trigger: Acute Balance of Payments crisis (Foreign reserves reduced to ~2 weeks of imports)</div>
+        <div class="node">Emergency Action: Gold reserves pledged to secure IMF structural adjustment funding</div>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>🔓 L — Liberalization Protocols</h4>
+          <ul>
+            <li>Dismantled the industrial licensing system across most major sectors.</li>
+            <li>Replaced the restrictive Monopolies and Restrictive Trade Practices (MRTP) Act of 1969 with the market-oriented Competition Act of 2002.</li>
+            <li>Deregulated domestic banking interest rate controls.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>🌐 P — Privatization Protocols</h4>
+          <ul>
+            <li>Initiated structured disinvestment of Public Sector Enterprises.</li>
+            <li>Strategic Divestment: Reduced state equity stakes below the 51% threshold to introduce private corporate governance.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>🌍 G — Globalization Protocols</h4>
+          <ul>
+            <li>Integrated India into global trade networks, leading to WTO membership in 1995.</li>
+            <li>Replaced the restrictive Foreign Exchange Regulation Act (FERA) with the modern Foreign Exchange Management Act (FEMA 1999).</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 class="sec">📋 Reference Table: High-Yield Advisory Panels ⭐⭐⭐</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Advisory Panel / Committee</th>
+              <th>Primary Policy Focus Area</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Narasimham Committee I & II</b></td><td>Comprehensive Financial & Banking Sector Reforms (1991 / 1998)</td></tr>
+            <tr><td>Raja Chelliah / Kelkar Panels</td><td>Tax Architecture Restructuring & National GST Roadmap</td></tr>
+            <tr><td>Urjit Patel Panel Mandate</td><td>Recalibrating Monetary Policy via CPI-based Inflation Targeting</td></tr>
+            <tr><td>N.K. Singh Committee</td><td>Structural Review of the FRBM Act Mandates</td></tr>
+            <tr><td>Suresh Tendulkar & Rangarajan Panels</td><td>Poverty Line Estimation Methodologies and Calibration</td></tr>
+            <tr><td>B. Shivaraman Committee</td><td>Institutional Agricultural Credit Architecture, leading to NABARD</td></tr>
+            <tr><td>Abid Hussain Committee</td><td>Small-Scale Industrial Protection and Deregulation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="screen" id="rapid">
+      <div class="hero">
+        <h2>⚡ Core Fact Matrix: High-Velocity Revision Core</h2>
+        <p>Review this comprehensive summary daily to reinforce core pattern recognition and maximize factual retention 🧠</p>
+      </div>
+      
+      <div class="grid g2">
+        <div class="card green">
+          <h4>📌 Foundational Paradigms</h4>
+          <ul>
+            <li>Foundational Patriarch of Modern Economics: <b>Adam Smith</b>.</li>
+            <li>Patriarch of Indian Economic Analysis: <b>Justice M.G. Ranade</b>.</li>
+            <li>The terms Micro and Macro were originally coined by <b>Ragnar Frisch (1933)</b>.</li>
+            <li>The concept of scarcity-driven resource allocation was formulated by <b>Lionel Robbins</b>.</li>
+            <li>The Human Development Index framework was introduced by <b>Mahbub ul Haq (1990)</b>.</li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h4>📌 National Income Metric Invariants</h4>
+          <ul>
+            <li>Current constant pricing calculations use index base year: <b>2011-12</b>.</li>
+            <li>National Income data is processed and tracking by the <b>NSO (MoSPI)</b>.</li>
+            <li>The earliest historical income calculation was made by <b>Dadabhai Naoroji (1868)</b>.</li>
+            <li>The tertiary <b>Service Sector</b> remains the largest single contributor to GDP, accounting for <b>~55%</b>.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>📌 Central Banking Invariants</h4>
+          <ul>
+            <li>The Reserve Bank of India commenced operations on <b>1 April 1935</b>.</li>
+            <li>The institution was nationalized on <b>1 January 1949</b>.</li>
+            <li>Inaugural Domestic RBI Governor: <b>C.D. Deshmukh</b>.</li>
+            <li>Major commercial bank nationalization occurred in <b>1969 (14 Banks)</b> and <b>1980 (6 Banks)</b>.</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <h4>📌 Inflation and Price Stability</h4>
+          <ul>
+            <li>The baseline indexing year for tracking the Wholesale Price Index (WPI) is <b>2011-12</b>.</li>
+            <li>The baseline indexing year for tracking the Consumer Price Index (CPI) is <b>2012</b>.</li>
+            <li>The statutory monetary policy target framework is set at <b>CPI 4% $\pm 2\%$</b>.</li>
+            <li>Stagflation occurs when high consumer price inflation pairs with stagnant production output.</li>
+          </ul>
+        </div>
+        <div class="card green">
+          <h4>📌 Fiscal & Public Revenue Infrastructure</h4>
+          <ul>
+            <li>The Annual Financial Statement is mandated constitutionally under <b>Article 112</b>.</li>
+            <li>The unified Goods and Services Tax (GST) system launched on <b>1 July 2017</b>.</li>
+            <li>GST implementation was driven by the <b>101st Constitutional Amendment Act</b>.</li>
+            <li>The advisory GST Council is constitutionally authorized under <b>Article 279A</b>, chaired by the Union FM.</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h4>📌 Sovereign Planning Legacy</h4>
+          <ul>
+            <li>The advisory Planning Commission was established on <b>15 March 1950</b>.</li>
+            <li>The modern NITI Aayog policy think-tank replaced it on <b>1 January 2015</b>.</li>
+            <li>The First Five-Year Plan was built on the <b>Harrod-Domar Model</b>; the Second relied on the <b>Mahalanobis heavy industry model</b>.</li>
+            <li>Systemic Plan Holidays occurred between <b>1966-1969</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="quiz">
+      <div class="hero">
+        <h2>📝 PYQ Examination Simulation Lab</h2>
+        <p>Validated database containing actual questions drawn from past historical evaluation tiers.</p>
+      </div>
+      
+      <div id="modeSelect">
+        <div class="mode-box">
+          <div class="mode-card" onclick="QuizEngine.initiate('timed')">
+            <div class="big">⏱️</div>
+            <h3>Exam Simulation Mode</h3>
+            <p>55 Validated Questions · 40-Minute Dynamic Countdown Timer<br>True Standardized Exam Parameters<br>Comprehensive Analysis Generated Upon Submission</p>
+          </div>
+          <div class="mode-card" onclick="QuizEngine.initiate('practice')">
+            <div class="big">🔍</div>
+            <h3>Guided Practice Mode</h3>
+            <p>55 Validated Questions · No Timer Constraints<br>Immediate Accuracy Feedback + Core Rationale Explanations<br>Optimal Mode for Concept Reinforcement</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="quizArea" style="display:none">
+        <div class="quiz-top">
+          <span id="qCounter">Question 1 / 55</span>
+          <span id="timer">40:00</span>
+          <span id="scoreDisplay">Current Score: 0</span>
+        </div>
+        <div id="qWrap"></div>
+        <div class="navarrow">
+          <button class="btn dark" id="prevBtn" onclick="QuizEngine.shift(-1)">◀ Backward</button>
+          <button class="btn" id="submitBtn" onclick="QuizEngine.processEvaluation()">🏁 Terminate & Evaluate</button>
+          <button class="btn dark" id="nextBtn" onclick="QuizEngine.shift(1)">Forward ▶</button>
+        </div>
+      </div>
+      
+      <div id="result">
+        <div style="text-align:center; padding:20px;">
+          <h2>🎯 Performance Diagnostics Complete</h2>
+          <div class="score-ring" id="scoreRing"><span id="scoreText">0/55</span></div>
+          <p id="scoreLine" style="font-size:16px; margin:12px 0; font-weight:600;"></p>
+          <div id="reviewWrap"></div>
+          <button class="btn" onclick="QuizEngine.reboot()">🔄 Reset Simulator</button>
+          <button class="btn dark" onclick="go('home',null)">🏠 Return to Strategy Hub</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    /**
+     * CORE STRUCTURAL COGNITIVE ROUTER
+     * Handles single-page architecture screen transitions
+     */
+    function go(targetScreenId, navigationButtonContext) {
+      document.querySelectorAll('.screen').forEach(screenElement => {
+        screenElement.classList.remove('active');
+      });
+      document.getElementById(targetScreenId).classList.add('active');
+      
+      document.querySelectorAll('.nav-btn').forEach(buttonElement => {
+        buttonElement.classList.remove('active');
+      });
+      if (navigationButtonContext) {
+        navigationButtonContext.classList.add('active');
+      }
+      
+      document.querySelector('.sidebar').classList.remove('open');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /**
+     * CENTRALIZED HARDENED QUESTION REPOSITORY
+     * Structured data configuration model isolating the 55 mock questions
+     */
+    const QuizDatabase = [
+      { q:"Who is called the 'Father of Economics'?", opts:["Karl Marx","Adam Smith","J.M. Keynes","Alfred Marshall"], ans:1, exp:"Adam Smith wrote 'Wealth of Nations' (1776) — the foundational text of modern economics." },
+      { q:"The term 'Economics' is derived from the Greek word 'Oikonomia'. Who is credited with first using it in economic context?", opts:["Plato","Xenophon","Aristotle","Socrates"], ans:2, exp:"Aristotle gave the term a formal economic context in his political philosophy writings." },
+      { q:"Which committee recommended the establishment of NABARD?", opts:["Narasimham Committee","Shivaraman Committee","Kelkar Committee","Tendulkar Committee"], ans:1, exp:"The Shivaraman Committee (B. Sivaraman) recommended setting up NABARD, which was established in 1982." },
+      { q:"India's GDP is calculated at constant prices using which base year?", opts:["2004-05","2007-08","2011-12","2014-15"], ans:2, exp:"India revised its base year for GDP calculation to 2011-12 in January 2015." },
+      { q:"Repo Rate is the rate at which:", opts:["Banks borrow from each other","RBI borrows from commercial banks","RBI lends to commercial banks","Govt borrows from RBI"], ans:2, exp:"Repo Rate = rate at which RBI lends short-term money to commercial banks against G-securities." },
+      { q:"The Reserve Bank of India was established on:", opts:["1 January 1935","1 April 1935","15 August 1947","1 January 1949"], ans:1, exp:"RBI was established on 1 April 1935 under the RBI Act, 1934, based on Hilton Young Commission." },
+      { q:"Which Article of the Constitution deals with the Union Budget (Annual Financial Statement)?", opts:["Article 110","Article 112","Article 114","Article 280"], ans:1, exp:"Article 112 of the Indian Constitution defines the Annual Financial Statement (Union Budget)." },
+      { q:"Goods that violate the Law of Demand (price rises, demand also rises) are called:", opts:["Veblen Goods","Giffen Goods","Inferior Goods","Normal Goods"], ans:1, exp:"Giffen Goods (named after Robert Giffen) are staple inferior goods where demand increases as price rises." },
+      { q:"The first Governor-General of RBI was:", opts:["C.D. Deshmukh","Osborne Smith","James Taylor","Benegal Rama Rau"], ans:1, exp:"Sir Osborne Smith was the 1st Governor of RBI. C.D. Deshmukh was the 1st Indian Governor." },
+      { q:"GST in India was launched on:", opts:["1 April 2017","1 July 2017","15 August 2017","1 January 2018"], ans:1, exp:"GST was launched at midnight on 1 July 2017, replacing multiple indirect taxes — 'One Nation One Tax'." },
+      { q:"The 'Lorenz Curve' is used to measure:", opts:["Inflation","Economic growth","Income inequality","Unemployment"], ans:2, exp:"The Lorenz Curve graphically represents income or wealth distribution — the gap shows inequality. Gini coefficient is derived from it." },
+      { q:"Which type of unemployment is most common in Indian agriculture?", opts:["Frictional","Structural","Disguised","Cyclical"], ans:2, exp:"Disguised unemployment means more workers are employed than needed — marginal product ≈ zero. Very common in Indian agriculture." },
+      { q:"National Income in India is estimated by:", opts:["Finance Ministry","NITI Aayog","NSO (National Statistical Office)","RBI"], ans:2, exp:"NSO (formerly CSO), under the Ministry of Statistics and Programme Implementation (MoSPI), estimates India's National Income." },
+      { q:"The Hilton Young Commission (1926) recommended:", opts:["Nationalisation of RBI","Setting up of RBI","Creation of Planning Commission","Land Reforms"], ans:1, exp:"The Hilton Young Commission (1926) recommended the establishment of a central bank — which led to the founding of RBI in 1935." },
+      { q:"Which country was the first to introduce GST?", opts:["USA","Germany","France","Australia"], ans:2, exp:"France introduced GST (TVA) in 1954 — making it the first country in the world to implement this tax." },
+      { q:"'Stagflation' refers to:", opts:["High inflation + high growth","High inflation + stagnation + unemployment","Low inflation + high growth","Falling prices + unemployment"], ans:1, exp:"Stagflation = stagnation + inflation — both unemployment and inflation rise simultaneously. Coined by Ian Macleod." },
+      { q:"Which is the largest contributor to India's GDP?", opts:["Agriculture","Industry","Services","Manufacturing"], ans:2, exp:"The Services sector contributes approximately 55% to India's GDP, making it the largest sector by contribution." },
+      { q:"14 major commercial banks were nationalised in:", opts:["1955","1960","1969","1980"], ans:2, exp:"On 19 July 1969, PM Indira Gandhi nationalised 14 major commercial banks with deposits over ₹50 crore." },
+      { q:"The concept of Human Development Index (HDI) was introduced by:", opts:["World Bank","UNDP","IMF","UN General Assembly"], ans:1, exp:"HDI was introduced by UNDP in 1990, conceptualised by Pakistani economist Mahbub ul Haq with inputs from Amartya Sen." },
+      { q:"SEBI was given statutory status in:", opts:["1988","1990","1992","1995"], ans:2, exp:"SEBI was established in 1988 but became a statutory body via the SEBI Act in 1992." },
+      { q:"The Planning Commission of India was established in:", opts:["1948","1950","1951","1952"], ans:1, exp:"The Planning Commission was set up by a Cabinet Resolution on 15 March 1950." },
+      { q:"The Second Five Year Plan was based on the model developed by:", opts:["Amartya Sen","V.K.R.V. Rao","P.C. Mahalanobis","Ragnar Frisch"], ans:2, exp:"The 2nd Five Year Plan (1956-61) was based on the Mahalanobis Model focusing on heavy industrialisation." },
+      { q:"RBI was nationalised on:", opts:["1 April 1935","15 August 1947","1 January 1949","26 January 1950"], ans:2, exp:"RBI was nationalised on 1 January 1949 through the Reserve Bank of India (Transfer to Public Ownership) Act, 1948." },
+      { q:"The term 'Micro Economics' was coined by:", opts:["J.M. Keynes","Ragnar Frisch","Alfred Marshall","Adam Smith"], ans:1, exp:"Ragnar Frisch coined both 'Microeconomics' and 'Macroeconomics' in 1933." },
+      { q:"Gresham's Law states:", opts:["Bad money drives out good money","Good money drives out bad money","Inflation reduces purchasing power","Supply creates its own demand"], ans:0, exp:"Gresham's Law: 'Bad money drives out good money' — when both are in circulation, people hoard good quality money." },
+      { q:"The WTO replaced which earlier body?", opts:["UNCTAD","GATT","IMF","ITO"], ans:1, exp:"WTO replaced GATT (General Agreement on Tariffs and Trade, 1948) on 1 January 1995." },
+      { q:"The FRBM Act was enacted in:", opts:["2001","2002","2003","2004"], ans:2, exp:"The Fiscal Responsibility and Budget Management (FRBM) Act was enacted in 2003 to enforce fiscal discipline." },
+      { q:"Which index does RBI use for its inflation targeting?", opts:["WPI","CPI","GDP Deflator","IIP"], ans:1, exp:"RBI uses CPI (Consumer Price Index) for its inflation targeting framework since 2014-15 (Urjit Patel Committee)." },
+      { q:"'Operation Flood' was related to:", opts:["Flood relief","Irrigation projects","Milk production (White Revolution)","Fish production"], ans:2, exp:"Operation Flood (1970) was the dairy development programme that created the White Revolution, led by Verghese Kurien through Amul/NDDB." },
+      { q:"The first Indian to present the Union Budget was:", opts:["R.K. Shanmukham Chetty","John Mathai","C.D. Deshmukh","Liaquat Ali Khan"], ans:0, exp:"R.K. Shanmukham Chetty presented India's first Union Budget on 26 November 1947." },
+      { q:"India adopted the 'Mixed Economy' model in:", opts:["1947","1948","1950","1956"], ans:1, exp:"The Industrial Policy Resolution of 1948 formally set up India's mixed economy framework with both public and private sectors." },
+      { q:"CRR refers to:", opts:["Cash Reserve Ratio kept by banks with themselves","Cash Reserve Ratio deposited with RBI","Credit Rating Ratio","Capital Reserve Requirement"], ans:1, exp:"CRR (Cash Reserve Ratio) is the % of a bank's total deposits that must be kept with RBI in cash form." },
+      { q:"Engel's Law states that as income rises:", opts:["Food expenditure rises proportionally","% of income spent on food falls","All expenditures fall","Savings decline"], ans:1, exp:"Ernst Engel's Law: as income rises, the proportion (%) spent on food declines, though absolute spending may increase." },
+      { q:"NITI Aayog was established on:", opts:["1 January 2014","1 January 2015","15 March 2015","1 April 2015"], ans:1, exp:"NITI Aayog (National Institution for Transforming India) was established on 1 January 2015, replacing the Planning Commission." },
+      { q:"The 'Bhoodan Movement' was started by:", opts:["Mahatma Gandhi","Jawaharlal Nehru","Vinoba Bhave","J.P. Narayan"], ans:2, exp:"Vinoba Bhave started the Bhoodan (land gift) Movement in 1951 at Pochampalli (Telangana) to redistribute land to landless poor." },
+      { q:"ADB (Asian Development Bank) headquarter is in:", opts:["Bangkok","Singapore","Tokyo","Manila"], ans:3, exp:"ADB was established in 1966 and its headquarters is in Manila, Philippines." },
+      { q:"Reverse Repo Rate is the rate at which:", opts:["RBI lends to banks","Banks borrow from each other","Banks park surplus funds with RBI","Govt borrows from banks"], ans:2, exp:"Reverse Repo Rate = rate at which commercial banks park their excess/surplus funds with RBI." },
+      { q:"Which committee recommended inflation targeting framework for RBI?", opts:["Narasimham Committee","Kelkar Committee","Urjit Patel Committee","Rangarajan Committee"], ans:2, exp:"The Urjit Patel Committee (2014) recommended the CPI-based flexible inflation targeting framework for RBI." },
+      { q:"The 'Father of Green Revolution in India' is:", opts:["Norman Borlaug","M.S. Swaminathan","C. Subramaniam","Verghese Kurien"], ans:1, exp:"M.S. Swaminathan is known as the Father of Green Revolution in India. Norman Borlaug is the global father." },
+      { q:"India's first Five Year Plan was based on which model?", opts:["Mahalanobis Model","Harrod-Domar Model","Lewis Model","Solow Model"], ans:1, exp:"The First Five Year Plan (1951-56) was based on the Harrod-Domar model, focusing on agriculture and infrastructure." },
+      { q:"Which country has the highest voting share in IMF?", opts:["China","Japan","India","USA"], ans:3, exp:"The USA has the highest voting share (~17%) in IMF, giving it effective veto power over major decisions." },
+      { q:"The Narasimham Committee (1991) was related to:", opts:["Tax reforms","Banking sector reforms","Agricultural reforms","Insurance sector reforms"], ans:1, exp:"The Narasimham Committee I (1991) recommended comprehensive reforms for the Indian banking and financial sector." },
+      { q:"NDB (New Development Bank) of BRICS is headquartered in:", opts:["Beijing","New Delhi","Moscow","Shanghai"], ans:3, exp:"NDB, established in 2015, is headquartered in Shanghai, China. Its first President was K.V. Kamath of India." },
+      { q:"The 'Hindu Rate of Growth' (~3.5% annually) was coined by economist:", opts:["P.C. Mahalanobis","Amartya Sen","Raj Krishna","Jagdish Bhagwati"], ans:2, exp:"Raj Krishna coined the term 'Hindu Rate of Growth' to describe India's sluggish GDP growth of ~3.5% from 1950s to 1980s." },
+      { q:"Which article of the Constitution established the Finance Commission?", opts:["Article 264","Article 270","Article 280","Article 282"], ans:2, exp:"Article 280 of the Indian Constitution provides for the Finance Commission, constituted every 5 years." },
+      { q:"The concept of 'Poverty Line' in India was first estimated scientifically by:", opts:["Dadabhai Naoroji","Amartya Sen","V.M. Dandekar & N. Rath (1971)","Tendulkar Committee"], ans:2, exp:"V.M. Dandekar and N. Rath gave the first scientific and systematic poverty line estimates for India in 1971." },
+      { q:"SEBI regulates which market in India?", opts:["Money Market","Capital Market","Commodity Market only","Foreign Exchange Market"], ans:1, exp:"SEBI (Securities and Exchange Board of India) is the regulator for the Capital Market (stocks, mutual funds, etc.) in India." },
+      { q:"The Marginal Standing Facility (MSF) is provided by:", opts:["Finance Ministry","SEBI","RBI","NABARD"], ans:2, exp:"MSF is an emergency overnight borrowing facility provided by RBI to scheduled commercial banks above the LAF limit." },
+      { q:"Which Five Year Plan was called the 'Gadgil Yojana'?", opts:["Second Plan","Third Plan","Fourth Plan","Fifth Plan"], ans:1, exp:"The Third Five Year Plan (1961-66) is called 'Gadgil Yojana' after D.R. Gadgil who contributed to its formulation." },
+      { q:"'Skewflation' is a term associated with:", opts:["Amartya Sen","Kaushik Basu","Manmohan Singh","Urjit Patel"], ans:1, exp:"'Skewflation' was coined by Kaushik Basu (former CEA of India) to describe inflation in select goods while others remain stable." },
+      { q:"The Economic Reforms of 1991 were initiated under which Finance Minister?", opts:["P.V. Narasimha Rao","Pranab Mukherjee","Dr. Manmohan Singh","Yashwant Sinha"], ans:2, exp:"Dr. Manmohan Singh was the Finance Minister who presented the landmark 1991 budget initiating LPG reforms. PM was P.V. Narasimha Rao." },
+      { q:"The AIIB (Asian Infrastructure Investment Bank) is led by which country?", opts:["India","Japan","South Korea","China"], ans:3, exp:"AIIB (established 2016, HQ Beijing) is a multilateral development bank led and majorly funded by China." },
+      { q:"Demonetisation in India was announced on:", opts:["8 November 2016","1 January 2017","8 November 2017","15 August 2016"], ans:0, exp:"PM Narendra Modi announced demonetisation of ₹500 and ₹1000 notes on 8 November 2016." },
+      { q:"Which organisation publishes the World Development Report?", opts:["IMF","UNDP","World Bank","WTO"], ans:2, exp:"The World Bank publishes the World Development Report annually, focusing on a specific development theme each year." },
+      { q:"The 101st Constitutional Amendment Act (2016) is related to:", opts:["GST","Demonetisation","FDI Policy","FRBM"], ans:0, exp:"The Constitution (101st Amendment) Act, 2016 enabled the introduction of GST in India, amending articles related to taxation powers." }
+    ];
+
+    /**
+     * STATEFUL EVALUATION PLATFORM CORE
+     * Modular object capsule managing total simulator operation state
+     */
+    const QuizEngine = {
+      executionMode: 'timed',
+      activeQuestionIndex: 0,
+      userResponseMatrix: [],
+      cumulativeScore: 0,
+      clockIntervalReference: null,
+      secondsRemaining: 2400,
+
+      initiate: function(selectedMode) {
+        this.executionMode = selectedMode;
+        this.activeQuestionIndex = 0;
+        this.cumulativeScore = 0;
+        this.secondsRemaining = 2400;
+        this.userResponseMatrix = new Array(QuizDatabase.length).fill(null);
+        
+        document.getElementById('modeSelect').style.display = 'none';
+        document.getElementById('quizArea').style.display = 'block';
+        document.getElementById('result').style.display = 'none';
+
+        if (this.executionMode === 'timed') {
+          document.getElementById('timer').style.display = 'block';
+          this.clockIntervalReference = setInterval(() => this.processClockTick(), 1000);
+        } else {
+          document.getElementById('timer').textContent = '∞ Guided Practice';
+        }
+        this.renderActiveQuestion();
+      },
+
+      processClockTick: function() {
+        this.secondsRemaining--;
+        let minutes = String(Math.floor(this.secondsRemaining / 60)).padStart(2, '0');
+        let seconds = String(this.secondsRemaining % 60).padStart(2, '0');
+        document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+        
+        if (this.secondsRemaining <= 0) {
+          this.processEvaluation();
+        }
+      },
+
+      renderActiveQuestion: function() {
+        const questionData = QuizDatabase[this.activeQuestionIndex];
+        document.getElementById('qCounter').textContent = `Question ${this.activeQuestionIndex + 1} / ${QuizDatabase.length}`;
+        document.getElementById('scoreDisplay').textContent = `Current Score: ${this.cumulativeScore}`;
+        
+        let interfaceHtml = `
+          <div class="qcard">
+            <div class="qtext">${this.activeQuestionIndex + 1}. ${questionData.q}</div>
+        `;
+        
+        questionData.opts.forEach((optionText, optionIndex) => {
+          let styleClasses = 'opt';
+          if (this.userResponseMatrix[this.activeQuestionIndex] !== null) {
+            if (optionIndex === questionData.ans) {
+              styleClasses += ' correct';
+            } else if (optionIndex === this.userResponseMatrix[this.activeQuestionIndex]) {
+              styleClasses += ' wrong';
+            }
+          } else if (this.userResponseMatrix[this.activeQuestionIndex] === optionIndex) {
+            styleClasses += ' sel';
+          }
+          
+          let interactionDisabledAttribute = '';
+          if (this.userResponseMatrix[this.activeQuestionIndex] !== null) {
+            interactionDisabledAttribute = 'disabled';
+          }
+          
+          interfaceHtml += `
+            <button class="${styleClasses}" onclick="QuizEngine.registerResponse(${optionIndex})" ${interactionDisabledAttribute}>
+              ${String.fromCharCode(65 + optionIndex)}. ${optionText}
+            </button>
+          `;
+        });
+        
+        if (this.executionMode === 'practice' && this.userResponseMatrix[this.activeQuestionIndex] !== null) {
+          let isCorrect = this.userResponseMatrix[this.activeQuestionIndex] === questionData.ans;
+          interfaceHtml += `
+            <div class="expl" style="background: ${isCorrect ? '#ecfdf5' : '#fef2f2'}">
+              ${isCorrect ? '✅ <b>Resolution Accuracy Verified:</b> ' : '❌ <b>Resolution Error:</b> Correct Anchor: <b>' + questionData.opts[questionData.ans] + '</b>.<br>'}
+              📖 <b>Analytical Rationale:</b> ${questionData.exp}
+            </div>
+          `;
+        }
+        
+        interfaceHtml += '</div>';
+        document.getElementById('qWrap').innerHTML = interfaceHtml;
+      },
+
+      registerResponse: function(selectedOptionIndex) {
+        if (this.userResponseMatrix[this.activeQuestionIndex] !== null) return;
+        this.userResponseMatrix[this.activeQuestionIndex] = selectedOptionIndex;
+        
+        if (selectedOptionIndex === QuizDatabase[this.activeQuestionIndex].ans) {
+          this.cumulativeScore++;
+        }
+        this.renderActiveQuestion();
+      },
+
+      shift: function(directionVector) {
+        this.activeQuestionIndex = Math.max(0, Math.min(QuizDatabase.length - 1, this.activeQuestionIndex + directionVector));
+        this.renderActiveQuestion();
+      },
+
+      processEvaluation: function() {
+        if (this.clockIntervalReference) clearInterval(this.clockIntervalReference);
+        document.getElementById('quizArea').style.display = 'none';
+        
+        const resultContainer = document.getElementById('result');
+        resultContainer.style.display = 'block';
+        
+        const achievementPercentage = Math.round((this.cumulativeScore / QuizDatabase.length) * 100);
+        document.getElementById('scoreText').textContent = `${this.cumulativeScore}/${QuizDatabase.length}`;
+        document.getElementById('scoreRing').style.setProperty('--p', `${achievementPercentage}%`);
+        
+        let qualitativeGrade = '';
+        if (achievementPercentage >= 80) qualitativeGrade = '🏆 Advanced Competency! Structural Readiness Formed.';
+        else if (achievementPercentage >= 60) qualitativeGrade = '👍 Proficient Standard. Patch isolated structural gaps.';
+        else if (achievementPercentage >= 40) qualitativeGrade = '📚 Intermediate Threshold. Intensify matrix study patterns.';
+        else qualitativeGrade = '⚠️ Critical Deficit. Reset to foundational theoretical layout.';
+        
+        document.getElementById('scoreLine').textContent = `${achievementPercentage}% — ${qualitativeGrade}`;
+        
+        let analyticalReviewHtml = '<h3 style="margin: 24px 0 12px; color: var(--bg-dark)">📋 Post-Examination Audit Trail</h3>';
+        QuizDatabase.forEach((questionItem, index) => {
+          let userSelectionIndex = this.userResponseMatrix[index];
+          let isSelectionCorrect = userSelectionIndex === questionItem.ans;
+          
+          analyticalReviewHtml += `
+            <div style="background: ${isSelectionCorrect ? '#ecfdf5' : '#fef2f2'}; border-radius: 8px; padding: 14px; margin: 10px 0; font-size: 13.5px; text-align: left; border-left: 4px solid ${isSelectionCorrect ? 'var(--accent-emerald)' : 'var(--alert-red)'}">
+              <b>${index + 1}. ${questionItem.q}</b><br>
+              Logged Variant: <b>${userSelectionIndex !== null ? questionItem.opts[userSelectionIndex] : 'Explicit Omission / Not Attempted'}</b> | 
+              Verified Target Vector: <b style="color: green">${questionItem.opts[questionItem.ans]}</b><br>
+              <i style="color: #475569; display:block; margin-top: 6px;">📖 ${questionItem.exp}</i>
+            </div>
+          `;
+        });
+        
+        document.getElementById('reviewWrap').innerHTML = analyticalReviewHtml;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      reboot: function() {
+        if (this.clockIntervalReference) clearInterval(this.clockIntervalReference);
+        document.getElementById('result').style.display = 'none';
+        document.getElementById('modeSelect').style.display = 'block';
+      }
+    };
+  </script>
+</body>
+</html>

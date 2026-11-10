@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SSC CGL Science Master Guide</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --accent: #ffd600;
+    --accent2: #00bcd4;
+    --bg: #f0f4ff;
+    --sidebar-w: 270px;
+    --header-h: 60px;
+    --white: #fff;
+    --text: #222;
+    --card: #fff;
+    --shadow: 0 4px 24px rgba(26,35,126,0.10);
+    --green: #00c853;
+    --red: #d50000;
+    --orange: #ff6d00;
+    --purple: #6a1b9a;
+    --teal: #00695c;
+    --pink: #ad1457;
+    --sidebar-item-hover: #3949ab;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  /* ===== HEADER ===== */
+  #top-header {
+    position: fixed; top: 0; left: 0; right: 0; height: var(--header-h);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 60%, var(--accent2) 100%);
+    display: flex; align-items: center; z-index: 200; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 0 18px; gap: 14px;
+  }
+  #hamburger {
+    background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 5px; padding: 6px;
+  }
+  #hamburger span { display: block; width: 26px; height: 3px; background: var(--accent); border-radius: 3px; transition: 0.3s; }
+  #header-title { color: var(--white); font-size: 1.15rem; font-weight: 700; letter-spacing: 1px; flex: 1; }
+  #header-badge {
+    background: var(--accent); color: var(--primary); font-size: 0.75rem; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px; letter-spacing: 0.5px; white-space: nowrap;
+  }
+
+  /* ===== SIDEBAR ===== */
+  #sidebar {
+    position: fixed; top: var(--header-h); left: 0; width: var(--sidebar-w);
+    height: calc(100vh - var(--header-h)); background: var(--primary);
+    overflow-y: auto; z-index: 150; transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    display: flex; flex-direction: column;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.18);
+  }
+  #sidebar.closed { transform: translateX(calc(-1 * var(--sidebar-w))); }
+  .sidebar-section-label {
+    color: var(--accent); font-size: 0.68rem; font-weight: 800; letter-spacing: 2px;
+    padding: 16px 18px 6px 18px; text-transform: uppercase;
+  }
+  .sidebar-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 18px; color: #c5cae9; cursor: pointer;
+    border-left: 3px solid transparent; transition: all 0.2s; font-size: 0.92rem;
+    text-decoration: none;
+  }
+  .sidebar-item:hover, .sidebar-item.active {
+    background: var(--sidebar-item-hover); color: var(--white);
+    border-left: 3px solid var(--accent);
+  }
+  .sidebar-item .icon { font-size: 1.1rem; width: 22px; text-align: center; }
+  .sidebar-divider { height: 1px; background: #3949ab; margin: 6px 14px; }
+
+  /* ===== MAIN CONTENT ===== */
+  #main-content {
+    margin-left: var(--sidebar-w); margin-top: var(--header-h);
+    padding: 28px 20px 40px 28px; min-height: calc(100vh - var(--header-h));
+    transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  #main-content.full { margin-left: 0; }
+
+  /* ===== SCREENS ===== */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* ===== HERO BANNER ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent2) 100%);
+    border-radius: 18px; padding: 36px 28px; color: var(--white);
+    margin-bottom: 28px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: '⚛️'; font-size: 7rem; position: absolute; right: 24px; top: 10px; opacity: 0.12;
+  }
+  .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+  .hero p { font-size: 1rem; opacity: 0.9; max-width: 580px; line-height: 1.7; }
+  .hero .stats { display: flex; gap: 18px; margin-top: 18px; flex-wrap: wrap; }
+  .hero .stat-box {
+    background: rgba(255,255,255,0.15); border-radius: 10px; padding: 10px 18px; text-align: center;
+  }
+  .hero .stat-box .num { font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+  .hero .stat-box .lbl { font-size: 0.75rem; opacity: 0.85; }
+
+  /* ===== SECTION TITLE ===== */
+  .sec-title {
+    font-size: 1.5rem; font-weight: 800; color: var(--primary);
+    border-left: 5px solid var(--accent); padding-left: 14px; margin: 28px 0 18px 0;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .sec-subtitle {
+    font-size: 1.1rem; font-weight: 700; color: var(--secondary);
+    margin: 20px 0 10px 0; border-bottom: 2px solid #e8eaf6; padding-bottom: 6px;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  /* ===== CARDS ===== */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; margin-bottom: 20px; }
+  .card {
+    background: var(--card); border-radius: 14px; padding: 20px 18px;
+    box-shadow: var(--shadow); border-top: 4px solid var(--accent2);
+    transition: transform 0.18s, box-shadow 0.18s;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(26,35,126,0.15); }
+  .card.green { border-top-color: var(--green); }
+  .card.orange { border-top-color: var(--orange); }
+  .card.purple { border-top-color: var(--purple); }
+  .card.red { border-top-color: var(--red); }
+  .card.teal { border-top-color: var(--teal); }
+  .card.pink { border-top-color: var(--pink); }
+  .card.gold { border-top-color: var(--accent); }
+  .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--primary); }
+  .card ul { padding-left: 18px; }
+  .card ul li { margin-bottom: 6px; font-size: 0.9rem; line-height: 1.5; }
+
+  /* ===== TABLES ===== */
+  .tbl-wrap { overflow-x: auto; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; background: var(--white); }
+  thead tr { background: var(--primary); color: var(--white); }
+  thead th { padding: 12px 14px; text-align: left; font-size: 0.9rem; }
+  tbody tr:nth-child(even) { background: #e8eaf6; }
+  tbody td { padding: 10px 14px; font-size: 0.88rem; border-bottom: 1px solid #e0e0e0; }
+  .badge {
+    display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem;
+    font-weight: 700; letter-spacing: 0.5px;
+  }
+  .badge-hot { background: #ff1744; color: white; }
+  .badge-med { background: #ff9800; color: white; }
+  .badge-low { background: #4caf50; color: white; }
+
+  /* ===== MIND MAP ===== */
+  .mindmap {
+    background: var(--white); border-radius: 16px; padding: 24px; box-shadow: var(--shadow);
+    margin-bottom: 20px; text-align: center;
+  }
+  .mm-center {
+    display: inline-block; background: var(--primary); color: var(--white);
+    padding: 14px 30px; border-radius: 40px; font-weight: 800; font-size: 1.1rem; margin-bottom: 18px;
+  }
+  .mm-branches { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+  .mm-branch {
+    background: #e8eaf6; border-radius: 30px; padding: 8px 18px;
+    font-size: 0.88rem; font-weight: 600; color: var(--primary);
+    border: 2px solid var(--accent2); transition: all 0.2s; cursor: default;
+  }
+  .mm-branch:hover { background: var(--accent2); color: var(--white); }
+
+  /* ===== FLOWCHART ===== */
+  .flowchart { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .flow-box {
+    background: var(--primary); color: var(--white); border-radius: 10px;
+    padding: 10px 18px; font-size: 0.88rem; font-weight: 600; text-align: center;
+  }
+  .flow-box.yellow { background: var(--accent); color: var(--primary); }
+  .flow-box.teal { background: var(--teal); }
+  .flow-box.orange { background: var(--orange); }
+  .flow-box.green { background: var(--green); }
+  .flow-box.pink { background: var(--pink); }
+  .flow-arrow { font-size: 1.4rem; color: var(--secondary); }
+
+  /* ===== MNEMONIC BOX ===== */
+  .mnemonic {
+    background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+    border: 2px dashed var(--accent); border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 18px; position: relative;
+  }
+  .mnemonic::before {
+    content: '🧠 MNEMONIC'; font-size: 0.72rem; font-weight: 800; color: var(--orange);
+    letter-spacing: 1.5px; display: block; margin-bottom: 8px;
+  }
+  .mnemonic p { font-size: 0.95rem; line-height: 1.7; }
+  .mnemonic strong { color: var(--primary); font-size: 1.05rem; }
+
+  /* ===== PYQ HIGHLIGHT BOX ===== */
+  .pyq-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 5px solid var(--green); border-radius: 10px; padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .pyq-box::before { content: '📝 PYQ PATTERN '; font-weight: 800; color: var(--teal); font-size: 0.8rem; letter-spacing: 1px; }
+  .pyq-box p { font-size: 0.9rem; margin-top: 4px; line-height: 1.6; }
+
+  /* ===== EXAM ALERT ===== */
+  .exam-alert {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-left: 5px solid var(--orange); border-radius: 10px; padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .exam-alert::before { content: '🎯 EXAM FOCUS '; font-weight: 800; color: var(--orange); font-size: 0.8rem; letter-spacing: 1px; }
+  .exam-alert p { font-size: 0.9rem; margin-top: 4px; line-height: 1.6; }
+
+  /* ===== FORMULA BOX ===== */
+  .formula-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 12px; padding: 14px 20px; margin-bottom: 14px;
+    border: 1.5px solid var(--accent2); font-family: 'Courier New', monospace;
+  }
+  .formula-box .f-title { font-size: 0.75rem; font-weight: 800; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .formula-box .f-eq { font-size: 1rem; color: var(--primary); font-weight: 700; }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; padding-left: 28px; margin-bottom: 20px; }
+  .timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 3px; background: var(--accent2); border-radius: 3px; }
+  .tl-item { position: relative; margin-bottom: 16px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -22px; top: 6px;
+    width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--white);
+    box-shadow: 0 0 0 3px var(--accent2);
+  }
+  .tl-item .tl-title { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+  .tl-item .tl-body { font-size: 0.88rem; color: #555; margin-top: 3px; line-height: 1.5; }
+
+  /* ===== COMPARISON TABLE ===== */
+  .comp-table { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .comp-col { background: var(--white); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+  .comp-col .comp-head { padding: 12px 16px; font-weight: 800; font-size: 0.95rem; color: var(--white); }
+  .comp-col .comp-head.blue { background: var(--primary); }
+  .comp-col .comp-head.orange { background: var(--orange); }
+  .comp-col .comp-head.green { background: var(--green); }
+  .comp-col .comp-head.red { background: var(--red); }
+  .comp-col ul { padding: 14px 14px 14px 28px; }
+  .comp-col ul li { font-size: 0.88rem; margin-bottom: 7px; line-height: 1.5; }
+
+  /* ===== VISUAL SVG DIAGRAM ===== */
+  .diagram-wrap {
+    background: var(--white); border-radius: 14px; box-shadow: var(--shadow);
+    padding: 18px; margin-bottom: 20px; overflow-x: auto; text-align: center;
+  }
+  .diagram-wrap .d-title { font-weight: 700; color: var(--primary); margin-bottom: 12px; font-size: 0.95rem; }
+
+  /* ===== QUICK FACTS ===== */
+  .qf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .qf-item {
+    background: var(--white); border-radius: 10px; padding: 12px 14px;
+    box-shadow: var(--shadow); border-bottom: 3px solid var(--accent);
+    font-size: 0.88rem; line-height: 1.5;
+  }
+  .qf-item strong { color: var(--primary); display: block; margin-bottom: 3px; }
+
+  /* ===== QUIZ LAB ===== */
+  .quiz-panel {
+    background: var(--white); border-radius: 16px; box-shadow: var(--shadow);
+    padding: 18px; margin-bottom: 18px;
+  }
+  .quiz-toolbar {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between;
+    background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%); border-radius: 14px;
+    padding: 14px 16px; margin-bottom: 18px;
+  }
+  .quiz-mode-toggle {
+    display: inline-flex; background: var(--white); border-radius: 999px; padding: 4px;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.08); gap: 4px; flex-wrap: wrap;
+  }
+  .quiz-mode-btn {
+    border: none; background: transparent; color: var(--primary); padding: 8px 14px;
+    border-radius: 999px; font-weight: 800; cursor: pointer; transition: all 0.18s ease;
+  }
+  .quiz-mode-btn.active { background: var(--primary); color: var(--white); }
+  .quiz-toolbar .quiz-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .quiz-pill {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
+    background: var(--white); color: var(--primary); font-weight: 700; font-size: 0.82rem;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+  }
+  .quiz-timer {
+    background: var(--primary); color: var(--white); border-radius: 999px; padding: 8px 14px;
+    font-weight: 800; letter-spacing: 0.6px; min-width: 110px; text-align: center;
+  }
+  .quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+  .quiz-card {
+    background: #fafbff; border: 1px solid #e0e7ff; border-radius: 14px; padding: 16px;
+    box-shadow: 0 2px 10px rgba(26,35,126,0.05);
+  }
+  .quiz-card.correct { border-color: rgba(0,200,83,0.45); background: #f1fff5; }
+  .quiz-card.wrong { border-color: rgba(213,0,0,0.35); background: #fff5f5; }
+  .quiz-card h4 { font-size: 0.98rem; line-height: 1.45; color: var(--primary); margin-bottom: 12px; }
+  .option-list { display: grid; gap: 8px; }
+  .option-item {
+    display: flex; align-items: flex-start; gap: 10px; width: 100%; cursor: pointer;
+    background: var(--white); border: 1px solid #d7def5; border-radius: 12px; padding: 10px 12px;
+    transition: all 0.18s ease;
+  }
+  .option-item:hover { border-color: var(--accent2); box-shadow: 0 4px 14px rgba(0,188,212,0.10); }
+  .option-item input { margin-top: 3px; accent-color: var(--secondary); }
+  .option-item.correct { border-color: rgba(0,200,83,0.6); background: #e8f8ee; }
+  .option-item.wrong { border-color: rgba(213,0,0,0.55); background: #fdeeee; }
+  .option-label { font-size: 0.9rem; line-height: 1.45; color: var(--text); }
+  .quiz-feedback {
+    margin-top: 10px; padding: 10px 12px; border-radius: 12px; font-size: 0.88rem; line-height: 1.55;
+    background: #eef2ff; color: var(--primary); display: none;
+  }
+  .quiz-feedback.show { display: block; }
+  .quiz-feedback.good { background: #e8f8ee; color: #156c39; }
+  .quiz-feedback.bad { background: #fdeeee; color: #a31515; }
+  .quiz-actions {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; align-items: center;
+  }
+  .quiz-btn {
+    border: none; border-radius: 999px; padding: 10px 16px; font-weight: 700; cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .quiz-btn:hover { transform: translateY(-1px); }
+  .quiz-btn.primary { background: var(--primary); color: var(--white); box-shadow: var(--shadow); }
+  .quiz-btn.accent { background: var(--accent); color: var(--primary); }
+  .quiz-btn.ghost { background: #edf2ff; color: var(--primary); }
+  .quiz-result {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-left: 5px solid var(--green);
+    border-radius: 12px; padding: 14px 16px; margin-top: 16px; display: none;
+  }
+  .quiz-result.show { display: block; }
+  .quiz-result strong { color: var(--primary); }
+  .quiz-summary {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 14px;
+  }
+  .quiz-summary .qf-item { margin-bottom: 0; }
+  .quiz-hint {
+    font-size: 0.88rem; color: #5b647a; margin-top: 10px; line-height: 1.5;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    #sidebar { transform: translateX(calc(-1 * var(--sidebar-w))); }
+    #sidebar.open { transform: translateX(0); }
+    #main-content { margin-left: 0; }
+    #main-content.full { margin-left: 0; }
+    .comp-table { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.4rem; }
+  }
+  @media (max-width: 480px) {
+    #main-content { padding: 16px 10px 30px 10px; }
+    .hero { padding: 22px 14px; }
+    .sec-title { font-size: 1.15rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    .quiz-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== OVERLAY ===== */
+  #overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 120;
+  }
+  #overlay.show { display: block; }
+
+  /* ===== SCROLLBAR ===== */
+  #sidebar::-webkit-scrollbar { width: 5px; }
+  #sidebar::-webkit-scrollbar-track { background: var(--primary); }
+  #sidebar::-webkit-scrollbar-thumb { background: var(--accent2); border-radius: 5px; }
+</style>
+</head>
+<body>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- HEADER -->
+<header id="top-header">
+  <button id="hamburger" onclick="toggleSidebar()" aria-label="Toggle Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div id="header-title">⚗️ SSC CGL Science Master Guide</div>
+  <div id="header-badge">IB ACIO Ready</div>
+</header>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-section-label">🏠 Home</div>
+  <a class="sidebar-item active" onclick="showScreen('home')">
+    <span class="icon">🏠</span> Dashboard
+  </a>
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-section-label">⚡ Physics</div>
+  <a class="sidebar-item" onclick="showScreen('motion')">
+    <span class="icon">🚀</span> Motion
+  </a>
+  <a class="sidebar-item" onclick="showScreen('electricity')">
+    <span class="icon">⚡</span> Electricity
+  </a>
+  <a class="sidebar-item" onclick="showScreen('heat')">
+    <span class="icon">🔥</span> Heat
+  </a>
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-section-label">🧪 Chemistry</div>
+  <a class="sidebar-item" onclick="showScreen('acids')">
+    <span class="icon">🧴</span> Acids & Bases
+  </a>
+  <a class="sidebar-item" onclick="showScreen('metals')">
+    <span class="icon">🔩</span> Metals
+  </a>
+  <a class="sidebar-item" onclick="showScreen('periodic')">
+    <span class="icon">📊</span> Periodic Table
+  </a>
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-section-label">🧬 Biology</div>
+  <a class="sidebar-item" onclick="showScreen('humanbody')">
+    <span class="icon">🫀</span> Human Body
+  </a>
+  <a class="sidebar-item" onclick="showScreen('diseases')">
+    <span class="icon">🦠</span> Diseases
+  </a>
+  <a class="sidebar-item" onclick="showScreen('nutrition')">
+    <span class="icon">🥦</span> Nutrition
+  </a>
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-section-label">📋 Revision</div>
+  <a class="sidebar-item" onclick="showScreen('revision')">
+    <span class="icon">📋</span> Quick Revision Sheet
+  </a>
+  <a class="sidebar-item" onclick="showScreen('pyq-test')">
+    <span class="icon">📝</span> PYQ Test Lab
+  </a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main-content">
+
+  <!-- ===================== HOME ===================== -->
+  <section class="screen active" id="screen-home">
+    <div class="hero">
+      <h1>🎯 SSC CGL Science Master Guide</h1>
+      <p>Your complete exam-focused study companion for Physics, Chemistry & Biology — engineered from 10+ years of SSC CGL & IB ACIO past year question analysis.</p>
+      <div class="stats">
+        <div class="stat-box"><div class="num">9</div><div class="lbl">Topics</div></div>
+        <div class="stat-box"><div class="num">3</div><div class="lbl">Subjects</div></div>
+        <div class="stat-box"><div class="num">7–9</div><div class="lbl">Questions/Paper</div></div>
+        <div class="stat-box"><div class="num">100%</div><div class="lbl">PYQ Aligned</div></div>
+      </div>
+    </div>
+
+    <div class="sec-title">📊 Subject Weightage in SSC CGL (Based on PYQ Analysis)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Subject</th><th>Avg. Questions</th><th>Important Topics</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td>🧬 Biology</td><td>3–4</td><td>Human Body, Diseases, Nutrition</td><td><span class="badge badge-hot">HIGH</span></td></tr>
+          <tr><td>⚡ Physics</td><td>2–3</td><td>Motion, Electricity, Heat, Optics</td><td><span class="badge badge-hot">HIGH</span></td></tr>
+          <tr><td>🧪 Chemistry</td><td>2–3</td><td>Acids & Bases, Metals, Periodic Table</td><td><span class="badge badge-med">MEDIUM</span></td></tr>
+          <tr><td>🌿 Environment</td><td>1–2</td><td>Ecology, Pollution</td><td><span class="badge badge-low">LOW</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-title">🗺️ Science Mind Map</div>
+    <div class="mindmap">
+      <div class="mm-center">⚛️ GENERAL SCIENCE (SSC CGL)</div>
+      <div class="mm-branches">
+        <div class="mm-branch">🚀 Motion & Laws</div>
+        <div class="mm-branch">⚡ Electricity</div>
+        <div class="mm-branch">🔥 Heat & Thermodynamics</div>
+        <div class="mm-branch">💡 Optics & Light</div>
+        <div class="mm-branch">🧴 Acids & Bases</div>
+        <div class="mm-branch">🔩 Metals & Non-Metals</div>
+        <div class="mm-branch">📊 Periodic Table</div>
+        <div class="mm-branch">🫀 Human Body Systems</div>
+        <div class="mm-branch">🦠 Diseases & Pathogens</div>
+        <div class="mm-branch">🥦 Nutrition & Vitamins</div>
+        <div class="mm-branch">🌿 Environment</div>
+        <div class="mm-branch">🔬 Cell Biology</div>
+      </div>
+    </div>
+
+    <div class="sec-title">🎯 Top PYQ Patterns at a Glance</div>
+    <div class="card-grid">
+      <div class="card green">
+        <h3>⚡ Physics PYQ Hotspots</h3>
+        <ul>
+          <li>Newton's Laws — 2–3 Qs per paper</li>
+          <li>Ohm's Law / Resistance formulas</li>
+          <li>SI Units & Definitions</li>
+          <li>Types of mirrors/lenses</li>
+          <li>Latent heat / specific heat</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <h3>🧪 Chemistry PYQ Hotspots</h3>
+        <ul>
+          <li>pH of common substances</li>
+          <li>Properties of metals (rusting, malleability)</li>
+          <li>Periodic Law & periodic trends</li>
+          <li>Common acids found in fruits</li>
+          <li>Valency & chemical formulae</li>
+        </ul>
+      </div>
+      <div class="card purple">
+        <h3>🧬 Biology PYQ Hotspots</h3>
+        <ul>
+          <li>Blood groups & Rh factor</li>
+          <li>Vitamin deficiency diseases</li>
+          <li>Diseases & causative agents</li>
+          <li>Digestive / Circulatory system</li>
+          <li>Largest / smallest organs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exam-alert"><p>Science in SSC CGL is asked at Class 6–10 NCERT level. Conceptual clarity + PYQ practice = guaranteed 7–9 marks in General Awareness. Use this guide topic-by-topic via the left sidebar!</p></div>
+  </section>
+
+  <!-- ===================== MOTION ===================== -->
+  <section class="screen" id="screen-motion">
+    <div class="sec-title">🚀 Physics — Motion</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🚀 MOTION</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Types of Motion</div>
+        <div class="mm-branch">Newton's Laws</div>
+        <div class="mm-branch">Equations of Motion</div>
+        <div class="mm-branch">Momentum</div>
+        <div class="mm-branch">Friction</div>
+        <div class="mm-branch">Circular Motion</div>
+        <div class="mm-branch">Projectile Motion</div>
+        <div class="mm-branch">Gravity</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">📌 Types of Motion</div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Linear / Rectilinear</h3>
+        <ul><li>Motion in a straight line</li><li>Ex: Car on highway, falling stone</li></ul>
+      </div>
+      <div class="card green">
+        <h3>Circular Motion</h3>
+        <ul><li>Motion in a circular path</li><li>Ex: Fan blades, Earth revolving Sun</li></ul>
+      </div>
+      <div class="card orange">
+        <h3>Oscillatory / Periodic</h3>
+        <ul><li>Back and forth motion</li><li>Ex: Pendulum, guitar string</li></ul>
+      </div>
+      <div class="card purple">
+        <h3>Projectile Motion</h3>
+        <ul><li>Combination of horizontal + vertical</li><li>Ex: Cricket ball, cannon ball</li></ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">⚖️ Newton's Laws of Motion (Most Tested!)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Law</th><th>Statement</th><th>Example</th><th>SSC Ask</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1st Law</strong><br>(Law of Inertia)</td><td>Body stays at rest or in uniform motion unless external force acts</td><td>Passenger jerks forward when bus brakes</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>2nd Law</strong><br>F = ma</td><td>Force = mass × acceleration</td><td>Heavier ball needs more force to accelerate</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>3rd Law</strong><br>(Action-Reaction)</td><td>Every action has equal & opposite reaction</td><td>Rocket propulsion, gun recoil</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Inertia</strong></td><td>Resistance to change in state of motion</td><td>Dust shakes off when carpet is beaten</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Remember Newton's Laws:</strong><br>
+      "<strong>I</strong>nertia – <strong>F</strong>orce – <strong>R</strong>eaction" → <strong>IFR</strong><br>
+      1st = Inertia (No force = No change)<br>
+      2nd = Force makes things accelerate (F=ma)<br>
+      3rd = Reaction always equal & opposite</p>
+    </div>
+
+    <div class="sec-subtitle">📐 Equations of Motion</div>
+    <div class="formula-box"><div class="f-title">KINEMATIC EQUATIONS (Uniform Acceleration)</div>
+      <div class="f-eq">
+        v = u + at &nbsp;&nbsp;|&nbsp;&nbsp; s = ut + ½at² &nbsp;&nbsp;|&nbsp;&nbsp; v² = u² + 2as
+      </div>
+      <div style="margin-top:8px; font-size:0.82rem; color:#555;">
+        u = initial velocity | v = final velocity | a = acceleration | t = time | s = displacement
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🌍 Gravity & Free Fall</div>
+    <div class="card-grid">
+      <div class="card gold">
+        <h3>Key Values</h3>
+        <ul>
+          <li><strong>g = 9.8 m/s²</strong> (gravitational acceleration on Earth)</li>
+          <li>g is maximum at poles, minimum at equator</li>
+          <li>g decreases with altitude & depth</li>
+          <li>g on Moon = 1/6th of Earth</li>
+        </ul>
+      </div>
+      <div class="card teal">
+        <h3>Momentum</h3>
+        <ul>
+          <li><strong>p = mv</strong> (mass × velocity)</li>
+          <li>SI unit: kg·m/s</li>
+          <li>Conservation of momentum: Total momentum before = after (no external force)</li>
+          <li>Example: Gun recoil</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🔄 Friction</div>
+    <div class="flowchart">
+      <div class="flow-box">Friction</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box yellow">Static (greatest)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box orange">Kinetic / Sliding</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green">Rolling (least)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box pink">Fluid Friction</div>
+    </div>
+
+    <div class="pyq-box"><p>Q: "A passenger in a bus is thrown forward when the bus suddenly stops." → Answer: Inertia of motion (1st Law) — Asked in SSC CGL 2018, 2019 & IB ACIO 2020.<br><br>Q: "The unit of force in SI system?" → Newton (N) — Very frequently asked.<br><br>Q: "Which is greater — static friction or kinetic friction?" → Static friction is always greater.</p></div>
+
+    <div class="sec-subtitle">⏱️ Timeline: History of Motion Laws</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-title">1687 — Isaac Newton</div><div class="tl-body">Published Principia Mathematica — 3 Laws of Motion</div></div>
+      <div class="tl-item"><div class="tl-title">1604 — Galileo Galilei</div><div class="tl-body">Discovered free fall — all objects fall with same acceleration in vacuum</div></div>
+      <div class="tl-item"><div class="tl-title">1905 — Albert Einstein</div><div class="tl-body">Special Relativity — motion at speed of light</div></div>
+    </div>
+
+    <div class="sec-subtitle">🎯 SSC & IB ACIO Most Asked — Motion</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Question Pattern</th><th>Answer</th><th>Freq</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>SI unit of force</td><td>Newton (N)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>2</td><td>SI unit of momentum</td><td>kg·m/s</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>3</td><td>Value of g on Earth</td><td>9.8 m/s²</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>4</td><td>g on Moon vs Earth</td><td>1/6th of Earth</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>5</td><td>Bus brakes → passenger jerks forward</td><td>Inertia of motion</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>6</td><td>Rocket works on which law?</td><td>Newton's 3rd Law</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>7</td><td>Which friction is least?</td><td>Rolling friction</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>8</td><td>Formula F = ma is which law?</td><td>Newton's 2nd Law</td><td><span class="badge badge-hot">HOT</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== ELECTRICITY ===================== -->
+  <section class="screen" id="screen-electricity">
+    <div class="sec-title">⚡ Physics — Electricity</div>
+
+    <div class="mindmap">
+      <div class="mm-center">⚡ ELECTRICITY</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Ohm's Law</div>
+        <div class="mm-branch">Current & Voltage</div>
+        <div class="mm-branch">Resistance</div>
+        <div class="mm-branch">Series & Parallel</div>
+        <div class="mm-branch">Power & Energy</div>
+        <div class="mm-branch">Magnetic Effects</div>
+        <div class="mm-branch">AC vs DC</div>
+        <div class="mm-branch">SI Units</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">📏 Key Definitions & SI Units</div>
+    <div class="qf-grid">
+      <div class="qf-item"><strong>Electric Current (I)</strong>Rate of flow of charge. Unit: <strong>Ampere (A)</strong></div>
+      <div class="qf-item"><strong>Voltage / EMF (V)</strong>Potential difference. Unit: <strong>Volt (V)</strong></div>
+      <div class="qf-item"><strong>Resistance (R)</strong>Opposition to current. Unit: <strong>Ohm (Ω)</strong></div>
+      <div class="qf-item"><strong>Power (P)</strong>Rate of doing work. Unit: <strong>Watt (W)</strong></div>
+      <div class="qf-item"><strong>Energy</strong>P × time. Unit: <strong>Joule (J) or kWh</strong></div>
+      <div class="qf-item"><strong>Charge (Q)</strong>Q = I × t. Unit: <strong>Coulomb (C)</strong></div>
+      <div class="qf-item"><strong>Conductance</strong>1/R. Unit: <strong>Siemens (S) or Mho</strong></div>
+      <div class="qf-item"><strong>Capacitance</strong>Charge stored per volt. Unit: <strong>Farad (F)</strong></div>
+    </div>
+
+    <div class="sec-subtitle">📐 Ohm's Law</div>
+    <div class="formula-box">
+      <div class="f-title">OHM'S LAW (V = IR)</div>
+      <div class="f-eq">
+        V = I × R &nbsp;&nbsp;|&nbsp;&nbsp; I = V/R &nbsp;&nbsp;|&nbsp;&nbsp; R = V/I
+        <br>
+        P = VI = I²R = V²/R &nbsp;&nbsp;|&nbsp;&nbsp; E = P × t (Energy = Power × Time)
+      </div>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>"VIR Triangle" — Cover what you need:</strong><br>
+      Cover V → I × R &nbsp;|&nbsp; Cover I → V/R &nbsp;|&nbsp; Cover R → V/I<br>
+      <strong>Remember: "Very Important Relationship"</strong> → V = IR</p>
+    </div>
+
+    <div class="sec-subtitle">🔗 Series vs Parallel Circuits</div>
+    <div class="comp-table">
+      <div class="comp-col">
+        <div class="comp-head blue">📏 Series Circuit</div>
+        <ul>
+          <li>Same current through all components</li>
+          <li>Voltage divides: V = V₁ + V₂ + V₃</li>
+          <li>Total Resistance: R = R₁ + R₂ + R₃ (increases)</li>
+          <li>If one bulb fails → ALL go off</li>
+          <li>Example: Old Christmas lights</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <div class="comp-head orange">🔀 Parallel Circuit</div>
+        <ul>
+          <li>Same voltage across all components</li>
+          <li>Current divides: I = I₁ + I₂ + I₃</li>
+          <li>Total Resistance: 1/R = 1/R₁ + 1/R₂ (decreases)</li>
+          <li>If one bulb fails → others stay on</li>
+          <li>Example: Home wiring (preferred!)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🔌 AC vs DC</div>
+    <div class="comp-table">
+      <div class="comp-col">
+        <div class="comp-head blue">🔵 AC (Alternating Current)</div>
+        <ul>
+          <li>Direction changes periodically</li>
+          <li>Frequency: 50 Hz in India</li>
+          <li>Generated by alternators</li>
+          <li>Used in homes & industries</li>
+          <li>Easier to transmit over long distances</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <div class="comp-head red">🔴 DC (Direct Current)</div>
+        <ul>
+          <li>Flows in one direction only</li>
+          <li>Generated by batteries & cells</li>
+          <li>Used in electronics, mobiles</li>
+          <li>Harder to transmit long distances</li>
+          <li>Thomas Edison championed DC</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🧲 Magnetic Effects of Current</div>
+    <div class="card-grid">
+      <div class="card green">
+        <h3>Electromagnet</h3>
+        <ul>
+          <li>Created when current flows through a coil</li>
+          <li>Strength increases with more turns & current</li>
+          <li>Used in: electric bells, cranes, MRI machines</li>
+        </ul>
+      </div>
+      <div class="card teal">
+        <h3>Key Scientists</h3>
+        <ul>
+          <li><strong>Oersted</strong> — Current produces magnetic field</li>
+          <li><strong>Faraday</strong> — Electromagnetic Induction</li>
+          <li><strong>Fleming's Rule</strong> — Left hand: motor; Right hand: generator</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <h3>Electric Devices</h3>
+        <ul>
+          <li>Motor: converts electrical → mechanical energy</li>
+          <li>Generator/Dynamo: mechanical → electrical</li>
+          <li>Transformer: changes AC voltage levels</li>
+          <li>Fuse: safety device (thin wire melts at excess current)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pyq-box"><p><strong>Most Asked Patterns:</strong><br>
+    Q: "Household appliances are connected in which type of circuit?" → <strong>Parallel</strong><br>
+    Q: "What is the frequency of AC supply in India?" → <strong>50 Hz</strong><br>
+    Q: "Unit of electric power?" → <strong>Watt (W)</strong><br>
+    Q: "Fuse wire has which property?" → <strong>High resistance, low melting point</strong><br>
+    Q: "Fleming's left-hand rule is used for?" → <strong>Electric Motor</strong></p></div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Concept</th><th>Key Fact</th><th>SSC Freq</th></tr></thead>
+        <tbody>
+          <tr><td>Ohm's Law</td><td>V = IR; discovered by Georg Ohm</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Home Circuit Type</td><td>Parallel</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>AC Frequency India</td><td>50 Hz</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Unit of Power</td><td>Watt (W)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Fuse property</td><td>Low melting point + High resistance</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>1 kWh =</td><td>3.6 × 10⁶ Joules</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>LED full form</td><td>Light Emitting Diode</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== HEAT ===================== -->
+  <section class="screen" id="screen-heat">
+    <div class="sec-title">🔥 Physics — Heat</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🔥 HEAT & THERMODYNAMICS</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Temperature Scales</div>
+        <div class="mm-branch">Heat Transfer Modes</div>
+        <div class="mm-branch">Specific Heat</div>
+        <div class="mm-branch">Latent Heat</div>
+        <div class="mm-branch">Expansion</div>
+        <div class="mm-branch">Laws of Thermodynamics</div>
+        <div class="mm-branch">Thermometers</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🌡️ Temperature Scales</div>
+    <div class="formula-box">
+      <div class="f-title">TEMPERATURE CONVERSION FORMULAS</div>
+      <div class="f-eq">
+        °C = (°F − 32) × 5/9 &nbsp;&nbsp;|&nbsp;&nbsp; °F = (°C × 9/5) + 32<br>
+        K = °C + 273.15 &nbsp;&nbsp;|&nbsp;&nbsp; Absolute Zero = 0 K = −273.15°C
+      </div>
+    </div>
+
+    <div class="qf-grid">
+      <div class="qf-item"><strong>Water Boils</strong>100°C | 212°F | 373 K</div>
+      <div class="qf-item"><strong>Water Freezes</strong>0°C | 32°F | 273 K</div>
+      <div class="qf-item"><strong>Body Temperature</strong>37°C | 98.6°F | 310 K</div>
+      <div class="qf-item"><strong>Absolute Zero</strong>−273.15°C | 0 K</div>
+    </div>
+
+    <div class="sec-subtitle">🌊 Modes of Heat Transfer</div>
+    <div class="flowchart">
+      <div class="flow-box">Heat Transfer</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box yellow">Conduction<br><small>Solids</small></div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-box orange">Convection<br><small>Liquids/Gases</small></div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-box pink">Radiation<br><small>No medium</small></div>
+    </div>
+
+    <div class="comp-table">
+      <div class="comp-col">
+        <div class="comp-head blue">🔵 Conduction</div>
+        <ul>
+          <li>Transfer through direct contact</li>
+          <li>Occurs mainly in solids</li>
+          <li>Best conductor: Silver, Copper</li>
+          <li>Worst conductors: Wood, Air, Wool</li>
+          <li>Example: Spoon in hot tea gets warm</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <div class="comp-head orange">🟠 Convection</div>
+        <ul>
+          <li>Transfer through fluid movement</li>
+          <li>Occurs in liquids & gases</li>
+          <li>Hot air rises, cool air sinks</li>
+          <li>Example: Sea breeze, boiling water</li>
+          <li>Used in: Radiators, AC systems</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card green" style="margin-bottom:16px;">
+      <h3>☀️ Radiation</h3>
+      <ul>
+        <li>Transfer without any medium (vacuum possible)</li>
+        <li>Travels at speed of light (3 × 10⁸ m/s)</li>
+        <li>Example: Heat from Sun reaching Earth</li>
+        <li>Black bodies absorb and emit most radiation</li>
+        <li>Thermos flask uses vacuum to prevent radiation</li>
+      </ul>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Remember modes of heat transfer:</strong><br>
+      "<strong>C</strong>on<strong>C</strong>rete <strong>R</strong>oads" → <strong>Conduction (Contact) · Convection (Currents) · Radiation</strong><br>
+      CCR — Conduction, Convection, Radiation</p>
+    </div>
+
+    <div class="sec-subtitle">💧 Specific Heat & Latent Heat</div>
+    <div class="card-grid">
+      <div class="card teal">
+        <h3>Specific Heat Capacity</h3>
+        <ul>
+          <li>Heat needed to raise 1 kg by 1°C</li>
+          <li>Water has highest specific heat = <strong>4200 J/kg·K</strong></li>
+          <li>This is why coastal areas have moderate climate</li>
+          <li>Formula: Q = mcΔT</li>
+        </ul>
+      </div>
+      <div class="card purple">
+        <h3>Latent Heat</h3>
+        <ul>
+          <li>Heat absorbed/released during change of state <em>without change in temperature</em></li>
+          <li>Latent heat of fusion (ice to water): <strong>336 kJ/kg</strong></li>
+          <li>Latent heat of vaporisation (water to steam): <strong>2260 kJ/kg</strong></li>
+          <li>Why burns from steam are worse than boiling water!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🌡️ Thermometers</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Principle</th><th>Range</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td>Mercury Thermometer</td><td>Thermal expansion of mercury</td><td>−39°C to 357°C</td><td>Medical, lab</td></tr>
+          <tr><td>Clinical Thermometer</td><td>Constriction prevents back-flow</td><td>35°C to 42°C</td><td>Body temperature</td></tr>
+          <tr><td>Alcohol Thermometer</td><td>Expansion of alcohol</td><td>−80°C to 78°C</td><td>Very cold regions</td></tr>
+          <tr><td>Thermocouple</td><td>Seebeck effect (electricity from temp diff)</td><td>Very wide</td><td>Industrial</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pyq-box"><p><strong>Most Asked PYQ Patterns — Heat:</strong><br>
+    Q: "Which mode of heat transfer requires no medium?" → <strong>Radiation</strong><br>
+    Q: "Why does water have a high specific heat?" → Moderates climate<br>
+    Q: "SI unit of heat?" → <strong>Joule (J)</strong><br>
+    Q: "Temperature at which Celsius and Fahrenheit are equal?" → <strong>−40°</strong><br>
+    Q: "Why do burns from steam hurt more than boiling water?" → <strong>Latent heat of vaporisation</strong></p></div>
+  </section>
+
+  <!-- ===================== ACIDS & BASES ===================== -->
+  <section class="screen" id="screen-acids">
+    <div class="sec-title">🧴 Chemistry — Acids & Bases</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🧴 ACIDS & BASES & SALTS</div>
+      <div class="mm-branches">
+        <div class="mm-branch">pH Scale</div>
+        <div class="mm-branch">Strong vs Weak Acids</div>
+        <div class="mm-branch">Neutralisation</div>
+        <div class="mm-branch">Indicators</div>
+        <div class="mm-branch">Acids in Food</div>
+        <div class="mm-branch">Common Bases</div>
+        <div class="mm-branch">Salts</div>
+        <div class="mm-branch">Uses & Applications</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">📊 pH Scale — The Big Picture</div>
+    <div class="diagram-wrap">
+      <div class="d-title">🌈 pH Scale (0 to 14)</div>
+      <svg viewBox="0 0 700 90" style="width:100%;max-width:700px;">
+        <defs>
+          <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#d50000"/>
+            <stop offset="30%" style="stop-color:#ff6d00"/>
+            <stop offset="50%" style="stop-color:#2e7d32"/>
+            <stop offset="70%" style="stop-color:#1565c0"/>
+            <stop offset="100%" style="stop-color:#4a148c"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="25" width="660" height="30" rx="15" fill="url(#phGrad)"/>
+        <!-- pH markers -->
+        <text x="20" y="75" font-size="11" fill="#d50000" font-weight="bold">0</text>
+        <text x="57" y="75" font-size="10" fill="#555">1</text>
+        <text x="103" y="75" font-size="10" fill="#555">2</text>
+        <text x="149" y="75" font-size="10" fill="#555">3</text>
+        <text x="195" y="75" font-size="10" fill="#555">4</text>
+        <text x="241" y="75" font-size="10" fill="#555">5</text>
+        <text x="287" y="75" font-size="10" fill="#555">6</text>
+        <text x="333" y="75" font-size="10" fill="#2e7d32" font-weight="bold">7</text>
+        <text x="379" y="75" font-size="10" fill="#555">8</text>
+        <text x="425" y="75" font-size="10" fill="#555">9</text>
+        <text x="471" y="75" font-size="10" fill="#555">10</text>
+        <text x="510" y="75" font-size="10" fill="#555">11</text>
+        <text x="549" y="75" font-size="10" fill="#555">12</text>
+        <text x="588" y="75" font-size="10" fill="#555">13</text>
+        <text x="625" y="75" font-size="11" fill="#4a148c" font-weight="bold">14</text>
+        <!-- Labels -->
+        <text x="80" y="18" font-size="12" fill="#d50000" font-weight="bold">◀ ACIDIC</text>
+        <text x="310" y="18" font-size="12" fill="#2e7d32" font-weight="bold">NEUTRAL</text>
+        <text x="520" y="18" font-size="12" fill="#4a148c" font-weight="bold">BASIC ▶</text>
+      </svg>
+    </div>
+
+    <div class="sec-subtitle">🍋 Acids in Everyday Life (SSC FAVOURITE!)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Substance</th><th>Acid Present</th><th>pH (approx)</th><th>SSC Asked?</th></tr></thead>
+        <tbody>
+          <tr><td>🍋 Lemon / Citrus fruits</td><td>Citric Acid</td><td>2–3</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>🍎 Apple / Tamarind</td><td>Malic Acid / Tartaric Acid</td><td>3–4</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>🍇 Grapes / Vinegar</td><td>Tartaric / Acetic Acid</td><td>2.9 / 3</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>🍼 Curd / Buttermilk</td><td>Lactic Acid</td><td>4–5</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>🐜 Ant sting / Nettle leaves</td><td>Formic Acid (Methanoic Acid)</td><td>—</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>🍵 Tea</td><td>Tannic Acid</td><td>4.9</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>🫁 Stomach / Gastric</td><td>Hydrochloric Acid (HCl)</td><td>1–2</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>🧠 Vitamin C</td><td>Ascorbic Acid</td><td>—</td><td><span class="badge badge-hot">HOT</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Acid in Fruits Mnemonic — "CALM AT":</strong><br>
+      <strong>C</strong>itric (Lemon) | <strong>A</strong>cetic (Vinegar) | <strong>L</strong>actic (Curd) | <strong>M</strong>alic (Apple) | <strong>A</strong>scorbic (Vit.C) | <strong>T</strong>artaric (Grapes)<br>
+      + Formic (Ant), Tannic (Tea), HCl (Stomach)</p>
+    </div>
+
+    <div class="sec-subtitle">⚗️ Strong vs Weak Acids & Bases</div>
+    <div class="comp-table">
+      <div class="comp-col">
+        <div class="comp-head red">Strong Acids</div>
+        <ul>
+          <li>HCl — Hydrochloric acid</li>
+          <li>H₂SO₄ — Sulphuric acid (King of Chemicals)</li>
+          <li>HNO₃ — Nitric acid</li>
+          <li>Completely ionise in water</li>
+          <li>pH close to 0</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <div class="comp-head green">Strong Bases</div>
+        <ul>
+          <li>NaOH — Caustic soda / Sodium hydroxide</li>
+          <li>KOH — Potassium hydroxide</li>
+          <li>Ca(OH)₂ — Lime water</li>
+          <li>Completely ionise in water</li>
+          <li>pH close to 14</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🧂 Common Salts & Uses</div>
+    <div class="card-grid">
+      <div class="card gold">
+        <h3>NaCl — Common Salt</h3>
+        <ul><li>Used in food preservation</li><li>Making baking soda, bleach</li><li>pH = 7 (neutral)</li></ul>
+      </div>
+      <div class="card teal">
+        <h3>NaHCO₃ — Baking Soda</h3>
+        <ul><li>Used in baking (releases CO₂)</li><li>Antacid for acidity</li><li>Mild base (pH ~8.3)</li></ul>
+      </div>
+      <div class="card purple">
+        <h3>Na₂CO₃ — Washing Soda</h3>
+        <ul><li>Water softening</li><li>Removing grease</li><li>Cleansing agent</li></ul>
+      </div>
+      <div class="card orange">
+        <h3>CaSO₄·½H₂O — Plaster of Paris</h3>
+        <ul><li>Setting broken bones</li><li>Making casts, statues</li><li>Derived from Gypsum</li></ul>
+      </div>
+    </div>
+
+    <div class="pyq-box"><p><strong>Top PYQ Patterns — Acids & Bases:</strong><br>
+    "Which acid is present in Vinegar?" → <strong>Acetic Acid (CH₃COOH)</strong><br>
+    "pH of human blood?" → <strong>7.4 (slightly basic)</strong><br>
+    "H₂SO₄ is known as?" → <strong>King of Chemicals</strong><br>
+    "Baking soda chemical name?" → <strong>Sodium Bicarbonate (NaHCO₃)</strong><br>
+    "Acid in ant sting?" → <strong>Formic Acid / Methanoic Acid</strong></p></div>
+  </section>
+
+  <!-- ===================== METALS ===================== -->
+  <section class="screen" id="screen-metals">
+    <div class="sec-title">🔩 Chemistry — Metals & Non-Metals</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🔩 METALS & NON-METALS</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Physical Properties</div>
+        <div class="mm-branch">Chemical Properties</div>
+        <div class="mm-branch">Reactivity Series</div>
+        <div class="mm-branch">Corrosion & Rusting</div>
+        <div class="mm-branch">Alloys</div>
+        <div class="mm-branch">Ores & Extraction</div>
+        <div class="mm-branch">Important Non-Metals</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">⚖️ Metals vs Non-Metals: Key Comparison</div>
+    <div class="comp-table">
+      <div class="comp-col">
+        <div class="comp-head blue">🔩 Metals</div>
+        <ul>
+          <li>Lustrous (shiny) appearance</li>
+          <li>Good conductors of heat & electricity</li>
+          <li>Malleable (can be beaten into sheets)</li>
+          <li>Ductile (can be drawn into wires)</li>
+          <li>High melting/boiling point (except Mercury, Gallium)</li>
+          <li>Solid at room temp (except Mercury — liquid)</li>
+          <li>Form basic oxides (react with acid)</li>
+          <li>Produce metallic sound (sonorous)</li>
+        </ul>
+      </div>
+      <div class="comp-col">
+        <div class="comp-head orange">🌿 Non-Metals</div>
+        <ul>
+          <li>Non-lustrous (dull) — except Iodine, Diamond</li>
+          <li>Poor conductors (except Graphite)</li>
+          <li>Brittle — cannot be beaten into sheets</li>
+          <li>Not ductile</li>
+          <li>Low melting/boiling point (generally)</li>
+          <li>Exist as solids, liquids & gases at room temp</li>
+          <li>Form acidic oxides</li>
+          <li>Not sonorous</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">📈 Reactivity Series (Most Active → Least Active)</div>
+    <div class="flowchart">
+      <div class="flow-box orange">K (Most active)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box yellow">Na</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box yellow">Ca</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box yellow">Mg</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box yellow">Al</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green">Zn</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green">Fe</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box teal">Pb</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box teal">Cu</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box pink">Au (Least)</div>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Reactivity Series Mnemonic:</strong><br>
+      "<strong>K</strong>ing <strong>Na</strong>thaniel <strong>Ca</strong>rved <strong>Mg</strong>arvelous <strong>Al</strong>uminous <strong>Z</strong>inc <strong>Fe</strong>rvently, <strong>Pb</strong> (Lead) <strong>Cu</strong>ts <strong>Au</strong>gustly"<br>
+      → K, Na, Ca, Mg, Al, Zn, Fe, Pb, Cu, Au</p>
+    </div>
+
+    <div class="sec-subtitle">🦠 Corrosion & Rusting</div>
+    <div class="card-grid">
+      <div class="card red">
+        <h3>🟤 Rusting of Iron</h3>
+        <ul>
+          <li>Rusting = Iron + Oxygen + Water → Iron Oxide (Fe₂O₃·xH₂O)</li>
+          <li>Conditions required: Moisture (water) + Oxygen</li>
+          <li>Salt water accelerates rusting (electrolyte)</li>
+          <li>Prevention: Painting, Galvanizing, Oiling, Alloying</li>
+        </ul>
+      </div>
+      <div class="card teal">
+        <h3>🔵 Galvanization</h3>
+        <ul>
+          <li>Coating iron with Zinc (Zn)</li>
+          <li>Zinc sacrificially corrodes to protect iron</li>
+          <li>Used in: buckets, pipes, roofing sheets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">⚗️ Important Alloys (Very Frequently Asked!)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Alloy</th><th>Composition</th><th>Use</th><th>SSC Asked?</th></tr></thead>
+        <tbody>
+          <tr><td>Brass</td><td>Cu + Zn (Copper + Zinc)</td><td>Musical instruments, coins</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Bronze</td><td>Cu + Sn (Copper + Tin)</td><td>Statues, medals, coins</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Steel</td><td>Fe + C (Iron + Carbon)</td><td>Construction, tools</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Stainless Steel</td><td>Fe + Cr + Ni (Iron + Chromium + Nickel)</td><td>Kitchenware, surgical tools</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Solder</td><td>Pb + Sn (Lead + Tin)</td><td>Joining electrical wires</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Duralumin</td><td>Al + Cu + Mg + Mn</td><td>Aircraft bodies</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>German Silver</td><td>Cu + Zn + Ni</td><td>Utensils, decorative items</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Amalgam</td><td>Mercury + another metal</td><td>Dental fillings</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Remember major alloys:</strong><br>
+      "Brass = Cu + Zn (<em>B</em>rass = <em>CuZ</em>inc) | Bronze = Cu + Sn (<em>Bron</em>ze = <em>Tin</em>)"<br>
+      "Stainless Steel = Fe + Cr + Ni (Strong <em>C</em>hromium-<em>N</em>ickel iron)"<br>
+      "Duralumin = Aluminum alloy for Dur(able) air planes"</p>
+    </div>
+
+    <div class="pyq-box"><p><strong>Top PYQ Patterns — Metals:</strong><br>
+    "Which metal is liquid at room temperature?" → <strong>Mercury (Hg)</strong><br>
+    "Alloy used in aircraft construction?" → <strong>Duralumin</strong><br>
+    "Galvanization uses which metal?" → <strong>Zinc (Zn)</strong><br>
+    "Most malleable metal?" → <strong>Gold (Au)</strong><br>
+    "Best conductor of electricity (metal)?" → <strong>Silver (Ag)</strong></p></div>
+  </section>
+
+  <!-- ===================== PERIODIC TABLE ===================== -->
+  <section class="screen" id="screen-periodic">
+    <div class="sec-title">📊 Chemistry — Periodic Table</div>
+
+    <div class="mindmap">
+      <div class="mm-center">📊 PERIODIC TABLE</div>
+      <div class="mm-branches">
+        <div class="mm-branch">History & Law</div>
+        <div class="mm-branch">Groups & Periods</div>
+        <div class="mm-branch">Periodic Trends</div>
+        <div class="mm-branch">s/p/d/f blocks</div>
+        <div class="mm-branch">Noble Gases</div>
+        <div class="mm-branch">Alkali Metals</div>
+        <div class="mm-branch">Halogens</div>
+        <div class="mm-branch">Important Elements</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">⏱️ History of Periodic Table</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-title">1817 — Döbereiner's Triads</div><div class="tl-body">Groups of 3 elements with middle element having avg. atomic mass of other two</div></div>
+      <div class="tl-item"><div class="tl-title">1866 — Newlands' Octaves</div><div class="tl-body">Every 8th element has similar properties to first (failed for heavier elements)</div></div>
+      <div class="tl-item"><div class="tl-title">1869 — Mendeleev's Table</div><div class="tl-body">Arranged elements by <strong>atomic mass</strong>; predicted undiscovered elements (Eka-aluminium = Gallium)</div></div>
+      <div class="tl-item"><div class="tl-title">1913 — Modern Periodic Table (Moseley)</div><div class="tl-body">Arranged by <strong>atomic number</strong> (not mass). Modern Periodic Law: Properties are periodic function of atomic number</div></div>
+    </div>
+
+    <div class="sec-subtitle">📐 Structure of Modern Periodic Table</div>
+    <div class="card-grid">
+      <div class="card gold">
+        <h3>Periods (Rows)</h3>
+        <ul>
+          <li>Total: <strong>7 Periods</strong></li>
+          <li>Period number = Number of electron shells</li>
+          <li>Period 1: 2 elements (H, He)</li>
+          <li>Period 2 & 3: 8 elements each</li>
+          <li>Period 4 & 5: 18 elements each</li>
+          <li>Period 6: 32 elements</li>
+        </ul>
+      </div>
+      <div class="card teal">
+        <h3>Groups (Columns)</h3>
+        <ul>
+          <li>Total: <strong>18 Groups</strong></li>
+          <li>Group number = Valence electrons (for main groups)</li>
+          <li>Group 1: Alkali Metals (Li, Na, K...)</li>
+          <li>Group 17: Halogens (F, Cl, Br...)</li>
+          <li>Group 18: Noble Gases (He, Ne, Ar...)</li>
+          <li>Groups 3–12: Transition Metals</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">📈 Periodic Trends</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Property</th><th>Across Period (→)</th><th>Down Group (↓)</th></tr></thead>
+        <tbody>
+          <tr><td>Atomic Radius</td><td>Decreases ←</td><td>Increases ↓</td></tr>
+          <tr><td>Ionisation Energy</td><td>Increases →</td><td>Decreases ↓</td></tr>
+          <tr><td>Electronegativity</td><td>Increases →</td><td>Decreases ↓</td></tr>
+          <tr><td>Metallic Character</td><td>Decreases →</td><td>Increases ↓</td></tr>
+          <tr><td>Non-metallic Character</td><td>Increases →</td><td>Decreases ↓</td></tr>
+          <tr><td>Electron Affinity</td><td>Increases →</td><td>Decreases ↓</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🔬 Important Element Facts (SSC Favourites!)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Fact</th><th>Element / Answer</th><th>SSC Freq</th></tr></thead>
+        <tbody>
+          <tr><td>Lightest element</td><td>Hydrogen (H) — Atomic no. 1</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Heaviest naturally occurring element</td><td>Uranium (U)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Most electronegative element</td><td>Fluorine (F)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Most abundant element in Earth's crust</td><td>Oxygen (O) — 46.6%</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Most abundant metal in Earth's crust</td><td>Aluminium (Al)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Most abundant element in universe</td><td>Hydrogen (H)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Liquid metal at room temp</td><td>Mercury (Hg)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Liquid non-metal at room temp</td><td>Bromine (Br)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Best conductor of electricity</td><td>Silver (Ag)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Radioactive element (natural)</td><td>Uranium, Thorium, Radium</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Inert / Noble gases</td><td>He, Ne, Ar, Kr, Xe, Rn</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Atomic number of Gold</td><td>79</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Noble Gases Mnemonic (He Ne Ar Kr Xe Rn):</strong><br>
+      "<strong>He</strong>lping <strong>Ne</strong>w <strong>Ar</strong>chitects <strong>Kr</strong>aft e<strong>Xe</strong>llent <strong>R</strong>oof<strong>n</strong>s"<br>
+      He → Ne → Ar → Kr → Xe → Rn</p>
+    </div>
+
+    <div class="pyq-box"><p><strong>Top PYQ Patterns — Periodic Table:</strong><br>
+    "Modern Periodic Law was given by?" → <strong>Henry Moseley (1913)</strong><br>
+    "Most abundant metal in Earth's crust?" → <strong>Aluminium</strong><br>
+    "Which gas is filled in electric bulbs?" → <strong>Argon (Ar) or Nitrogen</strong><br>
+    "Which element has highest electronegativity?" → <strong>Fluorine</strong><br>
+    "Mendeleev arranged elements by?" → <strong>Atomic Mass</strong></p></div>
+  </section>
+
+  <!-- ===================== HUMAN BODY ===================== -->
+  <section class="screen" id="screen-humanbody">
+    <div class="sec-title">🫀 Biology — Human Body</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🫀 HUMAN BODY</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Circulatory System</div>
+        <div class="mm-branch">Respiratory System</div>
+        <div class="mm-branch">Digestive System</div>
+        <div class="mm-branch">Nervous System</div>
+        <div class="mm-branch">Skeletal System</div>
+        <div class="mm-branch">Excretory System</div>
+        <div class="mm-branch">Endocrine System</div>
+        <div class="mm-branch">Reproductive System</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">❤️ Circulatory System (Most Tested!)</div>
+    <div class="card-grid">
+      <div class="card red">
+        <h3>Heart</h3>
+        <ul>
+          <li>4 chambers: 2 Atria + 2 Ventricles</li>
+          <li>Pumps ~5 litres of blood per minute</li>
+          <li>Normal heart rate: 60–100 beats/min</li>
+          <li>Pacemaker = SA Node (Sinoatrial node)</li>
+          <li>Largest artery: Aorta | Smallest: Capillaries</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <h3>Blood</h3>
+        <ul>
+          <li>Volume: ~5–6 litres in adult human</li>
+          <li>RBC (Red Blood Cells) — carry O₂ via Haemoglobin</li>
+          <li>WBC (White Blood Cells) — fight infection (immunity)</li>
+          <li>Platelets — clotting of blood</li>
+          <li>Plasma — liquid part (~55% of blood)</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>Blood Groups (ABO System)</h3>
+        <ul>
+          <li>Blood groups: A, B, AB, O</li>
+          <li><strong>O = Universal Donor</strong></li>
+          <li><strong>AB = Universal Recipient</strong></li>
+          <li>Rh factor: Rh+ (positive) or Rh− (negative)</li>
+          <li>Discovered by: <strong>Karl Landsteiner</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🍽️ Digestive System</div>
+    <div class="flowchart">
+      <div class="flow-box yellow">Mouth (Salivary amylase)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">Oesophagus</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box orange">Stomach (HCl + Pepsin)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green">Small Intestine (Absorption)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box teal">Large Intestine (Water abs.)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box pink">Rectum → Anus</div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Organ</th><th>Enzyme / Juice</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr><td>Mouth / Salivary glands</td><td>Salivary Amylase (Ptyalin)</td><td>Breaks starch → maltose</td></tr>
+          <tr><td>Stomach</td><td>HCl + Pepsin + Renin</td><td>Protein digestion; kills bacteria</td></tr>
+          <tr><td>Liver</td><td>Bile (stored in gall bladder)</td><td>Emulsification of fats</td></tr>
+          <tr><td>Pancreas</td><td>Trypsin, Lipase, Amylase</td><td>Protein, fat, carb digestion</td></tr>
+          <tr><td>Small Intestine</td><td>Intestinal juice (Succus entericus)</td><td>Final digestion + absorption</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🏛️ Skeletal System</div>
+    <div class="qf-grid">
+      <div class="qf-item"><strong>Total bones in adult</strong>206 bones</div>
+      <div class="qf-item"><strong>Smallest bone</strong>Stapes (in ear)</div>
+      <div class="qf-item"><strong>Largest bone</strong>Femur (thigh bone)</div>
+      <div class="qf-item"><strong>Hardest substance in body</strong>Tooth enamel</div>
+      <div class="qf-item"><strong>Joints</strong>Ball & socket (shoulder, hip), Hinge (knee, elbow)</div>
+      <div class="qf-item"><strong>Skull bones</strong>22 (8 cranial + 14 facial)</div>
+    </div>
+
+    <div class="sec-subtitle">🧠 Nervous System</div>
+    <div class="card-grid">
+      <div class="card purple">
+        <h3>Brain Parts</h3>
+        <ul>
+          <li><strong>Cerebrum</strong> — thinking, memory, intelligence (largest)</li>
+          <li><strong>Cerebellum</strong> — balance & coordination</li>
+          <li><strong>Medulla Oblongata</strong> — controls heartbeat, breathing, reflex</li>
+          <li><strong>Hypothalamus</strong> — body temperature regulation</li>
+        </ul>
+      </div>
+      <div class="card teal">
+        <h3>Key Facts</h3>
+        <ul>
+          <li>Largest nerve: Sciatic nerve</li>
+          <li>Largest cell: Neuron</li>
+          <li>Reflex arc: bypasses brain (spinal cord)</li>
+          <li>Cranial nerves: 12 pairs</li>
+          <li>Spinal nerves: 31 pairs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🔬 Endocrine Glands & Hormones</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Gland</th><th>Hormone</th><th>Function / Deficiency</th><th>SSC</th></tr></thead>
+        <tbody>
+          <tr><td>Pituitary (Master Gland)</td><td>GH, TSH, ADH</td><td>Growth, controls other glands</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Thyroid</td><td>Thyroxine (T3, T4)</td><td>Metabolic rate; Deficiency → Goitre</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Pancreas (Islets of Langerhans)</td><td>Insulin & Glucagon</td><td>Blood sugar; Deficiency → Diabetes</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Adrenal (Emergency gland)</td><td>Adrenaline</td><td>Fight-or-flight response</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Parathyroid</td><td>PTH (Parathormone)</td><td>Calcium & Phosphorus regulation</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Testis / Ovary</td><td>Testosterone / Oestrogen</td><td>Secondary sexual characteristics</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pyq-box"><p><strong>Top PYQ Patterns — Human Body:</strong><br>
+    "Universal blood donor group?" → <strong>O</strong><br>
+    "Smallest bone in human body?" → <strong>Stapes</strong><br>
+    "Which gland is called 'Master Gland'?" → <strong>Pituitary Gland</strong><br>
+    "Instrument to measure blood pressure?" → <strong>Sphygmomanometer</strong><br>
+    "Deficiency of insulin causes?" → <strong>Diabetes Mellitus</strong><br>
+    "Which part of brain controls balance?" → <strong>Cerebellum</strong></p></div>
+  </section>
+
+  <!-- ===================== DISEASES ===================== -->
+  <section class="screen" id="screen-diseases">
+    <div class="sec-title">🦠 Biology — Diseases</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🦠 DISEASES</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Bacterial Diseases</div>
+        <div class="mm-branch">Viral Diseases</div>
+        <div class="mm-branch">Fungal Diseases</div>
+        <div class="mm-branch">Protozoan Diseases</div>
+        <div class="mm-branch">Deficiency Diseases</div>
+        <div class="mm-branch">Vectors & Carriers</div>
+        <div class="mm-branch">Vaccines</div>
+        <div class="mm-branch">Epidemics & Pandemics</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🦠 Bacterial Diseases (Most Tested!)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Disease</th><th>Causative Bacteria</th><th>Organ Affected</th><th>SSC</th></tr></thead>
+        <tbody>
+          <tr><td>Tuberculosis (TB)</td><td>Mycobacterium tuberculosis</td><td>Lungs</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Typhoid</td><td>Salmonella typhi</td><td>Intestine</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Cholera</td><td>Vibrio cholerae</td><td>Intestine</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Plague</td><td>Yersinia pestis</td><td>Lymph nodes</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Leprosy (Hansen's disease)</td><td>Mycobacterium leprae</td><td>Skin, Nerves</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Tetanus</td><td>Clostridium tetani</td><td>Muscles (spasm)</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Whooping Cough</td><td>Bordetella pertussis</td><td>Respiratory tract</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Diphtheria</td><td>Corynebacterium diphtheriae</td><td>Throat</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🔴 Viral Diseases</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Disease</th><th>Virus</th><th>Transmission</th><th>SSC</th></tr></thead>
+        <tbody>
+          <tr><td>AIDS</td><td>HIV (Human Immunodeficiency Virus)</td><td>Blood, sexual contact</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Dengue</td><td>Dengue virus (Flavivirus)</td><td>Aedes mosquito</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Polio</td><td>Poliovirus</td><td>Contaminated food/water</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Rabies</td><td>Rabies virus (Lyssavirus)</td><td>Dog/animal bite</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Influenza (Flu)</td><td>Influenza virus (H1N1 etc.)</td><td>Droplets</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Hepatitis B</td><td>Hepatitis B virus</td><td>Blood, body fluids</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Smallpox</td><td>Variola virus</td><td>Eradicated 1980</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Chicken Pox</td><td>Varicella-zoster virus</td><td>Air droplets</td><td><span class="badge badge-med">MED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🦟 Protozoan & Vector-Borne Diseases</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Disease</th><th>Causative Organism</th><th>Vector (Carrier)</th><th>SSC</th></tr></thead>
+        <tbody>
+          <tr><td>Malaria</td><td>Plasmodium (falciparum, vivax...)</td><td>Female Anopheles mosquito</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Dengue</td><td>Dengue virus</td><td>Aedes aegypti mosquito</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Kala-Azar (Leishmaniasis)</td><td>Leishmania donovani</td><td>Sandfly (Phlebotomus)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Sleeping Sickness</td><td>Trypanosoma</td><td>Tsetse fly</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td>Filariasis (Elephantiasis)</td><td>Wuchereria bancrofti</td><td>Culex mosquito</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td>Plague</td><td>Yersinia pestis (bacteria)</td><td>Rat flea (Xenopsylla cheopis)</td><td><span class="badge badge-hot">HOT</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Mosquito → Disease Carrier:</strong><br>
+      <strong>Anopheles</strong> = <strong>M</strong>alaria (A for Anopheles, M for Malaria → "AM")<br>
+      <strong>Aedes</strong> = <strong>D</strong>engue & <strong>Z</strong>ika (A for Aedes, D for Dengue → "AD")<br>
+      <strong>Culex</strong> = <strong>F</strong>ilariasis / Japanese Encephalitis</p>
+    </div>
+
+    <div class="sec-subtitle">🧪 Vaccines — Key Discoverers</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Vaccine / Discovery</th><th>Scientist</th><th>Disease</th></tr></thead>
+        <tbody>
+          <tr><td>First vaccine ever (Smallpox)</td><td>Edward Jenner (1796)</td><td>Smallpox</td></tr>
+          <tr><td>Polio vaccine</td><td>Jonas Salk (1955)</td><td>Poliomyelitis</td></tr>
+          <tr><td>BCG vaccine</td><td>Calmette & Guérin</td><td>Tuberculosis</td></tr>
+          <tr><td>Rabies vaccine</td><td>Louis Pasteur (1885)</td><td>Rabies</td></tr>
+          <tr><td>Penicillin (antibiotic, not vaccine)</td><td>Alexander Fleming (1928)</td><td>Bacterial infections</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pyq-box"><p><strong>Top PYQ Patterns — Diseases:</strong><br>
+    "Malaria is caused by?" → <strong>Plasmodium (spread by female Anopheles mosquito)</strong><br>
+    "Carrier of Dengue fever?" → <strong>Aedes aegypti mosquito</strong><br>
+    "First vaccine was discovered for?" → <strong>Smallpox by Edward Jenner</strong><br>
+    "AIDS is caused by?" → <strong>HIV virus</strong><br>
+    "Kala-Azar is transmitted by?" → <strong>Sandfly</strong><br>
+    "BCG vaccine is given against?" → <strong>Tuberculosis</strong></p></div>
+  </section>
+
+  <!-- ===================== NUTRITION ===================== -->
+  <section class="screen" id="screen-nutrition">
+    <div class="sec-title">🥦 Biology — Nutrition</div>
+
+    <div class="mindmap">
+      <div class="mm-center">🥦 NUTRITION</div>
+      <div class="mm-branches">
+        <div class="mm-branch">Macronutrients</div>
+        <div class="mm-branch">Micronutrients</div>
+        <div class="mm-branch">Vitamins</div>
+        <div class="mm-branch">Minerals</div>
+        <div class="mm-branch">Deficiency Diseases</div>
+        <div class="mm-branch">Carbohydrates</div>
+        <div class="mm-branch">Proteins</div>
+        <div class="mm-branch">Fats & Lipids</div>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">🍎 Macronutrients Overview</div>
+    <div class="card-grid">
+      <div class="card gold">
+        <h3>🌾 Carbohydrates</h3>
+        <ul>
+          <li>Primary energy source (4 kcal/g)</li>
+          <li>Glucose, Fructose, Sucrose, Starch</li>
+          <li>Stored as Glycogen in liver & muscles</li>
+          <li>Sources: Rice, wheat, bread, sugar</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h3>🥩 Proteins</h3>
+        <ul>
+          <li>Body building nutrients (4 kcal/g)</li>
+          <li>Made of Amino Acids (20 types)</li>
+          <li>Essential amino acids (must come from food): 9</li>
+          <li>Sources: Eggs, meat, pulses, soya</li>
+          <li>Deficiency → Kwashiorkor, Marasmus</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <h3>🧈 Fats</h3>
+        <ul>
+          <li>Concentrated energy (9 kcal/g)</li>
+          <li>Saturated (animal) & Unsaturated (plant) fats</li>
+          <li>Essential Fatty Acids: Omega-3, Omega-6</li>
+          <li>Fat-soluble vitamins: A, D, E, K</li>
+          <li>Excess → Obesity, heart disease</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-subtitle">💊 Vitamins — The Complete SSC Guide (MOST ASKED!)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Vitamin</th><th>Chemical Name</th><th>Deficiency Disease</th><th>Source</th><th>SSC Freq</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Vitamin A</strong></td><td>Retinol</td><td>Night blindness, Xerophthalmia</td><td>Carrot, egg, fish liver oil</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Vitamin B1</strong></td><td>Thiamine</td><td>Beriberi</td><td>Whole grains, nuts</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Vitamin B2</strong></td><td>Riboflavin</td><td>Ariboflavinosis (cracked lips)</td><td>Dairy, eggs, green vegetables</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td><strong>Vitamin B3</strong></td><td>Niacin</td><td>Pellagra (3Ds: Dermatitis, Diarrhoea, Dementia)</td><td>Meat, fish, nuts</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Vitamin B9</strong></td><td>Folic Acid</td><td>Megaloblastic Anaemia, Neural tube defects</td><td>Leafy greens, legumes</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td><strong>Vitamin B12</strong></td><td>Cobalamin</td><td>Pernicious Anaemia</td><td>Meat, fish, dairy</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Vitamin C</strong></td><td>Ascorbic Acid</td><td>Scurvy (bleeding gums)</td><td>Citrus fruits, amla</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Vitamin D</strong></td><td>Calciferol</td><td>Rickets (children), Osteomalacia (adults)</td><td>Sunlight, fish, eggs</td><td><span class="badge badge-hot">HOT</span></td></tr>
+          <tr><td><strong>Vitamin E</strong></td><td>Tocopherol</td><td>Sterility, muscular dystrophy</td><td>Vegetable oils, nuts</td><td><span class="badge badge-med">MED</span></td></tr>
+          <tr><td><strong>Vitamin K</strong></td><td>Phylloquinone</td><td>Impaired blood clotting, bleeding</td><td>Leafy greens, liver</td><td><span class="badge badge-hot">HOT</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mnemonic">
+      <p><strong>Vitamin Deficiency Diseases — "A Bee Can Dance Regularly Singing Perfectly Kindly":</strong><br>
+      <strong>A</strong> → Night <strong>B</strong>lindness | <strong>B1</strong> → <strong>B</strong>eriberi | <strong>B3</strong> → Pellagra | <strong>C</strong> → <strong>S</strong>curvy | <strong>D</strong> → <strong>R</strong>ickets | <strong>K</strong> → Blood Clotting<br><br>
+      Fat-soluble: <strong>ADEK</strong> (A Dozen Eggs Kept) | Water-soluble: <strong>B & C</strong></p>
+    </div>
+
+    <div class="sec-subtitle">🔬 Important Minerals</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Mineral</th><th>Function</th><th>Deficiency</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Iron (Fe)</td><td>Haemoglobin formation</td><td>Anaemia</td><td>Spinach, liver, meat</td></tr>
+          <tr><td>Calcium (Ca)</td><td>Bones & teeth, muscle contraction</td><td>Osteoporosis, Rickets</td><td>Milk, dairy, fish</td></tr>
+          <tr><td>Iodine (I)</td><td>Thyroid hormone (thyroxine) synthesis</td><td>Goitre, Cretinism</td><td>Iodised salt, seafood</td></tr>
+          <tr><td>Phosphorus (P)</td><td>Bones, ATP (energy molecule)</td><td>Bone weakness</td><td>Meat, dairy, nuts</td></tr>
+          <tr><td>Zinc (Zn)</td><td>Enzyme function, immune system</td><td>Growth retardation, poor healing</td><td>Meat, seeds</td></tr>
+          <tr><td>Fluoride (F)</td><td>Tooth enamel hardening</td><td>Dental decay</td><td>Fluoridated water, tea</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🤒 Nutrition Deficiency Diseases Summary</div>
+    <div class="qf-grid">
+      <div class="qf-item"><strong>Kwashiorkor</strong>Protein deficiency — swollen belly, thin limbs</div>
+      <div class="qf-item"><strong>Marasmus</strong>Protein + Calorie deficiency — extreme thinning</div>
+      <div class="qf-item"><strong>Scurvy</strong>Vitamin C deficiency — bleeding gums</div>
+      <div class="qf-item"><strong>Rickets</strong>Vitamin D deficiency — soft bones in children</div>
+      <div class="qf-item"><strong>Beriberi</strong>Vitamin B1 deficiency — nerve damage</div>
+      <div class="qf-item"><strong>Pellagra</strong>Vitamin B3 (Niacin) — skin, digestive, nervous issues</div>
+      <div class="qf-item"><strong>Night Blindness</strong>Vitamin A deficiency — poor vision in dim light</div>
+      <div class="qf-item"><strong>Anaemia</strong>Iron / B12 / Folic acid deficiency — low haemoglobin</div>
+      <div class="qf-item"><strong>Goitre</strong>Iodine deficiency — enlarged thyroid gland</div>
+    </div>
+
+    <div class="pyq-box"><p><strong>Top PYQ Patterns — Nutrition:</strong><br>
+    "Deficiency of Vitamin C causes?" → <strong>Scurvy</strong><br>
+    "Vitamin D deficiency in children?" → <strong>Rickets</strong><br>
+    "Night blindness is caused by deficiency of?" → <strong>Vitamin A</strong><br>
+    "Which vitamin helps in blood clotting?" → <strong>Vitamin K</strong><br>
+    "Beriberi is caused by deficiency of?" → <strong>Vitamin B1 (Thiamine)</strong><br>
+    "Which vitamin is synthesised in skin by sunlight?" → <strong>Vitamin D</strong></p></div>
+  </section>
+
+  <!-- ===================== QUICK REVISION SHEET ===================== -->
+  <section class="screen" id="screen-revision">
+    <div class="sec-title">📋 Quick Revision Sheet — SSC CGL/IB ACIO Science PYQ Patterns</div>
+    <div class="exam-alert"><p>This sheet condenses THE MOST REPEATEDLY ASKED question patterns from SSC CGL (2010–2024) and IB ACIO exams. Revise this 2 days before the exam for guaranteed marks!</p></div>
+
+    <div class="sec-subtitle">⚡ Physics — Top 20 PYQ Facts</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Question Pattern</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>SI unit of Force</td><td>Newton (N)</td></tr>
+          <tr><td>2</td><td>SI unit of Power</td><td>Watt (W)</td></tr>
+          <tr><td>3</td><td>SI unit of Energy</td><td>Joule (J)</td></tr>
+          <tr><td>4</td><td>Value of g on Earth</td><td>9.8 m/s² (≈10)</td></tr>
+          <tr><td>5</td><td>g on Moon vs Earth</td><td>1/6 of Earth</td></tr>
+          <tr><td>6</td><td>Bus brakes → passenger falls forward</td><td>Inertia of Motion (Newton's 1st Law)</td></tr>
+          <tr><td>7</td><td>Rocket works on which Newton's Law?</td><td>3rd Law (Action-Reaction)</td></tr>
+          <tr><td>8</td><td>Which friction is least?</td><td>Rolling friction</td></tr>
+          <tr><td>9</td><td>Home wiring type</td><td>Parallel circuit</td></tr>
+          <tr><td>10</td><td>AC frequency in India</td><td>50 Hz</td></tr>
+          <tr><td>11</td><td>Fuse wire property</td><td>Low melting point + High resistance</td></tr>
+          <tr><td>12</td><td>Fleming's Left Hand Rule → for?</td><td>Electric Motor</td></tr>
+          <tr><td>13</td><td>Fleming's Right Hand Rule → for?</td><td>Electric Generator</td></tr>
+          <tr><td>14</td><td>Heat transfer in vacuum</td><td>Radiation only</td></tr>
+          <tr><td>15</td><td>°C = °F at which temperature?</td><td>−40°</td></tr>
+          <tr><td>16</td><td>Absolute Zero in Celsius</td><td>−273.15°C</td></tr>
+          <tr><td>17</td><td>Burns from steam > boiling water, why?</td><td>Latent heat of vaporisation</td></tr>
+          <tr><td>18</td><td>Best thermal conductor</td><td>Silver (Ag)</td></tr>
+          <tr><td>19</td><td>Speed of light</td><td>3 × 10⁸ m/s</td></tr>
+          <tr><td>20</td><td>Ohm's Law formula</td><td>V = IR</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🧪 Chemistry — Top 20 PYQ Facts</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Question Pattern</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Acid in Vinegar</td><td>Acetic Acid</td></tr>
+          <tr><td>2</td><td>Acid in Lemon / Citrus</td><td>Citric Acid</td></tr>
+          <tr><td>3</td><td>Acid in Curd</td><td>Lactic Acid</td></tr>
+          <tr><td>4</td><td>Acid in Ant Sting</td><td>Formic (Methanoic) Acid</td></tr>
+          <tr><td>5</td><td>pH of Human Blood</td><td>7.4 (slightly basic)</td></tr>
+          <tr><td>6</td><td>H₂SO₄ is known as?</td><td>King of Chemicals</td></tr>
+          <tr><td>7</td><td>Baking Soda chemical name</td><td>Sodium Bicarbonate (NaHCO₃)</td></tr>
+          <tr><td>8</td><td>Washing Soda chemical name</td><td>Sodium Carbonate (Na₂CO₃)</td></tr>
+          <tr><td>9</td><td>Plaster of Paris derived from?</td><td>Gypsum (CaSO₄·2H₂O)</td></tr>
+          <tr><td>10</td><td>Metal liquid at room temp</td><td>Mercury (Hg)</td></tr>
+          <tr><td>11</td><td>Non-metal liquid at room temp</td><td>Bromine (Br)</td></tr>
+          <tr><td>12</td><td>Most malleable metal</td><td>Gold (Au)</td></tr>
+          <tr><td>13</td><td>Best electrical conductor</td><td>Silver (Ag)</td></tr>
+          <tr><td>14</td><td>Alloy for aircraft</td><td>Duralumin (Al + Cu + Mg + Mn)</td></tr>
+          <tr><td>15</td><td>Brass composition</td><td>Copper + Zinc</td></tr>
+          <tr><td>16</td><td>Bronze composition</td><td>Copper + Tin</td></tr>
+          <tr><td>17</td><td>Galvanization uses which metal?</td><td>Zinc (Zn)</td></tr>
+          <tr><td>18</td><td>Modern Periodic Law — by?</td><td>Henry Moseley (1913)</td></tr>
+          <tr><td>19</td><td>Most abundant metal in Earth's crust</td><td>Aluminium (Al)</td></tr>
+          <tr><td>20</td><td>Most electronegative element</td><td>Fluorine (F)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-subtitle">🧬 Biology — Top 25 PYQ Facts</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Question Pattern</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Universal Blood Donor group</td><td>O negative (O–)</td></tr>
+          <tr><td>2</td><td>Universal Blood Recipient</td><td>AB positive (AB+)</td></tr>
+          <tr><td>3</td><td>Blood groups discovered by?</td><td>Karl Landsteiner</td></tr>
+          <tr><td>4</td><td>Smallest bone in human body</td><td>Stapes (in ear)</td></tr>
+          <tr><td>5</td><td>Largest bone in human body</td><td>Femur (thigh bone)</td></tr>
+          <tr><td>6</td><td>Total bones in adult human</td><td>206</td></tr>
+          <tr><td>7</td><td>Master Gland</td><td>Pituitary Gland</td></tr>
+          <tr><td>8</td><td>Insulin deficiency → disease?</td><td>Diabetes Mellitus</td></tr>
+          <tr><td>9</td><td>Blood pressure measured by?</td><td>Sphygmomanometer</td></tr>
+          <tr><td>10</td><td>Brain part controlling balance</td><td>Cerebellum</td></tr>
+          <tr><td>11</td><td>Malaria causative organism</td><td>Plasmodium (via female Anopheles)</td></tr>
+          <tr><td>12</td><td>Dengue vector</td><td>Aedes aegypti mosquito</td></tr>
+          <tr><td>13</td><td>Kala-Azar vector</td><td>Sandfly (Phlebotomus)</td></tr>
+          <tr><td>14</td><td>First vaccine ever (for what disease)</td><td>Smallpox (by Edward Jenner, 1796)</td></tr>
+          <tr><td>15</td><td>Polio vaccine discovered by?</td><td>Jonas Salk</td></tr>
+          <tr><td>16</td><td>Penicillin discovered by?</td><td>Alexander Fleming (1928)</td></tr>
+          <tr><td>17</td><td>Vitamin C deficiency</td><td>Scurvy</td></tr>
+          <tr><td>18</td><td>Vitamin D deficiency (children)</td><td>Rickets</td></tr>
+          <tr><td>19</td><td>Vitamin A deficiency</td><td>Night Blindness</td></tr>
+          <tr><td>20</td><td>Vitamin K function</td><td>Blood Clotting</td></tr>
+          <tr><td>21</td><td>Vitamin B1 (Thiamine) deficiency</td><td>Beriberi</td></tr>
+          <tr><td>22</td><td>Vitamin B3 (Niacin) deficiency</td><td>Pellagra</td></tr>
+          <tr><td>23</td><td>Iodine deficiency disease</td><td>Goitre</td></tr>
+          <tr><td>24</td><td>Iron deficiency</td><td>Anaemia</td></tr>
+          <tr><td>25</td><td>Protein deficiency in children</td><td>Kwashiorkor / Marasmus</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="exam-alert"><p><strong>🎯 Final Exam Strategy:</strong> Biology (3–4 Qs) > Physics (2–3 Qs) > Chemistry (2–3 Qs). Master vitamins + diseases + Newton's laws + alloys + pH of substances = guaranteed 7–9 marks in Science section!</p></div>
+  </section>
+
+  <!-- ===================== PYQ TEST LAB ===================== -->
+  <section class="screen" id="screen-pyq-test">
+    <div class="sec-title">📝 PYQ Test Lab — 50 Question Challenge</div>
+    <div class="exam-alert"><p>Use the toggle below to switch between real-exam mode and practice mode. Both modes use the same 50 questions.</p></div>
+
+    <div class="quiz-panel">
+      <div class="sec-subtitle">🧭 Mode Switch</div>
+      <div class="quiz-toolbar">
+        <div class="quiz-meta">
+          <div class="quiz-mode-toggle" role="tablist" aria-label="Quiz mode toggle">
+            <button class="quiz-mode-btn active" id="mode-exam-btn" type="button" onclick="setQuizMode('exam')">Real Exam</button>
+            <button class="quiz-mode-btn" id="mode-practice-btn" type="button" onclick="setQuizMode('practice')">Practice</button>
+          </div>
+          <span class="quiz-pill" id="mode-pill">Real Exam Mode</span>
+          <span class="quiz-pill">50 Questions</span>
+        </div>
+        <div class="quiz-timer" id="quiz-timer">30:00</div>
+      </div>
+      <div class="quiz-actions">
+        <button class="quiz-btn primary" id="start-exam-btn" type="button" onclick="startExam()">Start Exam</button>
+        <button class="quiz-btn accent" type="button" onclick="submitQuiz()">Submit</button>
+        <button class="quiz-btn ghost" type="button" onclick="resetQuiz()">Reset</button>
+      </div>
+      <div class="quiz-hint" id="quiz-hint">Real exam mode hides feedback until you submit. Practice mode reveals the correct answer immediately after each selection.</div>
+      <div class="quiz-grid" id="quiz-grid"></div>
+      <div class="quiz-result" id="quiz-result"></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const quizData = [
+    { question: '1. SI unit of force is:', options: ['Joule', 'Newton', 'Watt', 'Pascal'], answer: 1, explanation: 'Force is measured in Newton (N).' },
+    { question: '2. The value of g on Earth is approximately:', options: ['1.6 m/s²', '9.8 m/s²', '50 m/s²', '0 m/s²'], answer: 1, explanation: 'Standard gravitational acceleration is about 9.8 m/s².' },
+    { question: '3. Which law explains rocket propulsion?', options: ['Newton\'s 1st law', 'Newton\'s 2nd law', 'Newton\'s 3rd law', 'Law of gravitation'], answer: 2, explanation: 'Action and reaction are equal and opposite.' },
+    { question: '4. SI unit of electric power is:', options: ['Volt', 'Ohm', 'Watt', 'Ampere'], answer: 2, explanation: 'Power is measured in Watt (W).' },
+    { question: '5. Household wiring is done in:', options: ['Series circuit', 'Parallel circuit', 'Open circuit', 'Short circuit'], answer: 1, explanation: 'Home wiring uses parallel circuits so appliances work independently.' },
+    { question: '6. Heat transfer in vacuum occurs by:', options: ['Conduction', 'Convection', 'Radiation', 'Evaporation'], answer: 2, explanation: 'Radiation does not require a medium.' },
+    { question: '7. The pH of human blood is about:', options: ['5.5', '7.4', '9.8', '1.2'], answer: 1, explanation: 'Human blood is slightly basic at about 7.4.' },
+    { question: '8. Acid present in vinegar is:', options: ['Citric acid', 'Acetic acid', 'Lactic acid', 'Tartaric acid'], answer: 1, explanation: 'Vinegar contains acetic acid.' },
+    { question: '9. Most abundant metal in Earth\'s crust is:', options: ['Iron', 'Aluminium', 'Calcium', 'Sodium'], answer: 1, explanation: 'Aluminium is the most abundant metal in the Earth\'s crust.' },
+    { question: '10. Which metal is liquid at room temperature?', options: ['Mercury', 'Sodium', 'Lead', 'Copper'], answer: 0, explanation: 'Mercury is liquid at room temperature.' },
+    { question: '11. Which alloy is used for aircraft bodies?', options: ['Brass', 'Bronze', 'Duralumin', 'Steel'], answer: 2, explanation: 'Duralumin is a lightweight alloy used in aircraft.' },
+    { question: '12. Vitamin C deficiency causes:', options: ['Rickets', 'Scurvy', 'Beriberi', 'Pellagra'], answer: 1, explanation: 'Vitamin C deficiency leads to scurvy.' },
+    { question: '13. The smallest bone in the human body is:', options: ['Femur', 'Stapes', 'Ulna', 'Radius'], answer: 1, explanation: 'The stapes is the smallest bone, found in the ear.' },
+    { question: '14. The blood pressure instrument is:', options: ['Thermometer', 'Sphygmomanometer', 'Oximeter', 'Barometer'], answer: 1, explanation: 'Blood pressure is measured by a sphygmomanometer.' },
+    { question: '15. The causative organism of malaria is:', options: ['Virus', 'Bacteria', 'Plasmodium', 'Fungus'], answer: 2, explanation: 'Malaria is caused by Plasmodium.' },
+    { question: '16. AC frequency in India is:', options: ['25 Hz', '50 Hz', '60 Hz', '100 Hz'], answer: 1, explanation: 'The standard AC frequency in India is 50 Hz.' },
+    { question: '17. The SI unit of momentum is:', options: ['N/m²', 'kg·m/s', 'J/s', 'Coulomb'], answer: 1, explanation: 'Momentum equals mass × velocity, so unit is kg·m/s.' },
+    { question: '18. Which friction is least?', options: ['Static', 'Kinetic', 'Rolling', 'Fluid'], answer: 2, explanation: 'Rolling friction is least among the common types.' },
+    { question: '19. The first vaccine ever was for:', options: ['Typhoid', 'Polio', 'Smallpox', 'Rabies'], answer: 2, explanation: 'Edward Jenner developed the first vaccine for smallpox.' },
+    { question: '20. Which vitamin is called the sunshine vitamin?', options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'], answer: 3, explanation: 'Vitamin D is synthesized in skin by sunlight.' },
+    { question: '21. The most electronegative element is:', options: ['Chlorine', 'Fluorine', 'Oxygen', 'Nitrogen'], answer: 1, explanation: 'Fluorine is the most electronegative element.' },
+    { question: '22. Rusting of iron needs:', options: ['Oxygen only', 'Water only', 'Oxygen and water', 'Carbon dioxide'], answer: 2, explanation: 'Rusting requires both oxygen and water.' },
+    { question: '23. The SI unit of energy is:', options: ['Newton', 'Watt', 'Joule', 'Volt'], answer: 2, explanation: 'Energy is measured in Joule.' },
+    { question: '24. Which acid is present in lemon?', options: ['Citric acid', 'Acetic acid', 'Sulphuric acid', 'Lactic acid'], answer: 0, explanation: 'Lemon contains citric acid.' },
+    { question: '25. Which brain part controls balance?', options: ['Cerebrum', 'Cerebellum', 'Medulla', 'Hypothalamus'], answer: 1, explanation: 'Cerebellum controls balance and coordination.' },
+    { question: '26. SI unit of electric current is:', options: ['Volt', 'Ampere', 'Ohm', 'Watt'], answer: 1, explanation: 'Electric current is measured in Ampere (A).' },
+    { question: '27. F = ma is which Newton law?', options: ['First law', 'Second law', 'Third law', 'Law of gravitation'], answer: 1, explanation: 'The formula F = ma represents Newton\'s second law.' },
+    { question: '28. The unit of resistance is:', options: ['Ohm', 'Ampere', 'Joule', 'Farad'], answer: 0, explanation: 'Resistance is measured in Ohm (Ω).' },
+    { question: '29. The process of transfer of heat in solids is:', options: ['Conduction', 'Convection', 'Radiation', 'Evaporation'], answer: 0, explanation: 'Conduction is the transfer of heat through direct contact, mostly in solids.' },
+    { question: '30. A substance with pH less than 7 is:', options: ['Acidic', 'Neutral', 'Basic', 'Salt'], answer: 0, explanation: 'Acids have pH below 7.' },
+    { question: '31. Baking soda is:', options: ['Sodium carbonate', 'Sodium bicarbonate', 'Calcium carbonate', 'Potassium nitrate'], answer: 1, explanation: 'Baking soda is sodium bicarbonate (NaHCO3).' },
+    { question: '32. The unit of force in the SI system is:', options: ['Pascal', 'Newton', 'Joule', 'Watt'], answer: 1, explanation: 'Force is measured in Newton.' },
+    { question: '33. Which metal is best known for electrical conductivity?', options: ['Iron', 'Silver', 'Lead', 'Tin'], answer: 1, explanation: 'Silver is the best electrical conductor among metals commonly asked in PYQs.' },
+    { question: '34. The deficiency of iodine causes:', options: ['Goitre', 'Scurvy', 'Rickets', 'Anaemia'], answer: 0, explanation: 'Iodine deficiency leads to goitre.' },
+    { question: '35. The disease caused by HIV is:', options: ['TB', 'AIDS', 'Polio', 'Malaria'], answer: 1, explanation: 'HIV causes AIDS.' },
+    { question: '36. The largest bone in the human body is:', options: ['Tibia', 'Femur', 'Humerus', 'Skull'], answer: 1, explanation: 'Femur is the largest bone.' },
+    { question: '37. In a parallel circuit, current:', options: ['Is same in all branches', 'Divides among branches', 'Stops entirely', 'Becomes zero'], answer: 1, explanation: 'In a parallel circuit, current divides among branches.' },
+    { question: '38. The smallest unit of life is:', options: ['Tissue', 'Cell', 'Organ', 'System'], answer: 1, explanation: 'The cell is the basic structural and functional unit of life.' },
+    { question: '39. The hormone insulin is secreted by:', options: ['Thyroid', 'Pancreas', 'Pituitary', 'Adrenal'], answer: 1, explanation: 'Insulin is secreted by the pancreas.' },
+    { question: '40. The vector of dengue is:', options: ['Female Anopheles', 'Aedes aegypti', 'Housefly', 'Sandfly'], answer: 1, explanation: 'Dengue is spread by Aedes aegypti.' },
+    { question: '41. The unit of power is:', options: ['Volt', 'Watt', 'Joule', 'Coulomb'], answer: 1, explanation: 'Power is measured in Watt.' },
+    { question: '42. The common salt formula is:', options: ['NaHCO3', 'Na2CO3', 'NaCl', 'CaCO3'], answer: 2, explanation: 'Common salt is sodium chloride, NaCl.' },
+    { question: '43. The part of the brain that controls involuntary actions is:', options: ['Cerebrum', 'Cerebellum', 'Medulla oblongata', 'Frontal lobe'], answer: 2, explanation: 'Medulla oblongata controls heartbeat and breathing.' },
+    { question: '44. The SI unit of pressure is:', options: ['Newton', 'Pascal', 'Watt', 'Tesla'], answer: 1, explanation: 'Pressure is measured in Pascal.' },
+    { question: '45. The acid in curd is:', options: ['Lactic acid', 'Citric acid', 'Formic acid', 'Acetic acid'], answer: 0, explanation: 'Curd contains lactic acid.' },
+    { question: '46. Which vitamin deficiency causes night blindness?', options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin K'], answer: 0, explanation: 'Vitamin A deficiency causes night blindness.' },
+    { question: '47. The process of coating iron with zinc is:', options: ['Galvanization', 'Oxidation', 'Refining', 'Electrolysis'], answer: 0, explanation: 'Coating iron with zinc is called galvanization.' },
+    { question: '48. The greatest conductor among the following is:', options: ['Copper', 'Iron', 'Silver', 'Aluminium'], answer: 2, explanation: 'Silver is the best conductor.' },
+    { question: '49. The formula for Ohm\'s law is:', options: ['P = VI', 'V = IR', 'F = ma', 'E = mc²'], answer: 1, explanation: 'Ohm\'s law is V = IR.' },
+    { question: '50. The largest gland in the human body is:', options: ['Pituitary', 'Thyroid', 'Liver', 'Pancreas'], answer: 2, explanation: 'The liver is the largest gland in the human body.' }
+  ];
+
+  // Sidebar management
+  const sidebar = document.getElementById('sidebar');
+  const mainContent = document.getElementById('main-content');
+  const overlay = document.getElementById('overlay');
+  let sidebarOpen = true;
+  let quizMode = 'exam';
+  let quizStarted = false;
+  let quizFinished = false;
+  let quizCountdown = 30 * 60;
+  let quizIntervalId = null;
+
+  function buildQuizCard(question, index) {
+    const questionId = `quiz-q-${index}`;
+    const optionsMarkup = question.options.map((option, optionIndex) => `
+      <label class="option-item" data-option="${optionIndex}">
+        <input type="radio" name="${questionId}" value="${optionIndex}" ${quizMode === 'practice' ? `onchange="evaluateQuestion(${index})"` : ''}>
+        <span class="option-label">${String.fromCharCode(65 + optionIndex)}. ${option}</span>
+      </label>
+    `).join('');
+
+    return `
+      <div class="quiz-card" id="${questionId}">
+        <h4>${question.question}</h4>
+        <div class="option-list">${optionsMarkup}</div>
+        <div class="quiz-feedback" id="feedback-${questionId}"></div>
+      </div>
+    `;
+  }
+
+  function renderQuiz() {
+    const grid = document.getElementById('quiz-grid');
+    if (!grid) return;
+    grid.innerHTML = quizData.map((question, index) => buildQuizCard(question, index)).join('');
+    updateQuizTimer();
+    updateModeUi();
+  }
+
+  function updateModeUi() {
+    const examBtn = document.getElementById('mode-exam-btn');
+    const practiceBtn = document.getElementById('mode-practice-btn');
+    const startBtn = document.getElementById('start-exam-btn');
+    const pill = document.getElementById('mode-pill');
+    const hint = document.getElementById('quiz-hint');
+    if (examBtn) examBtn.classList.toggle('active', quizMode === 'exam');
+    if (practiceBtn) practiceBtn.classList.toggle('active', quizMode === 'practice');
+    if (startBtn) startBtn.style.display = quizMode === 'exam' ? 'inline-flex' : 'none';
+    if (pill) pill.textContent = quizMode === 'exam' ? 'Real Exam Mode' : 'Practice Mode';
+    if (hint) {
+      hint.textContent = quizMode === 'exam'
+        ? 'Real exam mode hides feedback until you submit. The timer runs in the background once you start.'
+        : 'Practice mode reveals the correct answer immediately after each selection.';
+    }
+  }
+
+  function updateQuizTimer() {
+    const timer = document.getElementById('quiz-timer');
+    if (!timer) return;
+    if (quizMode === 'practice') {
+      timer.textContent = 'Practice Mode';
+      return;
+    }
+    const minutes = Math.floor(quizCountdown / 60).toString().padStart(2, '0');
+    const seconds = (quizCountdown % 60).toString().padStart(2, '0');
+    timer.textContent = `${minutes}:${seconds}`;
+  }
+
+  function setQuizMode(mode) {
+    if (quizMode === mode) return;
+    quizMode = mode;
+    resetQuiz(false);
+    renderQuiz();
+  }
+
+  function startExam() {
+    if (quizMode !== 'exam' || quizFinished || quizStarted) return;
+    quizStarted = true;
+    updateQuizTimer();
+    quizIntervalId = window.setInterval(() => {
+      quizCountdown -= 1;
+      updateQuizTimer();
+      if (quizCountdown <= 0) {
+        submitQuiz();
+      }
+    }, 1000);
+  }
+
+  function clearQuizTimer() {
+    if (quizIntervalId) {
+      window.clearInterval(quizIntervalId);
+      quizIntervalId = null;
+    }
+  }
+
+  function submitQuiz() {
+    if (quizFinished) return;
+    clearQuizTimer();
+    quizFinished = true;
+
+    let score = 0;
+    const reviewMarkup = quizData.map((question, index) => {
+      const selected = document.querySelector(`input[name="quiz-q-${index}"]:checked`);
+      const selectedValue = selected ? Number(selected.value) : null;
+      if (selectedValue === question.answer) score += 1;
+      const correctAnswer = `${String.fromCharCode(65 + question.answer)}. ${question.options[question.answer]}`;
+      return `<div class="qf-item"><strong>Q${index + 1}</strong>${correctAnswer}</div>`;
+    }).join('');
+
+    const result = document.getElementById('quiz-result');
+    if (result) {
+      result.innerHTML = `<strong>Score:</strong> ${score}/50<br><strong>Status:</strong> attempt complete. Review the answer key below after submission.<div class="quiz-summary">${reviewMarkup}</div>`;
+      result.classList.add('show');
+    }
+  }
+
+  function resetQuiz(keepMode = true) {
+    clearQuizTimer();
+    quizStarted = false;
+    quizFinished = false;
+    quizCountdown = 30 * 60;
+    updateQuizTimer();
+    const result = document.getElementById('quiz-result');
+    if (result) {
+      result.classList.remove('show');
+      result.innerHTML = '';
+    }
+    document.querySelectorAll('input[name^="quiz-q-"]').forEach(input => { input.checked = false; });
+    document.querySelectorAll('#quiz-grid .quiz-card').forEach(card => {
+      card.classList.remove('correct', 'wrong');
+      card.querySelectorAll('.option-item').forEach(option => option.classList.remove('correct', 'wrong'));
+      const feedback = card.querySelector('.quiz-feedback');
+      if (feedback) {
+        feedback.className = 'quiz-feedback';
+        feedback.innerHTML = '';
+        feedback.style.display = 'none';
+      }
+    });
+    if (keepMode) updateModeUi();
+  }
+
+  function evaluateQuestion(index) {
+    if (quizMode !== 'practice') return;
+    const question = quizData[index];
+    if (!question) return;
+    const card = document.getElementById(`quiz-q-${index}`);
+    const feedback = document.getElementById(`feedback-quiz-q-${index}`);
+    const selected = document.querySelector(`input[name="quiz-q-${index}"]:checked`);
+    if (!card || !feedback || !selected) return;
+
+    const selectedValue = Number(selected.value);
+    const optionLabels = card.querySelectorAll('.option-item');
+    optionLabels.forEach((label, optionIndex) => {
+      label.classList.remove('correct', 'wrong');
+      if (optionIndex === question.answer) label.classList.add('correct');
+      if (optionIndex === selectedValue && selectedValue !== question.answer) label.classList.add('wrong');
+    });
+
+    card.classList.remove('correct', 'wrong');
+    if (selectedValue === question.answer) {
+      card.classList.add('correct');
+      feedback.className = 'quiz-feedback show good';
+      feedback.style.display = 'block';
+      feedback.innerHTML = `Correct. ${question.explanation}`;
+    } else {
+      card.classList.add('wrong');
+      feedback.className = 'quiz-feedback show bad';
+      feedback.style.display = 'block';
+      feedback.innerHTML = `Incorrect. Correct answer: ${String.fromCharCode(65 + question.answer)}. ${question.options[question.answer]}. ${question.explanation}`;
+    }
+  }
+
+  function toggleSidebar() {
+    if (window.innerWidth <= 900) {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('show');
+    } else {
+      sidebarOpen = !sidebarOpen;
+      if (sidebarOpen) {
+        sidebar.classList.remove('closed');
+        mainContent.classList.remove('full');
+      } else {
+        sidebar.classList.add('closed');
+        mainContent.classList.add('full');
+      }
+    }
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+  }
+
+  // Screen management
+  function showScreen(name) {
+    // Hide all screens
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    // Show target screen
+    const target = document.getElementById('screen-' + name);
+    if (target) target.classList.add('active');
+    // Update sidebar active state
+    document.querySelectorAll('.sidebar-item').forEach(item => item.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    // Close mobile sidebar
+    if (window.innerWidth <= 900) closeSidebar();
+    // Scroll to top
+    mainContent.scrollTop = 0;
+    window.scrollTo(0, 0);
+  }
+
+  // Handle resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+      if (sidebarOpen) {
+        sidebar.classList.remove('closed');
+        mainContent.classList.remove('full');
+      }
+    }
+  });
+
+  // Init
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.sidebar-item').classList.add('active');
+    renderQuiz();
+  });
+</script>
+</body>
+</html>

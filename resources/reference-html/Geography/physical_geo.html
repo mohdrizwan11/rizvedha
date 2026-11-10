@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Geography | SSC CGL & IB ACIO Master Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#030d1a;--bg2:#06121f;--card:#091828;--card2:#0b1e2e;
+  --gold:#f2b731;--teal:#00d9bc;--coral:#ff6b6b;--blue:#5ab4ff;
+  --green:#4ee688;--purple:#c586ff;--orange:#ff9f43;
+  --text:#dce8f7;--text2:#7da0c0;--text3:#3f6080;
+  --border:rgba(90,180,255,0.09);--glow:rgba(242,183,49,0.15);
+  --sidebar-w:220px;--sidebar-w-collapsed:64px;
+  --hdr-h:54px;
+}
+html,body{height:100%;overflow:hidden;font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);}
+
+/* ── GRID TEXTURE ── */
+body::before{content:'';position:fixed;inset:0;background:
+  repeating-linear-gradient(0deg,transparent,transparent 30px,rgba(90,180,255,0.015) 30px,rgba(90,180,255,0.015) 31px),
+  repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(90,180,255,0.01) 30px,rgba(90,180,255,0.01) 31px);
+  pointer-events:none;z-index:0;}
+
+/* ══════════ HEADER ══════════ */
+.hdr{
+  position:fixed;top:0;left:0;right:0;z-index:300;height:var(--hdr-h);
+  background:linear-gradient(135deg,#020a14,#050f1c);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;padding:0 14px;gap:10px;
+  box-shadow:0 2px 20px rgba(0,0,0,0.5);
+}
+.hdr-hamburger{
+  width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);
+  border:1px solid var(--border);cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  flex-shrink:0;transition:background .2s;
+}
+.hdr-hamburger:hover{background:rgba(242,183,49,.12);border-color:rgba(242,183,49,.3);}
+.hdr-hamburger span{display:block;width:16px;height:2px;background:var(--text2);border-radius:2px;transition:all .3s;}
+.hdr-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hdr-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hdr-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.hdr-icon{font-size:24px;filter:drop-shadow(0 2px 8px rgba(242,183,49,0.4));}
+.hdr-text{flex:1;min-width:0;}
+.hdr-title{font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:1.5px;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hdr-sub{font-size:10px;color:var(--text3);letter-spacing:1.2px;text-transform:uppercase;margin-top:2px;}
+.hdr-badges{display:flex;gap:5px;flex-shrink:0;}
+.badge{font-size:10px;font-weight:800;letter-spacing:0.8px;padding:4px 9px;border-radius:20px;border:1px solid;cursor:default;}
+.badge.ssc{background:rgba(242,183,49,0.12);border-color:rgba(242,183,49,0.5);color:var(--gold);}
+.badge.ib{background:rgba(90,180,255,0.1);border-color:rgba(90,180,255,0.4);color:var(--blue);}
+
+/* ══════════ LAYOUT ══════════ */
+.layout{
+  position:fixed;
+  top:var(--hdr-h);bottom:0;left:0;right:0;
+  display:flex;overflow:hidden;
+}
+
+/* ══════════ SIDEBAR ══════════ */
+.sidebar{
+  width:var(--sidebar-w);
+  flex-shrink:0;
+  background:linear-gradient(180deg,#020c18,#030f1e);
+  border-right:1px solid var(--border);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  transition:width .3s cubic-bezier(.4,0,.2,1),transform .3s cubic-bezier(.4,0,.2,1);
+  z-index:200;
+  position:relative;
+}
+.sidebar.collapsed{width:var(--sidebar-w-collapsed);}
+
+/* Sidebar brand strip */
+.sb-brand{
+  padding:18px 14px 14px;
+  border-bottom:1px solid var(--border);
+  flex-shrink:0;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.sb-brand-icon{font-size:22px;display:inline-block;vertical-align:middle;filter:drop-shadow(0 2px 8px rgba(242,183,49,.35));}
+.sb-brand-text{
+  display:inline-block;vertical-align:middle;
+  margin-left:10px;
+  font-family:'Cinzel',serif;font-size:11px;color:var(--gold);letter-spacing:1px;
+  transition:opacity .2s,max-width .3s;max-width:160px;overflow:hidden;
+}
+.sidebar.collapsed .sb-brand-text{opacity:0;max-width:0;margin-left:0;}
+
+/* Sidebar nav label */
+.sb-label{
+  font-size:9px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text3);padding:14px 18px 6px;
+  white-space:nowrap;overflow:hidden;
+  transition:opacity .2s;
+}
+.sidebar.collapsed .sb-label{opacity:0;}
+
+/* Sidebar nav items */
+.sb-nav{flex:1;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;padding:6px 0 16px;}
+.sb-nav::-webkit-scrollbar{display:none;}
+
+.sb-item{
+  display:flex;align-items:center;gap:12px;
+  padding:0 14px;height:50px;
+  cursor:pointer;position:relative;
+  border:none;background:none;width:100%;text-align:left;
+  color:var(--text3);font-family:'Nunito',sans-serif;
+  font-size:13px;font-weight:700;letter-spacing:.2px;
+  transition:color .2s,background .2s;
+  overflow:hidden;white-space:nowrap;
+  border-radius:0;
+}
+.sb-item::before{
+  content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:3px;height:0;background:var(--gold);border-radius:0 3px 3px 0;
+  transition:height .25s;
+}
+.sb-item:hover{color:var(--text);background:rgba(255,255,255,.03);}
+.sb-item.active{color:var(--gold);background:rgba(242,183,49,.07);}
+.sb-item.active::before{height:32px;}
+
+.sb-item-icon{
+  font-size:20px;flex-shrink:0;width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border-radius:10px;border:1px solid var(--border);
+  transition:background .2s,border-color .2s;
+}
+.sb-item.active .sb-item-icon{background:rgba(242,183,49,.12);border-color:rgba(242,183,49,.3);}
+.sb-item:hover .sb-item-icon{background:rgba(255,255,255,.07);}
+
+.sb-item-text{
+  flex:1;overflow:hidden;
+  transition:opacity .2s,max-width .3s;max-width:160px;
+}
+.sidebar.collapsed .sb-item-text{opacity:0;max-width:0;}
+
+.sb-item-badge{
+  font-size:9px;font-weight:900;padding:2px 6px;border-radius:10px;
+  background:rgba(255,107,107,.15);color:var(--coral);border:1px solid rgba(255,107,107,.3);
+  flex-shrink:0;
+  transition:opacity .2s,max-width .3s;max-width:50px;
+}
+.sidebar.collapsed .sb-item-badge{opacity:0;max-width:0;padding:0;}
+
+.sb-item-sub{font-size:10px;color:var(--text3);font-weight:600;display:block;margin-top:1px;}
+.sidebar.collapsed .sb-item-sub{display:none;}
+
+/* Sidebar divider */
+.sb-div{height:1px;background:var(--border);margin:8px 14px;}
+
+/* Sidebar footer */
+.sb-footer{
+  padding:12px 14px;border-top:1px solid var(--border);
+  flex-shrink:0;overflow:hidden;white-space:nowrap;
+}
+.sb-footer-inner{display:flex;align-items:center;gap:10px;}
+.sb-footer-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;box-shadow:0 0 8px rgba(78,230,136,.5);}
+.sb-footer-text{font-size:10px;color:var(--text3);transition:opacity .2s,max-width .3s;max-width:160px;}
+.sidebar.collapsed .sb-footer-text{opacity:0;max-width:0;}
+
+/* Sidebar tooltip on hover when collapsed */
+.sb-item[data-tip]{position:relative;}
+.sidebar.collapsed .sb-item[data-tip]:hover::after{
+  content:attr(data-tip);
+  position:absolute;left:calc(var(--sidebar-w-collapsed) + 8px);top:50%;transform:translateY(-50%);
+  background:#0d2035;border:1px solid var(--border);
+  color:var(--text);font-size:12px;font-weight:700;
+  padding:6px 10px;border-radius:8px;white-space:nowrap;z-index:999;
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+
+/* ══════════ OVERLAY (mobile) ══════════ */
+.overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:190;backdrop-filter:blur(2px);
+}
+.overlay.show{display:block;}
+
+/* ══════════ MAIN CONTENT ══════════ */
+.main{
+  flex:1;overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:thin;scrollbar-color:rgba(90,180,255,0.15) transparent;
+  position:relative;
+}
+.main::-webkit-scrollbar{width:3px;}
+.main::-webkit-scrollbar-thumb{background:rgba(90,180,255,0.2);border-radius:3px;}
+
+/* ══════════ SECTIONS ══════════ */
+.sec{display:none;padding:20px;min-height:100%;animation:fadeUp .35s ease;}
+.sec.active{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ══════════ SCROLL TOP ══════════ */
+#stt{
+  position:fixed;bottom:20px;right:20px;width:38px;height:38px;
+  background:var(--gold);color:#030d1a;border:none;border-radius:50%;
+  font-size:16px;cursor:pointer;display:none;align-items:center;justify-content:center;
+  z-index:150;box-shadow:0 4px 14px rgba(242,183,49,.4);
+  transition:transform .2s;
+}
+#stt:hover{transform:translateY(-2px);}
+#stt.show{display:flex;}
+
+/* ══════════ RESPONSIVE ══════════ */
+@media(max-width:768px){
+  .sidebar{
+    position:fixed;top:var(--hdr-h);bottom:0;left:0;
+    width:var(--sidebar-w) !important;
+    transform:translateX(calc(-1 * var(--sidebar-w)));
+    box-shadow:4px 0 30px rgba(0,0,0,.6);
+  }
+  .sidebar.mobile-open{transform:translateX(0);}
+  .overlay{display:none;}
+  .overlay.show{display:block;}
+  .main{width:100% !important;}
+  .layout{flex:1;}
+  .hdr-badges .badge.ib{display:none;}
+}
+@media(min-width:769px){
+  .hdr-hamburger{display:flex;}
+  .overlay{display:none !important;}
+}
+
+/* ══════════ EXISTING STYLES ══════════ */
+.hero{text-align:center;padding:16px 0 14px;margin-bottom:16px;}
+.hero-icon{font-size:44px;display:block;margin-bottom:8px;filter:drop-shadow(0 4px 14px rgba(242,183,49,0.35));}
+.hero-title{font-family:'Cinzel',serif;font-size:22px;font-weight:700;color:var(--gold);letter-spacing:2px;margin-bottom:6px;}
+.hero-sub{font-size:13px;color:var(--text2);line-height:1.6;max-width:420px;margin:0 auto;}
+
+.tabs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;margin-bottom:16px;padding:2px 0;}
+.tabs::-webkit-scrollbar{display:none;}
+.tb{padding:7px 14px;border-radius:100px;background:var(--card);border:1px solid var(--border);
+  color:var(--text3);font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;
+  cursor:pointer;white-space:nowrap;transition:all .2s;letter-spacing:0.3px;}
+.tb.on{background:rgba(242,183,49,0.12);border-color:rgba(242,183,49,0.45);color:var(--gold);}
+.tp{display:none;}.tp.on{display:block;}
+
+.sub-h{font-family:'Cinzel',serif;font-size:13.5px;color:var(--teal);letter-spacing:1.5px;
+  text-transform:uppercase;border-bottom:1px solid rgba(0,217,188,0.2);
+  padding-bottom:8px;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:15px;
+  margin-bottom:11px;transition:border-color .25s;}
+.card:hover{border-color:rgba(90,180,255,0.2);}
+.ct{font-family:'Cinzel',serif;font-size:13.5px;color:var(--gold);margin-bottom:9px;letter-spacing:.3px;}
+
+.hl{border-radius:9px;padding:12px 14px;margin:10px 0;font-size:13px;line-height:1.75;
+  display:flex;gap:9px;align-items:flex-start;}
+.hl-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.hl-lbl{font-size:10px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:3px;}
+.hl.tip{background:rgba(255,107,107,.1);border-left:3px solid var(--coral);}
+.hl.tip .hl-lbl{color:var(--coral);}
+.hl.mem{background:rgba(197,134,255,.1);border-left:3px solid var(--purple);}
+.hl.mem .hl-lbl{color:var(--purple);}
+.hl.key{background:rgba(242,183,49,.1);border-left:3px solid var(--gold);}
+.hl.key .hl-lbl{color:var(--gold);}
+.hl.inf{background:rgba(90,180,255,.1);border-left:3px solid var(--blue);}
+.hl.inf .hl-lbl{color:var(--blue);}
+.hl.go{background:rgba(78,230,136,.1);border-left:3px solid var(--green);}
+.hl.go .hl-lbl{color:var(--green);}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:11px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:11px;}
+.mc{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:11px;text-align:center;}
+.mc-icon{font-size:22px;display:block;margin-bottom:5px;}
+.mc-t{font-size:12px;font-weight:800;margin-bottom:4px;}
+.mc-d{font-size:11.5px;color:var(--text2);line-height:1.6;}
+
+.tbl{width:100%;border-collapse:collapse;font-size:12px;margin:10px 0;}
+.tbl th{background:rgba(242,183,49,.12);color:var(--gold);padding:8px 10px;text-align:left;
+  font-weight:800;letter-spacing:.4px;border-bottom:1px solid rgba(242,183,49,.25);}
+.tbl td{padding:6px 8px;color:var(--text);border-bottom:1px solid var(--border);line-height:1.5;}
+.tbl tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.tbl tr:hover td{background:rgba(90,180,255,.04);}
+
+p{font-size:14px;color:var(--text);line-height:1.9;margin-bottom:9px;}
+ul,ol{padding-left:18px;margin-bottom:7px;}
+li{font-size:13.5px;color:var(--text);line-height:1.95;}
+strong{color:var(--gold);font-weight:700;}
+em{color:var(--teal);font-style:normal;font-weight:600;}
+.dim{color:var(--text2);}
+
+.acc{background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}
+.acc-h{padding:12px 15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  font-size:12.5px;font-weight:700;color:var(--text);transition:background .2s;}
+.acc-h:hover{background:rgba(255,255,255,.03);}
+.acc-h.on{color:var(--gold);}
+.arr{font-size:11px;color:var(--text2);transition:transform .3s;}
+.acc-h.on .arr{transform:rotate(180deg);color:var(--gold);}
+.acc-b{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.acc-b.on{max-height:3000px;padding:0 15px 14px;}
+
+.stats{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0;}
+.sp{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;text-align:center;min-width:68px;}
+.sv{font-size:14px;font-weight:800;color:var(--blue);}
+.sl{font-size:9px;color:var(--text2);text-align:center;line-height:1.3;}
+
+.rb{display:inline-block;background:rgba(90,180,255,.13);border:1px solid rgba(90,180,255,.3);
+  color:var(--blue);font-size:9.5px;padding:2px 7px;border-radius:20px;margin:2px;font-weight:700;}
+.rb.t{background:rgba(0,217,188,.1);border-color:rgba(0,217,188,.3);color:var(--teal);}
+.rb.g{background:rgba(78,230,136,.1);border-color:rgba(78,230,136,.3);color:var(--green);}
+
+.cz-row{display:flex;align-items:center;padding:8px 11px;gap:10px;border-bottom:1px solid rgba(255,255,255,.04);}
+.cz-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;}
+.cz-name{font-size:11.5px;font-weight:800;flex:0 0 120px;}
+.cz-desc{font-size:10.5px;color:var(--text2);flex:1;line-height:1.5;}
+.cz-ex{font-size:9.5px;color:var(--text3);margin-top:2px;}
+
+.qz-prog-wrap{margin:10px 0 16px;}
+.qz-meta{display:flex;justify-content:space-between;font-size:10.5px;color:var(--text2);margin-bottom:5px;}
+.qz-bar{background:var(--card);border-radius:100px;height:5px;overflow:hidden;}
+.qz-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--blue));border-radius:100px;transition:width .5s ease;}
+
+.qcard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;}
+.q-num{font-size:9px;color:var(--purple);font-weight:900;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:7px;}
+.q-src{font-size:9px;color:var(--text3);font-weight:600;float:right;}
+.q-txt{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.65;}
+.opts{display:flex;flex-direction:column;gap:7px;}
+.opt{display:flex;align-items:center;gap:9px;background:var(--card2);border:1px solid var(--border);
+  border-radius:9px;padding:9px 13px;cursor:pointer;font-family:'Nunito',sans-serif;
+  font-size:11.5px;color:var(--text);transition:all .2s;width:100%;text-align:left;}
+.opt:hover:not(:disabled){border-color:rgba(90,180,255,.4);background:rgba(90,180,255,.07);}
+.opt.cor{background:rgba(78,230,136,.15);border-color:var(--green);color:var(--green);}
+.opt.wrg{background:rgba(255,107,107,.15);border-color:var(--coral);color:var(--coral);}
+.opt-l{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.07);
+  display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:800;flex-shrink:0;}
+.expl{margin-top:12px;background:rgba(242,183,49,.08);border-left:3px solid var(--gold);
+  border-radius:0 8px 8px 0;padding:10px 12px;font-size:11px;color:var(--text);
+  line-height:1.75;display:none;}
+.expl.show{display:block;}
+.qnav{display:flex;gap:9px;margin-top:14px;justify-content:flex-end;align-items:center;}
+.qnav-info{font-size:10px;color:var(--text2);margin-right:auto;}
+
+.btn{padding:8px 17px;border-radius:8px;border:none;font-family:'Nunito',sans-serif;
+  font-size:11.5px;font-weight:800;cursor:pointer;transition:all .2s;letter-spacing:.3px;}
+.btn-p{background:var(--gold);color:#030d1a;}
+.btn-p:hover{background:#f5c843;transform:translateY(-1px);}
+.btn-s{background:rgba(255,255,255,.07);color:var(--text);border:1px solid var(--border);}
+.btn-s:hover{background:rgba(255,255,255,.12);}
+
+.result{text-align:center;padding:28px 16px;}
+.r-score{font-family:'Cinzel',serif;font-size:54px;font-weight:700;color:var(--gold);}
+.r-lbl{font-size:12px;color:var(--text2);margin-bottom:18px;}
+.r-stats{display:flex;justify-content:center;gap:24px;margin:16px 0;}
+.rs{text-align:center;}.rsn{font-size:26px;font-weight:800;}.rsl{font-size:9.5px;color:var(--text2);font-weight:700;}
+.r-msg{font-size:13px;color:var(--text);margin:16px 0;background:var(--card);padding:14px;border-radius:10px;line-height:1.7;}
+.div{height:1px;background:var(--border);margin:16px 0;}
+
+.rc{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:11px;}
+.rc-h{padding:11px 14px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--border);}
+.rc-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex-shrink:0;}
+.rc-b{padding:12px 14px;}
+
+.c1{background:#ff6b6b11;border-color:#ff6b6b33;}.c1 .rc-num{background:#ff6b6b22;color:#ff6b6b;}
+.c2{background:#f2b73111;border-color:#f2b73133;}.c2 .rc-num{background:#f2b73122;color:#f2b731;}
+.c3{background:#4ee68811;border-color:#4ee68833;}.c3 .rc-num{background:#4ee68822;color:#4ee688;}
+.c4{background:#5ab4ff11;border-color:#5ab4ff33;}.c4 .rc-num{background:#5ab4ff22;color:#5ab4ff;}
+.c5{background:#c586ff11;border-color:#c586ff33;}.c5 .rc-num{background:#c586ff22;color:#c586ff;}
+.c6{background:#00d9bc11;border-color:#00d9bc33;}.c6 .rc-num{background:#00d9bc22;color:#00d9bc;}
+.c7{background:#ff9f4311;border-color:#ff9f4333;}.c7 .rc-num{background:#ff9f4322;color:#ff9f43;}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="hdr">
+  <button class="hdr-hamburger" id="hambtn" onclick="toggleSidebar()" title="Toggle Sidebar">
+    <span></span><span></span><span></span>
+  </button>
+  <span class="hdr-icon">🌏</span>
+  <div class="hdr-text">
+    <div class="hdr-title">Physical Geography</div>
+    <div class="hdr-sub">Master Study Guide</div>
+  </div>
+  <div class="hdr-badges">
+    <span class="badge ssc">SSC CGL</span>
+    <span class="badge ib">IB ACIO</span>
+  </div>
+</header>
+
+<!-- ══════════ LAYOUT ══════════ -->
+<div class="layout">
+
+  <!-- ── OVERLAY (mobile) ── -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- ══════════ SIDEBAR ══════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sb-brand">
+      <span class="sb-brand-icon">📚</span>
+      <span class="sb-brand-text">Study Guide</span>
+    </div>
+
+    <div class="sb-label">📌 Topics</div>
+
+    <nav class="sb-nav">
+      <button class="sb-item active" id="nav-mt" onclick="nav('mt')" data-tip="Mountains">
+        <span class="sb-item-icon">🏔️</span>
+        <span class="sb-item-text">
+          Mountains
+          <span class="sb-item-sub">Types · Ranges · Peaks</span>
+        </span>
+      </button>
+
+      <button class="sb-item" id="nav-rv" onclick="nav('rv')" data-tip="Rivers">
+        <span class="sb-item-icon">💧</span>
+        <span class="sb-item-text">
+          Rivers
+          <span class="sb-item-sub">Himalayan · Peninsular</span>
+        </span>
+      </button>
+
+      <button class="sb-item" id="nav-cl" onclick="nav('cl')" data-tip="Climate">
+        <span class="sb-item-icon">🌤️</span>
+        <span class="sb-item-text">
+          Climate
+          <span class="sb-item-sub">Monsoon · Zones · Factors</span>
+        </span>
+      </button>
+
+      <button class="sb-item" id="nav-in" onclick="nav('in')" data-tip="India Geo">
+        <span class="sb-item-icon">🗺️</span>
+        <span class="sb-item-text">
+          India Geography
+          <span class="sb-item-sub">Soils · Veg · Lakes</span>
+        </span>
+      </button>
+
+      <div class="sb-div"></div>
+      <div class="sb-label" style="padding-top:4px;">🎯 Practice</div>
+
+      <button class="sb-item" id="nav-qz" onclick="nav('qz')" data-tip="PYQ Quiz">
+        <span class="sb-item-icon">📝</span>
+        <span class="sb-item-text">
+          PYQ Quiz
+          <span class="sb-item-sub">35 Questions · 2003–2024</span>
+        </span>
+        <span class="sb-item-badge">35 Qs</span>
+      </button>
+    </nav>
+
+    <div class="sb-footer">
+      <div class="sb-footer-inner">
+        <div class="sb-footer-dot"></div>
+        <span class="sb-footer-text">SSC CGL &amp; IB ACIO Ready</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ══════════ MAIN ══════════ -->
+  <main class="main" id="M">
+
+<!-- ════════════════════════════════════
+     SECTION: MOUNTAINS
+════════════════════════════════════ -->
+<section id="s-mt" class="sec active">
+<div class="hero">
+  <span class="hero-icon">🏔️</span>
+  <div class="hero-title">Mountains</div>
+  <div class="hero-sub">Types · Formation · Indian & World Ranges</div>
+</div>
+<div class="tabs">
+  <button class="tb on" onclick="tab('mt','types',this)">🗿 Types</button>
+  <button class="tb" onclick="tab('mt','india',this)">🇮🇳 Indian Ranges</button>
+  <button class="tb" onclick="tab('mt','world',this)">🌍 World Ranges</button>
+  <button class="tb" onclick="tab('mt','facts',this)">⚡ Quick Facts</button>
+</div>
+
+<!-- TYPES TAB -->
+<div id="mt-types" class="tp on">
+  <div class="sub-h">🗿 Types of Mountains</div>
+  <div class="g2">
+    <div class="mc" style="border-color:rgba(255,107,107,.3);">
+      <span class="mc-icon">🌋</span>
+      <div class="mc-t" style="color:#ff6b6b;">Fold Mountains</div>
+      <div class="mc-d">Formed by tectonic compression & folding of rock layers when plates collide</div>
+    </div>
+    <div class="mc" style="border-color:rgba(90,180,255,.3);">
+      <span class="mc-icon">🧱</span>
+      <div class="mc-t" style="color:#5ab4ff;">Block / Fault</div>
+      <div class="mc-d">Uplifted crustal blocks (Horst) between fault lines; sunken blocks = Graben</div>
+    </div>
+    <div class="mc" style="border-color:rgba(255,159,67,.3);">
+      <span class="mc-icon">🔥</span>
+      <div class="mc-t" style="color:#ff9f43;">Volcanic</div>
+      <div class="mc-d">Built by lava, ash & pyroclastic material erupting from magma chambers</div>
+    </div>
+    <div class="mc" style="border-color:rgba(78,230,136,.3);">
+      <span class="mc-icon">🏝️</span>
+      <div class="mc-t" style="color:#4ee688;">Residual / Plateau</div>
+      <div class="mc-d">Remnants of ancient uplifted surfaces shaped by prolonged erosion</div>
+    </div>
+  </div>
+
+  <div class="sub-h" style="margin-top:18px;">📐 Detailed Characteristics</div>
+
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌋 Fold Mountains — Earth's Largest Ranges <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Formation:</strong> Created when two tectonic plates collide (convergent boundary). Sedimentary rocks between plates buckle upward, forming folds (anticlines = crests; synclines = troughs).</p>
+      <ul>
+        <li><strong>Young Fold Mountains:</strong> Himalayas, Alps, Andes, Rockies — still rising, steep, glaciated</li>
+        <li><strong>Old Fold Mountains:</strong> Aravallis (India), Appalachians (USA), Urals — worn down, rounded</li>
+      </ul>
+      <div class="hl key"><span class="hl-icon">🔑</span><div><div class="hl-lbl">Key Fact</div>Fold mountains make up the majority of the world's great mountain ranges. All 14 eight-thousanders are in the young Himalayan fold system.</div></div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🧱 Block / Fault Mountains — Horst & Graben <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Formation:</strong> Tensional forces create normal faults. Uplifted block = <strong>Horst</strong> (block mountain). Sunken block = <strong>Graben</strong> (rift valley).</p>
+      <ul>
+        <li><strong>Indian Examples:</strong> Vindhya Range, Satpura Range (horsts)</li>
+        <li><strong>World Examples:</strong> Vosges (France), Black Forest (Germany), Sierra Nevada (USA)</li>
+        <li><strong>Rift Valleys:</strong> Great Rift Valley (East Africa), Narmada Valley, Rhine Valley</li>
+      </ul>
+      <div class="hl mem"><span class="hl-icon">🧠</span><div><div class="hl-lbl">Memory Trick</div>"<strong>H</strong>orst = <strong>H</strong>igh up; <strong>G</strong>raben = <strong>G</strong>round low" — Horst is the raised block, Graben is the depression.</div></div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🔥 Volcanic Mountains — Fire-built Peaks <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Formation:</strong> Magma erupts through vents, accumulating lava, ash and pyroclastic material to form a cone-shaped mountain.</p>
+      <div class="g2">
+        <div class="mc"><div class="mc-t" style="color:#ff9f43;">Shield Volcano</div><div class="mc-d">Gentle slopes; thin basaltic lava; e.g. Mauna Loa (Hawaii)</div></div>
+        <div class="mc"><div class="mc-t" style="color:#ff6b6b;">Stratovolcano</div><div class="mc-d">Steep cone; explosive; e.g. Fujiyama, Vesuvius, Pinatubo</div></div>
+      </div>
+      <ul>
+        <li><strong>India's Volcanoes:</strong> <em>Barren Island</em> (Andaman — only ACTIVE volcano in South Asia); <em>Narcondam</em> (Andaman — dormant)</li>
+        <li><strong>Deccan Traps:</strong> Evidence of massive volcanic activity ~65 million years ago</li>
+      </ul>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Barren Island volcano is India's ONLY active volcano, located in the Andaman & Nicobar Islands. Extremely frequently tested.</div></div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🏝️ Residual / Plateau Mountains — Erosion's Masterpiece <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Formation:</strong> Formerly elevated land surfaces that have been extensively eroded by water, wind and glaciers, leaving behind hard rock remnants.</p>
+      <ul>
+        <li><strong>Indian Examples:</strong> Aravalli Hills, Nilgiri Hills, Eastern Ghats (discontinuous)</li>
+        <li><strong>World Examples:</strong> Scottish Highlands, Catskill Mountains (USA)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-h" style="margin-top:18px;">⚙️ Formation Processes</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Process</th><th>Mechanism</th><th>Result</th></tr>
+      <tr><td><strong>Plate Collision</strong></td><td>Convergent boundary; crust buckles upward</td><td>Fold mountains (Himalayas)</td></tr>
+      <tr><td><strong>Faulting</strong></td><td>Tensional forces; vertical displacement</td><td>Block mountains, rift valleys</td></tr>
+      <tr><td><strong>Volcanic Activity</strong></td><td>Magma eruption at weak crustal points</td><td>Volcanic cones (Fuji, Etna)</td></tr>
+      <tr><td><strong>Erosion</strong></td><td>Differential weathering of uplifted surfaces</td><td>Residual mountains (Aravallis)</td></tr>
+      <tr><td><strong>Isostasy</strong></td><td>Crustal rebound after glacial retreat</td><td>Uplift of old mountain roots</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- INDIAN RANGES TAB -->
+<div id="mt-india" class="tp">
+  <div class="sub-h">🇮🇳 The Himalayas</div>
+  <div class="stats">
+    <div class="sp"><div class="sv">2400</div><div class="sl">km Length</div></div>
+    <div class="sp"><div class="sv">~320</div><div class="sl">km Width</div></div>
+    <div class="sp"><div class="sv">8849m</div><div class="sl">Everest (Nepal)</div></div>
+    <div class="sp"><div class="sv">8586m</div><div class="sl">Kanchenjunga</div></div>
+    <div class="sp"><div class="sv">~50 Ma</div><div class="sl">Age (formed)</div></div>
+  </div>
+  <div class="card">
+    <div class="ct">Three Parallel Ranges</div>
+    <div class="g3">
+      <div class="mc" style="border-color:rgba(255,107,107,.3);">
+        <span class="mc-icon">🏔️</span>
+        <div class="mc-t" style="color:#ff6b6b;">Himadri</div>
+        <div class="mc-d">Greater Himalaya · Highest; permanent snow; avg 6000m; Everest, K2, Kanchenjunga</div>
+      </div>
+      <div class="mc" style="border-color:rgba(242,183,49,.3);">
+        <span class="mc-icon">⛰️</span>
+        <div class="mc-t" style="color:#f2b731;">Himachal</div>
+        <div class="mc-d">Lesser Himalaya · Pir Panjal, Dhauladhar; hill stations: Shimla, Mussoorie</div>
+      </div>
+      <div class="mc" style="border-color:rgba(78,230,136,.3);">
+        <span class="mc-icon">🌿</span>
+        <div class="mc-t" style="color:#4ee688;">Shiwalik</div>
+        <div class="mc-d">Outer Himalaya / Foothills; fertile Doon valleys; Dehradun, Patna Doon</div>
+      </div>
+    </div>
+    <div class="hl mem"><span class="hl-icon">🧠</span><div><div class="hl-lbl">Memory Trick</div><strong>HHS</strong> = <strong>H</strong>imadri (Highest) → <strong>H</strong>imachal (Hills) → <strong>S</strong>hiwalik (Slopes). From north to south, altitude decreases.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ct">Key Himalayan Peaks</div>
+    <table class="tbl">
+      <tr><th>Peak</th><th>Height</th><th>Location</th></tr>
+      <tr><td><strong>Mt. Everest</strong></td><td>8,849 m</td><td>Nepal-China border (highest in world)</td></tr>
+      <tr><td><strong>K2 (Godwin-Austen)</strong></td><td>8,611 m</td><td>Karakoram, Pakistan-administered Kashmir</td></tr>
+      <tr><td><strong>Kanchenjunga</strong></td><td>8,586 m</td><td>Sikkim-Nepal — <strong>highest peak within India</strong></td></tr>
+      <tr><td><strong>Nanda Devi</strong></td><td>7,816 m</td><td>Uttarakhand — 2nd highest in India</td></tr>
+      <tr><td><strong>Kamet</strong></td><td>7,756 m</td><td>Uttarakhand</td></tr>
+    </table>
+    <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>K2 is in Pakistan-controlled territory. Kanchenjunga is the highest peak entirely within India (Sikkim). This distinction is frequently tested!</div></div>
+  </div>
+
+  <div class="sub-h" style="margin-top:16px;">🌿 Western Ghats (Sahyadri)</div>
+  <div class="stats">
+    <div class="sp"><div class="sv">1600</div><div class="sl">km Length</div></div>
+    <div class="sp"><div class="sv">2695m</div><div class="sl">Anaimudi (Peak)</div></div>
+    <div class="sp"><div class="sv">6</div><div class="sl">States</div></div>
+  </div>
+  <div class="card">
+    <ul>
+      <li>Runs parallel to the <strong>western coast</strong> from Gujarat to Kerala</li>
+      <li>States: Gujarat, Maharashtra, Goa, Karnataka, Kerala, Tamil Nadu</li>
+      <li><strong>Highest peak:</strong> Anaimudi (2695m) in Kerala — also highest peak in peninsular India</li>
+      <li>Other peaks: Doddabetta (2637m) — Nilgiris; Kalsubai (1646m) — Maharashtra</li>
+      <li>UNESCO World Heritage Site — exceptional biodiversity hotspot</li>
+      <li>Rivers originating: Godavari, Krishna, Kaveri, Periyar, Tungabhadra</li>
+      <li>Receives very heavy rainfall on windward (western) side; Eastern leeward side = rain shadow</li>
+    </ul>
+    <div class="hl mem"><span class="hl-icon">🧠</span><div><div class="hl-lbl">Memory Trick</div>Western Ghats = <strong>SAHYADRI</strong>. Anaimudi = highest peak in South India (2695m, Kerala).</div></div>
+  </div>
+
+  <div class="sub-h" style="margin-top:16px;">⛰️ Eastern Ghats</div>
+  <div class="card">
+    <ul>
+      <li>Discontinuous range along the <strong>eastern coast</strong></li>
+      <li>Lower than Western Ghats; interrupted by rivers (Mahanadi, Godavari, Krishna, Kaveri)</li>
+      <li><strong>Highest peak:</strong> Jindhagada Peak (1690m) — Andhra Pradesh</li>
+      <li>Other peaks: Arma Konda (1680m), Mahendragiri (1501m)</li>
+    </ul>
+  </div>
+
+  <div class="sub-h" style="margin-top:16px;">🗺️ Other Major Indian Ranges</div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🏜️ Aravallis — World's Oldest Mountains <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Located in <strong>Rajasthan, Haryana, Delhi, Gujarat</strong>. Age: ~3.5 billion years — one of the oldest fold mountain systems in the world.</p>
+      <p><strong>Highest peak:</strong> Guru Shikhar (1722m) — Mount Abu, Rajasthan</p>
+      <p>Acts as a barrier preventing the <strong>Thar Desert</strong> from spreading eastward.</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Aravallis = oldest mountain range in India AND among the oldest in the world. Very frequently tested.</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🏔️ Vindhyas & Satpura — Central India's Spine <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Vindhyas:</strong> Central India (MP). Separates North India from Peninsular India. Source of Narmada and Tapti rivers.</p>
+      <p><strong>Satpura Range:</strong> Highest point: <em>Dhupgarh</em> (1350m). Contains Pachmarhi — only hill station of MP.</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌄 Nilgiris — Blue Mountains <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Located at the junction of <strong>Western and Eastern Ghats</strong>. "Nilgiri" = "Blue Mountains" — named after <em>Kurinji</em> flowers (bloom once in 12 years).</p>
+      <p><strong>Highest peak:</strong> Doddabetta (2637m). Famous for Ooty hill station, tea & coffee. Home to Toda tribe.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WORLD RANGES TAB -->
+<div id="mt-world" class="tp">
+  <div class="sub-h">🌍 Major World Mountain Ranges</div>
+  <div class="rc c1">
+    <div class="rc-h"><div class="rc-num">1</div><div><strong>Himalayas</strong> — Asia's Roof</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">2400km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">8849m</div><div class="sl">Max Height</div></div></div>
+      <p>Stretches across <strong>Pakistan, India, Nepal, Bhutan, China</strong>. Contains all 14 eight-thousanders. Young fold mountains (~50 Ma). Still rising ~5mm/year.</p>
+    </div>
+  </div>
+  <div class="rc c2">
+    <div class="rc-h"><div class="rc-num">2</div><div><strong>Andes</strong> — World's Longest Range</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">7200km</div><div class="sl">Length (longest)</div></div><div class="sp"><div class="sv">6962m</div><div class="sl">Aconcagua</div></div></div>
+      <p>Runs along the <strong>western coast of South America</strong>. Aconcagua (Argentina) — highest peak outside Asia.</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Andes = World's LONGEST mountain range (~7200 km). Himalayas = world's HIGHEST. Both are frequently confused in exams.</div></div>
+    </div>
+  </div>
+  <div class="rc c3">
+    <div class="rc-h"><div class="rc-num">3</div><div><strong>Rocky Mountains</strong> — North America's Backbone</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">4800km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">4401m</div><div class="sl">Mt. Elbert</div></div></div>
+      <p>Extends from <strong>Canada to New Mexico, USA</strong>. Major river origins: Missouri, Colorado.</p>
+    </div>
+  </div>
+  <div class="rc c4">
+    <div class="rc-h"><div class="rc-num">4</div><div><strong>Alps</strong> — Heart of Europe</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">1200km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">4808m</div><div class="sl">Mont Blanc</div></div></div>
+      <p>Extends through <strong>France, Switzerland, Italy, Austria, Germany, Slovenia</strong>. Mont Blanc — highest in Western Europe.</p>
+    </div>
+  </div>
+  <div class="rc c5">
+    <div class="rc-h"><div class="rc-num">5</div><div><strong>Ural Mountains</strong> — Europe-Asia Divider</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">2500km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">1895m</div><div class="sl">Mt. Narodnaya</div></div></div>
+      <p>Runs through <strong>Russia</strong>. Marks the boundary between Europe and Asia. Old fold mountains (~300 Ma). Rich in minerals.</p>
+    </div>
+  </div>
+  <div class="rc c6">
+    <div class="rc-h"><div class="rc-num">6</div><div><strong>Appalachians</strong> — Eastern North America</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">2400km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">2037m</div><div class="sl">Mt. Mitchell</div></div></div>
+      <p>One of the world's <strong>oldest mountain ranges</strong> (~480 Ma). Rich coal deposits (Appalachian coal belt).</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px;">
+    <div class="ct">Quick Comparison Table</div>
+    <table class="tbl">
+      <tr><th>Range</th><th>Continent</th><th>Type</th><th>Highest Peak</th></tr>
+      <tr><td><strong>Himalayas</strong></td><td>Asia</td><td>Young Fold</td><td>Everest 8849m</td></tr>
+      <tr><td><strong>Andes</strong></td><td>S. America</td><td>Young Fold</td><td>Aconcagua 6962m</td></tr>
+      <tr><td><strong>Rockies</strong></td><td>N. America</td><td>Young Fold</td><td>Elbert 4401m</td></tr>
+      <tr><td><strong>Alps</strong></td><td>Europe</td><td>Young Fold</td><td>Mont Blanc 4808m</td></tr>
+      <tr><td><strong>Urals</strong></td><td>Europe/Asia</td><td>Old Fold</td><td>Narodnaya 1895m</td></tr>
+      <tr><td><strong>Aravallis</strong></td><td>Asia (India)</td><td>Old Fold</td><td>Guru Shikhar 1722m</td></tr>
+      <tr><td><strong>Appalachians</strong></td><td>N. America</td><td>Old Fold</td><td>Mt. Mitchell 2037m</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- QUICK FACTS TAB -->
+<div id="mt-facts" class="tp">
+  <div class="sub-h">⚡ High-Frequency SSC Facts — Mountains</div>
+  <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">Most Asked</div>These facts have appeared repeatedly in SSC CGL, CHSL, MTS, and IB ACIO exams from 2003–2024.</div></div>
+  <table class="tbl">
+    <tr><th>#</th><th>Fact</th><th>Answer</th></tr>
+    <tr><td>1</td><td>Highest peak in world</td><td><strong>Mt. Everest</strong> (8849m, Nepal)</td></tr>
+    <tr><td>2</td><td>Highest peak entirely in India</td><td><strong>Kanchenjunga</strong> (8586m, Sikkim)</td></tr>
+    <tr><td>3</td><td>Longest mountain range in world</td><td><strong>Andes</strong> (~7200 km)</td></tr>
+    <tr><td>4</td><td>Oldest mountain range in India</td><td><strong>Aravallis</strong> (~3.5 billion years)</td></tr>
+    <tr><td>5</td><td>Highest peak of Western Ghats</td><td><strong>Anaimudi</strong> (2695m, Kerala)</td></tr>
+    <tr><td>6</td><td>Western Ghats alternate name</td><td><strong>Sahyadri</strong></td></tr>
+    <tr><td>7</td><td>Highest peak of Eastern Ghats</td><td><strong>Jindhagada Peak</strong> (1690m)</td></tr>
+    <tr><td>8</td><td>Range dividing Europe and Asia</td><td><strong>Ural Mountains</strong></td></tr>
+    <tr><td>9</td><td>India's only active volcano</td><td><strong>Barren Island</strong> (Andaman)</td></tr>
+    <tr><td>10</td><td>Highest peak of Aravallis</td><td><strong>Guru Shikhar</strong> (1722m)</td></tr>
+    <tr><td>11</td><td>Himalayas formed by collision of</td><td><strong>Indian Plate + Eurasian Plate</strong></td></tr>
+    <tr><td>12</td><td>Highest peak outside Asia</td><td><strong>Aconcagua</strong> (6962m, Andes)</td></tr>
+    <tr><td>13</td><td>Highest in Western Europe</td><td><strong>Mont Blanc</strong> (4808m, Alps)</td></tr>
+    <tr><td>14</td><td>Highest peak of Satpura</td><td><strong>Dhupgarh</strong> (1350m)</td></tr>
+    <tr><td>15</td><td>Doon valleys are found in</td><td><strong>Shiwalik range</strong> (Outer Himalayas)</td></tr>
+  </table>
+</div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION: RIVERS
+════════════════════════════════════ -->
+<section id="s-rv" class="sec">
+<div class="hero">
+  <span class="hero-icon">💧</span>
+  <div class="hero-title">Rivers</div>
+  <div class="hero-sub">Indian Systems · World Rivers · Tributaries · Valley Significance</div>
+</div>
+<div class="tabs">
+  <button class="tb on" onclick="tab('rv','him',this)">🏔️ Himalayan</button>
+  <button class="tb" onclick="tab('rv','pen',this)">🌴 Peninsular</button>
+  <button class="tb" onclick="tab('rv','wrl',this)">🌍 World</button>
+  <button class="tb" onclick="tab('rv','rfacts',this)">⚡ Key Facts</button>
+</div>
+
+<!-- HIMALAYAN RIVERS -->
+<div id="rv-him" class="tp on">
+  <div class="hl inf"><span class="hl-icon">ℹ️</span><div><div class="hl-lbl">Overview</div>Himalayan rivers are <strong>perennial</strong> (flow year-round) — fed by both glacier meltwater AND monsoon rain. They are antecedent rivers — older than the mountains they cut through.</div></div>
+
+  <div class="sub-h">🌊 Indus River System</div>
+  <div class="card">
+    <div class="ct">Indus (Sindhu)</div>
+    <div class="stats">
+      <div class="sp"><div class="sv">3180km</div><div class="sl">Total Length</div></div>
+      <div class="sp"><div class="sv">1114km</div><div class="sl">In India</div></div>
+      <div class="sp"><div class="sv">Arabian Sea</div><div class="sl">Falls into</div></div>
+    </div>
+    <p><strong>Origin:</strong> Singi Khamban glacier near Mansarovar Lake, Tibet (at ~5180m)</p>
+    <p><strong>Flow:</strong> Tibet → enters India through Demchok (Ladakh) → flows west through J&K → enters Pakistan → Arabian Sea</p>
+    <div class="hl inf"><span class="hl-icon">💧</span><div><div class="hl-lbl">5 Rivers of Punjab</div>The five main tributaries of Indus in India: <strong>Jhelum, Chenab, Ravi, Beas, Sutlej</strong> — Mnemonic: "Jab Chup Raho Bahut Sukhi" = J-C-R-B-S</div></div>
+    <table class="tbl">
+      <tr><th>Tributary</th><th>Origin</th><th>Joins</th></tr>
+      <tr><td><strong>Jhelum</strong></td><td>Verinag spring, Kashmir</td><td>Chenab</td></tr>
+      <tr><td><strong>Chenab</strong></td><td>Bara Lacha La, Himachal Pradesh</td><td>Indus (Pakistan)</td></tr>
+      <tr><td><strong>Ravi</strong></td><td>Near Kullu, Himachal Pradesh</td><td>Chenab</td></tr>
+      <tr><td><strong>Beas</strong></td><td>Beas Kund, Rohtang Pass, HP</td><td>Sutlej</td></tr>
+      <tr><td><strong>Sutlej</strong></td><td>Rakas Lake (near Mansarovar), Tibet</td><td>Chenab</td></tr>
+    </table>
+  </div>
+
+  <div class="sub-h" style="margin-top:16px;">🙏 Ganga River System</div>
+  <div class="card">
+    <div class="ct">Ganga — India's National River</div>
+    <div class="stats">
+      <div class="sp"><div class="sv">2525km</div><div class="sl">Length in India</div></div>
+      <div class="sp"><div class="sv">Bay of Bengal</div><div class="sl">Falls into</div></div>
+      <div class="sp"><div class="sv">Sundarbans</div><div class="sl">Delta</div></div>
+    </div>
+    <p><strong>Origin:</strong> Gangotri Glacier at <em>Gomukh</em>, Uttarakhand (3892m)</p>
+    <p><strong>Devprayag:</strong> Bhagirathi + Alaknanda → Ganga begins here. <strong>Panch Prayag:</strong> Vishnu Prayag, Nanda Prayag, Karna Prayag, Rudra Prayag, Dev Prayag</p>
+    <div class="g2">
+      <div class="mc">
+        <div class="mc-t" style="color:#5ab4ff;">Left Bank (N) Tributaries</div>
+        <div class="mc-d">From Himalayas: Ramganga, Ghaghra, Gandak, Kosi, Mahananda</div>
+      </div>
+      <div class="mc">
+        <div class="mc-t" style="color:#4ee688;">Right Bank (S) Tributaries</div>
+        <div class="mc-d">From Plateau: Yamuna, Son, Damodar, Rupnarayan</div>
+      </div>
+    </div>
+    <div class="hl mem"><span class="hl-icon">🧠</span><div><div class="hl-lbl">Memory Trick — Left Bank Tributaries</div>"<strong>R</strong>eal <strong>G</strong>ood <strong>G</strong>anges <strong>K</strong>eeps <strong>M</strong>oving" = Ramganga, Ghaghra, Gandak, Kosi, Mahananda</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ct">Yamuna — Ganga's Largest Tributary</div>
+    <div class="stats">
+      <div class="sp"><div class="sv">1376km</div><div class="sl">Length</div></div>
+      <div class="sp"><div class="sv">Prayagraj</div><div class="sl">Joins Ganga</div></div>
+    </div>
+    <p><strong>Origin:</strong> Yamunotri Glacier, Uttarakhand. Joins Ganga at Prayagraj (Triveni Sangam).</p>
+    <p><strong>Right bank tributaries:</strong> <span class="rb t">Chambal</span> <span class="rb t">Betwa</span> <span class="rb t">Ken</span> <span class="rb t">Sind</span></p>
+    <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div>Chambal → Yamuna → Ganga. Chambal is the tributary of Yamuna, NOT Ganga directly. Very frequently tested!</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ct">Kosi — "Sorrow of Bihar"</div>
+    <p>Called <strong>"Sorrow of Bihar"</strong> because it frequently changes its course (shifted ~120 km westward in 200 years), causing massive floods. Carries huge sediment load from Nepal Himalayas.</p>
+  </div>
+
+  <div class="sub-h" style="margin-top:16px;">🌊 Brahmaputra River System</div>
+  <div class="card">
+    <div class="ct">Brahmaputra — The Mighty River</div>
+    <div class="stats">
+      <div class="sp"><div class="sv">2900km</div><div class="sl">Total</div></div>
+      <div class="sp"><div class="sv">916km</div><div class="sl">In India</div></div>
+      <div class="sp"><div class="sv">3 Names</div><div class="sl">Tsangpo/Siang/Brahmaputra</div></div>
+    </div>
+    <p><strong>Tibet:</strong> Called <em>Tsangpo</em> — flows eastward. <strong>Arunachal Pradesh:</strong> Called <em>Dihang/Siang</em>. <strong>Assam:</strong> Called <em>Brahmaputra</em> — wide braided channel.</p>
+    <div class="hl key"><span class="hl-icon">⭐</span><div><div class="hl-lbl">Key Facts</div><strong>Majuli Island</strong> (Brahmaputra, Assam) = World's largest river island. In Bangladesh, called Jamuna → merges with Ganga (Padma) → forms Meghna → Bay of Bengal.</div></div>
+  </div>
+</div>
+
+<!-- PENINSULAR RIVERS -->
+<div id="rv-pen" class="tp">
+  <div class="hl inf"><span class="hl-icon">ℹ️</span><div><div class="hl-lbl">Overview</div>Peninsular rivers are <strong>seasonal</strong> (rain-fed). Most flow eastward into Bay of Bengal. Narmada & Tapti are exceptions — flow west into Arabian Sea.</div></div>
+
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 Narmada — Flows West in a Rift Valley <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="stats"><div class="sp"><div class="sv">1312km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">Amarkantak</div><div class="sl">Origin (MP)</div></div><div class="sp"><div class="sv">Arabian Sea</div><div class="sl">Falls into</div></div></div>
+      <p>Flows through a <strong>rift valley</strong> (tectonic graben) between Vindhyas (north) and Satpura (south). Falls into Gulf of Khambhat. <strong>Sardar Sarovar Dam</strong> is on Narmada.</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div>Narmada flows WEST — unlike most peninsular rivers. It flows through a rift valley, not an erosional valley.</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🙏 Godavari — Dakshin Ganga (Longest Peninsular) <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="stats"><div class="sp"><div class="sv">1465km</div><div class="sl">Length (longest peninsular)</div></div><div class="sp"><div class="sv">Nashik, MH</div><div class="sl">Origin</div></div><div class="sp"><div class="sv">Bay of Bengal</div><div class="sl">Falls into</div></div></div>
+      <p>Called <strong>"Dakshin Ganga"</strong>. Flows through Maharashtra, Telangana, Andhra Pradesh.</p>
+      <p><strong>Major Tributaries:</strong> <span class="rb t">Pravara</span> <span class="rb t">Purna</span> <span class="rb t">Manjira</span> <span class="rb t">Pranhita</span> <span class="rb t">Indravati</span> <span class="rb t">Sabari</span></p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Godavari = longest peninsular river (1465 km). Krishna = second (1400 km). Kaveri = ~805 km.</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 Krishna — Second Longest Peninsular River <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="stats"><div class="sp"><div class="sv">1400km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">Mahabaleshwar</div><div class="sl">Origin</div></div></div>
+      <p>Origin: Near Mahabaleshwar, Western Ghats. Flows through Maharashtra, Karnataka, Andhra Pradesh → Bay of Bengal.</p>
+      <p>Major tributaries: <span class="rb t">Bhima</span> <span class="rb t">Tungabhadra</span> <span class="rb t">Koyna</span> <span class="rb t">Musi</span></p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 Kaveri — Ganga of South India <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="stats"><div class="sp"><div class="sv">805km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">Brahmagiri, Coorg</div><div class="sl">Origin</div></div></div>
+      <p>Flows through Karnataka and Tamil Nadu → Bay of Bengal. <strong>Shivasamudram Falls</strong> on Kaveri (Karnataka). Inter-state water dispute between Karnataka and Tamil Nadu.</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 Mahanadi — River of Odisha <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="stats"><div class="sp"><div class="sv">858km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">Sihawa, CG</div><div class="sl">Origin</div></div></div>
+      <p>Flows through Chhattisgarh and Odisha → Bay of Bengal. <strong>Hirakud Dam</strong> — one of India's longest dams (26 km).</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">Quick Comparison — Peninsular Rivers</div>
+    <table class="tbl">
+      <tr><th>River</th><th>Origin</th><th>Length</th><th>Falls into</th></tr>
+      <tr><td><strong>Godavari</strong></td><td>Nashik, MH</td><td>1465 km</td><td>Bay of Bengal</td></tr>
+      <tr><td><strong>Krishna</strong></td><td>Mahabaleshwar, MH</td><td>1400 km</td><td>Bay of Bengal</td></tr>
+      <tr><td><strong>Mahanadi</strong></td><td>Sihawa, CG</td><td>858 km</td><td>Bay of Bengal</td></tr>
+      <tr><td><strong>Kaveri</strong></td><td>Coorg, KA</td><td>805 km</td><td>Bay of Bengal</td></tr>
+      <tr><td><strong>Narmada</strong></td><td>Amarkantak, MP</td><td>1312 km</td><td>Arabian Sea ⬅️</td></tr>
+      <tr><td><strong>Tapti</strong></td><td>Betul, MP</td><td>724 km</td><td>Arabian Sea ⬅️</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- WORLD RIVERS -->
+<div id="rv-wrl" class="tp">
+  <div class="sub-h">🌍 Major Rivers of the World</div>
+  <div class="rc c1">
+    <div class="rc-h"><div class="rc-num">🌊</div><div><strong>Nile</strong> — World's Longest River</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">6650km</div><div class="sl">Length (longest)</div></div><div class="sp"><div class="sv">Mediterranean</div><div class="sl">Falls into</div></div></div>
+      <p>Flows <strong>northward</strong> through 11 countries. <strong>White Nile</strong> (Uganda) and <strong>Blue Nile</strong> (Ethiopia) are its two main tributaries.</p>
+    </div>
+  </div>
+  <div class="rc c2">
+    <div class="rc-h"><div class="rc-num">🌊</div><div><strong>Amazon</strong> — World's Largest by Volume</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">6400km</div><div class="sl">Length (2nd)</div></div><div class="sp"><div class="sv">20%</div><div class="sl">World's Freshwater</div></div></div>
+      <p>Flows through <strong>South America</strong> → Atlantic Ocean. Discharges more water than the next 7 largest rivers combined.</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div>Nile = LONGEST river. Amazon = LARGEST (by volume/discharge). Both are frequently tested in comparative questions!</div></div>
+    </div>
+  </div>
+  <div class="rc c3">
+    <div class="rc-h"><div class="rc-num">🌊</div><div><strong>Yangtze</strong> — Asia's Longest River</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">6300km</div><div class="sl">Length (3rd)</div></div><div class="sp"><div class="sv">China</div><div class="sl">Country</div></div></div>
+      <p>Flows through China into East China Sea. <strong>Three Gorges Dam</strong> (world's largest hydroelectric station) is built on Yangtze.</p>
+    </div>
+  </div>
+  <div class="rc c4">
+    <div class="rc-h"><div class="rc-num">🌊</div><div><strong>Congo</strong> — World's Deepest River</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">4700km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">220m</div><div class="sl">Max Depth</div></div></div>
+      <p>Located in <strong>Central Africa</strong>. World's deepest river and second largest by discharge. Crosses the equator TWICE.</p>
+    </div>
+  </div>
+  <div class="rc c5">
+    <div class="rc-h"><div class="rc-num">🌊</div><div><strong>Volga</strong> — Europe's Longest River</div></div>
+    <div class="rc-b">
+      <div class="stats"><div class="sp"><div class="sv">3530km</div><div class="sl">Length</div></div><div class="sp"><div class="sv">Caspian Sea</div><div class="sl">Falls into</div></div></div>
+      <p>Located in <strong>Russia</strong>. Longest river in Europe. Drains into the <strong>Caspian Sea</strong> (landlocked).</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">Important River Records</div>
+    <table class="tbl">
+      <tr><th>Record</th><th>River</th><th>Details</th></tr>
+      <tr><td>Longest</td><td><strong>Nile</strong></td><td>6650 km, Africa → Mediterranean</td></tr>
+      <tr><td>Largest (Volume)</td><td><strong>Amazon</strong></td><td>6400 km, S.America → Atlantic</td></tr>
+      <tr><td>Deepest</td><td><strong>Congo</strong></td><td>220m depth, Africa → Atlantic</td></tr>
+      <tr><td>Europe's Longest</td><td><strong>Volga</strong></td><td>3530 km → Caspian Sea</td></tr>
+      <tr><td>Asia's Longest</td><td><strong>Yangtze</strong></td><td>6300 km, China → E China Sea</td></tr>
+      <tr><td>India's Longest (overall)</td><td><strong>Ganga</strong></td><td>2525 km in India</td></tr>
+      <tr><td>Longest Peninsular</td><td><strong>Godavari</strong></td><td>1465 km → Bay of Bengal</td></tr>
+      <tr><td>Largest Delta</td><td><strong>Ganga-Brahmaputra</strong></td><td>Sundarbans (~80,000 sq km)</td></tr>
+      <tr><td>Largest River Island</td><td><strong>Brahmaputra</strong></td><td>Majuli Island, Assam</td></tr>
+      <tr><td>Passes through most countries</td><td><strong>Danube</strong></td><td>10 countries in Europe</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- RIVER FACTS -->
+<div id="rv-rfacts" class="tp">
+  <div class="sub-h">⚡ High-Frequency SSC Facts — Rivers</div>
+  <table class="tbl">
+    <tr><th>#</th><th>Question</th><th>Answer</th></tr>
+    <tr><td>1</td><td>Origin of Ganga</td><td><strong>Gangotri Glacier (Gomukh)</strong>, Uttarakhand</td></tr>
+    <tr><td>2</td><td>Brahmaputra in Tibet</td><td><strong>Tsangpo</strong></td></tr>
+    <tr><td>3</td><td>Brahmaputra in Arunachal Pradesh</td><td><strong>Dihang / Siang</strong></td></tr>
+    <tr><td>4</td><td>Dakshin Ganga</td><td><strong>Godavari</strong></td></tr>
+    <tr><td>5</td><td>Sorrow of Bihar</td><td><strong>Kosi</strong></td></tr>
+    <tr><td>6</td><td>Sorrow of Bengal</td><td><strong>Damodar</strong></td></tr>
+    <tr><td>7</td><td>Chambal is tributary of</td><td><strong>Yamuna</strong></td></tr>
+    <tr><td>8</td><td>Tista is tributary of</td><td><strong>Brahmaputra</strong></td></tr>
+    <tr><td>9</td><td>Narmada falls into</td><td><strong>Arabian Sea</strong> (not Bay of Bengal)</td></tr>
+    <tr><td>10</td><td>World's largest delta</td><td><strong>Ganga-Brahmaputra</strong> (Sundarbans)</td></tr>
+    <tr><td>11</td><td>World's largest river island</td><td><strong>Majuli</strong> (Brahmaputra, Assam)</td></tr>
+    <tr><td>12</td><td>Hirakud Dam is on</td><td><strong>Mahanadi</strong></td></tr>
+    <tr><td>13</td><td>Triveni Sangam at Prayagraj</td><td><strong>Ganga + Yamuna + Saraswati (mythical)</strong></td></tr>
+    <tr><td>14</td><td>World's longest river</td><td><strong>Nile</strong> (6650 km)</td></tr>
+    <tr><td>15</td><td>World's largest river by volume</td><td><strong>Amazon</strong></td></tr>
+    <tr><td>16</td><td>World's deepest river</td><td><strong>Congo</strong></td></tr>
+    <tr><td>17</td><td>Europe's longest river</td><td><strong>Volga</strong> (drains into Caspian Sea)</td></tr>
+    <tr><td>18</td><td>Godavari originates from</td><td><strong>Brahmagiri hills, Nashik</strong> (Maharashtra)</td></tr>
+    <tr><td>19</td><td>Kaveri dispute between</td><td><strong>Karnataka & Tamil Nadu</strong></td></tr>
+    <tr><td>20</td><td>River that passes through most countries</td><td><strong>Danube</strong> (10 countries)</td></tr>
+  </table>
+</div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION: CLIMATE
+════════════════════════════════════ -->
+<section id="s-cl" class="sec">
+<div class="hero">
+  <span class="hero-icon">🌤️</span>
+  <div class="hero-title">Climate</div>
+  <div class="hero-sub">Factors · Indian Monsoon · Global Zones · India's Climate</div>
+</div>
+<div class="tabs">
+  <button class="tb on" onclick="tab('cl','fac',this)">⚙️ Factors</button>
+  <button class="tb" onclick="tab('cl','mon',this)">🌧️ Monsoon</button>
+  <button class="tb" onclick="tab('cl','zon',this)">🌍 Global Zones</button>
+  <button class="tb" onclick="tab('cl','ind',this)">🇮🇳 India's Climate</button>
+</div>
+
+<!-- FACTORS -->
+<div id="cl-fac" class="tp on">
+  <div class="sub-h">⚙️ Factors Affecting Climate</div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌐 1. Latitude — Distance from Equator <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Temperature <strong>decreases from the equator to the poles</strong>. Near the equator, sunlight strikes at a right angle (concentrated energy). At poles, sunlight is spread over wider areas = less energy per unit area.</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">⛰️ 2. Altitude — Height above Sea Level <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Temperature <strong>decreases with altitude</strong> at ~<em>6.5°C per 1000 meters</em> (Normal Lapse Rate). Higher locations are cooler because the atmosphere is thinner.</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div>Normal Lapse Rate = <strong>6.5°C per 1000m</strong>. This rate is frequently asked in numerical form.</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 3. Distance from the Sea — Continentality <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Areas near the sea = <strong>maritime climate</strong> — moderate temperatures. Areas far inland = <strong>continental climate</strong> — extreme temperatures, less rainfall.</p>
+      <p>Example: Mumbai (coastal) vs Delhi (inland) — Delhi has much more extreme temperatures.</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">💨 4. Prevailing Winds — Moisture Carriers <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Onshore winds</strong> (sea to land) = more rainfall. <strong>Offshore winds</strong> (land to sea) = dry. India's SW monsoon winds are onshore — from the Indian Ocean to the landmass.</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 5. Ocean Currents — Temperature Modifier <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <table class="tbl">
+        <tr><th>Current</th><th>Type</th><th>Effect</th></tr>
+        <tr><td>North Atlantic Drift</td><td>Warm</td><td>Keeps Western Europe mild</td></tr>
+        <tr><td>Gulf Stream</td><td>Warm</td><td>Moderates eastern USA/Canada</td></tr>
+        <tr><td>Humboldt (Peru)</td><td>Cold</td><td>Causes Atacama Desert</td></tr>
+        <tr><td>Labrador</td><td>Cold</td><td>Cools NE Canada, causes fogs</td></tr>
+        <tr><td>Benguela</td><td>Cold</td><td>Causes Namib Desert</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">⛰️ 6. Relief — Orographic Rain & Rain Shadow <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Mountains force air to rise → cools → condenses → <strong>heavy rainfall on windward side</strong>. Opposite (leeward) side receives little rain = <strong>rain shadow</strong>.</p>
+      <p>Example: Western Ghats windward side (Kerala) = very heavy rain; leeward side (Deccan Plateau) = drier. Cherrapunji/Mawsynram = world's wettest places.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">Key Climate Factors — Quick Reference</div>
+    <table class="tbl">
+      <tr><th>Factor</th><th>Effect on Temperature</th><th>Effect on Rainfall</th></tr>
+      <tr><td>⬆️ Latitude</td><td>Equator hot → Poles cold</td><td>Equator high → Poles low</td></tr>
+      <tr><td>⬆️ Altitude</td><td>Decreases (6.5°C/1000m)</td><td>Increases (to a point)</td></tr>
+      <tr><td>Distance from Sea</td><td>Extremes inland, moderate coastal</td><td>More near coast</td></tr>
+      <tr><td>Onshore Winds</td><td>Moderate</td><td>Increase</td></tr>
+      <tr><td>Warm Currents</td><td>Increase</td><td>Increase</td></tr>
+      <tr><td>Cold Currents</td><td>Decrease</td><td>Decrease</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- MONSOON -->
+<div id="cl-mon" class="tp">
+  <div class="sub-h">🌧️ The Indian Monsoon System</div>
+  <div class="hl key"><span class="hl-icon">⭐</span><div><div class="hl-lbl">Key Fact</div>India receives about <strong>75–90%</strong> of its annual rainfall from the SW Monsoon (June–September). The monsoon is the lifeline of India's agriculture.</div></div>
+
+  <div class="card">
+    <div class="ct">Southwest Monsoon (June — September)</div>
+    <p><strong>Mechanism:</strong> During summer, land heats faster than sea → low pressure over Indian subcontinent → high pressure over Indian Ocean → moist winds blow from sea to land (SW direction).</p>
+    <div class="g2">
+      <div class="mc" style="border-color:rgba(90,180,255,.35);">
+        <span class="mc-icon">🌊</span>
+        <div class="mc-t" style="color:#5ab4ff;">Arabian Sea Branch</div>
+        <div class="mc-d">Hits Kerala (June 1), Karnataka, Goa, Mumbai; Western Ghats deflects it northward</div>
+      </div>
+      <div class="mc" style="border-color:rgba(78,230,136,.35);">
+        <span class="mc-icon">🌿</span>
+        <div class="mc-t" style="color:#4ee688;">Bay of Bengal Branch</div>
+        <div class="mc-d">Enters NE India, Assam; spreads westward along Gangetic plains</div>
+      </div>
+    </div>
+    <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>SW Monsoon arrives in Kerala around <strong>June 1</strong>. This date is the most tested monsoon fact.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="ct">Retreating / Northeast Monsoon (Oct — Dec)</div>
+    <p>SW Monsoon withdraws from northwest India in September. As it retreats, picks up moisture over Bay of Bengal → gives rainfall to <strong>Tamil Nadu, Andhra Pradesh coast</strong>.</p>
+    <p><strong>Chennai</strong> receives most of its annual rainfall from the NE monsoon, NOT the SW monsoon.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct">Western Disturbances</div>
+    <p>Extra-tropical cyclones from the Mediterranean Sea, bringing <strong>winter rainfall (December–February)</strong> to northwestern India. Critical for <strong>Rabi crops</strong> (wheat, mustard).</p>
+  </div>
+
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 El Niño & La Niña — Climate Disruptors <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="g2">
+        <div class="mc" style="border-color:rgba(255,107,107,.3);">
+          <span class="mc-icon">🔥</span>
+          <div class="mc-t" style="color:#ff6b6b;">El Niño</div>
+          <div class="mc-d">Anomalous WARMING of eastern Pacific → weakens SW monsoon → drought risk in India</div>
+        </div>
+        <div class="mc" style="border-color:rgba(90,180,255,.3);">
+          <span class="mc-icon">❄️</span>
+          <div class="mc-t" style="color:#5ab4ff;">La Niña</div>
+          <div class="mc-d">Anomalous COOLING of eastern Pacific → strengthens monsoon → excess rainfall / flood risk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">Monsoon Calendar</div>
+    <table class="tbl">
+      <tr><th>Month</th><th>Event</th></tr>
+      <tr><td><strong>June 1</strong></td><td>SW Monsoon arrives in Kerala (burst)</td></tr>
+      <tr><td><strong>June–July</strong></td><td>Spreads over entire India (by ~July 15)</td></tr>
+      <tr><td><strong>July–August</strong></td><td>Peak monsoon; highest rainfall</td></tr>
+      <tr><td><strong>September</strong></td><td>Withdrawal begins from northwest</td></tr>
+      <tr><td><strong>Oct–Nov</strong></td><td>NE Monsoon — Tamil Nadu coast</td></tr>
+      <tr><td><strong>Dec–Feb</strong></td><td>Western Disturbances — NW India</td></tr>
+      <tr><td><strong>March–May</strong></td><td>Pre-monsoon thunderstorms (Nor'westers/Kalbaishakhi)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- GLOBAL ZONES -->
+<div id="cl-zon" class="tp">
+  <div class="sub-h">🌍 Global Climatic Zones (Köppen Classification)</div>
+  <div class="card">
+    <div class="cz-row" style="background:rgba(0,150,50,.1);">
+      <div class="cz-dot" style="background:#00aa44;"></div>
+      <div class="cz-name" style="color:#00cc55;">A — Tropical</div>
+      <div><div class="cz-desc">High temperatures all year (&gt;18°C every month); high rainfall</div><div class="cz-ex">Af=Rainforest, Am=Monsoon, Aw=Savanna | Amazon, Congo Basin, India's west coast</div></div>
+    </div>
+    <div class="cz-row" style="background:rgba(220,160,0,.1);">
+      <div class="cz-dot" style="background:#ddaa00;"></div>
+      <div class="cz-name" style="color:#f2b731;">B — Arid/Dry</div>
+      <div><div class="cz-desc">Evaporation &gt; precipitation; semi-arid steppes or deserts</div><div class="cz-ex">BWh=Hot desert (Sahara, Thar), BWk=Cold desert (Gobi, Ladakh), BS=Steppe</div></div>
+    </div>
+    <div class="cz-row" style="background:rgba(0,150,200,.1);">
+      <div class="cz-dot" style="background:#0088cc;"></div>
+      <div class="cz-name" style="color:#5ab4ff;">C — Temperate</div>
+      <div><div class="cz-desc">Mild winters (coldest month 0–18°C); moderate rainfall</div><div class="cz-ex">Cs=Mediterranean, Cf=Humid subtropical, Cw=Monsoon temperate</div></div>
+    </div>
+    <div class="cz-row" style="background:rgba(150,50,200,.1);">
+      <div class="cz-dot" style="background:#9933cc;"></div>
+      <div class="cz-name" style="color:#c586ff;">D — Continental</div>
+      <div><div class="cz-desc">Cold winters (&lt;0°C); large temperature range; continental interiors</div><div class="cz-ex">Russia, Canada, Central Europe; Taiga forests; snowfall</div></div>
+    </div>
+    <div class="cz-row" style="background:rgba(100,200,255,.1);">
+      <div class="cz-dot" style="background:#44ccff;"></div>
+      <div class="cz-name" style="color:#00d9bc;">E — Polar</div>
+      <div><div class="cz-desc">Very cold all year; ET=Tundra, EF=Ice Cap</div><div class="cz-ex">Arctic coast, Greenland, Antarctica; treeless landscapes</div></div>
+    </div>
+    <div class="cz-row">
+      <div class="cz-dot" style="background:#888;"></div>
+      <div class="cz-name" style="color:#aaa;">H — Highland</div>
+      <div><div class="cz-desc">Mountain regions; climate varies rapidly with altitude</div><div class="cz-ex">Himalayas, Tibetan Plateau, Andes; alpine meadows</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">☀️ Mediterranean Climate (Cs) — Summer Drought <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> 30°–45° latitude on WESTERN coasts — California, Spain/Portugal, Mediterranean basin, Chile, South Africa's Cape, SW Australia.</p>
+      <p><strong>Characteristics:</strong> <strong>Hot, dry summers</strong> and <strong>mild, wet winters</strong>. Vegetation: Scrub forests (Maquis/Chaparral).</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div>Mediterranean climate = <strong>Dry summer, Wet winter</strong>. This reversal is the defining characteristic frequently asked in exams.</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🏜️ Hot Desert Climate (BWh) <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> 20°–35° latitude — Sahara, Arabian, Thar, Atacama, Australian deserts.</p>
+      <p><strong>Atacama</strong> (Chile) caused by Humboldt cold current; <strong>Namib</strong> (Africa) by Benguela cold current.</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌲 Tundra Climate (ET) — The Frozen Fringe <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> North of 60°N — Arctic coast of Russia, Canada, Alaska. Permafrost; very short growing season; mosses, lichens, dwarf shrubs only.</p>
+    </div>
+  </div>
+</div>
+
+<!-- INDIA'S CLIMATE -->
+<div id="cl-ind" class="tp">
+  <div class="sub-h">🇮🇳 Climate of India</div>
+  <div class="hl inf"><span class="hl-icon">🇮🇳</span><div><div class="hl-lbl">Classification</div>India's climate is classified as <strong>Tropical Monsoon Climate</strong> (Koppen: Amw). Characterized by distinct seasons and seasonal reversal of winds.</div></div>
+  <div class="card">
+    <div class="ct">India's Four Climate Seasons</div>
+    <table class="tbl">
+      <tr><th>Season</th><th>Months</th><th>Features</th></tr>
+      <tr><td><strong>Winter</strong></td><td>Dec – Feb</td><td>NW India very cold; Western Disturbances; NE trade winds dominate</td></tr>
+      <tr><td><strong>Pre-Monsoon/Summer</strong></td><td>Mar – May</td><td>Very hot; "Loo" (hot dry winds) in North India</td></tr>
+      <tr><td><strong>SW Monsoon</strong></td><td>Jun – Sep</td><td>75–90% of India's rainfall; high humidity</td></tr>
+      <tr><td><strong>Retreating Monsoon</strong></td><td>Oct – Nov</td><td>Withdrawal of SW monsoon; NE monsoon gives rain to SE India</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct">Regional Climate Variations</div>
+    <table class="tbl">
+      <tr><th>Region</th><th>Type</th><th>Key Facts</th></tr>
+      <tr><td>Western Himalayas</td><td>Alpine</td><td>Cold winters, snowfall, cool summers</td></tr>
+      <tr><td>NE India (Assam)</td><td>Tropical Monsoon</td><td>Very high rainfall; Mawsynram/Cherrapunji</td></tr>
+      <tr><td>Western Ghats (windward)</td><td>Tropical Wet</td><td>Very high rainfall (Kerala 300cm+)</td></tr>
+      <tr><td>Deccan Plateau</td><td>Semi-arid</td><td>Rain shadow; 50–100cm</td></tr>
+      <tr><td>Thar Desert, Rajasthan</td><td>Hot Desert</td><td>Extreme heat; &lt;25cm rainfall</td></tr>
+      <tr><td>Coastal Tamil Nadu</td><td>NE monsoon</td><td>Rain in Oct–Dec</td></tr>
+      <tr><td>Ladakh</td><td>Cold Desert</td><td>Extreme cold; very dry</td></tr>
+    </table>
+  </div>
+  <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div><strong>Mawsynram</strong> (Meghalaya) = wettest place in the world. <strong>Leh</strong> (Ladakh) = among the driest in India. Chennai gets most rain from <strong>NE monsoon</strong>.</div></div>
+</div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION: INDIA GEOGRAPHY
+════════════════════════════════════ -->
+<section id="s-in" class="sec">
+<div class="hero">
+  <span class="hero-icon">🗺️</span>
+  <div class="hero-title">India Geography</div>
+  <div class="hero-sub">Physiography · Soils · Vegetation · Lakes · Passes</div>
+</div>
+<div class="tabs">
+  <button class="tb on" onclick="tab('in','phy',this)">🗺️ Physiography</button>
+  <button class="tb" onclick="tab('in','soil',this)">🌱 Soils</button>
+  <button class="tb" onclick="tab('in','veg',this)">🌿 Vegetation</button>
+  <button class="tb" onclick="tab('in','lake',this)">💎 Lakes & Passes</button>
+  <button class="tb" onclick="tab('in','haz',this)">⚠️ Hazards</button>
+</div>
+
+<!-- PHYSIOGRAPHY -->
+<div id="in-phy" class="tp on">
+  <div class="sub-h">🗺️ Seven Physiographic Divisions of India</div>
+  <div class="hl key"><span class="hl-icon">⭐</span><div><div class="hl-lbl">Key Fact</div>India is divided into <strong>7 major physiographic divisions</strong>. This is a standard classification tested in SSC CGL, CHSL, MTS, and IB ACIO exams.</div></div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">1️⃣ The Himalayan Mountains <span class="arr">▼</span></div>
+    <div class="acc-b"><p>Cover northern India; young fold mountains (~50 Ma). Three parallel ranges: Himadri, Himachal, Shiwalik. Source of most major Himalayan rivers. Act as a climate barrier against cold Central Asian winds.</p></div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">2️⃣ The Northern Plains (Indo-Gangetic Plain) <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p>Formed by alluvial deposits of Himalayan rivers. Stretches ~3200 km west to east. <strong>Most densely populated region</strong> in India. Extremely fertile.</p>
+      <p>Types of alluvial soil: <strong>Khadar</strong> (new, fertile, near river) and <strong>Bhangar</strong> (old, higher ground, contains nodules called "Kankar").</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">3️⃣ The Peninsular Plateau <span class="arr">▼</span></div>
+    <div class="acc-b"><p>Triangular tableland made of ancient crystalline rocks. Includes <strong>Deccan Plateau</strong>, <strong>Central Highlands</strong>. One of the world's oldest and most stable landmasses. Rich in minerals (iron ore, coal, manganese, bauxite).</p></div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">4️⃣ The Indian Desert (Thar) <span class="arr">▼</span></div>
+    <div class="acc-b"><p>Located mainly in <strong>Rajasthan</strong>. World's 7th largest hot desert. Low rainfall (&lt;25cm/year). Luni River drains into Rann of Kutch.</p></div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">5️⃣ The Coastal Plains <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="g2">
+        <div class="mc"><div class="mc-t" style="color:#5ab4ff;">Western Coastal Plain</div><div class="mc-d">Narrow (50–80km); Gujarat to Kerala; ports: Mumbai, Goa, Mangaluru, Kochi</div></div>
+        <div class="mc"><div class="mc-t" style="color:#4ee688;">Eastern Coastal Plain</div><div class="mc-d">Wider (100–130km); WB to TN; Coromandel coast; Chilika Lake, Pulicat Lake</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">6️⃣ The Islands <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <div class="g2">
+        <div class="mc"><div class="mc-t" style="color:#ff9f43;">Andaman & Nicobar</div><div class="mc-d">Bay of Bengal; ~572 islands; capital: Port Blair; India's only active volcano (Barren Island)</div></div>
+        <div class="mc"><div class="mc-t" style="color:#c586ff;">Lakshadweep</div><div class="mc-d">Arabian Sea; 36 islands (10 inhabited); coral atolls; smallest UT; capital: Kavaratti</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">7️⃣ The Northeastern Hills (Purvanchal) <span class="arr">▼</span></div>
+    <div class="acc-b"><p>Eastern extensions of Himalayas — Patkai Hills, Naga Hills, Manipur Hills, Mizo Hills (Lushai). Form border with Myanmar. Dense forests; high rainfall; biodiversity hotspot.</p></div>
+  </div>
+</div>
+
+<!-- SOILS -->
+<div id="in-soil" class="tp">
+  <div class="sub-h">🌱 Soils of India</div>
+  <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Alluvial soil = most widespread. Black soil = best for cotton. Laterite soil = formed by leaching. Red soil colour = iron oxide. All are high-frequency exam topics.</div></div>
+  <div class="g2">
+    <div class="mc" style="border-color:rgba(90,180,255,.35);"><span class="mc-icon">💧</span><div class="mc-t" style="color:#5ab4ff;">1. Alluvial Soil</div><div class="mc-d"><strong>Most widespread</strong>; Indo-Gangetic plains; very fertile; paddy, wheat, sugarcane</div></div>
+    <div class="mc" style="border-color:rgba(50,50,50,.6);background:rgba(30,30,30,.5);"><span class="mc-icon">⚫</span><div class="mc-t" style="color:#aaa;">2. Black Soil (Regur)</div><div class="mc-d">Maharashtra, MP, Gujarat; <strong>best for cotton</strong>; retains moisture; from Deccan Trap volcanic rock</div></div>
+    <div class="mc" style="border-color:rgba(200,80,50,.35);"><span class="mc-icon">🔴</span><div class="mc-t" style="color:#ff8066;">3. Red & Yellow Soil</div><div class="mc-d">TN, Karnataka, Odisha, AP; red = iron oxide; less fertile; millets, groundnut</div></div>
+    <div class="mc" style="border-color:rgba(220,150,50,.35);"><span class="mc-icon">🟤</span><div class="mc-t" style="color:#f0a050;">4. Laterite Soil</div><div class="mc-d">Kerala, Karnataka, NE hills; formed by <strong>leaching</strong>; tea, coffee, rubber; acidic</div></div>
+    <div class="mc" style="border-color:rgba(240,200,120,.35);"><span class="mc-icon">🏜️</span><div class="mc-t" style="color:#f2d080;">5. Arid / Desert Soil</div><div class="mc-d">Rajasthan, Gujarat; low organic content; sandy; very low water retention</div></div>
+    <div class="mc" style="border-color:rgba(150,200,150,.35);"><span class="mc-icon">🌿</span><div class="mc-t" style="color:#80cc80;">6. Forest & Mountain Soil</div><div class="mc-d">Himalayan slopes; acidic; porous; suitable for tea (Darjeeling, Assam)</div></div>
+  </div>
+  <div class="card">
+    <div class="ct">Soil-Crop Quick Reference</div>
+    <table class="tbl">
+      <tr><th>Soil Type</th><th>Best Crops</th><th>States</th></tr>
+      <tr><td>Alluvial</td><td>Wheat, Paddy, Sugarcane, Jute</td><td>UP, Bihar, Punjab, Haryana, WB</td></tr>
+      <tr><td>Black (Regur)</td><td>Cotton, Soybean, Jowar, Linseed</td><td>MH, MP, Gujarat, AP</td></tr>
+      <tr><td>Red</td><td>Millets, Groundnut, Tobacco</td><td>TN, Karnataka, AP, Odisha</td></tr>
+      <tr><td>Laterite</td><td>Tea, Coffee, Rubber, Coconut</td><td>Kerala, Karnataka, Assam</td></tr>
+      <tr><td>Arid</td><td>Bajra, Moth bean, drought crops</td><td>Rajasthan, Gujarat</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- VEGETATION -->
+<div id="in-veg" class="tp">
+  <div class="sub-h">🌿 Natural Vegetation of India</div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌳 1. Tropical Evergreen Forest <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> Western Ghats (Kerala, Karnataka), NE India, Andaman & Nicobar Islands</p>
+      <p><strong>Rainfall required:</strong> More than 200 cm per year, evenly distributed</p>
+      <p><strong>Key trees:</strong> Ebony, Rosewood, Mahogany, Rubber, Cinchona</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌿 2. Tropical Deciduous Forest (Monsoon) <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> Most of peninsular India; <strong>Rainfall:</strong> 75–200 cm</p>
+      <p><strong>Key trees:</strong> Teak (most commercially valuable), Sal, Bamboo, Sandalwood, Neem, Shisham</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div><strong>Teak</strong> = India's most commercially important timber. <strong>Sandalwood</strong> (Karnataka) = most valuable for export.</div></div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌵 3. Tropical Thorny / Scrub Forest <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> Rajasthan, Haryana, semi-arid parts of MP, UP, Gujarat. <strong>Rainfall:</strong> Less than 75 cm</p>
+      <p><strong>Key trees:</strong> Acacia (babul), Euphorbias, Khejri (State tree of Rajasthan), Dhak, Cactus</p>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🏔️ 4. Montane / Alpine Forest — Altitude Zones <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <table class="tbl">
+        <tr><th>Zone</th><th>Altitude</th><th>Vegetation</th></tr>
+        <tr><td>Subtropical</td><td>Up to 1000m</td><td>Sal, Teak, Bamboo</td></tr>
+        <tr><td>Temperate</td><td>1000–2000m</td><td>Oak, Rhododendron, Deodar</td></tr>
+        <tr><td>Sub-Alpine</td><td>2000–3500m</td><td>Pine, Fir, Spruce, Silver fir</td></tr>
+        <tr><td>Alpine</td><td>3500–4500m</td><td>Dwarf willows, mosses, lichens</td></tr>
+        <tr><td>Snow Line</td><td>Above 4500m</td><td>No vegetation</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acc-h" onclick="acc(this)">🌊 5. Mangrove / Tidal Forest <span class="arr">▼</span></div>
+    <div class="acc-b">
+      <p><strong>Location:</strong> Sundarbans (WB/Bangladesh), Bhitarkanika (Odisha), Pichavaram (TN)</p>
+      <p><strong>Sundarbans:</strong> World's largest mangrove forest; UNESCO World Heritage Site; home to Royal Bengal Tiger</p>
+      <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC Tip</div>Sundarbans = World's largest mangrove forest + UNESCO World Heritage Site + Royal Bengal Tiger habitat.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- LAKES & PASSES -->
+<div id="in-lake" class="tp">
+  <div class="sub-h">💧 Important Lakes of India</div>
+  <table class="tbl">
+    <tr><th>Lake</th><th>State</th><th>Type</th><th>Key Facts</th></tr>
+    <tr><td><strong>Wular</strong></td><td>J&K</td><td>Freshwater</td><td>Largest freshwater lake in India; tectonic origin</td></tr>
+    <tr><td><strong>Chilika</strong></td><td>Odisha</td><td>Coastal Lagoon</td><td>Largest coastal lagoon in India; Ramsar Site; flamingos</td></tr>
+    <tr><td><strong>Vembanad</strong></td><td>Kerala</td><td>Brackish Lagoon</td><td>Longest lake in India (~96 km); Nehru Trophy Boat Race</td></tr>
+    <tr><td><strong>Loktak</strong></td><td>Manipur</td><td>Freshwater</td><td>Largest freshwater lake in NE India; floating phumdis; Keibul Lamjao NP</td></tr>
+    <tr><td><strong>Sambhar</strong></td><td>Rajasthan</td><td>Saltwater</td><td>Largest inland saltwater lake in India; salt production; Ramsar Site</td></tr>
+    <tr><td><strong>Dal</strong></td><td>J&K</td><td>Freshwater</td><td>Famous for houseboats; Srinagar</td></tr>
+    <tr><td><strong>Lonar</strong></td><td>Maharashtra</td><td>Crater Lake</td><td>Formed by meteorite impact (~50,000 years ago); Buldhana district</td></tr>
+    <tr><td><strong>Pangong Tso</strong></td><td>Ladakh</td><td>High-altitude</td><td>Saltwater lake at 4350m; 60% in China</td></tr>
+  </table>
+  <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Wular = Largest freshwater lake | Chilika = Largest coastal lagoon | Sambhar = Largest SALTWATER lake | Vembanad = Longest lake. These distinctions are FREQUENTLY tested.</div></div>
+
+  <div class="sub-h" style="margin-top:16px;">🏔️ Important Mountain Passes of India</div>
+  <table class="tbl">
+    <tr><th>Pass</th><th>State</th><th>Connects</th><th>Altitude</th></tr>
+    <tr><td><strong>Zoji La</strong></td><td>J&K</td><td>Kashmir Valley ↔ Ladakh (Leh)</td><td>3529m</td></tr>
+    <tr><td><strong>Nathu La</strong></td><td>Sikkim</td><td>India ↔ China (Tibet); old Silk Route</td><td>4310m</td></tr>
+    <tr><td><strong>Bum La</strong></td><td>Arunachal Pradesh</td><td>India ↔ China (Tawang)</td><td>4970m</td></tr>
+    <tr><td><strong>Shipki La</strong></td><td>Himachal Pradesh</td><td>Sutlej river enters India; India ↔ China</td><td>4696m</td></tr>
+    <tr><td><strong>Rohtang Pass</strong></td><td>Himachal Pradesh</td><td>Manali ↔ Lahaul-Spiti</td><td>3978m</td></tr>
+    <tr><td><strong>Lipulekh</strong></td><td>Uttarakhand</td><td>India ↔ Tibet; Kailash Mansarovar route</td><td>5334m</td></tr>
+    <tr><td><strong>Bara Lacha La</strong></td><td>Himachal Pradesh</td><td>Keylong ↔ Leh</td><td>4890m</td></tr>
+    <tr><td><strong>Bomdi La</strong></td><td>Arunachal Pradesh</td><td>Arunachal ↔ Bhutan</td><td>2217m</td></tr>
+  </table>
+</div>
+
+<!-- HAZARDS -->
+<div id="in-haz" class="tp">
+  <div class="sub-h">⚠️ Seismic Zones of India</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Zone</th><th>Risk</th><th>Regions</th></tr>
+      <tr><td><strong>Zone V</strong></td><td style="color:#ff6b6b;">Very High</td><td>J&K, HP, Uttarakhand, Bihar-Nepal border, NE India, N Gujarat, A&N Islands</td></tr>
+      <tr><td><strong>Zone IV</strong></td><td style="color:#ff9f43;">High</td><td>Delhi, Haryana, Punjab, Bihar (parts), WB (parts), Maharashtra (Koyna)</td></tr>
+      <tr><td><strong>Zone III</strong></td><td style="color:#f2b731;">Moderate</td><td>Most of peninsular India, Goa, Odisha (parts), Rajasthan (parts)</td></tr>
+      <tr><td><strong>Zone II</strong></td><td style="color:#4ee688;">Low</td><td>Southern tip of India — parts of AP, TN, Karnataka (most stable ancient crust)</td></tr>
+    </table>
+  </div>
+
+  <div class="sub-h" style="margin-top:16px;">🏜️ Major World Deserts</div>
+  <table class="tbl">
+    <tr><th>Desert</th><th>Location</th><th>Type</th><th>Area</th></tr>
+    <tr><td><strong>Antarctic Desert</strong></td><td>Antarctica</td><td>Cold (Ice Cap)</td><td>14.2M km² (largest overall)</td></tr>
+    <tr><td><strong>Arctic Desert</strong></td><td>Arctic region</td><td>Cold Tundra</td><td>13.9M km²</td></tr>
+    <tr><td><strong>Sahara</strong></td><td>North Africa</td><td>Hot</td><td>9.2M km² (largest HOT)</td></tr>
+    <tr><td><strong>Arabian</strong></td><td>Arabian Peninsula</td><td>Hot</td><td>2.3M km²</td></tr>
+    <tr><td><strong>Gobi</strong></td><td>China/Mongolia</td><td>Cold</td><td>1.3M km²</td></tr>
+    <tr><td><strong>Thar</strong></td><td>India/Pakistan</td><td>Hot</td><td>0.2M km² (7th largest hot)</td></tr>
+    <tr><td><strong>Atacama</strong></td><td>Chile</td><td>Cold coastal</td><td>Driest on Earth</td></tr>
+  </table>
+  <div class="hl tip"><span class="hl-icon">⚡</span><div><div class="hl-lbl">SSC CGL Tip</div>Sahara = Largest HOT desert. Antarctic = Largest DESERT overall. Atacama = Driest desert. Thar = India's desert (7th largest hot desert).</div></div>
+
+  <div class="sub-h" style="margin-top:16px;">🌋 Indian Volcanoes</div>
+  <div class="g2">
+    <div class="mc" style="border-color:rgba(255,107,107,.4);">
+      <span class="mc-icon">🌋</span>
+      <div class="mc-t" style="color:#ff6b6b;">Barren Island (Active)</div>
+      <div class="mc-d">Andaman & Nicobar; India's ONLY active volcano; last eruption 2017.</div>
+    </div>
+    <div class="mc" style="border-color:rgba(90,180,255,.4);">
+      <span class="mc-icon">💤</span>
+      <div class="mc-t" style="color:#5ab4ff;">Narcondam (Dormant)</div>
+      <div class="mc-d">Andaman & Nicobar; dormant stratovolcano; wildlife sanctuary.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION: QUIZ
+════════════════════════════════════ -->
+<section id="s-qz" class="sec">
+<div class="hero">
+  <span class="hero-icon">📝</span>
+  <div class="hero-title">PYQ Quiz</div>
+  <div class="hero-sub">35 Questions from SSC CGL, CHSL & IB ACIO Papers (2003–2024)</div>
+</div>
+<div id="qz-main">
+  <div class="qz-prog-wrap">
+    <div class="qz-meta">
+      <span id="qz-count">Question 1 of 35</span>
+      <span id="qz-score-live" style="color:var(--green);font-weight:700;">Score: 0</span>
+    </div>
+    <div class="qz-bar"><div class="qz-fill" id="qz-fill" style="width:2.86%;"></div></div>
+  </div>
+  <div id="qz-q"></div>
+</div>
+<div id="qz-result" style="display:none;" class="result">
+  <div style="font-size:48px;margin-bottom:12px;">🏆</div>
+  <div class="r-score" id="r-score"></div>
+  <div class="r-lbl">out of 35 questions</div>
+  <div class="r-stats">
+    <div class="rs"><div class="rsn" id="r-correct" style="color:var(--green);"></div><div class="rsl">CORRECT</div></div>
+    <div class="rs"><div class="rsn" id="r-wrong" style="color:var(--coral);"></div><div class="rsl">WRONG</div></div>
+    <div class="rs"><div class="rsn" id="r-pct" style="color:var(--text2);"></div><div class="rsl">ACCURACY</div></div>
+  </div>
+  <div class="r-msg" id="r-msg"></div>
+  <button class="btn btn-p" onclick="restartQuiz()" style="width:100%;margin-top:10px;padding:12px;">🔄 Retake Quiz</button>
+</div>
+</section>
+
+  </main><!-- end .main -->
+</div><!-- end .layout -->
+
+<button id="stt" onclick="document.getElementById('M').scrollTop=0" title="Back to top">↑</button>
+
+<script>
+// ══════════════════════════════
+// SIDEBAR LOGIC
+// ══════════════════════════════
+const sidebar = document.getElementById('sidebar');
+const hambtn  = document.getElementById('hambtn');
+const overlay = document.getElementById('overlay');
+const isMobile = () => window.innerWidth <= 768;
+
+// Desktop: start expanded; track collapsed state
+let desktopCollapsed = false;
+
+function toggleSidebar() {
+  if (isMobile()) {
+    const isOpen = sidebar.classList.contains('mobile-open');
+    if (isOpen) {
+      closeSidebar();
+    } else {
+      sidebar.classList.add('mobile-open');
+      overlay.classList.add('show');
+      hambtn.classList.add('open');
+    }
+  } else {
+    desktopCollapsed = !desktopCollapsed;
+    sidebar.classList.toggle('collapsed', desktopCollapsed);
+    hambtn.classList.toggle('open', desktopCollapsed);
+  }
+}
+
+function closeSidebar() {
+  sidebar.classList.remove('mobile-open');
+  overlay.classList.remove('show');
+  hambtn.classList.remove('open');
+}
+
+// Close sidebar on resize if switching from mobile to desktop
+window.addEventListener('resize', () => {
+  if (!isMobile()) {
+    closeSidebar();
+    sidebar.classList.toggle('collapsed', desktopCollapsed);
+  }
+});
+
+// ── NAV ──
+function nav(id) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sb-item').forEach(b => b.classList.remove('active'));
+  document.getElementById('s-' + id).classList.add('active');
+  document.getElementById('nav-' + id).classList.add('active');
+  document.getElementById('M').scrollTop = 0;
+  // On mobile, close sidebar after navigation
+  if (isMobile()) closeSidebar();
+}
+
+// ── TABS ──
+function tab(sec, id, btn) {
+  const par = document.getElementById('s-' + sec);
+  par.querySelectorAll('.tp').forEach(t => t.classList.remove('on'));
+  par.querySelectorAll('.tb').forEach(b => b.classList.remove('on'));
+  document.getElementById(sec + '-' + id).classList.add('on');
+  btn.classList.add('on');
+}
+
+// ── ACCORDION ──
+function acc(el) {
+  el.classList.toggle('on');
+  el.nextElementSibling.classList.toggle('on');
+}
+
+// ── SCROLL TOP ──
+document.getElementById('M').addEventListener('scroll', function () {
+  document.getElementById('stt').classList.toggle('show', this.scrollTop > 250);
+});
+
+// ══════════════════════════════
+// QUIZ DATA — 35 PYQ Questions
+// ══════════════════════════════
+const QS = [
+  {
+    q: "What type of mountains are the Himalayas?",
+    opts: ["Volcanic mountains","Block/Fault mountains","Fold mountains","Residual mountains"],
+    ans: 2,
+    exp: "The <strong>Himalayas</strong> are <strong>fold mountains</strong> formed ~50 million years ago by the collision of the Indian Plate and the Eurasian Plate. The Andes, Alps, and Rockies are also fold mountains.",
+    src: "SSC CGL 2016"
+  },
+  {
+    q: "Which is the oldest mountain range in India?",
+    opts: ["Himalayas","Satpura","Vindhyas","Aravallis"],
+    ans: 3,
+    exp: "The <strong>Aravallis</strong> (Rajasthan-Haryana-Gujarat) are the oldest fold mountains in India, approximately 3.5 billion years old — among the oldest in the world.",
+    src: "SSC CGL 2019"
+  },
+  {
+    q: "Which is the highest peak entirely within India?",
+    opts: ["Nanda Devi","Kamet","Kanchenjunga","K2"],
+    ans: 2,
+    exp: "<strong>Kanchenjunga</strong> (8,586m) in Sikkim is the highest peak entirely within India. K2 (8611m) is in Pakistan-administered Kashmir. Mt. Everest (8849m) is in Nepal.",
+    src: "SSC CHSL 2020"
+  },
+  {
+    q: "The Ganga river originates from which glacier?",
+    opts: ["Siachen Glacier","Gangotri Glacier (Gomukh)","Zemu Glacier","Yamunotri Glacier"],
+    ans: 1,
+    exp: "Ganga originates from the <strong>Gangotri Glacier</strong> at <em>Gomukh</em> (cow's mouth), Uttarakhand, at an altitude of 3,892m.",
+    src: "SSC MTS 2017"
+  },
+  {
+    q: "Which river is called 'Dakshin Ganga' (Ganga of the South)?",
+    opts: ["Krishna","Kaveri","Godavari","Mahanadi"],
+    ans: 2,
+    exp: "The <strong>Godavari</strong> is called 'Dakshin Ganga' due to its great size and cultural significance. It is also called 'Vridha Ganga' (Old Ganga).",
+    src: "SSC CGL 2018"
+  },
+  {
+    q: "Which river is known as the 'Sorrow of Bihar'?",
+    opts: ["Ganga","Son","Kosi","Chambal"],
+    ans: 2,
+    exp: "The <strong>Kosi</strong> river is called the 'Sorrow of Bihar' because it frequently shifts course and causes devastating floods. It has shifted ~120 km westward over 200 years.",
+    src: "SSC CGL 2014"
+  },
+  {
+    q: "The Brahmaputra river is known as ___ in Tibet.",
+    opts: ["Tsangpo","Irrawaddy","Salween","Dihang"],
+    ans: 0,
+    exp: "In Tibet, the Brahmaputra is called <strong>Tsangpo</strong>. In Arunachal Pradesh it is called <strong>Dihang or Siang</strong>. In Bangladesh it is called Jamuna.",
+    src: "SSC CHSL 2019"
+  },
+  {
+    q: "Majuli, the world's largest river island, is located in which river?",
+    opts: ["Ganga","Godavari","Brahmaputra","Indus"],
+    ans: 2,
+    exp: "<strong>Majuli Island</strong> in Assam is formed in the Brahmaputra river. It is recognised as the world's largest river island (~352 sq km) and India's first island district.",
+    src: "SSC CGL 2022"
+  },
+  {
+    q: "The Chambal river is a tributary of which river?",
+    opts: ["Yamuna","Ganga","Son","Narmada"],
+    ans: 0,
+    exp: "<strong>Chambal</strong> is a major tributary of the <strong>Yamuna</strong> river. The chain is: Chambal → Yamuna → Ganga.",
+    src: "SSC CPO 2020"
+  },
+  {
+    q: "Which of the following rivers does NOT flow into the Arabian Sea?",
+    opts: ["Narmada","Tapti","Periyar","Mahanadi"],
+    ans: 3,
+    exp: "<strong>Mahanadi</strong> flows into the <strong>Bay of Bengal</strong> (through Odisha). Narmada, Tapti, and Periyar all flow westward into the Arabian Sea.",
+    src: "SSC CGL 2017"
+  },
+  {
+    q: "The Godavari river originates from:",
+    opts: ["Amarkantak, MP","Brahmagiri hills near Nashik, Maharashtra","Mahabaleshwar, Maharashtra","Coorg, Karnataka"],
+    ans: 1,
+    exp: "Godavari originates from <strong>Brahmagiri hills near Trimbakeshwar, Nashik</strong> (Maharashtra) at 1,067m. It is the longest peninsular river (1,465 km).",
+    src: "SSC CHSL 2018"
+  },
+  {
+    q: "Which is the longest river in the world?",
+    opts: ["Amazon","Mississippi","Nile","Yangtze"],
+    ans: 2,
+    exp: "The <strong>Nile</strong> (~6,650 km) is the world's longest river. The Amazon is the world's LARGEST by water volume, but slightly shorter than the Nile.",
+    src: "IB ACIO 2021"
+  },
+  {
+    q: "World's largest river delta is formed by:",
+    opts: ["Indus","Ganga-Brahmaputra","Nile","Amazon"],
+    ans: 1,
+    exp: "The <strong>Ganga-Brahmaputra delta</strong> (Sundarbans) is the world's largest river delta, covering about 80,000 sq km shared between India (WB) and Bangladesh.",
+    src: "SSC CGL 2015"
+  },
+  {
+    q: "Which factor does NOT significantly affect climate?",
+    opts: ["Latitude","Longitude","Altitude","Distance from sea"],
+    ans: 1,
+    exp: "<strong>Longitude</strong> does not significantly affect climate. The key factors are latitude, altitude, distance from sea, prevailing winds, ocean currents, and relief.",
+    src: "SSC CGL 2020"
+  },
+  {
+    q: "The Southwest Monsoon arrives in Kerala around:",
+    opts: ["May 15","June 1","June 15","July 1"],
+    ans: 1,
+    exp: "The <strong>Southwest Monsoon</strong> arrives in Kerala around <strong>June 1</strong> every year — this is officially the start of the Indian monsoon season.",
+    src: "SSC CPO 2021"
+  },
+  {
+    q: "El Niño has which effect on the Indian Monsoon?",
+    opts: ["Strengthens/enhances monsoon","Weakens monsoon, causing drought risk","Has no effect on monsoon","Shifts monsoon onset to April"],
+    ans: 1,
+    exp: "<strong>El Niño</strong> refers to the anomalous warming of the eastern Pacific Ocean, which <strong>weakens the SW monsoon</strong> over India. La Niña (cooling) strengthens the monsoon.",
+    src: "SSC CGL 2023"
+  },
+  {
+    q: "The normal lapse rate of temperature is approximately:",
+    opts: ["3.5°C per 1000m","6.5°C per 1000m","9.8°C per 1000m","1.5°C per 1000m"],
+    ans: 1,
+    exp: "The <strong>Normal Lapse Rate</strong> is approximately <strong>6.5°C per 1000 metres</strong> of altitude.",
+    src: "SSC CGL 2016"
+  },
+  {
+    q: "Which is the largest hot desert in the world?",
+    opts: ["Arabian Desert","Gobi Desert","Sahara Desert","Thar Desert"],
+    ans: 2,
+    exp: "The <strong>Sahara Desert</strong> (North Africa) is the world's largest <em>hot</em> desert at ~9.2 million sq km. The largest desert overall is the Antarctic Desert (~14.2 million sq km).",
+    src: "SSC CHSL 2019"
+  },
+  {
+    q: "India's only active volcano is located in:",
+    opts: ["Lakshadweep","Andaman & Nicobar Islands","Gujarat coast","Odisha coast"],
+    ans: 1,
+    exp: "<strong>Barren Island</strong> in the <strong>Andaman & Nicobar Islands</strong> is India's only active volcano. Its last confirmed eruption was in 2017.",
+    src: "SSC MTS 2020"
+  },
+  {
+    q: "Which of the following is the largest freshwater lake in India?",
+    opts: ["Dal Lake","Chilika Lake","Wular Lake","Loktak Lake"],
+    ans: 2,
+    exp: "<strong>Wular Lake</strong> (Jammu & Kashmir) is the largest freshwater lake in India. Chilika Lake (Odisha) is the largest <em>coastal lagoon</em>. Sambhar is the largest <em>saltwater</em> lake.",
+    src: "SSC CGL 2014"
+  },
+  {
+    q: "The Hirakud Dam is built on which river?",
+    opts: ["Godavari","Krishna","Mahanadi","Subarnarekha"],
+    ans: 2,
+    exp: "<strong>Hirakud Dam</strong> is built on the <strong>Mahanadi</strong> river in Odisha. At 26 km, it is one of India's longest dams.",
+    src: "SSC CGL 2015"
+  },
+  {
+    q: "The Andes mountain range is located in:",
+    opts: ["North America","Africa","South America","Australia"],
+    ans: 2,
+    exp: "The <strong>Andes</strong> are located along the western coast of <strong>South America</strong>. At ~7,200 km, it is the world's longest mountain range.",
+    src: "SSC CHSL 2021"
+  },
+  {
+    q: "Which mountain range separates Europe from Asia?",
+    opts: ["Alps","Caucasus","Ural Mountains","Carpathians"],
+    ans: 2,
+    exp: "The <strong>Ural Mountains</strong> (Russia) form the traditional boundary between Europe and Asia. They run ~2,500 km from the Arctic Ocean to Kazakhstan.",
+    src: "SSC CGL 2013"
+  },
+  {
+    q: "Khadar and Bhangar are types of which soil?",
+    opts: ["Black Soil","Red Soil","Alluvial Soil","Laterite Soil"],
+    ans: 2,
+    exp: "<strong>Khadar</strong> (new alluvium — younger, more fertile) and <strong>Bhangar</strong> (old alluvium — contains calcium carbonate nodules 'Kankar') are both types of <strong>Alluvial Soil</strong>.",
+    src: "SSC CGL 2017"
+  },
+  {
+    q: "Black cotton soil (Regur) is formed from:",
+    opts: ["Granite rocks","Sandstone","Deccan Trap volcanic rock","River alluvium"],
+    ans: 2,
+    exp: "<strong>Black cotton soil (Regur)</strong> is formed from the weathering of <strong>Deccan Trap volcanic rocks</strong>. It is best suited for cotton cultivation.",
+    src: "SSC CHSL 2020"
+  },
+  {
+    q: "The Sundarbans mangrove forest is located at the delta of which rivers?",
+    opts: ["Krishna and Godavari","Ganga and Brahmaputra","Nile and Congo","Amazon and Orinoco"],
+    ans: 1,
+    exp: "The <strong>Sundarbans</strong> is the world's largest mangrove forest, located in the delta of the <strong>Ganga and Brahmaputra</strong> rivers. It is a UNESCO World Heritage Site.",
+    src: "SSC CGL 2018"
+  },
+  {
+    q: "The Zoji La pass connects:",
+    opts: ["Manali and Leh","Srinagar (Kashmir Valley) and Leh (Ladakh)","India and China (Tibet)","Arunachal Pradesh and Bhutan"],
+    ans: 1,
+    exp: "<strong>Zoji La</strong> (3529m) connects <strong>Srinagar (Kashmir Valley)</strong> with <strong>Leh (Ladakh)</strong>. It remains closed in winter due to heavy snow.",
+    src: "SSC CGL 2022 / IB ACIO 2017"
+  },
+  {
+    q: "Which climate type is characterized by hot dry summers and mild wet winters?",
+    opts: ["Tropical monsoon","Mediterranean","Tropical savanna","Continental"],
+    ans: 1,
+    exp: "<strong>Mediterranean climate</strong> is uniquely characterized by <strong>hot, dry summers</strong> and <strong>mild, wet winters</strong>. Found on western coasts between 30°–45° latitude.",
+    src: "SSC CGL 2019 / IB ACIO 2020"
+  },
+  {
+    q: "The Western Ghats (Sahyadri) highest peak is:",
+    opts: ["Doddabetta (2637m)","Kalsubai (1646m)","Anaimudi (2695m)","Guru Shikhar (1722m)"],
+    ans: 2,
+    exp: "<strong>Anaimudi</strong> (2695m) in the Anamalai Hills, Kerala, is the highest peak of the Western Ghats and also the highest peak in peninsular India.",
+    src: "SSC CGL 2016"
+  },
+  {
+    q: "The Nathu La pass is located in which state and connects India to:",
+    opts: ["J&K; connects to Pakistan","Sikkim; connects to China (Tibet)","Arunachal Pradesh; connects to Myanmar","Uttarakhand; connects to Nepal"],
+    ans: 1,
+    exp: "<strong>Nathu La</strong> (4310m) is in <strong>Sikkim</strong> and connects India with <strong>China (Tibet)</strong>. It was part of the ancient Silk Route and was reopened as a trading point in 2006.",
+    src: "SSC CHSL 2022 / IB ACIO 2019"
+  },
+  {
+    q: "Which river is known as the 'Sorrow of Bengal'?",
+    opts: ["Hooghly","Tista","Damodar","Mahananda"],
+    ans: 2,
+    exp: "The <strong>Damodar</strong> river is called the 'Sorrow of Bengal' because of the floods it used to cause. It is now managed by the Damodar Valley Corporation (DVC).",
+    src: "SSC CGL 2015"
+  },
+  {
+    q: "Mawsynram, considered the wettest place in the world, is located in:",
+    opts: ["Assam","Arunachal Pradesh","Meghalaya","Mizoram"],
+    ans: 2,
+    exp: "<strong>Mawsynram</strong> is located in the East Khasi Hills district of <strong>Meghalaya</strong>. It receives the world's highest average annual rainfall (~11,872mm).",
+    src: "SSC CGL 2023"
+  },
+  {
+    q: "The Loktak Lake in Manipur is famous for:",
+    opts: ["Being India's largest saltwater lake","Floating islands called phumdis and the world's only floating National Park","Being the origin of the Brahmaputra","Producing the highest quality pearls in Asia"],
+    ans: 1,
+    exp: "<strong>Loktak Lake</strong> (Manipur) is famous for its floating islands called <strong>phumdis</strong>. The <strong>Keibul Lamjao National Park</strong> — the world's only floating national park — is situated on these phumdis.",
+    src: "IB ACIO 2020"
+  },
+  {
+    q: "The Narmada river flows through a rift valley between which two ranges?",
+    opts: ["Aravallis and Vindhyas","Vindhyas and Satpura","Western and Eastern Ghats","Satpura and Western Ghats"],
+    ans: 1,
+    exp: "The <strong>Narmada</strong> flows westward through a <strong>rift valley (graben)</strong> bounded by the <strong>Vindhya Range to the north</strong> and the <strong>Satpura Range to the south</strong>.",
+    src: "SSC CGL 2016 / CHSL 2021"
+  },
+  {
+    q: "Which of the following is NOT a tributary of the Ganga?",
+    opts: ["Yamuna","Gandak","Tista","Tungabhadra"],
+    ans: 3,
+    exp: "<strong>Tungabhadra</strong> is a tributary of the <strong>Krishna</strong> river (peninsular), not of the Ganga. Yamuna and Gandak are associated with the Ganga system.",
+    src: "SSC CGL 2021"
+  }
+];
+
+// ── QUIZ ENGINE ──
+let cur = 0, score = 0, answered = false;
+
+function renderQ() {
+  const d = QS[cur];
+  const total = QS.length;
+  document.getElementById('qz-count').textContent = `Question ${cur + 1} of ${total}`;
+  document.getElementById('qz-score-live').textContent = `Score: ${score}`;
+  document.getElementById('qz-fill').style.width = ((cur + 1) / total * 100) + '%';
+
+  const labels = ['A', 'B', 'C', 'D'];
+  let optsHTML = d.opts.map((o, i) => `
+    <button class="opt" onclick="answer(${i})" id="opt${i}">
+      <span class="opt-l">${labels[i]}</span>${o}
+    </button>`).join('');
+
+  document.getElementById('qz-q').innerHTML = `
+    <div class="qcard">
+      <div class="q-num">Question ${cur + 1} / ${total} <span class="q-src">${d.src}</span></div>
+      <div class="q-txt">${d.q}</div>
+      <div class="opts">${optsHTML}</div>
+      <div class="expl" id="expl">💡 <strong>Explanation:</strong> ${d.exp}</div>
+      <div class="qnav">
+        <span class="qnav-info" id="qnav-info"></span>
+        ${cur > 0 ? `<button class="btn btn-s" onclick="goQ(${cur - 1})">← Prev</button>` : ''}
+        <button class="btn btn-p" id="nextbtn" onclick="goQ(${cur + 1})" style="display:none;">${cur === total - 1 ? '🏁 Finish' : 'Next →'}</button>
+      </div>
+    </div>`;
+  answered = false;
+}
+
+function answer(i) {
+  if (answered) return;
+  answered = true;
+  const d = QS[cur];
+  const opts = document.querySelectorAll('.opt');
+  opts.forEach((o, idx) => {
+    o.disabled = true;
+    if (idx === d.ans) o.classList.add('cor');
+    else if (idx === i && i !== d.ans) o.classList.add('wrg');
+  });
+  if (i === d.ans) {
+    score++;
+    document.getElementById('qnav-info').innerHTML = '<span style="color:var(--green);font-weight:800;">✅ Correct!</span>';
+  } else {
+    document.getElementById('qnav-info').innerHTML = '<span style="color:var(--coral);font-weight:800;">❌ Wrong!</span>';
+  }
+  document.getElementById('qz-score-live').textContent = `Score: ${score}`;
+  document.getElementById('expl').classList.add('show');
+  document.getElementById('nextbtn').style.display = 'inline-block';
+}
+
+function goQ(n) {
+  if (n >= QS.length) { showResult(); return; }
+  if (n < 0) return;
+  cur = n;
+  renderQ();
+  document.getElementById('M').scrollTop = 0;
+}
+
+function showResult() {
+  document.getElementById('qz-main').style.display = 'none';
+  const res = document.getElementById('qz-result');
+  res.style.display = 'block';
+  const pct = Math.round(score / QS.length * 100);
+  document.getElementById('r-score').textContent = score;
+  document.getElementById('r-correct').textContent = score;
+  document.getElementById('r-wrong').textContent = QS.length - score;
+  document.getElementById('r-pct').textContent = pct + '%';
+  let msg = '';
+  if (pct >= 90) msg = '🌟 <strong>Outstanding!</strong> You have exceptional command over Physical Geography. You are very well prepared for SSC CGL & IB ACIO!';
+  else if (pct >= 75) msg = '💪 <strong>Great performance!</strong> You are well prepared. Focus on your weak areas and revise the Quick Facts tables once more.';
+  else if (pct >= 50) msg = '📚 <strong>Good effort!</strong> Review the sections where you made errors — especially Mountains Quick Facts, River systems, and Climate.';
+  else msg = '🔄 <strong>Keep practising!</strong> Go through the study material again topic by topic. Use the Memory Tricks and take the quiz again!';
+  document.getElementById('r-msg').innerHTML = msg;
+}
+
+function restartQuiz() {
+  cur = 0; score = 0; answered = false;
+  document.getElementById('qz-result').style.display = 'none';
+  document.getElementById('qz-main').style.display = 'block';
+  renderQ();
+  document.getElementById('M').scrollTop = 0;
+}
+
+// ── INIT ──
+renderQ();
+</script>
+</body>
+</html>

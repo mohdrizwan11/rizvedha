@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Geography PYQ Practice - SSC CGL Master Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #090d16;
+    --panel: #111827;
+    --panel-light: #1f2937;
+    --sidebar: #0d131f;
+    --accent: #0ea5e9;
+    --accent-hover: #38bdf8;
+    --success: #22c55e;
+    --success-light: rgba(34, 197, 94, 0.15);
+    --warn: #eab308;
+    --warn-light: rgba(234, 179, 8, 0.15);
+    --danger: #ef4444;
+    --danger-light: rgba(239, 68, 68, 0.15);
+    --text: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border: #1f2937;
+    --review: #a855f7;
+    --review-light: rgba(168, 85, 247, 0.15);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Structural Layout */
+  .app-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* Left Sidebar Styling */
+  .sidebar {
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #111827, #0d131f);
+  }
+
+  .sidebar-header h1 {
+    font-size: 18px;
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar-header p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .metrics-panel {
+    padding: 16px;
+    background: rgba(17, 24, 39, 0.5);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .timer-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--panel);
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+
+  .timer-lbl {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .timer-val {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--warn);
+  }
+
+  .mode-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: var(--bg);
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  .mode-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 8px 6px;
+    font-size: 10.5px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.25;
+    min-height: 42px;
+  }
+
+  .mode-btn.active {
+    background: var(--panel-light);
+    color: var(--accent-hover);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .palette-box {
+    padding: 20px;
+    flex: 1;
+  }
+
+  .palette-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+
+  .palette-cell {
+    aspect-ratio: 1;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .palette-cell:hover {
+    border-color: var(--accent);
+  }
+
+  .palette-cell.active {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+
+  .palette-cell.answered {
+    background: var(--success-light);
+    border-color: var(--success);
+    color: var(--success);
+  }
+
+  .palette-cell.review {
+    background: var(--review-light);
+    border-color: var(--review);
+    color: var(--review);
+  }
+
+  .palette-cell.visited {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+
+  .legend {
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+  }
+
+  /* Central Canvas Styling */
+  .main-canvas {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg) 0%, #0d111c 100%);
+  }
+
+  .canvas-header {
+    padding: 16px 24px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-group {
+    display: flex;
+    gap: 8px;
+  }
+
+  .filter-select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .question-container {
+    flex: 1;
+    padding: 32px 40px;
+    overflow-y: auto;
+  }
+
+  .question-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 840px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .tag-vhigh { background: var(--danger-light); color: #fca5a5; border: 1px solid var(--danger); }
+  .tag-high { background: var(--warn-light); color: #fcd34d; border: 1px solid var(--warn); }
+  .tag-med { background: rgba(14, 165, 233, 0.15); color: #7dd3fc; border: 1px solid var(--accent); }
+
+  .question-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .option-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    position: relative;
+  }
+
+  .option-wrapper:hover {
+    border-color: var(--accent);
+    background: rgba(14, 165, 233, 0.02);
+  }
+
+  .option-wrapper input[type="radio"] {
+    display: none;
+  }
+
+  .option-marker {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: var(--panel-light);
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+
+  .option-wrapper.selected {
+    border-color: var(--accent);
+    background: rgba(14, 165, 233, 0.05);
+  }
+
+  .option-wrapper.selected .option-marker {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+
+  /* Correct / Incorrect Feedback for Practice Mode */
+  .option-wrapper.verified-correct {
+    border-color: var(--success) !important;
+    background: var(--success-light) !important;
+  }
+  .option-wrapper.verified-correct .option-marker {
+    background: var(--success) !important;
+    border-color: var(--success) !important;
+    color: white;
+  }
+
+  .option-wrapper.verified-incorrect {
+    border-color: var(--danger) !important;
+    background: var(--danger-light) !important;
+  }
+  .option-wrapper.verified-incorrect .option-marker {
+    background: var(--danger) !important;
+    border-color: var(--danger) !important;
+    color: white;
+  }
+
+  .explanation-box {
+    margin-top: 24px;
+    padding: 16px;
+    background: var(--panel-light);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    display: none;
+  }
+
+  .explanation-box.visible {
+    display: block;
+    animation: slideDown 0.25s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Canvas Footer Control Bar */
+  .canvas-footer {
+    padding: 16px 40px;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-left, .footer-right {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn {
+    border: none;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-secondary { background: var(--panel-light); color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { background: #374151; }
+  .btn-accent { background: var(--accent); color: var(--bg); }
+  .btn-accent:hover { background: var(--accent-hover); }
+  .btn-warn { background: transparent; color: var(--warn); border: 1px solid var(--warn); }
+  .btn-warn:hover { background: var(--warn-light); }
+  .btn-success { background: var(--success); color: white; }
+  .btn-success:hover { background: #16a34a; }
+
+  .btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  /* Overlay System / Hub Screens */
+  .overlay-screen {
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    z-index: 50;
+    display: none;
+    flex-direction: column;
+    padding: 40px;
+    overflow-y: auto;
+  }
+
+  .overlay-screen.visible {
+    display: flex;
+  }
+
+  .hub-container {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) .8fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .metric-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .metric-card h4 { font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
+  .metric-card p { font-size: 28px; font-weight: 800; color: var(--accent); }
+
+  .breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: var(--panel);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .breakdown-table th, .breakdown-table td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .breakdown-table th { background: var(--panel-light); color: var(--text-muted); font-weight: 600; }
+
+  /* Layout Breakpoints */
+  @media (max-width: 980px) {
+    .app-layout { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+    .sidebar { display: none; }
+    .sidebar.mobile-open { display: flex; position: absolute; inset: 0; z-index: 100; width: 100vw; }
+    .question-container { padding: 16px; }
+    .canvas-footer { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
+    .footer-left, .footer-right { width: 100%; justify-content: space-between; }
+  }
+
+  /* Reference-style SSC master guide skin */
+  :root {
+    --bg: #060e22;
+    --panel: rgba(13, 27, 62, 0.86);
+    --panel-light: rgba(253, 243, 227, 0.07);
+    --sidebar: rgba(6, 14, 34, 0.98);
+    --accent: #ff6b00;
+    --accent-hover: #f5c842;
+    --success: #138808;
+    --success-light: rgba(19, 136, 8, 0.20);
+    --warn: #d4a017;
+    --warn-light: rgba(212, 160, 23, 0.16);
+    --danger: #c0392b;
+    --danger-light: rgba(192, 57, 43, 0.20);
+    --text: #fff8ee;
+    --text-muted: #9a8a70;
+    --border: rgba(212, 160, 23, 0.35);
+    --review: #5dade2;
+    --review-light: rgba(93, 173, 226, 0.15);
+    --gold: #d4a017;
+    --light-gold: #f5c842;
+    --saffron: #ff6b00;
+    --green: #138808;
+    --deep-navy: #060e22;
+  }
+
+  * { letter-spacing: 0; }
+
+  body {
+    font-family: 'Crimson Pro', Georgia, serif;
+    background:
+      radial-gradient(circle at 15% 5%, rgba(255, 107, 0, 0.12), transparent 28%),
+      radial-gradient(circle at 80% 0%, rgba(19, 136, 8, 0.10), transparent 26%),
+      var(--deep-navy);
+  }
+
+  #bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: .18;
+    pointer-events: none;
+  }
+
+  .app-layout, .overlay-screen {
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-layout {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .sidebar {
+    background: linear-gradient(180deg, rgba(13, 27, 62, .98), rgba(6, 14, 34, .98));
+    border-right: 1px solid var(--border);
+    box-shadow: 12px 0 30px rgba(0, 0, 0, .22);
+  }
+
+  .sidebar-header {
+    background: linear-gradient(135deg, var(--deep-navy), #1a2a5e 54%, var(--deep-navy));
+    border-bottom: 2px solid var(--gold);
+    position: relative;
+  }
+
+  .sidebar-header::before,
+  .canvas-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--green), var(--gold), var(--saffron));
+  }
+
+  .sidebar-header h1,
+  .hub-container h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--light-gold);
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.25;
+  }
+
+  .sidebar-header p,
+  .palette-title,
+  .timer-lbl,
+  .screen-note,
+  .metric-card h4 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: .8px;
+  }
+
+  .timer-box,
+  .mode-selector,
+  .question-card,
+  .metric-card,
+  .breakdown-table {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .timer-val {
+    color: var(--light-gold);
+    font-family: 'Cinzel', serif;
+  }
+
+  .mode-selector {
+    background: rgba(255, 255, 255, .04);
+  }
+
+  .mode-btn,
+  .filter-select,
+  .btn,
+  .tag {
+    font-family: 'Cinzel', serif;
+    letter-spacing: .6px;
+  }
+
+  .mode-btn.active {
+    background: rgba(255, 107, 0, .20);
+    color: var(--light-gold);
+    border: 1px solid rgba(255, 107, 0, .35);
+    box-shadow: 0 0 14px rgba(212, 160, 23, .12);
+  }
+
+  .palette-cell {
+    background: rgba(255, 255, 255, .045);
+    border-color: rgba(212, 160, 23, .22);
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+  }
+
+  .palette-cell:hover,
+  .palette-cell.active {
+    border-color: var(--saffron);
+    color: var(--light-gold);
+  }
+
+  .palette-cell.active {
+    outline: 2px solid var(--saffron);
+    box-shadow: 0 0 16px rgba(255, 107, 0, .25);
+  }
+
+  .main-canvas {
+    background: linear-gradient(180deg, rgba(6, 14, 34, .90), rgba(13, 27, 62, .68));
+  }
+
+  .canvas-header,
+  .canvas-footer {
+    position: relative;
+    background: rgba(6, 14, 34, .95);
+    border-color: var(--border);
+  }
+
+  .canvas-header {
+    padding: 14px 18px;
+  }
+
+  .filter-select {
+    background: rgba(13, 27, 62, .92);
+    border-color: var(--border);
+    color: var(--text);
+    border-radius: 6px;
+  }
+
+  .question-container {
+    padding: 22px;
+  }
+
+  .question-card {
+    max-width: 900px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .28);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .question-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold));
+  }
+
+  .card-meta {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(212, 160, 23, .16);
+  }
+
+  .tag {
+    border-radius: 20px;
+    font-size: 10px;
+    color: var(--light-gold);
+  }
+
+  .tag-vhigh { background: rgba(255, 107, 0, .20); color: var(--saffron); border-color: rgba(255, 107, 0, .45); }
+  .tag-high { background: rgba(212, 160, 23, .20); color: var(--light-gold); border-color: rgba(212, 160, 23, .45); }
+  .tag-med { background: rgba(93, 173, 226, .16); color: #5dade2; border-color: rgba(93, 173, 226, .45); }
+
+  .question-text {
+    font-size: clamp(18px, 2.6vw, 24px);
+    line-height: 1.45;
+    color: var(--text);
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+
+  .option-wrapper {
+    background: rgba(255, 255, 255, .045);
+    border-color: rgba(255, 255, 255, .10);
+    border-radius: 8px;
+    color: #e8d5b0;
+  }
+
+  .option-wrapper:hover {
+    background: rgba(255, 107, 0, .12);
+    border-color: var(--saffron);
+  }
+
+  .option-marker {
+    border-radius: 6px;
+    background: rgba(13, 27, 62, .8);
+    border-color: var(--border);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+  }
+
+  .option-wrapper.selected {
+    border-color: var(--saffron);
+    background: rgba(255, 107, 0, .10);
+  }
+
+  .option-wrapper.selected .option-marker {
+    background: var(--saffron);
+    border-color: var(--saffron);
+    color: #fff;
+  }
+
+  .explanation-box {
+    background: rgba(212, 160, 23, .10);
+    border-left-color: var(--gold);
+    color: #e8d5b0;
+  }
+
+  .btn {
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, .05);
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .btn-secondary:hover,
+  .btn-warn:hover {
+    background: rgba(255, 107, 0, .16);
+  }
+
+  .btn-accent {
+    background: linear-gradient(135deg, var(--saffron), #e55a00);
+    color: #fff;
+  }
+
+  .btn-success {
+    background: linear-gradient(135deg, var(--green), #0a5c05);
+  }
+
+  .overlay-screen {
+    background: radial-gradient(circle at top, rgba(255, 107, 0, .10), transparent 32%), var(--deep-navy);
+  }
+
+  .breakdown-table th {
+    background: rgba(255, 107, 0, .18);
+    color: var(--light-gold);
+    font-family: 'Cinzel', serif;
+  }
+
+  .breakdown-table td {
+    color: #e8d5b0;
+  }
+
+  @media (max-width: 980px) {
+    .app-layout { grid-template-columns: 1fr; }
+    .question-container { padding: 14px; }
+    .question-card { padding: 18px; }
+    .filter-group { flex-wrap: wrap; }
+    .filter-select { flex: 1; min-width: 180px; }
+  }
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h1>Geography PYQ Practice</h1>
+      <p>SSC CGL . CHSL . MTS . CPO Master Guide</p>
+    </div>
+
+    <div class="metrics-panel">
+      <div class="timer-box">
+        <span class="timer-lbl">Session Clock</span>
+        <span class="timer-val" id="clock">20:00</span>
+      </div>
+      <div class="mode-selector">
+        <button class="mode-btn active" id="btnModePractice" onclick="switchMode('practice')">Practice Mode (Instant Feedback)</button>
+        <button class="mode-btn" id="btnModeExam" onclick="switchMode('exam')">Exam Mode (Timed / Graded)</button>
+      </div>
+    </div>
+
+    <div class="palette-box">
+      <div class="palette-title">Question Navigator</div>
+      <div class="palette-grid" id="paletteGrid"></div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background: var(--success-light); border-color: var(--success)"></div>Answered</div>
+      <div class="legend-item"><div class="legend-dot" style="background: var(--review-light); border-color: var(--review)"></div>Review Flag</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color: var(--text-muted)"></div>Visited</div>
+      <div class="legend-item"><div class="legend-dot"></div>Unvisited</div>
+    </div>
+  </aside>
+
+  <main class="main-canvas">
+    <div class="canvas-header">
+      <div class="filter-group">
+        <select class="filter-select" id="filterCategory" onchange="applyFilters()">
+          <option value="all">Chapters: All</option>
+          <option value="physical">Physical Geography</option>
+          <option value="indian">Indian Geography</option>
+          <option value="world">World & Economic Geography</option>
+        </select>
+        <select class="filter-select" id="filterStatus" onchange="applyFilters()">
+          <option value="all">Status: All</option>
+          <option value="answered">Answered</option>
+          <option value="review">Marked for Review</option>
+          <option value="unvisited">Unvisited</option>
+        </select>
+      </div>
+      <div>
+        <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;" onclick="toggleSidebarMobile()">Palette</button>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question-card" id="questionCard">
+        </div>
+    </div>
+
+    <div class="canvas-footer">
+      <div class="footer-left">
+        <button class="btn btn-secondary" id="btnPrev" onclick="navigateQuestion(-1)">Previous</button>
+        <button class="btn btn-warn" id="btnReview" onclick="flagReview()">Mark Review</button>
+      </div>
+      <div class="footer-right">
+        <button class="btn btn-secondary" id="btnClear" onclick="clearActiveResponse()">Clear Response</button>
+        <button class="btn btn-accent" id="btnNext" onclick="saveAndNext()">Save & Next</button>
+        <button class="btn btn-success" id="btnSubmit" onclick="triggerExamSubmission()" style="display:none;">Submit Assessment</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="overlay-screen" id="analyticsHub">
+  <div class="hub-container">
+    <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 6px;">Practice Report</h2>
+    <p style="color: var(--text-muted); margin-bottom: 24px;">Your geography PYQ performance summary.</p>
+    
+    <div class="analytics-grid">
+      <div class="metric-card">
+        <h4>Raw Score</h4>
+        <p id="scoreRaw">0.00 / 100</p>
+      </div>
+      <div class="metric-card">
+        <h4>Accuracy</h4>
+        <p id="scoreAccuracy">0.0%</p>
+      </div>
+      <div class="metric-card">
+        <h4>Time Used</h4>
+        <p id="timeDelta">00:00</p>
+      </div>
+      <div class="metric-card" style="background: linear-gradient(135deg, #1e1b4b, #111827);">
+        <h4>Readiness</h4>
+        <p id="cutoffStatus" style="color: var(--success);">HIGH</p>
+      </div>
+    </div>
+
+    <table class="breakdown-table">
+      <thead>
+        <tr>
+          <th>Chapter</th>
+          <th>Total</th>
+          <th>Attempted</th>
+          <th>Accuracy</th>
+        </tr>
+      </thead>
+      <tbody id="breakdownRows">
+        </tbody>
+    </table>
+
+    <div style="margin-top: 32px; display: flex; gap: 16px;">
+      <button class="btn btn-accent" onclick="downloadReviewSheet()">Download Review Sheet</button>
+      <button class="btn btn-secondary" onclick="resetSimulator()">Restart Practice</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function initGuideBackground() {
+    const canvas = document.getElementById('bg-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const points = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      points.length = 0;
+      for (let i = 0; i < 90; i++) {
+        points.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.4 + 0.35,
+          speed: Math.random() * 0.5 + 0.35,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    function drawCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      points.forEach(point => {
+        point.phase += 0.012 * point.speed;
+        point.x += Math.sin(point.phase) * 0.22;
+        if (point.x > canvas.width) point.x = 0;
+        if (point.x < 0) point.x = canvas.width;
+        ctx.beginPath();
+        ctx.arc(point.x, point.y, point.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(212, 160, 23, ${0.26 + 0.2 * Math.sin(point.phase)})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(drawCanvas);
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    drawCanvas();
+  })();
+
+  // High-Yield Verified Core Dataset Structure
+  const REPO = [
+    { id: 1, cat: "physical", freq: "vhigh", topic: "Atmosphere", q: "In which layer of the atmosphere do almost all structural weather phenomena occur?", o: ["Stratosphere", "Troposphere", "Mesosphere", "Ionosphere"], a: 1, exp: "The troposphere contains roughly 75% of the atmosphere's total mass and almost all water vapor. It is the core driver of modern weather tracking systems." },
+    { id: 2, cat: "physical", freq: "vhigh", topic: "Atmosphere", q: "The ozone layer shield, which filters structural UV rays, is concentrated within which layer?", o: ["Troposphere", "Stratosphere", "Mesosphere", "Exosphere"], a: 1, exp: "The stratosphere contains the ozone layer (ozonosphere), absorbing roughly 97-99% of the Sun's high-frequency ultraviolet light." },
+    { id: 3, cat: "physical", freq: "vhigh", topic: "Solar Mechanics", q: "The Earth reaches its maximum orbital distance from the Sun (Aphelion) on which specific date?", o: ["January 3", "July 4", "September 22", "March 21"], a: 1, exp: "At aphelion around July 4, Earth moves to its furthest point (~152 million km) from the sun. Perihelion happens around Jan 3." },
+    { id: 4, cat: "physical", freq: "vhigh", topic: "Solar Mechanics", q: "Equinox occurrences point directly to periods when the solar path is vertical above which marker?", o: ["Tropic of Cancer", "Tropic of Capricorn", "The Equator", "Prime Meridian"], a: 2, exp: "During an equinox (twice annually), the sun is directly above the equator, making day and night lengths roughly equal worldwide." },
+    { id: 5, cat: "physical", freq: "high", topic: "Wind Laws", q: "According to Ferrel's Law, wind vectors experience atmospheric deflection in which correct structural pattern?", o: ["Left in Northern Hemisphere, Right in Southern", "Right in Northern Hemisphere, Left in Southern", "Deflection is completely neutralized near the poles", "Uniform eastward rotation across all zones"], a: 1, exp: "Driven by the Coriolis force, Ferrel's Law dictates that winds deflect to the right in the Northern Hemisphere and to the left in the Southern Hemisphere." },
+    { id: 6, cat: "physical", freq: "high", topic: "Geomorphology", q: "Sinkholes and baseline collapse structures are signature diagnostic features of which topography style?", o: ["Glacial Landscape", "Karst (Limestone) Landscape", "Desert Eolian System", "Coastal Marine Shelf Area"], a: 1, exp: "Sinkholes form through chemical weathering reactions in soluble bedrock zones like limestone, a process central to Karst landforms." },
+    { id: 7, cat: "physical", freq: "med", topic: "Oceanography", q: "Among the global marine ocean Basins, which ocean features the widest continental shelf structural margin?", o: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"], a: 3, exp: "The Arctic Ocean contains the Siberian Shelf, the largest continental shelf on Earth, extending up to 1,500 km from the coastline." },
+    { id: 8, cat: "physical", freq: "high", topic: "Geomorphology", q: "A structural narrow strip of land linking two larger continental landmasses is defined as an:", o: ["Archipelago", "Strait", "Isthmus", "Lagoon"], a: 2, exp: "An isthmus is a narrow strip of land with sea on both sides, forming a link between two larger landmasses (e.g., Isthmus of Panama)." },
+    { id: 9, cat: "indian", freq: "vhigh", topic: "Hydro-Systems", q: "Which of the following lines represents the longest river flowing entirely within the geographic borders of India?", o: ["Ganga", "Godavari", "Narmada", "Krishna"], a: 1, exp: "While Ganga is longer, it enters Bangladesh. The Godavari is the longest river contained entirely inside India, spanning 1,465 km, earning it the title 'Dakshin Ganga'." },
+    { id: 10, cat: "indian", freq: "vhigh", topic: "Hydro-Systems", q: "The Narmada River basin structural catchment spans across several states, excluding which of the following?", o: ["Madhya Pradesh", "Maharashtra", "Gujarat", "Rajasthan"], a: 3, exp: "The Narmada originates in Amarkantak, flowing through Madhya Pradesh, Maharashtra, and Gujarat. Its watershed does not extend into Rajasthan." },
+    { id: 11, cat: "indian", freq: "vhigh", topic: "Agrarian Soils", q: "Which soil profile exhibits optimum structural properties for commercial cotton cultivation?", o: ["Alluvial Soil", "Black Soil (Regur)", "Red Desert Soil", "Laterite Base"], a: 1, exp: "Black soil features high clay contents and self-ploughing moisture retention capacities, making it highly effective for growing cotton crops." },
+    { id: 12, cat: "indian", freq: "vhigh", topic: "Hydro-Systems", q: "The multi-purpose structural Tehri Dam hydropower facility is constructed across which specific river source?", o: ["Bhagirathi", "Alaknanda", "Yamuna", "Ghaggar"], a: 0, exp: "The Tehri Dam is located on the Bhagirathi River in Uttarakhand, serving as the highest dam installation across India." },
+    { id: 13, cat: "indian", freq: "high", topic: "Geopolitics", q: "With which sovereign nation border does India share its longest international land border corridor?", o: ["China", "Pakistan", "Bangladesh", "Myanmar"], a: 2, exp: "India's land border with Bangladesh spans 4,156 kilometers, making it the longest boundary line shared with any neighboring country." },
+    { id: 14, cat: "indian", freq: "high", topic: "Geopolitics", q: "Which Indian maritime state possesses the longest natural coastline perimeter?", o: ["Tamil Nadu", "Maharashtra", "Gujarat", "Andhra Pradesh"], a: 2, exp: "Gujarat features a coastline stretching roughly 1,600 km, accounting for nearly 24% of India's total national coastline." },
+    { id: 15, cat: "indian", freq: "high", topic: "Industrial Mapping", q: "Where is India's premier integrated shore-based maritime steel production plant facility positioned?", o: ["Durgapur", "Bhilai", "Visakhapatnam", "Rourkela"], a: 2, exp: "The Visakhapatnam Steel Plant (Vizag Steel) is the first shore-based integrated steel facility in India, offering direct deepwater access." },
+    { id: 16, cat: "indian", freq: "med", topic: "Orography", q: "The Zoji La high altitude mountain pass forms a transit corridor linking which two geographic zones?", o: ["Srinagar and Leh", "Jammu and Srinagar", "Leh and Manali", "Arunachal and Lhasa"], a: 0, exp: "Zoji La is a vital mountain pass in the western Himalayan range, acting as the primary overland link between Srinagar and Leh." },
+    { id: 17, cat: "world", freq: "vhigh", topic: "Demographics", q: "In demographic analysis, the concept of a 'Demographic Dividend' is triggered primarily by which component transformation?", o: ["Surging Gross Birth Rates", "Expansion of the active Working-Age population tier", "Steep declines in urban migration metrics", "Equalization of national dependency ratios"], a: 1, exp: "A demographic dividend occurs when a falling birth rate shifts the population structure, increasing the ratio of productive working-age citizens relative to dependents." },
+    { id: 18, cat: "world", freq: "vhigh", topic: "Transit Geography", q: "Which infrastructure corridor ranks as the longest continuous continental railway network worldwide?", o: ["Trans-Siberian Railway", "Canadian Pacific Network", "Union Pacific Railway Cluster", "Australian Trans-Continental System"], a: 0, exp: "The Trans-Siberian Railway links Moscow to Vladivostok, spanning 9,289 kilometers across multiple time zones." },
+    { id: 19, cat: "world", freq: "high", topic: "Macro Economics", q: "Which sovereign nation maintains a dominant position as the world's largest producer of raw coffee beans?", o: ["Colombia", "Vietnam", "Ethiopia", "Brazil"], a: 3, exp: "Brazil has held its position as the world's leading exporter and producer of raw coffee beans for over 150 years." },
+    { id: 20, cat: "world", freq: "high", topic: "Global Boundaries", q: "The 38th Parallel north serves as a historical and geopolitically active line of demarcation separating which nations?", o: ["USA and Canada", "North Korea and South Korea", "Vietnam and Cambodia", "Germany and Poland"], a: 1, exp: "The 38th Parallel was established in 1945 as the boundary marker separating the northern and southern occupation zones of Korea." },
+    { id: 21, cat: "physical", freq: "high", topic: "Lithosphere", q: "Marble is classifiably categorized as a metamorphic transformation product derived from which baseline rock matrix?", o: ["Sandstone", "Limestone", "Granite", "Basalt"], a: 1, exp: "Limestone undergoes recrystallization under intense geothermal heat and lithostatic pressure, transforming its crystal structure into marble." },
+    { id: 22, cat: "indian", freq: "vhigh", topic: "Ecology", q: "Which mountain range zone is scientifically recognized as the primary core ecological biodiversity hotspot of mainland India?", o: ["Eastern Himalayas", "Western Ghats", "Aravalli Range", "Satpura Range"], a: 1, exp: "The Western Ghats run parallel to India's western coast, intercepting monsoon winds and harboring thousands of unique, endemic biological species." },
+    { id: 23, cat: "world", freq: "high", topic: "Global Gateways", q: "The strategic Strait of Gibraltar links which two prominent oceanic water bodies?", o: ["Red Sea and Indian Ocean", "Atlantic Ocean and Mediterranean Sea", "Persian Gulf and Arabian Sea", "Aegean Sea and Black Sea"], a: 1, exp: "The Strait of Gibraltar connects the Atlantic Ocean directly to the Mediterranean Sea, forming one of the world's busiest shipping lanes." },
+    { id: 24, cat: "indian", freq: "vhigh", topic: "Demographics", q: "In Indian demographic analysis, which precise census year is designated as the 'Year of the Great Demographic Divide'?", o: ["1911", "1921", "1951", "1971"], a: 1, exp: "1921 is the only census year where India's total population showed a negative growth rate (-0.31%), due to widespread famine and epidemics." },
+    { id: 25, cat: "world", freq: "med", topic: "Oceanography", q: "The ultra-deep Challenger Deep structural depression, recognized as Earth's lowest surface point, sits within which trench configuration?", o: ["Puerto Rico Trench", "Java Trench", "Mariana Trench", "Sunda Trench"], a: 2, exp: "The Challenger Deep lies inside the Mariana Trench in the western Pacific Ocean, reaching an evaluated depth of nearly 10,994 meters." }
+  ];
+
+  // Core Simulation State Engine Architecture
+  let state = {
+    questions: [...REPO],
+    currentIdx: 0,
+    userAnswers: {}, // Format: { questionId: selectedOptionIndex }
+    reviewFlags: new Set(),
+    visitedFlags: new Set(),
+    mode: 'practice', // Options: 'practice' | 'exam'
+    timeLeft: 1200, // 20 Minutes in seconds
+    timerInterval: null,
+    filters: { category: 'all', status: 'all' }
+  };
+
+  // Lifecycle Initialization Instance
+  function initSimulator() {
+    state.visitedFlags.add(state.questions[0].id);
+    buildQuestionPalette();
+    renderActiveQuestion();
+    startTimerEngine();
+    applyFilters();
+  }
+
+  // Timer Engine Implementation
+  function startTimerEngine() {
+    if (state.timerInterval) clearInterval(state.timerInterval);
+    state.timerInterval = null;
+    const clockEl = document.getElementById('clock');
+
+    if (state.mode === 'practice') {
+      clockEl.textContent = 'Practice';
+      clockEl.style.color = 'var(--light-gold)';
+      return;
+    }
+
+    state.timeLeft = 1200;
+    clockEl.textContent = '20:00';
+    clockEl.style.color = 'var(--warn)';
+
+    state.timerInterval = setInterval(() => {
+      if (state.timeLeft <= 0) {
+        clearInterval(state.timerInterval);
+        state.timerInterval = null;
+        autoSubmitExam();
+        return;
+      }
+      state.timeLeft--;
+      
+      // Compute formatted strings
+      const mins = Math.floor(state.timeLeft / 60).toString().padStart(2, '0');
+      const secs = (state.timeLeft % 60).toString().padStart(2, '0');
+      clockEl.textContent = `${mins}:${secs}`;
+
+      // Set warning color states
+      if (state.timeLeft < 300) {
+        clockEl.style.color = 'var(--danger)';
+      } else if (state.timeLeft < 600) {
+        clockEl.style.color = 'var(--warn)';
+      } else {
+        clockEl.style.color = 'var(--warn)';
+      }
+    }, 1000);
+  }
+
+  // Dynamic Filtration Logic
+  function applyFilters() {
+    const cat = document.getElementById('filterCategory').value;
+    const stat = document.getElementById('filterStatus').value;
+    state.filters = { category: cat, status: stat };
+
+    state.questions = REPO.filter(q => {
+      const matchCat = (cat === 'all' || q.cat === cat);
+      let matchStat = true;
+      if (stat === 'answered') matchStat = state.userAnswers.hasOwnProperty(q.id);
+      else if (stat === 'review') matchStat = state.reviewFlags.has(q.id);
+      else if (stat === 'unvisited') matchStat = !state.visitedFlags.has(q.id);
+      return matchCat && matchStat;
+    });
+
+    state.currentIdx = 0;
+    buildQuestionPalette();
+    renderActiveQuestion();
+  }
+
+  // Component Building Logic: UI Question Grid
+  function buildQuestionPalette() {
+    const grid = document.getElementById('paletteGrid');
+    grid.innerHTML = '';
+
+    if (state.questions.length === 0) {
+      grid.innerHTML = '<div style="grid-column: 1/-1; font-size:11px; text-align:center; color:var(--text-muted);">No active data matches.</div>';
+      return;
+    }
+
+    state.questions.forEach((q, idx) => {
+      const cell = document.createElement('div');
+      cell.className = 'palette-cell';
+      cell.textContent = idx + 1;
+
+      // Evaluate visual states
+      if (idx === state.currentIdx) cell.classList.add('active');
+      if (state.userAnswers.hasOwnProperty(q.id)) cell.classList.add('answered');
+      else if (state.reviewFlags.has(q.id)) cell.classList.add('review');
+      else if (state.visitedFlags.has(q.id)) cell.classList.add('visited');
+
+      cell.onclick = () => jumpToQuestion(idx);
+      grid.appendChild(cell);
+    });
+  }
+
+  // Active Component Viewport Builder
+  function renderActiveQuestion() {
+    const container = document.getElementById('questionCard');
+    container.innerHTML = '';
+
+    if (state.questions.length === 0) {
+      container.innerHTML = `
+        <div style="text-align:center; padding:40px 0;">
+          <h3 style="color:var(--text-muted); font-weight:500;">No items found matching the selected filter criteria.</h3>
+          <button class="btn btn-secondary" style="margin-top:14px; margin-inline:auto;" onclick="resetFilters()">Clear Filters</button>
+        </div>`;
+      updateNavigationControls();
+      return;
+    }
+
+    const q = state.questions[state.currentIdx];
+    state.visitedFlags.add(q.id);
+
+    const hasAnswered = state.userAnswers.hasOwnProperty(q.id);
+    const selectedAns = state.userAnswers[q.id];
+
+    // Card Metadata Headers
+    const metaRow = document.createElement('div');
+    metaRow.className = 'card-meta';
+    metaRow.innerHTML = `
+      <span class="tag tag-${q.freq}">${q.freq === 'vhigh' ? 'Very High Recurrence' : q.freq === 'high' ? 'High Yield' : 'Medium Yield'}</span>
+      <span style="font-size:12px; color:var(--text-muted); font-weight:600;">Cluster: ${q.topic}</span>
+    `;
+    container.appendChild(metaRow);
+
+    // Question Body Label
+    const qText = document.createElement('div');
+    qText.className = 'question-text';
+    qText.textContent = `Q.${state.currentIdx + 1} ${q.q}`;
+    container.appendChild(qText);
+
+    // Options Framework Component Generator
+    const optionsList = document.createElement('div');
+    optionsList.className = 'options-list';
+
+    q.o.forEach((opt, oIdx) => {
+      const wrapper = document.createElement('label');
+      wrapper.className = 'option-wrapper';
+      if (selectedAns === oIdx) wrapper.classList.add('selected');
+
+      // Evaluator feedback logic for Practice mode
+      if (state.mode === 'practice' && hasAnswered) {
+        if (oIdx === q.a) wrapper.classList.add('verified-correct');
+        else if (selectedAns === oIdx) wrapper.classList.add('verified-incorrect');
+      }
+
+      wrapper.innerHTML = `
+        <input type="radio" name="qOpt" value="${oIdx}" ${selectedAns === oIdx ? 'checked' : ''} ${state.mode === 'practice' && hasAnswered ? 'disabled' : ''} onchange="selectOption(${q.id}, ${oIdx})">
+        <div class="option-marker">${String.fromCharCode(65 + oIdx)}</div>
+        <div class="option-string">${opt}</div>
+      `;
+      optionsList.appendChild(wrapper);
+    });
+    container.appendChild(optionsList);
+
+    // Dynamic Explanation Layer
+    const expBox = document.createElement('div');
+    expBox.className = `explanation-box ${state.mode === 'practice' && hasAnswered ? 'visible' : ''}`;
+    expBox.innerHTML = `
+      <h5 style="color:var(--success); font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Answer Insight</h5>
+      <p style="font-size:13px; line-height:1.5; color:var(--text);">${q.exp}</p>
+    `;
+    container.appendChild(expBox);
+
+    updateNavigationControls();
+  }
+
+  // Controller Interactions Mapping
+  function selectOption(qId, optionIndex) {
+    state.userAnswers[qId] = optionIndex;
+    state.reviewFlags.delete(qId); // Remove review flag on choice selection
+    
+    // Auto refresh view constraints if in practice state to trigger animations
+    if (state.mode === 'practice') {
+      renderActiveQuestion();
+    }
+    buildQuestionPalette();
+  }
+
+  function clearActiveResponse() {
+    if (state.questions.length === 0) return;
+    const q = state.questions[state.currentIdx];
+    delete state.userAnswers[q.id];
+    renderActiveQuestion();
+    buildQuestionPalette();
+  }
+
+  function flagReview() {
+    if (state.questions.length === 0) return;
+    const q = state.questions[state.currentIdx];
+    if (state.reviewFlags.has(q.id)) {
+      state.reviewFlags.delete(q.id);
+    } else {
+      state.reviewFlags.add(q.id);
+      delete state.userAnswers[q.id]; // Mutually exclusive statuses
+    }
+    renderActiveQuestion();
+    buildQuestionPalette();
+  }
+
+  function saveAndNext() {
+    if (state.currentIdx < state.questions.length - 1) {
+      state.currentIdx++;
+      renderActiveQuestion();
+      buildQuestionPalette();
+    }
+  }
+
+  function navigateQuestion(direction) {
+    const nextIdx = state.currentIdx + direction;
+    if (nextIdx >= 0 && nextIdx < state.questions.length) {
+      state.currentIdx = nextIdx;
+      renderActiveQuestion();
+      buildQuestionPalette();
+    }
+  }
+
+  function jumpToQuestion(idx) {
+    state.currentIdx = idx;
+    renderActiveQuestion();
+    buildQuestionPalette();
+  }
+
+  function updateNavigationControls() {
+    document.getElementById('btnPrev').disabled = (state.currentIdx === 0 || state.questions.length === 0);
+    document.getElementById('btnNext').disabled = (state.currentIdx === state.questions.length - 1 || state.questions.length === 0);
+  }
+
+  function resetFilters() {
+    document.getElementById('filterCategory').value = 'all';
+    document.getElementById('filterStatus').value = 'all';
+    applyFilters();
+  }
+
+  // Operating Engine State Switcher
+  function switchMode(targetMode) {
+    if (state.mode === targetMode) return;
+    state.mode = targetMode;
+
+    document.getElementById('btnModePractice').classList.toggle('active', targetMode === 'practice');
+    document.getElementById('btnModeExam').classList.toggle('active', targetMode === 'exam');
+    
+    // Toggle system controls display visibility based on active mode state
+    document.getElementById('btnSubmit').style.display = targetMode === 'exam' ? 'block' : 'none';
+
+    // Wipe previous session trace state for consistency
+    state.userAnswers = {};
+    state.reviewFlags.clear();
+    state.visitedFlags.clear();
+    state.timeLeft = 1200;
+    state.currentIdx = 0;
+    
+    initSimulator();
+  }
+
+  // Structural Mobile Utilities
+  function toggleSidebarMobile() {
+    document.getElementById('sidebar').classList.toggle('mobile-open');
+  }
+
+  // Analytical Compilation & Metric Output Processing Engine
+  function triggerExamSubmission() {
+    const unsubmittedCount = REPO.length - Object.keys(state.userAnswers).length;
+    let message = "Confirm submission of your mock exam?";
+    if (unsubmittedCount > 0) {
+      message += `\nWarning: You have left ${unsubmittedCount} question(s) unattempted.`;
+    }
+    if (confirm(message)) {
+      compileSessionAnalytics();
+    }
+  }
+
+  function autoSubmitExam() {
+    alert("Exam time window has closed. Compiling available inputs...");
+    compileSessionAnalytics();
+  }
+
+  function compileSessionAnalytics() {
+    clearInterval(state.timerInterval);
+
+    let rawScore = 0;
+    let correctCount = 0;
+    let attemptedCount = Object.keys(state.userAnswers).length;
+
+    // Metric maps split along domain components
+    let categoriesData = {
+      physical: { total: 0, correct: 0, attempted: 0 },
+      indian: { total: 0, correct: 0, attempted: 0 },
+      world: { total: 0, correct: 0, attempted: 0 }
+    };
+
+    REPO.forEach(q => {
+      categoriesData[q.cat].total++;
+      if (state.userAnswers.hasOwnProperty(q.id)) {
+        categoriesData[q.cat].attempted++;
+        if (state.userAnswers[q.id] === q.a) {
+          rawScore += 4.0; // Tier 2 typical pricing metrics mapping
+          correctCount++;
+          categoriesData[q.cat].correct++;
+        } else {
+          rawScore -= 1.0; // Standard negative marking penalty calculation
+        }
+      }
+    });
+
+    // Populate global indicator interfaces
+    document.getElementById('scoreRaw').textContent = `${rawScore.toFixed(2)} / ${REPO.length * 4}`;
+    const accuracy = attemptedCount > 0 ? ((correctCount / attemptedCount) * 100).toFixed(1) : "0.0";
+    document.getElementById('scoreAccuracy').textContent = `${accuracy}%`;
+    
+    const elementsSpent = 1200 - state.stateTimeLeft;
+    const timeSpent = 1200 - state.timeLeft;
+    const spentMins = Math.floor(timeSpent / 60).toString().padStart(2, '0');
+    const spentSecs = (timeSpent % 60).toString().padStart(2, '0');
+    document.getElementById('timeDelta').textContent = `${spentMins}:${spentSecs}`;
+
+    // Compute cutoff likelihood probability state thresholds
+    const statusEl = document.getElementById('cutoffStatus');
+    if (rawScore >= (REPO.length * 4 * 0.75)) {
+      statusEl.textContent = "OPTIMAL";
+      statusEl.style.color = 'var(--success)';
+    } else if (rawScore >= (REPO.length * 4 * 0.45)) {
+      statusEl.textContent = "MARGINAL";
+      statusEl.style.color = 'var(--warn)';
+    } else {
+      statusEl.textContent = "CRITICAL";
+      statusEl.style.color = 'var(--danger)';
+    }
+
+    // Append table breakdowns
+    const tableBody = document.getElementById('breakdownRows');
+    tableBody.innerHTML = '';
+    
+    const labelMapping = { physical: 'Physical Geography Cluster', indian: 'Indian Geography Core', world: 'World & Economic Dynamics' };
+
+    Object.keys(categoriesData).forEach(key => {
+      const c = categoriesData[key];
+      const catAcc = c.attempted > 0 ? ((c.correct / c.attempted) * 100).toFixed(1) : "0.0";
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td style="font-weight:600;">${labelMapping[key]}</td>
+        <td>${c.total}</td>
+        <td>${c.attempted}</td>
+        <td style="font-weight:700; color:var(--accent);">${catAcc}%</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    document.getElementById('analyticsHub').classList.add('visible');
+  }
+
+  function downloadReviewSheet() {
+    let content = "=== SSC CGL GEOGRAPHY PYQ SESSION LOG FILE ===\n\n";
+    REPO.forEach((q, idx) => {
+      const userAnsIdx = state.userAnswers[q.id];
+      const status = userAnsIdx === undefined ? "UNATTEMPTED" : userAnsIdx === q.a ? "CORRECT" : "INCORRECT";
+      content += `Item ${idx + 1}: ${q.q}\n`;
+      content += `Your Input Selection: ${userAnsIdx !== undefined ? q.o[userAnsIdx] : "None"}\n`;
+      content += `System Key Resolution: ${q.o[q.a]}\n`;
+      content += `Evaluation Status: ${status}\n`;
+      content += `Insight Framework Note: ${q.exp}\n`;
+      content += "---------------------------------------------------------\n\n";
+    });
+
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `Geography_Session_Log_Report.txt`;
+    link.click();
+  }
+
+  function resetSimulator() {
+    state.userAnswers = {};
+    state.reviewFlags.clear();
+    state.visitedFlags.clear();
+    state.timeLeft = 1200;
+    state.currentIdx = 0;
+    document.getElementById('analyticsHub').classList.remove('visible');
+    resetFilters();
+    initSimulator();
+  }
+
+  // Ignition Hook
+  window.onload = initSimulator;
+</script>
+</body>
+</html>

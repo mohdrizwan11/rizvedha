@@ -1,0 +1,6315 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "national-parks",
+  "file": "national_parks_india.html",
+  "storageKey": "ssc_np_game_v1",
+  "icon": "🐅",
+  "description": "Bilingual study app on India's national parks: map quiz, fact cards, exam notes and MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "National Parks of India",
+      "भारत के राष्ट्रीय उद्यान"
+    ],
+    "hSub": [
+      "SSC Focus · Wildlife map and notes",
+      "SSC फोकस · वन्यजीव मानचित्र व नोट्स"
+    ],
+    "qLabel": [
+      "Select the state of this national park",
+      "इस राष्ट्रीय उद्यान का राज्य चुनें"
+    ],
+    "next": [
+      "Next park",
+      "अगला उद्यान"
+    ],
+    "learnTtl": [
+      "Learn national parks",
+      "राष्ट्रीय उद्यान सीखें"
+    ],
+    "learnSub": [
+      "Open any park to read its place, signature species, river, status and the facts asked in exams.",
+      "किसी भी उद्यान को खोलकर उसका स्थान, प्रमुख प्रजाति, नदी, दर्जा और परीक्षा में पूछे जाने वाले तथ्य पढ़ें।"
+    ],
+    "atlasSub": [
+      "Every park on the map, coloured by habitat.",
+      "हर उद्यान मानचित्र पर, आवास के प्रकार के रंग में।"
+    ],
+    "lvlLabel": [
+      "Level · Wildlife GK rank",
+      "स्तर · वन्यजीव GK रैंक"
+    ],
+    "howto": [
+      "Play: a park name is shown; select its state on the map of India. A tap close to the park earns full XP.\nLearn → Parks: 130 national parks with place, signature species, river, tiger reserve, World Heritage and Ramsar status, and exam facts.\nLearn → Exam notes: tables of firsts, records, World Heritage and Ramsar sites, species, rivers and recent additions.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every park on the map, coloured by habitat.\nCounts change as states notify new parks. Facts were checked in October 2026.",
+      "खेलें: उद्यान का नाम दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उद्यान के पास टैप करने पर पूरा XP मिलता है।\nसीखें → उद्यान: 130 राष्ट्रीय उद्यान – स्थान, प्रमुख प्रजाति, नदी, टाइगर रिज़र्व, विश्व धरोहर और रामसर दर्जा, और परीक्षा तथ्य।\nसीखें → परीक्षा नोट्स: प्रथम, रिकॉर्ड, विश्व धरोहर और रामसर स्थल, प्रजातियाँ, नदियाँ और नए उद्यानों की तालिकाएँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर उद्यान मानचित्र पर, आवास के रंग में।\nराज्य नए उद्यान अधिसूचित करते रहते हैं, इसलिए संख्याएँ बदलती हैं। तथ्य अक्टूबर 2026 में जाँचे गए।"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state where this national park is.",
+      "भारत का मानचित्र। जिस राज्य में यह राष्ट्रीय उद्यान है उसे चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its national parks.",
+      "भारत का मानचित्र। किसी राज्य के राष्ट्रीय उद्यान देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's parks.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य के उद्यान देखें।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read a park, or a state to list its parks.",
+      "किसी चिह्न को छूकर उद्यान पढ़ें, या राज्य को छूकर उसके उद्यान देखें।"
+    ],
+    "noPlants": [
+      "No national park from this state in the deck.",
+      "इस राज्य का कोई राष्ट्रीय उद्यान सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "parks",
+      "उद्यान"
+    ],
+    "filterGroup": [
+      "Filter by habitat or region",
+      "आवास या क्षेत्र से छाँटें"
+    ],
+    "typeGroup": [
+      "Filter by habitat",
+      "आवास के प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search parks",
+      "उद्यान खोजें"
+    ],
+    "searchPh": [
+      "Park, state, species or river",
+      "उद्यान, राज्य, प्रजाति या नदी"
+    ],
+    "resultsN": [
+      "parks listed",
+      "उद्यान सूची में"
+    ],
+    "noResults": [
+      "No park matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कोई उद्यान नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "plantMarker": [
+      "national park",
+      "राष्ट्रीय उद्यान"
+    ],
+    "atlasPickerLabel": [
+      "Browse a national park",
+      "राष्ट्रीय उद्यान खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select a national park",
+      "राष्ट्रीय उद्यान चुनें"
+    ],
+    "ltPlants": [
+      "Parks",
+      "उद्यान"
+    ],
+    "drillSub": [
+      "Ten questions on states, signature species, rivers and exam facts. Each answer comes with an explanation.",
+      "राज्य, प्रमुख प्रजाति, नदी और परीक्षा तथ्यों पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Parks studied",
+      "पढ़े गए उद्यान"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the habitat.",
+      "चिह्नों के रंग आवास का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "parks on the map",
+      "उद्यान मानचित्र पर"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qInState": [
+      "Which of these national parks is in",
+      "इनमें से कौन-सा राष्ट्रीय उद्यान इस राज्य में है:"
+    ]
+  },
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Location",
+        "स्थान"
+      ]
+    },
+    {
+      "k": "ty",
+      "t": [
+        "Habitat",
+        "आवास"
+      ]
+    },
+    {
+      "k": "yr",
+      "t": [
+        "Declared",
+        "घोषित"
+      ]
+    },
+    {
+      "k": "sp",
+      "t": [
+        "Best known for",
+        "किसके लिए प्रसिद्ध"
+      ]
+    },
+    {
+      "k": "riv",
+      "t": [
+        "River",
+        "नदी"
+      ]
+    },
+    {
+      "extras": true
+    }
+  ],
+  "extras": {
+    "tr": [
+      "Tiger reserve",
+      "टाइगर रिज़र्व"
+    ],
+    "whs": [
+      "World Heritage",
+      "विश्व धरोहर"
+    ],
+    "ramsar": [
+      "Ramsar",
+      "रामसर"
+    ],
+    "br": [
+      "Biosphere reserve",
+      "जैवमंडल रिज़र्व"
+    ]
+  },
+  "feedback": [
+    "st",
+    "sp",
+    "yr"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Nature Rookie",
+      "hi": "प्रकृति नवागंतुक"
+    },
+    {
+      "min": 60,
+      "en": "Trail Walker",
+      "hi": "पगडंडी यात्री"
+    },
+    {
+      "min": 150,
+      "en": "Forest Explorer",
+      "hi": "वन खोजी"
+    },
+    {
+      "min": 320,
+      "en": "Wildlife Ranger",
+      "hi": "वन्यजीव रेंजर"
+    },
+    {
+      "min": 560,
+      "en": "Park Warden",
+      "hi": "उद्यान वार्डन"
+    },
+    {
+      "min": 900,
+      "en": "Conservation Expert",
+      "hi": "संरक्षण विशेषज्ञ"
+    },
+    {
+      "min": 1400,
+      "en": "Wild India Champion",
+      "hi": "वन्य भारत चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🐾",
+      "t": [
+        "First Track",
+        "पहला पदचिह्न"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Trail Finder",
+        "पगडंडी खोजी"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Park Mapper",
+        "उद्यान मैपर"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "terai",
+      "icon": "🦏",
+      "t": [
+        "Terai Tracker",
+        "तराई ट्रैकर"
+      ],
+      "d": [
+        "Study 8 terai parks",
+        "8 तराई उद्यान पढ़ें"
+      ],
+      "need": {
+        "seen": 8,
+        "types": [
+          "terai"
+        ]
+      }
+    },
+    {
+      "id": "himalaya",
+      "icon": "🏔️",
+      "t": [
+        "Snowline Scout",
+        "हिमरेखा स्काउट"
+      ],
+      "d": [
+        "Study 8 Himalayan parks",
+        "8 हिमालयी उद्यान पढ़ें"
+      ],
+      "need": {
+        "seen": 8,
+        "types": [
+          "him"
+        ]
+      }
+    },
+    {
+      "id": "ghats",
+      "icon": "🐒",
+      "t": [
+        "Ghats Guardian",
+        "घाट रक्षक"
+      ],
+      "d": [
+        "Study 8 Western Ghats parks",
+        "पश्चिमी घाट के 8 उद्यान पढ़ें"
+      ],
+      "need": {
+        "seen": 8,
+        "types": [
+          "ghats"
+        ]
+      }
+    },
+    {
+      "id": "marine",
+      "icon": "🐢",
+      "t": [
+        "Reef Diver",
+        "प्रवाल गोताखोर"
+      ],
+      "d": [
+        "Study every marine & island park",
+        "सभी समुद्री और द्वीपीय उद्यान पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "sea"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Wild India Champion",
+        "वन्य भारत चैंपियन"
+      ],
+      "d": [
+        "Study all parks",
+        "सभी उद्यान पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "sp",
+        "field": "sp",
+        "ask": [
+          "What is this park best known for?",
+          "यह उद्यान किसके लिए सबसे अधिक जाना जाता है?"
+        ],
+        "reverseId": "ws",
+        "reverseAsk": [
+          "Which national park is best known for",
+          "कौन-सा राष्ट्रीय उद्यान इसके लिए सबसे अधिक जाना जाता है:"
+        ],
+        "pairs": [
+          [
+            "Snow leopard",
+            "Siberian ibex"
+          ],
+          [
+            "Snow leopard",
+            "Western tragopan"
+          ],
+          [
+            "Snow leopard",
+            "Alpine flowers"
+          ],
+          [
+            "Snow leopard",
+            "Four big cats"
+          ],
+          [
+            "Red panda",
+            "Four big cats"
+          ],
+          [
+            "Hoolock gibbon",
+            "Four big cats"
+          ],
+          [
+            "Hard-ground barasingha",
+            "Swamp deer (barasingha)"
+          ],
+          [
+            "Hard-ground barasingha",
+            "Blackbuck"
+          ],
+          [
+            "One-horned rhinoceros",
+            "Pygmy hog"
+          ],
+          [
+            "One-horned rhinoceros",
+            "Wild water buffalo"
+          ],
+          [
+            "One-horned rhinoceros",
+            "Golden langur"
+          ],
+          [
+            "One-horned rhinoceros",
+            "Swamp deer (barasingha)"
+          ],
+          [
+            "Pygmy hog",
+            "Golden langur"
+          ],
+          [
+            "Pygmy hog",
+            "Wild water buffalo"
+          ],
+          [
+            "Wild water buffalo",
+            "Feral horses"
+          ],
+          [
+            "Great Indian bustard",
+            "Blackbuck"
+          ],
+          [
+            "Migratory waterbirds",
+            "Blackbuck"
+          ],
+          [
+            "Hoolock gibbon",
+            "Golden langur"
+          ],
+          [
+            "Saltwater crocodile",
+            "Mangrove tigers"
+          ],
+          [
+            "Saltwater crocodile",
+            "Coral reefs"
+          ],
+          [
+            "Dugong (sea cow)",
+            "Coral reefs"
+          ],
+          [
+            "Nicobar megapode",
+            "Saltwater crocodile"
+          ],
+          [
+            "Nicobar megapode",
+            "Coral reefs"
+          ],
+          [
+            "Migratory waterbirds",
+            "Saltwater crocodile"
+          ],
+          [
+            "Wild water buffalo",
+            "Hard-ground barasingha"
+          ],
+          [
+            "Hangul (Kashmir stag)",
+            "Snow leopard"
+          ],
+          [
+            "Migratory waterbirds",
+            "Mangrove tigers"
+          ]
+        ]
+      },
+      {
+        "id": "rv",
+        "field": "riv",
+        "ask": [
+          "On which river does this park lie?",
+          "यह उद्यान किस नदी पर है?"
+        ],
+        "reverseId": "or",
+        "reverseAsk": [
+          "Which national park lies on the river",
+          "कौन-सा राष्ट्रीय उद्यान इस नदी पर है:"
+        ],
+        "pairs": [
+          [
+            "Ganga",
+            "Bhagirathi"
+          ],
+          [
+            "Ganga",
+            "Ramganga"
+          ],
+          [
+            "Brahmaputra",
+            "Manas"
+          ],
+          [
+            "Brahmaputra",
+            "Jia Bharali (Kameng)"
+          ],
+          [
+            "Godavari",
+            "Penna"
+          ],
+          [
+            "Moyar",
+            "Kabini"
+          ],
+          [
+            "Tirthan and Sainj",
+            "Parvati"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "first",
+              "record",
+              "unesco",
+              "ramsar",
+              "species",
+              "loc",
+              "river",
+              "ca"
+            ],
+            "n": 4
+          },
+          {
+            "q": "st",
+            "n": 2
+          },
+          {
+            "q": "is",
+            "n": 1
+          },
+          {
+            "q": "sp",
+            "n": 1
+          },
+          {
+            "q": "ws",
+            "n": 1
+          },
+          {
+            "q": "rv",
+            "n": 1
+          }
+        ]
+      },
+      {
+        "id": "facts",
+        "t": [
+          "Exam facts",
+          "परीक्षा तथ्य"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "first",
+              "record",
+              "unesco",
+              "ramsar",
+              "ca"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "loc",
+        "t": [
+          "States",
+          "राज्य"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "loc"
+            ],
+            "n": 3
+          },
+          {
+            "q": "st",
+            "n": 4
+          },
+          {
+            "q": "is",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "species",
+        "t": [
+          "Species",
+          "प्रजातियाँ"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "species"
+            ],
+            "n": 4
+          },
+          {
+            "q": "sp",
+            "n": 3
+          },
+          {
+            "q": "ws",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "river",
+        "t": [
+          "Rivers",
+          "नदियाँ"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "river"
+            ],
+            "n": 4
+          },
+          {
+            "q": "rv",
+            "n": 3
+          },
+          {
+            "q": "or",
+            "n": 3
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "snap",
+      "icon": "📊",
+      "t": [
+        "National parks at a glance",
+        "राष्ट्रीय उद्यान एक नज़र में"
+      ],
+      "sub": [
+        "Counts change when states notify new parks; the date is given with each figure.",
+        "राज्यों के नए उद्यान अधिसूचित करने पर संख्याएँ बदलती हैं; हर आँकड़े के साथ तिथि दी गई है।"
+      ],
+      "cols": [
+        [
+          "Point",
+          "बिंदु"
+        ],
+        [
+          "Fact",
+          "तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "National parks",
+            "राष्ट्रीय उद्यान"
+          ],
+          [
+            "About 107 (2025); some lists count the three Button Island parks separately",
+            "लगभग 107 (2025); कुछ सूचियाँ तीनों बटन द्वीप उद्यानों को अलग गिनती हैं"
+          ]
+        ],
+        [
+          [
+            "Tiger reserves",
+            "टाइगर रिज़र्व"
+          ],
+          [
+            "58 — the newest is Madhav, Madhya Pradesh (March 2025)",
+            "58 — सबसे नया माधव, मध्य प्रदेश (मार्च 2025)"
+          ]
+        ],
+        [
+          [
+            "Law",
+            "क़ानून"
+          ],
+          [
+            "Declared by state governments under section 35 of the Wild Life (Protection) Act, 1972",
+            "राज्य सरकारें वन्यजीव (संरक्षण) अधिनियम, 1972 की धारा 35 के अंतर्गत घोषित करती हैं"
+          ]
+        ],
+        [
+          [
+            "First national park",
+            "पहला राष्ट्रीय उद्यान"
+          ],
+          [
+            "Hailey National Park, 1936 — now Jim Corbett, Uttarakhand",
+            "हेली राष्ट्रीय उद्यान, 1936 — अब जिम कॉर्बेट, उत्तराखंड"
+          ]
+        ],
+        [
+          [
+            "Largest",
+            "सबसे बड़ा"
+          ],
+          [
+            "Hemis, Ladakh",
+            "हेमिस, लद्दाख"
+          ]
+        ],
+        [
+          [
+            "Smallest",
+            "सबसे छोटा"
+          ],
+          [
+            "South Button Island, Andaman and Nicobar Islands",
+            "साउथ बटन द्वीप, अंडमान और निकोबार द्वीपसमूह"
+          ]
+        ],
+        [
+          [
+            "Most parks",
+            "सबसे अधिक उद्यान"
+          ],
+          [
+            "Madhya Pradesh",
+            "मध्य प्रदेश"
+          ]
+        ],
+        [
+          [
+            "Newest",
+            "सबसे नए"
+          ],
+          [
+            "Similipal, Odisha (24 April 2025) and Sikhna Jwhwlao, Assam (5 March 2025)",
+            "सिमलीपाल, ओडिशा (24 अप्रैल 2025) और सिखना ज्वह्वलाओ, असम (5 मार्च 2025)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "firsts",
+      "icon": "🥇",
+      "t": [
+        "Firsts and records",
+        "प्रथम और रिकॉर्ड"
+      ],
+      "cols": [
+        [
+          "Record",
+          "रिकॉर्ड"
+        ],
+        [
+          "Park",
+          "उद्यान"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First national park (1936)",
+            "पहला राष्ट्रीय उद्यान (1936)"
+          ],
+          [
+            "Jim Corbett (Hailey), Uttarakhand",
+            "जिम कॉर्बेट (हेली), उत्तराखंड"
+          ]
+        ],
+        [
+          [
+            "First under Project Tiger (1973)",
+            "प्रोजेक्ट टाइगर में पहला (1973)"
+          ],
+          [
+            "Jim Corbett",
+            "जिम कॉर्बेट"
+          ]
+        ],
+        [
+          [
+            "First marine national park (1982)",
+            "पहला समुद्री राष्ट्रीय उद्यान (1982)"
+          ],
+          [
+            "Gulf of Kachchh, Gujarat",
+            "कच्छ की खाड़ी, गुजरात"
+          ]
+        ],
+        [
+          [
+            "Only floating national park",
+            "एकमात्र तैरता राष्ट्रीय उद्यान"
+          ],
+          [
+            "Keibul Lamjao, Loktak Lake, Manipur",
+            "केबुल लामजाओ, लोकटक झील, मणिपुर"
+          ]
+        ],
+        [
+          [
+            "Only wild home of the Asiatic lion",
+            "एशियाई शेर का एकमात्र जंगली घर"
+          ],
+          [
+            "Gir, Gujarat",
+            "गिर, गुजरात"
+          ]
+        ],
+        [
+          [
+            "First cheetahs brought back (17 Sept 2022)",
+            "पहली बार चीते वापस लाए गए (17 सितंबर 2022)"
+          ],
+          [
+            "Kuno, Madhya Pradesh",
+            "कूनो, मध्य प्रदेश"
+          ]
+        ],
+        [
+          [
+            "India's first mixed World Heritage Site (2016)",
+            "भारत का पहला मिश्रित विश्व धरोहर स्थल (2016)"
+          ],
+          [
+            "Khangchendzonga, Sikkim",
+            "खंगचेंदज़ोंगा, सिक्किम"
+          ]
+        ],
+        [
+          [
+            "Highest density of snow leopards",
+            "हिम तेंदुओं का सबसे अधिक घनत्व"
+          ],
+          [
+            "Hemis, Ladakh",
+            "हेमिस, लद्दाख"
+          ]
+        ],
+        [
+          [
+            "First national park of Kerala",
+            "केरल का पहला राष्ट्रीय उद्यान"
+          ],
+          [
+            "Eravikulam",
+            "एराविकुलम"
+          ]
+        ],
+        [
+          [
+            "First tiger reserve with a mascot (Bhoorsingh)",
+            "शुभंकर (भूरसिंह) वाला पहला टाइगर रिज़र्व"
+          ],
+          [
+            "Kanha, Madhya Pradesh",
+            "कान्हा, मध्य प्रदेश"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "unesco",
+      "icon": "🏛️",
+      "t": [
+        "National parks that are World Heritage Sites",
+        "विश्व धरोहर स्थल वाले राष्ट्रीय उद्यान"
+      ],
+      "cols": [
+        [
+          "Site",
+          "स्थल"
+        ],
+        [
+          "State",
+          "राज्य"
+        ],
+        [
+          "Listed",
+          "सूची में"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Kaziranga",
+            "काज़ीरंगा"
+          ],
+          [
+            "Assam",
+            "असम"
+          ],
+          [
+            "1985",
+            "1985"
+          ]
+        ],
+        [
+          [
+            "Manas",
+            "मानस"
+          ],
+          [
+            "Assam",
+            "असम"
+          ],
+          [
+            "1985",
+            "1985"
+          ]
+        ],
+        [
+          [
+            "Keoladeo",
+            "केवलादेव"
+          ],
+          [
+            "Rajasthan",
+            "राजस्थान"
+          ],
+          [
+            "1985",
+            "1985"
+          ]
+        ],
+        [
+          [
+            "Sundarbans",
+            "सुंदरबन"
+          ],
+          [
+            "West Bengal",
+            "पश्चिम बंगाल"
+          ],
+          [
+            "1987",
+            "1987"
+          ]
+        ],
+        [
+          [
+            "Nanda Devi and Valley of Flowers",
+            "नंदा देवी और फूलों की घाटी"
+          ],
+          [
+            "Uttarakhand",
+            "उत्तराखंड"
+          ],
+          [
+            "1988; Valley of Flowers added 2005",
+            "1988; फूलों की घाटी 2005 में जुड़ी"
+          ]
+        ],
+        [
+          [
+            "Western Ghats (includes parks such as Mukurthi)",
+            "पश्चिमी घाट (मुकुर्ती जैसे उद्यान शामिल)"
+          ],
+          [
+            "Kerala, Karnataka, Tamil Nadu, Maharashtra",
+            "केरल, कर्नाटक, तमिलनाडु, महाराष्ट्र"
+          ],
+          [
+            "2012",
+            "2012"
+          ]
+        ],
+        [
+          [
+            "Great Himalayan National Park",
+            "ग्रेट हिमालयन राष्ट्रीय उद्यान"
+          ],
+          [
+            "Himachal Pradesh",
+            "हिमाचल प्रदेश"
+          ],
+          [
+            "2014",
+            "2014"
+          ]
+        ],
+        [
+          [
+            "Khangchendzonga (mixed site)",
+            "खंगचेंदज़ोंगा (मिश्रित स्थल)"
+          ],
+          [
+            "Sikkim",
+            "सिक्किम"
+          ],
+          [
+            "2016",
+            "2016"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ramsar",
+      "icon": "🦆",
+      "t": [
+        "Ramsar wetlands in national parks",
+        "राष्ट्रीय उद्यानों में रामसर आर्द्रभूमि"
+      ],
+      "cols": [
+        [
+          "Park",
+          "उद्यान"
+        ],
+        [
+          "Ramsar site",
+          "रामसर स्थल"
+        ],
+        [
+          "Year",
+          "वर्ष"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Keoladeo, Rajasthan",
+            "केवलादेव, राजस्थान"
+          ],
+          [
+            "Keoladeo National Park",
+            "केवलादेव राष्ट्रीय उद्यान"
+          ],
+          [
+            "1981",
+            "1981"
+          ]
+        ],
+        [
+          [
+            "Keibul Lamjao, Manipur",
+            "केबुल लामजाओ, मणिपुर"
+          ],
+          [
+            "Loktak Lake",
+            "लोकटक झील"
+          ],
+          [
+            "1990",
+            "1990"
+          ]
+        ],
+        [
+          [
+            "Bhitarkanika, Odisha",
+            "भितरकनिका, ओडिशा"
+          ],
+          [
+            "Bhitarkanika mangroves",
+            "भितरकनिका मैंग्रोव"
+          ],
+          [
+            "2002",
+            "2002"
+          ]
+        ],
+        [
+          [
+            "Sundarbans, West Bengal",
+            "सुंदरबन, पश्चिम बंगाल"
+          ],
+          [
+            "Sundarban wetland",
+            "सुंदरबन आर्द्रभूमि"
+          ],
+          [
+            "2019",
+            "2019"
+          ]
+        ],
+        [
+          [
+            "Sultanpur, Haryana",
+            "सुल्तानपुर, हरियाणा"
+          ],
+          [
+            "Sultanpur National Park",
+            "सुल्तानपुर राष्ट्रीय उद्यान"
+          ],
+          [
+            "2021",
+            "2021"
+          ]
+        ],
+        [
+          [
+            "Madhav, Madhya Pradesh",
+            "माधव, मध्य प्रदेश"
+          ],
+          [
+            "Sakhya Sagar",
+            "सख्य सागर"
+          ],
+          [
+            "2022",
+            "2022"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "species",
+      "icon": "🐾",
+      "t": [
+        "Signature species",
+        "प्रमुख प्रजातियाँ"
+      ],
+      "cols": [
+        [
+          "Species",
+          "प्रजाति"
+        ],
+        [
+          "Park",
+          "उद्यान"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Asiatic lion",
+            "एशियाई शेर"
+          ],
+          [
+            "Gir (Gujarat)",
+            "गिर (गुजरात)"
+          ]
+        ],
+        [
+          [
+            "Cheetah",
+            "चीता"
+          ],
+          [
+            "Kuno (Madhya Pradesh)",
+            "कूनो (मध्य प्रदेश)"
+          ]
+        ],
+        [
+          [
+            "One-horned rhinoceros",
+            "एक सींग वाला गैंडा"
+          ],
+          [
+            "Kaziranga; also Orang, Jaldapara, Gorumara",
+            "काज़ीरंगा; ओरांग, जलदापारा, गोरुमारा भी"
+          ]
+        ],
+        [
+          [
+            "Snow leopard",
+            "हिम तेंदुआ"
+          ],
+          [
+            "Hemis (Ladakh)",
+            "हेमिस (लद्दाख)"
+          ]
+        ],
+        [
+          [
+            "Hangul (Kashmir stag)",
+            "हंगुल (कश्मीरी बारहसिंगा)"
+          ],
+          [
+            "Dachigam (J&K)",
+            "दाचीगाम (जम्मू-कश्मीर)"
+          ]
+        ],
+        [
+          [
+            "Sangai (brow-antlered deer)",
+            "संगाई"
+          ],
+          [
+            "Keibul Lamjao (Manipur)",
+            "केबुल लामजाओ (मणिपुर)"
+          ]
+        ],
+        [
+          [
+            "Hard-ground barasingha",
+            "कठोर-भूमि बारहसिंगा"
+          ],
+          [
+            "Kanha (Madhya Pradesh)",
+            "कान्हा (मध्य प्रदेश)"
+          ]
+        ],
+        [
+          [
+            "Swamp deer of the Terai",
+            "तराई का दलदली हिरण"
+          ],
+          [
+            "Dudhwa (Uttar Pradesh)",
+            "दुधवा (उत्तर प्रदेश)"
+          ]
+        ],
+        [
+          [
+            "Pygmy hog",
+            "पिग्मी हॉग"
+          ],
+          [
+            "Manas (Assam)",
+            "मानस (असम)"
+          ]
+        ],
+        [
+          [
+            "Golden langur",
+            "सुनहरा लंगूर"
+          ],
+          [
+            "Raimona and Manas (Assam)",
+            "रायमोना और मानस (असम)"
+          ]
+        ],
+        [
+          [
+            "Nilgiri tahr",
+            "नीलगिरि तहर"
+          ],
+          [
+            "Eravikulam (Kerala), Mukurthi (Tamil Nadu)",
+            "एराविकुलम (केरल), मुकुर्ती (तमिलनाडु)"
+          ]
+        ],
+        [
+          [
+            "Lion-tailed macaque",
+            "शेर-पूँछ मकाक"
+          ],
+          [
+            "Silent Valley (Kerala)",
+            "साइलेंट वैली (केरल)"
+          ]
+        ],
+        [
+          [
+            "Great Indian bustard",
+            "गोडावण"
+          ],
+          [
+            "Desert National Park (Rajasthan)",
+            "डेज़र्ट राष्ट्रीय उद्यान (राजस्थान)"
+          ]
+        ],
+        [
+          [
+            "Blackbuck",
+            "काला हिरण"
+          ],
+          [
+            "Velavadar (Gujarat)",
+            "वेलावदर (गुजरात)"
+          ]
+        ],
+        [
+          [
+            "Red panda",
+            "लाल पांडा"
+          ],
+          [
+            "Singalila and Neora Valley (West Bengal)",
+            "सिंगालीला और नेओरा वैली (पश्चिम बंगाल)"
+          ]
+        ],
+        [
+          [
+            "Wild water buffalo",
+            "जंगली भैंसा"
+          ],
+          [
+            "Indravati (Chhattisgarh); large herds in Kaziranga",
+            "इंद्रावती (छत्तीसगढ़); काज़ीरंगा में बड़े झुंड"
+          ]
+        ],
+        [
+          [
+            "Saltwater crocodile",
+            "खारे पानी का मगरमच्छ"
+          ],
+          [
+            "Bhitarkanika (Odisha)",
+            "भितरकनिका (ओडिशा)"
+          ]
+        ],
+        [
+          [
+            "Dugong",
+            "डुगोंग"
+          ],
+          [
+            "Gulf of Mannar (Tamil Nadu)",
+            "मन्नार की खाड़ी (तमिलनाडु)"
+          ]
+        ],
+        [
+          [
+            "Hoolock gibbon",
+            "हूलॉक गिब्बन"
+          ],
+          [
+            "Ntangki (Nagaland)",
+            "नटांगकी (नागालैंड)"
+          ]
+        ],
+        [
+          [
+            "Feral horses",
+            "जंगली घोड़े"
+          ],
+          [
+            "Dibru-Saikhowa (Assam)",
+            "डिब्रू-सैखोवा (असम)"
+          ]
+        ],
+        [
+          [
+            "Shirui lily",
+            "शिरुई लिली"
+          ],
+          [
+            "Shirui (Manipur)",
+            "शिरुई (मणिपुर)"
+          ]
+        ],
+        [
+          [
+            "Western tragopan",
+            "पश्चिमी ट्रैगोपैन"
+          ],
+          [
+            "Great Himalayan (Himachal Pradesh)",
+            "ग्रेट हिमालयन (हिमाचल प्रदेश)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "rivers",
+      "icon": "🌊",
+      "t": [
+        "Parks and their rivers",
+        "उद्यान और उनकी नदियाँ"
+      ],
+      "cols": [
+        [
+          "Park",
+          "उद्यान"
+        ],
+        [
+          "River",
+          "नदी"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Jim Corbett",
+            "जिम कॉर्बेट"
+          ],
+          [
+            "Ramganga",
+            "रामगंगा"
+          ]
+        ],
+        [
+          [
+            "Kaziranga, Orang, Dibru-Saikhowa",
+            "काज़ीरंगा, ओरांग, डिब्रू-सैखोवा"
+          ],
+          [
+            "Brahmaputra",
+            "ब्रह्मपुत्र"
+          ]
+        ],
+        [
+          [
+            "Manas",
+            "मानस"
+          ],
+          [
+            "Manas",
+            "मानस"
+          ]
+        ],
+        [
+          [
+            "Panna",
+            "पन्ना"
+          ],
+          [
+            "Ken",
+            "केन"
+          ]
+        ],
+        [
+          [
+            "Pench",
+            "पेंच"
+          ],
+          [
+            "Pench",
+            "पेंच"
+          ]
+        ],
+        [
+          [
+            "Ranthambore, Mukundara Hills",
+            "रणथंभौर, मुकुंदरा हिल्स"
+          ],
+          [
+            "Chambal",
+            "चंबल"
+          ]
+        ],
+        [
+          [
+            "Kuno",
+            "कूनो"
+          ],
+          [
+            "Kuno",
+            "कूनो"
+          ]
+        ],
+        [
+          [
+            "Valmiki",
+            "वाल्मीकि"
+          ],
+          [
+            "Gandak",
+            "गंडक"
+          ]
+        ],
+        [
+          [
+            "Betla",
+            "बेतला"
+          ],
+          [
+            "North Koel",
+            "उत्तरी कोयल"
+          ]
+        ],
+        [
+          [
+            "Gangotri",
+            "गंगोत्री"
+          ],
+          [
+            "Bhagirathi",
+            "भागीरथी"
+          ]
+        ],
+        [
+          [
+            "Rajaji",
+            "राजाजी"
+          ],
+          [
+            "Ganga",
+            "गंगा"
+          ]
+        ],
+        [
+          [
+            "Nagarhole",
+            "नागरहोल"
+          ],
+          [
+            "Kabini",
+            "काबिनी"
+          ]
+        ],
+        [
+          [
+            "Silent Valley",
+            "साइलेंट वैली"
+          ],
+          [
+            "Kunthipuzha",
+            "कुंतीपुझा"
+          ]
+        ],
+        [
+          [
+            "Indravati",
+            "इंद्रावती"
+          ],
+          [
+            "Indravati",
+            "इंद्रावती"
+          ]
+        ],
+        [
+          [
+            "Papikonda",
+            "पापिकोंडा"
+          ],
+          [
+            "Godavari",
+            "गोदावरी"
+          ]
+        ],
+        [
+          [
+            "Bhitarkanika",
+            "भितरकनिका"
+          ],
+          [
+            "Brahmani and Baitarani",
+            "ब्राह्मणी और बैतरणी"
+          ]
+        ],
+        [
+          [
+            "Jaldapara",
+            "जलदापारा"
+          ],
+          [
+            "Torsa",
+            "तोरसा"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "tigers",
+      "icon": "🐅",
+      "t": [
+        "Project Tiger",
+        "प्रोजेक्ट टाइगर"
+      ],
+      "sub": [
+        "Many national parks form the core of a tiger reserve.",
+        "कई राष्ट्रीय उद्यान किसी टाइगर रिज़र्व का कोर होते हैं।"
+      ],
+      "cols": [
+        [
+          "Point",
+          "बिंदु"
+        ],
+        [
+          "Fact",
+          "तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Launched",
+            "आरंभ"
+          ],
+          [
+            "1 April 1973, at Jim Corbett",
+            "1 अप्रैल 1973, जिम कॉर्बेट में"
+          ]
+        ],
+        [
+          [
+            "First nine reserves (1973)",
+            "पहले नौ रिज़र्व (1973)"
+          ],
+          [
+            "Bandipur, Corbett, Kanha, Manas, Melghat, Palamau, Ranthambore, Similipal, Sundarbans",
+            "बांदीपुर, कॉर्बेट, कान्हा, मानस, मेलघाट, पलामू, रणथंभौर, सिमलीपाल, सुंदरबन"
+          ]
+        ],
+        [
+          [
+            "Run by",
+            "संचालन"
+          ],
+          [
+            "National Tiger Conservation Authority (NTCA)",
+            "राष्ट्रीय बाघ संरक्षण प्राधिकरण (NTCA)"
+          ]
+        ],
+        [
+          [
+            "56th reserve (2024)",
+            "56वाँ रिज़र्व (2024)"
+          ],
+          [
+            "Guru Ghasidas-Tamor Pingla, Chhattisgarh",
+            "गुरु घासीदास-तमोर पिंगला, छत्तीसगढ़"
+          ]
+        ],
+        [
+          [
+            "57th reserve (2024)",
+            "57वाँ रिज़र्व (2024)"
+          ],
+          [
+            "Ratapani, Madhya Pradesh",
+            "रातापानी, मध्य प्रदेश"
+          ]
+        ],
+        [
+          [
+            "58th reserve (March 2025)",
+            "58वाँ रिज़र्व (मार्च 2025)"
+          ],
+          [
+            "Madhav, Madhya Pradesh",
+            "माधव, मध्य प्रदेश"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "states",
+      "icon": "📍",
+      "t": [
+        "One park, or none",
+        "एक उद्यान, या एक भी नहीं"
+      ],
+      "cols": [
+        [
+          "State or UT",
+          "राज्य या केंद्रशासित प्रदेश"
+        ],
+        [
+          "National park",
+          "राष्ट्रीय उद्यान"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Bihar",
+            "बिहार"
+          ],
+          [
+            "Valmiki",
+            "वाल्मीकि"
+          ]
+        ],
+        [
+          [
+            "Jharkhand",
+            "झारखंड"
+          ],
+          [
+            "Betla",
+            "बेतला"
+          ]
+        ],
+        [
+          [
+            "Uttar Pradesh",
+            "उत्तर प्रदेश"
+          ],
+          [
+            "Dudhwa",
+            "दुधवा"
+          ]
+        ],
+        [
+          [
+            "Goa",
+            "गोवा"
+          ],
+          [
+            "Mollem (Bhagwan Mahaveer)",
+            "मोल्लेम (भगवान महावीर)"
+          ]
+        ],
+        [
+          [
+            "Nagaland",
+            "नागालैंड"
+          ],
+          [
+            "Ntangki",
+            "नटांगकी"
+          ]
+        ],
+        [
+          [
+            "Sikkim",
+            "सिक्किम"
+          ],
+          [
+            "Khangchendzonga",
+            "खंगचेंदज़ोंगा"
+          ]
+        ],
+        [
+          [
+            "Ladakh",
+            "लद्दाख"
+          ],
+          [
+            "Hemis",
+            "हेमिस"
+          ]
+        ],
+        [
+          [
+            "Punjab, Delhi, Chandigarh, Puducherry, Lakshadweep, Dadra & Nagar Haveli and Daman & Diu",
+            "पंजाब, दिल्ली, चंडीगढ़, पुडुचेरी, लक्षद्वीप, दादरा-नगर हवेली और दमन-दीव"
+          ],
+          [
+            "None",
+            "कोई नहीं"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "confuse",
+      "icon": "⚠️",
+      "t": [
+        "Easily confused",
+        "जिनमें भ्रम होता है"
+      ],
+      "cols": [
+        [
+          "Name",
+          "नाम"
+        ],
+        [
+          "Which one",
+          "कौन-सा"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Rajiv Gandhi National Park",
+            "राजीव गांधी राष्ट्रीय उद्यान"
+          ],
+          [
+            "Nagarhole (Karnataka); also a small park at Rameswaram, Kadapa (Andhra Pradesh)",
+            "नागरहोल (कर्नाटक); कडप्पा (आंध्र प्रदेश) के रामेश्वरम में एक छोटा उद्यान भी"
+          ]
+        ],
+        [
+          [
+            "Indira Gandhi National Park",
+            "इंदिरा गांधी राष्ट्रीय उद्यान"
+          ],
+          [
+            "Anamalai (Tamil Nadu)",
+            "अनामलाई (तमिलनाडु)"
+          ]
+        ],
+        [
+          [
+            "Sanjay vs Sanjay Gandhi",
+            "संजय बनाम संजय गांधी"
+          ],
+          [
+            "Sanjay is in Sidhi (Madhya Pradesh); Sanjay Gandhi is in Mumbai",
+            "संजय सीधी (मध्य प्रदेश) में; संजय गांधी मुंबई में"
+          ]
+        ],
+        [
+          [
+            "Pench",
+            "पेंच"
+          ],
+          [
+            "Madhya Pradesh (Seoni) and a separate Pench in Maharashtra (Nagpur)",
+            "मध्य प्रदेश (सिवनी) और महाराष्ट्र (नागपुर) में अलग पेंच"
+          ]
+        ],
+        [
+          [
+            "Blackbuck National Park",
+            "ब्लैकबक राष्ट्रीय उद्यान"
+          ],
+          [
+            "Velavadar, Gujarat",
+            "वेलावदर, गुजरात"
+          ]
+        ],
+        [
+          [
+            "Mount Harriet",
+            "माउंट हैरियट"
+          ],
+          [
+            "Renamed Mount Manipur National Park",
+            "नया नाम माउंट मणिपुर राष्ट्रीय उद्यान"
+          ]
+        ],
+        [
+          [
+            "Sanctuary vs national park",
+            "अभयारण्य बनाम राष्ट्रीय उद्यान"
+          ],
+          [
+            "A national park allows no rights of people inside it and no grazing; a sanctuary can allow some",
+            "राष्ट्रीय उद्यान में लोगों के अधिकार और चराई की अनुमति नहीं होती; अभयारण्य में कुछ अनुमति हो सकती है"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "recent",
+      "icon": "🆕",
+      "t": [
+        "Recent additions",
+        "हाल में जुड़े"
+      ],
+      "cols": [
+        [
+          "When",
+          "कब"
+        ],
+        [
+          "What",
+          "क्या"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "June 2021",
+            "जून 2021"
+          ],
+          [
+            "Dehing Patkai and Raimona become national parks of Assam",
+            "देहिंग पटकाई और रायमोना असम के राष्ट्रीय उद्यान बने"
+          ]
+        ],
+        [
+          [
+            "17 Sept 2022",
+            "17 सितंबर 2022"
+          ],
+          [
+            "Eight cheetahs from Namibia released in Kuno",
+            "नामीबिया से आठ चीते कूनो में छोड़े गए"
+          ]
+        ],
+        [
+          [
+            "Feb 2023",
+            "फ़रवरी 2023"
+          ],
+          [
+            "Twelve cheetahs from South Africa reach Kuno",
+            "दक्षिण अफ्रीका से बारह चीते कूनो पहुँचे"
+          ]
+        ],
+        [
+          [
+            "5 March 2025",
+            "5 मार्च 2025"
+          ],
+          [
+            "Sikhna Jwhwlao notified, Assam's eighth national park",
+            "सिखना ज्वह्वलाओ अधिसूचित, असम का आठवाँ राष्ट्रीय उद्यान"
+          ]
+        ],
+        [
+          [
+            "March 2025",
+            "मार्च 2025"
+          ],
+          [
+            "Madhav becomes India's 58th tiger reserve",
+            "माधव भारत का 58वाँ टाइगर रिज़र्व बना"
+          ]
+        ],
+        [
+          [
+            "24 April 2025",
+            "24 अप्रैल 2025"
+          ],
+          [
+            "Similipal formally notified as a national park, Odisha's second",
+            "सिमलीपाल औपचारिक रूप से राष्ट्रीय उद्यान अधिसूचित, ओडिशा का दूसरा"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "first",
+      "q": [
+        "Which was India's first national park?",
+        "भारत का पहला राष्ट्रीय उद्यान कौन-सा था?"
+      ],
+      "o": [
+        [
+          "Hailey National Park (now Jim Corbett)",
+          "हेली राष्ट्रीय उद्यान (अब जिम कॉर्बेट)"
+        ],
+        [
+          "Kaziranga",
+          "काज़ीरंगा"
+        ],
+        [
+          "Gir",
+          "गिर"
+        ],
+        [
+          "Kanha",
+          "कान्हा"
+        ]
+      ],
+      "e": [
+        "Hailey National Park was set up in 1936 in present-day Uttarakhand; it was later renamed Jim Corbett National Park.",
+        "हेली राष्ट्रीय उद्यान 1936 में आज के उत्तराखंड में बना; बाद में इसका नाम जिम कॉर्बेट राष्ट्रीय उद्यान रखा गया।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "In which year was India's first national park established?",
+        "भारत का पहला राष्ट्रीय उद्यान किस वर्ष स्थापित हुआ?"
+      ],
+      "o": [
+        [
+          "1936",
+          "1936"
+        ],
+        [
+          "1952",
+          "1952"
+        ],
+        [
+          "1972",
+          "1972"
+        ],
+        [
+          "1905",
+          "1905"
+        ]
+      ],
+      "e": [
+        "Hailey (now Jim Corbett) National Park was established in 1936.",
+        "हेली (अब जिम कॉर्बेट) राष्ट्रीय उद्यान 1936 में स्थापित हुआ।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Project Tiger was launched in 1973 at which national park?",
+        "प्रोजेक्ट टाइगर 1973 में किस राष्ट्रीय उद्यान में आरंभ हुआ?"
+      ],
+      "o": [
+        [
+          "Jim Corbett",
+          "जिम कॉर्बेट"
+        ],
+        [
+          "Sundarbans",
+          "सुंदरबन"
+        ],
+        [
+          "Kanha",
+          "कान्हा"
+        ],
+        [
+          "Ranthambore",
+          "रणथंभौर"
+        ]
+      ],
+      "e": [
+        "Project Tiger began on 1 April 1973 at Jim Corbett, the first of the nine original tiger reserves.",
+        "प्रोजेक्ट टाइगर 1 अप्रैल 1973 को जिम कॉर्बेट में शुरू हुआ, जो पहले नौ टाइगर रिज़र्वों में पहला था।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Which is India's first marine national park?",
+        "भारत का पहला समुद्री राष्ट्रीय उद्यान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Gulf of Kachchh Marine National Park",
+          "कच्छ की खाड़ी समुद्री राष्ट्रीय उद्यान"
+        ],
+        [
+          "Gulf of Mannar Marine National Park",
+          "मन्नार की खाड़ी समुद्री राष्ट्रीय उद्यान"
+        ],
+        [
+          "Mahatma Gandhi Marine National Park",
+          "महात्मा गांधी समुद्री राष्ट्रीय उद्यान"
+        ],
+        [
+          "Rani Jhansi Marine National Park",
+          "रानी झाँसी समुद्री राष्ट्रीय उद्यान"
+        ]
+      ],
+      "e": [
+        "The Gulf of Kachchh in Gujarat became India's first marine national park in 1982 (a marine sanctuary from 1980).",
+        "गुजरात की कच्छ की खाड़ी 1982 में भारत का पहला समुद्री राष्ट्रीय उद्यान बनी (1980 से समुद्री अभयारण्य)।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Which national park became India's first 'mixed' World Heritage Site?",
+        "कौन-सा राष्ट्रीय उद्यान भारत का पहला 'मिश्रित' विश्व धरोहर स्थल बना?"
+      ],
+      "o": [
+        [
+          "Khangchendzonga",
+          "खंगचेंदज़ोंगा"
+        ],
+        [
+          "Kaziranga",
+          "काज़ीरंगा"
+        ],
+        [
+          "Great Himalayan",
+          "ग्रेट हिमालयन"
+        ],
+        [
+          "Nanda Devi",
+          "नंदा देवी"
+        ]
+      ],
+      "e": [
+        "Khangchendzonga in Sikkim was listed in 2016 as India's first mixed (natural and cultural) World Heritage Site.",
+        "सिक्किम का खंगचेंदज़ोंगा 2016 में भारत का पहला मिश्रित (प्राकृतिक और सांस्कृतिक) विश्व धरोहर स्थल बना।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Which was the first national park of Kerala?",
+        "केरल का पहला राष्ट्रीय उद्यान कौन-सा था?"
+      ],
+      "o": [
+        [
+          "Eravikulam",
+          "एराविकुलम"
+        ],
+        [
+          "Periyar",
+          "पेरियार"
+        ],
+        [
+          "Silent Valley",
+          "साइलेंट वैली"
+        ],
+        [
+          "Mathikettan Shola",
+          "मथिकेट्टन शोला"
+        ]
+      ],
+      "e": [
+        "Eravikulam near Munnar, set up in 1978, was Kerala's first national park.",
+        "मुन्नार के पास 1978 में बना एराविकुलम केरल का पहला राष्ट्रीय उद्यान था।"
+      ]
+    },
+    {
+      "t": "record",
+      "q": [
+        "Which is the largest national park of India?",
+        "भारत का सबसे बड़ा राष्ट्रीय उद्यान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Hemis",
+          "हेमिस"
+        ],
+        [
+          "Desert National Park",
+          "डेज़र्ट राष्ट्रीय उद्यान"
+        ],
+        [
+          "Gangotri",
+          "गंगोत्री"
+        ],
+        [
+          "Namdapha",
+          "नामदफा"
+        ]
+      ],
+      "e": [
+        "Hemis in Ladakh is the largest; Desert National Park in Rajasthan is among the next largest.",
+        "लद्दाख का हेमिस सबसे बड़ा है; राजस्थान का डेज़र्ट राष्ट्रीय उद्यान उसके बाद के सबसे बड़ों में है।"
+      ]
+    },
+    {
+      "t": "record",
+      "q": [
+        "Which is the smallest national park of India?",
+        "भारत का सबसे छोटा राष्ट्रीय उद्यान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "South Button Island",
+          "साउथ बटन द्वीप"
+        ],
+        [
+          "Guindy",
+          "गिंडी"
+        ],
+        [
+          "Sultanpur",
+          "सुल्तानपुर"
+        ],
+        [
+          "Van Vihar",
+          "वन विहार"
+        ]
+      ],
+      "e": [
+        "South Button Island in the Andaman and Nicobar Islands is the smallest national park of India.",
+        "अंडमान और निकोबार का साउथ बटन द्वीप भारत का सबसे छोटा राष्ट्रीय उद्यान है।"
+      ]
+    },
+    {
+      "t": "record",
+      "q": [
+        "Which is the only floating national park in the world?",
+        "दुनिया का एकमात्र तैरता राष्ट्रीय उद्यान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Keibul Lamjao",
+          "केबुल लामजाओ"
+        ],
+        [
+          "Sundarbans",
+          "सुंदरबन"
+        ],
+        [
+          "Bhitarkanika",
+          "भितरकनिका"
+        ],
+        [
+          "Dibru-Saikhowa",
+          "डिब्रू-सैखोवा"
+        ]
+      ],
+      "e": [
+        "Keibul Lamjao floats on phumdis on Loktak Lake in Manipur.",
+        "केबुल लामजाओ मणिपुर की लोकटक झील पर फुमदी पर तैरता है।"
+      ]
+    },
+    {
+      "t": "record",
+      "q": [
+        "Which state has the most national parks?",
+        "किस राज्य में सबसे अधिक राष्ट्रीय उद्यान हैं?"
+      ],
+      "o": [
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ]
+      ],
+      "e": [
+        "Madhya Pradesh has the most national parks, including Kanha, Bandhavgarh, Pench, Panna, Satpura and Kuno.",
+        "मध्य प्रदेश में सबसे अधिक राष्ट्रीय उद्यान हैं, जिनमें कान्हा, बांधवगढ़, पेंच, पन्ना, सतपुड़ा और कूनो शामिल हैं।"
+      ]
+    },
+    {
+      "t": "record",
+      "q": [
+        "Kaziranga holds about what share of the world's one-horned rhinoceroses?",
+        "काज़ीरंगा में दुनिया के एक सींग वाले गैंडों का लगभग कितना हिस्सा है?"
+      ],
+      "o": [
+        [
+          "Two-thirds",
+          "दो-तिहाई"
+        ],
+        [
+          "One-tenth",
+          "दसवाँ भाग"
+        ],
+        [
+          "One-quarter",
+          "एक-चौथाई"
+        ],
+        [
+          "All of them",
+          "सभी"
+        ]
+      ],
+      "e": [
+        "Kaziranga holds about two-thirds of the world's one-horned rhinoceroses.",
+        "काज़ीरंगा में दुनिया के लगभग दो-तिहाई एक सींग वाले गैंडे हैं।"
+      ]
+    },
+    {
+      "t": "record",
+      "q": [
+        "Under which section of the Wild Life (Protection) Act, 1972 are national parks declared?",
+        "वन्यजीव (संरक्षण) अधिनियम, 1972 की किस धारा के अंतर्गत राष्ट्रीय उद्यान घोषित होते हैं?"
+      ],
+      "o": [
+        [
+          "Section 35",
+          "धारा 35"
+        ],
+        [
+          "Section 18",
+          "धारा 18"
+        ],
+        [
+          "Section 38",
+          "धारा 38"
+        ],
+        [
+          "Section 51",
+          "धारा 51"
+        ]
+      ],
+      "e": [
+        "National parks are declared under section 35; wildlife sanctuaries under section 18.",
+        "राष्ट्रीय उद्यान धारा 35 के अंतर्गत और वन्यजीव अभयारण्य धारा 18 के अंतर्गत घोषित होते हैं।"
+      ]
+    },
+    {
+      "t": "unesco",
+      "q": [
+        "Which of these national parks is a UNESCO World Heritage Site?",
+        "इनमें से कौन-सा राष्ट्रीय उद्यान यूनेस्को विश्व धरोहर स्थल है?"
+      ],
+      "o": [
+        [
+          "Keoladeo",
+          "केवलादेव"
+        ],
+        [
+          "Ranthambore",
+          "रणथंभौर"
+        ],
+        [
+          "Kanha",
+          "कान्हा"
+        ],
+        [
+          "Gir",
+          "गिर"
+        ]
+      ],
+      "e": [
+        "Keoladeo (Bharatpur) was listed in 1985. Ranthambore, Kanha and Gir are not World Heritage Sites.",
+        "केवलादेव (भरतपुर) 1985 में सूची में आया। रणथंभौर, कान्हा और गिर विश्व धरोहर स्थल नहीं हैं।"
+      ]
+    },
+    {
+      "t": "unesco",
+      "q": [
+        "In which year was the Great Himalayan National Park listed as a World Heritage Site?",
+        "ग्रेट हिमालयन राष्ट्रीय उद्यान किस वर्ष विश्व धरोहर स्थल बना?"
+      ],
+      "o": [
+        [
+          "2014",
+          "2014"
+        ],
+        [
+          "2005",
+          "2005"
+        ],
+        [
+          "2016",
+          "2016"
+        ],
+        [
+          "1988",
+          "1988"
+        ]
+      ],
+      "e": [
+        "The Great Himalayan National Park Conservation Area in Kullu was listed in 2014.",
+        "कुल्लू का ग्रेट हिमालयन राष्ट्रीय उद्यान संरक्षण क्षेत्र 2014 में सूची में आया।"
+      ]
+    },
+    {
+      "t": "unesco",
+      "q": [
+        "The Valley of Flowers is part of which World Heritage Site?",
+        "फूलों की घाटी किस विश्व धरोहर स्थल का भाग है?"
+      ],
+      "o": [
+        [
+          "Nanda Devi and Valley of Flowers National Parks",
+          "नंदा देवी और फूलों की घाटी राष्ट्रीय उद्यान"
+        ],
+        [
+          "Great Himalayan National Park",
+          "ग्रेट हिमालयन राष्ट्रीय उद्यान"
+        ],
+        [
+          "Western Ghats",
+          "पश्चिमी घाट"
+        ],
+        [
+          "Khangchendzonga National Park",
+          "खंगचेंदज़ोंगा राष्ट्रीय उद्यान"
+        ]
+      ],
+      "e": [
+        "Nanda Devi was listed in 1988; the site was extended in 2005 to include the Valley of Flowers.",
+        "नंदा देवी 1988 में सूची में आया; 2005 में इसमें फूलों की घाटी जोड़ी गई।"
+      ]
+    },
+    {
+      "t": "unesco",
+      "q": [
+        "Which two Assam national parks were listed as World Heritage Sites in 1985?",
+        "असम के कौन-से दो राष्ट्रीय उद्यान 1985 में विश्व धरोहर स्थल बने?"
+      ],
+      "o": [
+        [
+          "Kaziranga and Manas",
+          "काज़ीरंगा और मानस"
+        ],
+        [
+          "Kaziranga and Orang",
+          "काज़ीरंगा और ओरांग"
+        ],
+        [
+          "Manas and Nameri",
+          "मानस और नामेरी"
+        ],
+        [
+          "Dibru-Saikhowa and Manas",
+          "डिब्रू-सैखोवा और मानस"
+        ]
+      ],
+      "e": [
+        "Kaziranga and Manas were both listed in 1985.",
+        "काज़ीरंगा और मानस दोनों 1985 में सूची में आए।"
+      ]
+    },
+    {
+      "t": "ramsar",
+      "q": [
+        "Sultanpur National Park, a Ramsar site since 2021, is in which state?",
+        "2021 से रामसर स्थल सुल्तानपुर राष्ट्रीय उद्यान किस राज्य में है?"
+      ],
+      "o": [
+        [
+          "Haryana",
+          "हरियाणा"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Punjab",
+          "पंजाब"
+        ]
+      ],
+      "e": [
+        "Sultanpur is near Gurugram in Haryana.",
+        "सुल्तानपुर हरियाणा में गुरुग्राम के पास है।"
+      ]
+    },
+    {
+      "t": "ramsar",
+      "q": [
+        "Sakhya Sagar, a Ramsar site, lies inside which national park?",
+        "रामसर स्थल सख्य सागर किस राष्ट्रीय उद्यान के अंदर है?"
+      ],
+      "o": [
+        [
+          "Madhav",
+          "माधव"
+        ],
+        [
+          "Kanha",
+          "कान्हा"
+        ],
+        [
+          "Van Vihar",
+          "वन विहार"
+        ],
+        [
+          "Panna",
+          "पन्ना"
+        ]
+      ],
+      "e": [
+        "Sakhya Sagar in Madhav National Park, Shivpuri, became a Ramsar site in 2022.",
+        "शिवपुरी के माधव राष्ट्रीय उद्यान की सख्य सागर झील 2022 में रामसर स्थल बनी।"
+      ]
+    },
+    {
+      "t": "ramsar",
+      "q": [
+        "Keibul Lamjao National Park is part of which lake?",
+        "केबुल लामजाओ राष्ट्रीय उद्यान किस झील का भाग है?"
+      ],
+      "o": [
+        [
+          "Loktak",
+          "लोकटक"
+        ],
+        [
+          "Chilika",
+          "चिलिका"
+        ],
+        [
+          "Wular",
+          "वुलर"
+        ],
+        [
+          "Dal",
+          "डल"
+        ]
+      ],
+      "e": [
+        "Keibul Lamjao floats on Loktak Lake in Manipur, a Ramsar site since 1990.",
+        "केबुल लामजाओ मणिपुर की लोकटक झील पर तैरता है, जो 1990 से रामसर स्थल है।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "The hangul (Kashmir stag) is found mainly in which national park?",
+        "हंगुल (कश्मीरी बारहसिंगा) मुख्यतः किस राष्ट्रीय उद्यान में मिलता है?"
+      ],
+      "o": [
+        [
+          "Dachigam",
+          "दाचीगाम"
+        ],
+        [
+          "Hemis",
+          "हेमिस"
+        ],
+        [
+          "Kishtwar",
+          "किश्तवाड़"
+        ],
+        [
+          "Great Himalayan",
+          "ग्रेट हिमालयन"
+        ]
+      ],
+      "e": [
+        "Dachigam near Srinagar is the last stronghold of the hangul.",
+        "श्रीनगर के पास दाचीगाम हंगुल का अंतिम प्रमुख ठिकाना है।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "The sangai (brow-antlered deer) lives in which national park?",
+        "संगाई (भौंह-सींग हिरण) किस राष्ट्रीय उद्यान में रहता है?"
+      ],
+      "o": [
+        [
+          "Keibul Lamjao",
+          "केबुल लामजाओ"
+        ],
+        [
+          "Kaziranga",
+          "काज़ीरंगा"
+        ],
+        [
+          "Namdapha",
+          "नामदफा"
+        ],
+        [
+          "Dudhwa",
+          "दुधवा"
+        ]
+      ],
+      "e": [
+        "The sangai, Manipur's state animal, survives naturally only in Keibul Lamjao.",
+        "मणिपुर का राज्य पशु संगाई प्राकृतिक रूप से केवल केबुल लामजाओ में बचा है।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "Kanha National Park is famous for saving which deer?",
+        "कान्हा राष्ट्रीय उद्यान किस हिरण को बचाने के लिए प्रसिद्ध है?"
+      ],
+      "o": [
+        [
+          "Hard-ground barasingha",
+          "कठोर-भूमि बारहसिंगा"
+        ],
+        [
+          "Hangul",
+          "हंगुल"
+        ],
+        [
+          "Sangai",
+          "संगाई"
+        ],
+        [
+          "Blackbuck",
+          "काला हिरण"
+        ]
+      ],
+      "e": [
+        "Kanha saved the hard-ground barasingha, the state animal of Madhya Pradesh.",
+        "कान्हा ने मध्य प्रदेश के राज्य पशु कठोर-भूमि बारहसिंगा को बचाया।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "The Nilgiri tahr is protected mainly in which national park of Kerala?",
+        "नीलगिरि तहर मुख्यतः केरल के किस राष्ट्रीय उद्यान में संरक्षित है?"
+      ],
+      "o": [
+        [
+          "Eravikulam",
+          "एराविकुलम"
+        ],
+        [
+          "Periyar",
+          "पेरियार"
+        ],
+        [
+          "Silent Valley",
+          "साइलेंट वैली"
+        ],
+        [
+          "Pambadum Shola",
+          "पांबादुम शोला"
+        ]
+      ],
+      "e": [
+        "Eravikulam holds the largest population of the Nilgiri tahr.",
+        "एराविकुलम में नीलगिरि तहर की सबसे बड़ी आबादी है।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "Silent Valley National Park is known for which primate?",
+        "साइलेंट वैली राष्ट्रीय उद्यान किस प्राइमेट के लिए प्रसिद्ध है?"
+      ],
+      "o": [
+        [
+          "Lion-tailed macaque",
+          "शेर-पूँछ मकाक"
+        ],
+        [
+          "Golden langur",
+          "सुनहरा लंगूर"
+        ],
+        [
+          "Hoolock gibbon",
+          "हूलॉक गिब्बन"
+        ],
+        [
+          "Phayre's langur",
+          "फेयर का लंगूर"
+        ]
+      ],
+      "e": [
+        "Silent Valley has the largest population of the lion-tailed macaque.",
+        "साइलेंट वैली में शेर-पूँछ मकाक की सबसे बड़ी आबादी है।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "Cheetahs were reintroduced to India in 2022 at which national park?",
+        "2022 में भारत में चीते किस राष्ट्रीय उद्यान में फिर से लाए गए?"
+      ],
+      "o": [
+        [
+          "Kuno",
+          "कूनो"
+        ],
+        [
+          "Gir",
+          "गिर"
+        ],
+        [
+          "Desert National Park",
+          "डेज़र्ट राष्ट्रीय उद्यान"
+        ],
+        [
+          "Madhav",
+          "माधव"
+        ]
+      ],
+      "e": [
+        "Eight cheetahs from Namibia were released in Kuno, Madhya Pradesh, on 17 September 2022.",
+        "17 सितंबर 2022 को नामीबिया से आठ चीते मध्य प्रदेश के कूनो में छोड़े गए।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "The great Indian bustard (godawan) is protected in which national park?",
+        "गोडावण (ग्रेट इंडियन बस्टर्ड) किस राष्ट्रीय उद्यान में संरक्षित है?"
+      ],
+      "o": [
+        [
+          "Desert National Park",
+          "डेज़र्ट राष्ट्रीय उद्यान"
+        ],
+        [
+          "Velavadar",
+          "वेलावदर"
+        ],
+        [
+          "Keoladeo",
+          "केवलादेव"
+        ],
+        [
+          "Ranthambore",
+          "रणथंभौर"
+        ]
+      ],
+      "e": [
+        "Desert National Park near Jaisalmer is a stronghold of the great Indian bustard, Rajasthan's state bird.",
+        "जैसलमेर के पास डेज़र्ट राष्ट्रीय उद्यान राजस्थान के राज्य पक्षी गोडावण का प्रमुख ठिकाना है।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "The pygmy hog is associated with which national park?",
+        "पिग्मी हॉग किस राष्ट्रीय उद्यान से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Manas",
+          "मानस"
+        ],
+        [
+          "Kaziranga",
+          "काज़ीरंगा"
+        ],
+        [
+          "Gir",
+          "गिर"
+        ],
+        [
+          "Bandipur",
+          "बांदीपुर"
+        ]
+      ],
+      "e": [
+        "The last natural population of the pygmy hog survived in Manas, Assam.",
+        "पिग्मी हॉग की अंतिम प्राकृतिक आबादी असम के मानस में बची रही।"
+      ]
+    },
+    {
+      "t": "species",
+      "q": [
+        "The Shirui lily grows wild only in which state?",
+        "शिरुई लिली जंगली रूप में केवल किस राज्य में उगती है?"
+      ],
+      "o": [
+        [
+          "Manipur",
+          "मणिपुर"
+        ],
+        [
+          "Sikkim",
+          "सिक्किम"
+        ],
+        [
+          "Meghalaya",
+          "मेघालय"
+        ],
+        [
+          "Mizoram",
+          "मिज़ोरम"
+        ]
+      ],
+      "e": [
+        "The Shirui lily, Manipur's state flower, grows wild only on the Shirui hills of Ukhrul.",
+        "मणिपुर का राज्य पुष्प शिरुई लिली केवल उखरुल की शिरुई पहाड़ियों पर जंगली रूप में उगता है।"
+      ]
+    },
+    {
+      "t": "loc",
+      "q": [
+        "Bandhavgarh National Park is in which state?",
+        "बांधवगढ़ राष्ट्रीय उद्यान किस राज्य में है?"
+      ],
+      "o": [
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Chhattisgarh",
+          "छत्तीसगढ़"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ]
+      ],
+      "e": [
+        "Bandhavgarh is in Umaria district, Madhya Pradesh.",
+        "बांधवगढ़ मध्य प्रदेश के उमरिया ज़िले में है।"
+      ]
+    },
+    {
+      "t": "loc",
+      "q": [
+        "Namdapha National Park is in which state?",
+        "नामदफा राष्ट्रीय उद्यान किस राज्य में है?"
+      ],
+      "o": [
+        [
+          "Arunachal Pradesh",
+          "अरुणाचल प्रदेश"
+        ],
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Nagaland",
+          "नागालैंड"
+        ],
+        [
+          "Meghalaya",
+          "मेघालय"
+        ]
+      ],
+      "e": [
+        "Namdapha is in Changlang district, Arunachal Pradesh.",
+        "नामदफा अरुणाचल प्रदेश के चांगलांग ज़िले में है।"
+      ]
+    },
+    {
+      "t": "loc",
+      "q": [
+        "Valmiki National Park is in which state?",
+        "वाल्मीकि राष्ट्रीय उद्यान किस राज्य में है?"
+      ],
+      "o": [
+        [
+          "Bihar",
+          "बिहार"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ]
+      ],
+      "e": [
+        "Valmiki is in West Champaran, the only national park of Bihar.",
+        "वाल्मीकि पश्चिम चंपारण में है, बिहार का एकमात्र राष्ट्रीय उद्यान।"
+      ]
+    },
+    {
+      "t": "loc",
+      "q": [
+        "Dudhwa National Park is in which state?",
+        "दुधवा राष्ट्रीय उद्यान किस राज्य में है?"
+      ],
+      "o": [
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ],
+        [
+          "Bihar",
+          "बिहार"
+        ],
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ]
+      ],
+      "e": [
+        "Dudhwa is in Lakhimpur Kheri, the only national park of Uttar Pradesh.",
+        "दुधवा लखीमपुर खीरी में है, उत्तर प्रदेश का एकमात्र राष्ट्रीय उद्यान।"
+      ]
+    },
+    {
+      "t": "loc",
+      "q": [
+        "Tadoba National Park is in which district of Maharashtra?",
+        "ताडोबा राष्ट्रीय उद्यान महाराष्ट्र के किस ज़िले में है?"
+      ],
+      "o": [
+        [
+          "Chandrapur",
+          "चंद्रपुर"
+        ],
+        [
+          "Nagpur",
+          "नागपुर"
+        ],
+        [
+          "Amravati",
+          "अमरावती"
+        ],
+        [
+          "Gondia",
+          "गोंदिया"
+        ]
+      ],
+      "e": [
+        "Tadoba-Andhari Tiger Reserve is in Chandrapur district.",
+        "ताडोबा-अंधारी टाइगर रिज़र्व चंद्रपुर ज़िले में है।"
+      ]
+    },
+    {
+      "t": "loc",
+      "q": [
+        "Simlipal National Park is in which district of Odisha?",
+        "सिमलीपाल राष्ट्रीय उद्यान ओडिशा के किस ज़िले में है?"
+      ],
+      "o": [
+        [
+          "Mayurbhanj",
+          "मयूरभंज"
+        ],
+        [
+          "Kendrapara",
+          "केंद्रपाड़ा"
+        ],
+        [
+          "Koraput",
+          "कोरापुट"
+        ],
+        [
+          "Ganjam",
+          "गंजाम"
+        ]
+      ],
+      "e": [
+        "Simlipal is in Mayurbhanj; Bhitarkanika is in Kendrapara.",
+        "सिमलीपाल मयूरभंज में है; भितरकनिका केंद्रपाड़ा में।"
+      ]
+    },
+    {
+      "t": "river",
+      "q": [
+        "Jim Corbett National Park lies on which river?",
+        "जिम कॉर्बेट राष्ट्रीय उद्यान किस नदी पर है?"
+      ],
+      "o": [
+        [
+          "Ramganga",
+          "रामगंगा"
+        ],
+        [
+          "Ganga",
+          "गंगा"
+        ],
+        [
+          "Sharda",
+          "शारदा"
+        ],
+        [
+          "Yamuna",
+          "यमुना"
+        ]
+      ],
+      "e": [
+        "The Ramganga flows through Corbett; it was once called Ramganga National Park.",
+        "रामगंगा कॉर्बेट से होकर बहती है; इसे कभी रामगंगा राष्ट्रीय उद्यान कहा जाता था।"
+      ]
+    },
+    {
+      "t": "river",
+      "q": [
+        "Panna National Park lies on which river?",
+        "पन्ना राष्ट्रीय उद्यान किस नदी पर है?"
+      ],
+      "o": [
+        [
+          "Ken",
+          "केन"
+        ],
+        [
+          "Betwa",
+          "बेतवा"
+        ],
+        [
+          "Son",
+          "सोन"
+        ],
+        [
+          "Chambal",
+          "चंबल"
+        ]
+      ],
+      "e": [
+        "The Ken river flows through Panna; the Ken-Betwa link project passes through the area.",
+        "केन नदी पन्ना से होकर बहती है; केन-बेतवा लिंक परियोजना इस क्षेत्र से गुज़रती है।"
+      ]
+    },
+    {
+      "t": "river",
+      "q": [
+        "Ranthambore National Park is bounded by the Banas and which other river?",
+        "रणथंभौर राष्ट्रीय उद्यान बनास और किस अन्य नदी से घिरा है?"
+      ],
+      "o": [
+        [
+          "Chambal",
+          "चंबल"
+        ],
+        [
+          "Luni",
+          "लूनी"
+        ],
+        [
+          "Mahi",
+          "माही"
+        ],
+        [
+          "Sabarmati",
+          "साबरमती"
+        ]
+      ],
+      "e": [
+        "Ranthambore has the Banas to the north and the Chambal to the south.",
+        "रणथंभौर के उत्तर में बनास और दक्षिण में चंबल है।"
+      ]
+    },
+    {
+      "t": "river",
+      "q": [
+        "The Kabini reservoir separates Bandipur from which national park?",
+        "काबिनी जलाशय बांदीपुर को किस राष्ट्रीय उद्यान से अलग करता है?"
+      ],
+      "o": [
+        [
+          "Nagarhole",
+          "नागरहोल"
+        ],
+        [
+          "Mudumalai",
+          "मुदुमलाई"
+        ],
+        [
+          "Kudremukh",
+          "कुद्रेमुख"
+        ],
+        [
+          "Silent Valley",
+          "साइलेंट वैली"
+        ]
+      ],
+      "e": [
+        "The Kabini reservoir lies between Nagarhole and Bandipur in Karnataka.",
+        "काबिनी जलाशय कर्नाटक में नागरहोल और बांदीपुर के बीच है।"
+      ]
+    },
+    {
+      "t": "river",
+      "q": [
+        "Gaumukh, the source of the Bhagirathi, lies in which national park?",
+        "भागीरथी का उद्गम गोमुख किस राष्ट्रीय उद्यान में है?"
+      ],
+      "o": [
+        [
+          "Gangotri",
+          "गंगोत्री"
+        ],
+        [
+          "Nanda Devi",
+          "नंदा देवी"
+        ],
+        [
+          "Valley of Flowers",
+          "फूलों की घाटी"
+        ],
+        [
+          "Govind",
+          "गोविंद"
+        ]
+      ],
+      "e": [
+        "Gaumukh at the Gangotri glacier is inside Gangotri National Park, Uttarkashi.",
+        "गंगोत्री हिमनद का गोमुख उत्तरकाशी के गंगोत्री राष्ट्रीय उद्यान में है।"
+      ]
+    },
+    {
+      "t": "ca",
+      "q": [
+        "Which became India's 58th tiger reserve in March 2025?",
+        "मार्च 2025 में भारत का 58वाँ टाइगर रिज़र्व कौन-सा बना?"
+      ],
+      "o": [
+        [
+          "Madhav",
+          "माधव"
+        ],
+        [
+          "Ratapani",
+          "रातापानी"
+        ],
+        [
+          "Guru Ghasidas-Tamor Pingla",
+          "गुरु घासीदास-तमोर पिंगला"
+        ],
+        [
+          "Kuno",
+          "कूनो"
+        ]
+      ],
+      "e": [
+        "Madhav in Shivpuri, Madhya Pradesh, was notified as the 58th tiger reserve in March 2025; Ratapani was the 57th.",
+        "मध्य प्रदेश के शिवपुरी का माधव मार्च 2025 में 58वाँ टाइगर रिज़र्व अधिसूचित हुआ; रातापानी 57वाँ था।"
+      ]
+    },
+    {
+      "t": "ca",
+      "q": [
+        "Sikhna Jwhwlao, notified in March 2025, is a national park of which state?",
+        "मार्च 2025 में अधिसूचित सिखना ज्वह्वलाओ किस राज्य का राष्ट्रीय उद्यान है?"
+      ],
+      "o": [
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Arunachal Pradesh",
+          "अरुणाचल प्रदेश"
+        ],
+        [
+          "Meghalaya",
+          "मेघालय"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ]
+      ],
+      "e": [
+        "Sikhna Jwhwlao in Chirang and Kokrajhar became Assam's eighth national park on 5 March 2025.",
+        "चिरांग और कोकराझार का सिखना ज्वह्वलाओ 5 मार्च 2025 को असम का आठवाँ राष्ट्रीय उद्यान बना।"
+      ]
+    },
+    {
+      "t": "ca",
+      "q": [
+        "Which tiger reserve was formally notified as a national park in April 2025?",
+        "अप्रैल 2025 में कौन-सा टाइगर रिज़र्व औपचारिक रूप से राष्ट्रीय उद्यान अधिसूचित हुआ?"
+      ],
+      "o": [
+        [
+          "Similipal",
+          "सिमलीपाल"
+        ],
+        [
+          "Satkosia",
+          "सतकोसिया"
+        ],
+        [
+          "Palamau",
+          "पलामू"
+        ],
+        [
+          "Buxa",
+          "बक्सा"
+        ]
+      ],
+      "e": [
+        "Similipal in Mayurbhanj, Odisha, was notified on 24 April 2025, Odisha's second national park after Bhitarkanika.",
+        "ओडिशा के मयूरभंज का सिमलीपाल 24 अप्रैल 2025 को अधिसूचित हुआ, भितरकनिका के बाद ओडिशा का दूसरा राष्ट्रीय उद्यान।"
+      ]
+    },
+    {
+      "t": "ca",
+      "q": [
+        "Dehing Patkai and Raimona became national parks in 2021 in which state?",
+        "देहिंग पटकाई और रायमोना 2021 में किस राज्य के राष्ट्रीय उद्यान बने?"
+      ],
+      "o": [
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Arunachal Pradesh",
+          "अरुणाचल प्रदेश"
+        ],
+        [
+          "Nagaland",
+          "नागालैंड"
+        ],
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ]
+      ],
+      "e": [
+        "Both are in Assam: Dehing Patkai in Dibrugarh-Tinsukia and Raimona in Kokrajhar.",
+        "दोनों असम में हैं: देहिंग पटकाई डिब्रूगढ़-तिनसुकिया में और रायमोना कोकराझार में।"
+      ]
+    },
+    {
+      "t": "ca",
+      "q": [
+        "From which country did the first group of cheetahs released in Kuno in September 2022 come?",
+        "सितंबर 2022 में कूनो में छोड़े गए चीतों का पहला समूह किस देश से आया?"
+      ],
+      "o": [
+        [
+          "Namibia",
+          "नामीबिया"
+        ],
+        [
+          "South Africa",
+          "दक्षिण अफ्रीका"
+        ],
+        [
+          "Kenya",
+          "केन्या"
+        ],
+        [
+          "Botswana",
+          "बोत्सवाना"
+        ]
+      ],
+      "e": [
+        "Eight cheetahs came from Namibia on 17 September 2022; twelve more came from South Africa in February 2023.",
+        "17 सितंबर 2022 को आठ चीते नामीबिया से आए; फ़रवरी 2023 में बारह और दक्षिण अफ्रीका से आए।"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "n": "Jim Corbett",
+      "h": "जिम कॉर्बेट",
+      "s": "Uttarakhand",
+      "st": "Nainital district, Uttarakhand",
+      "sh": "नैनीताल ज़िला, उत्तराखंड",
+      "c": "terai",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.55,
+      "lng": 78.94,
+      "tag": "India's first national park",
+      "tagh": "भारत का पहला राष्ट्रीय उद्यान",
+      "fact": "Set up in 1936 as Hailey National Park, it is India's oldest national park and the first to come under Project Tiger (1973).",
+      "facth": "1936 में हेली राष्ट्रीय उद्यान के रूप में बना यह भारत का सबसे पुराना राष्ट्रीय उद्यान है और प्रोजेक्ट टाइगर (1973) में शामिल होने वाला पहला उद्यान है।",
+      "pts": [
+        [
+          "In the 1950s it was renamed, first Ramganga National Park and then Corbett National Park, after the hunter-naturalist Jim Corbett.",
+          "1950 के दशक में इसका नाम पहले रामगंगा राष्ट्रीय उद्यान और फिर शिकारी-प्रकृतिविद जिम कॉर्बेट के नाम पर कॉर्बेट राष्ट्रीय उद्यान रखा गया।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1936",
+      "yrh": "1936",
+      "riv": "Ramganga",
+      "rivh": "रामगंगा",
+      "x": [
+        [
+          "tr",
+          "Part of Corbett Tiger Reserve",
+          "कॉर्बेट टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Rajaji",
+      "h": "राजाजी",
+      "s": "Uttarakhand",
+      "st": "Haridwar, Dehradun and Pauri Garhwal, Uttarakhand",
+      "sh": "हरिद्वार, देहरादून और पौड़ी गढ़वाल, उत्तराखंड",
+      "c": "terai",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.06,
+      "lng": 78.17,
+      "tag": "Shivalik elephant and tiger park on the Ganga",
+      "tagh": "गंगा पर शिवालिक का हाथी और बाघ उद्यान",
+      "fact": "Formed in 1983 by merging the Chilla, Motichur and Rajaji sanctuaries in the Shivalik hills; the Ganga flows through it.",
+      "facth": "यह 1983 में शिवालिक पहाड़ियों के चिल्ला, मोतीचूर और राजाजी अभयारण्यों को मिलाकर बना; गंगा इससे होकर बहती है।",
+      "pts": [
+        [
+          "Named after C. Rajagopalachari (\"Rajaji\").",
+          "इसका नाम सी. राजगोपालाचारी (\"राजाजी\") के नाम पर है।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1983",
+      "yrh": "1983",
+      "riv": "Ganga",
+      "rivh": "गंगा",
+      "x": [
+        [
+          "tr",
+          "Part of Rajaji Tiger Reserve",
+          "राजाजी टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Nanda Devi",
+      "h": "नंदा देवी",
+      "s": "Uttarakhand",
+      "st": "Chamoli district, Uttarakhand",
+      "sh": "चमोली ज़िला, उत्तराखंड",
+      "c": "him",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.42,
+      "lng": 79.85,
+      "tag": "World Heritage park around Nanda Devi peak",
+      "tagh": "नंदा देवी शिखर के चारों ओर विश्व धरोहर उद्यान",
+      "fact": "Surrounds Nanda Devi (7,816 m); the whole park lies above 3,500 m. UNESCO listed it as a World Heritage Site in 1988.",
+      "facth": "यह नंदा देवी (7,816 मी) के चारों ओर है; पूरा उद्यान 3,500 मी से ऊपर है। यूनेस्को ने 1988 में इसे विश्व धरोहर स्थल घोषित किया।",
+      "pts": [
+        [
+          "Together with the Valley of Flowers it forms the World Heritage Site \"Nanda Devi and Valley of Flowers National Parks\" (extended 2005).",
+          "फूलों की घाटी के साथ मिलकर यह \"नंदा देवी और फूलों की घाटी राष्ट्रीय उद्यान\" विश्व धरोहर स्थल बनाता है (2005 में विस्तार)।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1982",
+      "yrh": "1982",
+      "riv": "Rishiganga",
+      "rivh": "ऋषिगंगा",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site (1988)",
+          "यूनेस्को विश्व धरोहर स्थल (1988)"
+        ],
+        [
+          "br",
+          "Core of Nanda Devi Biosphere Reserve",
+          "नंदा देवी जैवमंडल रिज़र्व का कोर क्षेत्र"
+        ]
+      ]
+    },
+    {
+      "n": "Valley of Flowers",
+      "h": "फूलों की घाटी",
+      "s": "Uttarakhand",
+      "st": "Chamoli district, Uttarakhand",
+      "sh": "चमोली ज़िला, उत्तराखंड",
+      "c": "him",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.73,
+      "lng": 79.62,
+      "tag": "Alpine meadows of endemic flowers",
+      "tagh": "स्थानिक फूलों के अल्पाइन घास के मैदान",
+      "fact": "Known for meadows of endemic alpine flowers; it joined the Nanda Devi World Heritage Site in 2005.",
+      "facth": "यह स्थानिक अल्पाइन फूलों के घास के मैदानों के लिए प्रसिद्ध है; 2005 में यह नंदा देवी विश्व धरोहर स्थल में जुड़ा।",
+      "pts": [
+        [
+          "Snow leopard, musk deer, Asiatic black bear and blue sheep live here.",
+          "यहाँ हिम तेंदुआ, कस्तूरी मृग, एशियाई काला भालू और भरल पाए जाते हैं।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1982",
+      "yrh": "1982",
+      "sp": "Alpine flowers",
+      "sph": "अल्पाइन फूल",
+      "riv": "Pushpawati",
+      "rivh": "पुष्पावती",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site, with Nanda Devi (2005)",
+          "यूनेस्को विश्व धरोहर स्थल, नंदा देवी के साथ (2005)"
+        ]
+      ]
+    },
+    {
+      "n": "Gangotri",
+      "h": "गंगोत्री",
+      "s": "Uttarakhand",
+      "st": "Uttarkashi district, Uttarakhand",
+      "sh": "उत्तरकाशी ज़िला, उत्तराखंड",
+      "c": "him",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.93,
+      "lng": 79.05,
+      "tag": "Gaumukh, source of the Ganga, lies inside",
+      "tagh": "गंगा का उद्गम गोमुख इसके अंदर है",
+      "fact": "Gaumukh at the Gangotri glacier, where the Bhagirathi (Ganga) begins, lies inside this park of conifers, meadows and glaciers.",
+      "facth": "गंगोत्री हिमनद का गोमुख, जहाँ से भागीरथी (गंगा) निकलती है, शंकुधारी वनों, घास के मैदानों और हिमनदों वाले इस उद्यान में है।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1989",
+      "yrh": "1989",
+      "riv": "Bhagirathi",
+      "rivh": "भागीरथी"
+    },
+    {
+      "n": "Govind",
+      "h": "गोविंद",
+      "s": "Uttarakhand",
+      "st": "Uttarkashi district, Uttarakhand",
+      "sh": "उत्तरकाशी ज़िला, उत्तराखंड",
+      "c": "him",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.1,
+      "lng": 78.25,
+      "tag": "Named after Govind Ballabh Pant",
+      "tagh": "गोविंद बल्लभ पंत के नाम पर",
+      "fact": "Govind Pashu Vihar began as a sanctuary in 1955 and is named after Govind Ballabh Pant; it lies in the Supin range near Uttarkashi.",
+      "facth": "गोविंद पशु विहार 1955 में अभयारण्य के रूप में शुरू हुआ और गोविंद बल्लभ पंत के नाम पर है; यह उत्तरकाशी के पास सुपिन रेंज में है।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1990",
+      "yrh": "1990"
+    },
+    {
+      "n": "Dudhwa",
+      "h": "दुधवा",
+      "s": "Uttar Pradesh",
+      "st": "Lakhimpur Kheri district, Uttar Pradesh",
+      "sh": "लखीमपुर खीरी ज़िला, उत्तर प्रदेश",
+      "c": "terai",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.51,
+      "lng": 80.68,
+      "tag": "The only national park of Uttar Pradesh",
+      "tagh": "उत्तर प्रदेश का एकमात्र राष्ट्रीय उद्यान",
+      "fact": "A Terai park of marshy grasslands on the Nepal border, known for swamp deer (barasingha); it is part of the Dudhwa Tiger Reserve.",
+      "facth": "नेपाल सीमा पर दलदली घास के मैदानों वाला तराई उद्यान, जो दलदली हिरण (बारहसिंगा) के लिए प्रसिद्ध है; यह दुधवा टाइगर रिज़र्व का भाग है।",
+      "pts": [
+        [
+          "One-horned rhinos were brought back here in 1984.",
+          "यहाँ 1984 में एक सींग वाले गैंडों को फिर से बसाया गया।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1977",
+      "yrh": "1977",
+      "sp": "Swamp deer (barasingha)",
+      "sph": "दलदली हिरण (बारहसिंगा)",
+      "x": [
+        [
+          "tr",
+          "Part of Dudhwa Tiger Reserve",
+          "दुधवा टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Hemis",
+      "h": "हेमिस",
+      "s": "Ladakh",
+      "st": "Leh district, Ladakh",
+      "sh": "लेह ज़िला, लद्दाख",
+      "c": "him",
+      "rg": "N",
+      "d": 1,
+      "lat": 33.98,
+      "lng": 77.43,
+      "tag": "Largest national park of India",
+      "tagh": "भारत का सबसे बड़ा राष्ट्रीय उद्यान",
+      "fact": "India's largest national park and the only one in Ladakh; it has the highest density of snow leopards of any protected area in the world.",
+      "facth": "भारत का सबसे बड़ा राष्ट्रीय उद्यान और लद्दाख का एकमात्र; यहाँ दुनिया के किसी भी संरक्षित क्षेत्र से अधिक घनत्व में हिम तेंदुए हैं।",
+      "pts": [
+        [
+          "Named after the Hemis monastery; it lies about 50 km from Leh.",
+          "इसका नाम हेमिस मठ पर है; यह लेह से लगभग 50 किमी दूर है।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1981",
+      "yrh": "1981",
+      "sp": "Snow leopard",
+      "sph": "हिम तेंदुआ"
+    },
+    {
+      "n": "Dachigam",
+      "h": "दाचीगाम",
+      "s": "Jammu and Kashmir",
+      "st": "Srinagar district, Jammu and Kashmir",
+      "sh": "श्रीनगर ज़िला, जम्मू और कश्मीर",
+      "c": "him",
+      "rg": "N",
+      "d": 1,
+      "lat": 34.14,
+      "lng": 75.04,
+      "tag": "Last home of the hangul",
+      "tagh": "हंगुल का अंतिम घर",
+      "fact": "Near Srinagar, east of Dal Lake; the only place where the hangul (Kashmir stag), the state animal, survives in good numbers.",
+      "facth": "श्रीनगर के पास डल झील के पूर्व में; यही वह स्थान है जहाँ राज्य पशु हंगुल (कश्मीरी बारहसिंगा) अच्छी संख्या में बचा है।",
+      "pts": [
+        [
+          "\"Dachigam\" means \"ten villages\", for the villages moved to create it.",
+          "\"दाचीगाम\" का अर्थ \"दस गाँव\" है, जो इसे बनाने के लिए हटाए गए गाँवों की याद है।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1981",
+      "yrh": "1981",
+      "sp": "Hangul (Kashmir stag)",
+      "sph": "हंगुल (कश्मीरी बारहसिंगा)"
+    },
+    {
+      "n": "Kazinag",
+      "h": "काज़ीनाग",
+      "s": "Jammu and Kashmir",
+      "st": "Baramulla district, Jammu and Kashmir",
+      "sh": "बारामूला ज़िला, जम्मू और कश्मीर",
+      "c": "him",
+      "rg": "N",
+      "d": 3,
+      "lat": 34.17,
+      "lng": 74.03,
+      "tag": "Markhor park on the Line of Control",
+      "tagh": "नियंत्रण रेखा पर मारख़ोर का उद्यान",
+      "fact": "On the north bank of the Jhelum near the Line of Control; known for the markhor, a wild goat with corkscrew horns.",
+      "facth": "नियंत्रण रेखा के पास झेलम के उत्तरी तट पर; यह मुड़े सींगों वाली जंगली बकरी मारख़ोर के लिए जाना जाता है।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1992",
+      "yrh": "1992",
+      "riv": "Jhelum",
+      "rivh": "झेलम"
+    },
+    {
+      "n": "Kishtwar",
+      "h": "किश्तवाड़",
+      "s": "Jammu and Kashmir",
+      "st": "Kishtwar district, Jammu and Kashmir",
+      "sh": "किश्तवाड़ ज़िला, जम्मू और कश्मीर",
+      "c": "him",
+      "rg": "N",
+      "d": 3,
+      "lat": 33.6,
+      "lng": 75.95,
+      "tag": "High-altitude park in the Chenab basin",
+      "tagh": "चिनाब बेसिन का ऊँचा पर्वतीय उद्यान",
+      "fact": "About 40 km from Kishtwar town in the Marusudar valley; home to the Himalayan snowcock and brown bear.",
+      "facth": "किश्तवाड़ नगर से लगभग 40 किमी दूर मरुसुदर घाटी में; यहाँ हिमालयी स्नोकॉक और भूरा भालू पाए जाते हैं।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1981",
+      "yrh": "1981",
+      "riv": "Marusudar",
+      "rivh": "मरुसुदर"
+    },
+    {
+      "n": "Great Himalayan",
+      "h": "ग्रेट हिमालयन",
+      "s": "Himachal Pradesh",
+      "st": "Kullu district, Himachal Pradesh",
+      "sh": "कुल्लू ज़िला, हिमाचल प्रदेश",
+      "c": "him",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.73,
+      "lng": 77.55,
+      "tag": "World Heritage Site since 2014",
+      "tagh": "2014 से विश्व धरोहर स्थल",
+      "fact": "In the Banjar sub-division of Kullu, from 1,500 m to 6,000 m; UNESCO listed the Great Himalayan National Park Conservation Area in 2014.",
+      "facth": "कुल्लू के बंजार उपमंडल में 1,500 मी से 6,000 मी तक; यूनेस्को ने 2014 में ग्रेट हिमालयन राष्ट्रीय उद्यान संरक्षण क्षेत्र को सूची में रखा।",
+      "pts": [
+        [
+          "Home of the western tragopan, the state bird of Himachal Pradesh.",
+          "यह हिमाचल प्रदेश के राज्य पक्षी पश्चिमी ट्रैगोपैन का घर है।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "sp": "Western tragopan",
+      "sph": "पश्चिमी ट्रैगोपैन",
+      "riv": "Tirthan and Sainj",
+      "rivh": "तीर्थन और सैंज",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site (2014)",
+          "यूनेस्को विश्व धरोहर स्थल (2014)"
+        ]
+      ]
+    },
+    {
+      "n": "Pin Valley",
+      "h": "पिन वैली",
+      "s": "Himachal Pradesh",
+      "st": "Spiti, Lahaul and Spiti district, Himachal Pradesh",
+      "sh": "स्पीति, लाहौल और स्पीति ज़िला, हिमाचल प्रदेश",
+      "c": "him",
+      "rg": "N",
+      "d": 2,
+      "lat": 32,
+      "lng": 77.88,
+      "tag": "Cold desert park of Spiti",
+      "tagh": "स्पीति का शीत मरुस्थल उद्यान",
+      "fact": "A cold-desert park in Spiti, part of the Cold Desert Biosphere Reserve; known for the Siberian ibex and snow leopard.",
+      "facth": "स्पीति का शीत मरुस्थल उद्यान, शीत मरुस्थल जैवमंडल रिज़र्व का भाग; यह साइबेरियाई आइबेक्स और हिम तेंदुए के लिए जाना जाता है।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1987",
+      "yrh": "1987",
+      "sp": "Siberian ibex",
+      "sph": "साइबेरियाई आइबेक्स",
+      "x": [
+        [
+          "br",
+          "Part of Cold Desert Biosphere Reserve",
+          "शीत मरुस्थल जैवमंडल रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Khirganga",
+      "h": "खीरगंगा",
+      "s": "Himachal Pradesh",
+      "st": "Kullu district, Himachal Pradesh",
+      "sh": "कुल्लू ज़िला, हिमाचल प्रदेश",
+      "c": "him",
+      "rg": "N",
+      "d": 3,
+      "lat": 32.01,
+      "lng": 77.67,
+      "tag": "Parvati valley park, declared in 2010",
+      "tagh": "2010 में घोषित पार्वती घाटी का उद्यान",
+      "fact": "One of the national parks Himachal Pradesh declared in 2010, in the Parvati valley of Kullu, a popular trekking area.",
+      "facth": "हिमाचल प्रदेश द्वारा 2010 में घोषित उद्यानों में से एक, कुल्लू की पार्वती घाटी में; यह लोकप्रिय ट्रेकिंग क्षेत्र है।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "2010",
+      "yrh": "2010",
+      "riv": "Parvati",
+      "rivh": "पार्वती"
+    },
+    {
+      "n": "Inderkilla",
+      "h": "इंद्रकिला",
+      "s": "Himachal Pradesh",
+      "st": "Kullu district, Himachal Pradesh",
+      "sh": "कुल्लू ज़िला, हिमाचल प्रदेश",
+      "c": "him",
+      "rg": "N",
+      "d": 3,
+      "lat": 32.23,
+      "lng": 77.41,
+      "tag": "Kullu park declared in 2010",
+      "tagh": "2010 में घोषित कुल्लू का उद्यान",
+      "fact": "Declared in 2010 in Kullu district; bears, leopards and over 250 bird species live here.",
+      "facth": "2010 में कुल्लू ज़िले में घोषित; यहाँ भालू, तेंदुए और 250 से अधिक पक्षी प्रजातियाँ हैं।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "2010",
+      "yrh": "2010"
+    },
+    {
+      "n": "Simbalbara",
+      "h": "सिंबलबाड़ा",
+      "s": "Himachal Pradesh",
+      "st": "Sirmaur district, Himachal Pradesh",
+      "sh": "सिरमौर ज़िला, हिमाचल प्रदेश",
+      "c": "terai",
+      "rg": "N",
+      "d": 3,
+      "lat": 30.44,
+      "lng": 77.47,
+      "tag": "Sal forest park on the Haryana border",
+      "tagh": "हरियाणा सीमा पर साल वन उद्यान",
+      "fact": "Sal forests of the Kiyarda Dun valley; a sanctuary since 1958, it became a national park in 2010 and adjoins Haryana's Kalesar.",
+      "facth": "कियारदा दून घाटी के साल वन; 1958 से अभयारण्य, 2010 में राष्ट्रीय उद्यान बना और हरियाणा के कलेसर से जुड़ा है।",
+      "pts": [
+        [
+          "Also called Col. Sher Jung National Park.",
+          "इसे कर्नल शेर जंग राष्ट्रीय उद्यान भी कहते हैं।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "2010",
+      "yrh": "2010"
+    },
+    {
+      "n": "Kalesar",
+      "h": "कलेसर",
+      "s": "Haryana",
+      "st": "Yamunanagar district, Haryana",
+      "sh": "यमुनानगर ज़िला, हरियाणा",
+      "c": "terai",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.37,
+      "lng": 77.53,
+      "tag": "Shivalik sal forest on the Yamuna",
+      "tagh": "यमुना पर शिवालिक साल वन",
+      "fact": "Sal forests of the Shivalik hills on the Yamuna, established in 2003; one of the two national parks of Haryana.",
+      "facth": "यमुना पर शिवालिक पहाड़ियों के साल वन, 2003 में स्थापित; हरियाणा के दो राष्ट्रीय उद्यानों में से एक।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "2003",
+      "yrh": "2003",
+      "riv": "Yamuna",
+      "rivh": "यमुना"
+    },
+    {
+      "n": "Sultanpur",
+      "h": "सुल्तानपुर",
+      "s": "Haryana",
+      "st": "Gurugram district, Haryana",
+      "sh": "गुरुग्राम ज़िला, हरियाणा",
+      "c": "wet",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.46,
+      "lng": 76.89,
+      "tag": "Bird park near Gurugram, Ramsar site",
+      "tagh": "गुरुग्राम के पास पक्षी उद्यान, रामसर स्थल",
+      "fact": "A small wetland bird park near Gurugram where migratory waterbirds winter; it became a Ramsar site in 2021.",
+      "facth": "गुरुग्राम के पास छोटा आर्द्रभूमि पक्षी उद्यान जहाँ प्रवासी जलपक्षी सर्दी बिताते हैं; 2021 में यह रामसर स्थल बना।",
+      "pts": [],
+      "ty": "Wetland & mangrove",
+      "tyh": "आर्द्रभूमि और मैंग्रोव",
+      "sp": "Migratory waterbirds",
+      "sph": "प्रवासी जलपक्षी",
+      "x": [
+        [
+          "ramsar",
+          "Ramsar site (2021)",
+          "रामसर स्थल (2021)"
+        ]
+      ]
+    },
+    {
+      "n": "Keoladeo",
+      "h": "केवलादेव",
+      "s": "Rajasthan",
+      "st": "Bharatpur district, Rajasthan",
+      "sh": "भरतपुर ज़िला, राजस्थान",
+      "c": "wet",
+      "rg": "W",
+      "d": 1,
+      "lat": 27.17,
+      "lng": 77.52,
+      "tag": "Bharatpur bird park, World Heritage and Ramsar site",
+      "tagh": "भरतपुर पक्षी उद्यान, विश्व धरोहर और रामसर स्थल",
+      "fact": "Keoladeo Ghana at Bharatpur hosts thousands of migratory waterbirds in winter; over 400 bird species have been recorded.",
+      "facth": "भरतपुर का केवलादेव घना सर्दियों में हज़ारों प्रवासी जलपक्षियों का घर है; यहाँ 400 से अधिक पक्षी प्रजातियाँ दर्ज हैं।",
+      "pts": [
+        [
+          "A Ramsar site since 1981 and a UNESCO World Heritage Site since 1985.",
+          "1981 से रामसर स्थल और 1985 से यूनेस्को विश्व धरोहर स्थल।"
+        ],
+        [
+          "It was the wintering ground of the Siberian crane, which has not returned since the early 2000s.",
+          "यह साइबेरियाई सारस का शीतकालीन स्थल था, जो 2000 के दशक की शुरुआत से नहीं लौटा।"
+        ]
+      ],
+      "ty": "Wetland & mangrove",
+      "tyh": "आर्द्रभूमि और मैंग्रोव",
+      "sp": "Migratory waterbirds",
+      "sph": "प्रवासी जलपक्षी",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site (1985)",
+          "यूनेस्को विश्व धरोहर स्थल (1985)"
+        ],
+        [
+          "ramsar",
+          "Ramsar site (1981)",
+          "रामसर स्थल (1981)"
+        ]
+      ]
+    },
+    {
+      "n": "Ranthambore",
+      "h": "रणथंभौर",
+      "s": "Rajasthan",
+      "st": "Sawai Madhopur district, Rajasthan",
+      "sh": "सवाई माधोपुर ज़िला, राजस्थान",
+      "c": "central",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.02,
+      "lng": 76.5,
+      "tag": "Tigers among the ruins of Ranthambore Fort",
+      "tagh": "रणथंभौर दुर्ग के खंडहरों के बीच बाघ",
+      "fact": "Named after Ranthambore Fort inside it; bounded by the Banas river in the north and the Chambal in the south.",
+      "facth": "इसका नाम इसके अंदर स्थित रणथंभौर दुर्ग पर है; उत्तर में बनास और दक्षिण में चंबल नदी इसकी सीमा है।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1980",
+      "yrh": "1980",
+      "riv": "Chambal",
+      "rivh": "चंबल",
+      "x": [
+        [
+          "tr",
+          "Part of Ranthambore Tiger Reserve",
+          "रणथंभौर टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Sariska",
+      "h": "सरिस्का",
+      "s": "Rajasthan",
+      "st": "Alwar district, Rajasthan",
+      "sh": "अलवर ज़िला, राजस्थान",
+      "c": "central",
+      "rg": "W",
+      "d": 1,
+      "lat": 27.32,
+      "lng": 76.44,
+      "tag": "Aravalli reserve where tigers were brought back",
+      "tagh": "अरावली रिज़र्व जहाँ बाघ फिर बसाए गए",
+      "fact": "A tiger reserve in the Aravalli hills of Alwar; after its tigers were wiped out by 2005, tigers were relocated here from Ranthambore from 2008.",
+      "facth": "अलवर की अरावली पहाड़ियों का टाइगर रिज़र्व; 2005 तक यहाँ के बाघ ख़त्म हो जाने के बाद 2008 से रणथंभौर से बाघ यहाँ बसाए गए।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "x": [
+        [
+          "tr",
+          "Part of Sariska Tiger Reserve",
+          "सरिस्का टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Mukundara Hills",
+      "h": "मुकुंदरा हिल्स",
+      "s": "Rajasthan",
+      "st": "Kota and Chittorgarh districts, Rajasthan",
+      "sh": "कोटा और चित्तौड़गढ़ ज़िले, राजस्थान",
+      "c": "central",
+      "rg": "W",
+      "d": 2,
+      "lat": 24.87,
+      "lng": 75.86,
+      "tag": "Hadoti park on the Chambal",
+      "tagh": "चंबल पर हाड़ौती का उद्यान",
+      "fact": "Established in 2004 from the Darrah, Jawahar Sagar and part of the National Chambal sanctuaries; the core of Mukundara Hills Tiger Reserve.",
+      "facth": "2004 में दर्रा, जवाहर सागर और राष्ट्रीय चंबल अभयारण्य के भाग से बना; मुकुंदरा हिल्स टाइगर रिज़र्व का कोर।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "2004",
+      "yrh": "2004",
+      "riv": "Chambal",
+      "rivh": "चंबल",
+      "x": [
+        [
+          "tr",
+          "Part of Mukundara Hills Tiger Reserve",
+          "मुकुंदरा हिल्स टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Desert",
+      "h": "डेज़र्ट (मरु)",
+      "s": "Rajasthan",
+      "st": "Jaisalmer and Barmer districts, Rajasthan",
+      "sh": "जैसलमेर और बाड़मेर ज़िले, राजस्थान",
+      "c": "dry",
+      "rg": "W",
+      "d": 1,
+      "lat": 26,
+      "lng": 70.5,
+      "tag": "Thar desert home of the great Indian bustard",
+      "tagh": "थार में गोडावण का घर",
+      "fact": "One of the largest national parks, in the Thar desert near Jaisalmer and Barmer; sand dunes cover about 44% of it.",
+      "facth": "जैसलमेर और बाड़मेर के पास थार मरुस्थल में सबसे बड़े राष्ट्रीय उद्यानों में से एक; इसका लगभग 44% भाग रेत के टीले हैं।",
+      "pts": [
+        [
+          "A stronghold of the great Indian bustard (godawan), the state bird of Rajasthan.",
+          "यह राजस्थान के राज्य पक्षी गोडावण (ग्रेट इंडियन बस्टर्ड) का प्रमुख ठिकाना है।"
+        ]
+      ],
+      "ty": "Desert & grassland",
+      "tyh": "मरुस्थल और घास भूमि",
+      "yr": "1980",
+      "yrh": "1980",
+      "sp": "Great Indian bustard",
+      "sph": "गोडावण (ग्रेट इंडियन बस्टर्ड)"
+    },
+    {
+      "n": "Valmiki",
+      "h": "वाल्मीकि",
+      "s": "Bihar",
+      "st": "West Champaran district, Bihar",
+      "sh": "पश्चिम चंपारण ज़िला, बिहार",
+      "c": "terai",
+      "rg": "E",
+      "d": 1,
+      "lat": 27.33,
+      "lng": 84.16,
+      "tag": "The only national park and tiger reserve of Bihar",
+      "tagh": "बिहार का एकमात्र राष्ट्रीय उद्यान और टाइगर रिज़र्व",
+      "fact": "In West Champaran on the Nepal border, along the Gandak; it is the only national park of Bihar.",
+      "facth": "नेपाल सीमा पर पश्चिम चंपारण में गंडक के किनारे; यह बिहार का एकमात्र राष्ट्रीय उद्यान है।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "riv": "Gandak",
+      "rivh": "गंडक",
+      "x": [
+        [
+          "tr",
+          "Part of Valmiki Tiger Reserve",
+          "वाल्मीकि टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Betla",
+      "h": "बेतला",
+      "s": "Jharkhand",
+      "st": "Latehar and Palamu districts, Jharkhand",
+      "sh": "लातेहार और पलामू ज़िले, झारखंड",
+      "c": "central",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.87,
+      "lng": 84.19,
+      "tag": "The only national park of Jharkhand",
+      "tagh": "झारखंड का एकमात्र राष्ट्रीय उद्यान",
+      "fact": "Jharkhand's only national park, part of the Palamau Tiger Reserve, one of India's first nine tiger reserves (1973).",
+      "facth": "झारखंड का एकमात्र राष्ट्रीय उद्यान, पलामू टाइगर रिज़र्व का भाग, जो भारत के पहले नौ टाइगर रिज़र्वों (1973) में से एक है।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "riv": "North Koel",
+      "rivh": "उत्तरी कोयल",
+      "x": [
+        [
+          "tr",
+          "Part of Palamau Tiger Reserve",
+          "पलामू टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Simlipal",
+      "h": "सिमलीपाल",
+      "s": "Odisha",
+      "st": "Mayurbhanj district, Odisha",
+      "sh": "मयूरभंज ज़िला, ओडिशा",
+      "c": "central",
+      "rg": "E",
+      "d": 1,
+      "lat": 21.83,
+      "lng": 86.33,
+      "tag": "Mayurbhanj tiger reserve, notified as a national park in 2025",
+      "tagh": "2025 में राष्ट्रीय उद्यान अधिसूचित मयूरभंज टाइगर रिज़र्व",
+      "fact": "The core of the Simlipal Tiger Reserve in Mayurbhanj; though long called a national park, it was formally notified as one in April 2025.",
+      "facth": "मयूरभंज के सिमलीपाल टाइगर रिज़र्व का कोर; लंबे समय से राष्ट्रीय उद्यान कहा जाता था, पर औपचारिक अधिसूचना अप्रैल 2025 में हुई।",
+      "pts": [
+        [
+          "Simlipal is also a UNESCO biosphere reserve (2009) and home to melanistic (black) tigers.",
+          "सिमलीपाल यूनेस्को जैवमंडल रिज़र्व (2009) भी है और यहाँ काले (मेलानिस्टिक) बाघ मिलते हैं।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "2025",
+      "yrh": "2025",
+      "x": [
+        [
+          "tr",
+          "Part of Simlipal Tiger Reserve",
+          "सिमलीपाल टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Simlipal Biosphere Reserve (UNESCO network)",
+          "सिमलीपाल जैवमंडल रिज़र्व (यूनेस्को नेटवर्क)"
+        ]
+      ]
+    },
+    {
+      "n": "Bhitarkanika",
+      "h": "भितरकनिका",
+      "s": "Odisha",
+      "st": "Kendrapara district, Odisha",
+      "sh": "केंद्रपाड़ा ज़िला, ओडिशा",
+      "c": "wet",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.75,
+      "lng": 87,
+      "tag": "Mangroves and saltwater crocodiles",
+      "tagh": "मैंग्रोव और खारे पानी के मगरमच्छ",
+      "fact": "Mangrove forests of the Brahmani-Baitarani delta with a large population of saltwater crocodiles; a Ramsar site since 2002.",
+      "facth": "ब्राह्मणी-बैतरणी डेल्टा के मैंग्रोव वन, जहाँ खारे पानी के मगरमच्छों की बड़ी आबादी है; 2002 से रामसर स्थल।",
+      "pts": [
+        [
+          "Gahirmatha marine sanctuary, a mass-nesting beach of olive ridley turtles, lies to its east.",
+          "इसके पूर्व में गहिरमाथा समुद्री अभयारण्य है, जहाँ ओलिव रिडले कछुए सामूहिक रूप से अंडे देते हैं।"
+        ]
+      ],
+      "ty": "Wetland & mangrove",
+      "tyh": "आर्द्रभूमि और मैंग्रोव",
+      "yr": "1998",
+      "yrh": "1998",
+      "sp": "Saltwater crocodile",
+      "sph": "खारे पानी का मगरमच्छ",
+      "riv": "Brahmani and Baitarani",
+      "rivh": "ब्राह्मणी और बैतरणी",
+      "x": [
+        [
+          "ramsar",
+          "Ramsar site (2002)",
+          "रामसर स्थल (2002)"
+        ]
+      ]
+    },
+    {
+      "n": "Sundarbans",
+      "h": "सुंदरबन",
+      "s": "West Bengal",
+      "st": "South 24 Parganas district, West Bengal",
+      "sh": "दक्षिण 24 परगना ज़िला, पश्चिम बंगाल",
+      "c": "wet",
+      "rg": "E",
+      "d": 1,
+      "lat": 21.98,
+      "lng": 88.8,
+      "tag": "Mangrove delta of the Royal Bengal tiger",
+      "tagh": "रॉयल बंगाल बाघ का मैंग्रोव डेल्टा",
+      "fact": "The core of the Sundarban Tiger Reserve in the Ganga-Brahmaputra delta, the largest mangrove forest; tigers here swim between islands.",
+      "facth": "गंगा-ब्रह्मपुत्र डेल्टा में सुंदरबन टाइगर रिज़र्व का कोर, सबसे बड़ा मैंग्रोव वन; यहाँ बाघ द्वीपों के बीच तैरते हैं।",
+      "pts": [
+        [
+          "UNESCO World Heritage Site (1987) and Ramsar site (2019).",
+          "यूनेस्को विश्व धरोहर स्थल (1987) और रामसर स्थल (2019)।"
+        ],
+        [
+          "Named after the sundari tree of the mangroves.",
+          "इसका नाम मैंग्रोव के सुंदरी वृक्ष पर है।"
+        ]
+      ],
+      "ty": "Wetland & mangrove",
+      "tyh": "आर्द्रभूमि और मैंग्रोव",
+      "yr": "1984",
+      "yrh": "1984",
+      "sp": "Mangrove tigers",
+      "sph": "मैंग्रोव के बाघ",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site (1987)",
+          "यूनेस्को विश्व धरोहर स्थल (1987)"
+        ],
+        [
+          "ramsar",
+          "Ramsar site (2019)",
+          "रामसर स्थल (2019)"
+        ],
+        [
+          "tr",
+          "Part of Sundarban Tiger Reserve",
+          "सुंदरबन टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Jaldapara",
+      "h": "जलदापारा",
+      "s": "West Bengal",
+      "st": "Alipurduar district, West Bengal",
+      "sh": "अलीपुरद्वार ज़िला, पश्चिम बंगाल",
+      "c": "terai",
+      "rg": "E",
+      "d": 2,
+      "lat": 26.69,
+      "lng": 89.28,
+      "tag": "Dooars rhino park on the Torsa",
+      "tagh": "तोरसा पर डुआर्स का गैंडा उद्यान",
+      "fact": "Grasslands on the Torsa in the Dooars; a sanctuary since 1941 for the one-horned rhinoceros, made a national park in 2012.",
+      "facth": "डुआर्स में तोरसा के किनारे घास के मैदान; एक सींग वाले गैंडे के लिए 1941 से अभयारण्य, 2012 में राष्ट्रीय उद्यान बना।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "2012",
+      "yrh": "2012",
+      "sp": "One-horned rhinoceros",
+      "sph": "एक सींग वाला गैंडा",
+      "riv": "Torsa",
+      "rivh": "तोरसा"
+    },
+    {
+      "n": "Gorumara",
+      "h": "गोरुमारा",
+      "s": "West Bengal",
+      "st": "Jalpaiguri district, West Bengal",
+      "sh": "जलपाईगुड़ी ज़िला, पश्चिम बंगाल",
+      "c": "terai",
+      "rg": "E",
+      "d": 2,
+      "lat": 26.7,
+      "lng": 88.8,
+      "tag": "Dooars grassland known for rhinos",
+      "tagh": "गैंडों के लिए प्रसिद्ध डुआर्स घास भूमि",
+      "fact": "A medium-sized Dooars park of grasslands and forest in the Himalayan foothills, known mainly for the one-horned rhinoceros.",
+      "facth": "हिमालय की तलहटी में घास भूमि और वन वाला डुआर्स का मध्यम आकार का उद्यान, जो मुख्यतः एक सींग वाले गैंडे के लिए प्रसिद्ध है।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1992",
+      "yrh": "1992",
+      "sp": "One-horned rhinoceros",
+      "sph": "एक सींग वाला गैंडा"
+    },
+    {
+      "n": "Buxa",
+      "h": "बक्सा",
+      "s": "West Bengal",
+      "st": "Alipurduar district, West Bengal",
+      "sh": "अलीपुरद्वार ज़िला, पश्चिम बंगाल",
+      "c": "terai",
+      "rg": "E",
+      "d": 2,
+      "lat": 26.65,
+      "lng": 89.58,
+      "tag": "Tiger reserve on the Bhutan border",
+      "tagh": "भूटान सीमा पर टाइगर रिज़र्व",
+      "fact": "A tiger reserve and national park from the plains to 1,750 m on the Bhutan border, joined to Bhutan's Phibsoo sanctuary.",
+      "facth": "भूटान सीमा पर मैदान से 1,750 मी तक का टाइगर रिज़र्व और राष्ट्रीय उद्यान, जो भूटान के फिब्सू अभयारण्य से जुड़ा है।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "x": [
+        [
+          "tr",
+          "Part of Buxa Tiger Reserve",
+          "बक्सा टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Neora Valley",
+      "h": "नेओरा वैली",
+      "s": "West Bengal",
+      "st": "Kalimpong district, West Bengal",
+      "sh": "कालिम्पोंग ज़िला, पश्चिम बंगाल",
+      "c": "him",
+      "rg": "E",
+      "d": 2,
+      "lat": 27.06,
+      "lng": 88.7,
+      "tag": "Land of the red panda",
+      "tagh": "लाल पांडा की भूमि",
+      "fact": "Rugged, little-disturbed hill forest in Kalimpong district, known as the land of the red panda.",
+      "facth": "कालिम्पोंग ज़िले का दुर्गम और अछूता पहाड़ी वन, जिसे लाल पांडा की भूमि कहा जाता है।",
+      "pts": [],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1986",
+      "yrh": "1986",
+      "sp": "Red panda",
+      "sph": "लाल पांडा"
+    },
+    {
+      "n": "Singalila",
+      "h": "सिंगालीला",
+      "s": "West Bengal",
+      "st": "Darjeeling district, West Bengal",
+      "sh": "दार्जिलिंग ज़िला, पश्चिम बंगाल",
+      "c": "him",
+      "rg": "E",
+      "d": 2,
+      "lat": 27.12,
+      "lng": 88.07,
+      "tag": "Sandakphu trek on the Nepal border",
+      "tagh": "नेपाल सीमा पर संदकफू ट्रेक",
+      "fact": "On the Singalila ridge above 2,300 m on the Nepal border; the trek to Sandakphu, the highest point of West Bengal, runs through it.",
+      "facth": "नेपाल सीमा पर 2,300 मी से ऊपर सिंगालीला रिज पर; पश्चिम बंगाल के सबसे ऊँचे स्थान संदकफू का ट्रेक इससे होकर जाता है।",
+      "pts": [
+        [
+          "Red pandas live in its bamboo and rhododendron forests.",
+          "इसके बाँस और बुरांश के वनों में लाल पांडा रहते हैं।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1986",
+      "yrh": "1986",
+      "sp": "Red panda",
+      "sph": "लाल पांडा"
+    },
+    {
+      "n": "Kaziranga",
+      "h": "काज़ीरंगा",
+      "s": "Assam",
+      "st": "Golaghat, Nagaon, Sonitpur and Biswanath districts, Assam",
+      "sh": "गोलाघाट, नगाँव, सोनितपुर और बिश्वनाथ ज़िले, असम",
+      "c": "terai",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.67,
+      "lng": 93.35,
+      "tag": "Home of two-thirds of the world's one-horned rhinos",
+      "tagh": "दुनिया के दो-तिहाई एक सींग वाले गैंडों का घर",
+      "fact": "On the south bank of the Brahmaputra, it holds about two-thirds of the world's one-horned rhinoceroses; UNESCO World Heritage Site since 1985.",
+      "facth": "ब्रह्मपुत्र के दक्षिणी तट पर, यहाँ दुनिया के लगभग दो-तिहाई एक सींग वाले गैंडे हैं; 1985 से यूनेस्को विश्व धरोहर स्थल।",
+      "pts": [
+        [
+          "Also has the largest populations of wild water buffalo and eastern swamp deer; it was declared a tiger reserve in 2006.",
+          "यहाँ जंगली भैंसे और पूर्वी दलदली हिरण की सबसे बड़ी आबादी भी है; 2006 में इसे टाइगर रिज़र्व घोषित किया गया।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1974",
+      "yrh": "1974",
+      "sp": "One-horned rhinoceros",
+      "sph": "एक सींग वाला गैंडा",
+      "riv": "Brahmaputra",
+      "rivh": "ब्रह्मपुत्र",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site (1985)",
+          "यूनेस्को विश्व धरोहर स्थल (1985)"
+        ],
+        [
+          "tr",
+          "Part of Kaziranga Tiger Reserve",
+          "काज़ीरंगा टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Manas",
+      "h": "मानस",
+      "s": "Assam",
+      "st": "Baksa, Chirang and Bajali districts, Assam",
+      "sh": "बक्सा, चिरांग और बजाली ज़िले, असम",
+      "c": "terai",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.72,
+      "lng": 90.93,
+      "tag": "World Heritage tiger reserve on the Bhutan border",
+      "tagh": "भूटान सीमा पर विश्व धरोहर टाइगर रिज़र्व",
+      "fact": "In the Himalayan foothills next to Bhutan's Royal Manas; the last natural population of the pygmy hog survived here.",
+      "facth": "हिमालय की तलहटी में भूटान के रॉयल मानस से सटा; पिग्मी हॉग की अंतिम प्राकृतिक आबादी यहीं बची रही।",
+      "pts": [
+        [
+          "A tiger reserve, elephant reserve and biosphere reserve; UNESCO World Heritage Site since 1985.",
+          "यह टाइगर रिज़र्व, हाथी रिज़र्व और जैवमंडल रिज़र्व है; 1985 से यूनेस्को विश्व धरोहर स्थल।"
+        ],
+        [
+          "Golden langur, hispid hare and Assam roofed turtle are found here.",
+          "यहाँ सुनहरा लंगूर, हिस्पिड खरगोश और असम छत वाला कछुआ मिलते हैं।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1990",
+      "yrh": "1990",
+      "sp": "Pygmy hog",
+      "sph": "पिग्मी हॉग",
+      "riv": "Manas",
+      "rivh": "मानस",
+      "x": [
+        [
+          "whs",
+          "UNESCO World Heritage Site (1985)",
+          "यूनेस्को विश्व धरोहर स्थल (1985)"
+        ],
+        [
+          "tr",
+          "Part of Manas Tiger Reserve",
+          "मानस टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Manas Biosphere Reserve",
+          "मानस जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Orang",
+      "h": "ओरांग",
+      "s": "Assam",
+      "st": "Darrang and Sonitpur districts, Assam",
+      "sh": "दरंग और सोनितपुर ज़िले, असम",
+      "c": "terai",
+      "rg": "NE",
+      "d": 2,
+      "lat": 26.56,
+      "lng": 92.33,
+      "tag": "\"Mini Kaziranga\" on the north bank",
+      "tagh": "उत्तरी तट का \"मिनी काज़ीरंगा\"",
+      "fact": "On the north bank of the Brahmaputra; a sanctuary from 1985, it became a national park on 13 April 1999. Known for one-horned rhinos.",
+      "facth": "ब्रह्मपुत्र के उत्तरी तट पर; 1985 से अभयारण्य, 13 अप्रैल 1999 को राष्ट्रीय उद्यान बना। एक सींग वाले गैंडों के लिए प्रसिद्ध।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1999",
+      "yrh": "1999",
+      "sp": "One-horned rhinoceros",
+      "sph": "एक सींग वाला गैंडा",
+      "riv": "Brahmaputra",
+      "rivh": "ब्रह्मपुत्र",
+      "x": [
+        [
+          "tr",
+          "Part of Orang Tiger Reserve",
+          "ओरांग टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Nameri",
+      "h": "नामेरी",
+      "s": "Assam",
+      "st": "Sonitpur district, Assam",
+      "sh": "सोनितपुर ज़िला, असम",
+      "c": "terai",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.01,
+      "lng": 92.79,
+      "tag": "Foothill park on the Jia Bharali",
+      "tagh": "जिया भराली पर तलहटी का उद्यान",
+      "fact": "In the eastern Himalayan foothills about 35 km from Tezpur, joined to Arunachal's Pakke sanctuary; the core of the Nameri Tiger Reserve.",
+      "facth": "तेज़पुर से लगभग 35 किमी दूर पूर्वी हिमालय की तलहटी में, अरुणाचल के पक्के अभयारण्य से जुड़ा; नामेरी टाइगर रिज़र्व का कोर।",
+      "pts": [
+        [
+          "Famous for the white-winged wood duck.",
+          "यह सफ़ेद पंखों वाली वुड डक के लिए प्रसिद्ध है।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "1998",
+      "yrh": "1998",
+      "riv": "Jia Bharali (Kameng)",
+      "rivh": "जिया भराली (कामेंग)",
+      "x": [
+        [
+          "tr",
+          "Part of Nameri Tiger Reserve",
+          "नामेरी टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Dibru-Saikhowa",
+      "h": "डिब्रू-सैखोवा",
+      "s": "Assam",
+      "st": "Dibrugarh and Tinsukia districts, Assam",
+      "sh": "डिब्रूगढ़ और तिनसुकिया ज़िले, असम",
+      "c": "wet",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.67,
+      "lng": 95.38,
+      "tag": "Swamp forest with feral horses",
+      "tagh": "जंगली घोड़ों वाला दलदली वन",
+      "fact": "Bounded by the Brahmaputra and Lohit; the largest swamp forest of north-east India, known for its feral horses.",
+      "facth": "ब्रह्मपुत्र और लोहित से घिरा; पूर्वोत्तर भारत का सबसे बड़ा दलदली वन, जो अपने जंगली घोड़ों के लिए जाना जाता है।",
+      "pts": [
+        [
+          "It is also a biosphere reserve (1997).",
+          "यह जैवमंडल रिज़र्व (1997) भी है।"
+        ]
+      ],
+      "ty": "Wetland & mangrove",
+      "tyh": "आर्द्रभूमि और मैंग्रोव",
+      "yr": "1999",
+      "yrh": "1999",
+      "sp": "Feral horses",
+      "sph": "जंगली घोड़े",
+      "riv": "Brahmaputra",
+      "rivh": "ब्रह्मपुत्र",
+      "x": [
+        [
+          "br",
+          "Dibru-Saikhowa Biosphere Reserve",
+          "डिब्रू-सैखोवा जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Dehing Patkai",
+      "h": "देहिंग पटकाई",
+      "s": "Assam",
+      "st": "Dibrugarh and Tinsukia districts, Assam",
+      "sh": "डिब्रूगढ़ और तिनसुकिया ज़िले, असम",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.33,
+      "lng": 95.53,
+      "tag": "Lowland rainforest, a national park since 2021",
+      "tagh": "निचला वर्षावन, 2021 से राष्ट्रीय उद्यान",
+      "fact": "A dipterocarp lowland rainforest near Digboi and Margherita, upgraded from a sanctuary to a national park in 2021.",
+      "facth": "डिगबोई और मार्घेरिटा के पास डिप्टेरोकार्प निचला वर्षावन, जिसे 2021 में अभयारण्य से राष्ट्रीय उद्यान बनाया गया।",
+      "pts": [
+        [
+          "Sometimes called the \"Amazon of the East\".",
+          "इसे कभी-कभी \"पूर्व का अमेज़न\" कहा जाता है।"
+        ]
+      ],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "yr": "2021",
+      "yrh": "2021"
+    },
+    {
+      "n": "Raimona",
+      "h": "रायमोना",
+      "s": "Assam",
+      "st": "Kokrajhar district, Assam",
+      "sh": "कोकराझार ज़िला, असम",
+      "c": "terai",
+      "rg": "NE",
+      "d": 2,
+      "lat": 26.66,
+      "lng": 89.98,
+      "tag": "Golden langur park of Bodoland, 2021",
+      "tagh": "बोडोलैंड का सुनहरा लंगूर उद्यान, 2021",
+      "fact": "In the far west of Assam in Kokrajhar (Bodoland), declared in 2021; the golden langur is its flagship species.",
+      "facth": "असम के सुदूर पश्चिम में कोकराझार (बोडोलैंड) में, 2021 में घोषित; सुनहरा लंगूर इसकी प्रमुख प्रजाति है।",
+      "pts": [],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "2021",
+      "yrh": "2021",
+      "sp": "Golden langur",
+      "sph": "सुनहरा लंगूर",
+      "riv": "Sankosh",
+      "rivh": "संकोश"
+    },
+    {
+      "n": "Sikhna Jwhwlao",
+      "h": "सिखना ज्वह्वलाओ",
+      "s": "Assam",
+      "st": "Chirang and Kokrajhar districts, Assam",
+      "sh": "चिरांग और कोकराझार ज़िले, असम",
+      "c": "terai",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26.75,
+      "lng": 90.45,
+      "tag": "Assam's newest national park (March 2025)",
+      "tagh": "असम का सबसे नया राष्ट्रीय उद्यान (मार्च 2025)",
+      "fact": "Notified on 5 March 2025 from the Chirang Reserve Forest on the Bhutan border; Assam's eighth and Bodoland's third national park.",
+      "facth": "भूटान सीमा पर चिरांग आरक्षित वन से 5 मार्च 2025 को अधिसूचित; असम का आठवाँ और बोडोलैंड का तीसरा राष्ट्रीय उद्यान।",
+      "pts": [
+        [
+          "Part of the Manas Biosphere Reserve; golden langur, tiger, elephant and rhino are found here.",
+          "मानस जैवमंडल रिज़र्व का भाग; यहाँ सुनहरा लंगूर, बाघ, हाथी और गैंडा पाए जाते हैं।"
+        ]
+      ],
+      "ty": "Terai & floodplain",
+      "tyh": "तराई और बाढ़ मैदान",
+      "yr": "2025",
+      "yrh": "2025",
+      "riv": "Saralbhanga",
+      "rivh": "सरलभंगा"
+    },
+    {
+      "n": "Namdapha",
+      "h": "नामदफा",
+      "s": "Arunachal Pradesh",
+      "st": "Changlang district, Arunachal Pradesh",
+      "sh": "चांगलांग ज़िला, अरुणाचल प्रदेश",
+      "c": "ne",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.48,
+      "lng": 96.38,
+      "tag": "Rainforest with four big cats",
+      "tagh": "चार बड़ी बिल्लियों वाला वर्षावन",
+      "fact": "A biodiversity hotspot of the eastern Himalaya with tiger, leopard, clouded leopard and snow leopard; it has the northernmost lowland evergreen rainforest in the world.",
+      "facth": "पूर्वी हिमालय का जैव विविधता हॉटस्पॉट जहाँ बाघ, तेंदुआ, क्लाउडेड तेंदुआ और हिम तेंदुआ हैं; यहाँ दुनिया का सबसे उत्तरी निचला सदाबहार वर्षावन है।",
+      "pts": [
+        [
+          "Also home to the Namdapha flying squirrel, red panda and hoolock gibbon.",
+          "यहाँ नामदफा उड़न गिलहरी, लाल पांडा और हूलॉक गिब्बन भी हैं।"
+        ]
+      ],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "yr": "1983",
+      "yrh": "1983",
+      "sp": "Four big cats",
+      "sph": "चार बड़ी बिल्लियाँ",
+      "riv": "Noa Dihing",
+      "rivh": "नोआ दिहिंग",
+      "x": [
+        [
+          "tr",
+          "Part of Namdapha Tiger Reserve",
+          "नामदफा टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Mouling",
+      "h": "मौलिंग",
+      "s": "Arunachal Pradesh",
+      "st": "Upper Siang district, Arunachal Pradesh",
+      "sh": "अपर सियांग ज़िला, अरुणाचल प्रदेश",
+      "c": "ne",
+      "rg": "NE",
+      "d": 3,
+      "lat": 28.58,
+      "lng": 94.87,
+      "tag": "Arunachal's second national park",
+      "tagh": "अरुणाचल का दूसरा राष्ट्रीय उद्यान",
+      "fact": "In the Siang valley, the second national park of Arunachal Pradesh; part of the Dihang-Dibang Biosphere Reserve, with takin, red panda and serow.",
+      "facth": "सियांग घाटी में अरुणाचल प्रदेश का दूसरा राष्ट्रीय उद्यान; दिहांग-दिबांग जैवमंडल रिज़र्व का भाग, जहाँ टाकिन, लाल पांडा और सीरो हैं।",
+      "pts": [],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "yr": "1986",
+      "yrh": "1986"
+    },
+    {
+      "n": "Khangchendzonga",
+      "h": "खंगचेंदज़ोंगा (कंचनजंगा)",
+      "s": "Sikkim",
+      "st": "North and West Sikkim",
+      "sh": "उत्तर और पश्चिम सिक्किम",
+      "c": "him",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.66,
+      "lng": 88.31,
+      "tag": "India's first mixed World Heritage Site (2016)",
+      "tagh": "भारत का पहला मिश्रित विश्व धरोहर स्थल (2016)",
+      "fact": "Named after Kangchenjunga, the world's third-highest peak; in 2016 it became India's first \"mixed\" (natural and cultural) World Heritage Site.",
+      "facth": "इसका नाम दुनिया की तीसरी सबसे ऊँची चोटी कंचनजंगा पर है; 2016 में यह भारत का पहला \"मिश्रित\" (प्राकृतिक और सांस्कृतिक) विश्व धरोहर स्थल बना।",
+      "pts": [
+        [
+          "The only national park of Sikkim; also a UNESCO biosphere reserve.",
+          "सिक्किम का एकमात्र राष्ट्रीय उद्यान; यूनेस्को जैवमंडल रिज़र्व भी।"
+        ]
+      ],
+      "ty": "Himalayan & alpine",
+      "tyh": "हिमालयी और अल्पाइन",
+      "yr": "1977",
+      "yrh": "1977",
+      "x": [
+        [
+          "whs",
+          "UNESCO mixed World Heritage Site (2016)",
+          "यूनेस्को मिश्रित विश्व धरोहर स्थल (2016)"
+        ],
+        [
+          "br",
+          "Khangchendzonga Biosphere Reserve",
+          "खंगचेंदज़ोंगा जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Keibul Lamjao",
+      "h": "केबुल लामजाओ",
+      "s": "Manipur",
+      "st": "Bishnupur district, Manipur",
+      "sh": "बिष्णुपुर ज़िला, मणिपुर",
+      "c": "wet",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.5,
+      "lng": 93.77,
+      "tag": "The only floating national park in the world",
+      "tagh": "दुनिया का एकमात्र तैरता राष्ट्रीय उद्यान",
+      "fact": "Floats on phumdis (masses of vegetation) on Loktak Lake; the last natural home of the sangai, the brow-antlered deer and state animal of Manipur.",
+      "facth": "लोकटक झील पर फुमदी (वनस्पति के तैरते ढेर) पर तैरता है; मणिपुर के राज्य पशु भौंह-सींग हिरण संगाई का अंतिम प्राकृतिक घर।",
+      "pts": [
+        [
+          "Loktak Lake has been a Ramsar site since 1990.",
+          "लोकटक झील 1990 से रामसर स्थल है।"
+        ]
+      ],
+      "ty": "Wetland & mangrove",
+      "tyh": "आर्द्रभूमि और मैंग्रोव",
+      "yr": "1977",
+      "yrh": "1977",
+      "sp": "Sangai (brow-antlered deer)",
+      "sph": "संगाई (भौंह-सींग हिरण)",
+      "x": [
+        [
+          "ramsar",
+          "On Loktak Lake, a Ramsar site (1990)",
+          "लोकटक झील पर, रामसर स्थल (1990)"
+        ]
+      ]
+    },
+    {
+      "n": "Shirui",
+      "h": "शिरुई",
+      "s": "Manipur",
+      "st": "Ukhrul district, Manipur",
+      "sh": "उखरुल ज़िला, मणिपुर",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.23,
+      "lng": 94.23,
+      "tag": "Only natural home of the Shirui lily",
+      "tagh": "शिरुई लिली का एकमात्र प्राकृतिक घर",
+      "fact": "In Ukhrul district; the Shirui lily, the state flower of Manipur, grows wild only on these hills.",
+      "facth": "उखरुल ज़िले में; मणिपुर का राज्य पुष्प शिरुई लिली केवल इन्हीं पहाड़ियों पर जंगली रूप में उगता है।",
+      "pts": [],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "yr": "1982",
+      "yrh": "1982",
+      "sp": "Shirui lily",
+      "sph": "शिरुई लिली"
+    },
+    {
+      "n": "Balphakram",
+      "h": "बालफाकरम",
+      "s": "Meghalaya",
+      "st": "South Garo Hills district, Meghalaya",
+      "sh": "दक्षिण गारो हिल्स ज़िला, मेघालय",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.42,
+      "lng": 90.87,
+      "tag": "\"Land of the eternal wind\" in the Garo Hills",
+      "tagh": "गारो पहाड़ियों में \"शाश्वत हवाओं की भूमि\"",
+      "fact": "In South Garo Hills near the Bangladesh border; Balpakram means \"land of the eternal wind\" in Garo belief.",
+      "facth": "बांग्लादेश सीमा के पास दक्षिण गारो हिल्स में; गारो मान्यता में बालफाकरम का अर्थ \"शाश्वत हवाओं की भूमि\" है।",
+      "pts": [
+        [
+          "Wild water buffalo, red panda and the pitcher plant are found here.",
+          "यहाँ जंगली भैंसा, लाल पांडा और घटपर्णी (पिचर प्लांट) पाए जाते हैं।"
+        ]
+      ],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "yr": "1987",
+      "yrh": "1987"
+    },
+    {
+      "n": "Nokrek",
+      "h": "नोकरेक",
+      "s": "Meghalaya",
+      "st": "West Garo Hills district, Meghalaya",
+      "sh": "पश्चिम गारो हिल्स ज़िला, मेघालय",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.53,
+      "lng": 90.12,
+      "tag": "Core of a UNESCO biosphere reserve",
+      "tagh": "यूनेस्को जैवमंडल रिज़र्व का कोर",
+      "fact": "About 2 km from Tura Peak in the Garo Hills; the core of the Nokrek Biosphere Reserve, added to UNESCO's network in 2009.",
+      "facth": "गारो पहाड़ियों में तुरा पीक से लगभग 2 किमी दूर; नोकरेक जैवमंडल रिज़र्व का कोर, जो 2009 में यूनेस्को नेटवर्क में जुड़ा।",
+      "pts": [
+        [
+          "Known for wild citrus (memang narang), an ancestor of cultivated oranges.",
+          "यह जंगली नींबू-वंश (मेमांग नारंग) के लिए जाना जाता है, जो खेती वाले संतरों का पूर्वज है।"
+        ]
+      ],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "x": [
+        [
+          "br",
+          "Nokrek Biosphere Reserve (UNESCO network, 2009)",
+          "नोकरेक जैवमंडल रिज़र्व (यूनेस्को नेटवर्क, 2009)"
+        ]
+      ]
+    },
+    {
+      "n": "Murlen",
+      "h": "मुरलेन",
+      "s": "Mizoram",
+      "st": "Champhai district, Mizoram",
+      "sh": "चम्फाई ज़िला, मिज़ोरम",
+      "c": "ne",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.62,
+      "lng": 93.3,
+      "tag": "Mizoram forest near the Chin Hills",
+      "tagh": "चिन पहाड़ियों के पास मिज़ोरम का वन",
+      "fact": "About 245 km east of Aizawl near the Chin Hills of Myanmar; the larger of the two national parks of Mizoram.",
+      "facth": "आइज़ोल से लगभग 245 किमी पूर्व में म्यांमार की चिन पहाड़ियों के पास; मिज़ोरम के दो राष्ट्रीय उद्यानों में बड़ा।",
+      "pts": [],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन"
+    },
+    {
+      "n": "Phawngpui",
+      "h": "फौंगपुई",
+      "s": "Mizoram",
+      "st": "Lawngtlai district, Mizoram",
+      "sh": "लॉन्गतलाई ज़िला, मिज़ोरम",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 22.67,
+      "lng": 93.05,
+      "tag": "Blue Mountain, highest peak of Mizoram",
+      "tagh": "ब्लू माउंटेन, मिज़ोरम की सबसे ऊँची चोटी",
+      "fact": "Named after Phawngpui, the \"Blue Mountain\" and highest peak of Mizoram, in the south-east near Myanmar.",
+      "facth": "इसका नाम मिज़ोरम की सबसे ऊँची चोटी \"ब्लू माउंटेन\" फौंगपुई पर है, जो दक्षिण-पूर्व में म्यांमार के पास है।",
+      "pts": [],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन"
+    },
+    {
+      "n": "Ntangki",
+      "h": "नटांगकी",
+      "s": "Nagaland",
+      "st": "Peren district, Nagaland",
+      "sh": "पेरेन ज़िला, नागालैंड",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.56,
+      "lng": 93.45,
+      "tag": "The only national park of Nagaland",
+      "tagh": "नागालैंड का एकमात्र राष्ट्रीय उद्यान",
+      "fact": "Nagaland's only national park, in Peren district; home to the hoolock gibbon, India's only ape.",
+      "facth": "नागालैंड का एकमात्र राष्ट्रीय उद्यान, पेरेन ज़िले में; यहाँ भारत का एकमात्र कपि हूलॉक गिब्बन रहता है।",
+      "pts": [
+        [
+          "The name comes from the Zeme dialect of the Zeliangrong Nagas.",
+          "यह नाम ज़ेलियांगरोंग नागाओं की ज़ेमे बोली से आया है।"
+        ]
+      ],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन",
+      "yr": "1993",
+      "yrh": "1993",
+      "sp": "Hoolock gibbon",
+      "sph": "हूलॉक गिब्बन"
+    },
+    {
+      "n": "Rajbari (Bison)",
+      "h": "राजबाड़ी (बाइसन)",
+      "s": "Tripura",
+      "st": "Trishna sanctuary, South Tripura",
+      "sh": "तृष्णा अभयारण्य, दक्षिण त्रिपुरा",
+      "c": "ne",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.28,
+      "lng": 91.4,
+      "tag": "Gaur (Indian bison) park of Tripura",
+      "tagh": "त्रिपुरा का गौर (भारतीय बाइसन) उद्यान",
+      "fact": "Inside the Trishna Wildlife Sanctuary, named for the gaur (Indian bison); one of the two national parks of Tripura.",
+      "facth": "तृष्णा वन्यजीव अभयारण्य के अंदर, गौर (भारतीय बाइसन) के नाम पर; त्रिपुरा के दो राष्ट्रीय उद्यानों में से एक।",
+      "pts": [],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन"
+    },
+    {
+      "n": "Clouded Leopard",
+      "h": "क्लाउडेड लेपर्ड",
+      "s": "Tripura",
+      "st": "Sepahijala sanctuary, near Agartala",
+      "sh": "सिपाहीजाला अभयारण्य, अगरतला के पास",
+      "c": "ne",
+      "rg": "NE",
+      "d": 2,
+      "lat": 23.67,
+      "lng": 91.32,
+      "tag": "Small park near Agartala",
+      "tagh": "अगरतला के पास छोटा उद्यान",
+      "fact": "A small park inside the Sepahijala sanctuary about 28 km from Agartala; four primate species, including Phayre's langur, live here.",
+      "facth": "अगरतला से लगभग 28 किमी दूर सिपाहीजाला अभयारण्य में छोटा उद्यान; यहाँ फेयर के लंगूर सहित चार प्राइमेट प्रजातियाँ हैं।",
+      "pts": [],
+      "ty": "North-east hill forest",
+      "tyh": "पूर्वोत्तर पहाड़ी वन"
+    },
+    {
+      "n": "Kanha",
+      "h": "कान्हा",
+      "s": "Madhya Pradesh",
+      "st": "Mandla and Balaghat districts, Madhya Pradesh",
+      "sh": "मंडला और बालाघाट ज़िले, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 1,
+      "lat": 22.23,
+      "lng": 80.64,
+      "tag": "Saved the hard-ground barasingha",
+      "tagh": "कठोर-भूमि बारहसिंगा को बचाया",
+      "fact": "In the Maikal hills of Mandla and Balaghat; it saved the hard-ground barasingha (swamp deer), the state animal of Madhya Pradesh, from extinction.",
+      "facth": "मंडला और बालाघाट की मैकल पहाड़ियों में; इसने मध्य प्रदेश के राज्य पशु कठोर-भूमि बारहसिंगा को विलुप्त होने से बचाया।",
+      "pts": [
+        [
+          "The first tiger reserve with an official mascot, \"Bhoorsingh the Barasingha\".",
+          "आधिकारिक शुभंकर \"भूरसिंह द बारहसिंगा\" वाला पहला टाइगर रिज़र्व।"
+        ],
+        [
+          "Its sal forests and meadows are linked with Kipling's The Jungle Book country.",
+          "इसके साल वन और घास के मैदान किपलिंग की \"द जंगल बुक\" के क्षेत्र से जुड़े हैं।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1955",
+      "yrh": "1955",
+      "sp": "Hard-ground barasingha",
+      "sph": "कठोर-भूमि बारहसिंगा",
+      "x": [
+        [
+          "tr",
+          "Part of Kanha Tiger Reserve",
+          "कान्हा टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Bandhavgarh",
+      "h": "बांधवगढ़",
+      "s": "Madhya Pradesh",
+      "st": "Umaria district, Madhya Pradesh",
+      "sh": "उमरिया ज़िला, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 1,
+      "lat": 23.7,
+      "lng": 80.96,
+      "tag": "Very high tiger density",
+      "tagh": "बाघों का बहुत अधिक घनत्व",
+      "fact": "In Umaria district, once a hunting ground of the Rewa rulers; known for one of the highest tiger densities in India.",
+      "facth": "उमरिया ज़िले में, कभी रीवा शासकों का शिकारगाह; भारत में बाघों के सबसे अधिक घनत्व वाले क्षेत्रों में से एक।",
+      "pts": [
+        [
+          "The white tiger Mohan, ancestor of most captive white tigers, was caught in this region in 1951.",
+          "सफ़ेद बाघ मोहन, जो अधिकतर पालतू सफ़ेद बाघों का पूर्वज है, 1951 में इसी क्षेत्र में पकड़ा गया था।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1968",
+      "yrh": "1968",
+      "x": [
+        [
+          "tr",
+          "Part of Bandhavgarh Tiger Reserve",
+          "बांधवगढ़ टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Pench",
+      "h": "पेंच",
+      "s": "Madhya Pradesh",
+      "st": "Seoni and Chhindwara districts, Madhya Pradesh",
+      "sh": "सिवनी और छिंदवाड़ा ज़िले, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 1,
+      "lat": 21.8,
+      "lng": 79.25,
+      "tag": "The Jungle Book country on the Pench river",
+      "tagh": "पेंच नदी पर \"द जंगल बुक\" का देश",
+      "fact": "Named after the Pench river; the setting of Rudyard Kipling's The Jungle Book. It is the core of Pench Tiger Reserve.",
+      "facth": "पेंच नदी के नाम पर; रुडयार्ड किपलिंग की \"द जंगल बुक\" का परिवेश। यह पेंच टाइगर रिज़र्व का कोर है।",
+      "pts": [
+        [
+          "Across the river, Maharashtra has its own Pench (Jawaharlal Nehru) National Park in Nagpur district.",
+          "नदी के पार महाराष्ट्र के नागपुर ज़िले में अलग पेंच (जवाहरलाल नेहरू) राष्ट्रीय उद्यान है।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "riv": "Pench",
+      "rivh": "पेंच",
+      "x": [
+        [
+          "tr",
+          "Part of Pench Tiger Reserve",
+          "पेंच टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Panna",
+      "h": "पन्ना",
+      "s": "Madhya Pradesh",
+      "st": "Panna and Chhatarpur districts, Madhya Pradesh",
+      "sh": "पन्ना और छतरपुर ज़िले, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 1,
+      "lat": 24.72,
+      "lng": 80.01,
+      "tag": "Tiger comeback on the Ken river",
+      "tagh": "केन नदी पर बाघों की वापसी",
+      "fact": "On the Ken river; after losing all its tigers by 2009, Panna rebuilt its population with relocated tigers.",
+      "facth": "केन नदी पर; 2009 तक सभी बाघ खो देने के बाद पन्ना ने बाहर से लाए बाघों से अपनी आबादी फिर बनाई।",
+      "pts": [
+        [
+          "Declared the 22nd tiger reserve of India in 1994; also a UNESCO biosphere reserve (2020).",
+          "1994 में भारत का 22वाँ टाइगर रिज़र्व घोषित; यूनेस्को जैवमंडल रिज़र्व (2020) भी।"
+        ],
+        [
+          "The Ken-Betwa river link project passes through the area.",
+          "केन-बेतवा नदी जोड़ो परियोजना इस क्षेत्र से गुज़रती है।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1981",
+      "yrh": "1981",
+      "riv": "Ken",
+      "rivh": "केन",
+      "x": [
+        [
+          "tr",
+          "Part of Panna Tiger Reserve",
+          "पन्ना टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Panna Biosphere Reserve",
+          "पन्ना जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Satpura",
+      "h": "सतपुड़ा",
+      "s": "Madhya Pradesh",
+      "st": "Narmadapuram district, Madhya Pradesh",
+      "sh": "नर्मदापुरम ज़िला, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 1,
+      "lat": 22.5,
+      "lng": 78.23,
+      "tag": "Satpura range park near Pachmarhi",
+      "tagh": "पचमढ़ी के पास सतपुड़ा श्रेणी का उद्यान",
+      "fact": "In the Satpura range of Narmadapuram district, with the Bori and Pachmarhi sanctuaries forming the Satpura Tiger Reserve.",
+      "facth": "नर्मदापुरम ज़िले की सतपुड़ा श्रेणी में; बोरी और पचमढ़ी अभयारण्यों के साथ यह सतपुड़ा टाइगर रिज़र्व बनाता है।",
+      "pts": [
+        [
+          "Part of the Pachmarhi Biosphere Reserve.",
+          "पचमढ़ी जैवमंडल रिज़र्व का भाग।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1981",
+      "yrh": "1981",
+      "x": [
+        [
+          "tr",
+          "Part of Satpura Tiger Reserve",
+          "सतपुड़ा टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Pachmarhi Biosphere Reserve",
+          "पचमढ़ी जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Sanjay",
+      "h": "संजय",
+      "s": "Madhya Pradesh",
+      "st": "Sidhi district, Madhya Pradesh",
+      "sh": "सीधी ज़िला, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 2,
+      "lat": 23.92,
+      "lng": 81.83,
+      "tag": "Core of Sanjay-Dubri Tiger Reserve",
+      "tagh": "संजय-दुबरी टाइगर रिज़र्व का कोर",
+      "fact": "In Sidhi district; part of the Sanjay-Dubri Tiger Reserve (2006). Its Chhattisgarh portion became Guru Ghasidas National Park.",
+      "facth": "सीधी ज़िले में; संजय-दुबरी टाइगर रिज़र्व (2006) का भाग। इसका छत्तीसगढ़ वाला हिस्सा गुरु घासीदास राष्ट्रीय उद्यान बना।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1981",
+      "yrh": "1981",
+      "x": [
+        [
+          "tr",
+          "Part of Sanjay-Dubri Tiger Reserve",
+          "संजय-दुबरी टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Kuno",
+      "h": "कूनो",
+      "s": "Madhya Pradesh",
+      "st": "Sheopur district, Madhya Pradesh",
+      "sh": "श्योपुर ज़िला, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 1,
+      "lat": 25.67,
+      "lng": 77.17,
+      "tag": "India's first home of reintroduced cheetahs",
+      "tagh": "फिर से लाए गए चीतों का भारत में पहला घर",
+      "fact": "On the Kuno river; on 17 September 2022 eight cheetahs from Namibia were released here, the first return of the cheetah to India.",
+      "facth": "कूनो नदी पर; 17 सितंबर 2022 को नामीबिया से लाए आठ चीते यहाँ छोड़े गए, भारत में चीते की पहली वापसी।",
+      "pts": [
+        [
+          "A sanctuary from 1981, it became a national park in 2018. Twelve more cheetahs came from South Africa in February 2023.",
+          "1981 से अभयारण्य, 2018 में राष्ट्रीय उद्यान बना। फ़रवरी 2023 में दक्षिण अफ्रीका से बारह और चीते आए।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "2018",
+      "yrh": "2018",
+      "sp": "Cheetah",
+      "sph": "चीता"
+    },
+    {
+      "n": "Madhav",
+      "h": "माधव",
+      "s": "Madhya Pradesh",
+      "st": "Shivpuri district, Madhya Pradesh",
+      "sh": "शिवपुरी ज़िला, मध्य प्रदेश",
+      "c": "central",
+      "rg": "C",
+      "d": 2,
+      "lat": 25.5,
+      "lng": 77.82,
+      "tag": "India's 58th tiger reserve (2025)",
+      "tagh": "भारत का 58वाँ टाइगर रिज़र्व (2025)",
+      "fact": "Near Shivpuri, named after Madho Rao Scindia; in March 2025 it was notified as India's 58th tiger reserve.",
+      "facth": "शिवपुरी के पास, माधो राव सिंधिया के नाम पर; मार्च 2025 में इसे भारत का 58वाँ टाइगर रिज़र्व अधिसूचित किया गया।",
+      "pts": [
+        [
+          "Sakhya Sagar lake inside the park has been a Ramsar site since 2022.",
+          "उद्यान के अंदर सख्य सागर झील 2022 से रामसर स्थल है।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "x": [
+        [
+          "tr",
+          "Part of Madhav Tiger Reserve",
+          "माधव टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "ramsar",
+          "Sakhya Sagar, Ramsar site (2022)",
+          "सख्य सागर, रामसर स्थल (2022)"
+        ]
+      ]
+    },
+    {
+      "n": "Van Vihar",
+      "h": "वन विहार",
+      "s": "Madhya Pradesh",
+      "st": "Bhopal, Madhya Pradesh",
+      "sh": "भोपाल, मध्य प्रदेश",
+      "c": "city",
+      "rg": "C",
+      "d": 2,
+      "lat": 23.23,
+      "lng": 77.37,
+      "tag": "A national park run as a zoo in Bhopal",
+      "tagh": "भोपाल में चिड़ियाघर की तरह चलने वाला राष्ट्रीय उद्यान",
+      "fact": "A national park on the Upper Lake in Bhopal, managed as a modern zoological park; most animals are orphaned or rescued.",
+      "facth": "भोपाल में बड़ी झील के किनारे राष्ट्रीय उद्यान, जो आधुनिक प्राणी उद्यान की तरह चलता है; अधिकतर जानवर अनाथ या बचाए गए हैं।",
+      "pts": [],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान",
+      "yr": "1979",
+      "yrh": "1979"
+    },
+    {
+      "n": "Ghughua Fossil",
+      "h": "घुघुआ जीवाश्म",
+      "s": "Madhya Pradesh",
+      "st": "Dindori district, Madhya Pradesh",
+      "sh": "डिंडोरी ज़िला, मध्य प्रदेश",
+      "c": "city",
+      "rg": "C",
+      "d": 2,
+      "lat": 23.11,
+      "lng": 80.61,
+      "tag": "National park of plant fossils",
+      "tagh": "पादप जीवाश्मों का राष्ट्रीय उद्यान",
+      "fact": "A fossil national park near Shahpura where plant fossils of 31 genera from 18 families have been identified.",
+      "facth": "शाहपुरा के पास जीवाश्म राष्ट्रीय उद्यान, जहाँ 18 कुलों के 31 वंशों के पादप जीवाश्म पहचाने गए हैं।",
+      "pts": [],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान",
+      "yr": "1983",
+      "yrh": "1983",
+      "sp": "Plant fossils",
+      "sph": "पादप जीवाश्म"
+    },
+    {
+      "n": "Indravati",
+      "h": "इंद्रावती",
+      "s": "Chhattisgarh",
+      "st": "Bijapur district, Chhattisgarh",
+      "sh": "बीजापुर ज़िला, छत्तीसगढ़",
+      "c": "central",
+      "rg": "C",
+      "d": 2,
+      "lat": 19.2,
+      "lng": 81.03,
+      "tag": "Wild water buffalo on the Indravati",
+      "tagh": "इंद्रावती पर जंगली भैंसा",
+      "fact": "Named after the Indravati river, which forms its border with Maharashtra; a stronghold of the wild water buffalo, the state animal.",
+      "facth": "इंद्रावती नदी के नाम पर, जो महाराष्ट्र से इसकी सीमा बनाती है; राज्य पशु जंगली भैंसे का प्रमुख ठिकाना।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1982",
+      "yrh": "1982",
+      "sp": "Wild water buffalo",
+      "sph": "जंगली भैंसा",
+      "x": [
+        [
+          "tr",
+          "Part of Indravati Tiger Reserve",
+          "इंद्रावती टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Kanger Ghati",
+      "h": "कांगेर घाटी",
+      "s": "Chhattisgarh",
+      "st": "Bastar district, Chhattisgarh",
+      "sh": "बस्तर ज़िला, छत्तीसगढ़",
+      "c": "central",
+      "rg": "C",
+      "d": 2,
+      "lat": 18.77,
+      "lng": 81.98,
+      "tag": "Caves and Tirathgarh falls of Bastar",
+      "tagh": "बस्तर की गुफाएँ और तीरथगढ़ जलप्रपात",
+      "fact": "Near Jagdalpur in Bastar, from the Tirathgarh falls to the Kolab river; known for limestone caves such as Kutumsar.",
+      "facth": "बस्तर में जगदलपुर के पास, तीरथगढ़ जलप्रपात से कोलाब नदी तक; कुटुमसर जैसी चूना-पत्थर गुफाओं के लिए प्रसिद्ध।",
+      "pts": [
+        [
+          "The Bastar hill myna, state bird of Chhattisgarh, is found here.",
+          "छत्तीसगढ़ का राज्य पक्षी बस्तर पहाड़ी मैना यहाँ पाया जाता है।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1982",
+      "yrh": "1982"
+    },
+    {
+      "n": "Guru Ghasidas",
+      "h": "गुरु घासीदास",
+      "s": "Chhattisgarh",
+      "st": "Koriya and Manendragarh-Chirmiri-Bharatpur districts, Chhattisgarh",
+      "sh": "कोरिया और मनेंद्रगढ़-चिरमिरी-भरतपुर ज़िले, छत्तीसगढ़",
+      "c": "central",
+      "rg": "C",
+      "d": 2,
+      "lat": 23.6,
+      "lng": 82.47,
+      "tag": "Core of India's 56th tiger reserve",
+      "tagh": "भारत के 56वें टाइगर रिज़र्व का कोर",
+      "fact": "The largest national park of Chhattisgarh; with Tamor Pingla sanctuary it forms the Guru Ghasidas-Tamor Pingla Tiger Reserve (2024), India's 56th.",
+      "facth": "छत्तीसगढ़ का सबसे बड़ा राष्ट्रीय उद्यान; तमोर पिंगला अभयारण्य के साथ गुरु घासीदास-तमोर पिंगला टाइगर रिज़र्व (2024) बनाता है, जो भारत का 56वाँ है।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "x": [
+        [
+          "tr",
+          "Part of Guru Ghasidas-Tamor Pingla Tiger Reserve",
+          "गुरु घासीदास-तमोर पिंगला टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Gir",
+      "h": "गिर",
+      "s": "Gujarat",
+      "st": "Junagadh, Gir Somnath and Amreli districts, Gujarat",
+      "sh": "जूनागढ़, गिर सोमनाथ और अमरेली ज़िले, गुजरात",
+      "c": "central",
+      "rg": "W",
+      "d": 1,
+      "lat": 21.14,
+      "lng": 70.8,
+      "tag": "The only wild home of the Asiatic lion",
+      "tagh": "एशियाई शेर का एकमात्र जंगली घर",
+      "fact": "Sasan Gir is the only natural home of the Asiatic lion. A sanctuary since 1965, its core became a national park in 1975.",
+      "facth": "सासन गिर एशियाई शेर का एकमात्र प्राकृतिक घर है। 1965 से अभयारण्य, इसका कोर 1975 में राष्ट्रीय उद्यान बना।",
+      "pts": [
+        [
+          "Once the private hunting ground of the Nawab of Junagadh.",
+          "कभी जूनागढ़ के नवाब का निजी शिकारगाह।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1975",
+      "yrh": "1975",
+      "sp": "Asiatic lion",
+      "sph": "एशियाई शेर",
+      "riv": "Hiran",
+      "rivh": "हिरण"
+    },
+    {
+      "n": "Velavadar (Blackbuck)",
+      "h": "वेलावदर (काला हिरण)",
+      "s": "Gujarat",
+      "st": "Bhavnagar district, Gujarat",
+      "sh": "भावनगर ज़िला, गुजरात",
+      "c": "dry",
+      "rg": "W",
+      "d": 1,
+      "lat": 22.03,
+      "lng": 72.05,
+      "tag": "Grassland park for the blackbuck",
+      "tagh": "काले हिरण का घास भूमि उद्यान",
+      "fact": "A grassland in the Bhal region of Saurashtra near the Gulf of Khambhat, set up in 1976 to protect the blackbuck.",
+      "facth": "खंभात की खाड़ी के पास सौराष्ट्र के भाल क्षेत्र की घास भूमि, जिसे 1976 में काले हिरण की रक्षा के लिए बनाया गया।",
+      "pts": [
+        [
+          "One of the largest roosts of migratory harriers in the world.",
+          "प्रवासी हैरियर पक्षियों के दुनिया के सबसे बड़े बसेरों में से एक।"
+        ]
+      ],
+      "ty": "Desert & grassland",
+      "tyh": "मरुस्थल और घास भूमि",
+      "yr": "1976",
+      "yrh": "1976",
+      "sp": "Blackbuck",
+      "sph": "काला हिरण"
+    },
+    {
+      "n": "Marine (Gulf of Kachchh)",
+      "h": "समुद्री (कच्छ की खाड़ी)",
+      "s": "Gujarat",
+      "st": "Jamnagar and Devbhumi Dwarka coast, Gujarat",
+      "sh": "जामनगर और देवभूमि द्वारका तट, गुजरात",
+      "c": "sea",
+      "rg": "W",
+      "d": 1,
+      "lat": 22.45,
+      "lng": 69.95,
+      "tag": "India's first marine national park",
+      "tagh": "भारत का पहला समुद्री राष्ट्रीय उद्यान",
+      "fact": "India's first marine national park: a marine sanctuary from 1980, its core became a national park in 1982. It covers 42 islands with coral reefs.",
+      "facth": "भारत का पहला समुद्री राष्ट्रीय उद्यान: 1980 से समुद्री अभयारण्य, इसका कोर 1982 में राष्ट्रीय उद्यान बना। इसमें प्रवाल भित्तियों वाले 42 द्वीप हैं।",
+      "pts": [
+        [
+          "Pirotan island is the best-known reef walk.",
+          "पिरोटन द्वीप सबसे प्रसिद्ध प्रवाल भित्ति स्थल है।"
+        ]
+      ],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "yr": "1982",
+      "yrh": "1982",
+      "sp": "Coral reefs",
+      "sph": "प्रवाल भित्तियाँ",
+      "sea": true
+    },
+    {
+      "n": "Vansda",
+      "h": "वांसदा",
+      "s": "Gujarat",
+      "st": "Navsari district, Gujarat",
+      "sh": "नवसारी ज़िला, गुजरात",
+      "c": "central",
+      "rg": "W",
+      "d": 3,
+      "lat": 20.73,
+      "lng": 73.47,
+      "tag": "Dang forest on the Ambika river",
+      "tagh": "अंबिका नदी पर डांग का वन",
+      "fact": "Thick woodlands of the Dangs region on the Ambika river in Navsari district, one of the four national parks of Gujarat.",
+      "facth": "नवसारी ज़िले में अंबिका नदी पर डांग क्षेत्र के घने वन; गुजरात के चार राष्ट्रीय उद्यानों में से एक।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1979",
+      "yrh": "1979",
+      "riv": "Ambika",
+      "rivh": "अंबिका"
+    },
+    {
+      "n": "Sanjay Gandhi",
+      "h": "संजय गांधी",
+      "s": "Maharashtra",
+      "st": "Borivali, Mumbai, Maharashtra",
+      "sh": "बोरीवली, मुंबई, महाराष्ट्र",
+      "c": "city",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.25,
+      "lng": 72.92,
+      "tag": "National park inside Mumbai",
+      "tagh": "मुंबई शहर के अंदर राष्ट्रीय उद्यान",
+      "fact": "A forest of about 104 km² inside Mumbai with its headquarters at Borivali; it has leopards and the 2,000-year-old Kanheri caves.",
+      "facth": "मुंबई के अंदर लगभग 104 वर्ग किमी का वन, मुख्यालय बोरीवली में; यहाँ तेंदुए और 2,000 वर्ष पुरानी कान्हेरी गुफाएँ हैं।",
+      "pts": [
+        [
+          "More than 2 million people visit it every year.",
+          "हर वर्ष 20 लाख से अधिक लोग यहाँ आते हैं।"
+        ]
+      ],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान"
+    },
+    {
+      "n": "Tadoba",
+      "h": "ताडोबा",
+      "s": "Maharashtra",
+      "st": "Chandrapur district, Maharashtra",
+      "sh": "चंद्रपुर ज़िला, महाराष्ट्र",
+      "c": "central",
+      "rg": "W",
+      "d": 1,
+      "lat": 20.27,
+      "lng": 79.4,
+      "tag": "Oldest national park of Maharashtra",
+      "tagh": "महाराष्ट्र का सबसे पुराना राष्ट्रीय उद्यान",
+      "fact": "In Chandrapur district; Tadoba National Park and Andhari sanctuary make up the Tadoba-Andhari Tiger Reserve.",
+      "facth": "चंद्रपुर ज़िले में; ताडोबा राष्ट्रीय उद्यान और अंधारी अभयारण्य मिलकर ताडोबा-अंधारी टाइगर रिज़र्व बनाते हैं।",
+      "pts": [
+        [
+          "Named after Taru (Tadoba), a local tribal deity.",
+          "इसका नाम स्थानीय आदिवासी देवता तारू (ताडोबा) पर है।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1955",
+      "yrh": "1955",
+      "x": [
+        [
+          "tr",
+          "Part of Tadoba-Andhari Tiger Reserve",
+          "ताडोबा-अंधारी टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Navegaon",
+      "h": "नवेगाँव",
+      "s": "Maharashtra",
+      "st": "Gondia district, Maharashtra",
+      "sh": "गोंदिया ज़िला, महाराष्ट्र",
+      "c": "central",
+      "rg": "W",
+      "d": 2,
+      "lat": 20.93,
+      "lng": 80.17,
+      "tag": "Lake park rich in birds",
+      "tagh": "पक्षियों से भरपूर झील उद्यान",
+      "fact": "In Gondia district around Navegaon lake; its bird sanctuary, named after Salim Ali, holds about 60% of the bird species of Maharashtra.",
+      "facth": "गोंदिया ज़िले में नवेगाँव झील के चारों ओर; सालिम अली के नाम वाला इसका पक्षी अभयारण्य महाराष्ट्र की लगभग 60% पक्षी प्रजातियों का घर है।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "x": [
+        [
+          "tr",
+          "Part of Navegaon-Nagzira Tiger Reserve",
+          "नवेगाँव-नागज़िरा टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Gugamal",
+      "h": "गुगामल",
+      "s": "Maharashtra",
+      "st": "Amravati district, Maharashtra",
+      "sh": "अमरावती ज़िला, महाराष्ट्र",
+      "c": "central",
+      "rg": "W",
+      "d": 2,
+      "lat": 21.41,
+      "lng": 77.15,
+      "tag": "Core of Melghat Tiger Reserve",
+      "tagh": "मेलघाट टाइगर रिज़र्व का कोर",
+      "fact": "In the Melghat area of Amravati district; one of the protected areas of the Melghat Tiger Reserve, among India's first nine (1973).",
+      "facth": "अमरावती ज़िले के मेलघाट क्षेत्र में; मेलघाट टाइगर रिज़र्व का भाग, जो भारत के पहले नौ टाइगर रिज़र्वों (1973) में से एक है।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "x": [
+        [
+          "tr",
+          "Part of Melghat Tiger Reserve",
+          "मेलघाट टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Chandoli",
+      "h": "चांदोली",
+      "s": "Maharashtra",
+      "st": "Sangli district, Maharashtra",
+      "sh": "सांगली ज़िला, महाराष्ट्र",
+      "c": "ghats",
+      "rg": "W",
+      "d": 2,
+      "lat": 17.19,
+      "lng": 73.78,
+      "tag": "Southern part of Sahyadri Tiger Reserve",
+      "tagh": "सह्याद्री टाइगर रिज़र्व का दक्षिणी भाग",
+      "fact": "Declared in 2004 in Sangli district around the Warna (Chandoli) dam; with Koyna sanctuary it forms the Sahyadri Tiger Reserve.",
+      "facth": "2004 में सांगली ज़िले में वारणा (चांदोली) बाँध के आसपास घोषित; कोयना अभयारण्य के साथ सह्याद्री टाइगर रिज़र्व बनाता है।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "2004",
+      "yrh": "2004",
+      "riv": "Warna",
+      "rivh": "वारणा",
+      "x": [
+        [
+          "tr",
+          "Part of Sahyadri Tiger Reserve",
+          "सह्याद्री टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Mollem",
+      "h": "मोल्लेम",
+      "s": "Goa",
+      "st": "Dharbandora taluka, Goa",
+      "sh": "धारबंदोड़ा तालुका, गोवा",
+      "c": "ghats",
+      "rg": "W",
+      "d": 2,
+      "lat": 15.37,
+      "lng": 74.26,
+      "tag": "Dudhsagar falls; the only national park of Goa",
+      "tagh": "दूधसागर जलप्रपात; गोवा का एकमात्र राष्ट्रीय उद्यान",
+      "fact": "Goa's only national park, in the Western Ghats on the Karnataka border; the Dudhsagar falls and a Kadamba-era Mahadev temple lie in it.",
+      "facth": "गोवा का एकमात्र राष्ट्रीय उद्यान, कर्नाटक सीमा पर पश्चिमी घाट में; दूधसागर जलप्रपात और कदंब काल का महादेव मंदिर इसमें हैं।",
+      "pts": [
+        [
+          "Surrounded by the Bhagwan Mahaveer Sanctuary.",
+          "यह भगवान महावीर अभयारण्य से घिरा है।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1978",
+      "yrh": "1978"
+    },
+    {
+      "n": "Bandipur",
+      "h": "बांदीपुर",
+      "s": "Karnataka",
+      "st": "Chamarajanagar district, Karnataka",
+      "sh": "चामराजनगर ज़िला, कर्नाटक",
+      "c": "ghats",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.66,
+      "lng": 76.63,
+      "tag": "Nilgiri biosphere tiger reserve of 1973",
+      "tagh": "1973 का नीलगिरि जैवमंडल टाइगर रिज़र्व",
+      "fact": "Once the Mysore Maharaja's hunting reserve; one of the first nine tiger reserves under Project Tiger (1973) and part of the Nilgiri Biosphere Reserve.",
+      "facth": "कभी मैसूर महाराजा का शिकारगाह; प्रोजेक्ट टाइगर (1973) के पहले नौ टाइगर रिज़र्वों में से एक और नीलगिरि जैवमंडल रिज़र्व का भाग।",
+      "pts": [
+        [
+          "It adjoins Nagarhole (Karnataka), Mudumalai (Tamil Nadu) and Wayanad (Kerala).",
+          "यह नागरहोल (कर्नाटक), मुदुमलाई (तमिलनाडु) और वायनाड (केरल) से जुड़ा है।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1974",
+      "yrh": "1974",
+      "riv": "Moyar",
+      "rivh": "मोयार",
+      "x": [
+        [
+          "tr",
+          "Part of Bandipur Tiger Reserve",
+          "बांदीपुर टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Nilgiri Biosphere Reserve",
+          "नीलगिरि जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Nagarhole",
+      "h": "नागरहोल",
+      "s": "Karnataka",
+      "st": "Kodagu and Mysuru districts, Karnataka",
+      "sh": "कोडगु और मैसूरु ज़िले, कर्नाटक",
+      "c": "ghats",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.06,
+      "lng": 76.15,
+      "tag": "Rajiv Gandhi National Park on the Kabini",
+      "tagh": "काबिनी पर राजीव गांधी राष्ट्रीय उद्यान",
+      "fact": "Also called Rajiv Gandhi National Park; the Kabini reservoir separates it from Bandipur. Part of the Nilgiri Biosphere Reserve.",
+      "facth": "इसे राजीव गांधी राष्ट्रीय उद्यान भी कहते हैं; काबिनी जलाशय इसे बांदीपुर से अलग करता है। नीलगिरि जैवमंडल रिज़र्व का भाग।",
+      "pts": [
+        [
+          "\"Nagarahole\" means \"snake river\", after a stream that winds through it.",
+          "\"नागरहोल\" का अर्थ \"साँप जैसी नदी\" है, जो इसमें बहती एक धारा पर है।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "riv": "Kabini",
+      "rivh": "काबिनी",
+      "x": [
+        [
+          "tr",
+          "Part of Nagarhole Tiger Reserve",
+          "नागरहोल टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Nilgiri Biosphere Reserve",
+          "नीलगिरि जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Bannerghatta",
+      "h": "बन्नेरघट्टा",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "city",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.8,
+      "lng": 77.58,
+      "tag": "Bengaluru's national park with a butterfly park",
+      "tagh": "तितली पार्क वाला बेंगलुरु का राष्ट्रीय उद्यान",
+      "fact": "On the edge of Bengaluru; a part became the Bannerghatta Biological Park in 2002, which has India's first butterfly enclosure.",
+      "facth": "बेंगलुरु के किनारे; इसका एक भाग 2002 में बन्नेरघट्टा जैविक उद्यान बना, जिसमें भारत का पहला तितली बाड़ा है।",
+      "pts": [
+        [
+          "It is part of an elephant corridor linking BR Hills and Sathyamangalam.",
+          "यह बीआर हिल्स और सत्यमंगलम को जोड़ने वाले हाथी गलियारे का भाग है।"
+        ]
+      ],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान",
+      "yr": "1974",
+      "yrh": "1974"
+    },
+    {
+      "n": "Kudremukh",
+      "h": "कुद्रेमुख",
+      "s": "Karnataka",
+      "st": "Chikkamagaluru and Dakshina Kannada districts, Karnataka",
+      "sh": "चिक्कमगलूरु और दक्षिण कन्नड़ ज़िले, कर्नाटक",
+      "c": "ghats",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.25,
+      "lng": 75.2,
+      "tag": "\"Horse-face\" peak of the Western Ghats",
+      "tagh": "पश्चिमी घाट की \"घोड़े के मुख\" वाली चोटी",
+      "fact": "Named after the Kudremukh (\"horse-face\") peak; the Tunga and Bhadra rivers rise in these shola-grassland hills.",
+      "facth": "कुद्रेमुख (\"घोड़े का मुख\") चोटी के नाम पर; तुंगा और भद्रा नदियाँ इन शोला-घास भूमि पहाड़ियों से निकलती हैं।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1987",
+      "yrh": "1987",
+      "riv": "Tunga and Bhadra",
+      "rivh": "तुंगा और भद्रा"
+    },
+    {
+      "n": "Anshi",
+      "h": "अंशी",
+      "s": "Karnataka",
+      "st": "Uttara Kannada district, Karnataka",
+      "sh": "उत्तर कन्नड़ ज़िला, कर्नाटक",
+      "c": "ghats",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.02,
+      "lng": 74.38,
+      "tag": "Part of Kali Tiger Reserve",
+      "tagh": "काली टाइगर रिज़र्व का भाग",
+      "fact": "With Dandeli sanctuary it forms the Kali Tiger Reserve in Uttara Kannada, named after the Kali river; known for great hornbills and black panthers.",
+      "facth": "दांडेली अभयारण्य के साथ उत्तर कन्नड़ में काली टाइगर रिज़र्व बनाता है, जिसका नाम काली नदी पर है; बड़े धनेश और काले तेंदुओं के लिए प्रसिद्ध।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1987",
+      "yrh": "1987",
+      "riv": "Kali (Karnataka)",
+      "rivh": "काली (कर्नाटक)",
+      "x": [
+        [
+          "tr",
+          "Part of Kali Tiger Reserve",
+          "काली टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Eravikulam",
+      "h": "एराविकुलम",
+      "s": "Kerala",
+      "st": "Idukki district, Kerala",
+      "sh": "इडुक्की ज़िला, केरल",
+      "c": "ghats",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.2,
+      "lng": 77.08,
+      "tag": "Nilgiri tahr and Anamudi peak",
+      "tagh": "नीलगिरि तहर और अनामुडी चोटी",
+      "fact": "The first national park of Kerala, near Munnar; it protects the largest population of the Nilgiri tahr and holds Anamudi, the highest peak of south India.",
+      "facth": "केरल का पहला राष्ट्रीय उद्यान, मुन्नार के पास; यहाँ नीलगिरि तहर की सबसे बड़ी आबादी है और दक्षिण भारत की सबसे ऊँची चोटी अनामुडी इसी में है।",
+      "pts": [
+        [
+          "Its slopes turn blue when the neelakurinji flowers, once every twelve years.",
+          "हर बारह वर्ष में एक बार नीलकुरिंजी खिलने पर इसकी ढलानें नीली हो जाती हैं।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1978",
+      "yrh": "1978",
+      "sp": "Nilgiri tahr",
+      "sph": "नीलगिरि तहर"
+    },
+    {
+      "n": "Silent Valley",
+      "h": "साइलेंट वैली",
+      "s": "Kerala",
+      "st": "Palakkad district, Kerala",
+      "sh": "पालक्काड ज़िला, केरल",
+      "c": "ghats",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.13,
+      "lng": 76.47,
+      "tag": "Rainforest saved by the \"Save Silent Valley\" movement",
+      "tagh": "\"साइलेंट वैली बचाओ\" आंदोलन से बचा वर्षावन",
+      "fact": "An untouched tropical rainforest in the Nilgiri hills, home to the largest population of the lion-tailed macaque.",
+      "facth": "नीलगिरि पहाड़ियों का अछूता उष्णकटिबंधीय वर्षावन, जहाँ शेर-पूँछ मकाक की सबसे बड़ी आबादी है।",
+      "pts": [
+        [
+          "A people's movement in the 1970s-80s stopped a dam on the Kunthipuzha river here.",
+          "1970-80 के दशक के जन आंदोलन ने यहाँ कुंतीपुझा नदी पर बाँध रोका।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1984",
+      "yrh": "1984",
+      "sp": "Lion-tailed macaque",
+      "sph": "शेर-पूँछ मकाक",
+      "riv": "Kunthipuzha",
+      "rivh": "कुंतीपुझा",
+      "x": [
+        [
+          "br",
+          "Nilgiri Biosphere Reserve",
+          "नीलगिरि जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Periyar",
+      "h": "पेरियार",
+      "s": "Kerala",
+      "st": "Idukki and Pathanamthitta districts, Kerala",
+      "sh": "इडुक्की और पत्तनमतिट्टा ज़िले, केरल",
+      "c": "ghats",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.58,
+      "lng": 77.18,
+      "tag": "Elephant and tiger reserve around Thekkady lake",
+      "tagh": "थेक्कडी झील के चारों ओर हाथी और टाइगर रिज़र्व",
+      "fact": "Around the Periyar lake at Thekkady in the Cardamom Hills; a famous elephant and tiger reserve.",
+      "facth": "इलायची पहाड़ियों में थेक्कडी की पेरियार झील के चारों ओर; प्रसिद्ध हाथी और टाइगर रिज़र्व।",
+      "pts": [
+        [
+          "The lake was formed by the Mullaperiyar dam (1895).",
+          "यह झील मुल्लापेरियार बाँध (1895) से बनी।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "yr": "1982",
+      "yrh": "1982",
+      "x": [
+        [
+          "tr",
+          "Part of Periyar Tiger Reserve",
+          "पेरियार टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Mathikettan Shola",
+      "h": "मथिकेट्टन शोला",
+      "s": "Kerala",
+      "st": "Idukki district, Kerala",
+      "sh": "इडुक्की ज़िला, केरल",
+      "c": "ghats",
+      "rg": "S",
+      "d": 3,
+      "lat": 10.03,
+      "lng": 77.13,
+      "tag": "Shola forest elephant strip",
+      "tagh": "शोला वन का हाथी गलियारा",
+      "fact": "A small shola-forest park in Idukki, protected as an elephant corridor; run by the Munnar Wildlife Division with Eravikulam.",
+      "facth": "इडुक्की का छोटा शोला वन उद्यान, जिसे हाथी गलियारे के रूप में संरक्षित किया गया; एराविकुलम के साथ मुन्नार वन्यजीव प्रभाग चलाता है।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि"
+    },
+    {
+      "n": "Pambadum Shola",
+      "h": "पांबादुम शोला",
+      "s": "Kerala",
+      "st": "Idukki district, Kerala",
+      "sh": "इडुक्की ज़िला, केरल",
+      "c": "ghats",
+      "rg": "S",
+      "d": 3,
+      "lat": 10.14,
+      "lng": 77.21,
+      "tag": "Smallest national park of Kerala",
+      "tagh": "केरल का सबसे छोटा राष्ट्रीय उद्यान",
+      "fact": "A small shola park in Idukki on the Tamil Nadu border near Kodaikanal; home to the Nilgiri marten and Nilgiri wood pigeon.",
+      "facth": "कोडैकनाल के पास तमिलनाडु सीमा पर इडुक्की का छोटा शोला उद्यान; यहाँ नीलगिरि मार्टेन और नीलगिरि वुड पिजन हैं।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि"
+    },
+    {
+      "n": "Mudumalai",
+      "h": "मुदुमलाई",
+      "s": "Tamil Nadu",
+      "st": "Nilgiris district, Tamil Nadu",
+      "sh": "नीलगिरि ज़िला, तमिलनाडु",
+      "c": "ghats",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.6,
+      "lng": 76.5,
+      "tag": "Nilgiri tiger reserve on the Moyar",
+      "tagh": "मोयार पर नीलगिरि टाइगर रिज़र्व",
+      "fact": "In the Nilgiri hills where Tamil Nadu meets Karnataka and Kerala; part of the Nilgiri Biosphere Reserve, a tiger reserve since 2007.",
+      "facth": "नीलगिरि पहाड़ियों में जहाँ तमिलनाडु, कर्नाटक और केरल मिलते हैं; नीलगिरि जैवमंडल रिज़र्व का भाग, 2007 से टाइगर रिज़र्व।",
+      "pts": [
+        [
+          "Its Theppakadu elephant camp featured in the Oscar-winning film \"The Elephant Whisperers\".",
+          "इसका थेप्पाकाडु हाथी शिविर ऑस्कर विजेता फ़िल्म \"द एलिफ़ेंट व्हिस्परर्स\" में दिखा।"
+        ]
+      ],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "riv": "Moyar",
+      "rivh": "मोयार",
+      "x": [
+        [
+          "tr",
+          "Part of Mudumalai Tiger Reserve",
+          "मुदुमलाई टाइगर रिज़र्व का भाग"
+        ],
+        [
+          "br",
+          "Nilgiri Biosphere Reserve",
+          "नीलगिरि जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Mukurthi",
+      "h": "मुकुर्ती",
+      "s": "Tamil Nadu",
+      "st": "Nilgiris district, Tamil Nadu",
+      "sh": "नीलगिरि ज़िला, तमिलनाडु",
+      "c": "ghats",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.25,
+      "lng": 76.56,
+      "tag": "Nilgiri tahr park in the western Nilgiris",
+      "tagh": "पश्चिमी नीलगिरि का नीलगिरि तहर उद्यान",
+      "fact": "Created to protect its keystone species, the Nilgiri tahr; part of the Western Ghats World Heritage Site since 2012.",
+      "facth": "अपनी मुख्य प्रजाति नीलगिरि तहर की रक्षा के लिए बना; 2012 से पश्चिमी घाट विश्व धरोहर स्थल का भाग।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "sp": "Nilgiri tahr",
+      "sph": "नीलगिरि तहर",
+      "x": [
+        [
+          "whs",
+          "Part of the Western Ghats World Heritage Site (2012)",
+          "पश्चिमी घाट विश्व धरोहर स्थल का भाग (2012)"
+        ]
+      ]
+    },
+    {
+      "n": "Anamalai (Indira Gandhi)",
+      "h": "अनामलाई (इंदिरा गांधी)",
+      "s": "Tamil Nadu",
+      "st": "Coimbatore and Tiruppur districts, Tamil Nadu",
+      "sh": "कोयंबटूर और तिरुप्पुर ज़िले, तमिलनाडु",
+      "c": "ghats",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.42,
+      "lng": 77.06,
+      "tag": "Indira Gandhi National Park in the Anaimalai hills",
+      "tagh": "अनैमलाई पहाड़ियों में इंदिरा गांधी राष्ट्रीय उद्यान",
+      "fact": "Earlier the Indira Gandhi Wildlife Sanctuary and National Park, in the Anaimalai hills near Pollachi and Valparai; now the Anamalai Tiger Reserve.",
+      "facth": "पहले इंदिरा गांधी वन्यजीव अभयारण्य और राष्ट्रीय उद्यान, पोल्लाची और वालपराई के पास अनैमलाई पहाड़ियों में; अब अनामलाई टाइगर रिज़र्व।",
+      "pts": [],
+      "ty": "Western Ghats & Nilgiris",
+      "tyh": "पश्चिमी घाट और नीलगिरि",
+      "x": [
+        [
+          "tr",
+          "Part of Anamalai Tiger Reserve",
+          "अनामलाई टाइगर रिज़र्व का भाग"
+        ]
+      ]
+    },
+    {
+      "n": "Guindy",
+      "h": "गिंडी",
+      "s": "Tamil Nadu",
+      "st": "Chennai, Tamil Nadu",
+      "sh": "चेन्नई, तमिलनाडु",
+      "c": "city",
+      "rg": "S",
+      "d": 1,
+      "lat": 13,
+      "lng": 80.23,
+      "tag": "National park inside Chennai",
+      "tagh": "चेन्नई शहर के अंदर राष्ट्रीय उद्यान",
+      "fact": "One of the smallest national parks and one of the few inside a city; an extension of the Raj Bhavan grounds in Chennai, home to blackbuck and chital.",
+      "facth": "सबसे छोटे राष्ट्रीय उद्यानों में से एक और शहर के अंदर के कुछ उद्यानों में से एक; चेन्नई के राजभवन परिसर का विस्तार, जहाँ काले हिरण और चीतल हैं।",
+      "pts": [],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान",
+      "sp": "Blackbuck",
+      "sph": "काला हिरण"
+    },
+    {
+      "n": "Gulf of Mannar",
+      "h": "मन्नार की खाड़ी",
+      "s": "Tamil Nadu",
+      "st": "Between Thoothukudi and Dhanushkodi, Tamil Nadu",
+      "sh": "थूथुकुडी और धनुषकोडी के बीच, तमिलनाडु",
+      "c": "sea",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.14,
+      "lng": 79.47,
+      "tag": "Marine park of 21 islands, home of the dugong",
+      "tagh": "21 द्वीपों का समुद्री उद्यान, डुगोंग का घर",
+      "fact": "21 small islands and coral reefs along 160 km of coast from Thoothukudi to Dhanushkodi; the core of the Gulf of Mannar Biosphere Reserve.",
+      "facth": "थूथुकुडी से धनुषकोडी तक 160 किमी तट पर 21 छोटे द्वीप और प्रवाल भित्तियाँ; मन्नार की खाड़ी जैवमंडल रिज़र्व का कोर।",
+      "pts": [
+        [
+          "The dugong (sea cow), the state animal of Andaman and Nicobar Islands, feeds on its seagrass beds.",
+          "डुगोंग (समुद्री गाय), जो अंडमान और निकोबार का राज्य पशु है, इसकी समुद्री घास पर पलता है।"
+        ]
+      ],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "yr": "1986",
+      "yrh": "1986",
+      "sp": "Dugong (sea cow)",
+      "sph": "डुगोंग (समुद्री गाय)",
+      "x": [
+        [
+          "br",
+          "Gulf of Mannar Biosphere Reserve (UNESCO network)",
+          "मन्नार की खाड़ी जैवमंडल रिज़र्व (यूनेस्को नेटवर्क)"
+        ]
+      ],
+      "sea": true
+    },
+    {
+      "n": "Papikonda",
+      "h": "पापिकोंडा",
+      "s": "Andhra Pradesh",
+      "st": "Polavaram and Eluru districts, Andhra Pradesh",
+      "sh": "पोलावरम और एलुरु ज़िले, आंध्र प्रदेश",
+      "c": "central",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.45,
+      "lng": 81.55,
+      "tag": "Papi Hills park on the Godavari",
+      "tagh": "गोदावरी पर पापी पहाड़ियों का उद्यान",
+      "fact": "In the Papi Hills near Rajamahendravaram, where the Godavari cuts a gorge; the largest national park of Andhra Pradesh.",
+      "facth": "राजमहेंद्रवरम के पास पापी पहाड़ियों में, जहाँ गोदावरी घाटी काटती है; आंध्र प्रदेश का सबसे बड़ा राष्ट्रीय उद्यान।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "2008",
+      "yrh": "2008",
+      "riv": "Godavari",
+      "rivh": "गोदावरी"
+    },
+    {
+      "n": "Sri Venkateswara",
+      "h": "श्री वेंकटेश्वर",
+      "s": "Andhra Pradesh",
+      "st": "Tirupati district, Andhra Pradesh",
+      "sh": "तिरुपति ज़िला, आंध्र प्रदेश",
+      "c": "central",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.75,
+      "lng": 79.34,
+      "tag": "Seshachalam hills and Talakona falls",
+      "tagh": "शेषाचलम पहाड़ियाँ और तलकोना जलप्रपात",
+      "fact": "In the Seshachalam and Tirumala hills near Tirupati, known for waterfalls such as Talakona; part of the Seshachalam Biosphere Reserve (2010).",
+      "facth": "तिरुपति के पास शेषाचलम और तिरुमला पहाड़ियों में, तलकोना जैसे जलप्रपातों के लिए प्रसिद्ध; शेषाचलम जैवमंडल रिज़र्व (2010) का भाग।",
+      "pts": [
+        [
+          "Red sanders (red sandalwood) grows in these hills.",
+          "इन पहाड़ियों में लाल चंदन उगता है।"
+        ]
+      ],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "1989",
+      "yrh": "1989",
+      "x": [
+        [
+          "br",
+          "Seshachalam Biosphere Reserve",
+          "शेषाचलम जैवमंडल रिज़र्व"
+        ]
+      ]
+    },
+    {
+      "n": "Rajiv Gandhi (Rameswaram)",
+      "h": "राजीव गांधी (रामेश्वरम)",
+      "s": "Andhra Pradesh",
+      "st": "Kadapa district, Andhra Pradesh",
+      "sh": "कडप्पा ज़िला, आंध्र प्रदेश",
+      "c": "central",
+      "rg": "S",
+      "d": 3,
+      "lat": 14.73,
+      "lng": 78.56,
+      "tag": "Tiny dry forest park on the Penna",
+      "tagh": "पेन्ना पर छोटा शुष्क वन उद्यान",
+      "fact": "A small dry deciduous forest of about 2.4 km² on the north bank of the Penna at Rameswaram in Kadapa district (not the Tamil Nadu town).",
+      "facth": "कडप्पा ज़िले के रामेश्वरम में पेन्ना के उत्तरी तट पर लगभग 2.4 वर्ग किमी का छोटा शुष्क पर्णपाती वन (तमिलनाडु का नगर नहीं)।",
+      "pts": [],
+      "ty": "Central & peninsular forest",
+      "tyh": "मध्य और प्रायद्वीपीय वन",
+      "yr": "2005",
+      "yrh": "2005",
+      "riv": "Penna",
+      "rivh": "पेन्ना"
+    },
+    {
+      "n": "Mahavir Harina Vanasthali",
+      "h": "महावीर हरिणा वनस्थली",
+      "s": "Telangana",
+      "st": "Vanasthalipuram, Hyderabad, Telangana",
+      "sh": "वनस्थलीपुरम, हैदराबाद, तेलंगाना",
+      "c": "city",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.33,
+      "lng": 78.6,
+      "tag": "Deer park of Hyderabad",
+      "tagh": "हैदराबाद का हिरण उद्यान",
+      "fact": "A deer park at Vanasthalipuram, the largest green space of Hyderabad, with blackbuck and chital.",
+      "facth": "वनस्थलीपुरम में हिरण उद्यान, हैदराबाद का सबसे बड़ा हरित क्षेत्र, जहाँ काले हिरण और चीतल हैं।",
+      "pts": [],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान",
+      "sp": "Blackbuck",
+      "sph": "काला हिरण"
+    },
+    {
+      "n": "KBR (Kasu Brahmananda Reddy)",
+      "h": "केबीआर (कासु ब्रह्मानंद रेड्डी)",
+      "s": "Telangana",
+      "st": "Jubilee Hills, Hyderabad, Telangana",
+      "sh": "जुबली हिल्स, हैदराबाद, तेलंगाना",
+      "c": "city",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.42,
+      "lng": 78.42,
+      "tag": "National park in Jubilee Hills",
+      "tagh": "जुबली हिल्स में राष्ट्रीय उद्यान",
+      "fact": "About 1.6 km² of forest in Jubilee Hills and Banjara Hills, Hyderabad, around the Chiran palace; known for its peafowl.",
+      "facth": "हैदराबाद के जुबली हिल्स और बंजारा हिल्स में चिरान महल के आसपास लगभग 1.6 वर्ग किमी वन; मोरों के लिए प्रसिद्ध।",
+      "pts": [],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान"
+    },
+    {
+      "n": "Mrugavani",
+      "h": "मृगवनी",
+      "s": "Telangana",
+      "st": "Chilkur, Hyderabad, Telangana",
+      "sh": "चिलकुर, हैदराबाद, तेलंगाना",
+      "c": "city",
+      "rg": "S",
+      "d": 3,
+      "lat": 17.36,
+      "lng": 78.34,
+      "tag": "Chital park at Chilkur",
+      "tagh": "चिलकुर का चीतल उद्यान",
+      "fact": "A park of about 3.6 km² at Chilkur near Hyderabad with some 600 plant types and a herd of spotted deer (chital).",
+      "facth": "हैदराबाद के पास चिलकुर में लगभग 3.6 वर्ग किमी का उद्यान, जहाँ लगभग 600 प्रकार की वनस्पतियाँ और चीतल का झुंड है।",
+      "pts": [],
+      "ty": "City & fossil parks",
+      "tyh": "नगर और जीवाश्म उद्यान"
+    },
+    {
+      "n": "Mahatma Gandhi Marine",
+      "h": "महात्मा गांधी समुद्री",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Wandoor, South Andaman",
+      "sh": "वंडूर, दक्षिण अंडमान",
+      "c": "sea",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.53,
+      "lng": 92.6,
+      "tag": "Wandoor coral reef park",
+      "tagh": "वंडूर प्रवाल भित्ति उद्यान",
+      "fact": "A marine park of coral reefs and islands near Wandoor in South Andaman; Jolly Buoy and Red Skin islands are part of it.",
+      "facth": "दक्षिण अंडमान में वंडूर के पास प्रवाल भित्तियों और द्वीपों का समुद्री उद्यान; जॉली बॉय और रेड स्किन द्वीप इसके भाग हैं।",
+      "pts": [],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "yr": "1983",
+      "yrh": "1983",
+      "sp": "Coral reefs",
+      "sph": "प्रवाल भित्तियाँ",
+      "sea": true
+    },
+    {
+      "n": "Rani Jhansi Marine",
+      "h": "रानी झाँसी समुद्री",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Ritchie's Archipelago",
+      "sh": "रिची द्वीपसमूह",
+      "c": "sea",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.78,
+      "lng": 92.67,
+      "tag": "Marine park of Ritchie's Archipelago",
+      "tagh": "रिची द्वीपसमूह का समुद्री उद्यान",
+      "fact": "Coral reefs and mangroves in Ritchie's Archipelago, about 30 km from Port Blair; named after Rani Lakshmibai of Jhansi.",
+      "facth": "पोर्ट ब्लेयर से लगभग 30 किमी दूर रिची द्वीपसमूह में प्रवाल भित्तियाँ और मैंग्रोव; झाँसी की रानी लक्ष्मीबाई के नाम पर।",
+      "pts": [],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "yr": "1996",
+      "yrh": "1996",
+      "sea": true
+    },
+    {
+      "n": "Saddle Peak",
+      "h": "सैडल पीक",
+      "s": "Andaman and Nicobar Islands",
+      "st": "North Andaman",
+      "sh": "उत्तरी अंडमान",
+      "c": "sea",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.16,
+      "lng": 93.01,
+      "tag": "Highest point of the Andaman Islands",
+      "tagh": "अंडमान द्वीपसमूह का सबसे ऊँचा स्थान",
+      "fact": "Around Saddle Peak (732 m) on North Andaman, the highest point of the Andaman and Nicobar archipelago.",
+      "facth": "उत्तरी अंडमान में सैडल पीक (732 मी) के चारों ओर, जो अंडमान और निकोबार द्वीपसमूह का सबसे ऊँचा स्थान है।",
+      "pts": [],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "sea": true
+    },
+    {
+      "n": "Mount Harriet (Mount Manipur)",
+      "h": "माउंट हैरियट (माउंट मणिपुर)",
+      "s": "Andaman and Nicobar Islands",
+      "st": "South Andaman",
+      "sh": "दक्षिण अंडमान",
+      "c": "sea",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.72,
+      "lng": 92.73,
+      "tag": "Renamed Mount Manipur National Park",
+      "tagh": "नया नाम माउंट मणिपुर राष्ट्रीय उद्यान",
+      "fact": "Officially renamed Mount Manipur National Park; Mount Harriet is the third-highest peak of the islands, after Saddle Peak.",
+      "facth": "आधिकारिक रूप से नया नाम माउंट मणिपुर राष्ट्रीय उद्यान; माउंट हैरियट सैडल पीक के बाद द्वीपों की तीसरी सबसे ऊँची चोटी है।",
+      "pts": [
+        [
+          "The new name honours Manipuri leaders exiled to the Andamans after the Anglo-Manipur War of 1891.",
+          "नया नाम 1891 के आंग्ल-मणिपुर युद्ध के बाद अंडमान भेजे गए मणिपुरी नेताओं के सम्मान में है।"
+        ]
+      ],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "sea": true
+    },
+    {
+      "n": "South Button Island",
+      "h": "साउथ बटन द्वीप",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Button Islands, near Havelock",
+      "sh": "बटन द्वीप, हैवलॉक के पास",
+      "c": "sea",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.22,
+      "lng": 93.02,
+      "tag": "Smallest national park of India",
+      "tagh": "भारत का सबसे छोटा राष्ट्रीय उद्यान",
+      "fact": "A tiny island national park, the smallest in India; with North and Middle Button islands it lies near Swaraj Dweep (Havelock).",
+      "facth": "एक छोटा द्वीपीय राष्ट्रीय उद्यान, भारत का सबसे छोटा; उत्तरी और मध्य बटन द्वीपों के साथ यह स्वराज द्वीप (हैवलॉक) के पास है।",
+      "pts": [],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "sea": true
+    },
+    {
+      "n": "Galathea",
+      "h": "गैलाथिया",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Great Nicobar Island",
+      "sh": "ग्रेट निकोबार द्वीप",
+      "c": "sea",
+      "rg": "S",
+      "d": 2,
+      "lat": 6.92,
+      "lng": 93.83,
+      "tag": "Great Nicobar park of the megapode",
+      "tagh": "मेगापोड का ग्रेट निकोबार उद्यान",
+      "fact": "On Great Nicobar, the southernmost island of India; part of the Great Nicobar Biosphere Reserve, home to the Nicobar megapode and giant robber crab.",
+      "facth": "भारत के सबसे दक्षिणी द्वीप ग्रेट निकोबार पर; ग्रेट निकोबार जैवमंडल रिज़र्व का भाग, जहाँ निकोबार मेगापोड और विशाल रॉबर केकड़ा हैं।",
+      "pts": [],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "yr": "1992",
+      "yrh": "1992",
+      "sp": "Nicobar megapode",
+      "sph": "निकोबार मेगापोड",
+      "x": [
+        [
+          "br",
+          "Great Nicobar Biosphere Reserve (UNESCO network)",
+          "ग्रेट निकोबार जैवमंडल रिज़र्व (यूनेस्को नेटवर्क)"
+        ]
+      ],
+      "sea": true
+    },
+    {
+      "n": "Campbell Bay",
+      "h": "कैंपबेल बे",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Great Nicobar Island",
+      "sh": "ग्रेट निकोबार द्वीप",
+      "c": "sea",
+      "rg": "S",
+      "d": 2,
+      "lat": 7.11,
+      "lng": 93.76,
+      "tag": "Great Nicobar rainforest park",
+      "tagh": "ग्रेट निकोबार का वर्षावन उद्यान",
+      "fact": "On Great Nicobar, about 190 km north of Sumatra; separated from Galathea by a 12 km forest buffer. Home to the Nicobar treeshrew.",
+      "facth": "ग्रेट निकोबार पर, सुमात्रा से लगभग 190 किमी उत्तर में; गैलाथिया से 12 किमी के वन बफ़र से अलग। यहाँ निकोबार ट्रीश्रू रहता है।",
+      "pts": [],
+      "ty": "Marine & island",
+      "tyh": "समुद्री और द्वीपीय",
+      "yr": "1992",
+      "yrh": "1992",
+      "x": [
+        [
+          "br",
+          "Great Nicobar Biosphere Reserve (UNESCO network)",
+          "ग्रेट निकोबार जैवमंडल रिज़र्व (यूनेस्को नेटवर्क)"
+        ]
+      ],
+      "sea": true
+    }
+  ],
+  "types": [
+    {
+      "k": "terai",
+      "icon": "🌾",
+      "col": "#7C8B2E",
+      "t": [
+        "Terai & floodplain",
+        "तराई और बाढ़ मैदान"
+      ]
+    },
+    {
+      "k": "him",
+      "icon": "🏔️",
+      "col": "#4A6FA5",
+      "t": [
+        "Himalayan & alpine",
+        "हिमालयी और अल्पाइन"
+      ]
+    },
+    {
+      "k": "central",
+      "icon": "🌳",
+      "col": "#2E7D32",
+      "t": [
+        "Central & peninsular forest",
+        "मध्य और प्रायद्वीपीय वन"
+      ]
+    },
+    {
+      "k": "ghats",
+      "icon": "⛰️",
+      "col": "#00796B",
+      "t": [
+        "Western Ghats & Nilgiris",
+        "पश्चिमी घाट और नीलगिरि"
+      ]
+    },
+    {
+      "k": "ne",
+      "icon": "🌿",
+      "col": "#558B2F",
+      "t": [
+        "North-east hill forest",
+        "पूर्वोत्तर पहाड़ी वन"
+      ]
+    },
+    {
+      "k": "wet",
+      "icon": "🦆",
+      "col": "#0277BD",
+      "t": [
+        "Wetland & mangrove",
+        "आर्द्रभूमि और मैंग्रोव"
+      ]
+    },
+    {
+      "k": "sea",
+      "icon": "🌊",
+      "col": "#01579B",
+      "t": [
+        "Marine & island",
+        "समुद्री और द्वीपीय"
+      ]
+    },
+    {
+      "k": "dry",
+      "icon": "🏜️",
+      "col": "#B26A00",
+      "t": [
+        "Desert & grassland",
+        "मरुस्थल और घास भूमि"
+      ]
+    },
+    {
+      "k": "city",
+      "icon": "🏙️",
+      "col": "#6D4C41",
+      "t": [
+        "City & fossil parks",
+        "नगर और जीवाश्म उद्यान"
+      ]
+    }
+  ]
+}

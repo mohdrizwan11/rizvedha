@@ -1,0 +1,4153 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "festivals",
+  "file": "festivals_of_india-1.html",
+  "libraryCopy": "static-gk/festivals-fairs/concept/festivals_of_india-1.html",
+  "storageKey": "ssc_festivals_game_v1",
+  "icon": "🪔",
+  "description": "Bilingual study app on India's festivals and fairs: harvest, religious, tribal and cultural festivals on the map, with exam notes on new years, the Kumbh, the North-East and an MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Fairs & Festivals of India",
+      "भारत के मेले और त्योहार"
+    ],
+    "hSub": [
+      "SSC Focus · Festivals map and notes",
+      "SSC फोकस · त्योहार मानचित्र व नोट्स"
+    ],
+    "learnTtl": [
+      "Learn festivals",
+      "त्योहार सीखें"
+    ],
+    "learnSub": [
+      "Open any festival or fair to read where and when it is held, what marks it out and the facts asked in exams.",
+      "किसी भी त्योहार या मेले को खोलकर पढ़ें कि वह कहाँ और कब होता है, उसकी पहचान और परीक्षा तथ्य।"
+    ],
+    "lvlLabel": [
+      "Level · Festivals GK rank",
+      "स्तर · त्योहार GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search festivals",
+      "त्योहार खोजें"
+    ],
+    "searchPh": [
+      "Festival, state or month",
+      "त्योहार, राज्य या माह"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Festivals",
+      "त्योहार"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on religious, harvest, tribal and cultural festivals and fairs. Each answer comes with an explanation.",
+      "धार्मिक, फ़सल, जनजातीय और सांस्कृतिक त्योहारों और मेलों पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qLabel": [
+      "Select the state of this festival",
+      "इस त्योहार का राज्य चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "atlasSub": [
+      "Every entry on the map, coloured by kind.",
+      "हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read an entry, or a state to list its entries.",
+      "किसी चिह्न को छूकर प्रविष्टि पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No entry from this state in the deck.",
+      "इस राज्य की कोई प्रविष्टि सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this festival.",
+      "भारत का मानचित्र। इस त्योहार का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its entries.",
+      "भारत का मानचित्र। किसी राज्य की प्रविष्टियाँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "plantMarker": [
+      "entry",
+      "प्रविष्टि"
+    ],
+    "atlasPickerLabel": [
+      "Browse an entry",
+      "प्रविष्टि खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select an entry",
+      "प्रविष्टि चुनें"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ],
+    "howto": [
+      "Play: a festival or fair is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Festivals: 108 entries on harvest, religious, tribal and cultural festivals and fairs, with when they are held.\nLearn → Exam notes: harvest festivals, new year festivals, the Kumbh Mela, tribal festivals of the North-East and easily confused pairs.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every entry on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई त्योहार या मेला दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → त्योहार: 108 प्रविष्टियाँ फ़सल, धार्मिक, जनजातीय और सांस्कृतिक त्योहारों और मेलों पर, समय सहित।\nसीखें → परीक्षा नोट्स: फ़सल उत्सव, नववर्ष के पर्व, कुंभ मेला, उत्तर-पूर्व के जनजातीय पर्व और भ्रमित करने वाली जोड़ियाँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "relig",
+      "icon": "🪔",
+      "col": "#E65100",
+      "t": [
+        "Religious",
+        "धार्मिक"
+      ]
+    },
+    {
+      "k": "harvest",
+      "icon": "🌾",
+      "col": "#558B2F",
+      "t": [
+        "Harvest & new year",
+        "फ़सल और नववर्ष"
+      ]
+    },
+    {
+      "k": "tribal",
+      "icon": "🪶",
+      "col": "#2E7D32",
+      "t": [
+        "Tribal",
+        "जनजातीय"
+      ]
+    },
+    {
+      "k": "fair",
+      "icon": "🎪",
+      "col": "#6A1B9A",
+      "t": [
+        "Fair",
+        "मेला"
+      ]
+    },
+    {
+      "k": "culture",
+      "icon": "🎉",
+      "col": "#C2185B",
+      "t": [
+        "Cultural",
+        "सांस्कृतिक"
+      ]
+    },
+    {
+      "k": "arts",
+      "icon": "🎶",
+      "col": "#1565C0",
+      "t": [
+        "Dance & music",
+        "नृत्य और संगीत"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Where",
+        "कहाँ"
+      ]
+    },
+    {
+      "k": "wh",
+      "t": [
+        "When",
+        "कब"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "What it is",
+        "क्या है"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Known for",
+        "पहचान"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "wh"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Festival Goer",
+      "hi": "उत्सव प्रेमी"
+    },
+    {
+      "min": 60,
+      "en": "Mela Explorer",
+      "hi": "मेला खोजी"
+    },
+    {
+      "min": 150,
+      "en": "Harvest Hand",
+      "hi": "फ़सल साथी"
+    },
+    {
+      "min": 320,
+      "en": "Utsav Expert",
+      "hi": "उत्सव विशेषज्ञ"
+    },
+    {
+      "min": 560,
+      "en": "Culture Keeper",
+      "hi": "संस्कृति रक्षक"
+    },
+    {
+      "min": 900,
+      "en": "Festival Scholar",
+      "hi": "त्योहार विद्वान"
+    },
+    {
+      "min": 1400,
+      "en": "Festivals GK Champion",
+      "hi": "त्योहार GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🪔",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "tribal",
+      "icon": "🪶",
+      "t": [
+        "Tribal Trails",
+        "जनजातीय राहें"
+      ],
+      "d": [
+        "Study 15 tribal festivals",
+        "15 जनजातीय पर्व पढ़ें"
+      ],
+      "need": {
+        "seen": 15,
+        "types": [
+          "tribal"
+        ]
+      }
+    },
+    {
+      "id": "harvest",
+      "icon": "🌾",
+      "t": [
+        "Harvest Home",
+        "फ़सल घर"
+      ],
+      "d": [
+        "Study every harvest festival",
+        "सभी फ़सल पर्व पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "harvest"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Festivals GK Champion",
+        "त्योहार GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "wn",
+        "field": "wh",
+        "ask": [
+          "When is it held?",
+          "यह कब होता है?"
+        ],
+        "reverseId": "ww",
+        "reverseAsk": [
+          "Which of these is held in",
+          "इनमें से कौन-सा इस समय होता है:"
+        ],
+        "pairs": [
+          [
+            "March",
+            "March–April"
+          ],
+          [
+            "March",
+            "February–March"
+          ],
+          [
+            "February",
+            "February–March"
+          ],
+          [
+            "April",
+            "March–April"
+          ],
+          [
+            "April",
+            "April–May"
+          ],
+          [
+            "June",
+            "June–July"
+          ],
+          [
+            "June",
+            "May–June"
+          ],
+          [
+            "June",
+            "Mid-June"
+          ],
+          [
+            "July",
+            "June–July"
+          ],
+          [
+            "July",
+            "July–August"
+          ],
+          [
+            "August",
+            "July–August"
+          ],
+          [
+            "August",
+            "August–September"
+          ],
+          [
+            "November",
+            "October–November"
+          ],
+          [
+            "November",
+            "November–December"
+          ],
+          [
+            "November",
+            "November–February"
+          ],
+          [
+            "December",
+            "November–December"
+          ],
+          [
+            "December",
+            "December–January"
+          ],
+          [
+            "December",
+            "December–April"
+          ],
+          [
+            "January",
+            "December–January"
+          ],
+          [
+            "January",
+            "January–February"
+          ],
+          [
+            "14 January",
+            "14–17 January"
+          ],
+          [
+            "14 January",
+            "January (Pongal)"
+          ],
+          [
+            "14 January",
+            "January (Makar Sankranti)"
+          ],
+          [
+            "13 January",
+            "January (Makar Sankranti)"
+          ],
+          [
+            "14–17 January",
+            "January (Pongal)"
+          ],
+          [
+            "January",
+            "January (Pongal)"
+          ],
+          [
+            "January",
+            "January (Makar Sankranti)"
+          ],
+          [
+            "January",
+            "14 January"
+          ],
+          [
+            "January",
+            "13 January"
+          ],
+          [
+            "January",
+            "14–17 January"
+          ],
+          [
+            "February",
+            "Every two years (February)"
+          ],
+          [
+            "September–October",
+            "October (Sharad Purnima)"
+          ],
+          [
+            "October",
+            "September–October"
+          ],
+          [
+            "October",
+            "October–November"
+          ],
+          [
+            "October",
+            "October (Sharad Purnima)"
+          ],
+          [
+            "October–November",
+            "October–November (Kartik Purnima)"
+          ],
+          [
+            "November",
+            "October–November (Kartik Purnima)"
+          ],
+          [
+            "Every 12 years",
+            "About once in 12 years"
+          ],
+          [
+            "February–March",
+            "February–March (Mahashivratri)"
+          ],
+          [
+            "March",
+            "February–March (Mahashivratri)"
+          ],
+          [
+            "July",
+            "July–August (Shravan)"
+          ],
+          [
+            "July–August",
+            "July–August (Shravan)"
+          ],
+          [
+            "August",
+            "July–August (Shravan)"
+          ],
+          [
+            "July",
+            "5 July"
+          ],
+          [
+            "August",
+            "8 August"
+          ],
+          [
+            "February",
+            "26 February"
+          ],
+          [
+            "November",
+            "1 November"
+          ],
+          [
+            "November",
+            "21–30 November"
+          ],
+          [
+            "May–June",
+            "1–3 May"
+          ],
+          [
+            "April",
+            "First week of April"
+          ],
+          [
+            "June",
+            "24 June"
+          ],
+          [
+            "April",
+            "14–15 April"
+          ],
+          [
+            "March–April",
+            "14–15 April"
+          ],
+          [
+            "November",
+            "November–February"
+          ],
+          [
+            "December",
+            "1–10 December"
+          ],
+          [
+            "November–December",
+            "1–10 December"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "relig",
+              "harvest",
+              "tribal",
+              "fair",
+              "culture",
+              "arts"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "is",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "tribal",
+        "t": [
+          "Tribal & North-East",
+          "जनजातीय और उत्तर-पूर्व"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "tribal",
+              "harvest"
+            ],
+            "n": 6
+          },
+          {
+            "q": "st",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "fairs",
+        "t": [
+          "Fairs & religious",
+          "मेले और धार्मिक"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "relig",
+              "fair",
+              "culture",
+              "arts"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "where",
+        "t": [
+          "Where and when",
+          "कहाँ और कब"
+        ],
+        "mix": [
+          {
+            "q": "st",
+            "n": 5
+          },
+          {
+            "q": "is",
+            "n": 3
+          },
+          {
+            "q": "wn",
+            "n": 2
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Kumbh Mela",
+      "h": "कुंभ मेला",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "fair",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.44,
+      "lng": 81.85,
+      "kd": "Religious fair",
+      "kdh": "धार्मिक मेला",
+      "tag": "Holy bathing at Sangam",
+      "tagh": "संगम पर पवित्र स्नान",
+      "wh": "Every 12 years",
+      "whh": "हर 12 वर्ष",
+      "fact": "World's largest peaceful gathering; rotates between Prayagraj, Haridwar, Nashik & Ujjain.",
+      "facth": "विश्व का सबसे बड़ा शांतिपूर्ण समागम; प्रयागराज, हरिद्वार, नासिक व उज्जैन में।"
+    },
+    {
+      "n": "Baisakhi",
+      "h": "बैसाखी",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "harvest",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.63,
+      "lng": 74.87,
+      "kd": "Harvest festival",
+      "kdh": "फसल उत्सव",
+      "tag": "Bhangra & gidda dances",
+      "tagh": "भांगड़ा व गिद्दा",
+      "wh": "April",
+      "whh": "अप्रैल",
+      "fact": "Punjab's harvest festival; also marks the founding of the Khalsa in 1699.",
+      "facth": "पंजाब का फसल उत्सव; 1699 में खालसा पंथ की स्थापना भी।"
+    },
+    {
+      "n": "Lohri",
+      "h": "लोहड़ी",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "harvest",
+      "rg": "N",
+      "d": 3,
+      "lat": 30.9,
+      "lng": 75.86,
+      "kd": "Winter harvest",
+      "kdh": "शीत फसल",
+      "tag": "Bonfire & sesame-jaggery",
+      "tagh": "अलाव व तिल-गुड़",
+      "wh": "13 January",
+      "whh": "13 जनवरी",
+      "fact": "Marks the end of winter and the harvest of rabi crops, around bonfires.",
+      "facth": "सर्दी के अंत व रबी फसल कटाई का प्रतीक, अलाव के चारों ओर।"
+    },
+    {
+      "n": "Hola Mohalla",
+      "h": "होला मोहल्ला",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "relig",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.24,
+      "lng": 76.5,
+      "kd": "Sikh festival",
+      "kdh": "सिख उत्सव",
+      "tag": "Nihang martial displays",
+      "tagh": "निहंग शस्त्र-कला",
+      "wh": "March",
+      "whh": "मार्च",
+      "fact": "At Anandpur Sahib; Nihang Sikhs display mock battles and horsemanship.",
+      "facth": "आनंदपुर साहिब में; निहंग सिख युद्ध-कौशल व घुड़सवारी दिखाते हैं।"
+    },
+    {
+      "n": "Surajkund Mela",
+      "h": "सूरजकुंड मेला",
+      "s": "Haryana",
+      "st": "Haryana",
+      "sh": "हरियाणा",
+      "c": "fair",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.46,
+      "lng": 77.28,
+      "kd": "Crafts fair",
+      "kdh": "शिल्प मेला",
+      "tag": "Handicrafts from every state",
+      "tagh": "हर राज्य के हस्तशिल्प",
+      "wh": "February",
+      "whh": "फ़रवरी",
+      "fact": "India's biggest crafts fair, near Faridabad, with a different theme state each year.",
+      "facth": "फरीदाबाद के पास भारत का सबसे बड़ा शिल्प मेला, हर वर्ष नया थीम राज्य।"
+    },
+    {
+      "n": "Hemis Festival",
+      "h": "हेमिस उत्सव",
+      "s": "Ladakh",
+      "st": "Ladakh",
+      "sh": "लद्दाख",
+      "c": "relig",
+      "rg": "N",
+      "d": 2,
+      "lat": 33.91,
+      "lng": 77.7,
+      "kd": "Buddhist festival",
+      "kdh": "बौद्ध उत्सव",
+      "tag": "Masked Cham dance",
+      "tagh": "मुखौटा छम नृत्य",
+      "wh": "June–July",
+      "whh": "जून–जुलाई",
+      "fact": "At Hemis Monastery, honouring Guru Padmasambhava with vivid masked dances.",
+      "facth": "हेमिस मठ में, गुरु पद्मसंभव के सम्मान में रंगीन मुखौटा नृत्य।"
+    },
+    {
+      "n": "Lathmar Holi",
+      "h": "लठमार होली",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "relig",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.65,
+      "lng": 77.38,
+      "kd": "Holi festival",
+      "kdh": "होली उत्सव",
+      "tag": "Women playfully wield sticks",
+      "tagh": "महिलाएँ लाठियाँ चलाती हैं",
+      "wh": "March",
+      "whh": "मार्च",
+      "fact": "At Barsana near Mathura; women chase men with sticks in Radha-Krishna's land.",
+      "facth": "मथुरा के पास बरसाना में; राधा-कृष्ण की भूमि में महिलाएँ लाठियों से खेलती हैं।"
+    },
+    {
+      "n": "Dev Deepawali",
+      "h": "देव दीपावली",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "relig",
+      "rg": "N",
+      "d": 2,
+      "lat": 25.32,
+      "lng": 83.01,
+      "kd": "Lamp festival",
+      "kdh": "दीप उत्सव",
+      "tag": "Lakhs of lamps on the ghats",
+      "tagh": "घाटों पर लाखों दीप",
+      "wh": "November",
+      "whh": "नवंबर",
+      "fact": "On Kartik Purnima at Varanasi; the Ganga ghats glow with countless diyas.",
+      "facth": "कार्तिक पूर्णिमा पर वाराणसी में; गंगा घाट असंख्य दीयों से जगमगाते हैं।"
+    },
+    {
+      "n": "Pushkar Camel Fair",
+      "h": "पुष्कर ऊँट मेला",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "fair",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.49,
+      "lng": 74.55,
+      "kd": "Cattle fair",
+      "kdh": "पशु मेला",
+      "tag": "Camel trading & races",
+      "tagh": "ऊँट व्यापार व दौड़",
+      "wh": "November",
+      "whh": "नवंबर",
+      "fact": "One of the world's largest camel fairs, held by the sacred Pushkar lake.",
+      "facth": "विश्व के सबसे बड़े ऊँट मेलों में से एक, पवित्र पुष्कर झील के पास।"
+    },
+    {
+      "n": "Teej",
+      "h": "तीज",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "culture",
+      "rg": "W",
+      "d": 2,
+      "lat": 26.91,
+      "lng": 75.79,
+      "kd": "Monsoon festival",
+      "kdh": "मानसून उत्सव",
+      "tag": "Swings, henna & green attire",
+      "tagh": "झूले, मेहंदी व हरा परिधान",
+      "wh": "August",
+      "whh": "अगस्त",
+      "fact": "Women's monsoon festival of Jaipur welcoming the rains and celebrating Parvati.",
+      "facth": "जयपुर का महिला मानसून उत्सव, वर्षा का स्वागत व पार्वती पूजा।"
+    },
+    {
+      "n": "Gangaur",
+      "h": "गणगौर",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "relig",
+      "rg": "W",
+      "d": 2,
+      "lat": 24.58,
+      "lng": 73.68,
+      "kd": "Spring festival",
+      "kdh": "वसंत उत्सव",
+      "tag": "Processions of Gauri idols",
+      "tagh": "गौरी मूर्तियों की शोभायात्रा",
+      "wh": "March–April",
+      "whh": "मार्च–अप्रैल",
+      "fact": "Udaipur's festival honouring Gauri (Parvati); 18-day rite by married women.",
+      "facth": "उदयपुर का गौरी (पार्वती) उत्सव; विवाहित स्त्रियों का 18-दिवसीय व्रत।"
+    },
+    {
+      "n": "Desert Festival",
+      "h": "मरु महोत्सव",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "culture",
+      "rg": "W",
+      "d": 2,
+      "lat": 26.92,
+      "lng": 70.92,
+      "kd": "Cultural festival",
+      "kdh": "सांस्कृतिक उत्सव",
+      "tag": "Folk dance amid the dunes",
+      "tagh": "रेत के टीलों पर लोकनृत्य",
+      "wh": "February",
+      "whh": "फ़रवरी",
+      "fact": "Jaisalmer's Thar desert festival with camel polo, turban-tying and folk music.",
+      "facth": "जैसलमेर का थार मरुस्थल उत्सव, ऊँट पोलो, पगड़ी व लोकसंगीत।"
+    },
+    {
+      "n": "Rann Utsav",
+      "h": "रण उत्सव",
+      "s": "Gujarat",
+      "st": "Gujarat",
+      "sh": "गुजरात",
+      "c": "culture",
+      "rg": "W",
+      "d": 1,
+      "lat": 23.85,
+      "lng": 69.3,
+      "kd": "Cultural festival",
+      "kdh": "सांस्कृतिक उत्सव",
+      "tag": "Tents on the white salt desert",
+      "tagh": "श्वेत नमक रण पर तंबू",
+      "wh": "November–February",
+      "whh": "नवंबर–फ़रवरी",
+      "fact": "A months-long festival on the dazzling white salt flats of the Kutch Rann.",
+      "facth": "कच्छ के चमकीले श्वेत नमक रण पर महीनों चलने वाला उत्सव।"
+    },
+    {
+      "n": "Navratri Garba",
+      "h": "नवरात्रि गरबा",
+      "s": "Gujarat",
+      "st": "Gujarat",
+      "sh": "गुजरात",
+      "c": "relig",
+      "rg": "W",
+      "d": 1,
+      "lat": 22.31,
+      "lng": 73.18,
+      "kd": "Dance festival",
+      "kdh": "नृत्य उत्सव",
+      "tag": "Nine nights of Garba & Dandiya",
+      "tagh": "गरबा व डांडिया की नौ रातें",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "Gujarat's nine-night Navratri, famed for energetic Garba and Dandiya-Raas.",
+      "facth": "गुजरात की नौ-रात नवरात्रि, ऊर्जावान गरबा व डांडिया-रास के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Ganesh Chaturthi",
+      "h": "गणेश चतुर्थी",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "relig",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.1,
+      "lng": 72.95,
+      "kd": "Religious festival",
+      "kdh": "धार्मिक उत्सव",
+      "tag": "Ganesha idols & immersion",
+      "tagh": "गणेश मूर्ति व विसर्जन",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "Mumbai's grand 10-day Ganpati festival, ending with idol immersion in the sea.",
+      "facth": "मुंबई का भव्य 10-दिवसीय गणपति उत्सव, समुद्र में मूर्ति विसर्जन के साथ।"
+    },
+    {
+      "n": "Gudi Padwa",
+      "h": "गुड़ी पड़वा",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "culture",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.52,
+      "lng": 73.86,
+      "kd": "New Year festival",
+      "kdh": "नववर्ष उत्सव",
+      "tag": "Gudi raised at doorways",
+      "tagh": "द्वार पर गुड़ी",
+      "wh": "March–April",
+      "whh": "मार्च–अप्रैल",
+      "fact": "The Marathi New Year, marked by hoisting the decorated 'gudi' flag.",
+      "facth": "मराठी नववर्ष, सजी हुई 'गुड़ी' ध्वजा फहराकर मनाया जाता है।"
+    },
+    {
+      "n": "Khajuraho Dance Festival",
+      "h": "खजुराहो नृत्य उत्सव",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "arts",
+      "rg": "C",
+      "d": 2,
+      "lat": 24.85,
+      "lng": 79.92,
+      "kd": "Dance festival",
+      "kdh": "नृत्य उत्सव",
+      "tag": "Classical dance by the temples",
+      "tagh": "मंदिरों के समक्ष शास्त्रीय नृत्य",
+      "wh": "February",
+      "whh": "फ़रवरी",
+      "fact": "Classical dancers perform against the floodlit Khajuraho temples.",
+      "facth": "प्रकाशित खजुराहो मंदिरों के सम्मुख शास्त्रीय नर्तक प्रस्तुति देते हैं।"
+    },
+    {
+      "n": "Tansen Samaroh",
+      "h": "तानसेन समारोह",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "arts",
+      "rg": "C",
+      "d": 2,
+      "lat": 26.22,
+      "lng": 78.18,
+      "kd": "Music festival",
+      "kdh": "संगीत महोत्सव",
+      "tag": "Hindustani classical music",
+      "tagh": "हिंदुस्तानी शास्त्रीय संगीत",
+      "wh": "December",
+      "whh": "दिसंबर",
+      "fact": "Gwalior's music festival at the tomb of Tansen, gem of Akbar's court.",
+      "facth": "ग्वालियर में तानसेन (अकबर के नवरत्न) की समाधि पर संगीत महोत्सव।"
+    },
+    {
+      "n": "Bastar Dussehra",
+      "h": "बस्तर दशहरा",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh",
+      "sh": "छत्तीसगढ़",
+      "c": "tribal",
+      "rg": "C",
+      "d": 3,
+      "lat": 19.08,
+      "lng": 82.03,
+      "kd": "Tribal festival",
+      "kdh": "जनजातीय उत्सव",
+      "tag": "75-day tribal Dussehra",
+      "tagh": "75-दिवसीय आदिवासी दशहरा",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "At Jagdalpur; a 75-day tribal Dussehra centred on goddess Danteshwari, not Ravana.",
+      "facth": "जगदलपुर में; रावण नहीं, देवी दंतेश्वरी केंद्रित 75-दिवसीय आदिवासी दशहरा।"
+    },
+    {
+      "n": "Durga Puja",
+      "h": "दुर्गा पूजा",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "c": "relig",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.57,
+      "lng": 88.36,
+      "kd": "Religious festival",
+      "kdh": "धार्मिक उत्सव",
+      "tag": "Themed pandals of Durga",
+      "tagh": "दुर्गा के थीम पंडाल",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "Kolkata's grandest festival; UNESCO-listed intangible cultural heritage.",
+      "facth": "कोलकाता का सबसे भव्य उत्सव; यूनेस्को अमूर्त सांस्कृतिक धरोहर।"
+    },
+    {
+      "n": "Gangasagar Mela",
+      "h": "गंगासागर मेला",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "c": "fair",
+      "rg": "E",
+      "d": 2,
+      "lat": 21.85,
+      "lng": 88.2,
+      "kd": "Religious fair",
+      "kdh": "धार्मिक मेला",
+      "tag": "Sankranti bath where Ganga meets sea",
+      "tagh": "गंगा-सागर संगम स्नान",
+      "wh": "14 January",
+      "whh": "14 जनवरी",
+      "fact": "On Sagar Island, where the Ganga meets the sea; India's 2nd-largest gathering.",
+      "facth": "सागर द्वीप पर, जहाँ गंगा सागर में मिलती है; भारत का दूसरा सबसे बड़ा जमावड़ा।"
+    },
+    {
+      "n": "Rath Yatra",
+      "h": "रथ यात्रा",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "relig",
+      "rg": "E",
+      "d": 1,
+      "lat": 19.8,
+      "lng": 85.82,
+      "kd": "Chariot festival",
+      "kdh": "रथ उत्सव",
+      "tag": "Giant chariots of Jagannath",
+      "tagh": "जगन्नाथ के विशाल रथ",
+      "wh": "June–July",
+      "whh": "जून–जुलाई",
+      "fact": "At Puri; deities ride colossal wooden chariots pulled by lakhs of devotees.",
+      "facth": "पुरी में; देवता विशाल काष्ठ रथों पर, लाखों भक्त खींचते हैं।"
+    },
+    {
+      "n": "Konark Dance Festival",
+      "h": "कोणार्क नृत्य उत्सव",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "arts",
+      "rg": "E",
+      "d": 2,
+      "lat": 19.89,
+      "lng": 86.09,
+      "kd": "Dance festival",
+      "kdh": "नृत्य उत्सव",
+      "tag": "Odissi by the Sun Temple",
+      "tagh": "सूर्य मंदिर के पास ओडिसी",
+      "wh": "December",
+      "whh": "दिसंबर",
+      "fact": "Classical dance set against the backdrop of the Konark Sun Temple.",
+      "facth": "कोणार्क सूर्य मंदिर की पृष्ठभूमि में शास्त्रीय नृत्य।"
+    },
+    {
+      "n": "Nuakhai",
+      "h": "नुआखाई",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "harvest",
+      "rg": "E",
+      "d": 3,
+      "lat": 21.47,
+      "lng": 83.97,
+      "kd": "Harvest festival",
+      "kdh": "फसल उत्सव",
+      "tag": "First rice of the season offered",
+      "tagh": "नई फसल का प्रथम चावल अर्पण",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "Western Odisha's agricultural festival welcoming the season's new rice.",
+      "facth": "पश्चिमी ओडिशा का कृषि उत्सव, नई फसल के चावल का स्वागत।"
+    },
+    {
+      "n": "Chhath Puja",
+      "h": "छठ पूजा",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "relig",
+      "rg": "E",
+      "d": 1,
+      "lat": 25.59,
+      "lng": 85.14,
+      "kd": "Sun worship",
+      "kdh": "सूर्य पूजा",
+      "tag": "Offerings to the rising & setting Sun",
+      "tagh": "उगते-डूबते सूर्य को अर्घ्य",
+      "wh": "October–November",
+      "whh": "अक्टूबर–नवंबर",
+      "fact": "Bihar's festival of thanks to Surya, with riverbank rituals and fasting.",
+      "facth": "बिहार का सूर्य-धन्यवाद उत्सव, नदी तट अनुष्ठान व निर्जला व्रत।"
+    },
+    {
+      "n": "Sonepur Mela",
+      "h": "सोनपुर मेला",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "fair",
+      "rg": "E",
+      "d": 2,
+      "lat": 25.7,
+      "lng": 85.18,
+      "kd": "Cattle fair",
+      "kdh": "पशु मेला",
+      "tag": "Asia's largest cattle fair",
+      "tagh": "एशिया का सबसे बड़ा पशु मेला",
+      "wh": "November",
+      "whh": "नवंबर",
+      "fact": "At Harihar Kshetra on Kartik Purnima; once famous for its elephant market.",
+      "facth": "कार्तिक पूर्णिमा पर हरिहर क्षेत्र में; कभी हाथी बाजार के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Poush Mela",
+      "h": "पौष मेला",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "c": "fair",
+      "rg": "E",
+      "d": 3,
+      "lat": 23.68,
+      "lng": 87.68,
+      "kd": "Cultural fair",
+      "kdh": "सांस्कृतिक मेला",
+      "tag": "Baul folk singers of Bengal",
+      "tagh": "बंगाल के बाउल गायक",
+      "wh": "December",
+      "whh": "दिसंबर",
+      "fact": "At Shantiniketan, founded by Tagore; celebrates Baul music and rural crafts.",
+      "facth": "शांतिनिकेतन में, टैगोर द्वारा स्थापित; बाउल संगीत व ग्रामीण शिल्प।"
+    },
+    {
+      "n": "Bihu",
+      "h": "बिहू",
+      "s": "Assam",
+      "st": "Assam",
+      "sh": "असम",
+      "c": "harvest",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.75,
+      "lng": 94.2,
+      "kd": "Harvest festival",
+      "kdh": "फसल उत्सव",
+      "tag": "Bihu dance & dhol",
+      "tagh": "बिहू नृत्य व ढोल",
+      "wh": "April",
+      "whh": "अप्रैल",
+      "fact": "Assam's set of three harvest festivals; Rongali Bihu marks the Assamese new year.",
+      "facth": "असम के तीन फसल उत्सव; रंगाली बिहू असमिया नववर्ष।"
+    },
+    {
+      "n": "Ambubachi Mela",
+      "h": "अंबुबाची मेला",
+      "s": "Assam",
+      "st": "Assam",
+      "sh": "असम",
+      "c": "fair",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26.16,
+      "lng": 91.71,
+      "kd": "Religious fair",
+      "kdh": "धार्मिक मेला",
+      "tag": "Tantric fair at Kamakhya",
+      "tagh": "कामाख्या पर तांत्रिक मेला",
+      "wh": "June",
+      "whh": "जून",
+      "fact": "At the Kamakhya temple, Guwahati; a Tantric fair marking the goddess's cycle.",
+      "facth": "गुवाहाटी के कामाख्या मंदिर में; देवी चक्र का तांत्रिक मेला।"
+    },
+    {
+      "n": "Hornbill Festival",
+      "h": "हॉर्नबिल उत्सव",
+      "s": "Nagaland",
+      "st": "Nagaland",
+      "sh": "नागालैंड",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 1,
+      "lat": 25.67,
+      "lng": 94.11,
+      "kd": "Tribal festival",
+      "kdh": "जनजातीय उत्सव",
+      "tag": "All Naga tribes together",
+      "tagh": "सभी नागा जनजातियाँ एक साथ",
+      "wh": "1–10 December",
+      "whh": "1–10 दिसंबर",
+      "fact": "Kohima's 'Festival of Festivals' showcasing all of Nagaland's tribes.",
+      "facth": "कोहिमा का 'उत्सवों का उत्सव', नागालैंड की सभी जनजातियों का प्रदर्शन।"
+    },
+    {
+      "n": "Chapchar Kut",
+      "h": "चपचार कुट",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.73,
+      "lng": 92.72,
+      "kd": "Spring festival",
+      "kdh": "वसंत उत्सव",
+      "tag": "Cheraw bamboo dance",
+      "tagh": "चेरॉ बाँस नृत्य",
+      "wh": "March",
+      "whh": "मार्च",
+      "fact": "Mizoram's spring festival after jhum clearing, famed for the Cheraw bamboo dance.",
+      "facth": "झूम सफाई के बाद मिज़ोरम का वसंत उत्सव, चेरॉ बाँस नृत्य के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Wangala",
+      "h": "वांगला",
+      "s": "Meghalaya",
+      "st": "Meghalaya",
+      "sh": "मेघालय",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.51,
+      "lng": 90.21,
+      "kd": "Harvest festival",
+      "kdh": "फसल उत्सव",
+      "tag": "100-drums festival of the Garo",
+      "tagh": "गारो का 100-ढोल उत्सव",
+      "wh": "November",
+      "whh": "नवंबर",
+      "fact": "The Garo '100 Drums' harvest festival thanking the sun-god Saljong.",
+      "facth": "गारो का '100 ढोल' फसल उत्सव, सूर्यदेव सालजोंग को धन्यवाद।"
+    },
+    {
+      "n": "Saga Dawa",
+      "h": "सागा दावा",
+      "s": "Sikkim",
+      "st": "Sikkim",
+      "sh": "सिक्किम",
+      "c": "relig",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.33,
+      "lng": 88.61,
+      "kd": "Buddhist festival",
+      "kdh": "बौद्ध उत्सव",
+      "tag": "Honours Buddha's life",
+      "tagh": "बुद्ध के जीवन का स्मरण",
+      "wh": "May–June",
+      "whh": "मई–जून",
+      "fact": "Sikkim's holiest Buddhist month, marking Buddha's birth, enlightenment & nirvana.",
+      "facth": "सिक्किम का सर्वपवित्र बौद्ध माह, बुद्ध के जन्म, ज्ञान व निर्वाण का प्रतीक।"
+    },
+    {
+      "n": "Losar",
+      "h": "लोसर",
+      "s": "Arunachal Pradesh",
+      "st": "Arunachal Pradesh",
+      "sh": "अरुणाचल प्रदेश",
+      "c": "relig",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.59,
+      "lng": 91.86,
+      "kd": "New Year festival",
+      "kdh": "नववर्ष उत्सव",
+      "tag": "Tibetan New Year",
+      "tagh": "तिब्बती नववर्ष",
+      "wh": "February–March",
+      "whh": "फ़रवरी–मार्च",
+      "fact": "Tibetan Buddhist New Year, celebrated at Tawang and across the Himalayas.",
+      "facth": "तिब्बती बौद्ध नववर्ष, तवांग व हिमालय भर में मनाया जाता है।"
+    },
+    {
+      "n": "Onam",
+      "h": "ओणम",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "harvest",
+      "rg": "S",
+      "d": 1,
+      "lat": 8.52,
+      "lng": 76.94,
+      "kd": "Harvest festival",
+      "kdh": "फसल उत्सव",
+      "tag": "Pookalam, Sadya & boat races",
+      "tagh": "पूकलम, सद्या व नौका दौड़",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "Kerala's harvest festival welcoming the mythical King Mahabali home.",
+      "facth": "केरल का फसल उत्सव, पौराणिक राजा महाबली के स्वागत में।"
+    },
+    {
+      "n": "Thrissur Pooram",
+      "h": "त्रिशूर पूरम",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.52,
+      "lng": 76.21,
+      "kd": "Temple festival",
+      "kdh": "मंदिर उत्सव",
+      "tag": "Caparisoned elephants & drums",
+      "tagh": "सजे हाथी व मेलम वाद्य",
+      "wh": "April–May",
+      "whh": "अप्रैल–मई",
+      "fact": "Kerala's most spectacular temple festival, with parading elephants and percussion.",
+      "facth": "केरल का सबसे भव्य मंदिर उत्सव, सजे हाथी व ताल वाद्य।"
+    },
+    {
+      "n": "Theyyam",
+      "h": "तेय्यम",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "relig",
+      "rg": "S",
+      "d": 3,
+      "lat": 11.9,
+      "lng": 75.5,
+      "kd": "Ritual dance",
+      "kdh": "अनुष्ठान नृत्य",
+      "tag": "Performers embody deities",
+      "tagh": "कलाकार देवता रूप धारण करते हैं",
+      "wh": "December–April",
+      "whh": "दिसंबर–अप्रैल",
+      "fact": "North Kerala's ritual art where costumed dancers are revered as living gods.",
+      "facth": "उत्तरी केरल की अनुष्ठान कला, जहाँ नर्तक जीवित देवता माने जाते हैं।"
+    },
+    {
+      "n": "Pongal",
+      "h": "पोंगल",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "harvest",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.79,
+      "lng": 79.13,
+      "kd": "Harvest festival",
+      "kdh": "फसल उत्सव",
+      "tag": "Boiling the first rice",
+      "tagh": "नए चावल का उबालना",
+      "wh": "14–17 January",
+      "whh": "14–17 जनवरी",
+      "fact": "Tamil Nadu's four-day harvest thanksgiving to the Sun and cattle.",
+      "facth": "तमिलनाडु का चार-दिवसीय फसल उत्सव, सूर्य व पशुओं को धन्यवाद।"
+    },
+    {
+      "n": "Jallikattu",
+      "h": "जल्लीकट्टू",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "culture",
+      "rg": "S",
+      "d": 2,
+      "lat": 9.92,
+      "lng": 78.12,
+      "kd": "Bull-taming sport",
+      "kdh": "साँड-वश खेल",
+      "tag": "Brave the charging bulls",
+      "tagh": "दौड़ते साँडों को वश",
+      "wh": "January (Pongal)",
+      "whh": "जनवरी (पोंगल)",
+      "fact": "The ancient Tamil bull-taming sport held during Pongal, famous at Alanganallur.",
+      "facth": "पोंगल के दौरान प्राचीन तमिल साँड-वश खेल, अलंगानल्लूर में प्रसिद्ध।"
+    },
+    {
+      "n": "Mysore Dasara",
+      "h": "मैसूर दशहरा",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "culture",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.3,
+      "lng": 76.64,
+      "kd": "Royal festival",
+      "kdh": "राजसी उत्सव",
+      "tag": "Lit palace & elephant parade",
+      "tagh": "प्रकाशित महल व हाथी जुलूस",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "Karnataka's 'Nadahabba' state festival, with the illuminated Mysore Palace.",
+      "facth": "कर्नाटक का राज्योत्सव 'नाडहब्बा', प्रकाशित मैसूर महल के साथ।"
+    },
+    {
+      "n": "Hampi Utsav",
+      "h": "हम्पी उत्सव",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "arts",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.34,
+      "lng": 76.46,
+      "kd": "Cultural festival",
+      "kdh": "सांस्कृतिक उत्सव",
+      "tag": "Music amid Vijayanagara ruins",
+      "tagh": "विजयनगर खंडहरों में संगीत",
+      "wh": "November",
+      "whh": "नवंबर",
+      "fact": "Vijaya Utsav set among the UNESCO ruins of Hampi.",
+      "facth": "हम्पी के यूनेस्को खंडहरों के बीच विजय उत्सव।"
+    },
+    {
+      "n": "Bonalu",
+      "h": "बोनालु",
+      "s": "Telangana",
+      "st": "Telangana",
+      "sh": "तेलंगाना",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.39,
+      "lng": 78.49,
+      "kd": "Folk festival",
+      "kdh": "लोक उत्सव",
+      "tag": "Offerings to goddess Mahakali",
+      "tagh": "देवी महाकाली को बोनम",
+      "wh": "July–August",
+      "whh": "जुलाई–अगस्त",
+      "fact": "Telangana's festival to Mahakali, with women carrying decorated 'bonam' pots.",
+      "facth": "तेलंगाना का महाकाली उत्सव, स्त्रियाँ सजे 'बोनम' घड़े ले जाती हैं।"
+    },
+    {
+      "n": "Bathukamma",
+      "h": "बतुकम्मा",
+      "s": "Telangana",
+      "st": "Telangana",
+      "sh": "तेलंगाना",
+      "c": "culture",
+      "rg": "S",
+      "d": 3,
+      "lat": 17.97,
+      "lng": 79.59,
+      "kd": "Floral festival",
+      "kdh": "पुष्प उत्सव",
+      "tag": "Stacked flower arrangements",
+      "tagh": "फूलों की मीनार",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "Telangana's flower festival where women build colourful floral stacks to Gauri.",
+      "facth": "तेलंगाना का पुष्प उत्सव, स्त्रियाँ गौरी हेतु रंगीन फूल-मीनार बनाती हैं।"
+    },
+    {
+      "n": "Kullu Dussehra",
+      "h": "कुल्लू दशहरा",
+      "s": "Himachal Pradesh",
+      "st": "Dhalpur, Kullu, Himachal Pradesh",
+      "sh": "ढालपुर, कुल्लू, हिमाचल प्रदेश",
+      "c": "relig",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.96,
+      "lng": 77.11,
+      "kd": "Dussehra of the valley gods",
+      "kdh": "घाटी के देवताओं का दशहरा",
+      "tag": "Begins on Vijayadashami, when it ends elsewhere",
+      "tagh": "विजयादशमी से शुरू, जब बाकी जगह समाप्त होता है",
+      "wh": "October",
+      "whh": "अक्टूबर",
+      "fact": "Kullu Dussehra begins on Vijayadashami and lasts a week; village deities are carried to Dhalpur to attend Lord Raghunath.",
+      "facth": "कुल्लू दशहरा विजयादशमी से शुरू होकर एक सप्ताह चलता है; गाँवों के देवता भगवान रघुनाथ के दर्शन के लिए ढालपुर लाए जाते हैं।"
+    },
+    {
+      "n": "Minjar Mela",
+      "h": "मिंजर मेला",
+      "s": "Himachal Pradesh",
+      "st": "Chamba, Himachal Pradesh",
+      "sh": "चंबा, हिमाचल प्रदेश",
+      "c": "fair",
+      "rg": "N",
+      "d": 3,
+      "lat": 32.56,
+      "lng": 76.12,
+      "kd": "Fair of the maize tassels",
+      "kdh": "मक्के की मंजरी का मेला",
+      "tag": "Silk tassels (minjar) offered to the Ravi",
+      "tagh": "रावी को रेशमी मंजरी (मिंजर) अर्पण",
+      "wh": "July–August",
+      "whh": "जुलाई–अगस्त",
+      "fact": "Minjar Mela of Chamba celebrates the maize crop; people wear silk tassels called minjar and finally offer them to the Ravi river.",
+      "facth": "चंबा का मिंजर मेला मक्के की फ़सल का उत्सव है; लोग मिंजर कहलाने वाली रेशमी मंजरियाँ पहनते हैं और अंत में उन्हें रावी नदी को अर्पित करते हैं।"
+    },
+    {
+      "n": "International Mandi Shivratri Fair",
+      "h": "अंतरराष्ट्रीय मंडी शिवरात्रि मेला",
+      "s": "Himachal Pradesh",
+      "st": "Mandi, Himachal Pradesh",
+      "sh": "मंडी, हिमाचल प्रदेश",
+      "c": "relig",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.7,
+      "lng": 76.93,
+      "kd": "Shivratri fair",
+      "kdh": "शिवरात्रि मेला",
+      "tag": "Gathering of over 200 village deities",
+      "tagh": "200 से अधिक ग्राम देवताओं का समागम",
+      "wh": "February–March",
+      "whh": "फ़रवरी–मार्च",
+      "fact": "Mandi, the 'Varanasi of the hills', holds a week-long Shivratri fair to which hundreds of village deities are brought.",
+      "facth": "'पहाड़ों की वाराणसी' मंडी में सप्ताह भर का शिवरात्रि मेला होता है, जिसमें सैकड़ों ग्राम देवता लाए जाते हैं।"
+    },
+    {
+      "n": "Lavi Fair",
+      "h": "लवी मेला",
+      "s": "Himachal Pradesh",
+      "st": "Rampur Bushahr, Himachal Pradesh",
+      "sh": "रामपुर बुशहर, हिमाचल प्रदेश",
+      "c": "fair",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.45,
+      "lng": 77.63,
+      "kd": "Trade fair",
+      "kdh": "व्यापार मेला",
+      "tag": "Old trade fair with Tibet",
+      "tagh": "तिब्बत के साथ पुराना व्यापार मेला",
+      "wh": "November",
+      "whh": "नवंबर",
+      "fact": "The Lavi Fair at Rampur Bushahr is an old trade fair once held under a treaty with Tibet; wool, horses and dry fruit are traded.",
+      "facth": "रामपुर बुशहर का लवी मेला कभी तिब्बत से संधि के अंतर्गत होने वाला पुराना व्यापार मेला है; इसमें ऊन, घोड़े और सूखे मेवे बिकते हैं।"
+    },
+    {
+      "n": "Harela",
+      "h": "हरेला",
+      "s": "Uttarakhand",
+      "st": "Kumaon, Uttarakhand",
+      "sh": "कुमाऊँ, उत्तराखंड",
+      "c": "harvest",
+      "rg": "N",
+      "d": 2,
+      "lat": 29.4,
+      "lng": 79.45,
+      "kd": "Festival of greenery",
+      "kdh": "हरियाली का पर्व",
+      "tag": "Sowing seeds and planting trees",
+      "tagh": "बीज बोना और पेड़ लगाना",
+      "wh": "July",
+      "whh": "जुलाई",
+      "fact": "Harela of Uttarakhand marks the start of the rainy season; seeds sown ten days earlier are cut and trees are planted.",
+      "facth": "उत्तराखंड का हरेला वर्षा ऋतु की शुरुआत का पर्व है; दस दिन पहले बोए बीज काटे जाते हैं और पेड़ लगाए जाते हैं।"
+    },
+    {
+      "n": "Nanda Devi Raj Jat",
+      "h": "नंदा देवी राज जात",
+      "s": "Uttarakhand",
+      "st": "Chamoli, Uttarakhand",
+      "sh": "चमोली, उत्तराखंड",
+      "c": "relig",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.25,
+      "lng": 79.5,
+      "kd": "Himalayan pilgrimage",
+      "kdh": "हिमालयी तीर्थ यात्रा",
+      "tag": "Led by a four-horned ram",
+      "tagh": "चार सींगों वाले मेढ़े के नेतृत्व में",
+      "wh": "About once in 12 years",
+      "whh": "लगभग 12 वर्ष में एक बार",
+      "fact": "The Nanda Devi Raj Jat is a three-week Himalayan pilgrimage of about 280 km for the goddess Nanda, held about once in twelve years and led by a four-horned ram.",
+      "facth": "नंदा देवी राज जात देवी नंदा के लिए लगभग 280 किमी की तीन सप्ताह की हिमालयी यात्रा है, जो लगभग बारह वर्ष में एक बार होती है और चार सींगों वाला मेढ़ा इसकी अगुवाई करता है।"
+    },
+    {
+      "n": "Tulip Festival",
+      "h": "ट्यूलिप महोत्सव",
+      "s": "Jammu and Kashmir",
+      "st": "Srinagar, Jammu and Kashmir",
+      "sh": "श्रीनगर, जम्मू और कश्मीर",
+      "c": "culture",
+      "rg": "N",
+      "d": 2,
+      "lat": 34.09,
+      "lng": 74.87,
+      "kd": "Flower festival",
+      "kdh": "पुष्प महोत्सव",
+      "tag": "Asia's largest tulip garden",
+      "tagh": "एशिया का सबसे बड़ा ट्यूलिप उद्यान",
+      "wh": "March–April",
+      "whh": "मार्च–अप्रैल",
+      "fact": "The Tulip Festival is held at the Indira Gandhi Memorial Tulip Garden in Srinagar, the largest tulip garden in Asia, beside Dal Lake.",
+      "facth": "ट्यूलिप महोत्सव श्रीनगर में डल झील के पास इंदिरा गांधी स्मारक ट्यूलिप उद्यान में होता है, जो एशिया का सबसे बड़ा ट्यूलिप उद्यान है।"
+    },
+    {
+      "n": "Sindhu Darshan",
+      "h": "सिंधु दर्शन",
+      "s": "Ladakh",
+      "st": "Leh, Ladakh",
+      "sh": "लेह, लद्दाख",
+      "c": "culture",
+      "rg": "N",
+      "d": 2,
+      "lat": 34.15,
+      "lng": 77.58,
+      "kd": "Festival on the Indus",
+      "kdh": "सिंधु नदी पर उत्सव",
+      "tag": "Celebrates the Indus river",
+      "tagh": "सिंधु नदी का उत्सव",
+      "wh": "June",
+      "whh": "जून",
+      "fact": "Sindhu Darshan, held on the banks of the Indus near Leh since 1997, celebrates the river as a symbol of unity.",
+      "facth": "लेह के पास सिंधु नदी के तट पर 1997 से होने वाला सिंधु दर्शन नदी को एकता के प्रतीक के रूप में मनाता है।"
+    },
+    {
+      "n": "Phool Walon Ki Sair",
+      "h": "फूल वालों की सैर",
+      "s": "Delhi",
+      "st": "Mehrauli, Delhi",
+      "sh": "महरौली, दिल्ली",
+      "c": "culture",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.52,
+      "lng": 77.18,
+      "kd": "Festival of florists",
+      "kdh": "फूल वालों का उत्सव",
+      "tag": "Floral fans offered at a temple and a dargah",
+      "tagh": "मंदिर और दरगाह पर फूलों के पंखे अर्पण",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "Phool Walon Ki Sair in Mehrauli, begun in the time of Mughal emperor Akbar Shah II, offers floral fans at the Yogmaya temple and the dargah of Bakhtiyar Kaki, a symbol of communal harmony.",
+      "facth": "मुग़ल बादशाह अकबर शाह द्वितीय के समय शुरू हुई महरौली की फूल वालों की सैर में योगमाया मंदिर और बख़्तियार काकी की दरगाह पर फूलों के पंखे चढ़ाए जाते हैं; यह सांप्रदायिक सद्भाव का प्रतीक है।"
+    },
+    {
+      "n": "International Gita Mahotsav",
+      "h": "अंतरराष्ट्रीय गीता महोत्सव",
+      "s": "Haryana",
+      "st": "Kurukshetra, Haryana",
+      "sh": "कुरुक्षेत्र, हरियाणा",
+      "c": "relig",
+      "rg": "N",
+      "d": 2,
+      "lat": 29.97,
+      "lng": 76.85,
+      "kd": "Festival of the Gita",
+      "kdh": "गीता का उत्सव",
+      "tag": "Marks Gita Jayanti at Brahma Sarovar",
+      "tagh": "ब्रह्म सरोवर पर गीता जयंती",
+      "wh": "November–December",
+      "whh": "नवंबर–दिसंबर",
+      "fact": "The International Gita Mahotsav at Kurukshetra marks Gita Jayanti, the day the Bhagavad Gita is believed to have been told, around Brahma Sarovar.",
+      "facth": "कुरुक्षेत्र में अंतरराष्ट्रीय गीता महोत्सव गीता जयंती मनाता है, वह दिन जब भगवद्गीता का उपदेश दिया गया माना जाता है, ब्रह्म सरोवर के आसपास।"
+    },
+    {
+      "n": "Urs at Ajmer Sharif",
+      "h": "अजमेर शरीफ़ का उर्स",
+      "s": "Rajasthan",
+      "st": "Ajmer, Rajasthan",
+      "sh": "अजमेर, राजस्थान",
+      "c": "relig",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.45,
+      "lng": 74.63,
+      "kd": "Sufi festival",
+      "kdh": "सूफ़ी उत्सव",
+      "tag": "Death anniversary of Khwaja Moinuddin Chishti",
+      "tagh": "ख़्वाजा मोइनुद्दीन चिश्ती की पुण्यतिथि",
+      "wh": "Rajab (Islamic month)",
+      "whh": "रजब (इस्लामी माह)",
+      "fact": "The Urs at Ajmer Sharif marks the death anniversary of the Sufi saint Khwaja Moinuddin Chishti with six days of qawwali and prayer.",
+      "facth": "अजमेर शरीफ़ का उर्स सूफ़ी संत ख़्वाजा मोइनुद्दीन चिश्ती की पुण्यतिथि पर छह दिन क़व्वाली और इबादत के साथ मनाया जाता है।"
+    },
+    {
+      "n": "Marwar Festival",
+      "h": "मारवाड़ महोत्सव",
+      "s": "Rajasthan",
+      "st": "Jodhpur, Rajasthan",
+      "sh": "जोधपुर, राजस्थान",
+      "c": "culture",
+      "rg": "W",
+      "d": 3,
+      "lat": 26.28,
+      "lng": 73.02,
+      "kd": "Cultural festival",
+      "kdh": "सांस्कृतिक उत्सव",
+      "tag": "Folk music of the Marwar heroes",
+      "tagh": "मारवाड़ के वीरों का लोक संगीत",
+      "wh": "October (Sharad Purnima)",
+      "whh": "अक्टूबर (शरद पूर्णिमा)",
+      "fact": "The Marwar Festival in Jodhpur, held around Sharad Purnima, celebrates the folk music and dance of the Marwar region.",
+      "facth": "जोधपुर में शरद पूर्णिमा के आसपास होने वाला मारवाड़ महोत्सव मारवाड़ क्षेत्र के लोक संगीत और नृत्य का उत्सव है।"
+    },
+    {
+      "n": "Bateshwar Fair",
+      "h": "बटेश्वर मेला",
+      "s": "Uttar Pradesh",
+      "st": "Bateshwar, Agra, Uttar Pradesh",
+      "sh": "बटेश्वर, आगरा, उत्तर प्रदेश",
+      "c": "fair",
+      "rg": "N",
+      "d": 3,
+      "lat": 26.93,
+      "lng": 78.55,
+      "kd": "Livestock fair",
+      "kdh": "पशु मेला",
+      "tag": "Animal fair on the Yamuna with 100 Shiva temples",
+      "tagh": "101 शिव मंदिरों वाला यमुना तट का पशु मेला",
+      "wh": "October–November",
+      "whh": "अक्टूबर–नवंबर",
+      "fact": "The Bateshwar Fair near Agra, held on the Yamuna by a row of Shiva temples, is one of the largest livestock fairs of north India.",
+      "facth": "आगरा के पास यमुना तट पर शिव मंदिरों की पंक्ति के पास होने वाला बटेश्वर मेला उत्तर भारत के सबसे बड़े पशु मेलों में है।"
+    },
+    {
+      "n": "Uttarayan",
+      "h": "उत्तरायण",
+      "s": "Gujarat",
+      "st": "Ahmedabad, Gujarat",
+      "sh": "अहमदाबाद, गुजरात",
+      "c": "culture",
+      "rg": "W",
+      "d": 1,
+      "lat": 23.03,
+      "lng": 72.58,
+      "kd": "Kite festival",
+      "kdh": "पतंग उत्सव",
+      "tag": "International Kite Festival",
+      "tagh": "अंतरराष्ट्रीय पतंग महोत्सव",
+      "wh": "14 January",
+      "whh": "14 जनवरी",
+      "fact": "Gujarat celebrates Makar Sankranti as Uttarayan with kite flying; Ahmedabad hosts the International Kite Festival.",
+      "facth": "गुजरात मकर संक्रांति को पतंगबाज़ी के साथ उत्तरायण के रूप में मनाता है; अहमदाबाद में अंतरराष्ट्रीय पतंग महोत्सव होता है।"
+    },
+    {
+      "n": "Tarnetar Fair",
+      "h": "तरणेतर मेला",
+      "s": "Gujarat",
+      "st": "Tarnetar, Surendranagar, Gujarat",
+      "sh": "तरणेतर, सुरेंद्रनगर, गुजरात",
+      "c": "fair",
+      "rg": "W",
+      "d": 2,
+      "lat": 22.47,
+      "lng": 71.23,
+      "kd": "Tribal and rural fair",
+      "kdh": "जनजातीय और ग्रामीण मेला",
+      "tag": "Embroidered umbrellas; a matchmaking fair",
+      "tagh": "कढ़ाईदार छाते; जीवनसाथी चुनने का मेला",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "The Tarnetar Fair near the Trineteshwar temple is known for richly embroidered umbrellas and as a place where young people of rural communities choose partners.",
+      "facth": "त्रिनेत्रेश्वर मंदिर के पास तरणेतर मेला कढ़ाईदार छातों और ग्रामीण समुदायों के युवाओं द्वारा जीवनसाथी चुनने के लिए जाना जाता है।"
+    },
+    {
+      "n": "Modhera Dance Festival",
+      "h": "मोढेरा नृत्य महोत्सव",
+      "s": "Gujarat",
+      "st": "Modhera, Mehsana, Gujarat",
+      "sh": "मोढेरा, मेहसाणा, गुजरात",
+      "c": "arts",
+      "rg": "W",
+      "d": 2,
+      "lat": 23.58,
+      "lng": 72.13,
+      "kd": "Dance festival",
+      "kdh": "नृत्य महोत्सव",
+      "tag": "Classical dance at the Sun Temple",
+      "tagh": "सूर्य मंदिर पर शास्त्रीय नृत्य",
+      "wh": "January",
+      "whh": "जनवरी",
+      "fact": "The Modhera Dance Festival (Uttarardh Mahotsav) presents classical dance at the Sun Temple of Modhera, built by the Solankis.",
+      "facth": "मोढेरा नृत्य महोत्सव (उत्तरार्ध महोत्सव) सोलंकियों द्वारा निर्मित मोढेरा के सूर्य मंदिर पर शास्त्रीय नृत्य प्रस्तुत करता है।"
+    },
+    {
+      "n": "Shigmo",
+      "h": "शिग्मो",
+      "s": "Goa",
+      "st": "Goa",
+      "sh": "गोवा",
+      "c": "culture",
+      "rg": "W",
+      "d": 2,
+      "lat": 15.5,
+      "lng": 73.95,
+      "kd": "Spring festival",
+      "kdh": "वसंत उत्सव",
+      "tag": "Goa's Holi with street parades",
+      "tagh": "सड़क परेड के साथ गोवा की होली",
+      "wh": "March",
+      "whh": "मार्च",
+      "fact": "Shigmo is Goa's spring festival around Holi, with float parades, folk dances and returning-warrior themes.",
+      "facth": "शिग्मो होली के आसपास गोवा का वसंत उत्सव है, जिसमें झाँकी परेड, लोक नृत्य और लौटते योद्धाओं की झलक होती है।"
+    },
+    {
+      "n": "Goa Carnival",
+      "h": "गोवा कार्निवल",
+      "s": "Goa",
+      "st": "Panaji, Goa",
+      "sh": "पणजी, गोवा",
+      "c": "culture",
+      "rg": "W",
+      "d": 1,
+      "lat": 15.48,
+      "lng": 73.85,
+      "kd": "Carnival",
+      "kdh": "कार्निवल",
+      "tag": "Parade led by 'King Momo'",
+      "tagh": "'किंग मोमो' के नेतृत्व में परेड",
+      "wh": "February",
+      "whh": "फ़रवरी",
+      "fact": "The Goa Carnival before Lent is led by 'King Momo', with float parades and music through Panaji and other towns.",
+      "facth": "लेंट से पहले गोवा कार्निवल 'किंग मोमो' के नेतृत्व में पणजी और अन्य शहरों में झाँकी परेड और संगीत के साथ होता है।"
+    },
+    {
+      "n": "Sao Joao",
+      "h": "साओ जोआओ",
+      "s": "Goa",
+      "st": "North Goa",
+      "sh": "उत्तरी गोवा",
+      "c": "culture",
+      "rg": "W",
+      "d": 3,
+      "lat": 15.62,
+      "lng": 73.9,
+      "kd": "Monsoon feast",
+      "kdh": "मानसून पर्व",
+      "tag": "Young men leap into wells",
+      "tagh": "युवक कुओं में छलाँग लगाते हैं",
+      "wh": "24 June",
+      "whh": "24 जून",
+      "fact": "Sao Joao, the feast of St John the Baptist on 24 June, is celebrated in Goa with young men leaping into wells and streams wearing crowns of leaves.",
+      "facth": "24 जून को संत जॉन द बैप्टिस्ट का पर्व साओ जोआओ गोवा में मनाया जाता है, जब पत्तों के मुकुट पहने युवक कुओं और नालों में छलाँग लगाते हैं।"
+    },
+    {
+      "n": "Pola",
+      "h": "पोला",
+      "s": "Maharashtra",
+      "st": "Vidarbha, Maharashtra",
+      "sh": "विदर्भ, महाराष्ट्र",
+      "c": "harvest",
+      "rg": "W",
+      "d": 2,
+      "lat": 20.7,
+      "lng": 77,
+      "kd": "Festival of bullocks",
+      "kdh": "बैलों का पर्व",
+      "tag": "Farmers honour their bullocks",
+      "tagh": "किसान बैलों का सम्मान करते हैं",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "Pola is a farmers' festival of Maharashtra and Chhattisgarh in which bullocks are bathed, decorated and worshipped.",
+      "facth": "पोला महाराष्ट्र और छत्तीसगढ़ के किसानों का पर्व है, जिसमें बैलों को नहलाकर, सजाकर पूजा जाता है।"
+    },
+    {
+      "n": "Ellora Ajanta Festival",
+      "h": "एलोरा अजंता महोत्सव",
+      "s": "Maharashtra",
+      "st": "Chhatrapati Sambhajinagar, Maharashtra",
+      "sh": "छत्रपति संभाजीनगर, महाराष्ट्र",
+      "c": "arts",
+      "rg": "W",
+      "d": 3,
+      "lat": 19.88,
+      "lng": 75.34,
+      "kd": "Music and dance festival",
+      "kdh": "संगीत और नृत्य महोत्सव",
+      "tag": "Performances near the cave temples",
+      "tagh": "गुफा मंदिरों के पास प्रस्तुतियाँ",
+      "wh": "November–December",
+      "whh": "नवंबर–दिसंबर",
+      "fact": "The Ellora Ajanta International Festival brings classical music and dance to the city near the famous cave temples.",
+      "facth": "एलोरा अजंता अंतरराष्ट्रीय महोत्सव प्रसिद्ध गुफा मंदिरों के पास के शहर में शास्त्रीय संगीत और नृत्य लाता है।"
+    },
+    {
+      "n": "Bhagoria",
+      "h": "भगोरिया",
+      "s": "Madhya Pradesh",
+      "st": "Jhabua and Alirajpur, Madhya Pradesh",
+      "sh": "झाबुआ और अलीराजपुर, मध्य प्रदेश",
+      "c": "tribal",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.77,
+      "lng": 74.6,
+      "kd": "Tribal festival",
+      "kdh": "जनजातीय उत्सव",
+      "tag": "Begins seven days before Holika Dahan",
+      "tagh": "होलिका दहन से सात दिन पहले शुरू",
+      "wh": "February–March",
+      "whh": "फ़रवरी–मार्च",
+      "fact": "Bhagoria is a festival of the Bhil and Bhilala tribes of western Madhya Pradesh, held in weekly markets in the seven days before Holika Dahan.",
+      "facth": "भगोरिया पश्चिमी मध्य प्रदेश की भील और भिलाला जनजातियों का उत्सव है, जो होलिका दहन से पहले के सात दिनों में साप्ताहिक हाटों में होता है।"
+    },
+    {
+      "n": "Rajim Kumbh",
+      "h": "राजिम कुंभ",
+      "s": "Chhattisgarh",
+      "st": "Rajim, Gariaband, Chhattisgarh",
+      "sh": "राजिम, गरियाबंद, छत्तीसगढ़",
+      "c": "fair",
+      "rg": "C",
+      "d": 2,
+      "lat": 20.96,
+      "lng": 81.88,
+      "kd": "Religious fair",
+      "kdh": "धार्मिक मेला",
+      "tag": "At the confluence of the Mahanadi, Pairi and Sondur",
+      "tagh": "महानदी, पैरी और सोंढूर के संगम पर",
+      "wh": "February–March",
+      "whh": "फ़रवरी–मार्च",
+      "fact": "The Rajim Kumbh (Punni Mela) is held from Magh Purnima to Mahashivratri at the confluence of the Mahanadi, Pairi and Sondur rivers.",
+      "facth": "राजिम कुंभ (पुन्नी मेला) माघ पूर्णिमा से महाशिवरात्रि तक महानदी, पैरी और सोंढूर नदियों के संगम पर लगता है।"
+    },
+    {
+      "n": "Goncha Festival",
+      "h": "गोंचा पर्व",
+      "s": "Chhattisgarh",
+      "st": "Jagdalpur, Bastar, Chhattisgarh",
+      "sh": "जगदलपुर, बस्तर, छत्तीसगढ़",
+      "c": "tribal",
+      "rg": "C",
+      "d": 3,
+      "lat": 19.12,
+      "lng": 81.98,
+      "kd": "Bastar's Rath Yatra",
+      "kdh": "बस्तर की रथ यात्रा",
+      "tag": "Salutes fired from bamboo tupki guns",
+      "tagh": "बाँस की तुपकी बंदूकों से सलामी",
+      "wh": "June–July",
+      "whh": "जून–जुलाई",
+      "fact": "Goncha is Bastar's Rath Yatra of Lord Jagannath; people salute the chariot by firing small berries from bamboo guns called tupki.",
+      "facth": "गोंचा बस्तर में भगवान जगन्नाथ की रथ यात्रा है; लोग तुपकी नामक बाँस की बंदूकों से छोटे फल दागकर रथ को सलामी देते हैं।"
+    },
+    {
+      "n": "Sarhul",
+      "h": "सरहुल",
+      "s": "Jharkhand",
+      "st": "Ranchi, Jharkhand",
+      "sh": "राँची, झारखंड",
+      "c": "tribal",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.35,
+      "lng": 85.33,
+      "kd": "Tribal spring festival",
+      "kdh": "जनजातीय वसंत उत्सव",
+      "tag": "Worship of the sal tree",
+      "tagh": "साल वृक्ष की पूजा",
+      "wh": "March–April",
+      "whh": "मार्च–अप्रैल",
+      "fact": "Sarhul is the spring festival of the Oraon, Munda and Ho tribes of Jharkhand, marking the new year with worship of sal blossoms.",
+      "facth": "सरहुल झारखंड की उरांव, मुंडा और हो जनजातियों का वसंत उत्सव है, जो साल के फूलों की पूजा के साथ नया वर्ष मनाता है।"
+    },
+    {
+      "n": "Tusu Parab",
+      "h": "टुसू पर्व",
+      "s": "Jharkhand",
+      "st": "Jharkhand (also Purulia, West Bengal)",
+      "sh": "झारखंड (पुरुलिया, पश्चिम बंगाल में भी)",
+      "c": "harvest",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.95,
+      "lng": 86.2,
+      "kd": "Harvest festival",
+      "kdh": "फ़सल उत्सव",
+      "tag": "Songs to the goddess Tusu",
+      "tagh": "देवी टुसू के गीत",
+      "wh": "January (Makar Sankranti)",
+      "whh": "जनवरी (मकर संक्रांति)",
+      "fact": "Tusu Parab is a winter harvest festival of Jharkhand and Purulia, ending at Makar Sankranti with songs to Tusu and the immersion of decorated chaudals.",
+      "facth": "टुसू पर्व झारखंड और पुरुलिया का शीतकालीन फ़सल उत्सव है, जो मकर संक्रांति पर टुसू के गीतों और सजे चौड़ल के विसर्जन के साथ समाप्त होता है।"
+    },
+    {
+      "n": "Shravani Mela",
+      "h": "श्रावणी मेला",
+      "s": "Jharkhand",
+      "st": "Deoghar, Jharkhand",
+      "sh": "देवघर, झारखंड",
+      "c": "fair",
+      "rg": "E",
+      "d": 2,
+      "lat": 24.48,
+      "lng": 86.7,
+      "kd": "Pilgrim fair",
+      "kdh": "तीर्थ मेला",
+      "tag": "Kanwariyas walk from Sultanganj to Baidyanath",
+      "tagh": "काँवड़िये सुल्तानगंज से बैद्यनाथ तक पैदल",
+      "wh": "July–August (Shravan)",
+      "whh": "जुलाई–अगस्त (श्रावण)",
+      "fact": "During Shravan, kanwariyas carry Ganga water about 105 km on foot from Sultanganj in Bihar to the Baidyanath jyotirlinga at Deoghar.",
+      "facth": "श्रावण में काँवड़िये बिहार के सुल्तानगंज से लगभग 105 किमी पैदल चलकर देवघर के बैद्यनाथ ज्योतिर्लिंग पर गंगाजल चढ़ाते हैं।"
+    },
+    {
+      "n": "Jagaddhatri Puja",
+      "h": "जगद्धात्री पूजा",
+      "s": "West Bengal",
+      "st": "Chandannagar, Hooghly, West Bengal",
+      "sh": "चंदननगर, हुगली, पश्चिम बंगाल",
+      "c": "relig",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.87,
+      "lng": 88.37,
+      "kd": "Religious festival",
+      "kdh": "धार्मिक उत्सव",
+      "tag": "Chandannagar's lights and processions",
+      "tagh": "चंदननगर की रोशनी और शोभायात्राएँ",
+      "wh": "October–November",
+      "whh": "अक्टूबर–नवंबर",
+      "fact": "Jagaddhatri Puja, worship of a form of Durga, is celebrated most grandly in Chandannagar, famous for its light displays.",
+      "facth": "दुर्गा के एक रूप जगद्धात्री की पूजा सबसे भव्य रूप से चंदननगर में होती है, जो अपनी रोशनी सजावट के लिए प्रसिद्ध है।"
+    },
+    {
+      "n": "Bali Jatra",
+      "h": "बाली जात्रा",
+      "s": "Odisha",
+      "st": "Cuttack, Odisha",
+      "sh": "कटक, ओडिशा",
+      "c": "fair",
+      "rg": "E",
+      "d": 2,
+      "lat": 20.47,
+      "lng": 85.88,
+      "kd": "Trade fair",
+      "kdh": "व्यापार मेला",
+      "tag": "Remembers voyages to Bali",
+      "tagh": "बाली की समुद्री यात्राओं की याद",
+      "wh": "October–November (Kartik Purnima)",
+      "whh": "अक्टूबर–नवंबर (कार्तिक पूर्णिमा)",
+      "fact": "Bali Jatra at Cuttack, one of Asia's largest open-air trade fairs, recalls the sea voyages of Odisha's merchants (sadhabas) to Bali and Southeast Asia.",
+      "facth": "कटक की बाली जात्रा, एशिया के सबसे बड़े खुले व्यापार मेलों में, ओडिशा के व्यापारियों (साधबों) की बाली और दक्षिण-पूर्व एशिया की समुद्री यात्राओं को याद करती है।"
+    },
+    {
+      "n": "Raja Parba",
+      "h": "रज पर्व",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "culture",
+      "rg": "E",
+      "d": 2,
+      "lat": 20.6,
+      "lng": 85.3,
+      "kd": "Festival of womanhood",
+      "kdh": "नारीत्व का पर्व",
+      "tag": "Celebrates the earth and women",
+      "tagh": "धरती और स्त्रियों का उत्सव",
+      "wh": "Mid-June",
+      "whh": "मध्य जून",
+      "fact": "Raja Parba is a three-day Odisha festival in mid-June celebrating the earth goddess and womanhood, with swings (doli) and pitha cakes.",
+      "facth": "रज पर्व मध्य जून में ओडिशा का तीन दिन का पर्व है जो धरती माता और नारीत्व का उत्सव है, जिसमें झूले (डोली) और पीठा होते हैं।"
+    },
+    {
+      "n": "Dhanu Jatra",
+      "h": "धनु जात्रा",
+      "s": "Odisha",
+      "st": "Bargarh, Odisha",
+      "sh": "बरगढ़, ओडिशा",
+      "c": "culture",
+      "rg": "E",
+      "d": 2,
+      "lat": 21.33,
+      "lng": 83.62,
+      "kd": "Open-air theatre festival",
+      "kdh": "खुला रंगमंच उत्सव",
+      "tag": "World's largest open-air theatre",
+      "tagh": "विश्व का सबसे बड़ा खुला रंगमंच",
+      "wh": "December–January",
+      "whh": "दिसंबर–जनवरी",
+      "fact": "Dhanu Jatra in Bargarh turns the whole town into a stage for the story of Krishna and Kansa; it is called the largest open-air theatre in the world.",
+      "facth": "बरगढ़ की धनु जात्रा पूरे शहर को कृष्ण और कंस की कथा का मंच बना देती है; इसे विश्व का सबसे बड़ा खुला रंगमंच कहा जाता है।"
+    },
+    {
+      "n": "Ali Ai Ligang",
+      "h": "अली आई लिगांग",
+      "s": "Assam",
+      "st": "Majuli and Dhemaji, Assam",
+      "sh": "माजुली और धेमाजी, असम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.48,
+      "lng": 94.58,
+      "kd": "Tribal sowing festival",
+      "kdh": "जनजातीय बुवाई उत्सव",
+      "tag": "Spring festival of the Mising tribe",
+      "tagh": "मिसिंग जनजाति का वसंत पर्व",
+      "wh": "February",
+      "whh": "फ़रवरी",
+      "fact": "Ali Ai Ligang is the spring sowing festival of the Mising tribe of Assam, held on the first Wednesday of the month of Ginmur Polo (February).",
+      "facth": "अली आई लिगांग असम की मिसिंग जनजाति का वसंत बुवाई पर्व है, जो गिनमुर पोलो (फ़रवरी) माह के पहले बुधवार को होता है।"
+    },
+    {
+      "n": "Baishagu",
+      "h": "बैशागु",
+      "s": "Assam",
+      "st": "Kokrajhar, Assam",
+      "sh": "कोकराझार, असम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26.4,
+      "lng": 90.27,
+      "kd": "Bodo new year",
+      "kdh": "बोडो नववर्ष",
+      "tag": "Bagurumba dance",
+      "tagh": "बागुरुम्बा नृत्य",
+      "wh": "April",
+      "whh": "अप्रैल",
+      "fact": "Baishagu is the spring and new year festival of the Bodo people of Assam, celebrated with the Bagurumba dance.",
+      "facth": "बैशागु असम के बोडो लोगों का वसंत और नववर्ष उत्सव है, जो बागुरुम्बा नृत्य के साथ मनाया जाता है।"
+    },
+    {
+      "n": "Solung",
+      "h": "सोलुंग",
+      "s": "Arunachal Pradesh",
+      "st": "Pasighat, Arunachal Pradesh",
+      "sh": "पासीघाट, अरुणाचल प्रदेश",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 2,
+      "lat": 28.07,
+      "lng": 95.33,
+      "kd": "Adi agricultural festival",
+      "kdh": "आदि कृषि उत्सव",
+      "tag": "Ponung dance of Adi women",
+      "tagh": "आदि महिलाओं का पोनुंग नृत्य",
+      "wh": "September",
+      "whh": "सितंबर",
+      "fact": "Solung is the main agricultural festival of the Adi tribe of Arunachal Pradesh, held after sowing, with the Ponung dance.",
+      "facth": "सोलुंग अरुणाचल प्रदेश की आदि जनजाति का मुख्य कृषि पर्व है, जो बुवाई के बाद पोनुंग नृत्य के साथ होता है।"
+    },
+    {
+      "n": "Dree",
+      "h": "द्री",
+      "s": "Arunachal Pradesh",
+      "st": "Ziro, Arunachal Pradesh",
+      "sh": "ज़ीरो, अरुणाचल प्रदेश",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.55,
+      "lng": 93.83,
+      "kd": "Apatani agricultural festival",
+      "kdh": "अपातानी कृषि उत्सव",
+      "tag": "Prayers for a good harvest",
+      "tagh": "अच्छी फ़सल की प्रार्थना",
+      "wh": "5 July",
+      "whh": "5 जुलाई",
+      "fact": "Dree is the agricultural festival of the Apatani tribe of the Ziro valley, held on 5 July with prayers to protect crops.",
+      "facth": "द्री ज़ीरो घाटी की अपातानी जनजाति का कृषि पर्व है, जो 5 जुलाई को फ़सल की रक्षा की प्रार्थना के साथ होता है।"
+    },
+    {
+      "n": "Nyokum",
+      "h": "न्योकुम",
+      "s": "Arunachal Pradesh",
+      "st": "Nyishi areas, Arunachal Pradesh",
+      "sh": "न्यिशी क्षेत्र, अरुणाचल प्रदेश",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.15,
+      "lng": 93.6,
+      "kd": "Nyishi festival",
+      "kdh": "न्यिशी पर्व",
+      "tag": "Prayers to the gods for prosperity",
+      "tagh": "समृद्धि के लिए देवताओं से प्रार्थना",
+      "wh": "26 February",
+      "whh": "26 फ़रवरी",
+      "fact": "Nyokum is the festival of the Nyishi tribe of Arunachal Pradesh, held on 26 February to pray for prosperity and good harvests.",
+      "facth": "न्योकुम अरुणाचल प्रदेश की न्यिशी जनजाति का पर्व है, जो 26 फ़रवरी को समृद्धि और अच्छी फ़सल की प्रार्थना के लिए होता है।"
+    },
+    {
+      "n": "Moatsu",
+      "h": "मोआत्सु",
+      "s": "Nagaland",
+      "st": "Mokokchung, Nagaland",
+      "sh": "मोकोकचुंग, नागालैंड",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 2,
+      "lat": 26.32,
+      "lng": 94.52,
+      "kd": "Ao festival",
+      "kdh": "आओ पर्व",
+      "tag": "After sowing",
+      "tagh": "बुवाई के बाद",
+      "wh": "1–3 May",
+      "whh": "1–3 मई",
+      "fact": "Moatsu is the festival of the Ao Nagas, held in the first week of May after the sowing season.",
+      "facth": "मोआत्सु आओ नागाओं का पर्व है, जो बुवाई के बाद मई के पहले सप्ताह में होता है।"
+    },
+    {
+      "n": "Sekrenyi",
+      "h": "सेक्रेनी",
+      "s": "Nagaland",
+      "st": "Kohima, Nagaland",
+      "sh": "कोहिमा, नागालैंड",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.6,
+      "lng": 94.12,
+      "kd": "Angami purification festival",
+      "kdh": "अंगामी शुद्धि पर्व",
+      "tag": "Festival of purification",
+      "tagh": "शुद्धि का पर्व",
+      "wh": "February",
+      "whh": "फ़रवरी",
+      "fact": "Sekrenyi is the purification festival of the Angami Nagas, held in February.",
+      "facth": "सेक्रेनी अंगामी नागाओं का शुद्धि पर्व है, जो फ़रवरी में होता है।"
+    },
+    {
+      "n": "Aoling",
+      "h": "आओलिंग",
+      "s": "Nagaland",
+      "st": "Mon, Nagaland",
+      "sh": "मोन, नागालैंड",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26.73,
+      "lng": 95,
+      "kd": "Konyak new year",
+      "kdh": "कोन्याक नववर्ष",
+      "tag": "Spring festival of the Konyaks",
+      "tagh": "कोन्याकों का वसंत पर्व",
+      "wh": "First week of April",
+      "whh": "अप्रैल का पहला सप्ताह",
+      "fact": "Aoling is the spring and new year festival of the Konyak Nagas of Mon district.",
+      "facth": "आओलिंग मोन ज़िले के कोन्याक नागाओं का वसंत और नववर्ष पर्व है।"
+    },
+    {
+      "n": "Tuluni",
+      "h": "तुलुनी",
+      "s": "Nagaland",
+      "st": "Zunheboto, Nagaland",
+      "sh": "ज़ुन्हेबोटो, नागालैंड",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26,
+      "lng": 94.52,
+      "kd": "Sumi festival",
+      "kdh": "सुमी पर्व",
+      "tag": "Festival of the Sumi Nagas",
+      "tagh": "सुमी नागाओं का पर्व",
+      "wh": "July",
+      "whh": "जुलाई",
+      "fact": "Tuluni is the main festival of the Sumi Nagas, held in July with feasts of rice beer.",
+      "facth": "तुलुनी सुमी नागाओं का मुख्य पर्व है, जो जुलाई में चावल की बीयर के भोज के साथ होता है।"
+    },
+    {
+      "n": "Sangai Festival",
+      "h": "संगाई महोत्सव",
+      "s": "Manipur",
+      "st": "Imphal, Manipur",
+      "sh": "इंफ़ाल, मणिपुर",
+      "c": "culture",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.8,
+      "lng": 93.94,
+      "kd": "Tourism festival",
+      "kdh": "पर्यटन महोत्सव",
+      "tag": "Named after the brow-antlered deer",
+      "tagh": "भौंह-सींग वाले हिरण के नाम पर",
+      "wh": "21–30 November",
+      "whh": "21–30 नवंबर",
+      "fact": "The Manipur Sangai Festival is named after the sangai, the brow-antlered deer found only in Keibul Lamjao National Park on Loktak Lake.",
+      "facth": "मणिपुर संगाई महोत्सव संगाई के नाम पर है, भौंह-सींग वाला हिरण जो केवल लोकटक झील के केइबुल लामजाओ राष्ट्रीय उद्यान में मिलता है।"
+    },
+    {
+      "n": "Yaoshang",
+      "h": "याओशांग",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "relig",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.6,
+      "lng": 93.8,
+      "kd": "Holi of Manipur",
+      "kdh": "मणिपुर की होली",
+      "tag": "Five days with the Thabal Chongba dance",
+      "tagh": "थाबल चोंगबा नृत्य के साथ पाँच दिन",
+      "wh": "February–March",
+      "whh": "फ़रवरी–मार्च",
+      "fact": "Yaoshang is the five-day Holi festival of Manipur, with sports and the Thabal Chongba moonlight dance.",
+      "facth": "याओशांग मणिपुर का पाँच दिन का होली पर्व है, जिसमें खेल और चाँदनी में थाबल चोंगबा नृत्य होता है।"
+    },
+    {
+      "n": "Ningol Chakouba",
+      "h": "निंगोल चाकौबा",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "culture",
+      "rg": "NE",
+      "d": 3,
+      "lat": 24.7,
+      "lng": 93.9,
+      "kd": "Family festival",
+      "kdh": "पारिवारिक पर्व",
+      "tag": "Married women feasted at their parents' home",
+      "tagh": "विवाहित बेटियों को मायके में भोज",
+      "wh": "October–November",
+      "whh": "अक्टूबर–नवंबर",
+      "fact": "In Ningol Chakouba, married women (ningol) are invited to a feast (chakouba) at their parental home.",
+      "facth": "निंगोल चाकौबा में विवाहित बेटियों (निंगोल) को मायके में भोज (चाकौबा) पर बुलाया जाता है।"
+    },
+    {
+      "n": "Kut",
+      "h": "कुट",
+      "s": "Manipur",
+      "st": "Churachandpur, Manipur",
+      "sh": "चुराचांदपुर, मणिपुर",
+      "c": "harvest",
+      "rg": "NE",
+      "d": 3,
+      "lat": 24.33,
+      "lng": 93.68,
+      "kd": "Post-harvest festival",
+      "kdh": "फ़सल के बाद का पर्व",
+      "tag": "Festival of the Kuki-Chin-Mizo peoples",
+      "tagh": "कुकी-चिन-मिज़ो लोगों का पर्व",
+      "wh": "1 November",
+      "whh": "1 नवंबर",
+      "fact": "Kut is the post-harvest festival of the Kuki-Chin-Mizo peoples of Manipur, celebrated on 1 November.",
+      "facth": "कुट मणिपुर के कुकी-चिन-मिज़ो लोगों का फ़सल के बाद का पर्व है, जो 1 नवंबर को मनाया जाता है।"
+    },
+    {
+      "n": "Behdienkhlam",
+      "h": "बेहदीनख्लाम",
+      "s": "Meghalaya",
+      "st": "Jowai, Meghalaya",
+      "sh": "जोवाई, मेघालय",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.45,
+      "lng": 92.2,
+      "kd": "Pnar festival",
+      "kdh": "पनार पर्व",
+      "tag": "Driving away the demon of disease",
+      "tagh": "रोग के दानव को भगाना",
+      "wh": "July",
+      "whh": "जुलाई",
+      "fact": "Behdienkhlam is the festival of the Pnar (Jaintia) people of Jowai, held after sowing to drive away the demon of cholera and disease.",
+      "facth": "बेहदीनख्लाम जोवाई के पनार (जयंतिया) लोगों का पर्व है, जो बुवाई के बाद हैज़े और रोग के दानव को भगाने के लिए होता है।"
+    },
+    {
+      "n": "Nongkrem",
+      "h": "नोंगक्रेम",
+      "s": "Meghalaya",
+      "st": "Smit, East Khasi Hills, Meghalaya",
+      "sh": "स्मित, पूर्वी खासी पहाड़ियाँ, मेघालय",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.52,
+      "lng": 91.97,
+      "kd": "Khasi harvest dance festival",
+      "kdh": "खासी फ़सल नृत्य पर्व",
+      "tag": "Five-day festival of the Khasi kingdom of Hima Khyrim",
+      "tagh": "हिमा ख्यरिम खासी राज्य का पाँच दिन का पर्व",
+      "wh": "October–November",
+      "whh": "अक्टूबर–नवंबर",
+      "fact": "Nongkrem is the five-day harvest thanksgiving of the Khasis, held at Smit, seat of the Hima Khyrim chief.",
+      "facth": "नोंगक्रेम खासी लोगों का पाँच दिन का फ़सल धन्यवाद पर्व है, जो हिमा ख्यरिम के प्रमुख के स्थान स्मित में होता है।"
+    },
+    {
+      "n": "Mim Kut",
+      "h": "मिम कुट",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "harvest",
+      "rg": "NE",
+      "d": 2,
+      "lat": 23.4,
+      "lng": 92.75,
+      "kd": "Maize harvest festival",
+      "kdh": "मक्का फ़सल पर्व",
+      "tag": "Dedicated to the departed",
+      "tagh": "दिवंगतों को समर्पित",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "Mim Kut is Mizoram's festival after the maize harvest, dedicated to the souls of departed family members, to whom the first harvest is offered.",
+      "facth": "मिम कुट मक्के की फ़सल के बाद मिज़ोरम का पर्व है, जो दिवंगत परिजनों की आत्माओं को समर्पित है, जिन्हें पहली फ़सल चढ़ाई जाती है।"
+    },
+    {
+      "n": "Pawl Kut",
+      "h": "पॉल कुट",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "harvest",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.2,
+      "lng": 92.7,
+      "kd": "Harvest festival",
+      "kdh": "फ़सल पर्व",
+      "tag": "Thanksgiving after the rice harvest",
+      "tagh": "धान की फ़सल के बाद धन्यवाद",
+      "wh": "December–January",
+      "whh": "दिसंबर–जनवरी",
+      "fact": "Pawl Kut is the Mizo thanksgiving festival after the rice harvest; with Chapchar Kut and Mim Kut it is one of the three Kuts of Mizoram.",
+      "facth": "पॉल कुट धान की फ़सल के बाद मिज़ो धन्यवाद पर्व है; चपचार कुट और मिम कुट के साथ यह मिज़ोरम के तीन कुटों में से एक है।"
+    },
+    {
+      "n": "Kharchi Puja",
+      "h": "खर्ची पूजा",
+      "s": "Tripura",
+      "st": "Khayerpur, Agartala, Tripura",
+      "sh": "खयेरपुर, अगरतला, त्रिपुरा",
+      "c": "relig",
+      "rg": "NE",
+      "d": 2,
+      "lat": 23.85,
+      "lng": 91.33,
+      "kd": "Worship of the 14 deities",
+      "kdh": "14 देवताओं की पूजा",
+      "tag": "Royal festival of Tripura",
+      "tagh": "त्रिपुरा का राजसी पर्व",
+      "wh": "July",
+      "whh": "जुलाई",
+      "fact": "Kharchi Puja near Agartala is a week-long worship of the fourteen deities (Chaturdasha Devata), begun by the royal family of Tripura.",
+      "facth": "अगरतला के पास खर्ची पूजा चौदह देवताओं (चतुर्दश देवता) की सप्ताह भर की पूजा है, जिसे त्रिपुरा के राजपरिवार ने शुरू किया।"
+    },
+    {
+      "n": "Garia Puja",
+      "h": "गरिया पूजा",
+      "s": "Tripura",
+      "st": "Tripura",
+      "sh": "त्रिपुरा",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.65,
+      "lng": 91.55,
+      "kd": "Tribal festival",
+      "kdh": "जनजातीय पर्व",
+      "tag": "Worship of Baba Garia for good crops",
+      "tagh": "अच्छी फ़सल के लिए बाबा गरिया की पूजा",
+      "wh": "April",
+      "whh": "अप्रैल",
+      "fact": "Garia Puja is a festival of the tribes of Tripura in April, worshipping Baba Garia for a good harvest, with the Garia dance.",
+      "facth": "गरिया पूजा अप्रैल में त्रिपुरा की जनजातियों का पर्व है, जिसमें अच्छी फ़सल के लिए बाबा गरिया की पूजा और गरिया नृत्य होता है।"
+    },
+    {
+      "n": "Pang Lhabsol",
+      "h": "पांग ल्हाबसोल",
+      "s": "Sikkim",
+      "st": "Sikkim",
+      "sh": "सिक्किम",
+      "c": "relig",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.4,
+      "lng": 88.5,
+      "kd": "Festival of Kangchenjunga",
+      "kdh": "कंचनजंगा का पर्व",
+      "tag": "Unique to Sikkim",
+      "tagh": "केवल सिक्किम में",
+      "wh": "August–September",
+      "whh": "अगस्त–सितंबर",
+      "fact": "Pang Lhabsol, unique to Sikkim, honours Mount Kangchenjunga as guardian deity and recalls the brotherhood pact of the Lepcha and Bhutia peoples.",
+      "facth": "केवल सिक्किम में मनाया जाने वाला पांग ल्हाबसोल कंचनजंगा पर्वत को रक्षक देवता के रूप में सम्मान देता है और लेप्चा व भूटिया लोगों के भाईचारे के समझौते को याद करता है।"
+    },
+    {
+      "n": "Losoong",
+      "h": "लोसुंग",
+      "s": "Sikkim",
+      "st": "Sikkim",
+      "sh": "सिक्किम",
+      "c": "harvest",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.2,
+      "lng": 88.5,
+      "kd": "Sikkimese new year",
+      "kdh": "सिक्किमी नववर्ष",
+      "tag": "Harvest and farmers' new year",
+      "tagh": "फ़सल और किसानों का नववर्ष",
+      "wh": "December",
+      "whh": "दिसंबर",
+      "fact": "Losoong is the Sikkimese (Bhutia) new year and harvest festival, with Cham masked dances in the monasteries.",
+      "facth": "लोसुंग सिक्किमी (भूटिया) नववर्ष और फ़सल पर्व है, जिसमें मठों में छाम मुखौटा नृत्य होते हैं।"
+    },
+    {
+      "n": "Tendong Lho Rum Faat",
+      "h": "तेंदोंग ल्हो रम फ़ात",
+      "s": "Sikkim",
+      "st": "Namchi, Sikkim",
+      "sh": "नामची, सिक्किम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.17,
+      "lng": 88.36,
+      "kd": "Lepcha festival",
+      "kdh": "लेप्चा पर्व",
+      "tag": "Prayer to Mount Tendong",
+      "tagh": "तेंदोंग पर्वत की प्रार्थना",
+      "wh": "8 August",
+      "whh": "8 अगस्त",
+      "fact": "Tendong Lho Rum Faat is a Lepcha festival honouring Mount Tendong, which in legend saved the Lepchas from a great flood.",
+      "facth": "तेंदोंग ल्हो रम फ़ात तेंदोंग पर्वत के सम्मान में लेप्चा पर्व है, जिसने कथा के अनुसार लेप्चाओं को महाप्रलय से बचाया।"
+    },
+    {
+      "n": "Attukal Pongala",
+      "h": "अट्टुकल पोंगाला",
+      "s": "Kerala",
+      "st": "Thiruvananthapuram, Kerala",
+      "sh": "तिरुवनंतपुरम, केरल",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 8.47,
+      "lng": 76.95,
+      "kd": "Temple festival",
+      "kdh": "मंदिर उत्सव",
+      "tag": "One of the largest gatherings of women",
+      "tagh": "महिलाओं के सबसे बड़े समागमों में",
+      "wh": "February–March",
+      "whh": "फ़रवरी–मार्च",
+      "fact": "At Attukal Pongala, lakhs of women cook pongala offerings for the goddess Attukal Amma; it has entered the Guinness World Records as one of the largest gatherings of women.",
+      "facth": "अट्टुकल पोंगाला में लाखों महिलाएँ देवी अट्टुकल अम्मा के लिए पोंगाला प्रसाद पकाती हैं; यह महिलाओं के सबसे बड़े समागमों में गिनीज़ रिकॉर्ड में दर्ज है।"
+    },
+    {
+      "n": "Vishu",
+      "h": "विषु",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "harvest",
+      "rg": "S",
+      "d": 1,
+      "lat": 10,
+      "lng": 76.6,
+      "kd": "Malayalam new year",
+      "kdh": "मलयाली नववर्ष",
+      "tag": "Vishukkani, the first sight of the year",
+      "tagh": "विषुक्कणि, वर्ष का पहला दर्शन",
+      "wh": "14–15 April",
+      "whh": "14–15 अप्रैल",
+      "fact": "Vishu is the Malayalam new year; the day begins with the Vishukkani, an arrangement of rice, fruit, gold and konna flowers seen first thing in the morning.",
+      "facth": "विषु मलयाली नववर्ष है; दिन की शुरुआत विषुक्कणि से होती है, जिसमें चावल, फल, सोना और कोन्ना के फूल सुबह सबसे पहले देखे जाते हैं।"
+    },
+    {
+      "n": "Bengaluru Karaga",
+      "h": "बेंगलुरु करगा",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.96,
+      "lng": 77.58,
+      "kd": "Temple festival",
+      "kdh": "मंदिर उत्सव",
+      "tag": "Draupadi's procession by the Thigala community",
+      "tagh": "थिगला समुदाय द्वारा द्रौपदी की शोभायात्रा",
+      "wh": "March–April",
+      "whh": "मार्च–अप्रैल",
+      "fact": "The Bengaluru Karaga, from the Dharmaraya Swamy Temple, is a night procession in honour of Draupadi led by the Thigala community.",
+      "facth": "धर्मराय स्वामी मंदिर से बेंगलुरु करगा थिगला समुदाय के नेतृत्व में द्रौपदी के सम्मान में रात्रि शोभायात्रा है।"
+    },
+    {
+      "n": "Ugadi",
+      "h": "उगादि",
+      "s": "Andhra Pradesh",
+      "st": "Andhra Pradesh, Telangana and Karnataka",
+      "sh": "आंध्र प्रदेश, तेलंगाना और कर्नाटक",
+      "c": "harvest",
+      "rg": "S",
+      "d": 1,
+      "lat": 16.3,
+      "lng": 80.4,
+      "kd": "New year festival",
+      "kdh": "नववर्ष उत्सव",
+      "tag": "Ugadi pachadi of six tastes",
+      "tagh": "छह स्वादों वाली उगादि पचड़ी",
+      "wh": "March–April",
+      "whh": "मार्च–अप्रैल",
+      "fact": "Ugadi is the new year of Andhra Pradesh, Telangana and Karnataka; the Ugadi pachadi mixes six tastes to stand for the experiences of life.",
+      "facth": "उगादि आंध्र प्रदेश, तेलंगाना और कर्नाटक का नववर्ष है; उगादि पचड़ी जीवन के अनुभवों के प्रतीक छह स्वादों को मिलाती है।"
+    },
+    {
+      "n": "Karthigai Deepam",
+      "h": "कार्तिगै दीपम",
+      "s": "Tamil Nadu",
+      "st": "Tiruvannamalai, Tamil Nadu",
+      "sh": "तिरुवन्नामलै, तमिलनाडु",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.23,
+      "lng": 79.07,
+      "kd": "Festival of lamps",
+      "kdh": "दीपों का पर्व",
+      "tag": "Maha Deepam lit on Arunachala hill",
+      "tagh": "अरुणाचल पहाड़ी पर महादीपम",
+      "wh": "November–December",
+      "whh": "नवंबर–दिसंबर",
+      "fact": "Karthigai Deepam is the Tamil festival of lamps; at Tiruvannamalai a huge Maha Deepam is lit on top of Arunachala hill.",
+      "facth": "कार्तिगै दीपम तमिल दीपोत्सव है; तिरुवन्नामलै में अरुणाचल पहाड़ी की चोटी पर विशाल महादीपम जलाया जाता है।"
+    },
+    {
+      "n": "Natyanjali",
+      "h": "नाट्यांजलि",
+      "s": "Tamil Nadu",
+      "st": "Chidambaram, Tamil Nadu",
+      "sh": "चिदंबरम, तमिलनाडु",
+      "c": "arts",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.4,
+      "lng": 79.69,
+      "kd": "Dance festival",
+      "kdh": "नृत्य महोत्सव",
+      "tag": "Dance offered to Nataraja",
+      "tagh": "नटराज को नृत्य अर्पण",
+      "wh": "February–March (Mahashivratri)",
+      "whh": "फ़रवरी–मार्च (महाशिवरात्रि)",
+      "fact": "Natyanjali at the Nataraja Temple of Chidambaram is a dance festival in which classical dancers offer their art to Lord Nataraja around Mahashivratri.",
+      "facth": "चिदंबरम के नटराज मंदिर का नाट्यांजलि नृत्य महोत्सव है, जिसमें महाशिवरात्रि के आसपास शास्त्रीय नर्तक अपनी कला भगवान नटराज को अर्पित करते हैं।"
+    },
+    {
+      "n": "Mahamaham",
+      "h": "महामहम",
+      "s": "Tamil Nadu",
+      "st": "Kumbakonam, Tamil Nadu",
+      "sh": "कुंभकोणम, तमिलनाडु",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.96,
+      "lng": 79.38,
+      "kd": "Holy bathing festival",
+      "kdh": "पवित्र स्नान पर्व",
+      "tag": "The 'Kumbh of the South'",
+      "tagh": "'दक्षिण का कुंभ'",
+      "wh": "Every 12 years",
+      "whh": "हर 12 वर्ष",
+      "fact": "Mahamaham, held once in twelve years at the Mahamaham tank of Kumbakonam, is called the Kumbh Mela of the South; the last was in 2016.",
+      "facth": "कुंभकोणम के महामहम सरोवर पर बारह वर्ष में एक बार होने वाले महामहम को दक्षिण का कुंभ कहते हैं; पिछला 2016 में हुआ।"
+    },
+    {
+      "n": "Thaipusam",
+      "h": "थाईपूसम",
+      "s": "Tamil Nadu",
+      "st": "Palani, Tamil Nadu",
+      "sh": "पलनी, तमिलनाडु",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.45,
+      "lng": 77.52,
+      "kd": "Murugan festival",
+      "kdh": "मुरुगन पर्व",
+      "tag": "Devotees carry kavadi",
+      "tagh": "भक्त कावड़ी उठाते हैं",
+      "wh": "January–February",
+      "whh": "जनवरी–फ़रवरी",
+      "fact": "Thaipusam honours Lord Murugan in the Tamil month of Thai; devotees carry kavadi to temples such as Palani.",
+      "facth": "थाईपूसम तमिल माह थाई में भगवान मुरुगन के सम्मान में होता है; भक्त पलनी जैसे मंदिरों तक कावड़ी ले जाते हैं।"
+    },
+    {
+      "n": "Tirumala Brahmotsavam",
+      "h": "तिरुमला ब्रह्मोत्सवम",
+      "s": "Andhra Pradesh",
+      "st": "Tirumala, Tirupati, Andhra Pradesh",
+      "sh": "तिरुमला, तिरुपति, आंध्र प्रदेश",
+      "c": "relig",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.68,
+      "lng": 79.35,
+      "kd": "Temple festival",
+      "kdh": "मंदिर उत्सव",
+      "tag": "Nine days of processions for Venkateswara",
+      "tagh": "वेंकटेश्वर की नौ दिन की शोभायात्राएँ",
+      "wh": "September–October",
+      "whh": "सितंबर–अक्टूबर",
+      "fact": "The annual Brahmotsavam at Tirumala is a nine-day festival of Lord Venkateswara with daily processions on different vahanas.",
+      "facth": "तिरुमला का वार्षिक ब्रह्मोत्सवम भगवान वेंकटेश्वर का नौ दिन का उत्सव है, जिसमें प्रतिदिन अलग-अलग वाहनों पर शोभायात्राएँ निकलती हैं।"
+    },
+    {
+      "n": "Medaram Jatara",
+      "h": "मेडारम जातरा",
+      "s": "Telangana",
+      "st": "Medaram, Mulugu, Telangana",
+      "sh": "मेडारम, मुलुगु, तेलंगाना",
+      "c": "tribal",
+      "rg": "S",
+      "d": 1,
+      "lat": 18.34,
+      "lng": 80.26,
+      "kd": "Tribal fair",
+      "kdh": "जनजातीय मेला",
+      "tag": "Asia's largest tribal fair",
+      "tagh": "एशिया का सबसे बड़ा जनजातीय मेला",
+      "wh": "Every two years (February)",
+      "whh": "हर दो वर्ष (फ़रवरी)",
+      "fact": "The Sammakka Saralamma Jatara at Medaram, honouring two Koya tribal heroines, is held every two years and is called the largest tribal fair in Asia.",
+      "facth": "दो कोया जनजातीय वीरांगनाओं के सम्मान में मेडारम का सम्मक्का सारलम्मा जातरा हर दो वर्ष में होता है और इसे एशिया का सबसे बड़ा जनजातीय मेला कहा जाता है।"
+    },
+    {
+      "n": "Island Tourism Festival",
+      "h": "द्वीप पर्यटन महोत्सव",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Sri Vijaya Puram, Andaman and Nicobar Islands",
+      "sh": "श्री विजयपुरम, अंडमान और निकोबार द्वीपसमूह",
+      "c": "culture",
+      "rg": "S",
+      "d": 3,
+      "lat": 11.62,
+      "lng": 92.72,
+      "kd": "Tourism festival",
+      "kdh": "पर्यटन महोत्सव",
+      "tag": "Culture of the islands",
+      "tagh": "द्वीपों की संस्कृति",
+      "wh": "January",
+      "whh": "जनवरी",
+      "fact": "The Island Tourism Festival in Sri Vijaya Puram (Port Blair) showcases the culture, music and crafts of the Andaman and Nicobar Islands.",
+      "facth": "श्री विजयपुरम (पोर्ट ब्लेयर) में द्वीप पर्यटन महोत्सव अंडमान और निकोबार द्वीपसमूह की संस्कृति, संगीत और शिल्प दिखाता है।"
+    },
+    {
+      "n": "International Yoga Festival",
+      "h": "अंतरराष्ट्रीय योग महोत्सव",
+      "s": "Uttarakhand",
+      "st": "Rishikesh, Uttarakhand",
+      "sh": "ऋषिकेश, उत्तराखंड",
+      "c": "culture",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.09,
+      "lng": 78.3,
+      "kd": "Yoga festival",
+      "kdh": "योग महोत्सव",
+      "tag": "Held in the 'Yoga Capital of the World'",
+      "tagh": "'विश्व की योग राजधानी' में",
+      "wh": "March",
+      "whh": "मार्च",
+      "fact": "Rishikesh, called the Yoga Capital of the World, hosts the International Yoga Festival every March on the banks of the Ganga.",
+      "facth": "'विश्व की योग राजधानी' कहे जाने वाले ऋषिकेश में हर मार्च गंगा तट पर अंतरराष्ट्रीय योग महोत्सव होता है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "harvest",
+      "icon": "🌾",
+      "t": [
+        "Harvest festivals by state",
+        "राज्यवार फ़सल उत्सव"
+      ],
+      "cols": [
+        [
+          "Festival",
+          "उत्सव"
+        ],
+        [
+          "State",
+          "राज्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Pongal",
+            "पोंगल"
+          ],
+          [
+            "Tamil Nadu",
+            "तमिलनाडु"
+          ]
+        ],
+        [
+          [
+            "Onam",
+            "ओणम"
+          ],
+          [
+            "Kerala",
+            "केरल"
+          ]
+        ],
+        [
+          [
+            "Bihu (Magh, Rongali, Kati)",
+            "बिहू (माघ, रोंगाली, काटी)"
+          ],
+          [
+            "Assam",
+            "असम"
+          ]
+        ],
+        [
+          [
+            "Lohri and Baisakhi",
+            "लोहड़ी और बैसाखी"
+          ],
+          [
+            "Punjab",
+            "पंजाब"
+          ]
+        ],
+        [
+          [
+            "Nuakhai",
+            "नुआखाई"
+          ],
+          [
+            "Western Odisha",
+            "पश्चिमी ओडिशा"
+          ]
+        ],
+        [
+          [
+            "Wangala",
+            "वांगला"
+          ],
+          [
+            "Meghalaya (Garo)",
+            "मेघालय (गारो)"
+          ]
+        ],
+        [
+          [
+            "Makar Sankranti / Uttarayan / Khichdi",
+            "मकर संक्रांति / उत्तरायण / खिचड़ी"
+          ],
+          [
+            "All India / Gujarat / Uttar Pradesh and Bihar",
+            "पूरा भारत / गुजरात / उत्तर प्रदेश और बिहार"
+          ]
+        ],
+        [
+          [
+            "Chapchar Kut, Mim Kut, Pawl Kut",
+            "चपचार कुट, मिम कुट, पॉल कुट"
+          ],
+          [
+            "Mizoram",
+            "मिज़ोरम"
+          ]
+        ],
+        [
+          [
+            "Harela",
+            "हरेला"
+          ],
+          [
+            "Uttarakhand",
+            "उत्तराखंड"
+          ]
+        ],
+        [
+          [
+            "Losoong",
+            "लोसुंग"
+          ],
+          [
+            "Sikkim",
+            "सिक्किम"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "newyear",
+      "icon": "🎊",
+      "t": [
+        "New year festivals",
+        "नववर्ष के पर्व"
+      ],
+      "cols": [
+        [
+          "Festival",
+          "पर्व"
+        ],
+        [
+          "Where",
+          "कहाँ"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Gudi Padwa",
+            "गुड़ी पड़वा"
+          ],
+          [
+            "Maharashtra",
+            "महाराष्ट्र"
+          ]
+        ],
+        [
+          [
+            "Ugadi",
+            "उगादि"
+          ],
+          [
+            "Andhra Pradesh, Telangana, Karnataka",
+            "आंध्र प्रदेश, तेलंगाना, कर्नाटक"
+          ]
+        ],
+        [
+          [
+            "Puthandu",
+            "पुथांडु"
+          ],
+          [
+            "Tamil Nadu",
+            "तमिलनाडु"
+          ]
+        ],
+        [
+          [
+            "Vishu",
+            "विषु"
+          ],
+          [
+            "Kerala",
+            "केरल"
+          ]
+        ],
+        [
+          [
+            "Pohela Boishakh",
+            "पोहेला बोइशाख"
+          ],
+          [
+            "West Bengal",
+            "पश्चिम बंगाल"
+          ]
+        ],
+        [
+          [
+            "Rongali (Bohag) Bihu",
+            "रोंगाली (बोहाग) बिहू"
+          ],
+          [
+            "Assam",
+            "असम"
+          ]
+        ],
+        [
+          [
+            "Cheiraoba",
+            "चेइराओबा"
+          ],
+          [
+            "Manipur",
+            "मणिपुर"
+          ]
+        ],
+        [
+          [
+            "Losar",
+            "लोसर"
+          ],
+          [
+            "Ladakh, Sikkim, Arunachal Pradesh (Tibetan Buddhists)",
+            "लद्दाख, सिक्किम, अरुणाचल प्रदेश (तिब्बती बौद्ध)"
+          ]
+        ],
+        [
+          [
+            "Navroz",
+            "नवरोज़"
+          ],
+          [
+            "Parsi community",
+            "पारसी समुदाय"
+          ]
+        ],
+        [
+          [
+            "Cheti Chand",
+            "चेटी चंड"
+          ],
+          [
+            "Sindhi community",
+            "सिंधी समुदाय"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "kumbh",
+      "icon": "🕉️",
+      "t": [
+        "Kumbh Mela",
+        "कुंभ मेला"
+      ],
+      "cols": [
+        [
+          "Place",
+          "स्थान"
+        ],
+        [
+          "River",
+          "नदी"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Prayagraj, Uttar Pradesh",
+            "प्रयागराज, उत्तर प्रदेश"
+          ],
+          [
+            "Sangam of the Ganga, Yamuna and mythical Saraswati; Maha Kumbh held 13 January–26 February 2025",
+            "गंगा, यमुना और पौराणिक सरस्वती का संगम; महाकुंभ 13 जनवरी–26 फ़रवरी 2025"
+          ]
+        ],
+        [
+          [
+            "Haridwar, Uttarakhand",
+            "हरिद्वार, उत्तराखंड"
+          ],
+          [
+            "Ganga",
+            "गंगा"
+          ]
+        ],
+        [
+          [
+            "Nashik, Maharashtra",
+            "नासिक, महाराष्ट्र"
+          ],
+          [
+            "Godavari",
+            "गोदावरी"
+          ]
+        ],
+        [
+          [
+            "Ujjain, Madhya Pradesh (Simhastha)",
+            "उज्जैन, मध्य प्रदेश (सिंहस्थ)"
+          ],
+          [
+            "Shipra",
+            "शिप्रा"
+          ]
+        ],
+        [
+          [
+            "UNESCO",
+            "यूनेस्को"
+          ],
+          [
+            "Kumbh Mela is on the intangible heritage list (2017)",
+            "कुंभ मेला अमूर्त धरोहर सूची में है (2017)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ne",
+      "icon": "⛰️",
+      "t": [
+        "Tribal festivals of the North-East",
+        "उत्तर-पूर्व के जनजातीय पर्व"
+      ],
+      "cols": [
+        [
+          "Festival",
+          "पर्व"
+        ],
+        [
+          "Tribe and state",
+          "जनजाति और राज्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Hornbill",
+            "हॉर्नबिल"
+          ],
+          [
+            "All Naga tribes, Nagaland (1–10 December)",
+            "सभी नागा जनजातियाँ, नागालैंड (1–10 दिसंबर)"
+          ]
+        ],
+        [
+          [
+            "Moatsu / Sekrenyi / Aoling / Tuluni",
+            "मोआत्सु / सेक्रेनी / आओलिंग / तुलुनी"
+          ],
+          [
+            "Ao / Angami / Konyak / Sumi Nagas",
+            "आओ / अंगामी / कोन्याक / सुमी नागा"
+          ]
+        ],
+        [
+          [
+            "Solung / Dree / Nyokum",
+            "सोलुंग / द्री / न्योकुम"
+          ],
+          [
+            "Adi / Apatani / Nyishi, Arunachal Pradesh",
+            "आदि / अपातानी / न्यिशी, अरुणाचल प्रदेश"
+          ]
+        ],
+        [
+          [
+            "Wangala / Behdienkhlam / Nongkrem",
+            "वांगला / बेहदीनख्लाम / नोंगक्रेम"
+          ],
+          [
+            "Garo / Pnar (Jaintia) / Khasi, Meghalaya",
+            "गारो / पनार (जयंतिया) / खासी, मेघालय"
+          ]
+        ],
+        [
+          [
+            "Ali Ai Ligang / Baishagu",
+            "अली आई लिगांग / बैशागु"
+          ],
+          [
+            "Mising / Bodo, Assam",
+            "मिसिंग / बोडो, असम"
+          ]
+        ],
+        [
+          [
+            "Kut",
+            "कुट"
+          ],
+          [
+            "Kuki-Chin-Mizo, Manipur",
+            "कुकी-चिन-मिज़ो, मणिपुर"
+          ]
+        ],
+        [
+          [
+            "Garia Puja / Kharchi Puja",
+            "गरिया पूजा / खर्ची पूजा"
+          ],
+          [
+            "Tripura",
+            "त्रिपुरा"
+          ]
+        ],
+        [
+          [
+            "Pang Lhabsol / Tendong Lho Rum Faat",
+            "पांग ल्हाबसोल / तेंदोंग ल्हो रम फ़ात"
+          ],
+          [
+            "Sikkim / Lepchas of Sikkim",
+            "सिक्किम / सिक्किम के लेप्चा"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "confuse",
+      "icon": "⚖️",
+      "t": [
+        "Easily confused",
+        "आसानी से भ्रमित"
+      ],
+      "cols": [
+        [
+          "Pair",
+          "जोड़ी"
+        ],
+        [
+          "Tell them apart",
+          "अंतर"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Lohri and Baisakhi",
+            "लोहड़ी और बैसाखी"
+          ],
+          [
+            "Lohri (13 January) is the bonfire festival at the end of winter; Baisakhi (April) is the harvest festival and founding day of the Khalsa (1699)",
+            "लोहड़ी (13 जनवरी) सर्दियों के अंत का अलाव पर्व; बैसाखी (अप्रैल) फ़सल पर्व और ख़ालसा स्थापना दिवस (1699)"
+          ]
+        ],
+        [
+          [
+            "Teej and Gangaur",
+            "तीज और गणगौर"
+          ],
+          [
+            "Both honour Parvati in Rajasthan: Teej in the monsoon (Jaipur), Gangaur in spring (Udaipur)",
+            "दोनों राजस्थान में पार्वती को समर्पित: तीज मानसून में (जयपुर), गणगौर वसंत में (उदयपुर)"
+          ]
+        ],
+        [
+          [
+            "Bonalu and Bathukamma",
+            "बोनालु और बतुकम्मा"
+          ],
+          [
+            "Both Telangana: Bonalu offers pots to Mahakali; Bathukamma stacks flowers for Gauri",
+            "दोनों तेलंगाना: बोनालु में महाकाली को घड़े अर्पण; बतुकम्मा में गौरी के लिए फूलों की सजावट"
+          ]
+        ],
+        [
+          [
+            "Pushkar and Sonepur fairs",
+            "पुष्कर और सोनपुर मेले"
+          ],
+          [
+            "Pushkar (Rajasthan) is a camel fair; Sonepur (Bihar) is a cattle fair, both at Kartik Purnima",
+            "पुष्कर (राजस्थान) ऊँट मेला; सोनपुर (बिहार) पशु मेला, दोनों कार्तिक पूर्णिमा पर"
+          ]
+        ],
+        [
+          [
+            "Rath Yatra and Goncha",
+            "रथ यात्रा और गोंचा"
+          ],
+          [
+            "Both carry Lord Jagannath on chariots: Rath Yatra at Puri, Goncha in Bastar with tupki guns",
+            "दोनों में भगवान जगन्नाथ रथ पर: रथ यात्रा पुरी में, गोंचा बस्तर में तुपकी बंदूकों के साथ"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "relig",
+      "q": [
+        "The festival of Bhagoria begins seven days before which festival?",
+        "भगोरिया पर्व किस पर्व से सात दिन पहले शुरू होता है?"
+      ],
+      "o": [
+        [
+          "Holika Dahan",
+          "होलिका दहन"
+        ],
+        [
+          "Diwali",
+          "दीवाली"
+        ],
+        [
+          "Makar Sankranti",
+          "मकर संक्रांति"
+        ],
+        [
+          "Navratri",
+          "नवरात्रि"
+        ]
+      ],
+      "e": [
+        "Bhagoria of the Bhil and Bhilala tribes of Madhya Pradesh is held in weekly markets before Holi.",
+        "मध्य प्रदेश की भील और भिलाला जनजातियों का भगोरिया होली से पहले साप्ताहिक हाटों में होता है।"
+      ]
+    },
+    {
+      "t": "relig",
+      "q": [
+        "In the Goncha festival of Bastar, salutes are fired from",
+        "बस्तर के गोंचा पर्व में सलामी किससे दी जाती है?"
+      ],
+      "o": [
+        [
+          "Bamboo guns called tupki",
+          "तुपकी नामक बाँस की बंदूकों से"
+        ],
+        [
+          "Cannons",
+          "तोपों से"
+        ],
+        [
+          "Bows and arrows",
+          "तीर-कमान से"
+        ],
+        [
+          "Firecrackers",
+          "पटाखों से"
+        ]
+      ],
+      "e": [
+        "Goncha is the Rath Yatra of Bastar in Chhattisgarh.",
+        "गोंचा छत्तीसगढ़ के बस्तर की रथ यात्रा है।"
+      ]
+    },
+    {
+      "t": "relig",
+      "q": [
+        "Kumbh Mela at Nashik is held on the banks of which river?",
+        "नासिक में कुंभ मेला किस नदी के तट पर लगता है?"
+      ],
+      "o": [
+        [
+          "Godavari",
+          "गोदावरी"
+        ],
+        [
+          "Shipra",
+          "शिप्रा"
+        ],
+        [
+          "Narmada",
+          "नर्मदा"
+        ],
+        [
+          "Krishna",
+          "कृष्णा"
+        ]
+      ],
+      "e": [
+        "Ujjain is on the Shipra; Haridwar on the Ganga; Prayagraj at the Sangam.",
+        "उज्जैन शिप्रा पर, हरिद्वार गंगा पर और प्रयागराज संगम पर है।"
+      ]
+    },
+    {
+      "t": "relig",
+      "q": [
+        "Hola Mohalla is celebrated at",
+        "होला मोहल्ला कहाँ मनाया जाता है?"
+      ],
+      "o": [
+        [
+          "Anandpur Sahib, Punjab",
+          "आनंदपुर साहिब, पंजाब"
+        ],
+        [
+          "Amritsar, Punjab",
+          "अमृतसर, पंजाब"
+        ],
+        [
+          "Patna Sahib, Bihar",
+          "पटना साहिब, बिहार"
+        ],
+        [
+          "Nanded, Maharashtra",
+          "नांदेड़, महाराष्ट्र"
+        ]
+      ],
+      "e": [
+        "Nihang Sikhs display martial skills the day after Holi.",
+        "निहंग सिख होली के अगले दिन युद्ध कौशल दिखाते हैं।"
+      ]
+    },
+    {
+      "t": "relig",
+      "q": [
+        "Ambubachi Mela is held at which temple?",
+        "अंबुबाची मेला किस मंदिर में लगता है?"
+      ],
+      "o": [
+        [
+          "Kamakhya, Guwahati",
+          "कामाख्या, गुवाहाटी"
+        ],
+        [
+          "Jagannath, Puri",
+          "जगन्नाथ, पुरी"
+        ],
+        [
+          "Tarapith, Birbhum",
+          "तारापीठ, बीरभूम"
+        ],
+        [
+          "Vaishno Devi, Katra",
+          "वैष्णो देवी, कटरा"
+        ]
+      ],
+      "e": [
+        "It is a Tantric fair at the Kamakhya temple in June.",
+        "यह जून में कामाख्या मंदिर का तांत्रिक मेला है।"
+      ]
+    },
+    {
+      "t": "relig",
+      "q": [
+        "Which festival of Kerala has entered the Guinness World Records as one of the largest gatherings of women?",
+        "केरल का कौन-सा पर्व महिलाओं के सबसे बड़े समागम के रूप में गिनीज़ रिकॉर्ड में है?"
+      ],
+      "o": [
+        [
+          "Attukal Pongala",
+          "अट्टुकल पोंगाला"
+        ],
+        [
+          "Thrissur Pooram",
+          "त्रिशूर पूरम"
+        ],
+        [
+          "Onam",
+          "ओणम"
+        ],
+        [
+          "Vishu",
+          "विषु"
+        ]
+      ],
+      "e": [
+        "Women cook pongala for the goddess Attukal Amma in Thiruvananthapuram.",
+        "तिरुवनंतपुरम में महिलाएँ देवी अट्टुकल अम्मा के लिए पोंगाला पकाती हैं।"
+      ]
+    },
+    {
+      "t": "harvest",
+      "q": [
+        "Nuakhai is a harvest festival of",
+        "नुआखाई किस राज्य का फ़सल पर्व है?"
+      ],
+      "o": [
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ],
+        [
+          "Chhattisgarh",
+          "छत्तीसगढ़"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ]
+      ],
+      "e": [
+        "Western Odisha offers the season's new rice at Nuakhai.",
+        "पश्चिमी ओडिशा नुआखाई पर मौसम का नया चावल अर्पित करता है।"
+      ]
+    },
+    {
+      "t": "harvest",
+      "q": [
+        "Which best describes the significance of Mim Kut?",
+        "मिम कुट का महत्त्व सबसे अच्छी तरह क्या बताता है?"
+      ],
+      "o": [
+        [
+          "A maize harvest festival dedicated to the departed",
+          "दिवंगतों को समर्पित मक्का फ़सल पर्व"
+        ],
+        [
+          "A spring festival after jhum clearing",
+          "झूम सफ़ाई के बाद वसंत पर्व"
+        ],
+        [
+          "A festival of boat races",
+          "नौका दौड़ का पर्व"
+        ],
+        [
+          "A new year of the Bodos",
+          "बोडो लोगों का नववर्ष"
+        ]
+      ],
+      "e": [
+        "Chapchar Kut is the spring festival after jhum clearing; Pawl Kut follows the rice harvest.",
+        "चपचार कुट झूम सफ़ाई के बाद का वसंत पर्व है; पॉल कुट धान की फ़सल के बाद।"
+      ]
+    },
+    {
+      "t": "harvest",
+      "q": [
+        "Bihu songs are part of which state's folk tradition?",
+        "बिहू गीत किस राज्य की लोक परंपरा का भाग हैं?"
+      ],
+      "o": [
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Manipur",
+          "मणिपुर"
+        ],
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ],
+        [
+          "Meghalaya",
+          "मेघालय"
+        ]
+      ],
+      "e": [
+        "Rongali (Bohag) Bihu in April marks the Assamese new year.",
+        "अप्रैल में रोंगाली (बोहाग) बिहू असमिया नववर्ष है।"
+      ]
+    },
+    {
+      "t": "harvest",
+      "q": [
+        "Which day does Baisakhi also commemorate?",
+        "बैसाखी किस घटना की याद भी दिलाती है?"
+      ],
+      "o": [
+        [
+          "Founding of the Khalsa in 1699",
+          "1699 में ख़ालसा की स्थापना"
+        ],
+        [
+          "Birth of Guru Nanak",
+          "गुरु नानक का जन्म"
+        ],
+        [
+          "Building of the Golden Temple",
+          "स्वर्ण मंदिर का निर्माण"
+        ],
+        [
+          "Jallianwala Bagh only",
+          "केवल जलियाँवाला बाग़"
+        ]
+      ],
+      "e": [
+        "Guru Gobind Singh founded the Khalsa at Anandpur Sahib on Baisakhi 1699; the Jallianwala Bagh massacre also happened on Baisakhi 1919.",
+        "गुरु गोबिंद सिंह ने 1699 की बैसाखी पर आनंदपुर साहिब में ख़ालसा की स्थापना की; जलियाँवाला बाग़ हत्याकांड भी 1919 की बैसाखी पर हुआ।"
+      ]
+    },
+    {
+      "t": "harvest",
+      "q": [
+        "Ugadi marks the new year in which states?",
+        "उगादि किन राज्यों में नववर्ष है?"
+      ],
+      "o": [
+        [
+          "Andhra Pradesh, Telangana and Karnataka",
+          "आंध्र प्रदेश, तेलंगाना और कर्नाटक"
+        ],
+        [
+          "Tamil Nadu and Kerala",
+          "तमिलनाडु और केरल"
+        ],
+        [
+          "Maharashtra and Goa",
+          "महाराष्ट्र और गोवा"
+        ],
+        [
+          "Odisha and West Bengal",
+          "ओडिशा और पश्चिम बंगाल"
+        ]
+      ],
+      "e": [
+        "Maharashtra celebrates the same day as Gudi Padwa.",
+        "महाराष्ट्र इसी दिन गुड़ी पड़वा मनाता है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "The Hornbill Festival is celebrated in",
+        "हॉर्नबिल महोत्सव कहाँ मनाया जाता है?"
+      ],
+      "o": [
+        [
+          "Nagaland",
+          "नागालैंड"
+        ],
+        [
+          "Mizoram",
+          "मिज़ोरम"
+        ],
+        [
+          "Manipur",
+          "मणिपुर"
+        ],
+        [
+          "Arunachal Pradesh",
+          "अरुणाचल प्रदेश"
+        ]
+      ],
+      "e": [
+        "It is held at Kisama near Kohima on 1–10 December and is called the 'Festival of Festivals'.",
+        "यह कोहिमा के पास किसामा में 1–10 दिसंबर को होता है और इसे 'उत्सवों का उत्सव' कहा जाता है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Medaram Jatara, called the largest tribal fair in Asia, is held in",
+        "एशिया का सबसे बड़ा जनजातीय मेला कहलाने वाला मेडारम जातरा कहाँ होता है?"
+      ],
+      "o": [
+        [
+          "Telangana",
+          "तेलंगाना"
+        ],
+        [
+          "Chhattisgarh",
+          "छत्तीसगढ़"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ]
+      ],
+      "e": [
+        "It honours the Koya heroines Sammakka and Saralamma every two years.",
+        "यह हर दो वर्ष में कोया वीरांगनाओं सम्मक्का और सारलम्मा का सम्मान करता है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Sarhul, the festival of sal blossoms, is celebrated by the tribes of",
+        "साल के फूलों का पर्व सरहुल किसकी जनजातियाँ मनाती हैं?"
+      ],
+      "o": [
+        [
+          "Jharkhand",
+          "झारखंड"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Sikkim",
+          "सिक्किम"
+        ]
+      ],
+      "e": [
+        "The Oraon, Munda and Ho mark the new year with Sarhul.",
+        "उरांव, मुंडा और हो सरहुल से नया वर्ष मनाते हैं।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Dree festival is celebrated by which tribe?",
+        "द्री पर्व कौन-सी जनजाति मनाती है?"
+      ],
+      "o": [
+        [
+          "Apatani",
+          "अपातानी"
+        ],
+        [
+          "Adi",
+          "आदि"
+        ],
+        [
+          "Nyishi",
+          "न्यिशी"
+        ],
+        [
+          "Monpa",
+          "मोनपा"
+        ]
+      ],
+      "e": [
+        "The Apatani of the Ziro valley hold Dree on 5 July.",
+        "ज़ीरो घाटी के अपातानी 5 जुलाई को द्री मनाते हैं।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Moatsu is a festival of which Naga tribe?",
+        "मोआत्सु किस नागा जनजाति का पर्व है?"
+      ],
+      "o": [
+        [
+          "Ao",
+          "आओ"
+        ],
+        [
+          "Angami",
+          "अंगामी"
+        ],
+        [
+          "Konyak",
+          "कोन्याक"
+        ],
+        [
+          "Sumi",
+          "सुमी"
+        ]
+      ],
+      "e": [
+        "Sekrenyi is Angami, Aoling is Konyak and Tuluni is Sumi.",
+        "सेक्रेनी अंगामी, आओलिंग कोन्याक और तुलुनी सुमी है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Behdienkhlam, celebrated to drive away the demon of disease, belongs to",
+        "रोग के दानव को भगाने के लिए मनाया जाने वाला बेहदीनख्लाम किस राज्य का है?"
+      ],
+      "o": [
+        [
+          "Meghalaya",
+          "मेघालय"
+        ],
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ],
+        [
+          "Nagaland",
+          "नागालैंड"
+        ]
+      ],
+      "e": [
+        "It is the festival of the Pnar (Jaintia) people of Jowai.",
+        "यह जोवाई के पनार (जयंतिया) लोगों का पर्व है।"
+      ]
+    },
+    {
+      "t": "fair",
+      "q": [
+        "Which fair is known as Asia's largest cattle fair?",
+        "किस मेले को एशिया का सबसे बड़ा पशु मेला कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Sonepur Mela",
+          "सोनपुर मेला"
+        ],
+        [
+          "Pushkar Fair",
+          "पुष्कर मेला"
+        ],
+        [
+          "Bateshwar Fair",
+          "बटेश्वर मेला"
+        ],
+        [
+          "Tarnetar Fair",
+          "तरणेतर मेला"
+        ]
+      ],
+      "e": [
+        "It is held at Harihar Kshetra in Bihar on Kartik Purnima.",
+        "यह बिहार के हरिहर क्षेत्र में कार्तिक पूर्णिमा पर लगता है।"
+      ]
+    },
+    {
+      "t": "fair",
+      "q": [
+        "Surajkund Crafts Mela is held in",
+        "सूरजकुंड शिल्प मेला कहाँ लगता है?"
+      ],
+      "o": [
+        [
+          "Haryana",
+          "हरियाणा"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Delhi",
+          "दिल्ली"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ]
+      ],
+      "e": [
+        "It is held near Faridabad every February.",
+        "यह हर फ़रवरी फ़रीदाबाद के पास लगता है।"
+      ]
+    },
+    {
+      "t": "fair",
+      "q": [
+        "Bali Jatra of Cuttack commemorates",
+        "कटक की बाली जात्रा किसकी याद में है?"
+      ],
+      "o": [
+        [
+          "Odisha's ancient sea trade with Bali and Southeast Asia",
+          "बाली और दक्षिण-पूर्व एशिया से ओडिशा का प्राचीन समुद्री व्यापार"
+        ],
+        [
+          "The Kalinga war",
+          "कलिंग युद्ध"
+        ],
+        [
+          "A royal wedding",
+          "एक राजसी विवाह"
+        ],
+        [
+          "Jagannath's chariot festival",
+          "जगन्नाथ का रथ उत्सव"
+        ]
+      ],
+      "e": [
+        "Merchants called sadhabas sailed to Bali, Java and Sumatra.",
+        "साधब कहलाने वाले व्यापारी बाली, जावा और सुमात्रा जाते थे।"
+      ]
+    },
+    {
+      "t": "fair",
+      "q": [
+        "Gangasagar Mela is held where the Ganga meets the sea, on",
+        "गंगासागर मेला गंगा और समुद्र के मिलन स्थल पर कब लगता है?"
+      ],
+      "o": [
+        [
+          "Makar Sankranti",
+          "मकर संक्रांति"
+        ],
+        [
+          "Kartik Purnima",
+          "कार्तिक पूर्णिमा"
+        ],
+        [
+          "Mahashivratri",
+          "महाशिवरात्रि"
+        ],
+        [
+          "Ram Navami",
+          "राम नवमी"
+        ]
+      ],
+      "e": [
+        "It is held on Sagar Island in West Bengal.",
+        "यह पश्चिम बंगाल के सागर द्वीप पर लगता है।"
+      ]
+    },
+    {
+      "t": "culture",
+      "q": [
+        "Kullu Dussehra begins on",
+        "कुल्लू दशहरा कब शुरू होता है?"
+      ],
+      "o": [
+        [
+          "Vijayadashami, the day Dussehra ends elsewhere",
+          "विजयादशमी, जिस दिन बाकी जगह दशहरा समाप्त होता है"
+        ],
+        [
+          "The first day of Navratri",
+          "नवरात्रि का पहला दिन"
+        ],
+        [
+          "Diwali",
+          "दीवाली"
+        ],
+        [
+          "Kartik Purnima",
+          "कार्तिक पूर्णिमा"
+        ]
+      ],
+      "e": [
+        "Village deities gather at Dhalpur for Lord Raghunath for a week.",
+        "ग्राम देवता एक सप्ताह के लिए भगवान रघुनाथ के पास ढालपुर में एकत्र होते हैं।"
+      ]
+    },
+    {
+      "t": "culture",
+      "q": [
+        "The Sangai Festival is named after",
+        "संगाई महोत्सव किसके नाम पर है?"
+      ],
+      "o": [
+        [
+          "Manipur's brow-antlered deer",
+          "मणिपुर का भौंह-सींग वाला हिरण"
+        ],
+        [
+          "A Manipuri dance",
+          "एक मणिपुरी नृत्य"
+        ],
+        [
+          "A lake",
+          "एक झील"
+        ],
+        [
+          "A king of Manipur",
+          "मणिपुर का एक राजा"
+        ]
+      ],
+      "e": [
+        "The sangai lives only in Keibul Lamjao National Park on Loktak Lake.",
+        "संगाई केवल लोकटक झील के केइबुल लामजाओ राष्ट्रीय उद्यान में रहता है।"
+      ]
+    },
+    {
+      "t": "culture",
+      "q": [
+        "Dhanu Jatra of Bargarh is known as",
+        "बरगढ़ की धनु जात्रा किस रूप में जानी जाती है?"
+      ],
+      "o": [
+        [
+          "The world's largest open-air theatre",
+          "विश्व का सबसे बड़ा खुला रंगमंच"
+        ],
+        [
+          "Asia's largest cattle fair",
+          "एशिया का सबसे बड़ा पशु मेला"
+        ],
+        [
+          "The largest boat race",
+          "सबसे बड़ी नौका दौड़"
+        ],
+        [
+          "The oldest kite festival",
+          "सबसे पुराना पतंग उत्सव"
+        ]
+      ],
+      "e": [
+        "The whole town becomes the stage for the story of Krishna and Kansa.",
+        "पूरा शहर कृष्ण और कंस की कथा का मंच बन जाता है।"
+      ]
+    },
+    {
+      "t": "culture",
+      "q": [
+        "Phool Walon Ki Sair is celebrated in",
+        "फूल वालों की सैर कहाँ मनाई जाती है?"
+      ],
+      "o": [
+        [
+          "Mehrauli, Delhi",
+          "महरौली, दिल्ली"
+        ],
+        [
+          "Lucknow",
+          "लखनऊ"
+        ],
+        [
+          "Hyderabad",
+          "हैदराबाद"
+        ],
+        [
+          "Agra",
+          "आगरा"
+        ]
+      ],
+      "e": [
+        "Floral fans are offered at the Yogmaya temple and the dargah of Bakhtiyar Kaki.",
+        "योगमाया मंदिर और बख़्तियार काकी की दरगाह पर फूलों के पंखे चढ़ाए जाते हैं।"
+      ]
+    },
+    {
+      "t": "arts",
+      "q": [
+        "The Tansen Samaroh is held every year in",
+        "तानसेन समारोह हर वर्ष कहाँ होता है?"
+      ],
+      "o": [
+        [
+          "Gwalior",
+          "ग्वालियर"
+        ],
+        [
+          "Agra",
+          "आगरा"
+        ],
+        [
+          "Bhopal",
+          "भोपाल"
+        ],
+        [
+          "Varanasi",
+          "वाराणसी"
+        ]
+      ],
+      "e": [
+        "It is held near the tomb of Tansen, a gem of Akbar's court.",
+        "यह अकबर के दरबार के रत्न तानसेन की समाधि के पास होता है।"
+      ]
+    },
+    {
+      "t": "arts",
+      "q": [
+        "Natyanjali dance festival is held at the temple of Nataraja in",
+        "नाट्यांजलि नृत्य महोत्सव नटराज के किस मंदिर में होता है?"
+      ],
+      "o": [
+        [
+          "Chidambaram",
+          "चिदंबरम"
+        ],
+        [
+          "Madurai",
+          "मदुरै"
+        ],
+        [
+          "Thanjavur",
+          "तंजावुर"
+        ],
+        [
+          "Kanchipuram",
+          "कांचीपुरम"
+        ]
+      ],
+      "e": [
+        "Dancers offer their art to Nataraja around Mahashivratri.",
+        "नर्तक महाशिवरात्रि के आसपास नटराज को अपनी कला अर्पित करते हैं।"
+      ]
+    }
+  ]
+}

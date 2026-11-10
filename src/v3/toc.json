@@ -1,0 +1,1282 @@
+{
+  "version": "proposal-1",
+  "source": "docs/PROJECT_SPEC.md",
+  "statusDefinitions": [
+    "not started",
+    "researching",
+    "drafted",
+    "verified",
+    "quality-checked"
+  ],
+  "priorityNote": "Order follows the user-supplied approximate weightage guidance; numbers are planning inputs, not independently verified SSC frequency statistics.",
+  "subjects": [
+    {
+      "id": "polity",
+      "name": "Indian Polity & Constitution",
+      "priority": 1,
+      "guidance": "8–10",
+      "chapters": [
+        {
+          "id": "polity-constitutional-background-framing",
+          "group": "Foundation",
+          "title": "Constitutional background & framing",
+          "lessons": [
+            "Historical background 1773–1947",
+            "Constituent Assembly",
+            "Making of the Constitution",
+            "Salient features",
+            "Sources of the Constitution"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-preamble-constitutional-framework",
+          "group": "Foundation",
+          "title": "Preamble & constitutional framework",
+          "lessons": [
+            "Preamble",
+            "Parts and articles",
+            "Twelve schedules",
+            "Amendments",
+            "Citizenship: Articles 5–11"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-fundamental-rights",
+          "group": "Rights and duties",
+          "title": "Fundamental Rights",
+          "lessons": [
+            "Part III and Articles 12–35",
+            "Equality: Articles 14–18",
+            "Freedom: Articles 19–22",
+            "Against exploitation: Articles 23–24",
+            "Freedom of religion: Articles 25–28",
+            "Cultural and educational rights: Articles 29–30",
+            "Constitutional remedies: Article 32 and writs"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-dpsp-duties-emergencies",
+          "group": "Rights and duties",
+          "title": "DPSP, duties & emergencies",
+          "lessons": [
+            "Directive Principles: Articles 36–51",
+            "Fundamental Duties: Article 51A",
+            "Emergency provisions"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-president-vice-president-executive",
+          "group": "Union",
+          "title": "President, Vice-President & executive",
+          "lessons": [
+            "President",
+            "Vice-President",
+            "Prime Minister",
+            "Council of Ministers",
+            "Attorney General"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-parliament-and-its-working",
+          "group": "Union",
+          "title": "Parliament and its working",
+          "lessons": [
+            "Parliament",
+            "Question Hour and Zero Hour",
+            "Bills and legislative procedure",
+            "Speaker",
+            "Committees: PAC, Estimates, COPU"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-state-government",
+          "group": "State & local",
+          "title": "State government",
+          "lessons": [
+            "Governor",
+            "Chief Minister",
+            "State Legislature",
+            "High Courts"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            24
+          ]
+        },
+        {
+          "id": "polity-local-government",
+          "group": "State & local",
+          "title": "Local government",
+          "lessons": [
+            "Panchayati Raj and 73rd Amendment",
+            "Municipalities and 74th Amendment",
+            "Gram Sabha"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-judiciary-remedies",
+          "group": "Judiciary & bodies",
+          "title": "Judiciary & remedies",
+          "lessons": [
+            "Supreme Court",
+            "High Courts",
+            "Judicial review",
+            "Public interest litigation",
+            "Writs",
+            "Landmark judgments"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-constitutional-statutory-executive-bodies",
+          "group": "Judiciary & bodies",
+          "title": "Constitutional, statutory & executive bodies",
+          "lessons": [
+            "Election Commission",
+            "UPSC",
+            "Finance Commission",
+            "CAG",
+            "National commissions",
+            "NITI Aayog",
+            "NHRC",
+            "CVC",
+            "CIC",
+            "Lokpal",
+            "Constitutional vs statutory vs executive bodies"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "polity-federalism-constitutional-change",
+          "group": "Concepts",
+          "title": "Federalism & constitutional change",
+          "lessons": [
+            "Federalism and Centre–State relations",
+            "Inter-State Council",
+            "Anti-defection",
+            "Official language",
+            "Amendment procedure",
+            "Basic structure",
+            "Schedules and amendments"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "priority": 2,
+      "guidance": "8–10",
+      "chapters": [
+        {
+          "id": "economics-economic-foundations",
+          "group": "Basics",
+          "title": "Economic foundations",
+          "lessons": [
+            "Scope of economics",
+            "Capitalism, socialism and mixed systems",
+            "Economic sectors",
+            "Growth versus development"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-markets-production",
+          "group": "Basics",
+          "title": "Markets & production",
+          "lessons": [
+            "Demand",
+            "Supply",
+            "Markets",
+            "Utility",
+            "Production",
+            "Cost and revenue"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-national-income",
+          "group": "Basics",
+          "title": "National income",
+          "lessons": [
+            "GDP and GNP",
+            "NNP and NDP",
+            "Measures of national income"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-structure-planning-sectors",
+          "group": "Indian economy",
+          "title": "Structure, planning & sectors",
+          "lessons": [
+            "Structure of Indian economy",
+            "Five-Year Plans and planning",
+            "NITI Aayog",
+            "Agricultural revolutions: Green, White, Blue, Yellow",
+            "Industry, MSME and Make in India",
+            "Services"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-development-challenges-inflation",
+          "group": "Indian economy",
+          "title": "Development challenges & inflation",
+          "lessons": [
+            "Poverty",
+            "Unemployment",
+            "Inflation: CPI and WPI"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-public-finance-policy",
+          "group": "Indian economy",
+          "title": "Public finance & policy",
+          "lessons": [
+            "Fiscal policy",
+            "Monetary policy: repo, reverse repo, CRR, SLR",
+            "Budget and deficits",
+            "Direct and indirect taxation",
+            "GST"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-external-sector-trade",
+          "group": "Indian economy",
+          "title": "External sector & trade",
+          "lessons": [
+            "External sector",
+            "International trade",
+            "WTO",
+            "IMF",
+            "World Bank"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-banking-payment-systems",
+          "group": "Banking",
+          "title": "Banking & payment systems",
+          "lessons": [
+            "RBI",
+            "Commercial banks",
+            "Banking terms and NPA",
+            "NABARD, SIDBI and EXIM",
+            "UPI, NEFT, RTGS and IMPS",
+            "Financial inclusion"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-capital-markets-insurance",
+          "group": "Banking",
+          "title": "Capital markets & insurance",
+          "lessons": [
+            "Capital market",
+            "NSE, BSE and SEBI",
+            "Insurance and IRDAI",
+            "Financial instruments"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-livelihood-and-agriculture-schemes",
+          "group": "Schemes",
+          "title": "Livelihood and agriculture schemes",
+          "lessons": [
+            "Jan Dhan",
+            "MGNREGA",
+            "PM-KISAN",
+            "Fasal Bima",
+            "For each: launch year, ministry, objective, beneficiaries, features, funding and updates"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-health-enterprise-food-schemes",
+          "group": "Schemes",
+          "title": "Health, enterprise & food schemes",
+          "lessons": [
+            "Ayushman Bharat",
+            "Mudra",
+            "Startup India",
+            "Stand-Up India",
+            "Skill India",
+            "NFSA",
+            "PDS",
+            "DBT",
+            "For each: launch year, ministry, objective, beneficiaries, features, funding and updates"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "economics-organisations-and-development-indices",
+          "group": "Organisations & indices",
+          "title": "Organisations and development indices",
+          "lessons": [
+            "IMF and World Bank",
+            "WTO, ADB and AIIB",
+            "UNDP, UNCTAD and ILO",
+            "HDI",
+            "Global Hunger Index",
+            "Global Innovation Index"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "priority": 3,
+      "guidance": "6–8",
+      "chapters": [
+        {
+          "id": "history-prehistoric-india",
+          "group": "Ancient",
+          "title": "Prehistoric India",
+          "lessons": [
+            "Palaeolithic",
+            "Mesolithic",
+            "Neolithic",
+            "Chalcolithic"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-indus-valley-civilisation",
+          "group": "Ancient",
+          "title": "Indus Valley Civilisation",
+          "lessons": [
+            "Harappa and Mohenjo-Daro",
+            "Lothal and Dholavira",
+            "Town planning",
+            "Seals and trade",
+            "Decline"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            15
+          ]
+        },
+        {
+          "id": "history-vedic-period",
+          "group": "Ancient",
+          "title": "Vedic period",
+          "lessons": [
+            "Early and Later Vedic periods",
+            "Vedas, Upanishads and Brahmanas",
+            "Sabha and Samiti"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-mahajanapadas-magadha",
+          "group": "Ancient",
+          "title": "Mahajanapadas & Magadha",
+          "lessons": [
+            "Mahajanapadas",
+            "Haryanka",
+            "Shishunaga",
+            "Nanda"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-jainism-buddhism",
+          "group": "Ancient",
+          "title": "Jainism & Buddhism",
+          "lessons": [
+            "Founders",
+            "Councils",
+            "Texts",
+            "Sects"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-mauryan-empire",
+          "group": "Ancient",
+          "title": "Mauryan Empire",
+          "lessons": [
+            "Chandragupta and Bindusara",
+            "Ashoka",
+            "Kalinga",
+            "Edicts and pillars",
+            "Administration and Arthashastra"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            15,
+            32
+          ]
+        },
+        {
+          "id": "history-post-mauryan-kingdoms",
+          "group": "Ancient",
+          "title": "Post-Mauryan kingdoms",
+          "lessons": [
+            "Shungas and Kanvas",
+            "Indo-Greeks and Shakas",
+            "Kushanas and Kanishka"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-gupta-empire",
+          "group": "Ancient",
+          "title": "Gupta Empire",
+          "lessons": [
+            "Chandragupta I",
+            "Samudragupta",
+            "Chandragupta II",
+            "Administration",
+            "Literature, science and art"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-post-gupta-southern-kingdoms",
+          "group": "Ancient",
+          "title": "Post-Gupta & southern kingdoms",
+          "lessons": [
+            "Harsha",
+            "Pallavas and Chalukyas",
+            "Cholas, Cheras and Pandyas",
+            "Rashtrakutas"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-ancient-literature-science-art",
+          "group": "Ancient",
+          "title": "Ancient literature, science & art",
+          "lessons": [
+            "Ramayana and Mahabharata",
+            "Sangam and Puranas",
+            "Aryabhata, Varahamihira and Brahmagupta",
+            "Charaka and Sushruta",
+            "Stupas, pillars, caves and temples"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-early-medieval-kingdoms",
+          "group": "Medieval",
+          "title": "Early medieval kingdoms",
+          "lessons": [
+            "Rajputs",
+            "Palas",
+            "Pratiharas",
+            "Rashtrakutas"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-delhi-sultanate",
+          "group": "Medieval",
+          "title": "Delhi Sultanate",
+          "lessons": [
+            "Slave and Khilji dynasties",
+            "Tughlaq, Sayyid and Lodi dynasties",
+            "Aibak, Iltutmish and Razia",
+            "Alauddin Khilji",
+            "Muhammad bin Tughlaq and Firoz Shah",
+            "Iqta, military, taxation and markets"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            16
+          ]
+        },
+        {
+          "id": "history-mughal-empire",
+          "group": "Medieval",
+          "title": "Mughal Empire",
+          "lessons": [
+            "Babur to Aurangzeb",
+            "Mansabdari and jagirdari",
+            "Revenue",
+            "Mughal architecture"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            16,
+            18
+          ]
+        },
+        {
+          "id": "history-regional-kingdoms",
+          "group": "Medieval",
+          "title": "Regional kingdoms",
+          "lessons": [
+            "Vijayanagara and Bahmani",
+            "Marathas",
+            "Ahom",
+            "Sikh kingdom"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-bhakti-sufi-cultural-life",
+          "group": "Medieval",
+          "title": "Bhakti, Sufi & cultural life",
+          "lessons": [
+            "Bhakti",
+            "Sufi",
+            "Medieval literature",
+            "Travellers: Al-Biruni, Ibn Battuta, Marco Polo and Bernier"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-europeans-british-expansion",
+          "group": "Modern",
+          "title": "Europeans & British expansion",
+          "lessons": [
+            "Arrival of Europeans",
+            "Carnatic Wars",
+            "Plassey and Buxar",
+            "Governor-Generals"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-british-policies-constitutional-acts",
+          "group": "Modern",
+          "title": "British policies & constitutional acts",
+          "lessons": [
+            "Subsidiary Alliance and Doctrine of Lapse",
+            "Permanent Settlement, Ryotwari and Mahalwari",
+            "Acts of 1773–1935",
+            "Constitutional development"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-revolt-reform-resistance",
+          "group": "Modern",
+          "title": "Revolt, reform & resistance",
+          "lessons": [
+            "Revolt of 1857",
+            "Socio-religious reforms and reformers",
+            "Tribal and peasant movements"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            25
+          ]
+        },
+        {
+          "id": "history-national-movement-to-1916",
+          "group": "Modern",
+          "title": "National movement to 1916",
+          "lessons": [
+            "INC formation",
+            "Moderates and Extremists",
+            "Partition of Bengal and Swadeshi",
+            "Revolutionary movement",
+            "Muslim League"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            17,
+            32
+          ]
+        },
+        {
+          "id": "history-gandhian-era-independence",
+          "group": "Modern",
+          "title": "Gandhian era & independence",
+          "lessons": [
+            "Champaran, Kheda and Ahmedabad",
+            "Non-Cooperation, Civil Disobedience and Quit India",
+            "Jallianwala Bagh, Simon Commission, Nehru Report and Round Tables",
+            "INA and Naval Mutiny",
+            "Partition and independence"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            17,
+            32
+          ]
+        },
+        {
+          "id": "history-national-movement-chronology",
+          "group": "Modern",
+          "title": "Freedom Movement chronology (1885–1947)",
+          "lessons": [
+            "1885, 1905, 1906, 1907",
+            "1916, 1917, 1919, 1920",
+            "1930, 1931, 1942, 1947"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "history-world-history-selective-basics",
+          "group": "World",
+          "title": "World history: selective basics",
+          "lessons": [
+            "Revolutions",
+            "World wars"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "priority": 4,
+      "guidance": "6–8",
+      "chapters": [
+        {
+          "id": "geography-universe-earth-coordinates",
+          "group": "Physical",
+          "title": "Universe, Earth & coordinates",
+          "lessons": [
+            "Universe and solar system",
+            "Earth: shape, rotation, revolution and seasons",
+            "Time zones",
+            "Latitudes and longitudes"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "geography-earth-structure-landforms",
+          "group": "Physical",
+          "title": "Earth structure & landforms",
+          "lessons": [
+            "Earth interior",
+            "Rocks",
+            "Landforms",
+            "Plate tectonics"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "geography-atmosphere-climate",
+          "group": "Physical",
+          "title": "Atmosphere & climate",
+          "lessons": [
+            "Atmosphere",
+            "Winds",
+            "Rainfall",
+            "Climate and monsoon",
+            "El Niño and La Niña"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "geography-oceans-disasters",
+          "group": "Physical",
+          "title": "Oceans & disasters",
+          "lessons": [
+            "Ocean floors",
+            "Currents",
+            "Tides and waves",
+            "Natural disasters"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "geography-india-location-relief",
+          "group": "Indian",
+          "title": "India: location & relief",
+          "lessons": [
+            "Location and neighbours",
+            "Physiographic divisions",
+            "Mountain ranges",
+            "States and geographical features"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            11,
+            10,
+            23
+          ]
+        },
+        {
+          "id": "geography-rivers-of-india",
+          "group": "Indian",
+          "title": "Rivers of India",
+          "lessons": [
+            "River systems and basins",
+            "Himalayan and peninsular rivers",
+            "Tributaries and confluences",
+            "Sources and drainage"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "geography-lakes-dams",
+          "group": "Indian",
+          "title": "Lakes & dams",
+          "lessons": [
+            "Lakes",
+            "Dams"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            8
+          ]
+        },
+        {
+          "id": "geography-indian-climate-soils-vegetation",
+          "group": "Indian",
+          "title": "Indian climate, soils & vegetation",
+          "lessons": [
+            "Climate and monsoon",
+            "Soils",
+            "Natural vegetation"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            7
+          ]
+        },
+        {
+          "id": "geography-agriculture-resources-industries",
+          "group": "Indian",
+          "title": "Agriculture, resources & industries",
+          "lessons": [
+            "Kharif, Rabi and Zaid",
+            "Agriculture",
+            "Minerals",
+            "Industries"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            6,
+            3
+          ]
+        },
+        {
+          "id": "geography-transport-population-of-india",
+          "group": "Indian",
+          "title": "Transport & population of India",
+          "lessons": [
+            "Transport",
+            "Population and census"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            21,
+            22
+          ]
+        },
+        {
+          "id": "geography-world-physical-geography",
+          "group": "World",
+          "title": "World physical geography",
+          "lessons": [
+            "Continents and oceans",
+            "Mountains and plateaus",
+            "Deserts and grasslands",
+            "Rivers and lakes",
+            "Straits and canals"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "geography-world-places-resources",
+          "group": "World",
+          "title": "World places & resources",
+          "lessons": [
+            "Countries, capitals and currencies",
+            "Important locations",
+            "Natural resources"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            31
+          ]
+        },
+        {
+          "id": "geography-economic-geography",
+          "group": "Economic",
+          "title": "Economic geography",
+          "lessons": [
+            "Minerals",
+            "Industrial and agricultural regions",
+            "Energy",
+            "Trade routes and ports",
+            "Population distribution",
+            "Transport networks"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "name": "Static GK & Culture",
+      "priority": 5,
+      "guidance": "6–8",
+      "chapters": [
+        {
+          "id": "culture-dance-music",
+          "group": "Art & culture",
+          "title": "Dance & music",
+          "lessons": [
+            "Classical dances",
+            "Folk dances",
+            "Music",
+            "Musical instruments"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            13,
+            14
+          ]
+        },
+        {
+          "id": "culture-visual-arts-architecture",
+          "group": "Art & culture",
+          "title": "Visual arts & architecture",
+          "lessons": [
+            "Paintings",
+            "Nagara, Dravida and Vesara architecture",
+            "Temples",
+            "Caves",
+            "UNESCO sites"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            12,
+            18,
+            19
+          ]
+        },
+        {
+          "id": "culture-living-traditions",
+          "group": "Art & culture",
+          "title": "Living traditions",
+          "lessons": [
+            "Festivals",
+            "Handicrafts",
+            "Theatre"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            26,
+            5,
+            25
+          ]
+        },
+        {
+          "id": "culture-books-literature",
+          "group": "Literature",
+          "title": "Books & literature",
+          "lessons": [
+            "Books",
+            "Literature",
+            "Authors"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            20
+          ]
+        },
+        {
+          "id": "culture-awards-honours",
+          "group": "Awards",
+          "title": "Awards & honours",
+          "lessons": [
+            "Civilian",
+            "Gallantry",
+            "Literary",
+            "Film",
+            "Sports",
+            "International",
+            "Scientific"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            28
+          ]
+        },
+        {
+          "id": "culture-sports-games",
+          "group": "Sports",
+          "title": "Sports & games",
+          "lessons": [
+            "Sports",
+            "Games",
+            "Stadiums"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            27
+          ]
+        },
+        {
+          "id": "culture-international-indian-organisations",
+          "group": "Organisations",
+          "title": "International & Indian organisations",
+          "lessons": [
+            "UN and agencies",
+            "Financial organisations",
+            "Regional and security organisations",
+            "Indian institutions and regulators",
+            "Headquarters"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "culture-national-symbols-administrative-basics",
+          "group": "Miscellaneous",
+          "title": "Miscellaneous Static GK: symbols, firsts & days",
+          "lessons": [
+            "Symbols",
+            "States and capitals",
+            "Union territories",
+            "Firsts",
+            "Largest and smallest",
+            "Important days and themes"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            23,
+            33
+          ]
+        },
+        {
+          "id": "culture-places-infrastructure-dates",
+          "group": "Miscellaneous",
+          "title": "Places, infrastructure & dates",
+          "lessons": [
+            "Parks, sanctuaries and biosphere reserves",
+            "Dams",
+            "Airports and seaports",
+            "Currencies",
+            "Days and themes"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            8,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "name": "General Science",
+      "priority": 6,
+      "guidance": "5–7",
+      "chapters": [
+        {
+          "id": "science-units-motion-mechanics",
+          "group": "Physics",
+          "title": "Units, motion & mechanics",
+          "lessons": [
+            "Units and measurement",
+            "Motion",
+            "Laws of motion",
+            "Force and gravitation",
+            "Work and energy"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-heat-sound-light",
+          "group": "Physics",
+          "title": "Heat, sound & light",
+          "lessons": [
+            "Heat",
+            "Sound",
+            "Light and optics",
+            "Human eye"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-electricity-magnetism-modern-physics",
+          "group": "Physics",
+          "title": "Electricity, magnetism & modern physics",
+          "lessons": [
+            "Electricity",
+            "Magnetism",
+            "Modern physics",
+            "Devices"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-matter-atomic-structure",
+          "group": "Chemistry",
+          "title": "Matter & atomic structure",
+          "lessons": [
+            "Matter",
+            "Atomic structure",
+            "Periodic table",
+            "Bonding"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-chemical-reactions-substances",
+          "group": "Chemistry",
+          "title": "Chemical reactions & substances",
+          "lessons": [
+            "Reactions",
+            "Acids, bases and salts",
+            "Metals and non-metals",
+            "Carbon chemistry"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-chemistry-in-daily-life",
+          "group": "Chemistry",
+          "title": "Chemistry in daily life",
+          "lessons": [
+            "Everyday chemistry",
+            "Gases",
+            "Fuels",
+            "Environmental chemistry"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-cells-tissues-classification",
+          "group": "Biology",
+          "title": "Cells, tissues & classification",
+          "lessons": [
+            "Cell",
+            "Tissues",
+            "Classification"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-human-body-systems",
+          "group": "Biology",
+          "title": "Human body systems",
+          "lessons": [
+            "Digestive",
+            "Respiratory",
+            "Circulatory and blood",
+            "Excretory",
+            "Nervous",
+            "Endocrine",
+            "Reproductive"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-health-heredity",
+          "group": "Biology",
+          "title": "Health & heredity",
+          "lessons": [
+            "Genetics",
+            "Evolution",
+            "Nutrition and deficiency diseases",
+            "Diseases",
+            "Immunity"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-plants-ecology",
+          "group": "Biology",
+          "title": "Plants & ecology",
+          "lessons": [
+            "Plant biology",
+            "Ecology"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "science-space-defence-nuclear-science",
+          "group": "Science & technology",
+          "title": "Space, defence & nuclear science",
+          "lessons": [
+            "ISRO and missions",
+            "Defence and DRDO",
+            "Nuclear technology"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            29
+          ]
+        },
+        {
+          "id": "science-technology-discoveries",
+          "group": "Science & technology",
+          "title": "Technology & discoveries",
+          "lessons": [
+            "Biotechnology",
+            "IT",
+            "Medical research",
+            "Nobel discoveries",
+            "Scientific institutions"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Environment & Ecology",
+      "priority": 7,
+      "guidance": "3–5",
+      "chapters": [
+        {
+          "id": "environment-ecosystems-interactions",
+          "group": "Ecology",
+          "title": "Ecosystems & interactions",
+          "lessons": [
+            "Ecosystems",
+            "Food chains and webs",
+            "Ecological pyramids",
+            "Biogeochemical cycles",
+            "Succession",
+            "Species interactions",
+            "Biomes"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "environment-biodiversity-conservation",
+          "group": "Biodiversity",
+          "title": "Biodiversity & conservation",
+          "lessons": [
+            "Hotspots",
+            "Endemic and endangered species",
+            "IUCN",
+            "Wildlife Protection Act 1972",
+            "Biological Diversity Act 2002"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "environment-protected-areas-projects",
+          "group": "Biodiversity",
+          "title": "Protected areas & projects",
+          "lessons": [
+            "Project Tiger, Elephant and Snow Leopard",
+            "National parks",
+            "Sanctuaries",
+            "Biosphere reserves",
+            "Ramsar sites"
+          ],
+          "status": "not started",
+          "relatedTools": [
+            4,
+            9
+          ]
+        },
+        {
+          "id": "environment-pollution-waste",
+          "group": "Pollution",
+          "title": "Pollution & waste",
+          "lessons": [
+            "Air, water, soil and noise",
+            "Plastic and e-waste",
+            "Ozone",
+            "Greenhouse effect and global warming",
+            "Waste management"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        },
+        {
+          "id": "environment-climate-change-agreements",
+          "group": "Climate & conventions",
+          "title": "Climate change & agreements",
+          "lessons": [
+            "Climate change",
+            "UNFCCC",
+            "Kyoto and Paris",
+            "Montreal Protocol",
+            "CBD",
+            "CITES",
+            "Ramsar",
+            "IPCC",
+            "COP",
+            "SDGs",
+            "International Solar Alliance"
+          ],
+          "status": "not started",
+          "relatedTools": []
+        }
+      ]
+    }
+  ]
+}

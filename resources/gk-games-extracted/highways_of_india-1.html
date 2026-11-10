@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#C4621A">
+<meta name="description" content="Highways of India — a bilingual (English / हिंदी) SSC map game. Trace routes, tap termini, and match old NH numbers across 12 major National Highways.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Highways of India">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Highways of India · SSC Focus">
+<meta property="og:description" content="Bilingual SSC map game for India's major National Highways — NH 44, Golden Quadrilateral, Konkan coast and more.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="./icon-highways.svg">
+<link rel="apple-touch-icon" href="./icon-highways.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Highways of India · SSC Focus</title>
+<style>
+:root{
+  --cream:#FAF6F0; --cream2:#F3ECE0; --ink:#2A2320; --muted:#7A6F66;
+  --purple:#7B1FA2; --blue:#2C5F8A; --orange:#C4621A; --green:#2E7D4F; --green-l:#E3F2E8; --red:#C0392B; --red-l:#FBE9E7;
+  --gold:#D4A017; --line:#E5DBCC; --shadow:0 6px 20px rgba(60,40,20,.12);
+  --map-land:#EDE3D2; --map-line:#C9BBA4; --map-water:#FAF6F0; --faint:#B9A98E;
+  --primary:#C4621A; --primary-d:#8A3D0C;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--cream);color:var(--ink);overflow:hidden;position:fixed;inset:0;display:flex;flex-direction:column;-webkit-user-select:none;user-select:none}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
+.mono{font-family:'Space Mono','SF Mono',ui-monospace,monospace}
+.hdr{flex:0 0 auto;padding:10px 14px 8px;background:linear-gradient(135deg,var(--primary),var(--primary-d));color:#fff;display:flex;align-items:center;gap:10px;box-shadow:0 2px 12px rgba(40,40,40,.25);z-index:20}
+.hdr .logo{font-size:22px;line-height:1}
+.hdr .ttl{flex:1;min-width:0}
+.hdr .ttl h1{font-size:16px;font-weight:700;letter-spacing:.2px}
+.hdr .ttl p{font-size:10.5px;opacity:.85;font-family:'Space Mono',monospace;margin-top:1px}
+.lang-btn{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;font-family:'Space Mono',monospace;cursor:pointer;transition:.15s}
+.lang-btn:active{transform:scale(.94)}
+.main{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;position:relative}
+.screen{display:none;padding:14px 14px 90px;animation:fade .25s ease}
+.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);margin-bottom:12px}
+.card.flat{box-shadow:none;background:var(--cream2)}
+.mode-seg{display:flex;background:var(--cream2);border-radius:13px;padding:4px;gap:4px;margin-bottom:10px}
+.mode-seg button{flex:1;border:none;background:transparent;padding:9px 4px;border-radius:10px;font-size:12px;font-weight:700;font-family:'Space Mono',monospace;color:var(--muted);cursor:pointer;transition:.15s;display:flex;flex-direction:column;align-items:center;gap:2px}
+.mode-seg button .mi{font-size:16px}
+.mode-seg button.on{background:#fff;color:var(--primary);box-shadow:0 1px 5px rgba(0,0,0,.12)}
+.prog-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.prog-bar{flex:1;height:7px;background:var(--cream2);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--orange));width:0;transition:width .4s}
+.prog-txt{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--muted)}
+.prompt-card{background:linear-gradient(135deg,#fff,var(--cream2));border:1.5px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
+.prompt-card .qlabel{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--orange);font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.prompt-card .pname{font-family:'Playfair Display',serif;font-size:24px;font-weight:800;line-height:1.12;margin:3px 0 2px;color:var(--primary-d)}
+.prompt-card .psub{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:2px 7px;font-size:10.5px;font-family:'Space Mono',monospace;color:var(--primary);font-weight:700}
+.map-wrap{position:relative;width:100%;background:var(--map-water);border:1.5px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:inset 0 2px 10px rgba(60,40,20,.05);touch-action:manipulation}
+#map,#atlasMap{display:block;width:100%;height:auto}
+.st-path{fill:var(--map-land);stroke:var(--map-line);stroke-width:.5;stroke-linejoin:round}
+.feat-line{fill:none;stroke:var(--faint);stroke-width:.85;stroke-linecap:round;stroke-linejoin:round;opacity:.5}
+.feat-hi{fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.feedback{position:absolute;left:8px;right:8px;bottom:8px;z-index:6;border-radius:14px;padding:12px 36px 12px 14px;display:none;max-height:calc(100% - 16px);overflow-y:auto;-webkit-overflow-scrolling:touch;background:rgba(255,255,255,.97);backdrop-filter:blur(5px);box-shadow:0 8px 30px rgba(60,40,20,.28);animation:cardup .28s ease}.feedback.show{display:block}
+.feedback.good{border:1.5px solid var(--green);box-shadow:0 8px 30px rgba(46,125,79,.28)}.feedback.bad{border:1.5px solid var(--red);box-shadow:0 8px 30px rgba(192,57,43,.26)}
+.feedback .fhd{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px;font-family:'Playfair Display',serif}
+.feedback.good .fhd{color:var(--green)}.feedback.bad .fhd{color:var(--red)}
+.feedback .fmeta{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);margin:4px 0 6px;line-height:1.5}
+.feedback .ffact{font-size:13px;line-height:1.45;color:var(--ink)}
+.feedback .ffor{font-size:12px;color:var(--primary);font-weight:600;margin-top:5px}
+.fmem{font-size:12px;color:#C4621A;font-weight:600;margin-top:5px;line-height:1.4}
+.fb-close{position:absolute;top:7px;right:7px;width:26px;height:26px;border:none;border-radius:50%;background:var(--cream2);color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+.fb-close:active{transform:scale(.9)}
+.fb-next{margin-top:10px;padding:11px;position:sticky;bottom:0}
+.reveal-row{position:absolute;left:0;right:0;bottom:10px;z-index:6;display:flex;gap:8px;justify-content:center}
+.reveal-btn{border:1.5px solid var(--primary);border-radius:20px;padding:8px 16px;font-size:12.5px;font-weight:700;font-family:'Space Mono',monospace;background:#fff;color:var(--primary);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);white-space:nowrap}
+.reveal-btn.next{background:var(--primary);color:#fff}
+.reveal-btn:active{transform:scale(.95)}
+.zoom-ctrl{position:absolute;top:8px;right:8px;z-index:4;display:flex;flex-direction:column;gap:5px}
+.zoom-ctrl button{width:30px;height:30px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.92);color:var(--primary-d);font-size:17px;font-weight:700;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(60,40,20,.15)}
+.zoom-ctrl button:active{transform:scale(.9)}
+.timer-bar{height:6px;background:var(--cream2);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:8px}
+.timer-fill{height:100%;width:100%;background:linear-gradient(90deg,var(--green),var(--orange),var(--red));transition:width .25s linear}
+body.hc{--cream:#fff;--cream2:#eee;--ink:#000;--muted:#333;--line:#888;--map-land:#e4d8c2;--map-line:#555}
+body.big{font-size:118%}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001s!important;transition-duration:.001s!important}}
+@keyframes cardup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.btn{display:block;width:100%;border:none;border-radius:14px;padding:14px;font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:.15s;margin-top:10px;background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(60,60,60,.25)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:#fff;color:var(--primary);border:1.5px solid var(--primary);box-shadow:none}
+.hint-link{text-align:center;margin-top:8px;font-size:12.5px;color:var(--primary);font-weight:700;font-family:'Space Mono',monospace;cursor:pointer}
+.sec-ttl{font-family:'Playfair Display',serif;font-size:19px;font-weight:800;color:var(--primary-d);margin:4px 0 10px;display:flex;align-items:center;gap:8px}
+.sec-sub{font-size:12.5px;color:var(--muted);margin-bottom:12px;line-height:1.4}
+.park-item{display:flex;gap:11px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:9px;cursor:pointer;transition:.15s}
+.park-item:active{transform:scale(.99);background:var(--cream2)}
+.park-item .pic{flex:0 0 42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--cream2),#fff);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:20px}
+.park-item .pin-info{flex:1;min-width:0}
+.park-item .pn{font-weight:700;font-size:14.5px;color:var(--ink)}
+.park-item .ps{font-size:11.5px;color:var(--muted);font-family:'Space Mono',monospace;margin-top:1px}
+.park-item .pf{font-size:11.5px;color:var(--primary);margin-top:3px;font-weight:600}
+.diff-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:5px}
+.d1{background:var(--green)}.d2{background:var(--orange)}.d3{background:var(--red)}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.chip-btn{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:7px 13px;font-size:12.5px;font-weight:700;font-family:'Space Mono',monospace;color:var(--muted);cursor:pointer;transition:.15s}
+.chip-btn.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.chip-btn:active{transform:scale(.95)}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.stat-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:var(--shadow)}
+.stat-box .v{font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:var(--primary-d);line-height:1}
+.stat-box .l{font-size:11px;color:var(--muted);font-family:'Space Mono',monospace;margin-top:4px;text-transform:uppercase;letter-spacing:.4px}
+.lvl-card{background:linear-gradient(135deg,var(--primary),var(--primary-d));color:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+.lvl-card .lt{font-family:'Space Mono',monospace;font-size:11px;opacity:.85;letter-spacing:.5px}
+.lvl-card .lv{font-family:'Playfair Display',serif;font-size:30px;font-weight:800;margin:2px 0 8px}
+.xp-bar{height:9px;background:rgba(255,255,255,.2);border-radius:6px;overflow:hidden}
+.xp-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--orange));width:0;transition:width .5s}
+.xp-txt{font-family:'Space Mono',monospace;font-size:11px;margin-top:5px;opacity:.9}
+.badge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.badge{background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 7px;text-align:center;opacity:.4;filter:grayscale(1);transition:.3s}
+.badge.earned{opacity:1;filter:none;border-color:var(--gold);box-shadow:0 3px 10px rgba(212,160,23,.18)}
+.badge .bi{font-size:25px}.badge .bn{font-size:10px;font-weight:700;margin-top:4px;line-height:1.15}.badge .bd{font-size:9px;color:var(--muted);margin-top:2px;line-height:1.1}
+.atlas-legend{display:flex;gap:14px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.atlas-legend span{font-size:11px;font-family:'Space Mono',monospace;color:var(--muted);display:flex;align-items:center;gap:5px}
+.lg-dot{width:9px;height:9px;border-radius:50%}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:none}
+.info-row .il{font-size:14px;font-weight:600}.info-row .id{font-size:11.5px;color:var(--muted);margin-top:2px}
+.toggle{width:48px;height:27px;border-radius:14px;background:var(--line);position:relative;cursor:pointer;transition:.2s;flex:0 0 auto}
+.toggle.on{background:var(--green)}
+.toggle::after{content:'';position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.toggle.on::after{left:24px}
+.seg{display:flex;background:var(--cream2);border-radius:11px;padding:3px;gap:3px}
+.seg button{flex:1;border:none;background:transparent;padding:8px;border-radius:9px;font-size:12px;font-weight:700;font-family:'Space Mono',monospace;color:var(--muted);cursor:pointer;transition:.15s}
+.seg button.on{background:#fff;color:var(--primary);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.nav{flex:0 0 auto;display:flex;background:#fff;border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -2px 14px rgba(60,40,20,.07);z-index:20}
+.nav button{flex:1;border:none;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;cursor:pointer;color:var(--muted);transition:.15s}
+.nav button .ni{font-size:20px;line-height:1}.nav button .nl{font-size:10px;font-weight:700;font-family:'Space Mono',monospace}
+.nav button.on{color:var(--primary)}.nav button:active{transform:scale(.92)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
+.toast{position:fixed;left:50%;top:64px;transform:translateX(-50%) translateY(-20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:30px;font-size:13px;font-weight:700;font-family:'Space Mono',monospace;opacity:0;transition:.3s;z-index:60;box-shadow:0 6px 20px rgba(0,0,0,.25);white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.xp-pop{position:fixed;font-family:'Space Mono',monospace;font-weight:800;color:var(--gold);font-size:20px;pointer-events:none;z-index:55;animation:xpfloat 1s ease forwards;text-shadow:0 2px 6px rgba(0,0,0,.2)}
+@keyframes xpfloat{0%{opacity:0;transform:translateY(0) scale(.6)}25%{opacity:1;transform:translateY(-12px) scale(1.1)}100%{opacity:0;transform:translateY(-52px) scale(1)}}
+.modal-bg{position:fixed;inset:0;background:rgba(42,35,32,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:70;padding:24px;animation:fade .25s}
+.modal-bg.show{display:flex}
+.modal{background:#fff;border-radius:22px;padding:24px 20px;max-width:340px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:pop .3s}
+.modal .mi{font-size:54px}
+.modal h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--primary-d);margin:6px 0}
+.modal .mscore{font-family:'Space Mono',monospace;font-size:15px;color:var(--muted);margin-bottom:6px}
+.modal .mstars{font-size:28px;letter-spacing:4px;margin:8px 0}
+
+button:focus-visible,.toggle:focus-visible,.st-path:focus-visible,.zoom-ctrl button:focus-visible,.reveal-btn:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.streak-chip{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--orange);white-space:nowrap;min-width:28px;text-align:right}
+.st-correct{fill:#2E7D4F!important;stroke:#1b5e32!important;stroke-width:.6}
+.st-wrong{fill:#C0392B!important;stroke:#922b21!important;stroke-width:.6}
+body.hc .feat-line{stroke:#555!important;opacity:.85!important}
+body.hc .feat-hi{stroke-width:2.4!important}
+.mcq-row{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+.mcq-row button{flex:1;min-width:28%;border:1.5px solid var(--line);border-radius:12px;padding:10px 8px;font-size:12px;font-weight:700;font-family:'Space Mono',monospace;background:#fff;cursor:pointer}
+.mcq-row button:active{transform:scale(.97)}
+@media(min-width:600px){html{background:#E7DECF}body{left:50%;right:auto;width:430px;max-width:100%;transform:translateX(-50%);box-shadow:0 0 50px rgba(60,40,20,.22)}}
+</style>
+<style data-ssc-game-layout>
+html.ssc-map-game{height:100%;background:var(--cream);font-size:calc(16px * var(--ssc-font-scale,1));--ssc-ui-font:system-ui,-apple-system,'Segoe UI',sans-serif}
+html.ssc-map-game body.ssc-game{position:fixed!important;inset:0!important;width:100%!important;max-width:none!important;height:100vh!important;height:100dvh!important;transform:none!important;box-shadow:none!important;display:flex!important;flex-direction:column;overflow:hidden;--muted:#625448;--orange:#99400d;--gold:#80620b;--orange-t:#99400d;--gold-t:#80620b}
+html.ssc-map-game body.ssc-game .hdr{order:1;flex:none;display:flex!important;padding:10px 20px!important;min-height:58px}
+.ssc-game .hdr .ttl h1{font-family:var(--ssc-heading-font,Georgia,serif)!important;font-size:1.125rem!important;line-height:1.25}
+.ssc-game .hdr .ttl p{font-size:.8125rem!important}
+.ssc-game .hdr .logo{font-size:24px}
+html.ssc-map-game body.ssc-game .main{order:3;position:relative!important;inset:auto!important;flex:1 1 0!important;min-height:0!important;width:100%!important;height:auto!important;overflow-y:auto!important;overflow-x:hidden!important;max-width:1480px;margin:0 auto;padding:16px 24px;scrollbar-gutter:stable}
+html.ssc-map-game body.ssc-game .screen{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;margin:0!important;padding:0 0 24px!important;overflow:visible!important;animation:none!important}
+html.ssc-map-game body.ssc-game #s-play{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;margin:0!important;padding:0 0 24px!important;overflow:visible!important}
+.ssc-game .screen.active{display:block!important}
+html.ssc-map-game body.ssc-game .nav{order:2;position:relative!important;inset:auto!important;display:flex!important;flex:none;justify-content:center;padding:4px 12px;border-bottom:1px solid var(--line);border-top:0}
+.ssc-game .nav button{flex:0 1 170px;min-height:48px;padding:8px 14px;flex-direction:row;justify-content:center;gap:8px;border-radius:10px}
+.ssc-game .nav button:not(.on):not([aria-selected='true']){background:transparent}
+.ssc-game .nav button.on,.ssc-game .nav button[aria-selected='true']{background:var(--cream2);color:var(--primary-d,var(--orange-t,var(--orange)))}
+.ssc-game .nav button .nl{font:700 .875rem var(--ssc-ui-font)!important}
+.ssc-game .nav button .ni{font-size:20px}
+.ssc-game .game-menu-toggle,.ssc-game .game-menu{display:none!important}
+.ssc-play-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,360px);gap:24px;align-items:start}
+.ssc-map-panel{grid-column:1;grid-row:1;position:sticky;top:0;display:grid;place-items:center;min-width:0}
+html.ssc-map-game body.ssc-game #s-play .map-wrap{position:relative!important;inset:auto!important;flex:none!important;width:var(--ssc-map-width,100%)!important;max-width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ssc-map-ratio,1);margin:0!important;border-radius:18px!important;overflow:hidden;box-shadow:0 4px 20px rgba(30,40,50,.07)}
+html.ssc-map-game body.ssc-game #s-play #map{display:block;width:100%!important;height:100%!important;max-width:none!important}
+.ssc-question-panel{grid-column:2;grid-row:1;position:sticky;top:0;min-width:0;max-height:var(--ssc-rail-height,none);overflow-y:auto;overscroll-behavior:contain;padding:2px 3px 12px}
+.ssc-question-context,.ssc-answer-context{min-width:0}
+html.ssc-map-game body.ssc-game #s-play .prompt-card{position:relative!important;inset:auto!important;left:auto!important;top:auto!important;transform:none!important;width:100%!important;max-width:none!important;margin:0 0 12px!important;padding:18px!important;text-align:left;box-shadow:none!important;border-radius:16px!important}
+html.ssc-map-game body.ssc-game #s-play .prompt-card .pname{font-family:var(--ssc-heading-font,Georgia,serif)!important;font-size:1.625rem!important;line-height:1.25!important;margin:6px 0!important;overflow-wrap:anywhere}
+html.ssc-map-game body.ssc-game #s-play .prompt-card .qlabel{font-family:var(--ssc-ui-font)!important;font-size:.8125rem!important;line-height:1.4;letter-spacing:.03em;color:var(--orange-t,var(--orange))}
+html.ssc-map-game body.ssc-game #s-play .prompt-card .psub{display:flex!important;font:.875rem/1.5 var(--ssc-ui-font)!important;justify-content:flex-start;gap:6px}
+.ssc-game .tag,.ssc-game .prog-txt{font-size:.8125rem!important;line-height:1.4}
+.ssc-game .tag,.ssc-game .cat-pill,.ssc-game .badge-out{color:var(--ink)!important;background:var(--cream2)!important}
+.ssc-game .cat-pill,.ssc-game .badge-out{font-size:.75rem!important}
+.ssc-game #sscf-copy-watermark{color:var(--muted)!important;opacity:1!important}
+.ssc-game .mode-seg button{min-height:44px;font-family:var(--ssc-ui-font);font-size:.875rem;flex-direction:row;justify-content:center}
+.ssc-game .mode-seg button.on{color:var(--primary-d,var(--orange-t,var(--orange)))}
+.ssc-game #hintLink,.ssc-game #hintTxt{color:var(--primary-d,var(--orange-t,var(--orange)))}
+.ssc-game .mode-seg{flex-wrap:wrap}.ssc-game .mode-seg button{flex:1 1 85px}
+.ssc-game #modeChips{display:flex!important}
+html.ssc-map-game body.ssc-game .feedback{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-height:none!important;height:auto!important;overflow:visible!important;margin:12px 0!important;padding:16px 18px!important;box-shadow:none!important}
+.ssc-game .feedback:empty{display:none!important}
+.ssc-game .feedback .fhd{font-size:1.125rem!important}
+.ssc-game .feedback .fmeta,.ssc-game .feedback .ffor,.ssc-game .feedback .fmem,.ssc-game .feedback .ffact{font:.9375rem/var(--ssc-line-height,1.55) var(--ssc-ui-font)!important}
+.ssc-game .feedback .fmem{color:var(--purple,#7b1fa2)!important}
+.ssc-game .fb-close{width:44px;height:44px;top:3px;right:3px}
+.ssc-game .feedback:has(.fb-close){padding-top:46px!important}
+html.ssc-map-game body.ssc-game #s-play .play-actions{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;display:block!important;margin:0;min-height:0!important}
+html.ssc-map-game body.ssc-game #s-play #nextBtn:not([hidden]){position:sticky!important;inset:auto!important;bottom:0!important;z-index:2;transform:none!important;width:100%!important;margin-top:12px!important;min-height:48px!important}
+html.ssc-map-game body.ssc-game #s-play .state-alternative{display:block!important;margin:12px 0!important}
+html.ssc-map-game body.ssc-game #s-play #hintLink{position:relative!important;width:100%!important;min-height:44px!important;padding:10px!important;margin:8px 0!important;font-size:.875rem!important;line-height:1.5;border:1px solid var(--line);border-radius:12px;background:var(--cream2)}
+.ssc-game .reveal-row{position:relative!important;inset:auto!important;flex-wrap:wrap;margin:12px 0}
+.ssc-game .reveal-btn{min-height:44px;font-size:.875rem}
+.ssc-game .zoom-ctrl button{width:44px!important;height:44px!important;font-size:22px}
+.ssc-game .btn,.ssc-game .mcq button,.ssc-game .chip-btn,.ssc-game .lang-btn{min-height:44px!important;font-family:var(--ssc-ui-font)!important}
+.ssc-game .lang-btn,.ssc-game .map-tog,.ssc-game .feedback .ffull{font-size:.875rem!important}
+.ssc-game .mcq button,.ssc-game .chip-btn{font-size:.875rem!important}
+.ssc-game .btn{font-size:1rem!important}
+.ssc-game .card,.ssc-game .park-item,.ssc-game .peak-item{font-family:var(--ssc-ui-font);font-size:1rem;line-height:var(--ssc-line-height,1.55)}
+.ssc-game .pn{font-size:1rem!important}.ssc-game .ps,.ssc-game .pf,.ssc-game .sec-sub{font-size:.875rem!important;line-height:1.55!important}
+.ssc-game .sec-ttl{font-size:1.375rem!important;line-height:1.4}
+.ssc-game .stat-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.ssc-game .stat-box .l,.ssc-game .badge .bn,.ssc-game .badge .bd{font-size:.8125rem!important;line-height:1.45!important}
+.ssc-game .badge-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important}
+.ssc-game .badge{opacity:1!important;filter:none!important}.ssc-game .badge:not(.earned) .bi{opacity:.55;filter:grayscale(1)}
+.ssc-game #learnList,.ssc-game #timelineList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ssc-game #learnList .sec-ttl,.ssc-game #learnList .group-heading,.ssc-game #timelineList .sec-ttl{grid-column:1/-1}
+.ssc-game #learnList>.park-item,.ssc-game #learnList>.peak-item{height:100%;margin-bottom:0}
+.ssc-game #learnList>li{display:flex;flex-direction:column;min-width:0}.ssc-game #learnList>li>.park-item{flex:1 0 auto;margin-bottom:0}.ssc-game #learnList>li>.pdetail{margin-bottom:0}.ssc-game #learnList>li:not(:has(>.park-item)){grid-column:1/-1}
+.ssc-game #learnList .park-item{align-items:flex-start}
+.ssc-game #s-atlas{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(280px,340px);gap:16px;align-items:start}
+.ssc-game #s-atlas:not(.active){display:none!important}
+.ssc-game #s-atlas>.sec-ttl,.ssc-game #s-atlas>.sec-sub,.ssc-game #s-atlas>.chips{grid-column:1/-1}
+.ssc-game #atlasWrap{grid-column:1;grid-row:4/span 4;max-width:var(--ssc-atlas-width,800px);width:100%;margin:0 auto}
+.ssc-game #atlasInfo,.ssc-game #atlasLegend{grid-column:2;font-size:.875rem;line-height:1.6}
+.ssc-game #s-info{max-width:850px;margin-inline:auto!important}
+.ssc-game :focus-visible{outline:3px solid var(--ssc-focus,#99400d)!important;outline-offset:3px}
+.ssc-game #map:focus-visible{outline-offset:-4px}
+.ssc-game #map [role='button']:focus{stroke:var(--ssc-focus,#99400d)!important;stroke-width:.75;filter:brightness(.93)}
+.ssc-map-help{font:.8125rem/1.5 var(--ssc-ui-font);color:var(--muted);padding:8px 0 0;text-align:center}
+.ssc-map-panel #mapHelp,.ssc-map-panel #codeLegend{display:none}
+.ssc-game .ssc-location-name{font:600 .875rem var(--ssc-ui-font);min-height:24px;text-align:center;color:var(--ink)}
+.ssc-map-cursor{pointer-events:none;stroke:#99400d;stroke-width:.5;fill:none}
+.ssc-world-land{pointer-events:none}.ssc-game .land{stroke-width:.12}.ssc-game .marker:focus-visible{outline:none!important;filter:drop-shadow(0 0 1px #99400d)}
+.ssc-world-zoom{display:flex;gap:8px;margin-bottom:12px}.ssc-world-zoom button{flex:1;min-height:44px;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--cream2);color:var(--ink);font:600 .875rem var(--ssc-ui-font)}
+.ssc-marker-number{fill:#fff;text-anchor:middle;font-family:system-ui,sans-serif;font-weight:700;pointer-events:none}.ssc-marker-leader{stroke:#657384;pointer-events:none}.ssc-marker-anchor{fill:#657384;pointer-events:none}
+.ssc-atlas-choice{grid-column:2;grid-row:4;display:block;font:600 .875rem var(--ssc-ui-font)}.ssc-atlas-choice select{display:block;width:100%;min-height:44px;margin-top:8px;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--cream2);color:var(--ink);font:inherit}
+html.ssc-map-game[data-ssc-theme='dark']{--cream:#151b22;--cream2:#25303c;--ink:#edf2f7;--muted:#c2cad4;--line:#536277;--line-strong:#7d8b9f;--orange:#ffbc86;--orange-t:#ffbc86;--gold:#f2cf7c;--gold-t:#f2cf7c;--blue:#91c7ed;--blue-d:#bbddf5;--primary:#91c7ed;--primary-d:#bbddf5;--map-land:#354553;--map-line:#8b9ba8;--map-water:#1d2731;--water:#1d2731;--land:#354553;--land2:#435368;--river:#8cbad8;--ssc-focus:#ffc58b}
+html.ssc-map-game[data-ssc-theme='dark'] body.ssc-game{background:var(--cream);color:var(--ink);--muted:#c2cad4;--orange:#ffbc86;--gold:#f2cf7c;--orange-t:#ffbc86;--gold-t:#f2cf7c;--green:#83d9aa;--green-t:#83d9aa;--green-l:#163c2b;--red:#ffb4ac;--red-t:#ffb4ac;--red-l:#4c2227;--purple:#d4b1ed;--purple-d:#e3cafa;--purple-l:#332340}
+html.ssc-map-game[data-ssc-theme='dark'] .card,html.ssc-map-game[data-ssc-theme='dark'] .stat-box,html.ssc-map-game[data-ssc-theme='dark'] .park-item,html.ssc-map-game[data-ssc-theme='dark'] .peak-item,html.ssc-map-game[data-ssc-theme='dark'] .badge,html.ssc-map-game[data-ssc-theme='dark'] .nav,html.ssc-map-game[data-ssc-theme='dark'] .prompt-card,html.ssc-map-game[data-ssc-theme='dark'] .feedback,html.ssc-map-game[data-ssc-theme='dark'] .sheet,html.ssc-map-game[data-ssc-theme='dark'] .modal{background:#1d2731!important;color:var(--ink)!important}
+html.ssc-map-game[data-ssc-theme='dark'] .hdr,html.ssc-map-game[data-ssc-theme='dark'] .lvl-card{background:#14374c!important;color:#fff}
+html.ssc-map-game[data-ssc-theme='dark'] button,html.ssc-map-game[data-ssc-theme='dark'] select,html.ssc-map-game[data-ssc-theme='dark'] input{background:var(--cream2);color:var(--ink)}
+html.ssc-map-game[data-ssc-theme='dark'] .slbl,html.ssc-map-game[data-ssc-theme='dark'] .geo{fill:#263441;stroke:rgba(255,255,255,.95)}
+html.ssc-map-game[data-ssc-theme='dark'] .map-label{fill:#c2cad4}
+html.ssc-map-game body.ssc-game.hc{--muted:#333;--orange:#803600;--orange-t:#803600;--gold:#665000;--gold-t:#665000;--ssc-focus:#000}
+@media(min-width:1600px){.ssc-play-layout{grid-template-columns:minmax(0,1fr) 380px}.ssc-game #learnList{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:899px) and (min-height:601px),(max-width:599px){
+ html.ssc-map-game body.ssc-game .hdr{padding:8px 14px!important;min-height:52px}.ssc-game .hdr .ttl h1{font-size:1rem!important}.ssc-game .hdr .ttl p{font-size:.75rem!important}
+ html.ssc-map-game body.ssc-game .main{padding:12px 12px 0;scrollbar-gutter:auto}
+ html.ssc-map-game body.ssc-game .nav{order:4;border-top:1px solid var(--line);border-bottom:0;padding:4px 2px calc(4px + env(safe-area-inset-bottom,0px))}
+ .ssc-game .nav button{flex:1;flex-direction:column;padding:5px 2px;gap:3px;min-width:0}.ssc-game .nav button .nl{font-size:.75rem!important}
+ .ssc-play-layout{display:flex;flex-direction:column;gap:0}.ssc-map-panel{position:relative;order:2;width:100%}.ssc-question-panel{display:contents}.ssc-question-context{order:1;width:100%}.ssc-answer-context{order:3;width:100%;padding-bottom:8px}
+ html.ssc-map-game body.ssc-game #s-play .prompt-card{padding:12px!important;margin-bottom:10px!important}.ssc-game .mode-seg{margin-bottom:8px}
+ html.ssc-map-game body.ssc-game #s-play .prompt-card .pname{font-size:1.375rem!important}.ssc-game #learnList,.ssc-game #timelineList{grid-template-columns:1fr}
+ .ssc-game .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.ssc-game .badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .ssc-game #s-atlas{display:block!important}.ssc-game #atlasWrap{max-width:100%}.ssc-game #atlasInfo{margin-top:12px!important}
+ .ssc-map-help{font-size:.75rem}.ssc-game .ssc-location-name{font-size:.8125rem}
+}
+@media(max-height:600px) and (min-width:600px){
+ html.ssc-map-game body.ssc-game .hdr{padding:6px 16px!important;min-height:44px}.ssc-game .hdr .ttl p,.ssc-game .hdr .logo{display:none}.ssc-game .hdr .ttl h1{font-size:1rem!important}
+ .ssc-game .nav button{min-height:42px;padding:4px 8px}.ssc-game .nav button .ni{display:none}
+ html.ssc-map-game body.ssc-game .main{padding:10px 14px}.ssc-play-layout{grid-template-columns:minmax(0,1fr) minmax(240px,38%);gap:16px}
+ html.ssc-map-game body.ssc-game #s-play .prompt-card{padding:12px!important}.ssc-game .ssc-map-help{font-size:.75rem}
+ .ssc-game #learnList{grid-template-columns:repeat(2,minmax(0,1fr))}.ssc-game #s-atlas{grid-template-columns:minmax(0,1fr) 240px}
+}
+@media(prefers-reduced-motion:reduce){.ssc-game *, .ssc-game *::before,.ssc-game *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="logo" id="h-logo">🛣️</div>
+  <div class="ttl"><h1 id="h-title">Title</h1><p id="h-sub">SSC FOCUS · GEO QUIZ</p></div>
+  <button class="lang-btn" id="langBtn" onclick="toggleLang()">हिं</button>
+</div>
+<div class="main" id="main" role="main" tabindex="-1">
+  <section class="screen active" id="s-play">
+    <div class="mode-seg" id="modeSeg"></div>
+    <div class="prog-row"><div class="prog-bar"><div class="prog-fill" id="progFill"></div></div><span class="streak-chip" id="streakChip" style="display:none"></span><span class="prog-txt" id="progTxt">1/10</span></div>
+    <div class="prompt-card" aria-live="polite"><div class="qlabel" id="qLabel">—</div><div class="pname" id="qName">—</div><div class="psub" id="qSub"></div></div>
+    <div class="timer-bar" id="timerBar" style="display:none"><div class="timer-fill" id="timerFill"></div></div>
+    <div class="map-wrap" id="mapWrap">
+      <svg id="map" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Map of India — tap a highway route or terminus"></svg>
+      <div class="zoom-ctrl">
+        <button onclick="zoomBy(1.4)" aria-label="Zoom in">+</button>
+        <button onclick="zoomBy(1/1.4)" aria-label="Zoom out">−</button>
+        <button onclick="zoomReset()" aria-label="Reset zoom">⟲</button>
+      </div>
+      <div class="feedback" id="feedback" role="status" aria-live="polite">
+        <button class="fb-close" onclick="dismissCard()" aria-label="Hide card and view the map">✕</button>
+        <div class="fhd" id="fHd"></div><div class="fmeta" id="fMeta"></div><div class="ffor" id="fFor"></div>
+        <div class="fmem" id="fMem" style="display:none"></div>
+        <div class="ffact" id="fFact"></div>
+        <button class="btn fb-next" id="nextBtn" style="display:none" onclick="nextQuestion()"><span id="nextTxt">Next →</span></button>
+      </div>
+      <div class="reveal-row" id="revealBtn" style="display:none">
+        <button class="reveal-btn" onclick="revealCard()">ℹ️ <span id="revealTxt">Show result</span></button>
+        <button class="reveal-btn next" onclick="nextQuestion()"><span id="nextFloatTxt">Next →</span></button>
+      </div>
+    </div>
+    <div class="hint-link" id="hintLink" onclick="useHint()">💡 <span id="hintTxt">Show hint</span></div>
+    <div class="mcq-row" id="mcq" style="display:none"></div>
+  </section>
+  <section class="screen" id="s-learn">
+    <div class="sec-ttl">📚 <span id="learn-ttl">Learn</span></div>
+    <div class="sec-sub" id="learn-sub"></div>
+    <div class="chips" id="learnFilters"></div><div id="learnList"></div>
+  </section>
+  <section class="screen" id="s-atlas">
+    <div class="sec-ttl">🧭 <span id="atlas-ttl">Atlas</span></div>
+    <div class="sec-sub" id="atlas-sub"></div>
+    <div class="map-wrap" id="atlasWrap"><svg id="atlasMap" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="atlas-legend" id="atlasLegend"></div>
+    <div class="card flat" id="atlasInfo" style="margin-top:12px;display:none"></div>
+  </section>
+  <section class="screen" id="s-stats">
+    <div class="lvl-card"><div class="lt" id="lvl-label">LEVEL</div><div class="lv" id="lvlName">—</div><div class="xp-bar"><div class="xp-fill" id="xpFill"></div></div><div class="xp-txt" id="xpTxt">0 XP</div></div>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="v" id="stAcc">0%</div><div class="l" id="stAccL">Accuracy</div></div>
+      <div class="stat-box"><div class="v" id="stBest">0</div><div class="l" id="stBestL">Best Streak</div></div>
+      <div class="stat-box"><div class="v" id="stCorrect">0</div><div class="l" id="stCorrectL">Correct</div></div>
+      <div class="stat-box"><div class="v" id="stPlayed">0</div><div class="l" id="stPlayedL">Answered</div></div>
+    </div>
+    <div class="sec-ttl">🏅 <span id="badge-ttl">Badges</span></div><div class="badge-grid" id="badgeGrid"></div>
+    <button class="btn ghost" style="margin-top:10px" onclick="shareRank()"><span id="shareRankTxt">📤 Share rank</span></button>
+  </section>
+  <section class="screen" id="s-info">
+    <div class="sec-ttl">⚙️ <span id="info-ttl">Settings</span></div>
+    <div class="card">
+      <div class="info-row"><div><div class="il" id="set-lang">Language</div><div class="id">English / हिंदी</div></div><div class="seg" style="width:130px"><button id="segEN" class="on" onclick="setLang('en')">EN</button><button id="segHI" onclick="setLang('hi')">हिं</button></div></div>
+      <div class="info-row"><div><div class="il" id="set-sound">Sound effects</div><div class="id" id="set-sound-d">Taps & confetti pops</div></div><div class="toggle on" id="soundTog" onclick="toggleSound()"></div></div>
+      <div class="info-row"><div><div class="il" id="set-len">Questions per round</div><div class="id" id="set-len-d">Length of each quiz</div></div><div class="seg" style="width:160px"><button class="rlen on" data-n="10" onclick="setLen(10)">10</button><button class="rlen" data-n="12" onclick="setLen(12)">All</button></div></div>
+    </div>
+    <div class="sec-ttl">♿ <span id="acc-ttl">Accessibility</span></div>
+    <div class="card">
+      <div class="info-row"><div><div class="il" id="set-mcq">Multiple-choice help</div><div class="id" id="set-mcq-d">Offer 3 route options after a wrong tap</div></div><div class="toggle on" id="mcqTog" onclick="toggleMcq()" role="switch" tabindex="0" aria-checked="true" aria-label="Multiple-choice help"></div></div>
+      <div class="info-row"><div><div class="il" id="set-timed">Timed mode (Rapid)</div><div class="id" id="set-timed-d">Beat the clock for bonus XP</div></div><div class="toggle" id="timedTog" onclick="toggleTimed()" role="switch" tabindex="0" aria-checked="false" aria-label="Timed mode"></div></div>
+      <div class="info-row"><div><div class="il" id="set-contrast">High contrast</div><div class="id" id="set-contrast-d">Stronger colours & borders</div></div><div class="toggle" id="contrastTog" onclick="toggleContrast()" role="switch" tabindex="0" aria-checked="false" aria-label="High contrast"></div></div>
+      <div class="info-row"><div><div class="il" id="set-bigtext">Large text</div><div class="id" id="set-bigtext-d">Increase font size</div></div><div class="toggle" id="bigtextTog" onclick="toggleBigText()" role="switch" tabindex="0" aria-checked="false" aria-label="Large text"></div></div>
+    </div>
+    <div class="sec-ttl">🎚️ <span id="diff-ttl">Difficulty filter</span></div><div class="chips" id="diffFilters"></div>
+    <div class="sec-ttl">ℹ️ <span id="about-ttl">How to play</span></div><div class="card"><div class="ffact" id="howto" style="font-size:13px;line-height:1.6"></div></div>
+    <button class="btn ghost" onclick="exportProgress()"><span id="exportTxt">Export progress</span></button>
+    <button class="btn ghost" onclick="importProgress()"><span id="importTxt">Import progress</span></button>
+    <button class="btn ghost" onclick="resetProgress()"><span id="resetTxt">Reset all progress</span></button>
+    <div style="text-align:center;color:var(--muted);font-size:11px;font-family:'Space Mono',monospace;margin-top:14px" id="ver">SSC FOCUS · v1.1</div>
+  </section>
+</div>
+<nav class="nav">
+  <button class="on" data-tab="play" onclick="go('play')"><span class="ni">🎯</span><span class="nl" id="nav-play">Play</span></button>
+  <button data-tab="learn" onclick="go('learn')"><span class="ni">📚</span><span class="nl" id="nav-learn">Learn</span></button>
+  <button data-tab="atlas" onclick="go('atlas')"><span class="ni">🧭</span><span class="nl" id="nav-atlas">Atlas</span></button>
+  <button data-tab="stats" onclick="go('stats')"><span class="ni">📊</span><span class="nl" id="nav-stats">Stats</span></button>
+  <button data-tab="info" onclick="go('info')"><span class="ni">⚙️</span><span class="nl" id="nav-info">More</span></button>
+</nav>
+<canvas id="fx"></canvas>
+<div class="toast" id="toast"></div>
+<div class="modal-bg" id="modalBg"><div class="modal"><div class="mi" id="mIcon">🎉</div><h2 id="mTitle">Round Complete!</h2><div class="mstars" id="mStars">★★★</div><div class="mscore" id="mScore"></div><button class="btn ghost" id="mReviewBtn" style="display:none" onclick="closeModal();reviewMissed()"><span id="mReview">Review missed</span></button><button class="btn" onclick="closeModal();startRound()"><span id="mAgain">Play Again</span></button><button class="btn ghost" onclick="shareScore()"><span id="mShare">📤 Share score</span></button><button class="btn ghost" onclick="closeModal();go('stats')"><span id="mStats">View Stats</span></button></div></div>
+
+<script src="./game-common.js"></script>
+<script>
+const STATES = [{"n":"Andaman and Nicobar Islands","hi":"अंडमान व निकोबार","p":[[[92.72,12.3],[92.7,12.33],[92.74,12.72],[92.73,12.84],[92.79,12.86],[92.79,13.02],[92.82,13.11],[92.84,13.39],[92.87,13.47],[92.93,13.5],[92.99,13.57],[93.04,13.53],[93.03,13.34],[93.06,13.27],[93.03,13.08],[92.96,13.02],[92.91,13.05],[92.86,12.9],[92.92,12.88],[92.97,12.74],[92.97,12.54],[92.87,12.33],[92.72,12.3]],[[92.71,11.97],[92.79,11.89],[92.75,11.7],[92.66,11.65],[92.75,11.61],[92.67,11.51],[92.55,11.72],[92.54,11.91],[92.6,11.85],[92.66,12.21],[92.76,12.18],[92.73,12.08],[92.78,12.05],[92.71,11.97]],[[93.8,6.77],[93.72,6.99],[93.67,7.02],[93.65,7.13],[93.67,7.19],[93.84,7.24],[93.87,7.2],[93.91,6.95],[93.88,6.79],[93.8,6.77]],[[92.43,10.55],[92.38,10.78],[92.52,10.9],[92.59,10.79],[92.6,10.68],[92.53,10.52],[92.43,10.55]],[[92.81,12.31],[92.83,12.3],[92.87,12.3],[92.86,12.16],[92.77,12.18],[92.74,12.25],[92.81,12.31]],[[93.61,7.31],[93.7,7.45],[93.74,7.38],[93.71,7.31],[93.64,7.24],[93.61,7.31]],[[92.64,11.51],[92.69,11.37],[92.6,11.35],[92.59,11.4],[92.64,11.51]],[[92.79,9.24],[92.83,9.14],[92.73,9.13],[92.72,9.22],[92.79,9.24]]]},{"n":"Andhra Pradesh","hi":"आंध्र प्रदेश","p":[[[79.16,13.02],[78.89,13.1],[78.75,13.05],[78.62,12.99],[78.59,12.78],[78.41,12.63],[78.3,12.67],[78.23,12.76],[78.25,12.86],[78.31,12.86],[78.36,12.94],[78.47,12.97],[78.59,13.28],[78.44,13.31],[78.36,13.36],[78.4,13.59],[78.2,13.57],[78.2,13.63],[78.12,13.72],[78.12,13.86],[78,13.87],[77.97,13.96],[77.81,13.92],[77.78,13.82],[77.46,13.68],[77.47,13.76],[77.43,13.84],[77.33,13.83],[77.18,13.87],[77.16,13.81],[77.06,13.74],[76.98,13.83],[77.04,13.93],[76.93,14.03],[76.95,14.1],[76.89,14.17],[77,14.2],[77.03,14.06],[77.17,14.01],[77.32,14.03],[77.4,13.91],[77.43,13.95],[77.39,14.02],[77.39,14.17],[77.5,14.16],[77.48,14.29],[77.41,14.34],[77.36,14.28],[77.14,14.34],[77.12,14.23],[77.01,14.24],[76.88,14.35],[76.9,14.49],[76.81,14.53],[76.76,14.6],[76.87,14.97],[76.76,14.99],[76.8,15.1],[76.99,15.01],[77.11,15.03],[77.16,15.14],[77.13,15.23],[77.15,15.29],[77.06,15.33],[77.03,15.44],[77.03,15.63],[77.08,15.66],[77.03,15.84],[77.07,15.91],[77.25,15.96],[77.66,15.89],[77.8,15.87],[77.89,15.91],[78.08,15.84],[78.17,15.86],[78.26,16.01],[78.41,16.07],[78.55,16.04],[78.6,16.08],[78.74,16.01],[78.92,16.12],[78.9,16.18],[79.03,16.24],[79.16,16.21],[79.21,16.23],[79.22,16.51],[79.26,16.57],[79.42,16.58],[79.45,16.62],[79.79,16.73],[79.95,16.64],[80.06,16.74],[80.06,16.97],[80.19,17.02],[80.31,16.97],[80.32,16.88],[80.57,16.77],[80.6,16.92],[80.53,16.96],[80.36,16.98],[80.58,17.15],[80.84,17.04],[80.88,17.07],[80.88,17.16],[80.94,17.22],[80.99,17.19],[81.17,17.23],[81.19,17.32],[81.27,17.32],[81.31,17.41],[81.02,17.52],[80.91,17.64],[80.89,17.74],[80.97,17.78],[81.06,17.73],[81.08,17.8],[81.17,17.86],[81.27,17.81],[81.62,17.82],[81.81,17.96],[81.98,18.01],[82.03,18.07],[82.17,18.05],[82.25,17.99],[82.32,18.04],[82.35,18.17],[82.31,18.19],[82.38,18.37],[82.36,18.42],[82.49,18.53],[82.61,18.37],[82.59,18.28],[82.77,18.34],[82.81,18.45],[82.97,18.36],[83.08,18.4],[83.02,18.46],[83.04,18.55],[83,18.61],[83.14,18.79],[83.2,18.75],[83.41,18.87],[83.32,18.97],[83.35,19.02],[83.46,18.96],[83.48,19.03],[83.66,19.1],[83.76,18.91],[83.75,18.99],[83.79,19.02],[83.89,18.82],[84.04,18.82],[84.09,18.76],[84.22,18.8],[84.32,18.79],[84.51,19.05],[84.59,19.02],[84.62,19.09],[84.7,19.12],[84.76,19.07],[84.35,18.55],[84.15,18.37],[84.13,18.31],[83.66,18.08],[83.42,17.86],[83.35,17.73],[83.16,17.56],[82.54,17.25],[82.32,17.06],[82.25,16.94],[82.25,16.88],[82.36,16.86],[82.31,16.56],[81.71,16.31],[81.39,16.34],[81.27,16.28],[81.21,16.21],[81.15,15.97],[81.01,15.85],[81.01,15.75],[80.94,15.72],[80.83,15.71],[80.77,15.87],[80.68,15.89],[80.54,15.85],[80.32,15.72],[80.25,15.63],[80.21,15.47],[80.12,15.37],[80.04,15.01],[80.11,14.74],[80.2,14.59],[80.13,14.23],[80.15,14.04],[80.25,13.78],[80.23,13.66],[80.27,13.56],[80.21,13.49],[80.08,13.49],[80.04,13.54],[79.95,13.36],[79.81,13.32],[79.79,13.24],[79.7,13.22],[79.68,13.3],[79.53,13.28],[79.54,13.34],[79.41,13.33],[79.44,13.19],[79.28,13.12],[79.23,13.16],[79.23,13.11],[79.16,13.02]]]},{"n":"Arunachal Pradesh","hi":"अरुणाचल प्रदेश","p":[[[92.67,27.03],[92.56,26.96],[92.11,26.89],[92.1,27.01],[92.03,27.06],[92.02,27.16],[92.07,27.28],[92.01,27.49],[91.94,27.46],[91.65,27.48],[91.56,27.58],[91.56,27.63],[91.63,27.71],[91.63,27.8],[91.83,27.81],[91.88,27.72],[91.99,27.77],[92.06,27.76],[92.16,27.84],[92.26,27.86],[92.31,27.78],[92.56,27.82],[92.73,27.98],[92.66,28.07],[92.69,28.13],[92.8,28.2],[92.9,28.2],[93.02,28.3],[93.22,28.34],[93.18,28.43],[93.28,28.5],[93.34,28.64],[93.49,28.68],[93.62,28.66],[93.96,28.71],[94,28.84],[94.16,28.95],[94.19,29.04],[94.29,29.15],[94.36,29.15],[94.43,29.23],[94.56,29.23],[94.58,29.28],[94.68,29.33],[94.87,29.18],[95.25,29.11],[95.27,29.05],[95.45,29.03],[95.54,29.21],[95.88,29.39],[95.96,29.38],[96.09,29.46],[96.24,29.23],[96.39,29.25],[96.35,29.17],[96.22,29.14],[96.15,29.05],[96.25,28.94],[96.35,29.03],[96.44,29.03],[96.52,28.97],[96.54,28.88],[96.61,28.79],[96.58,28.72],[96.47,28.68],[96.49,28.63],[96.33,28.51],[96.37,28.48],[96.31,28.38],[96.66,28.46],[96.78,28.36],[96.9,28.38],[96.99,28.31],[97.09,28.36],[97.17,28.29],[97.37,28.22],[97.33,28.15],[97.33,28.06],[97.39,28],[97.38,27.91],[97.25,27.9],[97.03,27.75],[96.9,27.61],[96.86,27.63],[96.93,27.51],[96.9,27.45],[97.16,27.14],[97.06,27.09],[96.98,27.15],[96.86,27.19],[96.88,27.26],[96.8,27.35],[96.61,27.37],[96.51,27.3],[96.31,27.29],[96.09,27.22],[96.02,27.18],[95.95,27.05],[95.8,27.02],[95.75,26.9],[95.68,26.9],[95.61,26.81],[95.5,26.82],[95.43,26.7],[95.3,26.65],[95.23,26.68],[95.2,26.85],[95.23,26.92],[95.2,27.03],[95.26,27.03],[95.45,27.13],[95.48,27.24],[95.53,27.26],[95.63,27.23],[95.86,27.27],[96.02,27.37],[95.94,27.44],[95.88,27.44],[95.87,27.54],[95.78,27.62],[95.77,27.73],[95.97,27.96],[95.82,27.97],[95.61,27.96],[95.51,27.88],[95.38,27.84],[95.31,27.87],[95.14,27.82],[94.85,27.73],[94.46,27.56],[94.24,27.63],[94.21,27.61],[94.27,27.52],[93.99,27.33],[93.81,27.15],[93.83,27.07],[93.67,26.97],[93.02,26.91],[92.89,27],[92.67,27.03]]]},{"n":"Assam","hi":"असम","p":[[[92.53,24.18],[92.44,24.15],[92.42,24.25],[92.3,24.25],[92.22,24.29],[92.26,24.36],[92.21,24.51],[92.3,24.74],[92.23,24.9],[92.3,24.92],[92.39,24.85],[92.52,24.88],[92.43,25.03],[92.48,25.11],[92.62,25.12],[92.79,25.28],[92.65,25.43],[92.57,25.47],[92.66,25.57],[92.58,25.55],[92.44,25.72],[92.23,25.72],[92.15,25.67],[92.15,25.82],[92.2,25.91],[92.16,25.97],[92.27,26.07],[91.87,26.04],[91.83,26.12],[91.72,26.03],[91.72,25.97],[91.58,26.03],[91.45,25.84],[91.34,25.84],[91.22,25.72],[91.15,25.85],[91.01,25.82],[91.03,25.89],[90.95,25.95],[90.72,25.96],[90.63,25.92],[90.43,25.99],[90.19,25.94],[90.12,25.96],[89.9,25.73],[90.02,25.61],[89.88,25.55],[89.85,25.47],[89.88,25.62],[89.83,25.73],[89.84,25.88],[89.89,25.95],[89.7,26.22],[89.78,26.35],[89.84,26.38],[89.86,26.73],[90.05,26.73],[90.19,26.77],[90.23,26.86],[90.34,26.86],[90.42,26.91],[90.55,26.82],[90.72,26.77],[91.05,26.78],[91.1,26.82],[91.34,26.78],[91.41,26.84],[91.5,26.79],[91.7,26.81],[91.89,26.92],[92.06,26.85],[92.11,26.89],[92.56,26.96],[92.67,27.03],[92.89,27],[93.02,26.91],[93.67,26.97],[93.83,27.07],[93.81,27.15],[93.99,27.33],[94.27,27.52],[94.21,27.61],[94.24,27.63],[94.46,27.56],[94.85,27.73],[95.14,27.82],[95.31,27.87],[95.38,27.84],[95.51,27.88],[95.61,27.96],[95.97,27.96],[95.77,27.73],[95.78,27.62],[95.87,27.54],[95.88,27.44],[95.94,27.44],[96.02,27.37],[95.86,27.27],[95.63,27.23],[95.53,27.26],[95.48,27.24],[95.45,27.13],[94.98,26.91],[94.92,26.95],[94.74,26.75],[94.59,26.73],[94.4,26.61],[94.4,26.53],[94.31,26.46],[94.28,26.56],[94.18,26.46],[94.16,26.35],[94.1,26.32],[94,26.17],[93.95,25.97],[93.98,25.92],[93.88,25.84],[93.78,25.85],[93.78,25.97],[93.68,25.9],[93.7,25.85],[93.33,25.54],[93.46,25.43],[93.47,25.31],[93.38,25.24],[93.17,24.8],[93.11,24.81],[93.09,24.57],[93.05,24.54],[93.01,24.41],[92.9,24.39],[92.8,24.42],[92.76,24.51],[92.69,24.35],[92.63,24.33],[92.61,24.26],[92.55,24.25],[92.53,24.18]]]},{"n":"Bihar","hi":"बिहार","p":[[[85.03,24.42],[84.9,24.37],[84.89,24.46],[84.8,24.53],[84.59,24.4],[84.5,24.29],[84.46,24.34],[84.34,24.39],[84.33,24.49],[84.26,24.53],[84.09,24.53],[84.01,24.64],[83.94,24.55],[83.87,24.53],[83.72,24.5],[83.5,24.53],[83.53,24.64],[83.49,24.74],[83.4,24.78],[83.35,25.18],[83.54,25.31],[83.85,25.43],[83.93,25.56],[84.08,25.64],[84.07,25.7],[84.14,25.73],[84.21,25.67],[84.32,25.67],[84.34,25.74],[84.56,25.68],[84.62,25.79],[84.35,25.96],[84.3,25.95],[84.06,26.1],[84.09,26.22],[84.18,26.26],[84.16,26.38],[83.91,26.45],[83.92,26.5],[84.05,26.55],[84.11,26.63],[84.28,26.6],[84.42,26.63],[84.33,26.68],[84.26,26.8],[84.06,26.89],[84.05,27.04],[83.96,27.08],[83.99,27.17],[83.86,27.34],[83.83,27.43],[84.02,27.44],[84.1,27.52],[84.26,27.45],[84.28,27.39],[84.62,27.34],[84.69,27.22],[84.64,27.05],[84.76,27],[84.82,27.02],[84.96,26.96],[85.03,26.87],[85.19,26.87],[85.18,26.8],[85.25,26.75],[85.33,26.74],[85.64,26.85],[85.73,26.81],[85.72,26.67],[85.86,26.57],[85.96,26.65],[86.03,26.67],[86.54,26.54],[86.57,26.5],[86.72,26.43],[86.85,26.44],[87.04,26.56],[87.09,26.45],[87.16,26.4],[87.37,26.41],[87.46,26.44],[87.59,26.38],[87.85,26.44],[88.03,26.39],[88.1,26.46],[88.11,26.55],[88.24,26.46],[88.28,26.33],[87.85,26.04],[87.82,25.94],[87.83,25.89],[87.89,25.87],[87.97,25.73],[88.05,25.7],[88.02,25.6],[88.07,25.48],[87.96,25.54],[87.77,25.42],[87.78,25.34],[87.85,25.3],[87.82,25.24],[87.71,25.26],[87.69,25.31],[87.55,25.33],[87.48,25.19],[87.33,25.22],[87.29,25.09],[87.18,25.06],[87.15,25.02],[87.16,24.88],[87.11,24.85],[87.05,24.63],[86.95,24.63],[86.91,24.55],[86.75,24.62],[86.65,24.57],[86.61,24.61],[86.5,24.51],[86.45,24.37],[86.28,24.47],[86.3,24.56],[86.13,24.6],[86.13,24.7],[86.05,24.78],[85.93,24.74],[85.74,24.82],[85.67,24.66],[85.68,24.59],[85.54,24.53],[85.37,24.55],[85.33,24.51],[85.29,24.52],[85.09,24.37],[85.03,24.42]]]},{"n":"Chandigarh","hi":"चंडीगढ़","p":[[[76.74,30.69],[76.71,30.76],[76.84,30.75],[76.83,30.68],[76.74,30.69]]]},{"n":"Chhattisgarh","hi":"छत्तीसगढ़","p":[[[81.66,18.35],[81.53,18.24],[81.48,17.98],[81.4,17.89],[81.4,17.82],[81.27,17.81],[81.17,17.86],[81.08,17.8],[81.02,17.79],[80.97,18.05],[80.98,18.17],[80.87,18.14],[80.85,18.21],[80.76,18.17],[80.71,18.44],[80.64,18.52],[80.45,18.63],[80.37,18.61],[80.28,18.72],[80.27,18.77],[80.35,18.85],[80.27,18.94],[80.33,19.14],[80.39,19.19],[80.48,19.34],[80.58,19.4],[80.61,19.31],[80.75,19.29],[80.85,19.36],[80.9,19.52],[80.71,19.62],[80.67,19.7],[80.56,19.76],[80.55,19.82],[80.47,19.83],[80.53,19.94],[80.55,20.1],[80.51,20.14],[80.43,20.14],[80.4,20.24],[80.63,20.33],[80.59,20.39],[80.62,20.59],[80.52,20.58],[80.58,20.67],[80.55,20.93],[80.46,20.93],[80.44,21.1],[80.46,21.18],[80.61,21.23],[80.74,21.47],[80.71,21.66],[80.76,21.76],[80.82,21.76],[80.91,22.11],[81,22.06],[81.05,22.24],[81.12,22.29],[81.11,22.44],[81.19,22.49],[81.25,22.46],[81.33,22.53],[81.47,22.49],[81.62,22.54],[81.65,22.61],[81.79,22.77],[81.78,22.87],[81.86,22.89],[81.95,22.98],[81.94,23.08],[82.12,23.1],[82.2,23.31],[82.1,23.4],[81.99,23.41],[81.92,23.53],[81.82,23.52],[81.76,23.55],[81.61,23.51],[81.61,23.66],[81.7,23.72],[81.6,23.88],[81.67,23.92],[81.73,23.84],[81.81,23.81],[81.92,23.87],[82.08,23.82],[82.21,23.85],[82.5,23.78],[82.64,23.84],[82.69,23.92],[82.81,23.96],[82.95,23.87],[83.09,23.87],[83.21,23.92],[83.33,24.1],[83.43,24.09],[83.57,23.86],[83.71,23.82],[83.77,23.61],[83.94,23.57],[84.02,23.63],[84.01,23.5],[83.96,23.39],[84.07,23.33],[84.04,23.17],[84.06,23.11],[84.18,22.98],[84.37,22.98],[84.4,22.93],[84.24,22.69],[84.15,22.64],[84.08,22.64],[84.01,22.57],[84.05,22.47],[84.01,22.37],[83.86,22.34],[83.63,22.2],[83.54,22.05],[83.59,21.83],[83.46,21.7],[83.49,21.64],[83.38,21.62],[83.34,21.5],[83.4,21.4],[83.39,21.34],[83.27,21.38],[83.19,21.14],[83.08,21.11],[82.97,21.18],[82.64,21.15],[82.64,21.09],[82.56,20.95],[82.49,20.91],[82.46,20.83],[82.34,20.87],[82.38,20.63],[82.33,20.56],[82.44,20.43],[82.4,20.34],[82.42,20.2],[82.39,20.15],[82.4,20.06],[82.72,19.99],[82.7,19.83],[82.59,19.78],[82.53,19.88],[82.45,19.91],[82.34,19.84],[82.27,19.98],[82.18,19.98],[82.07,20.06],[82.02,20.05],[81.95,20.11],[81.88,20.05],[81.84,19.95],[81.87,19.9],[81.97,19.86],[81.99,19.8],[82.07,19.79],[82.03,19.51],[82.1,19.52],[82.13,19.43],[82.19,19.43],[82.16,19.2],[82.25,18.92],[82.18,18.9],[82.16,18.79],[82.09,18.74],[81.9,18.66],[81.91,18.57],[81.77,18.42],[81.75,18.35],[81.66,18.35]]]},{"n":"Dadra and Nagar Haveli and Daman and Diu","hi":"दादरा नगर हवेली व दमन दीव","p":[[[73.04,20.33],[73.17,20.29],[73.13,20.2],[73.21,20.12],[73.14,20.09],[72.96,20.13],[72.93,20.3],[73.04,20.33]]]},{"n":"Delhi","hi":"दिल्ली","p":[[[77.3,28.71],[77.34,28.61],[77.3,28.57],[77.35,28.52],[77.25,28.48],[77.17,28.41],[77.1,28.51],[77.01,28.54],[76.88,28.5],[76.85,28.55],[76.89,28.63],[76.97,28.7],[76.94,28.8],[76.97,28.81],[77.12,28.86],[77.22,28.85],[77.21,28.79],[77.3,28.71]]]},{"n":"Goa","hi":"गोवा","p":[[[74.28,15.39],[74.32,15.37],[74.33,15.28],[74.26,15.24],[74.32,15.19],[74.27,15.1],[74.3,15.04],[74.2,14.93],[74.09,14.9],[73.98,15.05],[73.88,15.35],[73.93,15.43],[73.77,15.49],[73.69,15.73],[73.94,15.74],[73.99,15.61],[74.24,15.67],[74.28,15.52],[74.25,15.49],[74.28,15.39]]]},{"n":"Gujarat","hi":"गुजरात","p":[[[70.83,20.69],[70.45,20.85],[70.09,21.11],[69.71,21.54],[69.37,21.83],[69.4,21.89],[69.35,21.84],[69.22,21.96],[68.97,22.23],[68.94,22.31],[69.01,22.44],[69.16,22.35],[69.18,22.21],[69.34,22.31],[69.49,22.34],[69.54,22.38],[69.62,22.37],[69.86,22.46],[69.98,22.54],[70.13,22.55],[70.22,22.66],[70.22,22.72],[70.4,22.9],[70.45,22.84],[70.56,23.03],[70.69,23.12],[70.72,23.19],[70.5,23.18],[70.42,23.22],[70.31,23.22],[70.16,23.07],[70.08,22.92],[69.65,22.8],[69.13,22.87],[68.63,23.17],[68.53,23.28],[68.55,23.36],[68.4,23.42],[68.42,23.49],[68.33,23.5],[68.31,23.58],[68.14,23.6],[68.1,23.68],[68.17,23.7],[68.21,23.88],[68.34,23.97],[68.75,23.97],[68.76,24.3],[68.85,24.24],[68.95,24.3],[69,24.22],[69.09,24.27],[69.19,24.24],[69.31,24.28],[69.49,24.27],[69.59,24.29],[69.73,24.17],[70.03,24.17],[70.11,24.29],[70.57,24.42],[70.57,24.25],[70.81,24.22],[70.99,24.37],[71.05,24.36],[71.1,24.44],[71,24.44],[70.99,24.6],[71.11,24.68],[71.29,24.62],[71.35,24.66],[71.38,24.63],[71.48,24.68],[71.61,24.68],[71.66,24.64],[72.06,24.71],[72.17,24.62],[72.35,24.63],[72.35,24.56],[72.44,24.51],[72.43,24.49],[72.5,24.42],[72.49,24.46],[72.54,24.52],[72.68,24.46],[72.73,24.37],[72.96,24.36],[73,24.48],[73.09,24.5],[73.08,24.4],[73.15,24.35],[73.07,24.19],[73.21,24.08],[73.24,24],[73.32,24.05],[73.41,24.04],[73.42,23.92],[73.38,23.9],[73.37,23.81],[73.52,23.61],[73.57,23.65],[73.66,23.62],[73.63,23.45],[73.76,23.45],[73.83,23.43],[73.89,23.33],[73.96,23.38],[73.98,23.34],[74.14,23.27],[74.13,23.18],[74.25,23.18],[74.39,22.9],[74.46,22.91],[74.47,22.82],[74.4,22.73],[74.38,22.64],[74.26,22.64],[74.15,22.52],[74.06,22.55],[74.12,22.42],[74.22,22.44],[74.19,22.32],[74.07,22.36],[74.05,22.3],[74.12,22.21],[74.09,22.02],[74.15,21.95],[73.82,21.84],[73.82,21.76],[73.88,21.71],[73.81,21.64],[73.84,21.52],[74.16,21.57],[74.28,21.56],[74.32,21.5],[74.05,21.45],[73.96,21.4],[73.94,21.3],[73.82,21.27],[73.82,21.17],[73.67,21.15],[73.89,20.93],[73.94,20.84],[73.92,20.72],[73.87,20.73],[73.84,20.62],[73.74,20.56],[73.65,20.56],[73.61,20.63],[73.47,20.72],[73.41,20.62],[73.47,20.58],[73.47,20.5],[73.4,20.39],[73.42,20.2],[73.3,20.21],[73.25,20.12],[73.21,20.12],[73.13,20.2],[73.17,20.29],[73.04,20.33],[72.93,20.3],[72.96,20.21],[72.87,20.23],[72.78,20.13],[72.74,20.24],[72.78,20.34],[72.89,20.46],[72.9,20.58],[72.72,21.05],[72.75,21.06],[72.62,21.1],[72.64,21.21],[72.6,21.32],[72.65,21.35],[72.69,21.46],[72.74,21.47],[72.71,21.53],[72.61,21.58],[72.7,21.65],[72.54,21.73],[72.62,21.81],[72.51,21.94],[72.57,22.18],[72.65,22.22],[72.75,22.17],[72.87,22.21],[72.95,22.29],[72.66,22.28],[72.52,22.32],[72.46,22.26],[72.38,22.31],[72.2,21.89],[72.24,21.82],[72.19,21.75],[72.31,21.62],[72.24,21.46],[72.11,21.3],[72.11,21.2],[71.51,20.94],[71.44,20.87],[71.05,20.73],[70.92,20.74],[70.83,20.69]],[[72.36,21.8],[72.31,21.84],[72.29,21.97],[72.37,22.03],[72.44,21.93],[72.36,21.8]]]},{"n":"Haryana","hi":"हरियाणा","p":[[[76.06,28.22],[75.89,28.39],[75.67,28.52],[75.62,28.6],[75.56,28.61],[75.47,28.93],[75.53,28.97],[75.44,29.06],[75.39,29.06],[75.41,29.26],[75.35,29.28],[75.08,29.23],[75.05,29.29],[74.96,29.28],[74.94,29.36],[74.85,29.4],[74.79,29.36],[74.6,29.36],[74.58,29.46],[74.62,29.53],[74.58,29.56],[74.62,29.75],[74.48,29.75],[74.48,29.81],[74.56,29.87],[74.53,29.94],[74.65,29.91],[74.71,29.97],[74.81,29.99],[74.93,29.95],[75,29.87],[75.12,29.83],[75.19,29.84],[75.24,29.75],[75.17,29.67],[75.3,29.56],[75.35,29.7],[75.46,29.81],[75.58,29.74],[75.78,29.82],[75.95,29.73],[76.05,29.75],[76.1,29.81],[76.21,29.84],[76.17,29.93],[76.25,30.09],[76.41,30.15],[76.47,30.1],[76.58,30.1],[76.64,30.15],[76.56,30.24],[76.71,30.33],[76.75,30.43],[76.91,30.43],[76.93,30.61],[76.83,30.68],[76.85,30.83],[76.78,30.9],[76.87,30.87],[76.92,30.9],[77.02,30.75],[77.17,30.68],[77.17,30.6],[77.12,30.56],[77.21,30.49],[77.41,30.43],[77.52,30.44],[77.58,30.38],[77.58,30.31],[77.23,29.94],[77.17,29.8],[77.12,29.76],[77.15,29.69],[77.11,29.63],[77.15,29.3],[77.14,29.17],[77.17,29.03],[77.23,28.92],[77.22,28.85],[77.12,28.86],[76.94,28.8],[76.97,28.7],[76.89,28.63],[76.85,28.55],[76.88,28.5],[77.01,28.54],[77.1,28.51],[77.17,28.41],[77.25,28.48],[77.35,28.52],[77.51,28.37],[77.48,28.08],[77.54,27.99],[77.53,27.93],[77.28,27.8],[77.04,27.82],[76.98,27.65],[76.89,27.73],[76.94,27.84],[76.93,27.99],[76.97,28.14],[76.85,28.22],[76.8,28.15],[76.69,28.09],[76.67,28.01],[76.54,27.97],[76.54,28.03],[76.31,28.18],[76.36,28.12],[76.32,28.02],[76.26,28.07],[76.16,28],[76.17,27.9],[76.23,27.83],[76.18,27.8],[75.97,27.85],[75.93,27.93],[75.97,27.93],[76,28.12],[76.06,28.22]]]},{"n":"Himachal Pradesh","hi":"हिमाचल प्रदेश","p":[[[76.92,30.9],[76.87,30.87],[76.62,31],[76.65,31.21],[76.59,31.27],[76.5,31.27],[76.39,31.41],[76.29,31.31],[76.2,31.3],[76.12,31.5],[76.02,31.63],[75.91,31.95],[75.6,32.08],[75.66,32.14],[75.64,32.25],[75.77,32.29],[75.87,32.4],[75.93,32.39],[75.84,32.51],[75.92,32.63],[75.92,32.75],[75.8,32.89],[75.85,32.93],[75.95,32.87],[76.09,32.96],[76.11,33.01],[76.22,33.02],[76.41,33.19],[76.57,33.21],[76.65,33.16],[76.75,33.18],[76.77,33.25],[76.93,33.03],[77.01,32.99],[77.15,32.98],[77.34,32.82],[77.41,32.88],[77.47,32.86],[77.6,32.94],[77.74,32.97],[77.93,32.73],[77.92,32.69],[78.02,32.62],[78.1,32.63],[78.14,32.68],[78.22,32.66],[78.39,32.76],[78.41,32.62],[78.31,32.57],[78.53,32.41],[78.48,32.35],[78.48,32.28],[78.61,32.21],[78.59,32.15],[78.78,31.99],[78.71,31.77],[78.76,31.67],[78.85,31.61],[78.73,31.54],[78.8,31.44],[78.75,31.37],[78.79,31.3],[78.88,31.28],[79.01,31.11],[78.89,31.1],[78.81,31.2],[78.67,31.2],[78.61,31.23],[78.48,31.2],[78.37,31.29],[78.1,31.19],[77.97,31.17],[77.86,31.11],[77.81,30.85],[77.7,30.76],[77.82,30.56],[77.82,30.51],[77.58,30.4],[77.58,30.38],[77.52,30.44],[77.41,30.43],[77.21,30.49],[77.12,30.56],[77.17,30.6],[77.17,30.68],[77.02,30.75],[76.92,30.9]]]},{"n":"Jammu and Kashmir","hi":"जम्मू व कश्मीर","p":[[[74.87,32.49],[74.68,32.49],[74.64,32.61],[74.66,32.79],[74.51,32.74],[74.45,32.79],[74.38,32.76],[74.18,32.88],[74.06,32.91],[73.96,32.99],[73.63,33.09],[73.66,33.21],[73.56,33.34],[73.62,33.57],[73.56,33.62],[73.6,33.71],[73.56,33.78],[73.59,33.88],[73.52,33.99],[73.49,34.22],[73.39,34.37],[73.45,34.57],[73.62,34.59],[73.75,34.79],[73.96,34.84],[74.07,34.94],[74.07,35.05],[74.15,35.1],[74.25,35.04],[74.49,35.11],[74.59,35.01],[74.57,34.87],[74.32,34.79],[74.56,34.77],[74.73,34.67],[74.93,34.66],[75.02,34.63],[75.24,34.63],[75.36,34.53],[75.32,34.43],[75.37,34.39],[75.41,34.28],[75.69,34.16],[75.86,33.98],[76.02,34],[76.17,33.8],[76.26,33.74],[76.31,33.57],[76.5,33.52],[76.77,33.25],[76.75,33.18],[76.65,33.16],[76.57,33.21],[76.41,33.19],[76.22,33.02],[76.11,33.01],[76.09,32.96],[75.95,32.87],[75.85,32.93],[75.8,32.89],[75.92,32.75],[75.92,32.63],[75.84,32.51],[75.73,32.45],[75.69,32.39],[75.6,32.38],[75.51,32.31],[75.34,32.35],[75.11,32.46],[74.95,32.45],[74.89,32.52],[74.87,32.49]]]},{"n":"Jharkhand","hi":"झारखंड","p":[[[86.03,22.19],[86.01,22.12],[85.9,21.98],[85.78,21.98],[85.75,22.07],[85.68,22.06],[85.4,22.16],[85.27,22.08],[85.24,22.01],[85.18,22.07],[85.03,22.12],[85.08,22.26],[85.07,22.49],[84.96,22.45],[84.81,22.45],[84.75,22.42],[84.53,22.43],[84.43,22.35],[84.29,22.34],[84.2,22.38],[84.11,22.48],[84.01,22.53],[84.01,22.57],[84.08,22.64],[84.15,22.64],[84.24,22.69],[84.4,22.93],[84.37,22.98],[84.18,22.98],[84.06,23.11],[84.04,23.17],[84.07,23.33],[83.96,23.39],[84.01,23.5],[84.02,23.63],[83.94,23.57],[83.77,23.61],[83.71,23.82],[83.57,23.86],[83.43,24.09],[83.33,24.1],[83.41,24.27],[83.38,24.31],[83.4,24.5],[83.87,24.53],[83.94,24.55],[84.01,24.64],[84.09,24.53],[84.26,24.53],[84.33,24.49],[84.34,24.39],[84.46,24.34],[84.5,24.29],[84.59,24.4],[84.8,24.53],[84.89,24.46],[84.9,24.37],[85.03,24.42],[85.09,24.37],[85.37,24.55],[85.54,24.53],[85.68,24.59],[85.67,24.66],[85.74,24.82],[85.93,24.74],[86.05,24.78],[86.13,24.7],[86.13,24.6],[86.3,24.56],[86.28,24.47],[86.45,24.37],[86.5,24.51],[86.61,24.61],[86.65,24.57],[86.75,24.62],[86.91,24.55],[86.95,24.63],[87.05,24.63],[87.11,24.85],[87.16,24.88],[87.15,25.02],[87.18,25.06],[87.29,25.09],[87.33,25.22],[87.48,25.19],[87.55,25.33],[87.69,25.31],[87.71,25.26],[87.78,25.25],[87.79,25.09],[87.95,24.97],[87.96,24.92],[87.84,24.75],[87.91,24.72],[87.89,24.57],[87.79,24.58],[87.8,24.38],[87.71,24.26],[87.64,24.25],[87.63,24.16],[87.44,23.98],[87.34,24.03],[87.23,24.03],[87.29,23.9],[87.23,23.86],[87.13,23.85],[87.09,23.81],[86.92,23.88],[86.8,23.83],[86.83,23.77],[86.8,23.7],[86.49,23.64],[86.37,23.53],[86.31,23.41],[86.18,23.47],[86.16,23.56],[86.08,23.57],[86.04,23.5],[85.89,23.48],[85.86,23.43],[85.88,23.35],[85.82,23.27],[85.89,23.17],[86.04,23.15],[86.24,23],[86.5,22.99],[86.44,22.93],[86.42,22.79],[86.64,22.66],[86.66,22.58],[86.77,22.58],[86.8,22.49],[86.76,22.43],[86.85,22.4],[86.83,22.33],[86.73,22.22],[86.5,22.35],[86.43,22.32],[86.36,22.35],[86.28,22.45],[86.12,22.49],[86.07,22.56],[85.96,22.49],[86.02,22.43],[86.03,22.33],[85.97,22.25],[86.03,22.19]]]},{"n":"Karnataka","hi":"कर्नाटक","p":[[[76,11.93],[75.87,11.95],[75.79,12.06],[75.58,12.16],[75.49,12.29],[75.41,12.29],[75.42,12.37],[75.37,12.41],[75.42,12.5],[75.28,12.52],[75.11,12.68],[74.87,12.76],[74.82,12.85],[74.67,13.63],[74.58,13.93],[74.52,13.99],[74.39,14.42],[74.27,14.63],[74.26,14.72],[74.12,14.79],[74.09,14.9],[74.2,14.93],[74.3,15.04],[74.27,15.1],[74.32,15.19],[74.26,15.24],[74.33,15.28],[74.32,15.37],[74.28,15.39],[74.25,15.49],[74.28,15.52],[74.24,15.67],[74.12,15.65],[74.12,15.72],[74.21,15.78],[74.24,15.74],[74.35,15.76],[74.46,16.04],[74.37,16.08],[74.48,16.15],[74.48,16.25],[74.37,16.26],[74.32,16.33],[74.32,16.55],[74.54,16.64],[74.57,16.55],[74.63,16.58],[74.7,16.72],[74.92,16.77],[74.9,16.86],[75.09,16.95],[75.18,16.84],[75.26,16.86],[75.28,16.96],[75.47,16.99],[75.67,16.98],[75.67,17.12],[75.63,17.17],[75.65,17.27],[75.6,17.31],[75.57,17.38],[75.63,17.48],[75.81,17.37],[75.89,17.4],[75.93,17.32],[76.23,17.37],[76.38,17.31],[76.37,17.44],[76.33,17.47],[76.33,17.6],[76.49,17.66],[76.52,17.76],[76.69,17.68],[76.71,17.78],[76.79,17.83],[76.74,17.9],[76.78,17.88],[76.92,17.92],[76.91,18.01],[76.95,18.04],[76.92,18.12],[76.95,18.19],[77.06,18.15],[77.26,18.42],[77.32,18.44],[77.41,18.39],[77.41,18.3],[77.47,18.26],[77.55,18.29],[77.6,18.28],[77.56,18.2],[77.6,18.09],[77.55,18.06],[77.66,17.97],[77.45,17.69],[77.44,17.58],[77.69,17.51],[77.51,17.43],[77.38,17.22],[77.36,17.16],[77.46,17.11],[77.5,17.04],[77.46,16.88],[77.48,16.79],[77.43,16.72],[77.45,16.62],[77.42,16.52],[77.24,16.47],[77.29,16.41],[77.59,16.34],[77.5,16.22],[77.51,15.93],[77.25,15.96],[77.07,15.91],[77.03,15.84],[77.08,15.66],[77.03,15.63],[77.03,15.44],[77.06,15.33],[77.15,15.29],[77.13,15.23],[77.16,15.14],[77.11,15.03],[76.99,15.01],[76.8,15.1],[76.76,14.99],[76.87,14.97],[76.76,14.6],[76.81,14.53],[76.9,14.49],[76.88,14.35],[77.01,14.24],[77.12,14.23],[77.14,14.34],[77.36,14.28],[77.41,14.34],[77.48,14.29],[77.5,14.16],[77.39,14.17],[77.39,14.02],[77.43,13.95],[77.4,13.91],[77.32,14.03],[77.17,14.01],[77.03,14.06],[77,14.2],[76.89,14.17],[76.95,14.1],[76.93,14.03],[77.04,13.93],[76.98,13.83],[77.06,13.74],[77.16,13.81],[77.18,13.87],[77.33,13.83],[77.43,13.84],[77.47,13.76],[77.46,13.68],[77.78,13.82],[77.81,13.92],[77.97,13.96],[78,13.87],[78.12,13.86],[78.12,13.72],[78.2,13.63],[78.2,13.57],[78.4,13.59],[78.36,13.36],[78.44,13.31],[78.59,13.28],[78.47,12.97],[78.36,12.94],[78.31,12.86],[78.25,12.86],[78.23,12.76],[78.13,12.78],[78.06,12.85],[77.98,12.84],[77.93,12.89],[77.83,12.87],[77.74,12.67],[77.6,12.67],[77.59,12.51],[77.64,12.49],[77.62,12.37],[77.47,12.24],[77.51,12.2],[77.61,12.21],[77.75,12.16],[77.78,12.11],[77.68,11.95],[77.49,11.94],[77.43,11.77],[77.29,11.81],[77.11,11.77],[77.01,11.81],[76.91,11.8],[76.84,11.65],[76.85,11.59],[76.56,11.62],[76.51,11.7],[76.42,11.67],[76.41,11.76],[76.32,11.75],[76.21,11.86],[76.11,11.86],[76.11,11.98],[76,11.93]]]},{"n":"Kerala","hi":"केरल","p":[[[76.9,10.25],[76.98,10.22],[77.18,10.36],[77.29,10.23],[77.21,9.88],[77.25,9.8],[77.17,9.61],[77.27,9.57],[77.32,9.6],[77.4,9.53],[77.28,9.3],[77.27,9.15],[77.15,9.01],[77.26,8.88],[77.17,8.74],[77.27,8.58],[77.26,8.51],[77.1,8.29],[76.55,8.9],[76.32,9.48],[76.28,9.79],[76.17,10.18],[76.21,10.19],[76.16,10.18],[75.91,10.79],[75.83,11.12],[75.7,11.43],[75.62,11.48],[75.55,11.7],[75.36,11.86],[75.25,12.01],[75.2,12.01],[74.87,12.76],[75.11,12.68],[75.28,12.52],[75.42,12.5],[75.37,12.41],[75.42,12.37],[75.41,12.29],[75.49,12.29],[75.58,12.16],[75.79,12.06],[75.87,11.95],[76,11.93],[76.11,11.98],[76.11,11.86],[76.21,11.86],[76.32,11.75],[76.41,11.76],[76.42,11.67],[76.38,11.6],[76.23,11.53],[76.55,11.36],[76.52,11.27],[76.44,11.2],[76.63,11.19],[76.71,11.24],[76.69,11.17],[76.75,11.08],[76.66,10.94],[76.83,10.87],[76.91,10.78],[76.84,10.6],[76.82,10.42],[76.83,10.34],[76.9,10.25]]]},{"n":"Ladakh","hi":"लद्दाख","p":[[[77.15,32.98],[77.01,32.99],[76.93,33.03],[76.77,33.25],[76.5,33.52],[76.31,33.57],[76.26,33.74],[76.17,33.8],[76.02,34],[75.86,33.98],[75.69,34.16],[75.41,34.28],[75.37,34.39],[75.32,34.43],[75.36,34.53],[75.24,34.63],[75.02,34.63],[74.93,34.66],[74.73,34.67],[74.56,34.77],[74.32,34.79],[74.57,34.87],[74.59,35.01],[74.49,35.11],[74.25,35.04],[73.8,35.24],[73.73,35.22],[73.7,35.36],[73.79,35.46],[73.78,35.52],[73.63,35.57],[73.41,35.56],[73.14,35.72],[73.15,35.84],[73.09,35.88],[72.93,35.85],[72.9,35.88],[72.69,35.83],[72.53,35.92],[72.59,36.03],[72.53,36.07],[72.59,36.26],[72.78,36.31],[72.88,36.39],[72.88,36.44],[72.99,36.46],[73.11,36.61],[73.13,36.69],[73.44,36.74],[73.7,36.68],[73.81,36.72],[73.86,36.79],[73.72,36.83],[73.69,36.91],[73.88,36.89],[74.06,36.81],[74.14,36.84],[74.17,36.9],[74.26,36.89],[74.43,36.99],[74.53,36.99],[74.59,37.04],[74.71,37.08],[74.73,37.02],[74.84,37.02],[74.92,36.91],[75.02,36.98],[75.1,36.94],[75.21,37.04],[75.34,37.05],[75.35,36.98],[75.42,36.96],[75.47,36.81],[75.61,36.76],[75.75,36.59],[75.92,36.5],[76.08,36.47],[76.25,36.35],[76.35,36.36],[76.43,36.31],[76.48,36.21],[76.6,36.17],[76.64,36.18],[76.72,36.08],[76.8,36.05],[76.72,35.95],[76.81,35.84],[76.93,35.78],[77.12,35.8],[77.17,35.73],[77.43,35.65],[77.46,35.57],[77.43,35.52],[77.61,35.47],[77.82,35.51],[77.9,35.47],[77.97,35.57],[78.04,35.59],[78.14,35.54],[78.2,35.67],[78.27,35.72],[78.38,35.74],[78.42,35.78],[78.52,35.76],[78.66,35.86],[78.82,35.85],[78.96,35.89],[79.02,35.85],[79.13,35.84],[79.19,35.89],[79.21,35.98],[79.38,36],[79.42,35.9],[79.87,35.78],[80,35.84],[80.11,35.68],[80.29,35.61],[80.33,35.47],[80.18,35.17],[80.17,35],[80.07,34.83],[80.07,34.71],[79.86,34.69],[79.77,34.63],[79.79,34.48],[79.59,34.5],[79.51,34.47],[79.59,34.28],[79.51,34.21],[79.49,34.13],[79.35,34.04],[79.02,34.05],[78.9,33.98],[79.11,33.62],[78.99,33.61],[78.91,33.57],[78.93,33.43],[78.99,33.33],[79.11,33.29],[79.45,33.26],[79.38,33.08],[79.42,32.96],[79.63,32.74],[79.45,32.53],[79.32,32.59],[79.19,32.48],[79.14,32.48],[79.11,32.38],[79.03,32.39],[78.98,32.34],[78.86,32.44],[78.78,32.56],[78.76,32.65],[78.66,32.65],[78.46,32.58],[78.4,32.53],[78.31,32.57],[78.41,32.62],[78.39,32.76],[78.22,32.66],[78.14,32.68],[78.1,32.63],[78.02,32.62],[77.92,32.69],[77.93,32.73],[77.74,32.97],[77.6,32.94],[77.47,32.86],[77.41,32.88],[77.34,32.82],[77.15,32.98]]]},{"n":"Lakshadweep","hi":"लक्षद्वीप","p":[[[73.04,8.26],[73.02,8.28],[73.05,8.27],[73.04,8.26]]]},{"n":"Madhya Pradesh","hi":"मध्य प्रदेश","p":[[[76.49,21.19],[76.48,21.15],[76.38,21.08],[76.17,21.08],[76.16,21.25],[76.1,21.37],[75.38,21.38],[75.21,21.41],[75.11,21.46],[75.05,21.57],[74.86,21.63],[74.78,21.62],[74.58,21.66],[74.5,21.73],[74.52,21.91],[74.45,21.96],[74.43,22.03],[74.28,21.93],[74.15,21.95],[74.09,22.02],[74.12,22.21],[74.05,22.3],[74.07,22.36],[74.19,22.32],[74.22,22.44],[74.12,22.42],[74.06,22.55],[74.15,22.52],[74.26,22.64],[74.38,22.64],[74.4,22.73],[74.47,22.82],[74.46,22.91],[74.39,22.9],[74.32,23.06],[74.39,23.11],[74.51,23.08],[74.73,23.22],[74.53,23.32],[74.57,23.42],[74.77,23.54],[74.85,23.55],[74.92,23.67],[74.94,23.77],[74.9,23.87],[74.97,24.04],[74.88,24.17],[74.91,24.21],[74.87,24.24],[74.75,24.24],[74.78,24.34],[74.85,24.42],[74.82,24.47],[74.7,24.48],[74.79,24.59],[74.77,24.66],[74.8,24.74],[74.89,24.63],[74.99,24.69],[74.98,24.76],[74.86,24.8],[74.83,24.9],[74.9,24.93],[74.96,24.86],[75.04,24.85],[75.12,24.88],[75.11,24.97],[75.19,25.04],[75.35,25.02],[75.34,24.95],[75.18,24.75],[75.46,24.68],[75.55,24.7],[75.61,24.68],[75.78,24.76],[75.92,24.54],[75.9,24.44],[75.79,24.45],[75.73,24.4],[75.81,24.25],[75.75,24.14],[75.84,24.06],[75.7,23.97],[75.52,24.03],[75.46,23.92],[75.56,23.86],[75.58,23.8],[75.69,23.75],[75.79,23.87],[75.94,23.9],[76.04,24.07],[76.13,24.09],[76.12,24.19],[76.32,24.25],[76.57,24.21],[76.64,24.27],[76.68,24.19],[76.8,24.12],[76.88,24.13],[76.92,24.21],[76.83,24.36],[76.82,24.53],[76.86,24.55],[76.98,24.46],[77.07,24.56],[77.03,24.71],[76.95,24.76],[76.86,24.74],[76.8,24.81],[76.95,24.87],[76.86,24.96],[76.88,25.04],[77,25.08],[77.09,25.05],[77.17,25.11],[77.27,25.12],[77.31,25.08],[77.39,25.12],[77.41,25.22],[77.37,25.41],[77.31,25.43],[77.23,25.38],[77.22,25.32],[77.08,25.34],[76.95,25.28],[76.86,25.33],[76.76,25.32],[76.67,25.35],[76.52,25.53],[76.5,25.67],[76.55,25.84],[76.64,25.91],[76.72,25.9],[76.79,25.94],[76.9,26.09],[77.27,26.27],[77.44,26.4],[77.54,26.41],[77.75,26.54],[77.82,26.55],[77.9,26.66],[78,26.69],[78.09,26.68],[78.11,26.8],[78.36,26.87],[78.4,26.82],[78.54,26.76],[78.78,26.77],[78.87,26.7],[79.01,26.67],[78.99,26.58],[79.14,26.44],[79.14,26.34],[78.99,26.2],[79.01,26.08],[78.95,26.03],[78.94,25.95],[78.76,25.72],[78.81,25.62],[78.72,25.6],[78.66,25.56],[78.45,25.57],[78.4,25.44],[78.34,25.43],[78.34,25.33],[78.45,25.12],[78.34,25.08],[78.35,25.01],[78.17,24.88],[78.28,24.66],[78.27,24.45],[78.37,24.37],[78.33,24.33],[78.39,24.26],[78.5,24.39],[78.81,24.18],[78.97,24.35],[78.99,24.44],[78.91,24.46],[78.95,24.55],[78.88,24.64],[78.75,24.6],[78.78,24.71],[78.77,24.86],[78.68,24.9],[78.63,24.96],[78.64,25.07],[78.51,25.28],[78.66,25.38],[78.77,25.35],[78.73,25.46],[78.88,25.52],[78.94,25.49],[78.88,25.39],[78.96,25.34],[78.88,25.16],[78.93,25.21],[79.06,25.22],[79.13,25.11],[79.25,25.11],[79.32,25.15],[79.26,25.27],[79.28,25.32],[79.35,25.33],[79.44,25.25],[79.39,25.17],[79.41,25.11],[79.49,25.08],[79.57,25.17],[79.67,25.12],[79.75,25.14],[79.84,25.1],[79.86,25.19],[80.03,25.34],[80.22,25.4],[80.32,25.39],[80.31,25.29],[80.4,25.24],[80.43,25.17],[80.26,25.02],[80.34,25.01],[80.4,25.07],[80.48,24.98],[80.5,25.04],[80.59,25.09],[80.71,25.07],[80.72,25.12],[80.84,25.19],[80.88,25.07],[80.83,25.03],[80.86,24.93],[80.95,24.97],[81.12,24.9],[81.16,24.91],[81.26,25.05],[81.28,25.17],[81.39,25.13],[81.5,25.15],[81.54,25.19],[81.63,25.16],[81.67,25.06],[81.89,24.99],[81.94,24.85],[82.22,24.79],[82.3,24.61],[82.42,24.59],[82.42,24.65],[82.67,24.7],[82.71,24.64],[82.77,24.64],[82.8,24.58],[82.71,24.38],[82.77,24.37],[82.74,24.17],[82.66,24.13],[82.81,23.96],[82.69,23.92],[82.64,23.84],[82.5,23.78],[82.21,23.85],[82.08,23.82],[81.92,23.87],[81.81,23.81],[81.73,23.84],[81.67,23.92],[81.6,23.88],[81.7,23.72],[81.61,23.66],[81.61,23.51],[81.76,23.55],[81.82,23.52],[81.92,23.53],[81.99,23.41],[82.1,23.4],[82.2,23.31],[82.12,23.1],[81.94,23.08],[81.95,22.98],[81.86,22.89],[81.78,22.87],[81.79,22.77],[81.65,22.61],[81.62,22.54],[81.47,22.49],[81.33,22.53],[81.25,22.46],[81.19,22.49],[81.11,22.44],[81.12,22.29],[81.05,22.24],[81,22.06],[80.91,22.11],[80.82,21.76],[80.76,21.76],[80.71,21.66],[80.74,21.47],[80.66,21.33],[80.62,21.32],[80.42,21.44],[80.27,21.62],[80.12,21.61],[80.07,21.55],[79.92,21.52],[79.74,21.6],[79.54,21.54],[79.5,21.67],[79.23,21.72],[79.22,21.65],[78.92,21.59],[78.9,21.5],[78.58,21.49],[78.51,21.53],[78.43,21.5],[78.42,21.57],[78.34,21.59],[78.22,21.55],[78.03,21.42],[77.88,21.38],[77.8,21.41],[77.49,21.37],[77.45,21.55],[77.58,21.53],[77.54,21.7],[77.48,21.77],[77.28,21.76],[77.21,21.69],[77.06,21.71],[77,21.69],[76.9,21.6],[76.86,21.61],[76.78,21.56],[76.78,21.46],[76.62,21.33],[76.66,21.28],[76.62,21.18],[76.49,21.19]]]},{"n":"Maharashtra","hi":"महाराष्ट्र","p":[[[74.32,16.55],[74.32,16.33],[74.37,16.26],[74.48,16.25],[74.48,16.15],[74.37,16.08],[74.46,16.04],[74.35,15.76],[74.24,15.74],[74.21,15.78],[74.12,15.72],[74.12,15.65],[73.99,15.61],[73.94,15.74],[73.69,15.73],[73.59,15.91],[73.51,15.94],[73.37,16.36],[73.35,16.62],[73.28,16.89],[73.29,17.12],[73.22,17.27],[73.24,17.32],[73.18,17.38],[73.18,17.58],[72.97,18.12],[72.97,18.24],[73.03,18.26],[72.91,18.35],[72.89,18.46],[72.93,18.54],[72.86,18.7],[72.87,18.8],[72.8,18.91],[72.84,19.05],[72.79,19.13],[72.8,19.3],[72.65,19.84],[72.66,19.93],[72.73,19.97],[72.71,20.07],[72.87,20.23],[72.96,20.21],[72.96,20.13],[73.14,20.09],[73.25,20.12],[73.3,20.21],[73.42,20.2],[73.4,20.39],[73.47,20.5],[73.47,20.58],[73.41,20.62],[73.47,20.72],[73.61,20.63],[73.65,20.56],[73.74,20.56],[73.84,20.62],[73.87,20.73],[73.92,20.72],[73.94,20.84],[73.89,20.93],[73.67,21.15],[73.82,21.17],[73.82,21.27],[73.94,21.3],[73.96,21.4],[74.05,21.45],[74.32,21.5],[74.28,21.56],[74.16,21.57],[73.84,21.52],[73.81,21.64],[73.88,21.71],[73.82,21.76],[73.82,21.84],[74.15,21.95],[74.28,21.93],[74.43,22.03],[74.45,21.96],[74.52,21.91],[74.5,21.73],[74.58,21.66],[74.78,21.62],[74.86,21.63],[75.05,21.57],[75.11,21.46],[75.21,21.41],[75.38,21.38],[76.1,21.37],[76.16,21.25],[76.17,21.08],[76.38,21.08],[76.48,21.15],[76.49,21.19],[76.62,21.18],[76.66,21.28],[76.62,21.33],[76.78,21.46],[76.78,21.56],[76.86,21.61],[76.9,21.6],[77,21.69],[77.06,21.71],[77.21,21.69],[77.28,21.76],[77.48,21.77],[77.54,21.7],[77.58,21.53],[77.45,21.55],[77.49,21.37],[77.8,21.41],[77.88,21.38],[78.03,21.42],[78.22,21.55],[78.34,21.59],[78.42,21.57],[78.43,21.5],[78.51,21.53],[78.58,21.49],[78.9,21.5],[78.92,21.59],[79.22,21.65],[79.23,21.72],[79.5,21.67],[79.54,21.54],[79.74,21.6],[79.92,21.52],[80.07,21.55],[80.12,21.61],[80.27,21.62],[80.42,21.44],[80.62,21.32],[80.66,21.33],[80.61,21.23],[80.46,21.18],[80.44,21.1],[80.46,20.93],[80.55,20.93],[80.58,20.67],[80.52,20.58],[80.62,20.59],[80.59,20.39],[80.63,20.33],[80.4,20.24],[80.43,20.14],[80.51,20.14],[80.55,20.1],[80.53,19.94],[80.47,19.83],[80.55,19.82],[80.56,19.76],[80.67,19.7],[80.71,19.62],[80.9,19.52],[80.85,19.36],[80.75,19.29],[80.61,19.31],[80.58,19.4],[80.48,19.34],[80.39,19.19],[80.33,19.14],[80.27,18.94],[80.35,18.85],[80.27,18.77],[80.28,18.72],[80.12,18.68],[79.91,18.83],[79.96,18.87],[79.94,19.03],[79.86,19.1],[79.93,19.16],[79.98,19.4],[79.94,19.47],[79.81,19.58],[79.74,19.61],[79.47,19.5],[79.37,19.58],[79.25,19.59],[79.19,19.46],[79.1,19.53],[78.94,19.55],[78.96,19.66],[78.86,19.69],[78.84,19.76],[78.58,19.82],[78.43,19.81],[78.38,19.88],[78.31,19.91],[78.36,19.78],[78.34,19.71],[78.28,19.69],[78.31,19.48],[78.21,19.43],[78.17,19.24],[78.04,19.27],[77.94,19.34],[77.86,19.3],[77.86,19.18],[77.8,19.07],[77.84,18.91],[77.95,18.84],[77.84,18.81],[77.79,18.68],[77.73,18.67],[77.74,18.56],[77.6,18.55],[77.58,18.45],[77.52,18.37],[77.55,18.29],[77.47,18.26],[77.41,18.3],[77.41,18.39],[77.32,18.44],[77.26,18.42],[77.06,18.15],[76.95,18.19],[76.92,18.12],[76.95,18.04],[76.91,18.01],[76.92,17.92],[76.78,17.88],[76.74,17.9],[76.79,17.83],[76.71,17.78],[76.69,17.68],[76.52,17.76],[76.49,17.66],[76.33,17.6],[76.33,17.47],[76.37,17.44],[76.38,17.31],[76.23,17.37],[75.93,17.32],[75.89,17.4],[75.81,17.37],[75.63,17.48],[75.57,17.38],[75.6,17.31],[75.65,17.27],[75.63,17.17],[75.67,17.12],[75.67,16.98],[75.47,16.99],[75.28,16.96],[75.26,16.86],[75.18,16.84],[75.09,16.95],[74.9,16.86],[74.92,16.77],[74.7,16.72],[74.63,16.58],[74.57,16.55],[74.54,16.64],[74.32,16.55]]]},{"n":"Manipur","hi":"मणिपुर","p":[[[93.5,23.94],[93.38,24.09],[93.25,24.02],[92.98,24.12],[93.02,24.23],[93.01,24.41],[93.05,24.54],[93.09,24.57],[93.11,24.81],[93.17,24.8],[93.38,25.24],[93.47,25.31],[93.5,25.24],[93.61,25.2],[93.8,25.46],[93.76,25.54],[94.01,25.57],[94.11,25.52],[94.19,25.55],[94.21,25.5],[94.42,25.54],[94.49,25.6],[94.55,25.58],[94.55,25.5],[94.67,25.45],[94.58,25.21],[94.65,25.12],[94.74,25.11],[94.74,25.04],[94.69,24.89],[94.63,24.84],[94.63,24.76],[94.54,24.71],[94.53,24.64],[94.38,24.49],[94.41,24.44],[94.29,24.23],[94.16,23.85],[94.02,23.93],[93.89,23.95],[93.81,23.93],[93.74,24.01],[93.62,24.01],[93.5,23.94]]]},{"n":"Meghalaya","hi":"मेघालय","p":[[[91.25,25.2],[91.08,25.2],[90.85,25.16],[90.78,25.18],[90.51,25.17],[90.45,25.14],[90.33,25.19],[90.11,25.22],[89.97,25.3],[89.83,25.3],[89.82,25.39],[89.87,25.48],[89.88,25.55],[90.02,25.61],[89.9,25.73],[90.12,25.96],[90.19,25.94],[90.43,25.99],[90.63,25.92],[90.72,25.96],[90.95,25.95],[91.03,25.89],[91.01,25.82],[91.15,25.85],[91.22,25.72],[91.34,25.84],[91.45,25.84],[91.58,26.03],[91.72,25.97],[91.72,26.03],[91.83,26.12],[91.87,26.04],[92.27,26.07],[92.16,25.97],[92.2,25.91],[92.15,25.82],[92.15,25.67],[92.23,25.72],[92.44,25.72],[92.58,25.55],[92.66,25.57],[92.57,25.47],[92.65,25.43],[92.79,25.28],[92.62,25.12],[92.48,25.11],[92.43,25.03],[92.08,25.18],[91.75,25.17],[91.64,25.12],[91.6,25.17],[91.49,25.13],[91.38,25.18],[91.35,25.23],[91.25,25.2]]]},{"n":"Mizoram","hi":"मिज़ोरम","p":[[[92.6,22.01],[92.51,22.74],[92.45,22.88],[92.37,22.94],[92.39,23.06],[92.35,23.24],[92.4,23.27],[92.27,23.64],[92.26,23.81],[92.32,23.91],[92.33,24.18],[92.3,24.25],[92.42,24.25],[92.44,24.15],[92.53,24.18],[92.55,24.25],[92.61,24.26],[92.63,24.33],[92.69,24.35],[92.76,24.51],[92.8,24.42],[92.9,24.39],[93.01,24.41],[93.02,24.23],[92.98,24.12],[93.21,24.05],[93.4,23.93],[93.42,23.53],[93.39,23.5],[93.4,23.39],[93.36,23.33],[93.39,23.22],[93.36,23.07],[93.3,23],[93.2,23.06],[93.12,23.01],[93.15,22.93],[93.09,22.71],[93.14,22.58],[93.13,22.47],[93.19,22.42],[93.2,22.28],[93.16,22.18],[93.05,22.2],[93,22.05],[92.94,22.02],[92.71,22.15],[92.69,22.04],[92.6,22.01]]]},{"n":"Nagaland","hi":"नागालैंड","p":[[[93.33,25.54],[93.51,25.67],[93.54,25.73],[93.7,25.85],[93.68,25.9],[93.78,25.97],[93.78,25.85],[93.88,25.84],[93.98,25.92],[93.95,25.97],[94,26.17],[94.1,26.32],[94.16,26.35],[94.18,26.46],[94.28,26.56],[94.31,26.46],[94.4,26.53],[94.4,26.61],[94.59,26.73],[94.74,26.75],[94.92,26.95],[94.98,26.91],[95.2,27.03],[95.23,26.92],[95.2,26.85],[95.23,26.68],[95.06,26.45],[95.12,26.35],[95.12,26.11],[95.19,26.07],[95.01,25.89],[95.04,25.74],[94.94,25.67],[94.81,25.49],[94.67,25.45],[94.55,25.5],[94.55,25.58],[94.49,25.6],[94.42,25.54],[94.32,25.5],[94.21,25.5],[94.19,25.55],[94.11,25.52],[94.01,25.57],[93.76,25.54],[93.8,25.46],[93.61,25.2],[93.5,25.24],[93.46,25.43],[93.33,25.54]]]},{"n":"Odisha","hi":"ओडिशा","p":[[[82.35,18.17],[82.32,18.04],[82.25,17.99],[82.17,18.05],[82.03,18.07],[81.98,18.01],[81.81,17.96],[81.62,17.82],[81.4,17.82],[81.4,17.89],[81.48,17.98],[81.53,18.24],[81.66,18.35],[81.75,18.35],[81.77,18.42],[81.91,18.57],[81.9,18.66],[82.09,18.74],[82.16,18.79],[82.18,18.9],[82.25,18.92],[82.16,19.2],[82.19,19.43],[82.13,19.43],[82.1,19.52],[82.03,19.51],[82.07,19.79],[81.99,19.8],[81.97,19.86],[81.87,19.9],[81.84,19.95],[81.88,20.05],[81.95,20.11],[82.02,20.05],[82.07,20.06],[82.18,19.98],[82.27,19.98],[82.34,19.84],[82.45,19.91],[82.53,19.88],[82.59,19.78],[82.7,19.83],[82.72,19.99],[82.4,20.06],[82.39,20.15],[82.42,20.2],[82.4,20.34],[82.44,20.43],[82.33,20.56],[82.38,20.63],[82.34,20.87],[82.46,20.83],[82.49,20.91],[82.56,20.95],[82.64,21.09],[82.64,21.15],[82.97,21.18],[83.08,21.11],[83.19,21.14],[83.27,21.38],[83.39,21.34],[83.4,21.4],[83.34,21.5],[83.38,21.62],[83.49,21.64],[83.46,21.7],[83.59,21.83],[83.54,22.05],[83.63,22.2],[83.86,22.34],[84.01,22.37],[84.05,22.47],[84.01,22.53],[84.11,22.48],[84.2,22.38],[84.29,22.34],[84.43,22.35],[84.53,22.43],[84.75,22.42],[84.81,22.45],[84.96,22.45],[85.07,22.49],[85.08,22.26],[85.03,22.12],[85.18,22.07],[85.24,22.01],[85.27,22.08],[85.4,22.16],[85.68,22.06],[85.75,22.07],[85.78,21.98],[85.9,21.98],[86.01,22.12],[86.03,22.19],[85.97,22.25],[86.03,22.33],[86.02,22.43],[85.96,22.49],[86.07,22.56],[86.12,22.49],[86.28,22.45],[86.36,22.35],[86.43,22.32],[86.5,22.35],[86.73,22.22],[86.84,22.1],[86.96,22.09],[87.03,22.04],[87,21.91],[87.1,21.86],[87.11,21.92],[87.24,21.96],[87.25,21.85],[87.28,21.8],[87.44,21.77],[87.48,21.62],[87.41,21.54],[87.15,21.51],[86.95,21.36],[86.86,21.21],[86.85,21.09],[86.98,20.86],[86.97,20.79],[86.87,20.78],[86.81,20.74],[86.86,20.78],[87.02,20.77],[87.06,20.71],[86.79,20.53],[86.74,20.46],[86.78,20.34],[86.53,20.18],[86.37,19.98],[86.23,19.9],[85.68,19.75],[85.35,19.59],[84.98,19.32],[84.77,19.08],[84.7,19.12],[84.62,19.09],[84.59,19.02],[84.51,19.05],[84.32,18.79],[84.22,18.8],[84.09,18.76],[84.04,18.82],[83.89,18.82],[83.79,19.02],[83.75,18.99],[83.76,18.91],[83.66,19.1],[83.48,19.03],[83.46,18.96],[83.35,19.02],[83.32,18.97],[83.41,18.87],[83.2,18.75],[83.14,18.79],[83,18.61],[83.04,18.55],[83.02,18.46],[83.08,18.4],[82.97,18.36],[82.81,18.45],[82.77,18.34],[82.59,18.28],[82.61,18.37],[82.49,18.53],[82.36,18.42],[82.38,18.37],[82.31,18.19],[82.35,18.17]]]},{"n":"Puducherry","hi":"पुदुचेरी","p":[[[79.85,10.83],[79.82,10.88],[79.72,10.93],[79.75,11],[79.85,10.99],[79.85,10.83]],[[79.81,11.84],[79.69,11.88],[79.79,11.96],[79.84,11.96],[79.81,11.84]]]},{"n":"Punjab","hi":"पंजाब","p":[[[75.46,29.81],[75.35,29.7],[75.3,29.56],[75.17,29.67],[75.24,29.75],[75.19,29.84],[75.12,29.83],[75,29.87],[74.93,29.95],[74.81,29.99],[74.71,29.97],[74.65,29.91],[73.89,29.97],[73.9,30.05],[73.98,30.12],[73.96,30.27],[73.88,30.36],[73.96,30.42],[73.96,30.49],[74.22,30.69],[74.37,30.89],[74.6,31.04],[74.71,31.07],[74.69,31.13],[74.51,31.13],[74.55,31.36],[74.65,31.46],[74.5,31.74],[74.56,31.76],[74.57,31.84],[74.67,31.92],[74.81,31.96],[74.91,32.04],[75.17,32.07],[75.38,32.18],[75.38,32.27],[75.34,32.35],[75.51,32.31],[75.6,32.38],[75.69,32.39],[75.73,32.45],[75.84,32.51],[75.93,32.39],[75.87,32.4],[75.77,32.29],[75.64,32.25],[75.66,32.14],[75.6,32.08],[75.91,31.95],[76.02,31.63],[76.12,31.5],[76.2,31.3],[76.29,31.31],[76.39,31.41],[76.5,31.27],[76.59,31.27],[76.65,31.21],[76.62,31],[76.85,30.83],[76.84,30.75],[76.71,30.76],[76.74,30.69],[76.83,30.68],[76.93,30.61],[76.91,30.43],[76.75,30.43],[76.71,30.33],[76.56,30.24],[76.64,30.15],[76.58,30.1],[76.47,30.1],[76.41,30.15],[76.25,30.09],[76.17,29.93],[76.21,29.84],[76.1,29.81],[76.05,29.75],[75.95,29.73],[75.78,29.82],[75.58,29.74],[75.46,29.81]]]},{"n":"Rajasthan","hi":"राजस्थान","p":[[[74.51,23.08],[74.39,23.11],[74.32,23.06],[74.25,23.18],[74.13,23.18],[74.14,23.27],[73.98,23.34],[73.96,23.38],[73.89,23.33],[73.83,23.43],[73.76,23.45],[73.63,23.45],[73.66,23.62],[73.57,23.65],[73.52,23.61],[73.37,23.81],[73.38,23.9],[73.42,23.92],[73.41,24.04],[73.32,24.05],[73.24,24],[73.21,24.08],[73.07,24.19],[73.15,24.35],[73.08,24.4],[73.09,24.5],[73,24.48],[72.96,24.36],[72.73,24.37],[72.68,24.46],[72.52,24.5],[72.5,24.42],[72.35,24.56],[72.33,24.63],[72.17,24.62],[72.06,24.71],[71.66,24.64],[71.61,24.68],[71.48,24.68],[71.29,24.62],[71.11,24.68],[70.94,24.94],[70.89,25.15],[70.67,25.4],[70.67,25.68],[70.61,25.71],[70.39,25.67],[70.27,25.71],[70.1,25.94],[70.08,26.08],[70.17,26.25],[70.17,26.55],[70.06,26.6],[69.79,26.6],[69.51,26.74],[69.48,26.8],[69.51,27.01],[69.59,27.18],[70.03,27.56],[70.13,27.81],[70.37,28.01],[70.51,28.04],[70.59,28.01],[70.68,27.92],[70.68,27.83],[70.76,27.72],[70.91,27.71],[71.2,27.84],[71.38,27.87],[71.67,27.88],[71.87,27.96],[71.88,27.91],[71.93,28.12],[72.21,28.39],[72.3,28.67],[72.4,28.78],[72.95,29.03],[73.28,29.57],[73.4,29.95],[73.81,30.07],[73.97,30.19],[73.98,30.12],[73.9,30.05],[73.89,29.97],[74.53,29.94],[74.56,29.87],[74.48,29.81],[74.48,29.75],[74.62,29.75],[74.58,29.56],[74.62,29.53],[74.58,29.46],[74.6,29.36],[74.79,29.36],[74.85,29.4],[74.94,29.36],[74.96,29.28],[75.05,29.29],[75.08,29.23],[75.35,29.28],[75.41,29.26],[75.39,29.06],[75.44,29.06],[75.53,28.97],[75.47,28.93],[75.56,28.61],[75.62,28.6],[75.67,28.52],[75.89,28.39],[76.06,28.22],[76,28.12],[75.97,27.93],[75.93,27.93],[75.97,27.85],[76.18,27.8],[76.23,27.83],[76.17,27.9],[76.16,28],[76.26,28.07],[76.32,28.02],[76.36,28.12],[76.31,28.18],[76.54,28.03],[76.54,27.97],[76.67,28.01],[76.69,28.09],[76.8,28.15],[76.85,28.22],[76.97,28.14],[76.93,27.99],[76.94,27.84],[76.89,27.73],[76.98,27.65],[77.04,27.82],[77.28,27.8],[77.35,27.65],[77.34,27.53],[77.65,27.24],[77.66,27.17],[77.55,27.11],[77.66,26.97],[77.4,26.83],[77.45,26.74],[77.52,26.82],[77.72,26.87],[77.76,26.93],[77.99,26.89],[78.11,26.9],[78.15,26.95],[78.27,26.92],[78.22,26.83],[78.11,26.8],[78.09,26.68],[78,26.69],[77.9,26.66],[77.82,26.55],[77.75,26.54],[77.54,26.41],[77.44,26.4],[77.27,26.27],[76.9,26.09],[76.79,25.94],[76.72,25.9],[76.64,25.91],[76.55,25.84],[76.5,25.67],[76.52,25.53],[76.67,25.35],[76.76,25.32],[76.86,25.33],[76.95,25.28],[77.08,25.34],[77.22,25.32],[77.23,25.38],[77.31,25.43],[77.37,25.41],[77.41,25.22],[77.39,25.12],[77.31,25.08],[77.27,25.12],[77.17,25.11],[77.09,25.05],[77,25.08],[76.88,25.04],[76.86,24.96],[76.95,24.87],[76.8,24.81],[76.86,24.74],[76.95,24.76],[77.03,24.71],[77.07,24.56],[76.98,24.46],[76.86,24.55],[76.82,24.53],[76.83,24.36],[76.92,24.21],[76.88,24.13],[76.8,24.12],[76.68,24.19],[76.64,24.27],[76.57,24.21],[76.32,24.25],[76.12,24.19],[76.13,24.09],[76.04,24.07],[75.94,23.9],[75.79,23.87],[75.69,23.75],[75.58,23.8],[75.56,23.86],[75.46,23.92],[75.52,24.03],[75.7,23.97],[75.84,24.06],[75.75,24.14],[75.81,24.25],[75.73,24.4],[75.79,24.45],[75.9,24.44],[75.92,24.54],[75.78,24.76],[75.61,24.68],[75.55,24.7],[75.46,24.68],[75.18,24.75],[75.34,24.95],[75.35,25.02],[75.19,25.04],[75.11,24.97],[75.12,24.88],[75.04,24.85],[74.96,24.86],[74.9,24.93],[74.83,24.9],[74.86,24.8],[74.98,24.76],[74.99,24.69],[74.89,24.63],[74.8,24.74],[74.77,24.66],[74.79,24.59],[74.7,24.48],[74.82,24.47],[74.85,24.42],[74.78,24.34],[74.75,24.24],[74.87,24.24],[74.91,24.21],[74.88,24.17],[74.97,24.04],[74.9,23.87],[74.94,23.77],[74.92,23.67],[74.85,23.55],[74.77,23.54],[74.57,23.42],[74.53,23.32],[74.73,23.22],[74.51,23.08]]]},{"n":"Sikkim","hi":"सिक्किम","p":[[[88.92,27.32],[88.9,27.27],[88.8,27.25],[88.79,27.19],[88.72,27.14],[88.6,27.19],[88.53,27.18],[88.42,27.07],[88.28,27.13],[88.15,27.11],[88.1,27.13],[88.04,27.22],[88.04,27.48],[88.2,27.79],[88.2,27.94],[88.47,28.02],[88.62,28.1],[88.76,28.08],[88.84,27.99],[88.84,27.93],[88.89,27.86],[88.86,27.82],[88.85,27.67],[88.76,27.57],[88.79,27.42],[88.92,27.32]]]},{"n":"Tamil Nadu","hi":"तमिलनाडु","p":[[[77.26,8.51],[77.27,8.58],[77.17,8.74],[77.26,8.88],[77.15,9.01],[77.27,9.15],[77.28,9.3],[77.4,9.53],[77.32,9.6],[77.27,9.57],[77.17,9.61],[77.25,9.8],[77.21,9.88],[77.29,10.23],[77.18,10.36],[76.98,10.22],[76.89,10.26],[76.82,10.42],[76.84,10.6],[76.91,10.78],[76.83,10.87],[76.66,10.94],[76.75,11.08],[76.69,11.17],[76.71,11.24],[76.63,11.19],[76.44,11.2],[76.52,11.27],[76.55,11.36],[76.23,11.53],[76.38,11.6],[76.42,11.67],[76.51,11.7],[76.56,11.62],[76.85,11.59],[76.84,11.65],[76.91,11.8],[77.01,11.81],[77.11,11.77],[77.29,11.81],[77.43,11.77],[77.49,11.94],[77.68,11.95],[77.78,12.11],[77.75,12.16],[77.61,12.21],[77.51,12.2],[77.47,12.24],[77.62,12.37],[77.64,12.49],[77.59,12.51],[77.6,12.67],[77.74,12.67],[77.83,12.87],[77.93,12.89],[77.98,12.84],[78.06,12.85],[78.13,12.78],[78.23,12.76],[78.3,12.67],[78.41,12.63],[78.59,12.78],[78.62,12.99],[78.89,13.1],[79.16,13.02],[79.23,13.11],[79.23,13.16],[79.28,13.12],[79.44,13.19],[79.41,13.33],[79.54,13.34],[79.53,13.28],[79.68,13.3],[79.7,13.22],[79.79,13.24],[79.81,13.32],[79.95,13.36],[80.04,13.54],[80.08,13.49],[80.21,13.49],[80.27,13.56],[80.33,13.44],[80.34,13.28],[80.25,12.78],[80.14,12.41],[79.86,12.05],[79.84,11.96],[79.79,11.96],[79.69,11.88],[79.81,11.84],[79.76,11.62],[79.86,11.18],[79.85,10.99],[79.75,11],[79.72,10.93],[79.82,10.88],[79.85,10.83],[79.86,10.28],[79.39,10.32],[79.27,10.23],[79.23,10.14],[79.25,10.05],[78.98,9.69],[78.9,9.47],[79.06,9.3],[79.34,9.31],[79.3,9.25],[79.2,9.28],[78.87,9.26],[78.58,9.13],[78.38,9.09],[78.23,8.97],[78.17,8.88],[78.16,8.81],[78.19,8.75],[78.14,8.68],[78.14,8.5],[78.06,8.38],[77.84,8.25],[77.79,8.16],[77.59,8.14],[77.56,8.08],[77.23,8.18],[77.1,8.29],[77.26,8.51]]]},{"n":"Telangana","hi":"तेलंगाना","p":[[[77.29,16.41],[77.24,16.47],[77.42,16.52],[77.45,16.62],[77.43,16.72],[77.48,16.79],[77.46,16.88],[77.5,17.04],[77.46,17.11],[77.36,17.16],[77.38,17.22],[77.51,17.43],[77.69,17.51],[77.44,17.58],[77.45,17.69],[77.66,17.97],[77.55,18.06],[77.6,18.09],[77.56,18.2],[77.6,18.28],[77.55,18.29],[77.52,18.37],[77.58,18.45],[77.6,18.55],[77.74,18.56],[77.73,18.67],[77.79,18.68],[77.84,18.81],[77.95,18.84],[77.84,18.91],[77.8,19.07],[77.86,19.18],[77.86,19.3],[77.94,19.34],[78.04,19.27],[78.17,19.24],[78.21,19.43],[78.31,19.48],[78.28,19.69],[78.34,19.71],[78.36,19.78],[78.31,19.91],[78.38,19.88],[78.43,19.81],[78.58,19.82],[78.84,19.76],[78.86,19.69],[78.96,19.66],[78.94,19.55],[79.1,19.53],[79.19,19.46],[79.25,19.59],[79.37,19.58],[79.47,19.5],[79.74,19.61],[79.94,19.47],[79.98,19.4],[79.93,19.16],[79.86,19.1],[79.94,19.03],[79.96,18.87],[79.91,18.83],[80.12,18.68],[80.28,18.72],[80.37,18.61],[80.45,18.63],[80.64,18.52],[80.71,18.44],[80.76,18.17],[80.85,18.21],[80.87,18.14],[80.98,18.17],[80.97,18.05],[81.02,17.79],[81.08,17.8],[81.06,17.73],[80.97,17.78],[80.89,17.74],[80.91,17.64],[81.02,17.52],[81.31,17.41],[81.27,17.32],[81.19,17.32],[81.17,17.23],[80.99,17.19],[80.94,17.22],[80.88,17.16],[80.88,17.07],[80.84,17.04],[80.58,17.15],[80.36,16.98],[80.53,16.96],[80.6,16.92],[80.57,16.77],[80.32,16.88],[80.31,16.97],[80.19,17.02],[80.06,16.97],[80.06,16.74],[79.95,16.64],[79.79,16.73],[79.45,16.62],[79.42,16.58],[79.26,16.57],[79.22,16.51],[79.21,16.23],[79.16,16.21],[79.03,16.24],[78.9,16.18],[78.92,16.12],[78.74,16.01],[78.6,16.08],[78.55,16.04],[78.41,16.07],[78.26,16.01],[78.17,15.86],[78.08,15.84],[77.89,15.91],[77.8,15.87],[77.66,15.89],[77.51,15.93],[77.5,16.22],[77.59,16.34],[77.29,16.41]]]},{"n":"Tripura","hi":"त्रिपुरा","p":[[[91.76,23.27],[91.82,23.15],[91.81,23.06],[91.72,22.99],[91.58,22.97],[91.54,23],[91.51,23.18],[91.45,23.26],[91.32,23.28],[91.26,23.49],[91.16,23.59],[91.16,23.74],[91.23,23.73],[91.25,23.83],[91.22,23.88],[91.3,24],[91.63,24.1],[91.66,24.19],[91.76,24.14],[91.75,24.25],[91.92,24.11],[91.92,24.34],[91.97,24.38],[92.07,24.38],[92.14,24.43],[92.16,24.53],[92.21,24.51],[92.26,24.36],[92.22,24.29],[92.3,24.25],[92.33,24.18],[92.32,23.91],[92.26,23.81],[92.26,23.73],[92.18,23.71],[92.12,23.73],[92.06,23.64],[91.94,23.69],[91.97,23.48],[91.94,23.43],[91.87,23.45],[91.8,23.52],[91.84,23.37],[91.76,23.27]]]},{"n":"Uttar Pradesh","hi":"उत्तर प्रदेश","p":[[[78.75,24.6],[78.88,24.64],[78.95,24.55],[78.91,24.46],[78.99,24.42],[78.97,24.35],[78.81,24.18],[78.5,24.39],[78.39,24.26],[78.33,24.33],[78.37,24.37],[78.27,24.45],[78.28,24.66],[78.17,24.88],[78.35,25.01],[78.34,25.08],[78.45,25.12],[78.34,25.33],[78.34,25.43],[78.4,25.44],[78.45,25.57],[78.66,25.56],[78.72,25.6],[78.81,25.62],[78.76,25.72],[78.94,25.95],[78.95,26.03],[79.01,26.08],[78.99,26.2],[79.14,26.34],[79.14,26.44],[78.99,26.58],[79.01,26.67],[78.87,26.7],[78.78,26.77],[78.54,26.76],[78.4,26.82],[78.36,26.87],[78.22,26.83],[78.27,26.92],[78.15,26.95],[78.11,26.9],[77.99,26.89],[77.76,26.93],[77.72,26.87],[77.52,26.82],[77.45,26.74],[77.4,26.83],[77.66,26.97],[77.55,27.11],[77.66,27.17],[77.65,27.24],[77.34,27.53],[77.35,27.65],[77.28,27.8],[77.53,27.93],[77.54,27.99],[77.48,28.08],[77.51,28.37],[77.3,28.57],[77.34,28.61],[77.3,28.71],[77.21,28.79],[77.23,28.92],[77.17,29.03],[77.14,29.17],[77.15,29.3],[77.11,29.63],[77.15,29.69],[77.12,29.76],[77.17,29.8],[77.23,29.94],[77.58,30.31],[77.58,30.4],[77.66,30.4],[77.72,30.33],[77.96,30.24],[77.86,30.11],[77.8,30.1],[77.72,29.89],[77.82,29.67],[77.93,29.71],[78.02,29.58],[78.2,29.74],[78.34,29.8],[78.51,29.72],[78.53,29.64],[78.62,29.56],[78.8,29.46],[78.93,29.44],[78.76,29.26],[78.88,29.21],[78.93,29.12],[79.04,29.17],[79.15,29.12],[79.14,29.07],[79.26,28.99],[79.41,28.95],[79.42,28.9],[79.58,28.85],[79.82,28.89],[79.95,28.72],[80.03,28.75],[80.06,28.84],[80.12,28.83],[80.28,28.71],[80.31,28.63],[80.46,28.62],[80.55,28.69],[80.67,28.64],[80.71,28.57],[81.21,28.36],[81.23,28.29],[81.32,28.2],[81.43,28.17],[81.48,28.08],[81.88,27.86],[81.96,27.92],[82.07,27.92],[82.12,27.87],[82.21,27.84],[82.45,27.68],[82.66,27.72],[82.71,27.7],[82.75,27.59],[82.73,27.49],[82.93,27.5],[83.03,27.45],[83.19,27.45],[83.29,27.34],[83.34,27.34],[83.41,27.41],[83.4,27.48],[83.61,27.47],[83.83,27.37],[83.99,27.17],[83.96,27.08],[84.05,27.04],[84.06,26.89],[84.26,26.8],[84.33,26.68],[84.42,26.63],[84.28,26.6],[84.11,26.63],[84.05,26.55],[83.92,26.5],[83.91,26.45],[84.16,26.38],[84.18,26.26],[84.09,26.22],[84.06,26.1],[84.3,25.95],[84.35,25.96],[84.62,25.79],[84.6,25.73],[84.56,25.68],[84.34,25.74],[84.32,25.67],[84.21,25.67],[84.14,25.73],[84.07,25.7],[84.08,25.64],[83.93,25.56],[83.85,25.43],[83.54,25.31],[83.35,25.18],[83.4,24.78],[83.49,24.74],[83.53,24.64],[83.52,24.55],[83.4,24.5],[83.38,24.31],[83.41,24.27],[83.33,24.1],[83.21,23.92],[83.09,23.87],[82.95,23.87],[82.81,23.96],[82.66,24.13],[82.74,24.17],[82.77,24.37],[82.71,24.38],[82.8,24.58],[82.77,24.64],[82.71,24.64],[82.67,24.7],[82.42,24.65],[82.42,24.59],[82.3,24.61],[82.22,24.79],[81.94,24.85],[81.89,24.99],[81.67,25.06],[81.63,25.16],[81.54,25.19],[81.5,25.15],[81.39,25.13],[81.28,25.17],[81.26,25.05],[81.16,24.91],[81.12,24.9],[80.95,24.97],[80.86,24.93],[80.83,25.03],[80.88,25.07],[80.84,25.19],[80.72,25.12],[80.71,25.07],[80.59,25.09],[80.5,25.04],[80.48,24.98],[80.4,25.07],[80.34,25.01],[80.26,25.02],[80.43,25.17],[80.4,25.24],[80.31,25.29],[80.32,25.39],[80.22,25.4],[80.03,25.34],[79.86,25.19],[79.84,25.1],[79.75,25.14],[79.67,25.12],[79.57,25.17],[79.49,25.08],[79.41,25.11],[79.39,25.17],[79.44,25.25],[79.35,25.33],[79.28,25.32],[79.26,25.27],[79.32,25.15],[79.13,25.11],[79.06,25.22],[78.93,25.21],[78.88,25.16],[78.96,25.34],[78.88,25.39],[78.94,25.49],[78.88,25.52],[78.73,25.46],[78.77,25.35],[78.66,25.38],[78.51,25.28],[78.64,25.07],[78.63,24.96],[78.68,24.9],[78.77,24.86],[78.78,24.71],[78.75,24.6]]]},{"n":"Uttarakhand","hi":"उत्तराखंड","p":[[[78.53,29.64],[78.51,29.72],[78.34,29.8],[78.2,29.74],[78.02,29.58],[77.93,29.71],[77.82,29.67],[77.72,29.89],[77.8,30.1],[77.86,30.11],[77.96,30.24],[77.72,30.33],[77.66,30.4],[77.58,30.4],[77.82,30.51],[77.82,30.56],[77.7,30.76],[77.81,30.85],[77.86,31.11],[77.97,31.17],[78.25,31.23],[78.31,31.28],[78.37,31.29],[78.48,31.2],[78.61,31.23],[78.67,31.2],[78.81,31.2],[78.89,31.1],[79.01,31.11],[78.88,31.28],[79.07,31.46],[79.14,31.43],[79.17,31.36],[79.23,31.33],[79.22,31.26],[79.3,31.22],[79.32,31.14],[79.51,31.03],[79.6,30.93],[79.73,30.98],[79.86,30.97],[79.89,30.92],[80.05,30.84],[80.1,30.79],[80.17,30.81],[80.25,30.74],[80.21,30.58],[80.42,30.52],[80.54,30.45],[80.61,30.47],[80.8,30.32],[81,30.27],[81.05,30.21],[80.93,30.17],[80.68,29.96],[80.6,29.96],[80.55,29.85],[80.43,29.8],[80.37,29.74],[80.41,29.6],[80.24,29.44],[80.32,29.3],[80.26,29.19],[80.14,29.1],[80.03,28.75],[79.95,28.72],[79.82,28.89],[79.58,28.85],[79.42,28.9],[79.41,28.95],[79.26,28.99],[79.14,29.07],[79.15,29.12],[79.04,29.17],[78.93,29.12],[78.88,29.21],[78.76,29.26],[78.93,29.44],[78.8,29.46],[78.62,29.56],[78.53,29.64]]]},{"n":"West Bengal","hi":"पश्चिम बंगाल","p":[[[88.19,22.1],[88.06,22.02],[87.96,21.83],[87.79,21.7],[87.48,21.62],[87.44,21.77],[87.28,21.8],[87.25,21.85],[87.24,21.96],[87.11,21.92],[87.1,21.86],[87,21.91],[87.03,22.04],[86.96,22.09],[86.84,22.1],[86.73,22.22],[86.83,22.33],[86.85,22.4],[86.76,22.43],[86.8,22.49],[86.77,22.58],[86.66,22.58],[86.64,22.66],[86.42,22.79],[86.44,22.93],[86.5,22.99],[86.24,23],[86.04,23.15],[85.89,23.17],[85.82,23.27],[85.88,23.35],[85.86,23.43],[85.89,23.48],[86.04,23.5],[86.08,23.57],[86.16,23.56],[86.18,23.47],[86.31,23.41],[86.37,23.53],[86.49,23.64],[86.8,23.7],[86.83,23.77],[86.8,23.83],[86.92,23.88],[87.09,23.81],[87.13,23.85],[87.23,23.86],[87.29,23.9],[87.23,24.03],[87.34,24.03],[87.44,23.98],[87.63,24.16],[87.64,24.25],[87.71,24.26],[87.8,24.38],[87.79,24.58],[87.89,24.57],[87.91,24.72],[87.84,24.75],[87.96,24.92],[87.95,24.97],[87.79,25.09],[87.78,25.25],[87.71,25.26],[87.76,25.27],[87.82,25.24],[87.85,25.3],[87.78,25.34],[87.77,25.42],[87.87,25.5],[87.96,25.54],[88.07,25.48],[88.02,25.6],[88.05,25.7],[87.97,25.73],[87.89,25.87],[87.83,25.89],[87.82,25.94],[87.85,26.04],[88.28,26.33],[88.24,26.46],[88.11,26.55],[88.19,26.77],[88.12,26.95],[87.99,27.11],[88.04,27.22],[88.1,27.13],[88.15,27.11],[88.28,27.13],[88.42,27.07],[88.53,27.18],[88.6,27.19],[88.87,27.11],[88.87,26.97],[88.92,26.99],[89.09,26.89],[89.13,26.81],[89.26,26.81],[89.37,26.85],[89.45,26.8],[89.55,26.81],[89.76,26.7],[89.85,26.7],[89.87,26.61],[89.84,26.38],[89.78,26.35],[89.7,26.22],[89.73,26.17],[89.63,26.23],[89.61,26.15],[89.65,26.06],[89.54,26.01],[89.35,26.01],[89.23,26.12],[89.15,26.14],[89.1,26.39],[88.98,26.45],[88.91,26.38],[88.99,26.35],[88.93,26.28],[88.76,26.33],[88.42,26.56],[88.4,26.64],[88.33,26.5],[88.48,26.46],[88.52,26.36],[88.4,26.33],[88.35,26.22],[88.18,26.15],[88.09,25.93],[88.1,25.83],[88.14,25.79],[88.27,25.78],[88.45,25.66],[88.45,25.6],[88.65,25.48],[88.81,25.52],[88.84,25.36],[88.99,25.27],[88.91,25.18],[88.44,25.2],[88.45,25.08],[88.39,24.97],[88.28,24.89],[88.23,24.96],[88.14,24.91],[88.17,24.86],[88.07,24.77],[88.03,24.69],[88.13,24.51],[88.33,24.44],[88.56,24.31],[88.68,24.32],[88.74,24.25],[88.75,24.15],[88.7,24.1],[88.74,24.03],[88.73,23.91],[88.61,23.86],[88.56,23.71],[88.59,23.62],[88.76,23.45],[88.71,23.23],[88.81,23.26],[88.94,23.21],[88.86,22.97],[88.97,22.84],[88.91,22.76],[88.96,22.69],[88.93,22.65],[89,22.43],[89,22.29],[89.07,22.21],[89.07,21.95],[89.01,21.9],[88.93,21.94],[88.85,21.92],[88.76,21.95],[88.76,22.02],[88.63,21.95],[88.53,21.85],[88.44,21.92],[88.39,21.9],[88.36,21.8],[88.27,21.73],[88.3,21.67],[88.26,21.56],[88.15,21.95],[88.21,22.03],[88.22,22.1],[88.18,22.19],[88.08,22.26],[88,22.24],[88.02,22.2],[88.14,22.19],[88.19,22.1]],[[88.78,21.87],[88.81,21.67],[88.75,21.66],[88.69,21.75],[88.72,21.91],[88.78,21.87]],[[88.13,21.67],[88.03,21.69],[88.1,21.84],[88.17,21.82],[88.17,21.74],[88.13,21.67]],[[88.95,21.77],[88.82,21.93],[88.88,21.91],[88.94,21.91],[88.95,21.77]],[[89.04,21.61],[89.02,21.78],[89.09,21.65],[89.04,21.61]]]}];
+const DATA = [{"n": "NH 44", "h": "एनएच 44", "sub": "Srinagar – Kanyakumari", "subh": "श्रीनगर – कन्याकुमारी", "alt": "Old NH 1A·1·2·3·7·26", "alth": "पुराना एनएच 1ए·1·2·3·7·26", "L": 3745, "st": "J&K→Tamil Nadu (11 states)", "sh": "ज&क→तमिलनाडु (11 राज्य)", "fact": "Longest National Highway in India; forms the North–South Corridor backbone.", "facth": "भारत का सबसे लंबा राष्ट्रीय राजमार्ग; उत्तर–दक्षिण गलियारे की रीढ़।", "rg": "N", "d": 1, "eps": [{"n": "Srinagar", "h": "Srinagar", "lng": 74.8, "lat": 34.08}, {"n": "Kanyakumari", "h": "Kanyakumari", "lng": 77.55, "lat": 8.08}], "wp": [[74.8, 34.08], [74.87, 32.73], [75.65, 32.27], [75.58, 31.33], [77.21, 28.61], [78.01, 27.18], [78.18, 26.22], [78.57, 25.45], [79.09, 21.15], [78.49, 17.39], [77.59, 12.97], [78.15, 11.66], [78.12, 9.93], [77.55, 8.08]]}, {"n": "NH 27", "h": "एनएच 27", "sub": "Porbandar – Silchar", "subh": "पोरबंदर – सिलचर", "alt": "Old NH 8B·76·3·25·28·31·37", "alth": "पुराना एनएच 8बी·76·3·25·28·31·37", "L": 3507, "st": "Gujarat→Assam (7 states)", "sh": "गुजरात→असम (7 राज्य)", "fact": "Longest East–West highway; aligns with the East–West Corridor.", "facth": "सबसे लंबा पूर्व–पश्चिम राजमार्ग; पूर्व–पश्चिम गलियारे के अनुरूप।", "rg": "C", "d": 1, "eps": [{"n": "Porbandar", "h": "Porbandar", "lng": 69.61, "lat": 21.64}, {"n": "Silchar", "h": "Silchar", "lng": 92.78, "lat": 24.83}], "wp": [[69.61, 21.64], [70.8, 22.3], [72.58, 23.03], [73.68, 24.58], [75.86, 25.21], [78.57, 25.45], [80.33, 26.45], [80.95, 26.85], [83.37, 26.76], [85.39, 26.12], [88.43, 26.71], [91.74, 26.14], [92.78, 24.83]]}, {"n": "NH 48", "h": "एनएच 48", "sub": "Delhi – Chennai (via Mumbai)", "subh": "दिल्ली – चेन्नई (मुंबई)", "alt": "Old NH 8 + NH 4", "alth": "पुराना एनएच 8 + एनएच 4", "L": 2807, "st": "Delhi→Tamil Nadu", "sh": "दिल्ली→तमिलनाडु", "fact": "Busiest highway; Delhi–Mumbai stretch is the old NH 8. Links 4 of the 6 megacities.", "facth": "सबसे व्यस्त राजमार्ग; दिल्ली–मुंबई खंड पुराना एनएच 8। 6 में से 4 महानगर जोड़ता है।", "rg": "W", "d": 1, "eps": [{"n": "Delhi", "h": "Delhi", "lng": 77.21, "lat": 28.61}, {"n": "Chennai", "h": "Chennai", "lng": 80.27, "lat": 13.08}], "wp": [[77.21, 28.61], [75.79, 26.91], [73.68, 24.58], [72.58, 23.03], [73.18, 22.31], [72.83, 21.17], [72.88, 19.08], [73.86, 18.52], [74.5, 15.85], [75.12, 15.36], [77.59, 12.97], [79.13, 12.92], [80.27, 13.08]]}, {"n": "NH 16", "h": "एनएच 16", "sub": "Kolkata – Chennai (East Coast)", "subh": "कोलकाता – चेन्नई (पूर्वी तट)", "alt": "Old NH 5", "alth": "पुराना एनएच 5", "L": 1711, "st": "WB→Tamil Nadu", "sh": "प.बंगाल→तमिलनाडु", "fact": "Runs along the eastern coast; part of the Golden Quadrilateral.", "facth": "पूर्वी तट के साथ; स्वर्णिम चतुर्भुज का भाग।", "rg": "E", "d": 2, "eps": [{"n": "Kolkata", "h": "Kolkata", "lng": 88.36, "lat": 22.57}, {"n": "Chennai", "h": "Chennai", "lng": 80.27, "lat": 13.08}], "wp": [[88.36, 22.57], [85.82, 20.3], [83.22, 17.69], [80.62, 16.51], [79.99, 14.44], [80.27, 13.08]]}, {"n": "NH 19", "h": "एनएच 19", "sub": "Delhi – Kolkata", "subh": "दिल्ली – कोलकाता", "alt": "Old NH 2 (Grand Trunk Road)", "alth": "पुराना एनएच 2 (जीटी रोड)", "L": 1435, "st": "Delhi→WB", "sh": "दिल्ली→प.बंगाल", "fact": "Follows the historic Grand Trunk Road; part of the Golden Quadrilateral.", "facth": "ऐतिहासिक ग्रैंड ट्रंक रोड पर; स्वर्णिम चतुर्भुज का भाग।", "rg": "N", "d": 1, "eps": [{"n": "Delhi", "h": "Delhi", "lng": 77.21, "lat": 28.61}, {"n": "Kolkata", "h": "Kolkata", "lng": 88.36, "lat": 22.57}], "wp": [[77.21, 28.61], [78.01, 27.18], [80.33, 26.45], [81.85, 25.44], [82.97, 25.32], [86.43, 23.8], [86.99, 23.68], [87.31, 23.52], [88.36, 22.57]]}, {"n": "NH 66", "h": "एनएच 66", "sub": "Panvel (Mumbai) – Kanyakumari", "subh": "पनवेल (मुंबई) – कन्याकुमारी", "alt": "Old NH 17 + NH 47", "alth": "पुराना एनएच 17 + एनएच 47", "L": 1622, "st": "Maharashtra→Tamil Nadu", "sh": "महाराष्ट्र→तमिलनाडु", "fact": "The Konkan/West-coast highway hugging the Arabian Sea shoreline.", "facth": "कोंकण/पश्चिमी तट राजमार्ग, अरब सागर तट के साथ।", "rg": "S", "d": 2, "eps": [{"n": "Mumbai", "h": "Mumbai", "lng": 72.88, "lat": 19.08}, {"n": "Kanyakumari", "h": "Kanyakumari", "lng": 77.55, "lat": 8.08}], "wp": [[72.88, 19.08], [73.83, 15.49], [74.86, 12.91], [75.78, 11.25], [76.27, 9.93], [76.94, 8.52], [77.55, 8.08]]}, {"n": "NH 53", "h": "एनएच 53", "sub": "Surat – Paradip (Central E–W)", "subh": "सूरत – पारादीप (मध्य पू–प)", "alt": "Old NH 6 (part)", "alth": "पुराना एनएच 6 (अंश)", "L": 1781, "st": "Gujarat→Odisha", "sh": "गुजरात→ओडिशा", "fact": "A central east–west artery through Nagpur, the 'zero-mile' heart of India.", "facth": "नागपुर (भारत का 'शून्य-मील' केंद्र) से होकर मध्य पू–प धमनी।", "rg": "C", "d": 2, "eps": [{"n": "Surat", "h": "Surat", "lng": 72.83, "lat": 21.17}, {"n": "Paradip", "h": "Paradip", "lng": 86.61, "lat": 20.32}], "wp": [[72.83, 21.17], [74.78, 20.9], [79.09, 21.15], [81.63, 21.25], [83.97, 21.47], [86.61, 20.32]]}, {"n": "NH 30", "h": "एनएच 30", "sub": "Sitarganj – Jagdalpur", "subh": "सीतारगंज – जगदलपुर", "alt": "Old NH 75·76·43", "alth": "पुराना एनएच 75·76·43", "L": 2040, "st": "Uttarakhand→Chhattisgarh", "sh": "उत्तराखंड→छत्तीसगढ़", "fact": "One of the longest N–S highways through the central plains.", "facth": "मध्य मैदानों से होकर सबसे लंबे उ–द राजमार्गों में से एक।", "rg": "C", "d": 3, "eps": [{"n": "Sitarganj", "h": "Sitarganj", "lng": 79.7, "lat": 29.02}, {"n": "Jagdalpur", "h": "Jagdalpur", "lng": 82.03, "lat": 19.08}], "wp": [[79.7, 29.02], [79.41, 28.36], [80.95, 26.85], [81.85, 25.44], [81.3, 24.53], [82.03, 19.08]]}, {"n": "NH 65", "h": "एनएच 65", "sub": "Pune – Machilipatnam", "subh": "पुणे – मछलीपट्टनम", "alt": "Old NH 9", "alth": "पुराना एनएच 9", "L": 841, "st": "Maharashtra→Andhra Pradesh", "sh": "महाराष्ट्र→आं.प्र.", "fact": "Deccan corridor linking Pune and Hyderabad to the Andhra coast.", "facth": "पुणे व हैदराबाद को आंध्र तट से जोड़ता दक्कन गलियारा।", "rg": "S", "d": 3, "eps": [{"n": "Pune", "h": "Pune", "lng": 73.86, "lat": 18.52}, {"n": "Machilipatnam", "h": "Machilipatnam", "lng": 81.14, "lat": 16.19}], "wp": [[73.86, 18.52], [75.91, 17.66], [78.49, 17.39], [80.62, 16.51], [81.14, 16.19]]}, {"n": "NH 5", "h": "एनएच 5", "sub": "Zirakpur – Shipki La", "subh": "ज़ीरकपुर – शिपकी ला", "alt": "Old NH 22 (Hindustan–Tibet Road)", "alth": "पुराना एनएच 22 (हिंदुस्तान–तिब्बत मार्ग)", "L": 614, "st": "Punjab→Himachal Pradesh", "sh": "पंजाब→हिमाचल", "fact": "Traces the old Hindustan–Tibet Road up to the China border at Shipki La.", "facth": "पुराना हिंदुस्तान–तिब्बत मार्ग, शिपकी ला (चीन सीमा) तक।", "rg": "N", "d": 3, "eps": [{"n": "Chandigarh", "h": "Chandigarh", "lng": 76.78, "lat": 30.73}, {"n": "ShipkiLa", "h": "ShipkiLa", "lng": 78.75, "lat": 31.82}], "wp": [[76.78, 30.73], [77.17, 31.1], [78.75, 31.82]]}, {"n": "Golden Quadrilateral", "h": "स्वर्णिम चतुर्भुज", "sub": "Delhi–Mumbai–Chennai–Kolkata loop", "subh": "दिल्ली–मुंबई–चेन्नई–कोलकाता", "alt": "NHDP Phase I", "alth": "एनएचडीपी चरण I", "L": 5846, "st": "Connects the 4 metros", "sh": "4 महानगर जोड़ता है", "fact": "India's largest highway network (~5,846 km) linking Delhi, Mumbai, Chennai & Kolkata.", "facth": "भारत का सबसे बड़ा राजमार्ग नेटवर्क (~5,846 किमी) — दिल्ली, मुंबई, चेन्नई व कोलकाता।", "rg": "C", "d": 1, "eps": [{"n": "Delhi", "h": "Delhi", "lng": 77.21, "lat": 28.61}, {"n": "Chennai", "h": "Chennai", "lng": 80.27, "lat": 13.08}], "wp": [[77.21, 28.61], [72.58, 23.03], [72.88, 19.08], [77.59, 12.97], [80.27, 13.08], [83.22, 17.69], [88.36, 22.57], [82.97, 25.32], [80.33, 26.45], [78.01, 27.18], [77.21, 28.61]]}, {"n": "NH 6", "h": "एनएच 6", "sub": "Jorabat – Seling (Northeast)", "subh": "जोराबाट – सेलिंग (पूर्वोत्तर)", "alt": "Old NH 40·44·54", "alth": "पुराना एनएच 40·44·54", "L": 830, "st": "Meghalaya, Assam, Mizoram", "sh": "मेघालय, असम, मिज़ोरम", "fact": "Key Northeast highway linking Shillong, the Barak valley (Silchar) and Aizawl.", "facth": "शिलांग, बराक घाटी (सिलचर) व आइज़ोल को जोड़ता प्रमुख पूर्वोत्तर राजमार्ग।", "rg": "NE", "d": 3, "eps": [{"n": "Guwahati", "h": "Guwahati", "lng": 91.74, "lat": 26.14}, {"n": "Aizawl", "h": "Aizawl", "lng": 92.72, "lat": 23.73}], "wp": [[91.74, 26.14], [91.88, 25.57], [92.78, 24.83], [92.72, 23.73]]}];
+const CFG = {"key": "ssc_highways_game_v1", "logo": "🛣️", "theme": {"primary": "#C4621A"}, "titleEn": "Highways of India", "titleHi": "भारत के राजमार्ग", "subEn": "SSC FOCUS · GEO QUIZ", "subHi": "एसएससी फोकस · भूगोल", "count": 12, "unitNameEn": "HIGHWAYS", "unitNameHi": "राजमार्ग", "altIcon": "🔢", "altLabelEn": "Old number", "altLabelHi": "पुराना नंबर", "learnTtlEn": "Learn the Highways", "learnTtlHi": "राजमार्ग सीखें", "learnSubEn": "Tap any highway to trace it on the map and read its route, old number & fact.", "learnSubHi": "किसी भी राजमार्ग को मानचित्र पर देखने व मार्ग, पुराना नंबर व तथ्य पढ़ने के लिए छुएँ।", "atlasTtlEn": "Atlas Mode", "atlasTtlHi": "एटलस मोड", "atlasSubEn": "All 12 highways drawn by region with their termini. Tap a highway to study it.", "atlasSubHi": "सभी 12 राजमार्ग क्षेत्रवार छोरों सहित। अध्ययन हेतु किसी राजमार्ग को छुएँ।", "rankLabelEn": "LEVEL · ROAD RANK", "rankLabelHi": "स्तर · सड़क रैंक", "ranks": [{"min": 0, "en": "Learner", "hi": "शिक्षार्थी"}, {"min": 60, "en": "Driver", "hi": "चालक"}, {"min": 150, "en": "Navigator", "hi": "नाविक"}, {"min": 320, "en": "Highway Patrol", "hi": "हाईवे पेट्रोल"}, {"min": 560, "en": "Route Master", "hi": "मार्ग मास्टर"}, {"min": 900, "en": "NHAI Chief", "hi": "एनएचएआई प्रमुख"}, {"min": 1400, "en": "Road Sage", "hi": "सड़क ऋषि"}], "modes": [{"id": "trace", "icon": "🛣️", "en": "Trace", "hi": "मार्ग", "kind": "line", "useAlt": false, "qEn": "TAP THE ROUTE OF THIS HIGHWAY", "qHi": "इस राजमार्ग का मार्ग छुएँ"}, {"id": "term", "icon": "📍", "en": "Terminus", "hi": "छोर", "kind": "point", "useAlt": false, "qEn": "TAP THE NAMED TERMINUS", "qHi": "नामित छोर को छुएँ"}, {"id": "old", "icon": "🔢", "en": "Old→New", "hi": "पुराना→नया", "kind": "line", "useAlt": true, "qEn": "WHICH HIGHWAY IS THIS NOW? TAP ITS ROUTE", "qHi": "यह अब कौन सा राजमार्ग है? मार्ग छुएँ"}], "badges": [{"id": "first", "icon": "🚗", "en": "First Mile", "hi": "पहला मील", "en_d": "1 correct", "hi_d": "1 सही", "type": "correct", "n": 1}, {"id": "ten", "icon": "🛣️", "en": "Road Tripper", "hi": "सड़क यात्री", "en_d": "10 correct", "hi_d": "10 सही", "type": "correct", "n": 10}, {"id": "fifty", "icon": "🗺️", "en": "Cartographer", "hi": "मानचित्रकार", "en_d": "50 correct", "hi_d": "50 सही", "type": "correct", "n": 50}, {"id": "streak5", "icon": "🔥", "en": "Cruising", "hi": "रफ़्तार", "en_d": "5 streak", "hi_d": "5 स्ट्रीक", "type": "streak", "n": 5}, {"id": "streak10", "icon": "⚡", "en": "Flooring It", "hi": "फुल स्पीड", "en_d": "10 streak", "hi_d": "10 स्ट्रीक", "type": "streak", "n": 10}, {"id": "perfect", "icon": "🌟", "en": "Flawless", "hi": "निर्दोष", "en_d": "Perfect round", "hi_d": "परफेक्ट राउंड", "type": "perfect", "n": 0}, {"id": "allseen", "icon": "🧭", "en": "Explorer", "hi": "खोजी", "en_d": "See all 12", "hi_d": "सभी 12 देखें", "type": "seen", "n": 12}, {"id": "warden", "icon": "🎖️", "en": "Route Master", "hi": "मार्ग मास्टर", "en_d": "560 XP", "hi_d": "560 XP", "type": "xp", "n": 560}, {"id": "master", "icon": "👑", "en": "Road Sage", "hi": "सड़क ऋषि", "en_d": "1400 XP", "hi_d": "1400 XP", "type": "xp", "n": 1400}], "howtoEn": "🛣️ TRACE: a highway is named — tap anywhere along its route.\n📍 TERMINUS: tap the named end-city of the highway.\n🔢 OLD→NEW: an OLD NH number is shown — tap the current highway’s route (tests the 2010 renumbering).\n\nLand close to score; build streaks for bonus XP, earn badges, climb road ranks. Study all 12 in Atlas & Learn first.", "howtoHi": "🛣️ मार्ग: राजमार्ग का नाम दिखेगा — उसके मार्ग पर कहीं भी छुएँ।\n📍 छोर: राजमार्ग के नामित छोर-शहर को छुएँ।\n🔢 पुराना→नया: पुराना एनएच नंबर दिखेगा — वर्तमान राजमार्ग का मार्ग छुएँ (2010 पुनर्क्रमांकन)।\n\nपास छूने पर अंक; स्ट्रीक से बोनस XP व बैज। पहले एटलस व सीखें में सभी 12 पढ़ें।", "i18n": {}};
+</script>
+<script>
+const PROJ_K=0.93358; let BX={};
+(function(){let xs=[],ys=[];STATES.forEach(s=>s.p.forEach(r=>r.forEach(pt=>{xs.push(pt[0]*PROJ_K);ys.push(pt[1])})));BX={minX:Math.min(...xs),maxX:Math.max(...xs),minY:Math.min(...ys),maxY:Math.max(...ys)};})();
+const PAD=2,VW=100,SCALE=(VW-PAD*2)/(BX.maxX-BX.minX),VH=(BX.maxY-BX.minY)*SCALE+PAD*2;
+function projX(lng){return (lng*PROJ_K-BX.minX)*SCALE+PAD;}
+function projY(lat){return (BX.maxY-lat)*SCALE+PAD;}
+
+const KEY=CFG.key;
+const DEF={lang:'en',sound:true,roundLen:10,diff:'all',mode:CFG.modes[0].id,xp:0,correct:0,answered:0,bestStreak:0,badges:{},seen:{},timed:false,mcqHelp:true,hc:false,big:false,miss:{}};
+let G=load();function load(){try{const s=JSON.parse(localStorage.getItem(KEY));return s?Object.assign({},DEF,s):Object.assign({},DEF);}catch(e){return Object.assign({},DEF);}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(G));}catch(e){}}
+let lang=G.lang, mode=G.mode, askedEp=0;
+let round={list:[],idx:0,score:0,streak:0,answered:false,hintUsed:false,wrong:[]};
+const byName={};DATA.forEach(d=>byName[d.n]=d);
+const REGION_COLORS={N:'#7B1FA2',NE:'#2C5F8A',E:'#2E7D4F',W:'#C4621A',C:'#D4A017',S:'#C0392B'};
+const REGION_KEYS={N:'regN',NE:'regNE',E:'regE',W:'regW',C:'regC',S:'regS'};
+
+const MN={
+  'NH 44':{en:'NH-44 = Longest NH (3745 km) Srinagar→Kanyakumari',hi:'एनएच-44 = सबसे लंबा (3745 किमी) श्रीनगर→कन्याकुमारी'},
+  'NH 27':{en:'NH-27 = Longest E–W (3507 km) Porbandar→Silchar',hi:'एनएच-27 = सबसे लंबा पू–प (3507 किमी) पोरबंदर→सिलचर'},
+  'NH 48':{en:'NH-48 = Busiest; old NH 8 (Delhi–Mumbai)',hi:'एनएच-48 = सबसे व्यस्त; पुराना एनएच 8'},
+  'NH 16':{en:'NH-16 = East Coast; old NH 5; part of GQ',hi:'एनएच-16 = पूर्वी तट; पुराना एनएच 5; स्वर्णिम चतुर्भुज'},
+  'NH 19':{en:'NH-19 = Grand Trunk Road; old NH 2',hi:'एनएच-19 = ग्रैंड ट्रंक रोड; पुराना एनएच 2'},
+  'NH 66':{en:'NH-66 = Konkan coast; old NH 17 + 47',hi:'एनएच-66 = कोंकण तट; पुराना एनएच 17 + 47'},
+  'NH 53':{en:'NH-53 = Central E–W via Nagpur (zero mile)',hi:'एनएच-53 = नागपुर (शून्य-मील) से मध्य पू–प'},
+  'NH 30':{en:'NH-30 = Long N–S through central plains',hi:'एनएच-30 = मध्य मैदानों से लंबा उ–द'},
+  'NH 65':{en:'NH-65 = Deccan corridor Pune→Machilipatnam',hi:'एनएच-65 = दक्कन गलियारा पुणे→मछलीपट्टनम'},
+  'NH 5':{en:'NH-5 = Hindustan–Tibet Road to Shipki La',hi:'एनएच-5 = हिंदुस्तान–तिब्बत मार्ग, शिपकी ला'},
+  'Golden Quadrilateral':{en:'GQ = ~5846 km loop linking 4 metros',hi:'स्वर्णिम चतुर्भुज = ~5846 किमी, 4 महानगर'},
+  'NH 6':{en:'NH-6 = NE artery Shillong–Silchar–Aizawl',hi:'एनएच-6 = पूर्वोत्तर: शिलांग–सिलचर–आइज़ोल'},
+};
+
+const T={reviewMissed:{en:'Review missed',hi:'गलत दोहराएँ'},exportProgress:{en:'Export progress',hi:'प्रगति निर्यात'},importProgress:{en:'Import progress',hi:'प्रगति आयात'},shareRank:{en:'📤 Share rank',hi:'📤 रैंक साझा'},exported:{en:'Progress exported',hi:'प्रगति निर्यात हुई'},imported:{en:'Progress imported',hi:'प्रगति आयात हुई'},modeChanged:{en:'Mode changed',hi:'मोड बदला'},nearRoute:{en:'Nearest route',hi:'निकटतम मार्ग'},youTapped:{en:'You tapped',hi:'आपने छुआ'},
+ navPlay:{en:'Play',hi:'खेलें'},navLearn:{en:'Learn',hi:'सीखें'},navAtlas:{en:'Atlas',hi:'एटलस'},navStats:{en:'Stats',hi:'आँकड़े'},navInfo:{en:'More',hi:'और'},
+ acc:{en:'Accuracy',hi:'सटीकता'},best:{en:'Best Streak',hi:'सर्वश्रेष्ठ स्ट्रीक'},corr:{en:'Correct',hi:'सही'},ans:{en:'Answered',hi:'उत्तर दिए'},
+ badgeTtl:{en:'Badges',hi:'बैज'},infoTtl:{en:'Settings',hi:'सेटिंग्स'},setLang:{en:'Language',hi:'भाषा'},setSound:{en:'Sound effects',hi:'ध्वनि प्रभाव'},setSoundD:{en:'Taps & confetti pops',hi:'टैप व कॉन्फ़ेटी'},
+ setLen:{en:'Questions per round',hi:'प्रति राउंड प्रश्न'},setLenD:{en:'Length of each quiz',hi:'प्रत्येक क्विज़ की लंबाई'},diffTtl:{en:'Difficulty filter',hi:'कठिनाई फ़िल्टर'},aboutTtl:{en:'How to play',hi:'कैसे खेलें'},
+ reset:{en:'Reset all progress',hi:'सारी प्रगति रीसेट करें'},hint:{en:'Show hint',hi:'संकेत दिखाएँ'},hintShown:{en:'Hint shown!',hi:'संकेत!'},
+ correct:{en:'Correct!',hi:'सही!'},wrong:{en:'Not quite',hi:'बिल्कुल नहीं'},off:{en:'km off',hi:'किमी दूर'},onroute:{en:'On the route!',hi:'मार्ग पर!'},spot:{en:'Spot on!',hi:'बिल्कुल सही!'},
+ length:{en:'Length',hi:'लंबाई'},states:{en:'Route',hi:'मार्ग'},next:{en:'Next →',hi:'अगला →'},finish:{en:'Finish Round →',hi:'राउंड समाप्त →'},
+ roundDone:{en:'Round Complete!',hi:'राउंड पूरा!'},again:{en:'Play Again',hi:'फिर खेलें'},viewStats:{en:'View Stats',hi:'आँकड़े देखें'},yourScore:{en:'You scored',hi:'आपका स्कोर'},of:{en:'of',hi:'में से'},
+ all:{en:'All',hi:'सभी'},easy:{en:'Easy',hi:'आसान'},medium:{en:'Medium',hi:'मध्यम'},hard:{en:'Hard',hi:'कठिन'},
+ regN:{en:'North',hi:'उत्तर'},regNE:{en:'NE',hi:'पूर्वोत्तर'},regE:{en:'East',hi:'पूर्व'},regW:{en:'West',hi:'पश्चिम'},regC:{en:'Central',hi:'मध्य'},regS:{en:'South',hi:'दक्षिण'},
+ perfect:{en:'Perfect round! 🌟',hi:'बेहतरीन राउंड! 🌟'},tapEnd:{en:'Tap the terminus:',hi:'छोर छुएँ:'},
+ weakF:{en:'Weak ★',hi:'कमज़ोर ★'},timeUp:{en:"Time's up!",hi:'समय समाप्त!'},showResult:{en:'Show result',hi:'परिणाम दिखाएँ'},
+ accTtl:{en:'Accessibility',hi:'सुगम्यता'},setTimed:{en:'Timed mode (Rapid)',hi:'समयबद्ध (रैपिड)'},setTimedD:{en:'Beat the clock for bonus XP',hi:'घड़ी को हराएँ, बोनस XP पाएँ'},
+ setContrast:{en:'High contrast',hi:'उच्च कंट्रास्ट'},setContrastD:{en:'Stronger colours & borders',hi:'गहरे रंग व किनारे'},
+ setBigText:{en:'Large text',hi:'बड़ा पाठ'},setBigTextD:{en:'Increase font size',hi:'फ़ॉन्ट आकार बढ़ाएँ'},
+ shareBtn:{en:'📤 Share score',hi:'📤 स्कोर साझा करें'},copied:{en:'Score copied!',hi:'स्कोर कॉपी हुआ!'},memory:{en:'Memory',hi:'याद रखें'},
+};
+function t(k){return (T[k]&&T[k][lang])||(CFG.i18n[k]&&CFG.i18n[k][lang])||k;}
+function rank(){let r=CFG.ranks[0];for(const x of CFG.ranks)if(G.xp>=x.min)r=x;return r;}
+function nextRank(){for(const x of CFG.ranks)if(G.xp<x.min)return x;return null;}
+function badgeChk(b){const g=G;if(b.type==='correct')return g.correct>=b.n;if(b.type==='streak')return g.bestStreak>=b.n;if(b.type==='xp')return g.xp>=b.n;if(b.type==='seen')return Object.keys(g.seen).length>=b.n;if(b.type==='perfect')return !!g.badges.perfect;return false;}
+
+/* MAP */
+function statePaths(){let d='';STATES.forEach(s=>s.p.forEach(ring=>{d+='M';ring.forEach((pt,i)=>{d+=(i?'L':'')+projX(pt[0]).toFixed(2)+' '+projY(pt[1]).toFixed(2)+' ';});d+='Z ';}));return d;}
+function featD(r){let d='M';r.wp.forEach((pt,i)=>{d+=(i?'L':'')+projX(pt[0]).toFixed(2)+' '+projY(pt[1]).toFixed(2)+' ';});return d;}
+function buildMap(svg){svg.setAttribute('viewBox',`0 0 ${VW} ${VH.toFixed(1)}`);const land=document.createElementNS('http://www.w3.org/2000/svg','path');land.setAttribute('d',statePaths());land.setAttribute('class','st-path');svg.appendChild(land);}
+const map=document.getElementById('map'),atlasMap=document.getElementById('atlasMap');
+function drawPlayFeatures(){[...map.querySelectorAll('.feat-line,.feat-hi,.pin,.tap-dot,.hint-ring')].forEach(e=>e.remove());DATA.forEach(r=>{const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',featD(r));p.setAttribute('class','feat-line');map.appendChild(p);});}
+
+/* GEOMETRY */
+function segDist(px,py,ax,ay,bx,by){const dx=bx-ax,dy=by-ay,l2=dx*dx+dy*dy;let t=l2?((px-ax)*dx+(py-ay)*dy)/l2:0;t=Math.max(0,Math.min(1,t));return Math.hypot(px-(ax+t*dx),py-(ay+t*dy));}
+function lineDist(r,pt){let m=1e9;for(let i=0;i<r.wp.length-1;i++){m=Math.min(m,segDist(pt.x,pt.y,projX(r.wp[i][0]),projY(r.wp[i][1]),projX(r.wp[i+1][0]),projY(r.wp[i+1][1])));}return m;}
+function nearestByLine(pt){let b=null,bd=1e9;DATA.forEach(r=>{const d=lineDist(r,pt);if(d<bd){bd=d;b=r;}});return{r:b,d:bd};}
+function svgPoint(svg,evt){const r=svg.getBoundingClientRect();const cx=(evt.touches?evt.touches[0]:evt).clientX,cy=(evt.touches?evt.touches[0]:evt).clientY;if(cx==null)return null;const vb=svg.viewBox.baseVal;return{x:(cx-r.left)/r.width*vb.width,y:(cy-r.top)/r.height*vb.height};}
+function haversine(la1,lo1,la2,lo2){const R=6371,dLa=(la2-la1)*Math.PI/180,dLo=(lo2-lo1)*Math.PI/180;const a=Math.sin(dLa/2)**2+Math.cos(la1*Math.PI/180)*Math.cos(la2*Math.PI/180)*Math.sin(dLo/2)**2;return Math.round(2*R*Math.asin(Math.sqrt(a)));}
+function modeDef(){return CFG.modes.find(m=>m.id===mode);}
+
+/* ROUND */
+function pool(){return GameCommon.poolWeak(DATA,G,'n','d');}
+function startRound(){let p=pool();for(let i=p.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[p[i],p[j]]=[p[j],p[i]];}round={list:p.slice(0,Math.min(G.roundLen,p.length)),idx:0,score:0,streak:0,answered:false,hintUsed:false,wrong:[]};loadQuestion();}
+function loadQuestion(){
+  round.answered=false;round.hintUsed=false;
+  const q=round.list[round.idx],md=modeDef();
+  askedEp=Math.floor(Math.random()*q.eps.length);
+  document.getElementById('qLabel').textContent=lang==='hi'?md.qHi:md.qEn;
+  let nm = md.useAlt ? (lang==='hi'?q.alth:q.alt) : (lang==='hi'?q.h:q.n);
+  if(md.kind==='point'){const e=q.eps[askedEp];nm=(lang==='hi'?q.h:q.n);document.getElementById('qName').innerHTML=nm+' <span style="font-size:14px;color:var(--muted);font-weight:600">· '+t('tapEnd')+' '+(lang==='hi'?e.h:e.n)+'</span>';}
+  else document.getElementById('qName').textContent=nm;
+  renderSub(q,md);
+  document.getElementById('progTxt').textContent=`${round.idx+1}/${round.list.length}`;
+  document.getElementById('progFill').style.width=((round.idx)/round.list.length*100)+'%';
+  document.getElementById('feedback').className='feedback';
+  document.getElementById('nextBtn').style.display='none';
+  document.getElementById('revealBtn').style.display='none';
+  document.getElementById('hintLink').style.display='block';
+  document.getElementById('hintTxt').textContent=t('hint');
+  document.getElementById('fMem').style.display='none';
+  clearMcq();
+  drawPlayFeatures();
+  startTimer();
+}
+function dismissCard(){document.getElementById('feedback').classList.remove('show');document.getElementById('revealBtn').style.display='flex';if(G.timed&&!round.answered)stopTimer();}
+function revealCard(){const fb=document.getElementById('feedback');if(fb.classList.contains('good')||fb.classList.contains('bad')){fb.classList.add('show');fb.scrollTop=0;}document.getElementById('revealBtn').style.display='none';if(G.timed&&!round.answered)startTimer();}
+function renderSub(q,md){
+  const reg=t(REGION_KEYS[q.rg]);
+  let h=`<span class="tag" style="color:${REGION_COLORS[q.rg]}">${reg}</span><span class="tag" style="color:var(--orange)">${'●'.repeat(q.d)}</span>`;
+  if(md.useAlt) h+=`<span class="tag">${CFG.altIcon} ${lang==='hi'?CFG.altLabelHi:CFG.altLabelEn}</span>`;
+  document.getElementById('qSub').innerHTML=h;
+}
+map.addEventListener('click',onMapTap);
+function onMapTap(evt){
+  if(round.answered||dragMoved)return;const pt=svgPoint(map,evt);if(!pt)return;
+  const q=round.list[round.idx],md=modeDef();let correct,km=null,markPt=pt;
+  if(md.kind==='point'){
+    const e=q.eps[askedEp];const ex=projX(e.lng),ey=projY(e.lat);const dist=Math.hypot(ex-pt.x,ey-pt.y);
+    correct=dist<5;const tapLng=((pt.x-PAD)/SCALE+BX.minX)/PROJ_K,tapLat=BX.maxY-(pt.y-PAD)/SCALE;km=haversine(tapLat,tapLng,e.lat,e.lng);markPt={x:ex,y:ey};
+  }else{const d=lineDist(q,pt);correct=d<3.6;if(!correct){const nr=nearestByLine(pt);round._near=nr.r&&nr.r.n!==q.n?nr:null;}else round._near=null;}
+  answer(correct,pt,q,md,km);
+}
+function addPin(x,y,color,r){const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class','pin');const ring=document.createElementNS('http://www.w3.org/2000/svg','circle');ring.setAttribute('cx',x);ring.setAttribute('cy',y);ring.setAttribute('r',r||2.6);ring.setAttribute('fill','none');ring.setAttribute('stroke',color);ring.setAttribute('stroke-width','.9');const an=document.createElementNS('http://www.w3.org/2000/svg','animate');an.setAttribute('attributeName','r');an.setAttribute('from','.5');an.setAttribute('to',r||2.6);an.setAttribute('dur','.4s');ring.appendChild(an);const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',x);dot.setAttribute('cy',y);dot.setAttribute('r',1.1);dot.setAttribute('fill',color);g.appendChild(ring);g.appendChild(dot);map.appendChild(g);}
+function highlightFeat(r,color){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',featD(r));p.setAttribute('class','feat-hi');p.setAttribute('stroke',color);map.appendChild(p);
+  r.eps.forEach(e=>{const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',projX(e.lng));c.setAttribute('cy',projY(e.lat));c.setAttribute('r',1.3);c.setAttribute('fill','#fff');c.setAttribute('stroke',color);c.setAttribute('stroke-width','.7');c.setAttribute('class','pin');map.appendChild(c);});}
+function tapDot(x,y){const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',1.4);c.setAttribute('fill','#C0392B');c.setAttribute('class','tap-dot');map.appendChild(c);}
+function answer(correct,pt,q,md,km){
+  round.answered=true;stopTimer();
+  G.answered++;G.seen[q.n]=1;
+  document.getElementById('progFill').style.width=((round.idx+1)/round.list.length*100)+'%';
+  highlightFeat(q,correct?'#2E7D4F':REGION_COLORS[q.rg]);
+  if(md.kind==='point'){const e=q.eps[askedEp];addPin(projX(e.lng),projY(e.lat),correct?'#2E7D4F':'#C0392B',2.6);if(!correct&&pt)tapDot(pt.x,pt.y);}
+  else if(!correct&&pt)tapDot(pt.x,pt.y);
+  if(correct){G.correct++;round.score++;round.streak++;if(round.streak>G.bestStreak)G.bestStreak=round.streak;if(G.miss[q.n])G.miss[q.n]=Math.max(0,G.miss[q.n]-1);let gain=10*q.d+(round.streak>=3?5:0)+(G.timed?5:0)+(round.hintUsed?-3:0);if(gain<3)gain=3;G.xp+=gain;showFeedback(true,q,md,km,gain);confetti();play('good');xpPop(gain);}
+  else{round.streak=0;round.wrong.push(q);G.miss[q.n]=(G.miss[q.n]||0)+1;showFeedback(false,q,md,km,0);if(md.kind!=='point')showMcq(q);play('bad');}
+  GameCommon.updateStreakChip(round.streak);
+  checkBadges();save();refreshStats();
+  const last=round.idx>=round.list.length-1;const nb=document.getElementById('nextBtn');nb.style.display='block';
+  document.getElementById('nextTxt').textContent=last?t('finish'):t('next');
+  document.getElementById('nextFloatTxt').textContent=last?t('finish'):t('next');
+  document.getElementById('revealTxt').textContent=t('showResult');
+  document.getElementById('hintLink').style.display='none';
+}
+function showFeedback(good,q,md,km,gain){
+  const fb=document.getElementById('feedback');fb.className='feedback show '+(good?'good':'bad');fb.scrollTop=0;
+  document.getElementById('revealBtn').style.display='none';
+  document.getElementById('fHd').innerHTML=(good?'✅ ':'❌ ')+(good?t('correct'):t('wrong'))+(good&&gain?` <span style="font-family:Space Mono;font-size:13px;color:var(--gold)">+${gain} XP</span>`:'');
+  let meta=(lang==='hi'?q.h:q.n)+' · '+(lang==='hi'?q.subh:q.sub);
+  if(md.kind==='point'&&km!=null)meta=(km===0?t('spot'):`${km} ${t('off')}`)+' · '+meta;
+  else if(md.kind!=='point')meta=(good?t('onroute'):(round._near&&round._near.r?t('youTapped')+' '+(lang==='hi'?round._near.r.h:round._near.r.n):'—'))+' · '+meta;
+  meta+=' · '+t('length')+' '+q.L+' km · '+(lang==='hi'?q.sh:q.st);
+  document.getElementById('fMeta').textContent=meta;
+  document.getElementById('fFor').textContent=CFG.altIcon+' '+(lang==='hi'?CFG.altLabelHi:CFG.altLabelEn)+': '+(lang==='hi'?q.alth:q.alt);
+  const mem=MN[q.n],memEl=document.getElementById('fMem');
+  if(mem){memEl.style.display='block';memEl.innerHTML='🧠 <b>'+t('memory')+':</b> '+(lang==='hi'?mem.hi:mem.en);}else memEl.style.display='none';
+  document.getElementById('fFact').textContent=lang==='hi'?q.facth:q.fact;
+}
+function useHint(){if(round.answered||round.hintUsed)return;round.hintUsed=true;const q=round.list[round.idx];const md=modeDef();let cx,cy;if(md.kind==='point'){const e=q.eps[askedEp];cx=projX(e.lng);cy=projY(e.lat);}else{const mid=q.wp[Math.floor(q.wp.length/2)];cx=projX(mid[0]);cy=projY(mid[1]);}const ring=document.createElementNS('http://www.w3.org/2000/svg','circle');ring.setAttribute('cx',cx);ring.setAttribute('cy',cy);ring.setAttribute('r',13);ring.setAttribute('fill','rgba(196,98,26,.08)');ring.setAttribute('stroke','rgba(196,98,26,.45)');ring.setAttribute('stroke-width','.6');ring.setAttribute('stroke-dasharray','2 2');ring.setAttribute('class','hint-ring');map.appendChild(ring);toast(t('hintShown'));document.getElementById('hintLink').style.display='none';}
+function nextQuestion(){if(round.idx>=round.list.length-1){endRound();return;}round.idx++;loadQuestion();}
+function endRound(){const total=round.list.length,sc=round.score,pct=sc/total;if(sc===total){G.badges.perfect=1;toast(t('perfect'));}checkBadges();save();const stars=pct>=1?3:pct>=.7?2:pct>=.4?1:0;document.getElementById('mStars').textContent='★★★☆☆☆'.substr(3-stars,3);document.getElementById('mStars').style.color=stars>=2?'var(--gold)':'var(--muted)';document.getElementById('mTitle').textContent=t('roundDone');document.getElementById('mIcon').textContent=stars===3?'🏆':stars===2?'🎉':stars===1?'👍':CFG.logo;document.getElementById('mScore').textContent=`${t('yourScore')} ${sc} ${t('of')} ${total}`;if(typeof endRoundReview==='function')endRoundReview();document.getElementById('modalBg').classList.add('show');}
+function closeModal(){document.getElementById('modalBg').classList.remove('show');}
+function xpPop(n){const el=document.createElement('div');el.className='xp-pop';el.textContent='+'+n+' XP';const r=document.getElementById('mapWrap').getBoundingClientRect();el.style.left=(r.left+r.width/2-20)+'px';el.style.top=(r.top+40)+'px';document.body.appendChild(el);setTimeout(()=>el.remove(),1000);}
+let toastTimer;function toast(m){const el=document.getElementById('toast');el.textContent=m;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),1600);}
+function checkBadges(){let nw=[];CFG.badges.forEach(b=>{if(!G.badges[b.id]&&badgeChk(b)){G.badges[b.id]=1;nw.push(b);}});if(nw.length){const b=nw[0];toast((lang==='hi'?b.hi:b.en)+' '+b.icon);}}
+function refreshStats(){const acc=G.answered?Math.round(G.correct/G.answered*100):0;document.getElementById('stAcc').textContent=acc+'%';document.getElementById('stBest').textContent=G.bestStreak;document.getElementById('stCorrect').textContent=G.correct;document.getElementById('stPlayed').textContent=G.answered;const r=rank(),nr=nextRank();document.getElementById('lvlName').textContent=lang==='hi'?r.hi:r.en;document.getElementById('xpTxt').textContent=G.xp+' XP'+(nr?` · ${nr.min-G.xp} → ${lang==='hi'?nr.hi:nr.en}`:' · MAX');const lo=r.min,hi=nr?nr.min:r.min+1;document.getElementById('xpFill').style.width=Math.min(100,(G.xp-lo)/(hi-lo)*100)+'%';const bg=document.getElementById('badgeGrid');bg.innerHTML='';CFG.badges.forEach(b=>{const e=G.badges[b.id];const d=document.createElement('div');d.className='badge'+(e?' earned':'');d.innerHTML=`<div class="bi">${b.icon}</div><div class="bn">${lang==='hi'?b.hi:b.en}</div><div class="bd">${lang==='hi'?b.hi_d:b.en_d}</div>`;bg.appendChild(d);});}
+
+/* LEARN */
+let learnFilter='all';
+function buildLearn(){
+  const fc=document.getElementById('learnFilters');fc.innerHTML='';
+  const fl=[['all','all'],['N','regN'],['NE','regNE'],['E','regE'],['W','regW'],['C','regC'],['S','regS']];
+  fl.forEach(([code,key])=>{const b=document.createElement('button');b.className='chip-btn'+(learnFilter===code?' on':'');b.textContent=t(key);b.onclick=()=>{learnFilter=code;buildLearn();};fc.appendChild(b);});
+  const list=document.getElementById('learnList');list.innerHTML='';
+  let arr=DATA.slice();if(learnFilter!=='all')arr=arr.filter(r=>r.rg===learnFilter);
+  arr.forEach(r=>{const it=document.createElement('div');it.className='park-item';const mem=MN[r.n];
+    it.innerHTML=`<div class="pic">${G.seen[r.n]?'✅':CFG.logo}</div><div class="pin-info"><div class="pn">${lang==='hi'?r.h:r.n}${GameCommon.missBadge(G,r.n)}<span class="diff-dot d${r.d}"></span></div><div class="ps">${lang==='hi'?r.subh:r.sub}</div><div class="pf">${lang==='hi'?r.sh:r.st} · ${r.L} km${mem?' · 🧠 '+(lang==='hi'?mem.hi:mem.en):''}</div></div>`;
+    it.onclick=()=>{go('atlas');setTimeout(()=>focusFeat(r),120);};list.appendChild(it);});
+}
+/* ATLAS */
+function buildAtlas(){[...atlasMap.querySelectorAll('.aline,.apin,.afocus')].forEach(e=>e.remove());DATA.forEach(r=>{const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',featD(r));p.setAttribute('fill','none');p.setAttribute('stroke',REGION_COLORS[r.rg]);p.setAttribute('stroke-width','1.1');p.setAttribute('stroke-linecap','round');p.setAttribute('opacity','.8');p.setAttribute('class','aline');p.style.cursor='pointer';p.onclick=()=>focusFeat(r);atlasMap.appendChild(p);r.eps.forEach(e=>{const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',projX(e.lng));c.setAttribute('cy',projY(e.lat));c.setAttribute('r',1.1);c.setAttribute('fill','#fff');c.setAttribute('stroke',REGION_COLORS[r.rg]);c.setAttribute('stroke-width','.5');c.setAttribute('class','apin');atlasMap.appendChild(c);});});const lg=document.getElementById('atlasLegend');lg.innerHTML='';Object.keys(REGION_COLORS).forEach(k=>{const s=document.createElement('span');s.innerHTML=`<span class="lg-dot" style="background:${REGION_COLORS[k]}"></span>${t(REGION_KEYS[k])}`;lg.appendChild(s);});}
+function focusFeat(r){go('atlas');[...atlasMap.querySelectorAll('.afocus')].forEach(e=>e.remove());G.seen[r.n]=1;save();const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',featD(r));p.setAttribute('fill','none');p.setAttribute('stroke',REGION_COLORS[r.rg]);p.setAttribute('stroke-width','2.6');p.setAttribute('stroke-linecap','round');p.setAttribute('class','afocus');atlasMap.appendChild(p);r.eps.forEach(e=>{const ring=document.createElementNS('http://www.w3.org/2000/svg','circle');ring.setAttribute('cx',projX(e.lng));ring.setAttribute('cy',projY(e.lat));ring.setAttribute('r',2.6);ring.setAttribute('fill','#fff');ring.setAttribute('stroke',REGION_COLORS[r.rg]);ring.setAttribute('stroke-width','.9');ring.setAttribute('class','afocus');atlasMap.appendChild(ring);});
+  const info=document.getElementById('atlasInfo');info.style.display='block';
+  info.innerHTML=`<div style="font-family:Playfair Display;font-size:18px;font-weight:800;color:var(--primary-d)">${lang==='hi'?r.h:r.n}</div>
+   <div class="mono" style="font-size:11px;color:var(--muted);margin:5px 0">🛣️ ${lang==='hi'?r.subh:r.sub} · ${r.L} km</div>
+   <div class="mono" style="font-size:11px;color:var(--muted);margin-bottom:6px">📍 ${lang==='hi'?r.sh:r.st}</div>
+   <div style="font-size:12.5px;color:var(--primary);font-weight:600;margin-bottom:5px">${CFG.altIcon} ${lang==='hi'?CFG.altLabelHi:CFG.altLabelEn}: ${lang==='hi'?r.alth:r.alt}</div>
+   <div style="font-size:13px;line-height:1.5">${lang==='hi'?r.facth:r.fact}</div>`;
+  document.getElementById('atlasWrap').scrollIntoView({behavior:'smooth',block:'center'});}
+
+/* FX/SOUND */
+const fxC=document.getElementById('fx'),fxX=fxC.getContext('2d');let parts=[],fxRunning=false;function resizeFx(){fxC.width=innerWidth;fxC.height=innerHeight;}addEventListener('resize',resizeFx);resizeFx();
+function confetti(){if(!GameCommon.shouldConfetti())return;const cols=[CFG.theme.primary,'#7B1FA2','#C4621A','#2E7D4F','#D4A017'];for(let i=0;i<70;i++)parts.push({x:innerWidth/2+(Math.random()-.5)*120,y:innerHeight/3,vx:(Math.random()-.5)*8,vy:Math.random()*-9-3,g:.3,col:cols[i%cols.length],s:Math.random()*5+3,r:Math.random()*6,vr:(Math.random()-.5)*.4});if(!fxRunning)fxLoop();}
+function fxLoop(){fxRunning=true;fxX.clearRect(0,0,fxC.width,fxC.height);parts.forEach(p=>{p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;fxX.save();fxX.translate(p.x,p.y);fxX.rotate(p.r);fxX.fillStyle=p.col;fxX.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);fxX.restore();});parts=parts.filter(p=>p.y<fxC.height+20);if(parts.length)requestAnimationFrame(fxLoop);else{fxRunning=false;fxX.clearRect(0,0,fxC.width,fxC.height);}}
+let AC;function play(type){if(!G.sound)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();const o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);if(type==='good'){o.frequency.value=620;o.type='triangle';g.gain.value=.12;o.frequency.exponentialRampToValueAtTime(930,AC.currentTime+.12);}else{o.frequency.value=200;o.type='sine';g.gain.value=.1;o.frequency.exponentialRampToValueAtTime(120,AC.currentTime+.18);}g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+.25);o.start();o.stop(AC.currentTime+.26);}catch(e){}}
+
+/* ===== PAN / ZOOM ===== */
+const mapWrap=document.getElementById('mapWrap');
+let view={s:1,tx:0,ty:0},dragMoved=false,dragStart=null,pinch=null;
+function applyView(){map.style.transformOrigin='0 0';map.style.transform=`translate(${view.tx}px,${view.ty}px) scale(${view.s})`;}
+function clampView(){const w=mapWrap.clientWidth,h=mapWrap.clientHeight;view.s=Math.max(1,Math.min(5,view.s));view.tx=Math.min(0,Math.max(w-w*view.s,view.tx));view.ty=Math.min(0,Math.max(h-h*view.s,view.ty));if(view.s<=1.001){view.tx=0;view.ty=0;}}
+function zoomAt(f,cx,cy){const w=mapWrap.clientWidth,h=mapWrap.clientHeight;if(cx==null){cx=w/2;cy=h/2;}const ns=Math.max(1,Math.min(5,view.s*f)),k=ns/view.s;view.tx=cx-(cx-view.tx)*k;view.ty=cy-(cy-view.ty)*k;view.s=ns;clampView();applyView();}
+function zoomBy(f){zoomAt(f,null,null);}
+function zoomReset(){view={s:1,tx:0,ty:0};applyView();}
+mapWrap.addEventListener('pointerdown',e=>{if(pinch||e.target.closest('.feedback,.zoom-ctrl,.reveal-row'))return;dragMoved=false;dragStart={x:e.clientX,y:e.clientY,tx:view.tx,ty:view.ty};});
+mapWrap.addEventListener('pointermove',e=>{if(!dragStart)return;const dx=e.clientX-dragStart.x,dy=e.clientY-dragStart.y;if(Math.hypot(dx,dy)>6)dragMoved=true;if(view.s>1.001&&dragMoved){view.tx=dragStart.tx+dx;view.ty=dragStart.ty+dy;clampView();applyView();}});
+['pointerup','pointercancel','pointerleave'].forEach(ev=>mapWrap.addEventListener(ev,()=>{dragStart=null;}));
+mapWrap.addEventListener('wheel',e=>{e.preventDefault();const r=mapWrap.getBoundingClientRect();zoomAt(e.deltaY<0?1.12:1/1.12,e.clientX-r.left,e.clientY-r.top);},{passive:false});
+mapWrap.addEventListener('touchstart',e=>{if(e.touches.length===2){const a=e.touches[0],b=e.touches[1];pinch={d:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY),s:view.s};dragStart=null;dragMoved=true;}},{passive:true});
+mapWrap.addEventListener('touchmove',e=>{if(pinch&&e.touches.length===2){e.preventDefault();const a=e.touches[0],b=e.touches[1],nd=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY),r=mapWrap.getBoundingClientRect();zoomAt((pinch.s*(nd/pinch.d))/view.s,(a.clientX+b.clientX)/2-r.left,(a.clientY+b.clientY)/2-r.top);}},{passive:false});
+mapWrap.addEventListener('touchend',e=>{if(e.touches.length<2)pinch=null;});
+
+/* ===== RAPID TIMER ===== */
+let timer=null,timerLeft=0,timerMax=12;
+function stopTimer(){if(timer){clearInterval(timer);timer=null;}document.getElementById('timerBar').style.display='none';}
+function startTimer(){stopTimer();if(!G.timed)return;const bar=document.getElementById('timerBar'),fill=document.getElementById('timerFill');bar.style.display='block';timerMax=12;timerLeft=timerMax;fill.style.width='100%';timer=setInterval(()=>{timerLeft-=0.1;fill.style.width=Math.max(0,timerLeft/timerMax*100)+'%';if(timerLeft<=0){stopTimer();if(!round.answered){toast(t('timeUp'));const q=round.list[round.idx];answer(false,null,q,modeDef(),null);}}},100);}
+
+/* ===== SHARE ===== */
+function shareScore(){
+  const total=round.list.length||1,sc=round.score,r=rank();
+  const c=document.createElement('canvas');c.width=600;c.height=315;const x=c.getContext('2d');
+  x.fillStyle='#C4621A';x.fillRect(0,0,600,315);x.fillStyle='#D4A017';x.fillRect(0,0,600,9);
+  x.fillStyle='#fff';x.font='bold 34px Georgia,serif';x.fillText('Highways of India',40,72);
+  x.font='15px monospace';x.fillStyle='#fce8d8';x.fillText('SSC FOCUS · GEO QUIZ',40,100);
+  x.fillStyle='#fff';x.font='bold 72px Georgia,serif';x.fillText(sc+' / '+total,40,196);
+  const ratio=sc/total,stars=ratio>=1?'★★★':ratio>=.7?'★★☆':ratio>=.4?'★☆☆':'☆☆☆';
+  x.font='40px serif';x.fillStyle='#D4A017';x.fillText(stars,44,252);
+  x.font='18px monospace';x.fillStyle='#fff';x.fillText((lang==='hi'?r.hi:r.en)+'  ·  '+G.xp+' XP',44,292);
+  const txt='Highways of India — I scored '+sc+'/'+total+' ('+(lang==='hi'?r.hi:r.en)+', '+G.xp+' XP) on SSC Focus!';
+  c.toBlob(blob=>{if(!blob)return;const file=new File([blob],'highways-score.png',{type:'image/png'});
+    if(navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file],title:'Highways of India',text:txt}).catch(()=>{});}
+    else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='highways-score.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);if(navigator.clipboard)navigator.clipboard.writeText(txt).then(()=>toast(t('copied'))).catch(()=>{});}
+  });
+}
+
+function toggleTimed(){G.timed=!G.timed;save();const e=document.getElementById('timedTog');e.classList.toggle('on',G.timed);e.setAttribute('aria-checked',G.timed?'true':'false');if(!G.timed)stopTimer();else if(document.getElementById('s-play').classList.contains('active')&&!round.answered)startTimer();}
+function toggleContrast(){G.hc=!G.hc;save();document.body.classList.toggle('hc',G.hc);const e=document.getElementById('contrastTog');e.classList.toggle('on',G.hc);e.setAttribute('aria-checked',G.hc?'true':'false');}
+function toggleBigText(){G.big=!G.big;save();document.body.classList.toggle('big',G.big);const e=document.getElementById('bigtextTog');e.classList.toggle('on',G.big);e.setAttribute('aria-checked',G.big?'true':'false');}
+function initToggle(id,on){const e=document.getElementById(id);if(!e)return;e.classList.toggle('on',on);e.setAttribute('aria-checked',on?'true':'false');}
+
+/* NAV/SETTINGS */
+function go(tab){stopTimer();document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('s-'+tab).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));document.getElementById('main').scrollTop=0;if(tab==='learn')buildLearn();if(tab==='stats')refreshStats();if(tab==='atlas')buildAtlas();if(tab==='play'&&G.timed&&round.list.length&&!round.answered)startTimer();}
+function setMode(m){mode=m;G.mode=m;save();document.querySelectorAll('#modeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));toast(t('modeChanged'));startRound();}
+function clearMcq(){const m=document.getElementById('mcq');if(!m)return;m.style.display='none';m.innerHTML='';}
+function showMcq(q){
+  const m=document.getElementById('mcq');if(!m||!G.mcqHelp||modeDef().kind==='point'){clearMcq();return;}
+  const correct=lang==='hi'?q.h:q.n;
+  const pool=DATA.map(r=>lang==='hi'?r.h:r.n).filter(n=>n!==correct);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const opts=[{label:correct,ok:true},{label:pool[0],ok:false},{label:pool[1],ok:false}];
+  for(let i=opts.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[opts[i],opts[j]]=[opts[j],opts[i]];}
+  m.style.display='flex';m.innerHTML='';
+  opts.forEach(o=>{const b=document.createElement('button');b.textContent=o.label;b.onclick=()=>{if(o.ok){b.style.borderColor='var(--green)';play('good');[...m.querySelectorAll('button')].forEach(x=>x.disabled=true);}else{b.style.borderColor='var(--red)';b.disabled=true;play('bad');}};m.appendChild(b);});
+}
+function toggleMcq(){G.mcqHelp=!G.mcqHelp;save();const e=document.getElementById('mcqTog');e.classList.toggle('on',G.mcqHelp);e.setAttribute('aria-checked',G.mcqHelp?'true':'false');}
+function buildModeSeg(){const ms=document.getElementById('modeSeg');ms.innerHTML='';CFG.modes.forEach(m=>{const b=document.createElement('button');b.dataset.m=m.id;if(m.id===mode)b.className='on';b.innerHTML=`<span class="mi">${m.icon}</span><span>${lang==='hi'?m.hi:m.en}</span>`;b.onclick=()=>setMode(m.id);ms.appendChild(b);});}
+function toggleLang(){setLang(lang==='en'?'hi':'en');}
+function setLang(l){lang=l;G.lang=l;save();document.getElementById('langBtn').textContent=l==='en'?'हिं':'EN';document.getElementById('segEN').classList.toggle('on',l==='en');document.getElementById('segHI').classList.toggle('on',l==='hi');applyLang();}
+function applyLang(){document.documentElement.lang=lang;const set=(id,k)=>{const e=document.getElementById(id);if(e)e.textContent=t(k);};
+  document.getElementById('h-title').textContent=lang==='hi'?CFG.titleHi:CFG.titleEn;
+  document.getElementById('h-sub').textContent=GameCommon.sub(CFG,lang,T); document.getElementById('h-logo').textContent=CFG.logo;
+  set('nav-play','navPlay');set('nav-learn','navLearn');set('nav-atlas','navAtlas');set('nav-stats','navStats');set('nav-info','navInfo');
+  document.getElementById('learn-ttl').textContent=lang==='hi'?CFG.learnTtlHi:CFG.learnTtlEn;
+  document.getElementById('learn-sub').textContent=lang==='hi'?CFG.learnSubHi:CFG.learnSubEn;
+  document.getElementById('atlas-ttl').textContent=lang==='hi'?CFG.atlasTtlHi:CFG.atlasTtlEn;
+  document.getElementById('atlas-sub').textContent=lang==='hi'?CFG.atlasSubHi:CFG.atlasSubEn;
+  document.getElementById('lvl-label').textContent=lang==='hi'?CFG.rankLabelHi:CFG.rankLabelEn;
+  set('stAccL','acc');set('stBestL','best');set('stCorrectL','corr');set('stPlayedL','ans');
+  set('badge-ttl','badgeTtl');set('info-ttl','infoTtl');set('set-lang','setLang');set('set-sound','setSound');set('set-sound-d','setSoundD');set('set-len','setLen');set('set-len-d','setLenD');set('diff-ttl','diffTtl');set('about-ttl','aboutTtl');set('resetTxt','reset');set('mReview','reviewMissed');set('exportTxt','exportProgress');set('importTxt','importProgress');set('shareRankTxt','shareRank');set('mAgain','again');set('mStats','viewStats');set('hintTxt','hint');
+  set('mShare','shareBtn');set('revealTxt','showResult');
+  set('acc-ttl','accTtl');set('set-timed','setTimed');set('set-timed-d','setTimedD');
+  set('set-contrast','setContrast');set('set-contrast-d','setContrastD');set('set-bigtext','setBigText');set('set-bigtext-d','setBigTextD');
+  document.getElementById('ver').textContent='SSC FOCUS · v1.1 · '+CFG.count+' '+(lang==='hi'?CFG.unitNameHi:CFG.unitNameEn);
+  document.getElementById('howto').innerHTML=(lang==='hi'?CFG.howtoHi:CFG.howtoEn).split('\n').map(x=>x||'&nbsp;').join('<br>');
+  buildModeSeg();buildDiffFilters();refreshStats();
+  if(document.getElementById('s-learn').classList.contains('active'))buildLearn();
+  if(document.getElementById('s-atlas').classList.contains('active'))buildAtlas();
+  if(round.list.length&&!round.answered)loadQuestion();
+}
+function toggleSound(){G.sound=!G.sound;save();document.getElementById('soundTog').classList.toggle('on',G.sound);}
+function setLen(n){G.roundLen=n;save();document.querySelectorAll('.rlen').forEach(b=>b.classList.toggle('on',+b.dataset.n===n));}
+function buildDiffFilters(){const fc=document.getElementById('diffFilters');fc.innerHTML='';[['all','all'],['easy','easy'],['medium','medium'],['hard','hard'],['weak','weakF']].forEach(([c,k])=>{const b=document.createElement('button');b.className='chip-btn'+(G.diff===c?' on':'');b.textContent=t(k);b.onclick=()=>{G.diff=c;save();buildDiffFilters();startRound();};fc.appendChild(b);});}
+function resetProgress(){GameCommon.confirmReset(lang,()=>{G=Object.assign({},DEF,{lang:lang,sound:G.sound,roundLen:G.roundLen,diff:G.diff,mode:mode,timed:G.timed,mcqHelp:G.mcqHelp,hc:G.hc,big:G.big});save();refreshStats();startRound();toast(lang==='hi'?'प्रगति रीसेट':'Progress reset');});}
+
+/* INIT */
+buildMap(map);buildMap(atlasMap);
+initToggle('soundTog',G.sound);initToggle('timedTog',G.timed);initToggle('mcqTog',G.mcqHelp);initToggle('contrastTog',G.hc);initToggle('bigtextTog',G.big);
+document.body.classList.toggle('hc',G.hc);document.body.classList.toggle('big',G.big);
+document.querySelectorAll('.toggle[role="switch"]').forEach(tg=>tg.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tg.click();}}));
+document.querySelectorAll('.rlen').forEach(b=>{b.dataset.n=(b.dataset.n==='12'?CFG.count:b.dataset.n);b.classList.toggle('on',+b.dataset.n===G.roundLen);});
+document.querySelector('.rlen[data-n="'+CFG.count+'"]')&&document.querySelector('.rlen[data-n="'+CFG.count+'"]').classList.toggle('on',G.roundLen===CFG.count);
+GameCommon.install({KEY,DEF,G,round,lang,t:function(k){return t(k);}});
+setLang(lang);startRound();refreshStats();
+</script>
+<script data-ssc-study-bridge>window.SSC_STUDY_GAME={"slug":"highways","states":{}};
+/* Generated into Tools games by connect_gk_study.mjs. Uses actual answer counters, never page opens. */
+(function () {
+    if (window.parent === window || window.__sscStudyBridge) return;
+    window.__sscStudyBridge = true;
+    const meta = window.SSC_STUDY_GAME;
+    const state = () => typeof G === 'undefined' ? null : G;
+    const currentRound = () => typeof round === 'undefined' ? null : round;
+    const send = data => window.parent.postMessage(data, location.origin);
+    let answered = Number(state()?.answered) || 0;
+    let correct = Number(state()?.correct) || 0;
+    let started = performance.now();
+    let questionStarted = started;
+    const hasQuestionClock = typeof window.loadQuestion === 'function';
+    let sessionId = crypto.randomUUID();
+    let sessionAnswers = 0;
+    let finished = false;
+    let activeQuestion = null;
+    function capturedAnswer() {
+        const s = state(), r = currentRound();
+        if (!s) return;
+        const nextAnswered = Number(s.answered) || 0, nextCorrect = Number(s.correct) || 0;
+        if (nextAnswered > answered) {
+            const q = activeQuestion || r?.list?.[r.idx];
+            const name = q && String(q.n || q.name || q.title || '');
+            if (name) {
+                const states = meta.states?.[name] || [];
+                const locationText = states.length ? states.join(', ') : String(q.state || q.st || q.country || q.cap || 'See the correct location highlighted in the game');
+                send({ type: 'ssc-gk-attempt', activityId: sessionId + ':' + sessionAnswers, key: name.slice(0, 80), question: 'Locate or identify: ' + name,
+                    correct: nextCorrect > correct, correctAnswer: locationText, selectedAnswer: nextCorrect > correct ? locationText : 'Incorrect map or association choice',
+                    ...(typeof r?.hintUsed === 'boolean' ? { hintUsed: r.hintUsed, answerRevealed: false, attemptNumber: 1 } : {}),
+                    explanation: 'Revisit ' + name + ' in the study view, then retry it without a hint.',
+                    ...(hasQuestionClock ? { durationSec: Math.max(0, Math.round((performance.now() - questionStarted) / 1000)) } : {}) });
+            }
+            sessionAnswers += nextAnswered - answered;
+        }
+        answered = nextAnswered; correct = nextCorrect;
+    }
+    function finish() {
+        if (finished || sessionAnswers < 3) return;
+        finished = true;
+        send({ type: 'ssc-tool-session', game: meta.slug, solved: sessionAnswers, durationSec: Math.round((performance.now() - started) / 1000) });
+    }
+    function wrap(name, before, after) {
+        const original = window[name];
+        if (typeof original !== 'function') return;
+        window[name] = function (...args) { if (before) before(args); const result = original.apply(this, args); if (after) after(args); return result; };
+        window[name].__sscOriginal = original;
+    }
+    wrap('answer', args => { activeQuestion = args[2]; }, () => { activeQuestion = null; });
+    wrap('showAnswer', args => { activeQuestion = args[0]; }, () => { activeQuestion = null; });
+    wrap('choose', () => { const r = currentRound(); activeQuestion = r?.list?.[r.idx]; }, () => { activeQuestion = null; });
+    wrap('save', null, capturedAnswer);
+    wrap('loadQuestion', null, () => { questionStarted = performance.now(); });
+    wrap('startRound', () => { sessionId = crypto.randomUUID(); sessionAnswers = 0; finished = false; started = performance.now(); questionStarted = started; }, () => { answered = Number(state()?.answered) || 0; correct = Number(state()?.correct) || 0; });
+    wrap('endRound', null, finish);
+    wrap('finishRound', null, finish);
+    wrap('nextQuestion', null, () => { const r = currentRound(); if (r?.list?.length && r.idx >= r.list.length) finish(); });
+})();
+</script>
+<script data-ssc-game-layout>window.SSC_MAP_PROFILE="india";
+/* Shared map workspace. Native question, grading, zoom and progress handlers
+   retain their IDs and SVG coordinate systems. Generated into Tools/library. */
+(function () {
+  'use strict';
+  function boot() {
+    if (document.documentElement.classList.contains('ssc-map-game')) return;
+    var root = document.documentElement, body = document.body;
+    var main = document.getElementById('main'), play = document.getElementById('s-play'), wrap = document.getElementById('mapWrap'), map = document.getElementById('map');
+    if (!main || !play || !wrap || !map) return;
+    root.classList.add('ssc-map-game'); body.classList.add('ssc-game');
+    var usesHiddenPanels=play.getAttribute('role')==='tabpanel';
+    function syncSections(){if(usesHiddenPanels)main.querySelectorAll('.screen').forEach(function(screen){screen.classList.toggle('active',!screen.hidden);});}
+    syncSections();
+    var grid = document.createElement('div'); grid.className = 'ssc-play-layout';
+    var panel = document.createElement('div'); panel.className = 'ssc-map-panel';
+    var rail = document.createElement('aside'); rail.className = 'ssc-question-panel'; rail.setAttribute('aria-label', 'Question and answer');
+    var question = document.createElement('div'); question.className = 'ssc-question-context';
+    var answer = document.createElement('div'); answer.className = 'ssc-answer-context';
+    // Detach the legacy overlay before moving its map. Keep the native feedback
+    // and Next nodes, including the listeners attached by each game.
+    var feedback = document.getElementById('feedback'), reveal = document.getElementById('revealBtn');
+    if (feedback) answer.appendChild(feedback);
+    if (reveal) answer.appendChild(reveal);
+    ['modeSeg','modeChips','timerBar'].forEach(function (id) { var node = document.getElementById(id); if (node) question.appendChild(node); });
+    var progress = play.querySelector('.prog-row'), prompt = play.querySelector('.prompt-card');
+    if (progress && (!prompt || !prompt.contains(progress))) question.appendChild(progress);
+    if (prompt) question.appendChild(prompt);
+    var actions = play.querySelector('.play-actions');
+    if (actions) { actions.setAttribute('role','group'); actions.removeAttribute('aria-label'); while (actions.firstChild) answer.appendChild(actions.firstChild); actions.remove(); }
+    var hint=document.getElementById('hintLink')||play.querySelector('.hint-link');
+    if(hint&&!hint.id)hint.id='hintLink';
+    ['hintLink','nextBtn'].forEach(function(id){var node=document.getElementById(id);if(node&&!answer.contains(node))answer.appendChild(node);});
+    panel.appendChild(wrap);
+    var help = document.createElement('p'); help.className = 'ssc-map-help';
+    help.textContent = window.SSC_MAP_PROFILE === 'world' ? 'Lines show each peak’s location · Arrow keys select a marker · Enter answers' : 'Tab to the map · Arrow keys select a state · Enter answers';
+    panel.appendChild(help);
+    var locationName = document.createElement('p'); locationName.className = 'ssc-location-name'; locationName.setAttribute('aria-live','polite'); panel.appendChild(locationName);
+    rail.appendChild(question); rail.appendChild(answer); grid.appendChild(rail); grid.appendChild(panel); play.appendChild(grid);
+    var oldPanel = play.querySelector('.play-map-panel');
+    if (oldPanel) { while (oldPanel.firstChild) panel.appendChild(oldPanel.firstChild); oldPanel.remove(); }
+    var emptyLayout = play.querySelector('.play-layout'); if (emptyLayout && !emptyLayout.children.length) emptyLayout.remove();
+    // Native Study Edition fitting targets the old full-screen panel. The new
+    // workspace owns fitting after reflow; native map projection is unchanged.
+    if (typeof window.fitGameMap === 'function') window.fitGameMap = function () { fit(); };
+    var layoutWorldMarkers=null;
+    var initialBox = map.viewBox.baseVal, baseWidth = initialBox.width, baseRatio = initialBox.width / initialBox.height || 1;
+    var defaultViewBox = map.getAttribute('viewBox');
+    if(window.SSC_MAP_PROFILE!=='world'&&!wrap.querySelector('.zoom-ctrl,.map-tog')){
+      var controls=document.createElement('div');controls.className='zoom-ctrl';
+      [['+','Zoom in',.75],['−','Zoom out',1.333],['⟲','Reset zoom',0]].forEach(function(control){var b=document.createElement('button');b.type='button';b.textContent=control[0];b.setAttribute('aria-label',control[1]);b.addEventListener('click',function(){if(!control[2])map.setAttribute('viewBox',defaultViewBox);else{var vb=map.viewBox.baseVal,w=vb.width*control[2],h=vb.height*control[2];if(w<15||w>baseWidth*1.05)return;map.setAttribute('viewBox',[vb.x+(vb.width-w)/2,vb.y+(vb.height-h)/2,w,h].join(' '));}});controls.appendChild(b);});wrap.appendChild(controls);
+    }
+    // Same test as the stacked layout in layout.css: narrow screens, and
+    // portrait tablets. A short wide screen (a phone held sideways) keeps
+    // map and questions side by side.
+    function stacked() { return innerWidth < 600 || (innerWidth < 900 && innerHeight > 600); }
+    function fit() {
+      var ratio = baseRatio;
+      root.style.setProperty('--ssc-map-ratio',String(ratio));
+      var height = Math.max(140, main.clientHeight - 36);
+      var portrait = stacked();
+      // Phones stack question, map and answers in one scrolling column. Fitting
+      // all three on one screen left the map about 200px tall (180px wide on a
+      // 390px phone), so the map takes the full width instead, kept short
+      // enough that the screen is never all map.
+      if (portrait) height = Math.max(240, main.clientHeight * 0.85);
+      var width = Math.min(panel.clientWidth, height * ratio);
+      root.style.setProperty('--ssc-map-width',Math.floor(width)+'px');
+      root.style.setProperty('--ssc-rail-height',portrait ? 'none' : height+'px');
+      var atlas = document.getElementById('atlasMap');
+      if (atlas) {var vb=atlas.viewBox.baseVal;root.style.setProperty('--ssc-atlas-width',Math.floor(height*(vb.width/vb.height||1))+'px');}
+      if(layoutWorldMarkers)layoutWorldMarkers();
+    }
+    function dispatchPoint(path) {
+      var box=path.getBBox(), point=map.createSVGPoint();point.x=box.x+box.width/2;point.y=box.y+box.height/2;
+      if(typeof path.isPointInFill==='function'&&!path.isPointInFill(point)){
+        outer:for(var x=1;x<10;x++)for(var y=1;y<10;y++){point.x=box.x+box.width*x/10;point.y=box.y+box.height*y/10;if(path.isPointInFill(point))break outer;}
+      }
+      var matrix=path.getScreenCTM();if(!matrix)return;var screen=point.matrixTransform(matrix);
+      path.dispatchEvent(new MouseEvent('click',{bubbles:true,clientX:screen.x,clientY:screen.y}));
+    }
+    function focusNext(){var next=document.getElementById('nextBtn');if(next&&!next.hidden&&next.getClientRects().length)next.focus();}
+    function wireMap() {
+      map.setAttribute('role','group');map.removeAttribute('tabindex');
+      var paths=Array.from(map.querySelectorAll('.st-path:not([data-ssc-base]),.stp,.land:not([data-ssc-base])'));
+      var states=typeof STATES!=='undefined'?STATES:[];
+      // Several legacy pages draw every state into one combined path. Split
+      // only its presentation, using the same native projection and polygons,
+      // so each state can be focused without changing the map or tap grading.
+      if(paths.length===1&&states.length>1&&typeof projX==='function'&&typeof projY==='function'){
+        var combined=paths[0],group=document.createElementNS('http://www.w3.org/2000/svg','g');group.setAttribute('class','ssc-state-targets');
+        states.forEach(function(state){var p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('class',(combined.getAttribute('class')||'st-path')+' ssc-state-target');p.setAttribute('aria-label',state.n);p.style.fill='transparent';p.style.stroke='none';p.style.pointerEvents='all';p.setAttribute('d',state.p.map(function(ring){return ring.map(function(point,index){return(index?'L':'M')+projX(point[0]).toFixed(2)+' '+projY(point[1]).toFixed(2);}).join('')+'Z';}).join(''));group.appendChild(p);});
+        // Keep the original painted base: the native feedback inserts its
+        // correct/wrong shading after this path. The focus targets are clear.
+        combined.dataset.sscBase='true';combined.setAttribute('aria-hidden','true');combined.removeAttribute('role');combined.removeAttribute('tabindex');combined.after(group);paths=Array.from(group.children);
+      }
+      paths.forEach(function(path,index){
+        if(path.dataset.sscKeyboard)return;path.dataset.sscKeyboard='1';
+        path.setAttribute('role','button');path.setAttribute('tabindex',index===0?'0':'-1');
+        var name=path.getAttribute('aria-label')||path.dataset.state||(states[index]&&states[index].n)||'Map state '+(index+1);
+        path.setAttribute('aria-label',name);
+        path.addEventListener('focus',function(){locationName.textContent=name;});
+        path.addEventListener('keydown',function(e){
+          if(['ArrowRight','ArrowDown','ArrowLeft','ArrowUp','Home','End'].includes(e.key)){
+            e.preventDefault();e.stopImmediatePropagation();var next=e.key==='Home'?0:e.key==='End'?paths.length-1:(index+(['ArrowRight','ArrowDown'].includes(e.key)?1:-1)+paths.length)%paths.length;
+            paths.forEach(function(p){p.setAttribute('tabindex','-1');});paths[next].setAttribute('tabindex','0');paths[next].focus();
+          }else if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopImmediatePropagation();dispatchPoint(path);focusNext();}
+        },true);
+      });
+    }
+    if(window.SSC_MAP_PROFILE==='world'){
+      function worldLand(svg){
+        if(!window.SSC_WORLD_PATHS)return;
+        svg.querySelectorAll('.land,.land2,.ssc-world-land').forEach(function(node){node.remove();});
+        var group=document.createElementNS('http://www.w3.org/2000/svg','g');group.setAttribute('class','ssc-world-land');group.setAttribute('aria-hidden','true');
+        window.SSC_WORLD_PATHS.forEach(function(d){var p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.setAttribute('class','land');p.setAttribute('fill-rule','evenodd');group.appendChild(p);});
+        svg.insertBefore(group,svg.querySelector('.map-label,.marker'));
+      }
+      var nativeBase=window.drawBase;
+      if(typeof nativeBase==='function')window.drawBase=function(svg){nativeBase(svg);worldLand(svg);};
+      worldLand(map);var atlasWorld=document.getElementById('atlasMap');if(atlasWorld)worldLand(atlasWorld);
+      var zoom=document.createElement('div');zoom.className='ssc-world-zoom';
+      [['Whole world','0 0 100 50'],['Himalayas','66 12 18 11']].forEach(function(option){var b=document.createElement('button');b.type='button';b.textContent=option[0];b.addEventListener('click',function(){map.setAttribute('viewBox',option[1]);schedule();});zoom.appendChild(b);});
+      question.appendChild(zoom);
+      // Nearby peaks must remain individually selectable. Clear hit circles
+      // and leader lines keep the true coordinates and native choice handlers.
+      layoutWorldMarkers=function(){
+        if(!map.getClientRects().length)return;var matrix=map.getScreenCTM();if(!matrix)return;var scale=Math.abs(matrix.a),vb=map.viewBox.baseVal;if(!scale)return;
+        map.querySelectorAll('.ssc-marker-leader,.ssc-marker-anchor').forEach(function(node){node.remove();});
+        var placed=[],gap=46/scale,pad=23/scale;
+        Array.from(map.querySelectorAll('.marker')).forEach(function(marker,index){
+          var circle=marker.querySelector('circle:not(.ssc-marker-hit)');if(!circle)return;var cx=Number(circle.getAttribute('cx')),cy=Number(circle.getAttribute('cy'));
+          var outside=cx<vb.x||cx>vb.x+vb.width||cy<vb.y||cy>vb.y+vb.height;marker.style.display=outside?'none':'';if(outside)return;
+          if(!marker.dataset.sscRadius)marker.dataset.sscRadius=circle.getAttribute('r');
+          var clamp=function(x,y){return{x:Math.max(vb.x+pad,Math.min(vb.x+vb.width-pad,x)),y:Math.max(vb.y+pad,Math.min(vb.y+vb.height-pad,y))};};
+          var free=function(p){return placed.every(function(old){return Math.hypot(p.x-old.x,p.y-old.y)>=gap;});},position=clamp(cx,cy);
+          if(!free(position)){outer:for(var radius=gap;radius<gap*8;radius+=gap*.7)for(var angle=0;angle<Math.PI*2;angle+=Math.PI/6){var candidate=clamp(cx+Math.cos(angle)*radius,cy+Math.sin(angle)*radius);if(free(candidate)){position=candidate;break outer;}}}
+          placed.push(position);marker.setAttribute('transform','translate('+(position.x-cx)+' '+(position.y-cy)+')');
+          marker.querySelectorAll('path').forEach(function(node){node.style.display='none';});
+          var oldRadius=Number(marker.dataset.sscRadius);circle.setAttribute('r',String((oldRadius>=2.7?12:oldRadius<=1.6?6:9)/scale));circle.setAttribute('stroke-width',String(1.5/scale));
+          var hit=marker.querySelector('.ssc-marker-hit');if(!hit){hit=document.createElementNS('http://www.w3.org/2000/svg','circle');hit.setAttribute('class','ssc-marker-hit');hit.setAttribute('fill','transparent');marker.insertBefore(hit,marker.firstChild);}hit.setAttribute('cx',String(cx));hit.setAttribute('cy',String(cy));hit.setAttribute('r',String(22/scale));
+          var text=marker.querySelector('.ssc-marker-number');if(!text){text=document.createElementNS('http://www.w3.org/2000/svg','text');text.setAttribute('class','ssc-marker-number');text.setAttribute('aria-hidden','true');marker.appendChild(text);}text.textContent=String(index+1);text.setAttribute('x',String(cx));text.setAttribute('y',String(cy+4/scale));text.setAttribute('font-size',String(12/scale));
+          var hex=circle.getAttribute('fill').replace('#','');if(hex.length===3)hex=hex.split('').map(function(c){return c+c;}).join('');var rgb=[0,2,4].map(function(at){var v=parseInt(hex.slice(at,at+2),16)/255;return v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4);});text.style.fill=rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722>.179?'#000':'#fff';
+          if(Math.hypot(position.x-cx,position.y-cy)>.1){var line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('class','ssc-marker-leader');line.setAttribute('x1',String(cx));line.setAttribute('y1',String(cy));line.setAttribute('x2',String(position.x));line.setAttribute('y2',String(position.y));line.setAttribute('stroke-width',String(1/scale));map.insertBefore(line,marker);var anchor=document.createElementNS('http://www.w3.org/2000/svg','circle');anchor.setAttribute('class','ssc-marker-anchor');anchor.setAttribute('cx',String(cx));anchor.setAttribute('cy',String(cy));anchor.setAttribute('r',String(2/scale));map.insertBefore(anchor,marker);}
+        });
+        Array.from(map.querySelectorAll('.marker')).filter(function(marker){return marker.style.display!=='none';}).forEach(function(marker,index){marker.setAttribute('tabindex',index===0?'0':'-1');});
+      };
+      function wireMarkers(svg){
+        var markers=Array.from(svg.querySelectorAll('.marker'));
+        markers.forEach(function(marker,index){
+          if(marker.dataset.sscKeyboard)return;marker.dataset.sscKeyboard='1';marker.setAttribute('role','button');marker.setAttribute('tabindex',index===0?'0':'-1');
+          marker.setAttribute('aria-label',svg.id==='atlasMap'&&typeof PEAKS!=='undefined'?PEAKS[index]?.n||'Peak '+(index+1):'Map location '+(index+1));
+          marker.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();marker.dispatchEvent(new MouseEvent('click',{bubbles:true}));if(svg.id==='map')focusNext();}else if(e.key.startsWith('Arrow')){e.preventDefault();var visible=Array.from(svg.querySelectorAll('.marker')).filter(function(m){return m.style.display!=='none';});var current=visible.indexOf(marker),next=(current+(['ArrowRight','ArrowDown'].includes(e.key)?1:-1)+visible.length)%visible.length;markers.forEach(function(m){m.setAttribute('tabindex','-1');});visible[next].setAttribute('tabindex','0');visible[next].focus();}});
+        });
+      }
+      wireMarkers(map);new MutationObserver(function(changes){if(!changes.some(function(change){return Array.from(change.addedNodes).concat(Array.from(change.removedNodes)).some(function(node){return node.classList?.contains('marker');});}))return;wireMarkers(map);schedule();}).observe(map,{childList:true});
+      if(atlasWorld){wireMarkers(atlasWorld);new MutationObserver(function(){wireMarkers(atlasWorld);}).observe(atlasWorld,{childList:true});}
+      if(atlasWorld&&typeof PEAKS!=='undefined'){
+        var label=document.createElement('label');label.className='ssc-atlas-choice';label.textContent='Choose a peak';var picker=document.createElement('select');picker.setAttribute('aria-label','Choose a peak');
+        var placeholder=document.createElement('option');placeholder.value='';placeholder.textContent='Select a peak to read its notes';picker.appendChild(placeholder);
+        PEAKS.forEach(function(peak,index){var option=document.createElement('option');option.value=String(index);option.textContent=peak.n;picker.appendChild(option);});
+        picker.addEventListener('change',function(){if(picker.value==='')return;var marker=atlasWorld.querySelectorAll('.marker')[Number(picker.value)];if(marker)marker.dispatchEvent(new MouseEvent('click',{bubbles:true}));});label.appendChild(picker);document.getElementById('s-atlas').appendChild(label);
+      }
+    }else{wireMap();new MutationObserver(wireMap).observe(map,{childList:true,subtree:true});}
+    var framePending=false;
+    function schedule(){if(framePending)return;framePending=true;requestAnimationFrame(function(){framePending=false;fit();});}
+    if(usesHiddenPanels){
+      var nativeGo=window.go;
+      if(typeof nativeGo==='function')window.go=function(){var result=nativeGo.apply(this,arguments);syncSections();schedule();return result;};
+      new MutationObserver(function(){syncSections();schedule();}).observe(main,{subtree:true,attributes:true,attributeFilter:['hidden']});
+    }
+    ['learnList','timelineList'].forEach(function(id){
+      var list=document.getElementById(id);if(!list)return;
+      function wireCards(){Array.from(list.querySelectorAll('.park-item,.peak-item,.card,.time-item,.timeline-item')).forEach(function(card){if(card.tagName==='BUTTON'||card.dataset.sscCard||typeof card.onclick!=='function')return;card.dataset.sscCard='1';card.setAttribute('role','button');card.setAttribute('tabindex','0');var name=card.querySelector('.pn,h3,h4');if(name)card.setAttribute('aria-label',name.textContent.trim());card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click();}});});}
+      wireCards();new MutationObserver(wireCards).observe(list,{childList:true,subtree:true});
+    });
+    var atlasInteractive=document.getElementById('atlasMap');
+    if(atlasInteractive&&window.SSC_MAP_PROFILE!=='world'){
+      function wireAtlas(){Array.from(atlasInteractive.querySelectorAll('.apin,.marker,.pin,.park-pin')).forEach(function(node,index){if(node.dataset.sscAtlas||typeof node.onclick!=='function')return;node.dataset.sscAtlas='1';node.setAttribute('role','button');node.setAttribute('tabindex','0');if(!node.hasAttribute('aria-label'))node.setAttribute('aria-label','Atlas location '+(index+1));node.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();node.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});});}
+      wireAtlas();new MutationObserver(wireAtlas).observe(atlasInteractive,{childList:true,subtree:true});
+    }
+    new ResizeObserver(schedule).observe(main);new ResizeObserver(schedule).observe(panel);new ResizeObserver(schedule).observe(question);
+    new MutationObserver(schedule).observe(play,{attributes:true,attributeFilter:['class','hidden']});
+    if(feedback)new MutationObserver(function(){schedule();if(stacked()&&feedback.getClientRects().length)feedback.scrollIntoView({block:'nearest'});}).observe(feedback,{attributes:true,attributeFilter:['hidden','class','style'],childList:true});
+    var appScale=1,appTheme='light';
+    function applyReading(){root.style.setProperty('--ssc-font-scale',String(appScale*(body.classList.contains('big')?1.18:1)));root.dataset.sscTheme=body.classList.contains('hc')?'light':appTheme;schedule();}
+    new MutationObserver(applyReading).observe(body,{attributes:true,attributeFilter:['class']});
+    function appearance(data){
+      var scale=Number(data.fontScale);appScale=Number.isFinite(scale)?Math.max(.9,Math.min(1.5,scale)):1;
+      appTheme=data.theme==='dark'?'dark':'light';applyReading();
+      var fonts={sans:'system-ui,-apple-system,"Segoe UI",sans-serif',minimal:'"DM Sans",system-ui,sans-serif',serif:'Georgia,serif',display:'Georgia,serif',hand:'"Patrick Hand",system-ui,sans-serif',mono:'ui-monospace,monospace',opendyslexic:'OpenDyslexic,system-ui,sans-serif'};
+      if(fonts[data.font]){root.style.setProperty('--ssc-ui-font',fonts[data.font]);root.style.setProperty('--ssc-heading-font',fonts[data.font]);}
+      var line=Number(data.lineHeight);if(Number.isFinite(line))root.style.setProperty('--ssc-line-height',String(Math.max(1.4,Math.min(2,line))));schedule();
+    }
+    window.addEventListener('message',function(event){if(event.source!==parent||event.origin!==location.origin||event.data?.type!=='ssc-tool-appearance')return;appearance(event.data);});
+    try{appearance({theme:localStorage.getItem('ssc_dark')==='true'?'dark':'light',fontScale:localStorage.getItem('ssc_font_size')||'1',font:localStorage.getItem('ssc_font')||'sans',lineHeight:localStorage.getItem('ssc_line_height')||'1.55'});}catch(_){fit();}
+    document.addEventListener('keydown',function(e){if(e.key!=='Escape'||e.defaultPrevented||parent===window)return;if(document.querySelector('.modal-bg.show,.sheet-bg:not([hidden]),.game-menu:not([hidden])'))return;e.preventDefault();parent.postMessage({type:'ssc-tool-close'},location.origin);});
+    fit();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script>
+</body>
+</html>

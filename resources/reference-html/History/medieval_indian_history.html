@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medieval Indian History — SSC CGL Master Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════
+   ROOT VARIABLES
+══════════════════════════════════════════════════ */
+:root{
+  --gold:#C8952A; --dgold:#A07020; --saffron:#E8841A; --dsaffron:#C06010;
+  --cream:#FDF6E3; --parch:#F5E6C8;
+  --dbrown:#2C1A0E; --mbrown:#5C3D1E; --lbrown:#8B5E3C;
+  --forest:#1A4A2E; --teal:#1A5C5A;
+  --red:#8B1A1A; --crimson:#C0392B;
+  --purple:#5A1A6E; --navy:#1A2A5A;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;overflow:hidden;}
+body{
+  background:#110A03;
+  color:#F5E6C8;
+  font-family:'Lato',sans-serif;
+  font-size:14.5px;
+  line-height:1.72;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ══════════════════════════════════════════════════
+   TOPBAR
+══════════════════════════════════════════════════ */
+.topbar{
+  flex-shrink:0;
+  background:rgba(17,10,3,0.98);
+  border-bottom:1px solid rgba(200,149,42,0.3);
+  padding:0 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  z-index:100;
+}
+.topbar-brand{
+  font-family:'Cinzel',serif;
+  font-size:0.7rem;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:2px;
+  white-space:nowrap;
+  padding:10px 0;
+  border-right:1px solid rgba(200,149,42,0.2);
+  padding-right:12px;
+  flex-shrink:0;
+}
+.nav-scroll{
+  display:flex;
+  gap:2px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:6px 0;
+  flex:1;
+}
+.nav-scroll::-webkit-scrollbar{display:none;}
+.nb{
+  background:none;
+  border:none;
+  color:rgba(200,149,42,0.6);
+  font-family:'Cinzel',serif;
+  font-size:0.62rem;
+  font-weight:600;
+  letter-spacing:0.8px;
+  padding:5px 11px;
+  border-radius:2px;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all 0.18s;
+  text-transform:uppercase;
+  flex-shrink:0;
+  border-bottom:2px solid transparent;
+}
+.nb:hover{color:var(--gold);background:rgba(200,149,42,0.08);}
+.nb.active{
+  color:#F5D078;
+  background:rgba(200,149,42,0.14);
+  border-bottom:2px solid var(--saffron);
+}
+.page-counter{
+  font-family:'Cinzel',serif;
+  font-size:0.6rem;
+  color:rgba(200,149,42,0.4);
+  white-space:nowrap;
+  flex-shrink:0;
+  padding-left:10px;
+  border-left:1px solid rgba(200,149,42,0.15);
+}
+
+/* ══════════════════════════════════════════════════
+   PAGE CONTAINER
+══════════════════════════════════════════════════ */
+.pages-wrapper{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+.page{
+  position:absolute;
+  inset:0;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:var(--gold) #1A0E05;
+  padding:28px 24px 80px;
+  opacity:0;
+  pointer-events:none;
+  transform:translateX(30px);
+  transition:opacity 0.28s ease, transform 0.28s ease;
+}
+.page::-webkit-scrollbar{width:5px;}
+.page::-webkit-scrollbar-track{background:#1A0E05;}
+.page::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+.page.active{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(0);
+}
+.page.exit-left{
+  opacity:0;
+  transform:translateX(-30px);
+}
+.inner{max-width:1080px;margin:0 auto;}
+
+/* ══════════════════════════════════════════════════
+   BOTTOM NAV BAR
+══════════════════════════════════════════════════ */
+.bottombar{
+  flex-shrink:0;
+  background:rgba(17,10,3,0.96);
+  border-top:1px solid rgba(200,149,42,0.18);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:8px 20px;
+  gap:12px;
+}
+.bnav-btn{
+  background:rgba(200,149,42,0.1);
+  border:1px solid rgba(200,149,42,0.25);
+  color:var(--gold);
+  font-family:'Cinzel',serif;
+  font-size:0.65rem;
+  letter-spacing:1.5px;
+  padding:6px 18px;
+  border-radius:2px;
+  cursor:pointer;
+  transition:all 0.18s;
+  text-transform:uppercase;
+}
+.bnav-btn:hover{background:rgba(200,149,42,0.2);border-color:var(--gold);}
+.bnav-btn:disabled{opacity:0.25;cursor:not-allowed;}
+.bnav-dots{
+  display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:center;
+}
+.dot{
+  width:7px;height:7px;border-radius:50%;
+  background:rgba(200,149,42,0.2);
+  cursor:pointer;transition:all 0.18s;
+  border:1px solid rgba(200,149,42,0.2);
+}
+.dot.active{background:var(--gold);border-color:var(--saffron);}
+.dot:hover{background:rgba(200,149,42,0.5);}
+.bnav-title{
+  font-family:'Cinzel',serif;
+  font-size:0.6rem;
+  color:rgba(200,149,42,0.5);
+  letter-spacing:1.5px;
+  text-align:center;
+  flex:1;
+  max-width:400px;
+}
+
+/* ══════════════════════════════════════════════════
+   COMPONENT STYLES
+══════════════════════════════════════════════════ */
+/* Section Header */
+.sh{text-align:center;margin-bottom:28px;}
+.sh-num{
+  display:inline-block;
+  font-family:'Cinzel',serif;font-size:0.62rem;font-weight:700;
+  letter-spacing:4px;color:var(--saffron);text-transform:uppercase;margin-bottom:6px;
+}
+.sh-title{
+  font-family:'Cinzel Decorative',serif;font-size:clamp(1.4rem,3vw,2.2rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#F5D078,var(--gold),var(--saffron));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:6px;line-height:1.2;
+}
+.sh-sub{
+  font-family:'Cinzel',serif;font-size:0.78rem;
+  color:rgba(200,149,42,0.65);letter-spacing:2px;
+}
+.sh-div{
+  width:160px;height:1px;margin:10px auto 0;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+/* Card */
+.card{
+  background:linear-gradient(135deg,rgba(44,26,14,0.85),rgba(26,14,5,0.9));
+  border:1px solid rgba(200,149,42,0.2);
+  border-radius:4px;margin-bottom:18px;overflow:hidden;
+  transition:border-color 0.2s;
+}
+.card:hover{border-color:rgba(200,149,42,0.38);}
+.card-hd{
+  padding:14px 20px;
+  background:linear-gradient(135deg,rgba(200,149,42,0.12),rgba(200,149,42,0.05));
+  border-bottom:1px solid rgba(200,149,42,0.15);
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.card-icon{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold),var(--dsaffron));
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+}
+.card-title{
+  font-family:'Cinzel',serif;font-size:1rem;font-weight:700;
+  color:#F5D078;letter-spacing:0.5px;
+}
+.card-dates{font-size:0.72rem;color:var(--saffron);letter-spacing:1.5px;margin-top:2px;}
+.card-freq{
+  margin-left:auto;
+  background:rgba(200,149,42,0.12);border:1px solid rgba(200,149,42,0.25);
+  color:var(--gold);font-size:0.62rem;font-family:'Cinzel',serif;
+  padding:3px 10px;border-radius:20px;letter-spacing:0.8px;white-space:nowrap;
+}
+.card-body{padding:18px 20px;}
+
+/* Grid */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+@media(max-width:700px){.g2,.g3{grid-template-columns:1fr;}}
+
+/* Info Box */
+.ib{
+  background:rgba(26,42,90,0.25);border:1px solid rgba(26,92,90,0.35);
+  border-left:3px solid var(--teal);border-radius:3px;padding:12px 16px;margin:12px 0;
+}
+.ib.gold{background:rgba(200,149,42,0.07);border-color:rgba(200,149,42,0.18);border-left-color:var(--gold);}
+.ib.red{background:rgba(139,26,26,0.12);border-color:rgba(192,57,43,0.25);border-left-color:var(--crimson);}
+.ib.green{background:rgba(26,74,46,0.18);border-color:rgba(26,74,46,0.35);border-left-color:#27AE60;}
+.ib.purple{background:rgba(90,26,110,0.18);border-color:rgba(90,26,110,0.35);border-left-color:#9B59B6;}
+.ib h4{
+  font-family:'Cinzel',serif;font-size:0.72rem;font-weight:700;
+  color:var(--gold);letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:8px;display:flex;align-items:center;gap:6px;
+}
+
+/* Fancy List */
+ul.fl{list-style:none;padding:0;}
+ul.fl li{position:relative;padding-left:18px;margin-bottom:6px;color:rgba(245,230,200,0.88);}
+ul.fl li::before{content:'◆';position:absolute;left:0;color:var(--saffron);font-size:0.45rem;top:6px;}
+ul.fl.arr li::before{content:'→';font-size:0.82rem;color:var(--gold);top:2px;font-size:0.75rem;}
+ul.fl.chk li::before{content:'✓';font-size:0.72rem;color:#27AE60;top:3px;}
+
+/* Table */
+.dt{width:100%;border-collapse:collapse;margin:10px 0;font-size:0.82rem;}
+.dt th{
+  background:linear-gradient(135deg,rgba(200,149,42,0.2),rgba(200,149,42,0.1));
+  color:#F5D078;font-family:'Cinzel',serif;font-size:0.67rem;
+  font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+  padding:8px 12px;border:1px solid rgba(200,149,42,0.18);text-align:left;
+}
+.dt td{
+  padding:7px 12px;border:1px solid rgba(200,149,42,0.1);
+  color:rgba(245,230,200,0.82);vertical-align:top;
+}
+.dt tr:nth-child(even) td{background:rgba(200,149,42,0.04);}
+.dt tr:hover td{background:rgba(200,149,42,0.09);}
+.dt .hl{color:#F5D078;font-weight:700;}
+
+/* Timeline */
+.tl{position:relative;padding-left:26px;margin:12px 0;}
+.tl::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,var(--gold),var(--saffron),transparent);}
+.tl-item{position:relative;margin-bottom:14px;}
+.tl-dot{position:absolute;left:-22px;top:4px;width:10px;height:10px;border-radius:50%;
+  background:var(--gold);border:2px solid var(--saffron);box-shadow:0 0 6px rgba(200,149,42,0.5);}
+.tl-yr{font-family:'Cinzel',serif;font-size:0.68rem;font-weight:700;color:var(--saffron);letter-spacing:1.5px;margin-bottom:2px;}
+.tl-ct{font-size:0.84rem;color:rgba(245,230,200,0.85);}
+
+/* Mnemonic */
+.mn{
+  background:linear-gradient(135deg,rgba(90,26,110,0.2),rgba(60,14,80,0.25));
+  border:1px solid rgba(155,89,182,0.35);border-radius:4px;
+  padding:12px 16px;margin:12px 0;
+}
+.mn-lbl{font-family:'Cinzel',serif;font-size:0.62rem;font-weight:700;color:#9B59B6;
+  letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;}
+.mn-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:0.97rem;color:#D7BDE2;line-height:1.6;}
+.mn-exp{font-size:0.77rem;color:rgba(245,230,200,0.65);margin-top:6px;}
+
+/* Exam Alert */
+.ea{
+  background:linear-gradient(135deg,rgba(200,149,42,0.12),rgba(200,149,42,0.06));
+  border:1px solid rgba(200,149,42,0.3);border-left:3px solid var(--saffron);
+  border-radius:3px;padding:12px 16px;margin:12px 0;
+}
+.ea-ttl{font-family:'Cinzel',serif;font-size:0.65rem;font-weight:700;color:var(--saffron);
+  letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:5px;}
+
+/* Battle Box */
+.bb{background:linear-gradient(135deg,rgba(139,26,26,0.18),rgba(44,26,14,0.5));
+  border:1px solid rgba(192,57,43,0.28);border-radius:3px;padding:14px 16px;margin:10px 0;}
+.bb-name{font-family:'Cinzel',serif;font-size:0.9rem;font-weight:700;color:#E74C3C;margin-bottom:6px;}
+.bb-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.bb-item label{display:block;font-size:0.6rem;font-family:'Cinzel',serif;color:var(--gold);
+  letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px;}
+.bb-item span{font-size:0.8rem;color:rgba(245,230,200,0.85);}
+.bb-item{flex:1;min-width:120px;}
+
+/* Quick Ref */
+.qr{background:rgba(26,14,5,0.55);border:1px solid rgba(200,149,42,0.18);border-radius:3px;overflow:hidden;margin:10px 0;}
+.qr-hd{background:rgba(200,149,42,0.15);padding:9px 16px;font-family:'Cinzel',serif;
+  font-size:0.7rem;font-weight:700;color:#F5D078;letter-spacing:1.5px;text-transform:uppercase;
+  border-bottom:1px solid rgba(200,149,42,0.15);}
+.qr-row{display:flex;padding:7px 16px;border-bottom:1px solid rgba(200,149,42,0.07);gap:10px;}
+.qr-row:last-child{border-bottom:none;}
+.qr-row:hover{background:rgba(200,149,42,0.06);}
+.qr-lbl{font-family:'Cinzel',serif;font-size:0.65rem;font-weight:600;color:var(--saffron);
+  letter-spacing:0.8px;min-width:130px;flex-shrink:0;padding-top:1px;}
+.qr-val{font-size:0.8rem;color:rgba(245,230,200,0.82);}
+
+/* Ruler Card */
+.rc{background:rgba(44,26,14,0.55);border:1px solid rgba(200,149,42,0.18);
+  border-radius:3px;padding:13px 16px;margin-bottom:10px;transition:border-color 0.18s;}
+.rc:hover{border-color:rgba(200,149,42,0.35);}
+.rc-name{font-family:'Cinzel',serif;font-size:0.92rem;font-weight:700;color:#F5D078;margin-bottom:3px;}
+.rc-reign{font-size:0.68rem;color:var(--saffron);letter-spacing:1.5px;margin-bottom:8px;}
+
+/* Tags */
+.tag{display:inline-block;font-size:0.6rem;font-weight:700;font-family:'Cinzel',serif;
+  padding:2px 7px;border-radius:2px;letter-spacing:0.8px;margin-left:5px;vertical-align:middle;text-transform:uppercase;}
+.tag-r{background:var(--crimson);color:white;}
+.tag-g{background:var(--gold);color:#1A0E05;}
+.tag-p{background:#8E44AD;color:white;}
+.tag-b{background:#2980B9;color:white;}
+.tag-gr{background:#27AE60;color:white;}
+
+/* Key Facts Row */
+.kf{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;}
+.kf-item{background:rgba(200,149,42,0.09);border:1px solid rgba(200,149,42,0.2);
+  border-radius:3px;padding:8px 12px;flex:1;min-width:130px;}
+.kf-item label{display:block;font-size:0.6rem;font-family:'Cinzel',serif;
+  color:var(--saffron);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
+.kf-item span{font-size:0.83rem;color:#F5D078;font-weight:700;}
+
+/* Mind Map */
+.mm{background:rgba(26,14,5,0.7);border:1px solid rgba(200,149,42,0.18);
+  border-radius:4px;padding:16px;margin:14px 0;text-align:center;}
+.mm-c{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--dsaffron));
+  color:#1A0E05;font-family:'Cinzel',serif;font-size:0.82rem;font-weight:700;
+  padding:8px 20px;border-radius:2px;margin-bottom:12px;}
+.mm-br{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;}
+.mm-b{background:rgba(200,149,42,0.09);border:1px solid rgba(200,149,42,0.25);
+  border-radius:3px;padding:6px 12px;font-family:'Cinzel',serif;font-size:0.65rem;
+  color:var(--gold);letter-spacing:0.8px;}
+
+/* Arch Card */
+.ac{background:rgba(26,74,46,0.18);border:1px solid rgba(26,74,46,0.35);border-radius:3px;padding:13px;}
+.ac-style{font-family:'Cinzel',serif;font-size:0.8rem;font-weight:700;color:#27AE60;margin-bottom:7px;letter-spacing:0.8px;}
+
+/* Highlight spans */
+.hl{color:#F5D078;font-weight:700;}
+.hs{color:var(--saffron);font-weight:700;}
+.hr{color:#E74C3C;font-weight:700;}
+.hg{color:#27AE60;font-weight:700;}
+.hb{color:#5DADE2;font-weight:700;}
+.hp{color:#9B59B6;font-weight:700;}
+
+/* Dividers */
+.gd{height:1px;margin:18px 0;background:linear-gradient(90deg,transparent,rgba(200,149,42,0.3),transparent);}
+
+/* Intro para */
+.ch-intro{
+  text-align:center;padding:14px 20px;
+  background:linear-gradient(135deg,rgba(200,149,42,0.05),rgba(26,14,5,0.2));
+  border-radius:4px;margin-bottom:22px;
+  border:1px solid rgba(200,149,42,0.1);
+}
+.ch-intro p{color:rgba(245,230,200,0.72);font-size:0.86rem;max-width:680px;margin:0 auto;line-height:1.75;}
+
+/* Image Placeholder */
+.img-ph{
+  width:100%;height:100px;
+  background:linear-gradient(135deg,rgba(200,149,42,0.07),rgba(26,14,5,0.2));
+  border:1.5px dashed rgba(200,149,42,0.25);border-radius:4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:rgba(200,149,42,0.45);font-family:'Cinzel',serif;font-size:0.65rem;
+  letter-spacing:1.5px;text-align:center;padding:8px;margin:10px 0;
+}
+.img-ph .iico{font-size:1.6rem;margin-bottom:5px;}
+
+/* ══════════════════════════════════════════════════
+   HERO PAGE (PAGE 0)
+══════════════════════════════════════════════════ */
+.hero{
+  min-height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:30px 20px;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(200,149,42,0.1) 0%,transparent 70%);
+}
+.hero-orn{font-size:3rem;
+  background:linear-gradient(135deg,var(--gold),var(--saffron));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation:glow 3s ease-in-out infinite alternate;
+}
+@keyframes glow{
+  from{filter:drop-shadow(0 0 8px rgba(200,149,42,0.3));}
+  to{filter:drop-shadow(0 0 22px rgba(232,132,26,0.65));}
+}
+.hero-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold),var(--dsaffron));
+  color:#1A0E05;font-family:'Cinzel',serif;font-size:0.65rem;font-weight:700;
+  letter-spacing:2.5px;padding:5px 18px;border-radius:2px;margin:14px 0 10px;
+}
+.hero h1{
+  font-family:'Cinzel Decorative',serif;font-size:clamp(1.8rem,4.5vw,3.5rem);
+  font-weight:900;line-height:1.2;
+  background:linear-gradient(135deg,#F5D078,var(--gold),#E8841A,var(--gold),#F5D078);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:10px;
+}
+.hero-sub{font-family:'Cinzel',serif;font-size:1rem;color:var(--gold);letter-spacing:4px;margin-bottom:16px;}
+.hero-desc{max-width:680px;color:rgba(245,230,200,0.8);font-size:1rem;line-height:1.8;margin-bottom:22px;}
+.tbadge-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px;}
+.tbadge{background:rgba(200,149,42,0.12);border:1px solid rgba(200,149,42,0.3);
+  color:var(--gold);font-family:'Cinzel',serif;font-size:0.62rem;padding:4px 12px;border-radius:20px;letter-spacing:1.5px;}
+.hero-div{width:160px;height:1.5px;margin:0 auto 20px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--saffron),var(--gold),transparent);}
+.start-btn{
+  background:linear-gradient(135deg,var(--gold),var(--dsaffron));
+  color:#1A0E05;border:none;font-family:'Cinzel',serif;font-size:0.75rem;font-weight:700;
+  letter-spacing:2px;padding:10px 28px;border-radius:2px;cursor:pointer;
+  transition:transform 0.2s;text-transform:uppercase;
+}
+.start-btn:hover{transform:translateY(-2px);}
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════ */
+@media(max-width:600px){
+  .page{padding:18px 14px 80px;}
+  .card-hd{flex-direction:column;gap:8px;}
+  .card-freq{margin-left:0;}
+  .topbar-brand{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">⚔ MEDIEVAL INDIA</div>
+  <div class="nav-scroll" id="navScroll">
+    <button class="nb active" onclick="goTo(0)">🏠 Home</button>
+    <button class="nb" onclick="goTo(1)">📅 Overview</button>
+    <button class="nb" onclick="goTo(2)">🏹 Early Medieval</button>
+    <button class="nb" onclick="goTo(3)">🕌 Slave Dynasty</button>
+    <button class="nb" onclick="goTo(4)">⚔ Khilji</button>
+    <button class="nb" onclick="goTo(5)">🧠 Tughlaq</button>
+    <button class="nb" onclick="goTo(6)">🏰 Sayyid & Lodi</button>
+    <button class="nb" onclick="goTo(7)">🦁 Vijayanagara</button>
+    <button class="nb" onclick="goTo(8)">🕌 Bahmani</button>
+    <button class="nb" onclick="goTo(9)">👑 Babur & Humayun</button>
+    <button class="nb" onclick="goTo(10)">🌟 Akbar</button>
+    <button class="nb" onclick="goTo(11)">🌹 Jahangir & Shah Jahan</button>
+    <button class="nb" onclick="goTo(12)">⚔ Aurangzeb</button>
+    <button class="nb" onclick="goTo(13)">📜 Mughal Admin</button>
+    <button class="nb" onclick="goTo(14)">🙏 Bhakti Movement</button>
+    <button class="nb" onclick="goTo(15)">☪ Sufi Movement</button>
+    <button class="nb" onclick="goTo(16)">🦁 Marathas</button>
+    <button class="nb" onclick="goTo(17)">🏛 Architecture</button>
+    <button class="nb" onclick="goTo(18)">⚔ Key Battles</button>
+    <button class="nb" onclick="goTo(19)">⚡ Quick Fire</button>
+  </div>
+  <div class="page-counter" id="pageCounter">1 / 20</div>
+</div>
+
+<div class="pages-wrapper">
+
+<div class="page active" id="p0">
+<div class="hero">
+  <div class="hero-orn">☪ ✦ 🏰 ✦ ⚔</div>
+  <div class="hero-badge">SSC CGL · CHSL · MTS · CPO · Master Guide</div>
+  <h1>Medieval Indian History</h1>
+  <div class="hero-sub">600 CE → 1750 CE</div>
+  <p class="hero-desc">The Complete Photographic Memory & Mind-Map Revision Guide — Covering all dynasties, battles, reforms, architecture, Bhakti-Sufi movements, and cultural milestones. Optimized for past 20 years of SSC exam patterns.</p>
+  <div class="tbadge-row">
+    <span class="tbadge">Early Medieval</span>
+    <span class="tbadge">Delhi Sultanate</span>
+    <span class="tbadge">Vijayanagara</span>
+    <span class="tbadge">Mughal Empire</span>
+    <span class="tbadge">Bhakti-Sufi</span>
+    <span class="tbadge">Marathas</span>
+  </div>
+  <div class="hero-div"></div>
+  <button class="start-btn" onclick="goTo(1)">▶ Begin Study →</button>
+</div>
+</div>
+
+<div class="page" id="p1">
+<div class="inner">
+<div class="sh">
+  <div class="sh-num">Part I</div>
+  <div class="sh-title">Master Overview</div>
+  <div class="sh-sub">The Big Picture — Eras, Dynasties & Exam Frequency</div>
+  <div class="sh-div"></div>
+</div>
+
+<div class="ch-intro"><p>Medieval India spans roughly <strong>1150 years</strong> (600–1750 CE). SSC CGL asks <em>15–20 questions</em> from Medieval History annually. Mughal Empire = highest weightage (~40%), Delhi Sultanate (~30%), Early Medieval + Regional Kingdoms (~20%), Bhakti-Sufi Movement (~10%).</p></div>
+
+<div class="mm">
+  <div class="mm-c">⚔ MEDIEVAL INDIA (600–1750 CE) ⚔</div>
+  <div class="mm-br">
+    <div class="mm-b">🏹 Early Medieval<br><small>600–1200 CE</small></div>
+    <div class="mm-b">🕌 Delhi Sultanate<br><small>1206–1526 CE</small></div>
+    <div class="mm-b">🦁 Vijayanagara<br><small>1336–1646 CE</small></div>
+    <div class="mm-b">💎 Mughal Empire<br><small>1526–1857 CE</small></div>
+    <div class="mm-b">🎵 Bhakti–Sufi<br><small>800–1700 CE</small></div>
+    <div class="mm-b">⚔ Maratha Power<br><small>1645–1818 CE</small></div>
+    <div class="mm-b">🏛 Regional Kingdoms<br><small>Various Periods</small></div>
+    <div class="mm-b">🕌 Architecture<br><small>Indo-Islamic Style</small></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">📊</div>
+    <div><div class="card-title">SSC Exam Pattern Analysis (Past 20 Years)</div><div class="card-dates">Questions asked per year by topic</div></div>
+    <div class="card-freq">⭐ Read This First</div>
+  </div>
+  <div class="card-body">
+    <table class="dt">
+      <tr><th>Topic</th><th>Approx. Questions</th><th>Key Sub-Topics</th></tr>
+      <tr><td class="hl">Mughal Empire</td><td class="hl">6–8/year</td><td>Akbar's policies, battles, architecture, administration</td></tr>
+      <tr><td class="hl">Delhi Sultanate</td><td class="hl">4–5/year</td><td>Iltutmish, Raziya, Alauddin Khilji, Firoz Tughlaq</td></tr>
+      <tr><td>Bhakti-Sufi Movement</td><td>2–3/year</td><td>Saints, their works, significance</td></tr>
+      <tr><td>Medieval Architecture</td><td>2–3/year</td><td>Monuments, styles, builders</td></tr>
+      <tr><td>Early Medieval + Cholas</td><td>2–3/year</td><td>Chola administration, conquests</td></tr>
+      <tr><td>Vijayanagara + Bahmani</td><td>1–2/year</td><td>Krishnadevaraya, Talikota battle</td></tr>
+      <tr><td>Maratha Empire</td><td>1–2/year</td><td>Shivaji, Peshwas, Panipat III</td></tr>
+      <tr><td>Medieval Literature/Culture</td><td>1–2/year</td><td>Books, authors, languages</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">📅</div>
+    <div><div class="card-title">Master Chronological Timeline</div><div class="card-dates">600 CE → 1750 CE · Key Watershed Events</div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div class="tl">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">606–647 CE</div><div class="tl-ct"><span class="hl">Harshvardhana</span> — Last great Hindu emperor of North India. Capital: Kannauj. Court poet: Banabhatta.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">712 CE</div><div class="tl-ct"><span class="hl">Muhammad bin Qasim</span> conquers Sindh — first Arab foothold in India.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">750–1162 CE</div><div class="tl-ct"><span class="hl">Pala Dynasty</span> of Bengal — Gopala, Dharmapala. Patrons of Buddhism.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">757–973 CE</div><div class="tl-ct"><span class="hl">Rashtrakutas</span> of Deccan — Dantidurga. Kailasa Temple at Ellora.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">836–1018 CE</div><div class="tl-ct"><span class="hl">Gurjara-Pratiharas</span> of North India — Mihira Bhoja. Blocked Arab expansion.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">848–1279 CE</div><div class="tl-ct"><span class="hl">Chola Empire (Imperial)</span> — Vijayalaya → Rajaraja I → Rajendra I. Peak of South Indian power.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">997–1030 CE</div><div class="tl-ct"><span class="hl">Mahmud of Ghazni</span> — 17 invasions of India. Destroyed Somnath Temple (1025).</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1175–1206 CE</div><div class="tl-ct"><span class="hl">Muhammad Ghori</span> — Defeated Prithviraj Chauhan. Founded basis of Delhi Sultanate.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1206 CE</div><div class="tl-ct"><span class="hs">🕌 DELHI SULTANATE BEGINS</span> — Qutb-ud-din Aibak (first Sultan).</div></div>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1336 CE</div><div class="tl-ct"><span class="hl">Vijayanagara Empire founded</span> — Harihara I & Bukka I.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1347 CE</div><div class="tl-ct"><span class="hl">Bahmani Sultanate founded</span> — Alauddin Bahman Shah.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1398 CE</div><div class="tl-ct"><span class="hr">Timur's invasion</span> — Sacked Delhi. Caused massive decline of Tughlaq dynasty.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1526 CE</div><div class="tl-ct"><span class="hs">⭐ MUGHAL EMPIRE BEGINS</span> — 1st Battle of Panipat. Babur defeats Ibrahim Lodi.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1556 CE</div><div class="tl-ct"><span class="hl">2nd Battle of Panipat</span> — Akbar defeats Hemu.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1600 CE</div><div class="tl-ct"><span class="hl">East India Company</span> established (Dec 31, 1600).</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1627 CE</div><div class="tl-ct"><span class="hl">Birth of Shivaji Maharaj</span> — Founder of Maratha Empire. Coronation 1674.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1707 CE</div><div class="tl-ct"><span class="hr">Death of Aurangzeb</span> — Decline of Mughal Empire begins.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1739 CE</div><div class="tl-ct"><span class="hr">Nadir Shah's invasion</span> — Looted Delhi. Took Kohinoor diamond.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1757 CE</div><div class="tl-ct"><span class="hr">Battle of Plassey</span> — British under Clive defeat Siraj-ud-Daulah.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ib gold"><h4>💡 How to Use This Guide</h4>
+<ul class="fl arr">
+  <li>Navigate using the <span class="hl">top navbar buttons</span> — each button = one complete topic section</li>
+  <li>Use <span class="hl">← Prev / Next →</span> buttons at the bottom to go section by section</li>
+  <li>Each section has <span class="hs">exam alerts</span>, <span class="hp">mnemonics</span>, tables, and one-liners — perfect for revision</li>
+  <li>Scroll within each section for all content in that topic</li>
+</ul></div>
+</div>
+</div>
+
+<div class="page" id="p2">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part II</div><div class="sh-title">Early Medieval India</div>
+<div class="sh-sub">600 CE – 1200 CE · Tripartite Struggle · Cholas · Rajputs · Arab Invasions</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚔</div>
+    <div><div class="card-title">The Tripartite Struggle for Kannauj</div><div class="card-dates">8th–10th Century CE</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="ib"><h4>🗺 Why Kannauj? The Prize City</h4><p>Kannauj (in modern Uttar Pradesh) was the most prestigious city in India — "the city of the Lord." Controlling Kannauj meant supremacy over North India. Three powerful empires fought for it:</p></div>
+    <div class="g3">
+      <div class="rc">
+        <div class="rc-name">🦅 Gurjara-Pratiharas</div>
+        <div class="rc-reign">North India (Rajasthan + UP)</div>
+        <ul class="fl">
+          <li>Founder: <span class="hl">Nagabhata I</span></li>
+          <li>Greatest ruler: <span class="hl">Mihira Bhoja</span> (836–885)</li>
+          <li>Capital: <span class="hl">Kannauj</span></li>
+          <li>Arab traveler Al-Masudi called them the richest kingdom</li>
+          <li>Strongest barrier against Arab expansion</li>
+        </ul>
+      </div>
+      <div class="rc">
+        <div class="rc-name">📿 Palas of Bengal</div>
+        <div class="rc-reign">Bengal & Bihar (750–1162)</div>
+        <ul class="fl">
+          <li>Founder: <span class="hl">Gopala</span> (1st elected king)</li>
+          <li>Greatest: <span class="hl">Dharmapala</span></li>
+          <li>Patrons of <span class="hl">Buddhism</span></li>
+          <li>Built <span class="hl">Vikramshila University</span></li>
+          <li>Trade with SE Asia & Tibet</li>
+        </ul>
+      </div>
+      <div class="rc">
+        <div class="rc-name">🦁 Rashtrakutas</div>
+        <div class="rc-reign">Deccan (757–973 CE)</div>
+        <ul class="fl">
+          <li>Founder: <span class="hl">Dantidurga</span></li>
+          <li>Greatest: <span class="hl">Amoghavarsha I</span> (814–878)</li>
+          <li>Capital: <span class="hl">Manyakheta</span> (Malkhed)</li>
+          <li>Built <span class="hl">Kailasa Temple</span> (Ellora) — Krishna I</li>
+          <li>Tolerant — patronized Jainism</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mn"><div class="mn-lbl">🧠 MNEMONIC — Tripartite Struggle</div>
+    <div class="mn-txt">"PRG — Pratiharas Rule, Get Kannauj (from) Palas & Rashtrakutas"</div>
+    <div class="mn-exp">P = Pratiharas (North), R = Rashtrakutas (South/Deccan), G = Gurjara (same as Pratihara). All fought over the city of Kannauj.</div></div>
+    <div class="ea"><div class="ea-ttl">⚡ Exam Trap Alert</div>
+    <ul class="fl arr"><li>Kailasa Temple at Ellora = <span class="hl">Rashtrakuta</span> king <span class="hl">Krishna I</span> — NOT Amoghavarsha</li>
+    <li>Gopala (Pala founder) is notable as the <span class="hl">first elected king</span> in Indian history</li>
+    <li>Arab traveler <span class="hl">Sulaiman</span> called Gurjara-Pratihara king "most powerful ruler in India"</li></ul></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🏹</div>
+    <div><div class="card-title">Rajput Kingdoms</div><div class="card-dates">7th–12th Century CE</div></div>
+    <div class="card-freq">MEDIUM YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="ib"><h4>🌟 Origin of Rajputs — "Agnikula Theory"</h4><p>The <span class="hl">Chandravamsas</span> claimed lunar origin. The "Agnikula" theory from the <em>Prithviraj Raso</em> (by Chand Bardai) says 4 clans — Pratiharas, Paramaras, Chahamanas, Chalukyas — emerged from a sacrificial fire at Mount Abu.</p></div>
+    <table class="dt">
+      <tr><th>Clan</th><th>Region</th><th>Notable Ruler</th><th>Capital</th><th>Known For</th></tr>
+      <tr><td class="hl">Chahamanas (Chauhans)</td><td>Rajasthan + Delhi area</td><td>Prithviraj III</td><td>Ajmer/Delhi</td><td>Defeated in 2nd Tarain (1192)</td></tr>
+      <tr><td class="hl">Paramaras</td><td>Malwa</td><td>Munja, Bhoja</td><td>Dhara</td><td>Bhoja — greatest patron of learning</td></tr>
+      <tr><td>Chandellas</td><td>Bundelkhand</td><td>Dhanga, Vidyadhara</td><td>Khajuraho</td><td>Khajuraho temples</td></tr>
+      <tr><td>Kalachuris</td><td>MP/Chhattisgarh</td><td>Kokkala I</td><td>Tripuri</td><td>Regional power</td></tr>
+      <tr><td>Gahadvala</td><td>Varanasi</td><td>Govindachandra</td><td>Varanasi</td><td>Last Hindu power in UP</td></tr>
+      <tr><td class="hl">Chalukyas of Gujarat</td><td>Gujarat</td><td>Kumar Pala</td><td>Anhilwara</td><td>Rebuilt Somnath Temple</td></tr>
+    </table>
+    <div class="kf">
+      <div class="kf-item"><label>Prithviraj Chauhan</label><span>Defeated Muhammad Ghori in 1st Tarain (1191). Lost in 2nd Tarain (1192). Last major Rajput resistance.</span></div>
+      <div class="kf-item"><label>Bhoja of Paramaras</label><span>Greatest scholar-king. Author of Samarangan Sutradhar. Capital: Dhara (now Dhar, MP). Built "Bhojpur" lake.</span></div>
+      <div class="kf-item"><label>Khajuraho Temples</label><span>Built by Chandellas (950–1050 CE). Dedicated to Shiva, Vishnu. Famous for erotic sculptures = Nagara style architecture.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🦁</div>
+    <div><div class="card-title">Chola Empire — The Maritime Superpower</div><div class="card-dates">848–1279 CE · Imperial Cholas</div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="img-ph"><div class="iico">🏛</div>Brihadisvara Temple, Thanjavur — Built by Rajaraja I (1010 CE)<br>Tamil Nadu · UNESCO World Heritage Site · Finest Dravidian Architecture</div>
+
+    <div class="g2">
+      <div>
+        <div class="rc"><div class="rc-name">Vijayalaya (848–871)</div><div class="rc-reign">Founded Imperial Chola Dynasty</div>
+        <ul class="fl"><li>Captured <span class="hl">Thanjavur</span> from Muttaraiyar</li><li>Built temple to Goddess <span class="hl">Nisumbhasudani</span></li></ul></div>
+        <div class="rc"><div class="rc-name">⭐ Rajaraja I (985–1014) <span class="tag tag-r">HOTTEST</span></div><div class="rc-reign">The "Great Ruler" — Peak of Chola Power</div>
+        <ul class="fl"><li>Built <span class="hl">Brihadisvara/Rajarajeshwara Temple</span> — Thanjavur</li>
+        <li>Conquered Sri Lanka, Maldives, parts of Deccan</li>
+        <li>Revived <span class="hl">land survey system</span></li>
+        <li>Naval campaigns against Maldives & Lakshadweep</li></ul></div>
+      </div>
+      <div>
+        <div class="rc"><div class="rc-name">⭐ Rajendra I (1014–1044) <span class="tag tag-r">HOTTEST</span></div><div class="rc-reign">The "Chola Who Conquered the Ganges"</div>
+        <ul class="fl">
+          <li>Led expedition to <span class="hl">Gangetic plain</span> — brought Ganga water</li>
+          <li>Title: <span class="hl">Gangaikondachola</span> (Chola who conquered Ganges)</li>
+          <li>Built new capital: <span class="hl">Gangaikondacholapuram</span></li>
+          <li><span class="hl">Naval expedition to SE Asia</span> — defeated Sailendra king of Srivijaya (Malaysia/Indonesia)</li>
+          <li>Greatest naval power of medieval India</li>
+        </ul></div>
+        <div class="rc"><div class="rc-name">Kulottunga I (1070–1122)</div><div class="rc-reign">Unified Chola + Chalukya</div>
+        <ul class="fl"><li>Abolished <span class="hl">transit dues</span> → title <em>Sungam tavirtta</em></li><li>Sent envoys to China</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ib green"><h4>🏛 Chola Administration — Most Examined Topic</h4>
+    <div class="g2">
+      <ul class="fl"><li><span class="hl">Mandalams</span> = Provinces (6 in number)</li><li><span class="hl">Valanadus</span> = Districts (Revenue units)</li><li><span class="hl">Nadu</span> = Sub-district</li><li><span class="hl">Ur</span> = Village assembly (all castes)</li><li><span class="hl">Sabha/Mahasabha</span> = Brahmin village assembly</li><li><span class="hl">Nagaram</span> = Merchant town assembly</li></ul>
+      <ul class="fl"><li>Village assembly had <span class="hl">elected committees (Variyams)</span></li><li><span class="hl">Uttaramerur inscription</span> — describes election rules for village assembly (Sembiyan Mahadevi)</li><li>Military: <span class="hl">Velaikkaras</span> = elite bodyguards</li><li><span class="hl">Kadaram</span> = Kedah (Malaysia) — Rajendra's SE conquest</li><li>Land grants: <span class="hl">Brahmadeya</span> (to Brahmins)</li></ul>
+    </div></div>
+
+    <div class="mn"><div class="mn-lbl">🧠 MNEMONIC — Chola Kings Order</div>
+    <div class="mn-txt">"Very Real Rajendra Kulottungas Ruled Chola"</div>
+    <div class="mn-exp">Vijayalaya → Rajaraja I → Rajendra I → Kulottunga I → (later kings) — The first 4 are the most important!</div></div>
+
+    <div class="ea"><div class="ea-ttl">⚡ Most Asked Chola Facts in SSC</div>
+    <ul class="fl arr"><li>Chola temples have <span class="hl">Vimana</span> (tower over shrine) & <span class="hl">Gopuram</span> (gateway) — Dravidian Style</li>
+    <li>Rajendra I = First Indian king to conquer <span class="hl">Southeast Asia</span> (Srivijaya Empire)</li>
+    <li>Nataraja (Dancing Shiva) bronze sculpture = Chola contribution</li>
+    <li>Uttaramerur inscription describes the <span class="hl">world's earliest democratic election rules</span></li>
+    <li>Chola navy = most powerful in medieval Asia</li></ul></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚔</div>
+    <div><div class="card-title">Arab & Ghaznavid Invasions</div><div class="card-dates">712 CE – 1030 CE</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div class="ib red"><h4>☽ Muhammad bin Qasim (711–713 CE)</h4>
+      <ul class="fl"><li>Nephew of <span class="hl">Hajjaj bin Yusuf</span> (Umayyad governor)</li>
+      <li>Conquered <span class="hl">Sindh & lower Punjab</span> (712 CE)</li>
+      <li>Defeated <span class="hl">Dahir</span> (Hindu ruler of Sindh)</li>
+      <li>First permanent Muslim rule in India</li>
+      <li>Recalled and executed by Caliph Sulaiman</li>
+      <li>Source: <span class="hl">Chachnama</span> (Arabic text)</li></ul></div>
+      <div class="ib red"><h4>⚔ Mahmud of Ghazni (971–1030 CE) <span class="tag tag-r">HOTTEST</span></h4>
+      <ul class="fl"><li><span class="hl">17 invasions</span> of India (1000–1027 CE)</li>
+      <li>Main aim: <span class="hl">plunder wealth</span> (NOT to establish empire)</li>
+      <li>Destroyed <span class="hl">Somnath Temple</span> (Gujarat) in <span class="hl">1025 CE</span></li>
+      <li>Historian in court: <span class="hl">Al-Biruni</span> (wrote <em>Kitab-ul-Hind/Tahqiq-i-Hind</em>)</li>
+      <li>Poet in court: <span class="hl">Firdausi</span> (wrote <em>Shahnameh</em>)</li>
+      <li>Title: <span class="hl">Idol-Breaker</span> / Yameen-ul-Daula</li>
+      <li>Defeated <span class="hl">Jaipal</span> and <span class="hl">Anandpal</span> (Hindu Shahi rulers)</li></ul></div>
+    </div>
+    <div class="ib gold"><h4>⚔ Muhammad Ghori (1173–1206 CE)</h4>
+    <div class="g2">
+      <ul class="fl"><li>Full name: <span class="hl">Muizz-ud-din Muhammad</span></li>
+      <li>Goal: <span class="hl">establish empire</span> (unlike Mahmud = just plunder)</li>
+      <li><span class="hl">First Battle of Tarain (1191)</span> — Defeated by <span class="hl">Prithviraj III</span></li>
+      <li><span class="hl">Second Battle of Tarain (1192)</span> — Defeated Prithviraj; captured & killed him</li></ul>
+      <ul class="fl"><li><span class="hl">Battle of Chandawar (1194)</span> — Defeated Jaychandra (Gahadvala king)</li>
+      <li>General <span class="hl">Qutb-ud-din Aibak</span> left to govern India</li>
+      <li>Assassinated in 1206 by Ismaili Assassins</li>
+      <li>"Slave" general Aibak became 1st Sultan of Delhi</li></ul>
+    </div></div>
+    <div class="mn"><div class="mn-lbl">🧠 MNEMONIC — Mahmud's 17 raids</div>
+    <div class="mn-txt">"Mahmud Came Seventeen Seasons, Plundering Sinfully, And left Al-Biruni Behind"</div>
+    <div class="mn-exp">17 raids (1000–1027) | Main targets: Somnath (1025), Mathura, Thanesar, Multan | Brought Al-Biruni who wrote Kitab-ul-Hind</div></div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p3">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part III · Dynasty 1/5</div><div class="sh-title">Slave (Mamluk) Dynasty</div>
+<div class="sh-sub">1206–1290 CE · Qutb-ud-din Aibak to Balban</div><div class="sh-div"></div></div>
+
+<div class="ib gold">
+  <h4>🏰 Five Dynasties of Delhi Sultanate — Quick Reference</h4>
+  <table class="dt">
+    <tr><th>Dynasty</th><th>Period</th><th>Founder</th><th>Key Ruler</th><th>Ended By</th></tr>
+    <tr><td class="hl">1. Slave (Mamluk)</td><td>1206–1290</td><td>Qutb-ud-din Aibak</td><td>Iltutmish, Balban</td><td>Jalaluddin Khilji (killed Balban's grandson)</td></tr>
+    <tr><td class="hl">2. Khilji</td><td>1290–1320</td><td>Jalaluddin Khilji</td><td>Alauddin Khilji</td><td>Malik Kafur's coup; Ghazi Malik killed last ruler</td></tr>
+    <tr><td class="hl">3. Tughlaq</td><td>1320–1414</td><td>Ghazi Malik (Ghiyasuddin)</td><td>Muhammad-bin-Tughlaq, Firuz</td><td>Timur's invasion (1398) weakened it</td></tr>
+    <tr><td class="hl">4. Sayyid</td><td>1414–1451</td><td>Khizr Khan</td><td>Mubarak Shah</td><td>Bahlul Lodi expelled last Sayyid ruler</td></tr>
+    <tr><td class="hl">5. Lodi</td><td>1451–1526</td><td>Bahlul Lodi</td><td>Sikandar Lodi, Ibrahim Lodi</td><td>Babur defeated Ibrahim Lodi (Panipat I, 1526)</td></tr>
+  </table>
+</div>
+<div class="mn">
+  <div class="mn-lbl">🧠 MNEMONIC — Dynasty Order</div>
+  <div class="mn-txt">"Sikandar Khan Takes Saffron Lassi" — No wait: <strong>S K T S L</strong></div>
+  <div class="mn-exp"><strong>S</strong>lave → <strong>K</strong>hilji → <strong>T</strong>ughlaq → <strong>S</strong>ayyid → <strong>L</strong>odi. Or: "Some Kings Think Silly Logic"</div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🏰</div>
+    <div><div class="card-title">Qutb-ud-din Aibak (1206–1210)</div><div class="card-dates">First Sultan of Delhi</div></div>
+    <div class="card-freq">⭐ HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <ul class="fl">
+        <li>Slave of <span class="hl">Muhammad Ghori</span> — later freed</li>
+        <li>Title: <span class="hl">Lakh Baksh</span> (giver of lakhs) — very generous</li>
+        <li>Built <span class="hl">Quwwat-ul-Islam Mosque</span> — first mosque in India</li>
+        <li>Started construction of <span class="hl">Qutb Minar</span> (completed by Iltutmish)</li>
+        <li>Built <span class="hl">Adhai-din-ka-Jhopra</span> Mosque at Ajmer</li>
+        <li>Died playing <span class="hl">Chaugan (Polo)</span> — fell from horse</li>
+      </ul>
+      <div class="img-ph"><div class="iico">🕌</div>Qutb Minar, Delhi<br>Height: 72.5m · 5 Storeys<br>Started: Aibak · Completed: Iltutmish<br>India's tallest brick minaret · UNESCO Heritage</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">👑</div>
+    <div><div class="card-title">⭐ Iltutmish (1210–1236) <span class="tag tag-g">MOST ASKED</span></div><div class="card-dates">The Real Consolidator of Delhi Sultanate</div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div class="ib">
+        <h4>🏆 Key Achievements</h4>
+        <ul class="fl">
+          <li><span class="hl">Real founder</span> of Delhi Sultanate (consolidated it)</li>
+          <li>Made <span class="hl">Delhi</span> the capital (moved from Lahore)</li>
+          <li>Introduced <span class="hl">Iqta System</span> (grant of revenue from land)</li>
+          <li>Introduced <span class="hl">silver tanka</span> and <span class="hl">copper jital</span> coins</li>
+          <li>Completed <span class="hl">Qutb Minar</span></li>
+          <li>Got recognition from <span class="hl">Caliph of Baghdad</span> (1229)</li>
+          <li>Repulsed <span class="hl">Mongol invasion</span> of Chengiz Khan</li>
+          <li>Created <span class="hl">Chahalgani/Chalisa</span> — group of 40 slave nobles</li>
+        </ul>
+      </div>
+      <div class="ib gold">
+        <h4>👸 Raziya Sultan (1236–1240) — EXAM FAVOURITE</h4>
+        <ul class="fl">
+          <li>Daughter of <span class="hl">Iltutmish</span></li>
+          <li><span class="hl">First woman ruler</span> of Delhi Sultanate</li>
+          <li>Appeared in public <span class="hl">without purdah</span></li>
+          <li>Rode elephants and appeared in court unveiled</li>
+          <li>Appointed <span class="hl">Malik Jamal-ud-din Yakut</span> (Abyssinian) as Master of Stables</li>
+          <li>Opposed by <span class="hl">Chalisa</span> (40 nobles)</li>
+          <li>Killed near Kaithal (1240)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚖</div>
+    <div><div class="card-title">⭐ Balban (1266–1287) <span class="tag tag-r">HIGH YIELD</span></div><div class="card-dates">The Iron Man of Delhi Sultanate</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div class="ib red">
+        <h4>🦁 The Theory of Kingship</h4>
+        <ul class="fl">
+          <li>Introduced <span class="hl">Sijda</span> (prostration before king) and <span class="hl">Paibos</span> (kissing feet)</li>
+          <li>Claimed descent from <span class="hl">Afrasiyab</span> (Iranian hero)</li>
+          <li>Theory: King = <span class="hl">Shadow of God (Zil-i-Ilahi)</span></li>
+          <li>Maintained <span class="hl">Persian court culture</span></li>
+          <li>Celebrated Persian <span class="hl">Nauruz</span> (New Year)</li>
+          <li>Broke the power of <span class="hl">Chalisa</span> (40 nobles)</li>
+        </ul>
+      </div>
+      <div class="ib">
+        <h4>🗡 Military & Admin Reforms</h4>
+        <ul class="fl">
+          <li>Set up separate <span class="hl">Diwan-i-Ariz</span> (Military department)</li>
+          <li>Organized <span class="hl">Paik</span> (infantry) system</li>
+          <li>Policy of <span class="hl">blood and iron</span> — ruthless suppression of rebels</li>
+          <li>Suppressed Mewatis, Doab rebels mercilessly</li>
+          <li>Son <span class="hl">Muhammad</span> died fighting Mongols — Balban was devastated</li>
+          <li>Court poet: <span class="hl">Amir Khusrau</span> (early career)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p4">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part III · Dynasty 2/5</div><div class="sh-title">Khilji Dynasty</div>
+<div class="sh-sub">1290–1320 CE · Expansion, Market Reforms & Mongol Defeat</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚔</div>
+    <div><div class="card-title">Jalaluddin Khilji (1290–1296)</div><div class="card-dates">Founder of Khilji Dynasty · The Humane Sultan</div></div>
+    <div class="card-freq">LOW-MEDIUM</div>
+  </div>
+  <div class="card-body">
+    <ul class="fl">
+      <li>First sultan to <span class="hl">follow policy of winning over non-Muslims</span></li>
+      <li>Suppressed revolt of <span class="hl">Malik Chhajju</span> (Balban's nephew) leniently</li>
+      <li>General <span class="hl">Alauddin Khilji</span> (his nephew) attacked Devagiri (1294), amassed treasure, returned to Delhi, and <span class="hl">murdered Jalaluddin</span></li>
+      <li>Alauddin was also Jalaluddin's son-in-law</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🔱</div>
+    <div><div class="card-title">⭐ Alauddin Khilji (1296–1316) <span class="tag tag-g">MOST ASKED</span></div><div class="card-dates">The Most Powerful Sultan of Delhi · "Second Alexander"</div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="img-ph"><div class="iico">🏰</div>Alai Darwaza — Built by Alauddin Khilji (1311 CE)<br>Gateway to Quwwat-ul-Islam Mosque, Delhi · First true arch & dome in India · Red sandstone + white marble</div>
+
+    <div class="ib gold">
+      <h4>🏆 Alauddin's 4 Ambitions (According to Barani)</h4>
+      <ul class="fl arr">
+        <li>Conquer the whole world (like Alexander)</li>
+        <li>Establish a new religion</li>
+        <li>Separate religion from politics</li>
+        <li>Conquer Deccan and Mongol territory</li>
+        <li><em>Abandoned all ambitions after taking advice of Alauddin Rumi</em></li>
+      </ul>
+    </div>
+
+    <div class="g2">
+      <div class="ib red">
+        <h4>⚔ Military Conquests</h4>
+        <ul class="fl">
+          <li><span class="hl">Gujarat (1299)</span> — Generals Ulugh Khan & Nusrat Khan. Queen Kamla Devi captured. Malik Kafur (eunuch general) obtained.</li>
+          <li><span class="hl">Ranthambore (1301)</span> — Defeated Hammiradeva. First Rajput state to fall.</li>
+          <li><span class="hl">Chittor (1303)</span> — Defeated Ratansen. Rani Padmini's Jauhar (debated).</li>
+          <li><span class="hl">Malwa, Ujjain, Mandu (1305)</span></li>
+          <li><span class="hl">Deccan Campaigns</span> via <span class="hl">Malik Kafur</span>: Devagiri (1307–08), Warangal (1309–10), Dwarsamudra (Hoysala), Madurai (Pandyas) — 1311</li>
+        </ul>
+      </div>
+      <div class="ib green">
+        <h4>🛡 Mongol Repulsion — 4 Times!</h4>
+        <ul class="fl">
+          <li><span class="hl">1297</span> — Defeated Mongols at Jalalandhar</li>
+          <li><span class="hl">1298</span> — Defeated at Sivistan (Balochistan)</li>
+          <li><span class="hl">1299</span> — Mongols reached Delhi suburbs — defeated at Kili</li>
+          <li><span class="hl">1303</span> — Qutlugh Khwaja's massive invasion repelled</li>
+          <li><span class="hl">1306</span> — Final decisive defeat of Mongols</li>
+          <li>Built <span class="hl">Siri Fort</span> near Delhi as new capital to defend against Mongols</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;border-color:rgba(200,149,42,0.4);">
+      <div class="card-hd" style="background:linear-gradient(135deg,rgba(200,149,42,0.2),rgba(200,149,42,0.08));">
+        <div class="card-icon" style="background:linear-gradient(135deg,#C8952A,#A07020);">🏪</div>
+        <div>
+          <div class="card-title">⭐ Alauddin's Market Reforms — MOST ASKED TOPIC</div>
+          <div class="card-dates">First systematic price control in Indian history</div>
+        </div>
+        <div class="card-freq">⭐ VERY HIGH YIELD</div>
+      </div>
+      <div class="card-body">
+        <div class="ib">
+          <h4>🛒 Why Market Reforms? → To Maintain Large Army at Low Cost</h4>
+          <p>Alauddin maintained <span class="hl">4.75 lakh cavalry</span> — needed to keep prices low so soldiers could be paid less but still live well.</p>
+        </div>
+        <table class="dt">
+          <tr><th>Market</th><th>Goods Sold</th><th>Controller</th><th>Punishment for Cheating</th></tr>
+          <tr><td class="hl">Shahna-i-Mandi<br>(Grain Market)</td><td>Food grains, cloth</td><td>Shahna (Superintendent)</td><td>Ear/nose/hand cut off</td></tr>
+          <tr><td class="hl">Sarai Adil<br>(Cloth Market)</td><td>Cloth, cattle</td><td>Shahna</td><td>Same</td></tr>
+          <tr><td class="hl">Market of Horses, Cattle & Slaves</td><td>Horses, cattle, slaves</td><td>Shahna</td><td>Cutting of flesh</td></tr>
+          <tr><td class="hl">General Commodity Market</td><td>Other goods</td><td>Shahna</td><td>Severe punishment</td></tr>
+        </table>
+        <div class="kf">
+          <div class="kf-item"><label>Diwan-i-Riyasat</label><span>Market Controller (Naib → Diwan-i-Riyasat). Officer: Malik Qabul.</span></div>
+          <div class="kf-item"><label>Munhiyans</label><span>Secret spies who checked if traders overcharged. Reported directly to sultan.</span></div>
+          <div class="kf-item"><label>Barani's Verdict</label><span>Historian Ziauddin Barani praised these reforms in his "Tarikh-i-Firuz Shahi"</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ib">
+      <h4>🏛 Administrative Reforms</h4>
+      <div class="g2">
+        <ul class="fl">
+          <li><span class="hl">Land Revenue</span>: Fixed at 50% of produce (doubled from earlier)</li>
+          <li><span class="hl">Measurement</span> of land introduced (<em>Biswa</em> as unit)</li>
+          <li><span class="hl">Pasture tax (Ghari)</span> & <span class="hl">House tax (Charai)</span> introduced</li>
+          <li><span class="hl">Iqta System</span> reformed — iqtadars paid fixed salary</li>
+        </ul>
+        <ul class="fl">
+          <li>Maintained <span class="hl">Dagh</span> (brand on horses) and <span class="hl">Chehra</span> (description of soldiers)</li>
+          <li>No religious consideration in appointments — merit-based</li>
+          <li>Separated <span class="hl">religion from state</span></li>
+          <li>Court poet: <span class="hl">Amir Khusrau</span> (greatest!)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ib gold">
+      <h4>🎨 Amir Khusrau — Parrot of India</h4>
+      <ul class="fl">
+        <li>Court poet of <span class="hl">Alauddin Khilji</span> (also served others)</li>
+        <li>Title: <span class="hl">Tuti-i-Hind</span> (Parrot of India)</li>
+        <li>Invented <span class="hl">Khayal</span> style of music</li>
+        <li>Invented the <span class="hl">Sitar</span> and <span class="hl">Tabla</span> (debated)</li>
+        <li>Works: <em>Khazain-ul-Futuh</em>, <em>Miftah-ul-Futuh</em>, <em>Nuh Sipihr</em>, <em>Tughlaqnama</em></li>
+        <li>Disciple of Sufi saint <span class="hl">Nizamuddin Auliya</span></li>
+        <li>Pioneer of <span class="hl">Hindavi/Urdu</span> poetry</li>
+      </ul>
+    </div>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — Alauddin's Deccan Generals</div>
+      <div class="mn-txt">"Malik Kafur Defeated 4 Deccan Kings: Devagiri, Warangal, Dwarsamudra, Madurai"</div>
+      <div class="mn-exp">D-W-D-M → "Don't Waste Delhi's Money" — Devagiri (Yadavas), Warangal (Kakatiyas), Dwarsamudra (Hoysalas), Madurai (Pandyas)</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p5">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part III · Dynasty 3/5</div><div class="sh-title">Tughlaq Dynasty</div>
+<div class="sh-sub">1320–1414 CE · Mad Experiments · Timur's Invasion · Welfare Measures</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🏰</div>
+    <div><div class="card-title">Ghiyasuddin Tughlaq (1320–1325)</div><div class="card-dates">Founder · The Efficient Builder</div></div>
+    <div class="card-freq">MEDIUM</div>
+  </div>
+  <div class="card-body">
+    <ul class="fl">
+      <li>Founder: <span class="hl">Ghazi Malik / Ghiyasuddin Tughlaq</span></li>
+      <li>Built <span class="hl">Tughlaqabad Fort</span> near Delhi — still exists</li>
+      <li>Revived <span class="hl">Iqta system</span> properly; repaired canals & roads</li>
+      <li>Policy of <span class="hl">"Nasaq"</span> — moderate land revenue policy</li>
+      <li>Died in a pavilion collapse — believed engineered by <span class="hl">Muhammad-bin-Tughlaq</span></li>
+      <li>Poet Amir Khusrau wrote <em>Tughlaqnama</em> about him</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🧠</div>
+    <div><div class="card-title">⭐ Muhammad-bin-Tughlaq (1325–1351) <span class="tag tag-g">MOST ASKED</span></div><div class="card-dates">"Wisest Fool" · "Mix of Opposites"</div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="ib gold">
+      <h4>🌟 Character of Muhammad-bin-Tughlaq</h4>
+      <p>Ibn Battuta (Moroccan traveler who visited India 1334): <em>"He was the most generous and magnanimous of men... but he was also the most oppressive and most cruel of men."</em></p>
+      <p>Edward Thomas called him: <span class="hl">"The Prince of Moneyers"</span>. Modern historians call him the <span class="hl">"mixture of opposites."</span></p>
+    </div>
+
+    <div class="g2">
+      <div class="ib red">
+        <h4>❌ Five "Mad" Experiments (All Failed)</h4>
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-yr">1326–27 — Transfer of Capital</div>
+            <div class="tl-ct"><span class="hl">Delhi → Devagiri</span> (renamed <span class="hl">Daulatabad</span>). Forced everyone to move ~1500 km. Failed because Delhi was closer to Mongol threat. Capital moved back (1335). <span class="tag tag-r">OFTEN ASKED</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-yr">1329–30 — Token Currency</div>
+            <div class="tl-ct">Introduced <span class="hl">bronze/copper token coins</span> (instead of silver). Every goldsmith could forge them. Failed completely — treasury emptied. <span class="tag tag-r">OFTEN ASKED</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-yr">1333 — Khorasan Expedition</div>
+            <div class="tl-ct">Plan to conquer Khorasan (Iran/Central Asia). Raised huge army — plan abandoned but <span class="hl">army remained on payroll for a year</span>, draining treasury.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-yr">1337 — Qarachil Expedition</div>
+            <div class="tl-ct">Sent army to Himalayan region (Kumaon/Tibet). <span class="hl">Nearly entire army wiped out</span> — rains, disease, guerrilla attacks.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-yr">1336 — Doab Taxation</div>
+            <div class="tl-ct">Massively raised taxes in the <span class="hl">fertile Doab region</span> during famine. Led to revolts. Left for Deccan; <span class="hl">died in Sindh (1351)</span> chasing rebels.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="ib green">
+          <h4>✅ Good Things He Did</h4>
+          <ul class="fl chk">
+            <li>Set up <span class="hl">Diwan-i-Kohi</span> (Agriculture Department) — gave loans (<em>sondhar</em>) to farmers</li>
+            <li>Agricultural experiments in <span class="hl">Amir-i-Kohi</span> area (64 km sq near Delhi)</li>
+            <li>Welcomed scholars from <span class="hl">Persia, Iraq, Central Asia</span></li>
+            <li>Ibn Battuta — appointed <span class="hl">Qazi of Delhi</span> by Muhammad-bin-Tughlaq</li>
+            <li>Most widespread empire — from Punjab to Bengal to Malabar</li>
+            <li>First sultan to appoint <span class="hl">Hindus to high posts</span></li>
+          </ul>
+        </div>
+
+        <div class="ib purple">
+          <h4>📚 Ibn Battuta in India</h4>
+          <ul class="fl">
+            <li>Moroccan traveler; arrived India <span class="hl">1334 CE</span></li>
+            <li>Work: <span class="hl">Rihla</span> (The Journey) — in Arabic</li>
+            <li>Was appointed <span class="hl">Qazi (judge) of Delhi</span> and then sent as ambassador to China</li>
+            <li>Called Delhi "one of the greatest cities in the world"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — Muhammad-bin-Tughlaq's 5 Experiments</div>
+      <div class="mn-txt">"Terrible Troubles: Transfer, Token, Treasure-Khorasan, Trek-Qarachil, Tax-Doab"</div>
+      <div class="mn-exp">T-T-T-T-T (Five T's): Transfer of capital | Token currency | Taking Khorasan expedition plan | Terrible Qarachil expedition | Tax hike in Doab</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🌊</div>
+    <div><div class="card-title">⭐ Firuz Shah Tughlaq (1351–1388) <span class="tag tag-r">HIGH YIELD</span></div><div class="card-dates">The Welfare Sultan · Builder & Reformer</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div class="ib green">
+        <h4>🏗 Construction & Public Works</h4>
+        <ul class="fl chk">
+          <li>Built <span class="hl">5 large canals</span> (first major irrigation system)</li>
+          <li>Founded cities: <span class="hl">Firozabad, Hissar, Fatehabad, Jaunpur</span></li>
+          <li>Built <span class="hl">300 schools, 100 hospitals (Darul-Shifa)</span></li>
+          <li>Set up <span class="hl">Diwan-i-Khairat</span> (charity dept.) & <span class="hl">Diwan-i-Istibqaq</span> (pensions)</li>
+          <li>Brought <span class="hl">Ashokan pillars</span> to Delhi (from Meerut & Topra)</li>
+          <li>Repaired <span class="hl">Qutb Minar</span></li>
+        </ul>
+      </div>
+      <div class="ib red">
+        <h4>❌ Negative Aspects</h4>
+        <ul class="fl">
+          <li><span class="hl">Abolished market reforms</span> of Alauddin</li>
+          <li><span class="hl">Abolished torture</span> — became too lenient</li>
+          <li><span class="hl">Made civil posts hereditary</span> — weakened central power</li>
+          <li>Levied <span class="hl">Jaziya on Brahmins too</span> (earlier exempt)</li>
+          <li><span class="hl">Persecuted non-Sunni Muslims</span></li>
+          <li>Wrote autobiography: <span class="hl">Futuhat-i-Firuz Shahi</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ea">
+      <div class="ea-ttl">⚡ SSC Exam Favourite Facts — Firuz Tughlaq</div>
+      <ul class="fl arr">
+        <li>First to introduce <span class="hl">Employment Exchange</span> (Diwan-i-Bandagan)</li>
+        <li>Abolished <span class="hl">24 types of taxes</span> (kept only 4 Shariat-sanctioned taxes)</li>
+        <li>Introduced <span class="hl">stipend for widows and orphans</span></li>
+        <li>Had coins inscribed with his name + <span class="hl">Khalifa's name</span> (showed loyalty)</li>
+        <li>Book on history: <span class="hl">Tarikh-i-Firuz Shahi</span> by Ziauddin Barani</li>
+        <li>After his death, <span class="hl">Timur's invasion (1398)</span> virtually ended Tughlaq power</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p6">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part III · Dynasties 4 & 5</div><div class="sh-title">Sayyid & Lodi Dynasties</div>
+<div class="sh-sub">1414–1526 CE · Decline of Sultanate · Final Chapter</div><div class="sh-div"></div></div>
+
+<div class="g2">
+  <div class="card">
+    <div class="card-hd"><div class="card-icon">🌙</div>
+      <div><div class="card-title">Sayyid Dynasty (1414–1451)</div><div class="card-dates">4 rulers · Weak period</div></div>
+    </div>
+    <div class="card-body">
+      <ul class="fl">
+        <li>Founder: <span class="hl">Khizr Khan</span> — claimed descent from Prophet Muhammad</li>
+        <li>Was a deputy of <span class="hl">Timur</span> — not truly independent</li>
+        <li>Notable ruler: <span class="hl">Mubarak Shah</span> (built Mubarakabad)</li>
+        <li>Historian <span class="hl">Yahya-bin-Ahmad Sirhindi</span> wrote <em>Tarikh-i-Mubarak Shahi</em></li>
+        <li>Last ruler <span class="hl">Alam Shah</span> voluntarily gave throne to Bahlul Lodi</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><div class="card-icon">🏹</div>
+      <div><div class="card-title">Lodi Dynasty (1451–1526)</div><div class="card-dates">First Afghan dynasty of Delhi</div></div>
+    </div>
+    <div class="card-body">
+      <table class="dt">
+        <tr><th>Ruler</th><th>Period</th><th>Key Points</th></tr>
+        <tr><td>Bahlul Lodi</td><td>1451–1489</td><td>Founder; Afghan; united nobles; conquered Jaunpur</td></tr>
+        <tr><td class="hl">Sikandar Lodi</td><td>1489–1517</td><td>Founded <strong>Agra</strong> city (1504); strict Muslim; introduced <em>Gaz-i-Sikandar</em> (measuring unit); patronized music despite being orthodox; translated Sanskrit texts to Persian</td></tr>
+        <tr><td class="hl">Ibrahim Lodi</td><td>1517–1526</td><td>Arrogant; alienated nobles; Daulat Khan Lodi & Rana Sanga invited Babur → Panipat I (1526) → Sultanate ENDS</td></tr>
+      </table>
+      <div class="ea">
+        <div class="ea-ttl">⚡ Key Facts</div>
+        <ul class="fl arr">
+          <li><span class="hl">Agra</span> founded by Sikandar Lodi in 1504 — important exam fact</li>
+          <li>Ibrahim Lodi = only sultan to die in battle against Babur</li>
+          <li>Lodis were the <span class="hl">first Afghan dynasty</span> of Delhi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p7">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part IV</div><div class="sh-title">Vijayanagara Empire</div>
+<div class="sh-sub">1336–1646 CE · The Last Great Hindu Empire · Hampi</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🦁</div>
+    <div><div class="card-title">Vijayanagara — Overview & Dynasties</div><div class="card-dates">4 Dynasties · Capital: Hampi (Hosapattana)</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="ib">
+      <h4>🏔 Foundation — Brothers Harihara & Bukka</h4>
+      <p>Founded by <span class="hl">Harihara I and Bukka I</span> (1336 CE), disciples of sage <span class="hl">Vidyaranya</span> at Tungabhadra river. Capital: <span class="hl">Vijayanagara (Hampi)</span>, modern Karnataka. Meaning: "City of Victory"</p>
+    </div>
+    <table class="dt">
+      <tr><th>Dynasty</th><th>Period</th><th>Key Ruler</th><th>Notes</th></tr>
+      <tr><td class="hl">1. Sangama</td><td>1336–1485</td><td>Harihara I, Bukka I, Devaraya II</td><td>Founded empire; Devaraya II = greatest Sangama ruler; patronized Telugu literature</td></tr>
+      <tr><td class="hl">2. Saluva</td><td>1485–1505</td><td>Narasimha Saluva</td><td>Short-lived; "saved" empire from collapse</td></tr>
+      <tr><td class="hl">3. Tuluva</td><td>1505–1570</td><td><strong>Krishnadevaraya</strong></td><td>GOLDEN AGE; greatest ruler; Telugu literature peak</td></tr>
+      <tr><td class="hl">4. Aravidu</td><td>1570–1646</td><td>Tirumala, Rama Raya</td><td>Decline after Battle of Talikota (1565)</td></tr>
+    </table>
+
+    <div class="rc" style="margin-top:20px;border-color:rgba(200,149,42,0.5);">
+      <div class="rc-name">⭐ Krishnadevaraya (1509–1529) <span class="tag tag-g">MOST ASKED</span></div>
+      <div class="rc-reign">Greatest King of Vijayanagara · Golden Age of Telugu Literature</div>
+      <div class="g2" style="margin-top:12px;">
+        <ul class="fl">
+          <li>Tuluva dynasty's greatest king</li>
+          <li>Title: <span class="hl">Andhra Bhoja</span> (patron of Telugu)</li>
+          <li>Wrote <span class="hl">Amuktamalyada</span> (Telugu epic poem)</li>
+          <li>Maintained friendly relations with Portuguese</li>
+          <li>Had <span class="hl">8 poets (Ashtadiggajas)</span> in his court</li>
+          <li>Most famous: <span class="hl">Allasani Peddanna</span> (Andhra Kavita Pitamah)</li>
+        </ul>
+        <ul class="fl">
+          <li>Defeated <span class="hl">Gajapati of Orissa</span>, <span class="hl">Bahmani Sultanate</span></li>
+          <li>Captured <span class="hl">Raichur Doab</span> (1520)</li>
+          <li>Built <span class="hl">Vitthalapura</span> and <span class="hl">Nagalapura</span> cities</li>
+          <li>Portuguese traveler <span class="hl">Domingo Paes</span> praised him</li>
+          <li>Also wrote: <span class="hl">Jambavati Kalyanam</span> (Sanskrit drama)</li>
+          <li>Coins: <span class="hl">Gold Varaha</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bb">
+      <div class="bb-name">⚔ Battle of Talikota (1565 CE) <span class="tag tag-r">ALWAYS ASKED</span></div>
+      <div class="bb-row">
+        <div class="bb-item"><label>Also Called</label><span>Battle of Rakkasa-Tangadi</span></div>
+        <div class="bb-item"><label>Vijayanagara Side</label><span>Aliya Rama Raya (commander)</span></div>
+        <div class="bb-item"><label>Opposition</label><span>Alliance of 4 Deccan Sultanates: Bijapur + Ahmadnagar + Golconda + Bidar</span></div>
+        <div class="bb-item"><label>Result</label><span>Rama Raya killed; Hampi sacked & burned; Vijayanagara Empire destroyed</span></div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="mn">
+          <div class="mn-lbl">🧠 MNEMONIC — 4 Sultanates at Talikota</div>
+          <div class="mn-txt">"Big Alligators Got Bitten" — Bijapur, Ahmadnagar, Golconda, Bidar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ib gold">
+      <h4>🏛 Vijayanagara Architecture — Exam Questions Appear Regularly</h4>
+      <ul class="fl">
+        <li><span class="hl">Dravidian style</span> with Islamic influences (hybrid)</li>
+        <li><span class="hl">Vitthala Temple</span> (stone chariot, musical pillars) — Hampi</li>
+        <li><span class="hl">Hazara Rama Temple</span> — Hampi</li>
+        <li><span class="hl">Lotus Mahal</span> (Chitrangi Mahal) — zenana enclosure</li>
+        <li><span class="hl">Elephant Stables</span> — 11 domed chambers</li>
+        <li>Travelers: <span class="hl">Nicolo Conti (Italian), Domingo Paes (Portuguese), Abdur Razzaq (Persian), Barbosa (Portuguese)</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p8">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part V</div><div class="sh-title">Bahmani Sultanate & Regional Kingdoms</div>
+<div class="sh-sub">1347–1527 CE · 5 Successor States · Deccan Power</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🕌</div>
+    <div><div class="card-title">Bahmani Kingdom</div><div class="card-dates">Founded 1347 · Capital: Gulbarga → Bidar</div></div>
+    <div class="card-freq">MEDIUM YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <ul class="fl">
+          <li>Founded by <span class="hl">Alauddin Bahman Shah</span> (Hassan Gangu) — 1347</li>
+          <li>Rebelled against <span class="hl">Muhammad-bin-Tughlaq</span></li>
+          <li>Capital: <span class="hl">Gulbarga</span> → later <span class="hl">Bidar</span></li>
+          <li>Greatest ruler: <span class="hl">Mahmud Gawan</span> (PM of Muhammad III)</li>
+          <li>Key division: <span class="hl">Deccanis</span> (old settlers) vs <span class="hl">Afaqis</span> (new comers)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="ib">
+          <h4>⭐ Mahmud Gawan — The Great Minister</h4>
+          <ul class="fl">
+            <li>Prime Minister of <span class="hl">Muhammad Shah III</span></li>
+            <li>Reformed land revenue; built <span class="hl">Madrasa at Bidar</span></li>
+            <li>Expanded empire; patron of arts</li>
+            <li>Executed due to conspiracy of Deccanis (1481)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ib gold">
+      <h4>🔱 Five Successor States of Bahmani <span class="tag tag-r">OFTEN ASKED</span></h4>
+      <table class="dt">
+        <tr><th>State</th><th>Capital</th><th>Dynasty Founder</th><th>Notable Ruler</th></tr>
+        <tr><td class="hl">Bijapur</td><td>Bijapur</td><td>Yusuf Adil Shah (1490)</td><td>Ibrahim Adil Shah II (built Gol Gumbaz)</td></tr>
+        <tr><td class="hl">Golconda</td><td>Hyderabad (later)</td><td>Quli Qutb Shah (1518)</td><td>Muhammad Quli Qutb Shah (founded Hyderabad)</td></tr>
+        <tr><td>Ahmadnagar</td><td>Ahmadnagar</td><td>Ahmad Nizam Shah (1490)</td><td>Chand Bibi (defended against Akbar)</td></tr>
+        <tr><td>Berar</td><td>Ellichpur</td><td>Imad Shah (1490)</td><td>Absorbed by Ahmadnagar</td></tr>
+        <tr><td>Bidar</td><td>Bidar</td><td>Qasim Barid (1527)</td><td>Smallest; last independent</td></tr>
+      </table>
+    </div>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — 5 Successor States</div>
+      <div class="mn-txt">"Big Guns Always Beat Bidar" — Bijapur, Golconda, Ahmadnagar, Berar, Bidar</div>
+    </div>
+
+    <div class="ea">
+      <div class="ea-ttl">⚡ Key Exam Points</div>
+      <ul class="fl arr">
+        <li><span class="hl">Gol Gumbaz</span> (Bijapur) = Tomb of Muhammad Adil Shah — second largest dome in world; built by Yaqut of Dabul</li>
+        <li><span class="hl">Hyderabad city</span> founded by Muhammad Quli Qutb Shah (1591)</li>
+        <li><span class="hl">Chand Bibi</span> of Ahmadnagar — defended against Akbar's son Murad. "The warrior queen of Ahmadnagar"</li>
+        <li><span class="hl">Ibrahim Adil Shah II</span> of Bijapur = patron of music, wrote <em>Kitab-i-Nauras</em></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p9">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VI</div><div class="sh-title">The Mughal Empire</div>
+<div class="sh-sub">1526–1857 CE · Greatest Medieval Dynasty · Highest SSC Weightage</div><div class="sh-div"></div></div>
+
+<div class="ch-intro">
+  <p>The Mughal Empire is the <strong>most asked topic</strong> in SSC History. Akbar alone accounts for 30% of Mughal questions. Know ALL emperors, their battles, policies, buildings, court life, and literature.</p>
+</div>
+
+<div class="ib gold">
+  <h4>👑 Mughal Emperors — Quick Reference Table</h4>
+  <table class="dt">
+    <tr><th>Emperor</th><th>Reign</th><th>Title/Nickname</th><th>Capital</th><th>Tomb Location</th></tr>
+    <tr><td class="hl">Babur</td><td>1526–1530</td><td>Tiger; Padshah</td><td>Agra</td><td>Kabul (Bagh-e-Babur)</td></tr>
+    <tr><td class="hl">Humayun</td><td>1530–56 (interrupted)</td><td>Fortunate; Insan-i-Kamil</td><td>Delhi/Agra</td><td>Delhi (Humayun's Tomb)</td></tr>
+    <tr><td class="hl">Akbar</td><td>1556–1605</td><td>Akbar-e-Azam; Jagat Guru</td><td>Agra/Fatehpur Sikri</td><td>Sikandra (near Agra)</td></tr>
+    <tr><td class="hl">Jahangir</td><td>1605–1627</td><td>World Conqueror; Salim</td><td>Agra/Lahore</td><td>Lahore (Shahdara)</td></tr>
+    <tr><td class="hl">Shah Jahan</td><td>1628–1658</td><td>Prince of Builders; Khurram</td><td>Delhi (Shah Jahanabad)</td><td>Taj Mahal, Agra</td></tr>
+    <tr><td class="hl">Aurangzeb</td><td>1658–1707</td><td>Alamgir; Zinda Pir</td><td>Aurangabad/mobile camp</td><td>Khuldabad (near Aurangabad)</td></tr>
+  </table>
+</div>
+
+<div class="mn">
+  <div class="mn-lbl">🧠 MNEMONIC — Mughal Emperor Order</div>
+  <div class="mn-txt">"Babur Had A Jolly Smile Always" — Babur, Humayun, Akbar, Jahangir, Shah Jahan, Aurangzeb</div>
+  <div class="mn-exp">B-H-A-J-S-A — The 6 great Mughals (after Aurangzeb = decline). Also recall: Babar Had Absolute Justice — Shah Aurangzeb</div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🐯</div>
+    <div><div class="card-title">Babur (1526–1530)</div><div class="card-dates">Founder of Mughal Empire · The Tiger</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <ul class="fl">
+          <li>Born: <span class="hl">1483</span>, Farghana (Central Asia/Uzbekistan)</li>
+          <li>Father: <span class="hl">Umar Sheikh Mirza</span> (Timurid), Mother: related to Genghis Khan</li>
+          <li>Name: <span class="hl">Zahir-ud-din Muhammad</span></li>
+          <li>Language: <span class="hl">Turki</span> (mother tongue); also Persian</li>
+          <li>Autobiography: <span class="hl">Baburnama</span> (Tuzuk-i-Baburi) — in Turki; greatest autobiography</li>
+          <li>Introduced <span class="hl">gunpowder & artillery</span> to Indian warfare</li>
+          <li>Tactics: <span class="hl">Tulughma</span> (flanking) + <span class="hl">Araba</span> (artillery behind carts)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="ib red">
+          <h4>⚔ Babur's 4 Major Battles</h4>
+          <table class="dt">
+            <tr><th>Battle</th><th>Year</th><th>Opponent</th><th>Result</th></tr>
+            <tr><td class="hl">1st Panipat</td><td>1526</td><td>Ibrahim Lodi</td><td>Delhi Sultanate ends; Mughal Empire begins</td></tr>
+            <tr><td class="hl">Khanwa</td><td>1527</td><td>Rana Sanga (Mewar)</td><td>Rajput resistance crushed; Babur = Ghazi</td></tr>
+            <tr><td>Chanderi</td><td>1528</td><td>Medini Rai</td><td>Rajput defeat</td></tr>
+            <tr><td class="hl">Ghagra</td><td>1529</td><td>Afghan chiefs</td><td>Afghans defeated in Bihar</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⭐</div>
+    <div><div class="card-title">Humayun (1530–1556)</div><div class="card-dates">The Unfortunate Emperor · Interrupted Reign</div></div>
+    <div class="card-freq">MEDIUM YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <ul class="fl">
+          <li>Name: <span class="hl">Nasir-ud-din Humayun</span> = "Fortunate"</li>
+          <li>Built <span class="hl">Dinpanah</span> at Delhi (second city)</li>
+          <li>Defeated by <span class="hl">Sher Shah Suri</span> at Battle of <span class="hl">Chausa (1539)</span> & <span class="hl">Kanauj/Bilgram (1540)</span></li>
+          <li>Fled to <span class="hl">Iran</span> (Safavid court of Shah Tahmasp)</li>
+          <li>Married <span class="hl">Hamida Banu Begum</span> (Akbar's mother)</li>
+          <li>Akbar born at <span class="hl">Amarkot (Sindh)</span> in 1542</li>
+          <li>Returned to recapture Delhi (<span class="hl">1555</span>) after Suri empire fragmented</li>
+          <li>Died falling from <span class="hl">Sher Mandal (library)</span> steps — 1556</li>
+        </ul>
+      </div>
+      <div>
+        <div class="ib red">
+          <h4>⚔ Sher Shah Suri (1540–1545)</h4>
+          <ul class="fl">
+            <li>Real name: <span class="hl">Farid Khan</span></li>
+            <li>Defeated Humayun; ruled for <span class="hl">only 5 years</span> but achieved much</li>
+            <li>Built <span class="hl">Grand Trunk Road</span> (Kabul to Sonargaon) — also called <em>Sadak-e-Azam</em></li>
+            <li>Introduced <span class="hl">Rupee</span> (silver coin) — still used today!</li>
+            <li>Excellent postal system (<span class="hl">Dak Chowki</span>)</li>
+            <li>Built <span class="hl">Purana Qila</span> (Delhi), Rohtasgarh Fort</li>
+            <li>Died in <span class="hl">Kalinjar Fort explosion</span> (1545)</li>
+            <li>Tomb: <span class="hl">Sasaram (Bihar)</span> — finest Afghan architecture</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ea">
+      <div class="ea-ttl">⚡ Sher Shah Suri — Top Exam Questions</div>
+      <ul class="fl arr">
+        <li>Sher Shah introduced <span class="hl">Rupaya (Rupee)</span> — silver coin of 178 grains (still in use)</li>
+        <li>Grand Trunk Road = from Kabul → Peshawar → Delhi → Agra → Patna → Sonargaon</li>
+        <li>Said of him: <span class="hl">"He snatched empire from Mughal in five months and held it for 5 years"</span></li>
+        <li>Akbar's revenue system (Todar Mal's) based on Sher Shah's system</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p10">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VI — Mughal Empire (2/4)</div><div class="sh-title">Akbar the Great</div>
+<div class="sh-sub">1556–1605 CE · Akbar-e-Azam · Highest Weightage in SSC Exams</div><div class="sh-div"></div></div>
+
+<div class="card" style="border-color:rgba(200,149,42,0.5);">
+  <div class="card-hd" style="background:linear-gradient(135deg,rgba(200,149,42,0.2),rgba(200,149,42,0.1));">
+    <div class="card-icon">🌟</div>
+    <div>
+      <div class="card-title">⭐ AKBAR THE GREAT (1556–1605) <span class="tag tag-g">HIGHEST YIELD</span></div>
+      <div class="card-dates">The Greatest Mughal · Akbar-e-Azam</div>
+    </div>
+    <div class="card-freq">⭐⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="img-ph"><div class="iico">🏰</div>Fatehpur Sikri — Akbar's Dream Capital<br>Built 1571–85 CE near Agra · Abandoned due to water shortage<br>UNESCO Heritage Site · Finest Mughal Architecture · Contains Buland Darwaza, Panch Mahal, Ibadat Khana</div>
+
+    <div class="ib gold">
+      <h4>🏆 Key Facts About Akbar</h4>
+      <div class="g2">
+        <ul class="fl">
+          <li>Born: <span class="hl">15 October 1542</span>, Amarkot (now Pakistan)</li>
+          <li>Father: Humayun; Mother: <span class="hl">Hamida Banu Begum</span></li>
+          <li>Regent: <span class="hl">Bairam Khan</span> (1556–1560)</li>
+          <li>Was <span class="hl">illiterate</span> but had outstanding memory</li>
+          <li>Died: <span class="hl">1605</span>; Tomb at <span class="hl">Sikandra, Agra</span></li>
+        </ul>
+        <ul class="fl">
+          <li>Married <span class="hl">Jodha Bai</span> (Harkha Bai) — Rajput princess (1562)</li>
+          <li>Son: <span class="hl">Jahangir</span> (Salim) — born at Fatehpur Sikri</li>
+          <li>Court poet: <span class="hl">Faizi</span>, historian: <span class="hl">Abul Fazl</span></li>
+          <li>9 gems in court: <span class="hl">Navaratnas</span></li>
+          <li>Introduced <span class="hl">Din-i-Ilahi</span> religion (1582)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ib red">
+      <h4>⚔ Akbar's Major Battles</h4>
+      <table class="dt">
+        <tr><th>Battle</th><th>Year</th><th>Opponent</th><th>Significance</th></tr>
+        <tr><td class="hl">2nd Battle of Panipat</td><td>1556</td><td>Hemu (Hindu general of Sur empire)</td><td>Akbar consolidated Mughal power; Bairam Khan's command</td></tr>
+        <tr><td class="hl">Battle of Haldighati</td><td>1576</td><td>Rana Pratap (Mewar)</td><td>Akbar won but Rana Pratap escaped; Man Singh commanded Mughals</td></tr>
+        <tr><td>Siege of Ranthambore</td><td>1569</td><td>Rajputs (Ranthambore)</td><td>Beginning of Rajput policy</td></tr>
+        <tr><td>Conquest of Gujarat</td><td>1572</td><td>Muzaffar Shah III</td><td>Akbar saw sea for first time; gateway to trade</td></tr>
+        <tr><td>Conquest of Bengal</td><td>1576</td><td>Daud Khan (Karrani)</td><td>Bengal incorporated into Mughal Empire</td></tr>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <div class="card-hd">
+        <div class="card-icon">📜</div>
+        <div><div class="card-title">Akbar's Administrative Reforms <span class="tag tag-g">MOST ASKED</span></div></div>
+      </div>
+      <div class="card-body">
+        <div class="g2">
+          <div>
+            <div class="ib">
+              <h4>🏛 Mansabdari System</h4>
+              <ul class="fl">
+                <li>Introduced by <span class="hl">Akbar</span> (borrowed from Mongol system)</li>
+                <li><span class="hl">Mansab</span> = rank/office. Every officer had a mansab.</li>
+                <li>Two parts: <span class="hl">Zat</span> (personal rank) & <span class="hl">Sawar</span> (cavalrymen to maintain)</li>
+                <li>Mansabdars from <span class="hl">10</span> to <span class="hl">5000</span> (later up to 7000+)</li>
+                <li>Not hereditary — abolished by death</li>
+                <li>Paid in <span class="hl">cash or jagir</span> (revenue assignment)</li>
+                <li>Classification: <span class="hl">Amirs</span> (500+), <span class="hl">Amir-ul-Umara</span> (top)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="ib">
+              <h4>🌾 Ain-i-Dahsala (Todar Mal's Revenue System)</h4>
+              <ul class="fl">
+                <li>Revenue minister: <span class="hl">Raja Todar Mal</span></li>
+                <li><span class="hl">Ain-i-Dahsala</span> = 10-year average price system (1580)</li>
+                <li>Land classified into 4 types: <span class="hl">Polaj, Parauti, Chachar, Banjar</span></li>
+                <li>Polaj = cultivated every year (highest revenue)</li>
+                <li>Banjar = fallow for 5+ years</li>
+                <li>Revenue = <span class="hl">1/3 of average produce</span> of 10 years</li>
+                <li>Land measurement: <span class="hl">Ilahi Gaz</span></li>
+                <li>Based on <span class="hl">Sher Shah Suri's</span> system</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="g2">
+          <div>
+            <div class="ib purple">
+              <h4>☮ Din-i-Ilahi (1582)</h4>
+              <ul class="fl">
+                <li>Akbar's own "religion" — syncretism of all religions</li>
+                <li>Only <span class="hl">18 followers</span> joined (all courtiers)</li>
+                <li>Only <span class="hl">Birbal</span> (Hindu) joined voluntarily among non-Muslims</li>
+                <li>Not a formal religion — more a <span class="hl">spiritual order</span></li>
+                <li>Abolished <span class="hl">Jaziya</span> (1564) and <span class="hl">Pilgrim Tax</span> (1563)</li>
+                <li>Met scholars at <span class="hl">Ibadat Khana</span> (House of Worship, built 1575)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="ib green">
+              <h4>🤝 Akbar's Rajput Policy</h4>
+              <ul class="fl">
+                <li>Policy of <span class="hl">reconciliation</span> — married Rajput princesses</li>
+                <li>Rajputs given high <span class="hl">mansabs</span> and military commands</li>
+                <li>Abolished <span class="hl">Jaziya</span> (tax on non-Muslims)</li>
+                <li>Allowed Rajputs to practice <span class="hl">own religions</span></li>
+                <li>Rajput chiefs: <span class="hl">Man Singh, Bhagwan Das, Todar Mal</span></li>
+                <li>Only Mewar (Rana Pratap) refused to submit</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ib gold">
+      <h4>💎 Akbar's Navaratnas (9 Gems) <span class="tag tag-r">OFTEN ASKED</span></h4>
+      <table class="dt">
+        <tr><th>Name</th><th>Field</th><th>Notable Work / Achievement</th></tr>
+        <tr><td class="hl">Abul Fazl</td><td>Historian/courtier</td><td>Akbarnama, Ain-i-Akbari (admin history of Akbar's reign)</td></tr>
+        <tr><td class="hl">Faizi</td><td>Poet (brother of Abul Fazl)</td><td>Translated Mahabharata into Persian; court poet</td></tr>
+        <tr><td class="hl">Birbal</td><td>Wit & wisdom</td><td>Only Hindu in Din-i-Ilahi; killed in Yusufzai revolt (1586)</td></tr>
+        <tr><td class="hl">Tansen</td><td>Music</td><td>Greatest musician; ragas Mian ki Malhar, Mian ki Todi, Darbari Kanara</td></tr>
+        <tr><td>Todar Mal</td><td>Revenue/Finance</td><td>Ain-i-Dahsala revenue system</td></tr>
+        <tr><td>Man Singh</td><td>Military</td><td>Commander-in-chief; conquered many provinces</td></tr>
+        <tr><td>Mulla Do Piyaza</td><td>Courtier</td><td>Known for witty exchanges with Birbal (legendary)</td></tr>
+        <tr><td>Hakim Humam</td><td>Physician</td><td>Court doctor</td></tr>
+        <tr><td>Abdur Rahim Khan-i-Khana</td><td>Poet/general</td><td>Son of Bairam Khan; famous Hindi dohas (couplets)</td></tr>
+      </table>
+    </div>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — Akbar's Navaratnas</div>
+      <div class="mn-txt">"Abul Faizi Birbal Tansen Todar, Man Mulla Hakim Abdul Rakhta"</div>
+      <div class="mn-exp">A-F-B-T-T-M-M-H-A = Abul Fazl, Faizi, Birbal, Tansen, Todar Mal, Man Singh, Mulla Do Piyaza, Hakim Humam, Abdul Rahim</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p11">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VI — Mughal Empire (3/4)</div><div class="sh-title">Jahangir & Shah Jahan</div>
+<div class="sh-sub">1605–1658 CE · Art · Architecture · The Builder King</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🌹</div>
+    <div><div class="card-title">Jahangir (1605–1627) <span class="tag tag-r">MEDIUM YIELD</span></div><div class="card-dates">World Conqueror · Lover of Art & Nature</div></div>
+    <div class="card-freq">🔥 MEDIUM-HIGH</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <ul class="fl">
+          <li>Name: <span class="hl">Nur-ud-din Muhammad Salim</span></li>
+          <li>Autobiography: <span class="hl">Tuzuk-i-Jahangiri</span> (Jahangirnama) — in Persian</li>
+          <li>Greatest patron of <span class="hl">painting</span> — Mughal painting peaked</li>
+          <li>Favorite painter: <span class="hl">Ustad Mansur</span> (animals/birds) & <span class="hl">Abul Hasan</span></li>
+          <li>Wife <span class="hl">Nur Jahan</span> (Mehr-un-Nisa) was most powerful — real ruler</li>
+          <li>Nur Jahan's group: <span class="hl">Junta/Clique</span>: Nur Jahan + Asaf Khan + Ghiyas Beg (Itimad-ud-Daulah)</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="fl">
+          <li>Famous for <span class="hl">Chain of Justice (Zanjir-i-Adl)</span> — golden chain at Agra Fort</li>
+          <li>Executed <span class="hl">Sikh Guru Arjan Dev</span> (1606)</li>
+          <li>Son <span class="hl">Khusrau</span> rebelled — blinded by Jahangir</li>
+          <li>British Ambassador <span class="hl">Sir Thomas Roe</span> visited court (1615)</li>
+          <li>Portuguese: <span class="hl">William Hawkins</span> (1608–11)</li>
+          <li>Conquered <span class="hl">Mewar</span> (Rana Amar Singh submitted, 1615)</li>
+          <li>Kandahar lost to Persia (1622)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ea">
+      <div class="ea-ttl">⚡ Nur Jahan — Key Facts</div>
+      <ul class="fl arr">
+        <li>Original name: <span class="hl">Mehr-un-Nisa</span>. Father: Ghiyas Beg (Itimad-ud-Daulah)</li>
+        <li>First Mughal queen to have coins struck in her name; issued firmans (royal orders)</li>
+        <li>Built <span class="hl">Itimad-ud-Daulah's Tomb</span> (first Mughal structure using pietra dura)</li>
+        <li>Brother <span class="hl">Asaf Khan</span> was Mumtaz Mahal's father (Shah Jahan's wife)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🕌</div>
+    <div><div class="card-title">Shah Jahan (1628–1658) <span class="tag tag-r">HIGH YIELD</span></div><div class="card-dates">The Builder King · Golden Age of Architecture</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <ul class="fl">
+          <li>Name: <span class="hl">Khurram</span> → Shah Jahan ("King of the World")</li>
+          <li>Mother: <span class="hl">Jagat Gosain</span> (Rajput princess, Jodh Bai)</li>
+          <li>Wife: <span class="hl">Mumtaz Mahal</span> (Arjumand Banu Begum) — died 1631</li>
+          <li>Built <span class="hl">Taj Mahal</span> in her memory (1632–1653)</li>
+          <li>Moved capital to <span class="hl">Shah Jahanabad (Delhi)</span></li>
+          <li>Built <span class="hl">Red Fort</span>, <span class="hl">Jama Masjid</span>, <span class="hl">Diwan-i-Khas, Diwan-i-Am</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="fl">
+          <li>Famous quote: <span class="hl">"If there is a paradise on earth, it is here, it is here, it is here"</span> — inscribed at Diwan-i-Khas</li>
+          <li>Throne: <span class="hl">Peacock Throne</span> (Takht-i-Taus) — most magnificent throne</li>
+          <li>Historian: <span class="hl">Abdul Hamid Lahori</span> (Padshahnama)</li>
+          <li>Fought in <span class="hl">Deccan</span>, lost <span class="hl">Kandahar to Persia (1649)</span></li>
+          <li>Imprisoned by son Aurangzeb in <span class="hl">Agra Fort (1658)</span> — died there 1666</li>
+          <li>Could see Taj Mahal from prison window</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ib green">
+      <h4>🏛 Shah Jahan's Major Constructions <span class="tag tag-r">VERY OFTEN ASKED</span></h4>
+      <table class="dt">
+        <tr><th>Monument</th><th>Location</th><th>Purpose</th><th>Special Feature</th></tr>
+        <tr><td class="hl">Taj Mahal</td><td>Agra</td><td>Tomb of Mumtaz Mahal</td><td>White marble, pietra dura, UNESCO — took 22 years, 20,000 workers; architect: Ustad Ahmad Lahori</td></tr>
+        <tr><td class="hl">Red Fort (Lal Qila)</td><td>Delhi</td><td>Palace-fortress</td><td>Red sandstone; Diwan-i-Khas, Diwan-i-Am, Rang Mahal</td></tr>
+        <tr><td class="hl">Jama Masjid</td><td>Delhi</td><td>Largest mosque in India</td><td>Red sandstone + marble; 25,000 worshippers; 3 gateways</td></tr>
+        <tr><td>Moti Masjid</td><td>Agra Fort</td><td>Pearl Mosque</td><td>White marble; personal mosque</td></tr>
+        <tr><td>Shalimar Garden</td><td>Lahore</td><td>Garden</td><td>Mughal garden design</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p12">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VI — Mughal Empire (4/4)</div><div class="sh-title">Aurangzeb & Decline</div>
+<div class="sh-sub">1658–1707 CE · Alamgir · Last Great Mughal · Controversial</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚔</div>
+    <div><div class="card-title">Aurangzeb (1658–1707) <span class="tag tag-r">HIGH YIELD</span></div><div class="card-dates">Alamgir · Last Great Mughal</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <div class="ib red">
+          <h4>⚔ Religious Policies (Controversial)</h4>
+          <ul class="fl">
+            <li>Reimposed <span class="hl">Jaziya</span> (1679) — abolished by Akbar</li>
+            <li>Reimposed <span class="hl">Pilgrim Tax</span></li>
+            <li>Banned <span class="hl">music, dancing</span> at court</li>
+            <li>Banned <span class="hl">Holi, Diwali</span> celebrations publicly</li>
+            <li>Destroyed many Hindu temples: <span class="hl">Kashi Vishwanath, Mathura's Keshav Dev</span></li>
+            <li>Built <span class="hl">Gyanvapi Mosque</span> over temple at Varanasi</li>
+            <li>Executed <span class="hl">Guru Tegh Bahadur</span> (9th Sikh Guru, 1675)</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="ib green">
+          <h4>✅ Positive Aspects</h4>
+          <ul class="fl chk">
+            <li>Personally made <span class="hl">copies of Quran</span> and sold for income — self-sufficient</li>
+            <li>Wore only coarse cloth made by himself</li>
+            <li>Never used state money for personal needs — <span class="hl">Zinda Pir</span> (living saint)</li>
+            <li>Extended empire to maximum extent (Bijapur 1686, Golconda 1687)</li>
+            <li><span class="hl">Fatawa-i-Alamgiri</span> — compilation of Islamic law</li>
+            <li>Built <span class="hl">Bibi ka Maqbara</span> (Aurangabad) — "mini Taj Mahal" for wife</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ib gold">
+      <h4>⚔ Aurangzeb's Major Challenges</h4>
+      <ul class="fl">
+        <li><span class="hl">Maratha resistance</span> — Shivaji defied Mughal power. Shivaji escaped from Agra captivity (1666)</li>
+        <li><span class="hl">Sikh resistance</span> — Guru Gobind Singh (10th Guru) formed Khalsa (1699)</li>
+        <li><span class="hl">Jat revolts</span> — Gokul (1669), Rajaram (1685), Churaman</li>
+        <li><span class="hl">Satnamis revolt</span> (1672) — Haryana</li>
+        <li><span class="hl">Deccan quagmire</span> — spent last 25 years fighting Marathas; died in Deccan camp (1707)</li>
+        <li>Said before death: <span class="hl">"I came alone and I go as a stranger"</span></li>
+      </ul>
+    </div>
+    <div class="ea">
+      <div class="ea-ttl">⚡ After Aurangzeb — Later Mughals (Decline)</div>
+      <ul class="fl arr">
+        <li><span class="hl">Bahadur Shah I (1707–1712)</span> — Most capable later Mughal; reconciled with Marathas & Rajputs</li>
+        <li><span class="hl">Farrukhsiyar (1713–1719)</span> — Gave East India Company trade rights (1717 Farman)</li>
+        <li><span class="hl">Muhammad Shah "Rangila" (1719–1748)</span> — <span class="hl">Nadir Shah's invasion (1739)</span> — looted Peacock Throne & Kohinoor diamond</li>
+        <li><span class="hl">Battle of Karnal (1739)</span> — Nadir Shah defeated Muhammad Shah</li>
+        <li><span class="hl">Ahmad Shah Durrani</span> invaded multiple times — Battle of Panipat III (1761) — crushed Marathas</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p13">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VI — Mughal System</div><div class="sh-title">Mughal Administration</div>
+<div class="sh-sub">Central, Provincial, and Local Governance</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">📜</div>
+    <div><div class="card-title">Mughal Administration <span class="tag tag-g">EXAM CRITICAL</span></div></div>
+    <div class="card-freq">⭐ HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <div class="ib">
+          <h4>🏛 Central Government Departments</h4>
+          <table class="dt">
+            <tr><th>Department</th><th>Head</th><th>Function</th></tr>
+            <tr><td class="hl">Diwan / Wazir</td><td>Vakil</td><td>Finance & Revenue</td></tr>
+            <tr><td>Mir Bakshi</td><td>Mir Bakshi</td><td>Military (paid army)</td></tr>
+            <tr><td>Mir Saman</td><td>Khan Saman</td><td>Imperial household</td></tr>
+            <tr><td>Sadr-us-Sadr</td><td>Sadr</td><td>Religious affairs & grants</td></tr>
+            <tr><td>Qazi-ul-Quzat</td><td>Chief Qazi</td><td>Judicial head</td></tr>
+            <tr><td>Muhtasib</td><td>Muhtasib</td><td>Public morals censor</td></tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="ib">
+          <h4>🗺 Provincial Administration</h4>
+          <ul class="fl">
+            <li><span class="hl">Suba</span> = Province (12 under Akbar, 21 under Aurangzeb)</li>
+            <li><span class="hl">Subedar/Nazim</span> = Governor of Suba</li>
+            <li><span class="hl">Diwan</span> = Revenue officer of Suba</li>
+            <li><span class="hl">Bakhshi</span> = Military officer of Suba</li>
+            <li><span class="hl">Faujdar</span> = Law and order (Sarkar level)</li>
+            <li><span class="hl">Amalguzar</span> = Revenue collector (Sarkar level)</li>
+            <li><span class="hl">Sarkar</span> = District</li>
+            <li><span class="hl">Pargana</span> = Sub-district</li>
+            <li><span class="hl">Shiqqdar</span> = Military head of Pargana</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p14">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VII</div><div class="sh-title">Bhakti Movement</div>
+<div class="sh-sub">800–1700 CE · The Great Spiritual Revolution · Social Reform</div><div class="sh-div"></div></div>
+
+<div class="ch-intro">
+  <p>The Bhakti-Sufi movement was India's greatest medieval spiritual revolution. It promoted <strong>universal brotherhood, equality, and personal devotion to God</strong> beyond caste or religion. SSC asks 2–4 questions from this topic every year.</p>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🙏</div>
+    <div><div class="card-title">Bhakti Movement <span class="tag tag-g">HIGH YIELD</span></div><div class="card-dates">Started in South India (7th C) → Spread to North (14th–17th C)</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="ib">
+      <h4>🌟 Key Features of Bhakti Movement</h4>
+      <ul class="fl arr">
+        <li><span class="hl">Personal devotion</span> to God without rituals or priests</li>
+        <li>Rejected <span class="hl">caste system</span> and <span class="hl">idol worship</span> (Nirguna) or accepted it (Saguna)</li>
+        <li>Compositions in <span class="hl">regional vernacular languages</span> — not Sanskrit</li>
+        <li><span class="hl">Nirguna</span> (formless God): Kabir, Nanak, Dadu Dayal, Raidas</li>
+        <li><span class="hl">Saguna</span> (God with form): Ramanuja, Ramananda, Chaitanya, Mirabai, Tukaram, Surdas, Tulsidas</li>
+      </ul>
+    </div>
+    <table class="dt">
+      <tr><th>Saint</th><th>Period</th><th>Region</th><th>God/Tradition</th><th>Key Work / Contribution</th></tr>
+      <tr><td class="hl">Ramanuja</td><td>11th C</td><td>South India</td><td>Vishnu (Vaishnavism)</td><td>Vishishtadvaita philosophy; opposed Shankaracharya's Advaita</td></tr>
+      <tr><td class="hl">Ramananda</td><td>14th–15th C</td><td>North India (Varanasi)</td><td>Rama</td><td>First to preach in Hindi; accepted all castes; teacher of Kabir</td></tr>
+      <tr><td class="hl">Kabir Das</td><td>1398–1518</td><td>Varanasi (UP)</td><td>Nirguna (formless)</td><td>Dohas (couplets); Bijak; opposed both Hindu rituals and Muslim orthodoxy; disciple of Ramananda</td></tr>
+      <tr><td class="hl">Guru Nanak</td><td>1469–1539</td><td>Punjab</td><td>Ik Onkar (One God)</td><td>Founded Sikhism; Japji Sahib; Adi Granth (compiled by Guru Arjan Dev, 1604)</td></tr>
+      <tr><td class="hl">Mirabai</td><td>1498–1546</td><td>Rajasthan</td><td>Krishna</td><td>Greatest woman Bhakti poet; Bhajans in Braj Bhasha; princess of Merta</td></tr>
+      <tr><td class="hl">Chaitanya Mahaprabhu</td><td>1486–1533</td><td>Bengal</td><td>Krishna (Vaishnavism)</td><td>Kirtan movement; founded Gaudiya Vaishnavism; "Hare Krishna" movement ancestor</td></tr>
+      <tr><td class="hl">Tulsidas</td><td>1532–1623</td><td>UP (Awadh)</td><td>Rama</td><td>Ramcharitmanas (in Awadhi); also wrote Vinay Patrika, Kavitavali</td></tr>
+      <tr><td class="hl">Surdas</td><td>1478–1583</td><td>Agra (UP)</td><td>Krishna</td><td>Sur Sagar; blind poet; disciple of Vallabhacharya; Braj Bhasha</td></tr>
+      <tr><td class="hl">Tukaram</td><td>1598–1650</td><td>Maharashtra</td><td>Vithoba (Krishna)</td><td>Abhangas (Marathi poetry); Varkari tradition; social reformer</td></tr>
+      <tr><td class="hl">Raidas/Ravidas</td><td>15th C</td><td>Varanasi</td><td>Nirguna</td><td>Cobbler-saint; 41 verses in Adi Granth; Mirabai's guru</td></tr>
+      <tr><td>Namdev</td><td>1270–1350</td><td>Maharashtra</td><td>Vithoba</td><td>Marathi abhangas; also verses in Punjab/Delhi; Varkari saint</td></tr>
+      <tr><td>Vallabhacharya</td><td>1479–1531</td><td>Gujarat/Vrindavan</td><td>Krishna (Pushti Marg)</td><td>Shuddhadvaita philosophy; Surdas was his disciple</td></tr>
+      <tr><td>Shankaradeva</td><td>1449–1568</td><td>Assam</td><td>Vishnu-Krishna</td><td>Founded Ekasarana; Borgeet (devotional songs); Ankiya Naat (drama)</td></tr>
+    </table>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — Remember KEY Bhakti Saints</div>
+      <div class="mn-txt">"Ramananda Kindly Granted Nanak Miracles, Chaitanya Taught Surdas, Tulsidas & Tukaram"</div>
+      <div class="mn-exp">R-K-G-N-M-C-T-S-T-T: Ramananda, Kabir, (G for Guru Nanak), Nanak, Mirabai, Chaitanya, Tulsidas, Surdas, Tukaram</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p15">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part VIII</div><div class="sh-title">Sufi Movement</div>
+<div class="sh-sub">10th–18th Century CE · Islamic Mysticism in India</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">☪</div>
+    <div><div class="card-title">Sufi Movement <span class="tag tag-r">HIGH YIELD</span></div><div class="card-dates">10th–18th Century CE</div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="ib gold">
+      <h4>🌟 What is Sufism?</h4>
+      <p>Sufi = from Arabic <span class="hl">Suf</span> (wool — coarse woolen garment). Islamic mystical movement emphasizing <span class="hl">love for God, divine union</span>, and serving humanity. Rejected external rituals; stressed inner purity. Used <span class="hl">music (sama/qawwali)</span> to reach God. Khanqah = Sufi hospice/center. Dargah = Tomb.</p>
+    </div>
+
+    <div class="ib">
+      <h4>🏘 Major Sufi Orders (Silsilas) in India <span class="tag tag-r">OFTEN ASKED</span></h4>
+      <table class="dt">
+        <tr><th>Order (Silsila)</th><th>Founder</th><th>Notable Saint</th><th>Center</th><th>Key Feature</th></tr>
+        <tr><td class="hl">Chishti</td><td>Moinuddin Chishti</td><td>Bakhtiyar Kaki, Nizamuddin Auliya, Nasiruddin Chirag</td><td>Ajmer, Delhi</td><td>Most popular; accepted music (sama); served poor; refused gifts from sultans</td></tr>
+        <tr><td class="hl">Suhrawardi</td><td>Bahauddin Zakariya</td><td>Hamiduddin Nagori</td><td>Multan</td><td>Accepted state grants; less austere than Chishti</td></tr>
+        <tr><td>Qadiri</td><td>Abdul Qadir Jilani</td><td>Shah Nimatullah, Mian Mir</td><td>Punjab, South</td><td>Prominent in South India; Dara Shikoh was a follower</td></tr>
+        <tr><td class="hl">Naqshbandi</td><td>Bahauddin Naqshband</td><td>Khwaja Baqi Billah, Sheikh Ahmad Sirhindi</td><td>Delhi</td><td>Orthodox; opposed to music; Sheikh Sirhindi opposed Akbar's Din-i-Ilahi</td></tr>
+      </table>
+    </div>
+
+    <div class="g2">
+      <div>
+        <div class="ib purple">
+          <h4>⭐ Nizamuddin Auliya (1238–1325) — Most Asked</h4>
+          <ul class="fl">
+            <li>Chishti order; disciple of <span class="hl">Fariduddin Ganj-i-Shakar</span></li>
+            <li>Dargah: <span class="hl">Delhi (Nizamuddin area)</span></li>
+            <li>Refused to meet even sultans (Alauddin Khilji)</li>
+            <li>Disciple: <span class="hl">Amir Khusrau</span> and <span class="hl">Hasan Dehlavi</span></li>
+            <li>Famous saying: <span class="hl">"Delhi is still far" (Hunuz Dilli dur ast)</span></li>
+            <li>Disciples from all religions and castes</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="ib purple">
+          <h4>⭐ Moinuddin Chishti (1142–1236) — Father of Order</h4>
+          <ul class="fl">
+            <li>Born: Sijistan (Iran); came to India with <span class="hl">Muhammad Ghori</span></li>
+            <li>Settled in <span class="hl">Ajmer</span> (Rajasthan)</li>
+            <li>Dargah Ajmer = <span class="hl">Dargah Sharif</span> — most visited shrine in India</li>
+            <li>Title: <span class="hl">Garib Nawaz</span> (Protector of the Poor)</li>
+            <li>Served poor and marginalized without discrimination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ea">
+      <div class="ea-ttl">⚡ SSC-Specific Sufi Facts</div>
+      <ul class="fl arr">
+        <li><span class="hl">Fariduddin Ganj-i-Shakar</span> (Baba Farid) — Chishti; verses in Adi Granth of Sikhs</li>
+        <li><span class="hl">Sheikh Ahmad Sirhindi</span> (Mujaddid Alf-i-Sani) — Naqshbandi; opposed Akbar; wrote Maktubat</li>
+        <li><span class="hl">Dara Shikoh</span> (Shah Jahan's son) — translated Upanishads into Persian (Sirr-i-Akbar)</li>
+        <li><span class="hl">Qawwali</span> (devotional music) = introduced by Amir Khusrau</li>
+        <li><span class="hl">Khanqah</span> = Sufi center/hospice; <span class="hl">Dargah</span> = tomb of Sufi saint</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p16">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part IX</div><div class="sh-title">Maratha Empire</div>
+<div class="sh-sub">1645–1818 CE · Shivaji · Peshwas · Challenge to Mughal Power</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🦁</div>
+    <div><div class="card-title">⭐ Shivaji Maharaj (1627–1680) <span class="tag tag-g">MOST ASKED</span></div><div class="card-dates">Founder of Maratha Kingdom · Chhatrapati</div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <div class="ib">
+          <h4>🏆 Key Life Events</h4>
+          <ul class="fl">
+            <li>Born: <span class="hl">19 Feb 1627</span>, Shivneri Fort (Pune district)</li>
+            <li>Father: <span class="hl">Shahaji Bhonsle</span>; Mother: <span class="hl">Jijabai</span></li>
+            <li>Guru/Mentor: <span class="hl">Dadaji Kondadev</span> (administrative) & <span class="hl">Ramdas Swami</span> (spiritual)</li>
+            <li>First fort captured: <span class="hl">Torna Fort</span> (1646) at age 16</li>
+            <li>Killed Adil Shah's general <span class="hl">Afzal Khan</span> (1659) with <span class="hl">Wagh Nakh (tiger claw)</span></li>
+            <li>Sacked <span class="hl">Surat (1664)</span> — Mughal port city</li>
+            <li>Captured by Aurangzeb; escaped from Agra in vegetable basket (1666)</li>
+            <li><span class="hl">Coronation: 6 June 1674</span> at Raigad Fort; title: <span class="hl">Chhatrapati</span></li>
+            <li>Died: <span class="hl">3 April 1680</span>, Raigad Fort</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="ib gold">
+          <h4>⚔ Military Innovations</h4>
+          <ul class="fl">
+            <li><span class="hl">Guerrilla warfare</span> (Ganimi Kava) — surprise attacks using knowledge of terrain</li>
+            <li>Strong <span class="hl">navy</span> — fleet based at Sindhudurg & Vijaydurg forts</li>
+            <li>Father of Indian Navy: <span class="hl">Kanhoji Angre</span> (his admiral)</li>
+            <li>Mountain forts as strongholds</li>
+            <li>Light cavalry + infantry — highly mobile</li>
+          </ul>
+          <div class="ib" style="margin-top:10px;">
+            <h4>🏛 Administrative System</h4>
+            <ul class="fl">
+              <li><span class="hl">Ashtapradhan</span> = Council of 8 ministers</li>
+              <li>Peshwa = Prime Minister (most important)</li>
+              <li>Amatya = Finance; Sachiv = Records; Sumant = Foreign</li>
+              <li>Pandit Rao = Religion; Nyayadhish = Justice; Senapati = Army; Mantri = Intelligence</li>
+              <li>Revenue: <span class="hl">Chauth</span> (1/4 of revenue of neighboring territories) + <span class="hl">Sardeshmukhi</span> (extra 10%)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — Ashtapradhan (8 Ministers)</div>
+      <div class="mn-txt">"Peshwa Attended Sabha, Sumant Pandit Nyaya Sena Mantri"</div>
+      <div class="mn-exp">Peshwa, Amatya, Sachiv/Shuru, Sumant, Pandit Rao, Nyayadhish, Senapati, Mantri = 8 ministers</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🏛</div>
+    <div><div class="card-title">The Peshwas (1713–1818)</div><div class="card-dates">Prime Ministers who became Real Rulers of Maratha Empire</div></div>
+    <div class="card-freq">HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <table class="dt">
+      <tr><th>Peshwa</th><th>Period</th><th>Achievement/Notes</th></tr>
+      <tr><td class="hl">Balaji Vishwanath</td><td>1713–1720</td><td>First powerful Peshwa; "Second founder of Maratha power"; got Mughal recognition; signed Ahtara Treaty</td></tr>
+      <tr><td class="hl">Baji Rao I <span class="tag tag-r">EXAM FAV</span></td><td>1720–1740</td><td>Greatest Peshwa; "never lost a battle"; expanded Marathas to Bundelkhand, Malwa, Gujarat, Rajputana; defeated Muhammad Shah Rangila; said "Let us plant the flag of Marathas on the banks of Attock"</td></tr>
+      <tr><td class="hl">Balaji Baji Rao (Nana Saheb)</td><td>1740–1761</td><td>Expanded further; 3rd Battle of Panipat (1761) — decisive defeat by Ahmad Shah Durrani; Marathas never recovered fully</td></tr>
+      <tr><td>Madhav Rao I</td><td>1761–1772</td><td>Tried to revive Maratha power; greatest administrator among Peshwas</td></tr>
+      <tr><td>Baji Rao II</td><td>1796–1818</td><td>Last Peshwa; signed <span class="hl">Treaty of Bassein (1802)</span> with British; 3rd Anglo-Maratha War ended Peshwa power</td></tr>
+    </table>
+
+    <div class="bb">
+      <div class="bb-name">⚔ Third Battle of Panipat (1761) <span class="tag tag-r">ALWAYS ASKED</span></div>
+      <div class="bb-row">
+        <div class="bb-item"><label>Marathas Led by</label><span>Viswasrao (Peshwa's son) & Bhau Sahib (general)</span></div>
+        <div class="bb-item"><label>Opponent</label><span>Ahmad Shah Durrani (Abdali) of Afghanistan + Rohillas + Oudh forces</span></div>
+        <div class="bb-item"><label>Result</label><span>Decisive Maratha defeat; Viswasrao & Bhau Sahib killed; Maratha expansion stopped permanently</span></div>
+        <div class="bb-item"><label>Significance</label><span>Ended Maratha dream of pan-India empire; opened path for British dominance</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p17">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part X</div><div class="sh-title">Medieval Indian Architecture</div>
+<div class="sh-sub">Indo-Islamic Style · Monuments · UNESCO Heritage Sites</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">🏛</div>
+    <div><div class="card-title">Styles of Medieval Architecture <span class="tag tag-g">FREQUENTLY ASKED</span></div></div>
+    <div class="card-freq">🔥 HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <div class="g3">
+      <div class="ac">
+        <div class="ac-style">Imperial Style (Sultanate)</div>
+        <ul class="fl"><li>True arch + true dome</li><li>Red sandstone</li><li>No figurative decoration</li><li>Qutb Minar, Alai Darwaza</li><li>Thick walls, heavy appearance</li></ul>
+      </div>
+      <div class="ac">
+        <div class="ac-style">Provincial Style</div>
+        <ul class="fl"><li>Gujarat: white marble + Hindu elements</li><li>Bengal: curved roof (Bangla style)</li><li>Jaunpur: Screen mosques (Atala Masjid)</li><li>Kashmir: wooden carvings</li><li>Malwa: Mandu architecture</li></ul>
+      </div>
+      <div class="ac">
+        <div class="ac-style">Mughal Style</div>
+        <ul class="fl"><li>Blend: Persian + Central Asian + Indian</li><li>White marble + red sandstone</li><li>Pietra dura inlay work</li><li>Bulbous domes, minarets</li><li>Char Bagh (4-garden) design</li><li>Iwan (arched hall), jharokha</li></ul>
+      </div>
+    </div>
+
+    <div class="ib gold" style="margin-top:15px;">
+      <h4>🏰 Major Monuments — Builder & Period Reference <span class="tag tag-r">CRITICAL TABLE</span></h4>
+      <table class="dt">
+        <tr><th>Monument</th><th>Location</th><th>Builder</th><th>Period</th><th>Key Feature</th></tr>
+        <tr><td class="hl">Quwwat-ul-Islam Mosque</td><td>Delhi</td><td>Qutb-ud-din Aibak</td><td>1193</td><td>First mosque in India; built using material from 27 Hindu-Jain temples</td></tr>
+        <tr><td class="hl">Qutb Minar</td><td>Delhi</td><td>Aibak (started), Iltutmish (completed)</td><td>1193–1230</td><td>72.5m; 5 storeys; first with Iltutmish, top 2 by Firuz Tughlaq (restored)</td></tr>
+        <tr><td class="hl">Alai Darwaza</td><td>Delhi</td><td>Alauddin Khilji</td><td>1311</td><td>First true arch & dome in India; red sandstone + white marble</td></tr>
+        <tr><td class="hl">Tughlaqabad Fort</td><td>Delhi</td><td>Ghiyasuddin Tughlaq</td><td>1321</td><td>Third city of Delhi; massive fortification</td></tr>
+        <tr><td class="hl">Atala Masjid</td><td>Jaunpur</td><td>Ibrahim Shah Sharqi</td><td>1408</td><td>Jaunpur style; screen mosque (massive pylon facade)</td></tr>
+        <tr><td class="hl">Humayun's Tomb</td><td>Delhi</td><td>Haji Begum (Humayun's wife)</td><td>1570</td><td>First garden tomb in India; precursor to Taj Mahal; architect: Mirak Mirza Ghiyas</td></tr>
+        <tr><td class="hl">Fatehpur Sikri</td><td>Agra (UP)</td><td>Akbar</td><td>1571–85</td><td>Buland Darwaza (Asia's largest gateway, 54m), Panch Mahal, Ibadat Khana, Salim Chishti's tomb</td></tr>
+        <tr><td class="hl">Buland Darwaza</td><td>Fatehpur Sikri</td><td>Akbar</td><td>1602</td><td>Built to commemorate Gujarat conquest; 54m high; highest gateway in Asia</td></tr>
+        <tr><td class="hl">Itimad-ud-Daulah</td><td>Agra</td><td>Nur Jahan</td><td>1622–28</td><td>First Mughal structure using only marble & pietra dura; "Baby Taj"</td></tr>
+        <tr><td class="hl">Taj Mahal</td><td>Agra</td><td>Shah Jahan</td><td>1632–53</td><td>Tomb of Mumtaz Mahal; white marble; architect: Ustad Ahmad Lahori; UNESCO</td></tr>
+        <tr><td class="hl">Red Fort (Lal Qila)</td><td>Delhi</td><td>Shah Jahan</td><td>1638–48</td><td>Red sandstone octagonal fort; Diwan-i-Khas ("If there is paradise...")</td></tr>
+        <tr><td class="hl">Jama Masjid</td><td>Delhi</td><td>Shah Jahan</td><td>1644–56</td><td>Largest mosque in India; red sandstone + marble; 25,000 worshippers; 3 gateways</td></tr>
+        <tr><td class="hl">Gol Gumbaz</td><td>Bijapur (Karnataka)</td><td>Muhammad Adil Shah</td><td>1656</td><td>Second largest dome in world; "Whispering Gallery"; architect: Yaqut of Dabul</td></tr>
+        <tr><td class="hl">Bibi ka Maqbara</td><td>Aurangabad</td><td>Azam Shah (for Dilras Banu)</td><td>1660</td><td>Built by Aurangzeb's son; called "Mini Taj"; poor imitation of Taj</td></tr>
+        <tr><td>Kailasa Temple Ellora</td><td>Aurangabad</td><td>Rashtrakuta king Krishna I</td><td>8th C</td><td>Rock-cut; carved from single rock; dedicated to Shiva</td></tr>
+        <tr><td>Brihadisvara Temple</td><td>Thanjavur (TN)</td><td>Rajaraja I (Chola)</td><td>1010 CE</td><td>Tallest vimana; Dravidian style; granite; UNESCO</td></tr>
+      </table>
+    </div>
+
+    <div class="mn">
+      <div class="mn-lbl">🧠 MNEMONIC — Mughal Architecture Sequence</div>
+      <div class="mn-txt">"Every Humble Animal Joins Shivaji's Team" → Agra (Akbar) → Humayun Tomb → Akbar's Fatehpur → Jahangir's Itimad → Shah Jahan's Taj</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p18">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part XI</div><div class="sh-title">Key Battles of Medieval India</div>
+<div class="sh-sub">The Battles That Changed History · SSC Critical Table</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚔</div>
+    <div><div class="card-title">Complete Battle Reference Table <span class="tag tag-g">EXAM CRITICAL</span></div></div>
+    <div class="card-freq">⭐ VERY HIGH YIELD</div>
+  </div>
+  <div class="card-body">
+    <table class="dt">
+      <tr><th>Battle</th><th>Year</th><th>Side A (Winner)</th><th>Side B (Loser)</th><th>Significance</th></tr>
+      <tr><td class="hl">1st Battle of Tarain</td><td>1191</td><td>Prithviraj III (Chauhan)</td><td>Muhammad Ghori</td><td>Ghori defeated; first encounter</td></tr>
+      <tr><td class="hl">2nd Battle of Tarain</td><td>1192</td><td>Muhammad Ghori</td><td>Prithviraj III</td><td>Delhi Sultanate foundation; End of Rajput dominance of Delhi</td></tr>
+      <tr><td>Battle of Chandawar</td><td>1194</td><td>Muhammad Ghori</td><td>Jaychandra (Gahadvala)</td><td>Muslim rule extended to Varanasi</td></tr>
+      <tr><td class="hl">1st Battle of Panipat</td><td>1526</td><td>Babur</td><td>Ibrahim Lodi</td><td>Delhi Sultanate ENDS; Mughal Empire BEGINS</td></tr>
+      <tr><td class="hl">Battle of Khanwa</td><td>1527</td><td>Babur</td><td>Rana Sanga (Mewar)</td><td>Rajput resistance ended; Babur declared Ghazi</td></tr>
+      <tr><td class="hl">Battle of Ghagra</td><td>1529</td><td>Babur</td><td>Afghan chiefs</td><td>Afghans defeated in Bihar</td></tr>
+      <tr><td class="hl">Battle of Chausa</td><td>1539</td><td>Sher Shah Suri</td><td>Humayun</td><td>Humayun fled; Sher Shah rose to power</td></tr>
+      <tr><td class="hl">Battle of Kanauj (Bilgram)</td><td>1540</td><td>Sher Shah Suri</td><td>Humayun</td><td>Humayun exiled; Sur Empire established</td></tr>
+      <tr><td class="hl">2nd Battle of Panipat</td><td>1556</td><td>Akbar (Bairam Khan)</td><td>Hemu (Hindu king)</td><td>Mughal power consolidated; Hemu killed</td></tr>
+      <tr><td class="hl">Battle of Haldighati</td><td>1576</td><td>Akbar (Man Singh)</td><td>Rana Pratap (Mewar)</td><td>Rana Pratap escaped; Mewar never fully conquered</td></tr>
+      <tr><td>Battle of Talikota</td><td>1565</td><td>4 Deccan Sultanates</td><td>Vijayanagara (Rama Raya)</td><td>End of Vijayanagara Empire; Hampi destroyed</td></tr>
+      <tr><td class="hl">Battle of Plassey</td><td>1757</td><td>British (Clive)</td><td>Siraj-ud-Daulah</td><td>British dominance over Bengal; beginning of British India</td></tr>
+      <tr><td class="hl">3rd Battle of Panipat</td><td>1761</td><td>Ahmad Shah Durrani</td><td>Marathas (Bhau Sahib)</td><td>Maratha expansion stopped; Peshwa power declined</td></tr>
+      <tr><td class="hl">Battle of Buxar</td><td>1764</td><td>British</td><td>Mir Qasim + Nawabs + Mughals</td><td>Gave British real political control over Bengal + Bihar + Orissa</td></tr>
+    </table>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="page" id="p19">
+<div class="inner">
+<div class="sh"><div class="sh-num">Part XII</div><div class="sh-title">Quick Fire Revision</div>
+<div class="sh-sub">High-Yield Facts · One-Liners · Exam Traps & Tips</div><div class="sh-div"></div></div>
+
+<div class="card">
+  <div class="card-hd"><div class="card-icon">⚡</div>
+    <div><div class="card-title">One-Liner Facts — Most Asked in SSC</div></div>
+    <div class="card-freq">⭐ CRITICAL</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <div class="qr">
+          <div class="qr-hd">🏛 Firsts in Medieval India</div>
+          <div class="qr-row"><div class="qr-lbl">First Sultan</div><div class="qr-val">Qutb-ud-din Aibak (1206)</div></div>
+          <div class="qr-row"><div class="qr-lbl">First Woman Sultan</div><div class="qr-val">Raziya Sultan (1236)</div></div>
+          <div class="qr-row"><div class="qr-lbl">First true arch</div><div class="qr-val">Alai Darwaza, Alauddin Khilji</div></div>
+          <div class="qr-row"><div class="qr-lbl">First mosque in India</div><div class="qr-val">Quwwat-ul-Islam, Delhi (1193)</div></div>
+          <div class="qr-row"><div class="qr-lbl">First garden tomb</div><div class="qr-val">Humayun's Tomb, Delhi (1570)</div></div>
+          <div class="qr-row"><div class="qr-lbl">First pietra dura</div><div class="qr-val">Itimad-ud-Daulah (Nur Jahan)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Rupee coined first</div><div class="qr-val">Sher Shah Suri</div></div>
+          <div class="qr-row"><div class="qr-lbl">First SE Asia conquest</div><div class="qr-val">Rajendra I (Chola) — Srivijaya</div></div>
+          <div class="qr-row"><div class="qr-lbl">First token currency</div><div class="qr-val">Muhammad-bin-Tughlaq (bronze)</div></div>
+          <div class="qr-row"><div class="qr-lbl">First Afghan dynasty</div><div class="qr-val">Lodi Dynasty (1451)</div></div>
+          <div class="qr-row"><div class="qr-lbl">First Mughal</div><div class="qr-val">Babur (1526)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Agra city founded</div><div class="qr-val">Sikandar Lodi (1504)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Grand Trunk Road</div><div class="qr-val">Sher Shah Suri</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="qr">
+          <div class="qr-hd">📚 Books & Authors — Exam Favourite</div>
+          <div class="qr-row"><div class="qr-lbl">Baburnama</div><div class="qr-val">Babur (autobiography, Turki)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Akbarnama / Ain-i-Akbari</div><div class="qr-val">Abul Fazl (Akbar's court)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Tuzuk-i-Jahangiri</div><div class="qr-val">Jahangir (autobiography)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Padshahnama</div><div class="qr-val">Abdul Hamid Lahori (Shah Jahan)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Fatawa-i-Alamgiri</div><div class="qr-val">Aurangzeb (Islamic law compilation)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Tahqiq-i-Hind (Kitab ul Hind)</div><div class="qr-val">Al-Biruni (about India; with Mahmud)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Rihla</div><div class="qr-val">Ibn Battuta (visits to India)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Tarikh-i-Firuz Shahi</div><div class="qr-val">Ziauddin Barani (Firuz Tughlaq era)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Ramcharitmanas</div><div class="qr-val">Tulsidas (Awadhi; Akbar's time)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Amuktamalyada</div><div class="qr-val">Krishnadevaraya (Telugu epic)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Khazain-ul-Futuh</div><div class="qr-val">Amir Khusrau (Alauddin)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Futuhat-i-Firuz Shahi</div><div class="qr-val">Firuz Shah Tughlaq (autobiography)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Chachnama</div><div class="qr-val">Muhammad bin Qasim era history</div></div>
+          <div class="qr-row"><div class="qr-lbl">Kitab-i-Nauras</div><div class="qr-val">Ibrahim Adil Shah II of Bijapur</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="g2" style="margin-top:20px;">
+      <div>
+        <div class="qr">
+          <div class="qr-hd">👑 Titles & Epithets — Exam Traps</div>
+          <div class="qr-row"><div class="qr-lbl">Lakh Baksh</div><div class="qr-val">Qutb-ud-din Aibak</div></div>
+          <div class="qr-row"><div class="qr-lbl">Zil-i-Ilahi</div><div class="qr-val">Balban (Shadow of God)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Tuti-i-Hind</div><div class="qr-val">Amir Khusrau (Parrot of India)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Gangaikondachola</div><div class="qr-val">Rajendra I (Chola)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Andhra Bhoja</div><div class="qr-val">Krishnadevaraya (Vijayanagara)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Garib Nawaz</div><div class="qr-val">Moinuddin Chishti</div></div>
+          <div class="qr-row"><div class="qr-lbl">Zinda Pir</div><div class="qr-val">Aurangzeb</div></div>
+          <div class="qr-row"><div class="qr-lbl">Alamgir</div><div class="qr-val">Aurangzeb</div></div>
+          <div class="qr-row"><div class="qr-lbl">Jagat Guru</div><div class="qr-val">Akbar</div></div>
+          <div class="qr-row"><div class="qr-lbl">Prince of Builders</div><div class="qr-val">Shah Jahan</div></div>
+          <div class="qr-row"><div class="qr-lbl">Chhatrapati</div><div class="qr-val">Shivaji (coronated 1674)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Mujaddid Alf-i-Sani</div><div class="qr-val">Sheikh Ahmad Sirhindi</div></div>
+          <div class="qr-row"><div class="qr-lbl">Wisest Fool</div><div class="qr-val">Muhammad-bin-Tughlaq</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="qr">
+          <div class="qr-hd">🌍 Foreign Travelers in Medieval India</div>
+          <div class="qr-row"><div class="qr-lbl">Al-Biruni</div><div class="qr-val">Came with Mahmud of Ghazni; wrote Kitab-ul-Hind (1030)</div></div>
+          <div class="qr-row"><div class="qr-lbl">Ibn Battuta</div><div class="qr-val">Morocco; visited 1334; wrote Rihla; appointed Qazi by Muhammad-bin-Tughlaq</div></div>
+          <div class="qr-row"><div class="qr-lbl">Nicolo Conti</div><div class="qr-val">Italian; Vijayanagara c.1420</div></div>
+          <div class="qr-row"><div class="qr-lbl">Abdur Razzaq</div><div class="qr-val">Persian; Vijayanagara 1443; praised Calicut & Vijayanagara</div></div>
+          <div class="qr-row"><div class="qr-lbl">Domingo Paes</div><div class="qr-val">Portuguese; Vijayanagara 1520–22; praised Krishnadevaraya</div></div>
+          <div class="qr-row"><div class="qr-lbl">William Hawkins</div><div class="qr-val">English; Jahangir's court 1608–11; failed to get trading rights</div></div>
+          <div class="qr-row"><div class="qr-lbl">Sir Thomas Roe</div><div class="qr-val">English ambassador; Jahangir's court 1615–18; got trading rights</div></div>
+          <div class="qr-row"><div class="qr-lbl">Francois Bernier</div><div class="qr-val">French; Aurangzeb's court; wrote "Travels in the Mughal Empire"</div></div>
+          <div class="qr-row"><div class="qr-lbl">Jean-Baptiste Tavernier</div><div class="qr-val">French; visited 6 times; Travels in India; described Peacock Throne</div></div>
+          <div class="qr-row"><div class="qr-lbl">Manucci</div><div class="qr-val">Venetian; Aurangzeb's time; Storia do Mogor</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:20px;">
+  <div class="card-hd">
+    <div class="card-icon">⚠</div>
+    <div><div class="card-title">⚠ Common SSC Exam Traps & Confusions</div></div>
+    <div class="card-freq">⭐ CRITICAL</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div class="ib red">
+        <h4>❌ Don't Confuse These!</h4>
+        <ul class="fl">
+          <li><span class="hl">Kailasa Temple Ellora</span> = Rashtrakuta (Krishna I) — NOT Chalukya</li>
+          <li><span class="hl">Buland Darwaza</span> = Akbar (Gujarat victory) — NOT Shah Jahan</li>
+          <li><span class="hl">Qutb Minar started</span> = Aibak; <span class="hl">completed</span> = Iltutmish</li>
+          <li><span class="hl">Humayun's Tomb built by</span> = Haji Begum (his wife, Bega Begum) — NOT Akbar</li>
+          <li><span class="hl">Ain-i-Dahsala</span> = Akbar's, but system by <span class="hl">Todar Mal</span></li>
+          <li><span class="hl">Rupee</span> introduced = <span class="hl">Sher Shah Suri</span> — NOT Akbar</li>
+          <li><span class="hl">3rd Battle of Panipat</span> = 1761 (Marathas vs Afghans) — 1st (1526), 2nd (1556)</li>
+          <li><span class="hl">Itimad-ud-Daulah</span> = built by <span class="hl">Nur Jahan</span> for her father — NOT Jahangir</li>
+        </ul>
+      </div>
+      <div class="ib green">
+        <h4>✅ Quick Disambiguation</h4>
+        <ul class="fl chk">
+          <li><span class="hl">Bibi ka Maqbara</span> = Aurangabad (by Aurangzeb's son) | <span class="hl">Taj Mahal</span> = Agra (by Shah Jahan)</li>
+          <li><span class="hl">Iltutmish</span> = son-in-law & successor of Aibak (NOT son)</li>
+          <li><span class="hl">Raziya</span> was Iltutmish's daughter; Iltutmish chose her — not the nobles</li>
+          <li><span class="hl">Malik Kafur</span> = general of <span class="hl">Alauddin Khilji</span> (NOT Ghori)</li>
+          <li><span class="hl">Amir Khusrau</span> was disciple of <span class="hl">Nizamuddin Auliya</span> (Sufi saint)</li>
+          <li><span class="hl">Babur wrote in Turki</span> (not Persian); Jahangir & Shah Jahan wrote in Persian</li>
+          <li><span class="hl">Sher Shah died</span> at <span class="hl">Kalinjar</span> (cannon explosion) — NOT in battle</li>
+          <li><span class="hl">Ibrahim Lodi</span> = only sultan to die in battle (Panipat I, 1526)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ib purple">
+      <h4>🧠 Memory Tricks for Mughal Tombs</h4>
+      <table class="dt">
+        <tr><th>Emperor</th><th>Tomb Location</th><th>Mnemonic Hint</th></tr>
+        <tr><td>Babur</td><td>Kabul (Bagh-e-Babur)</td><td>Babur = Afghan-origin; buried in homeland</td></tr>
+        <tr><td>Humayun</td><td>Delhi</td><td>Humayun's Tomb = near Nizamuddin, Delhi</td></tr>
+        <tr><td>Akbar</td><td>Sikandra (Agra)</td><td>"Akbar Rests at Sikandra" = A-R-S</td></tr>
+        <tr><td>Jahangir</td><td>Lahore (Shahdara)</td><td>Jahangir loved Kashmir; died near Lahore</td></tr>
+        <tr><td>Shah Jahan</td><td>Taj Mahal, Agra</td><td>Buried with Mumtaz Mahal</td></tr>
+        <tr><td>Aurangzeb</td><td>Khuldabad (Aurangabad, Maharashtra)</td><td>Died in Deccan; buried simply (no grand tomb)</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:20px;border-color:rgba(200,149,42,0.5);">
+  <div class="card-hd" style="background:linear-gradient(135deg,rgba(200,149,42,0.2),rgba(200,149,42,0.1));">
+    <div class="card-icon">🎯</div>
+    <div>
+      <div class="card-title">🎯 Final 30-Minute Revision Capsule</div>
+      <div class="card-dates">Before the Exam — Read This!</div>
+    </div>
+    <div class="card-freq">⭐ MUST READ</div>
+  </div>
+  <div class="card-body">
+    <div class="g2">
+      <div>
+        <div class="ea">
+          <div class="ea-ttl">🏆 TOP 15 Most Asked Facts</div>
+          <ul class="fl arr">
+            <li>Alauddin Khilji's <span class="hl">Market Reforms</span> & prices</li>
+            <li>Akbar's <span class="hl">Navratnas</span> (especially Tansen, Birbal, Abul Fazl)</li>
+            <li><span class="hl">Sher Shah Suri's Rupee</span> and Grand Trunk Road</li>
+            <li><span class="hl">Taj Mahal</span> — builder, architect, year</li>
+            <li><span class="hl">Bhakti saints</span> — Kabir, Tulsidas, Chaitanya, Mirabai</li>
+            <li><span class="hl">Sufi orders</span> — Chishti (Moinuddin, Nizamuddin)</li>
+            <li><span class="hl">Panipat Battles</span> — 1526, 1556, 1761</li>
+            <li><span class="hl">Muhammad-bin-Tughlaq's</span> capital transfer & token currency</li>
+            <li><span class="hl">Raziya Sultan</span> — first woman ruler</li>
+            <li><span class="hl">Rajendra I Chola</span> — SE Asia naval campaign</li>
+            <li><span class="hl">Krishnadevaraya</span> — Amuktamalyada, Ashtadiggajas</li>
+            <li><span class="hl">Vijayanagara founders</span> — Harihara & Bukka I</li>
+            <li><span class="hl">Gol Gumbaz</span> (Bijapur) — second largest dome</li>
+            <li><span class="hl">Fatehpur Sikri</span> — Buland Darwaza height & purpose</li>
+            <li><span class="hl">Shivaji's Ashtapradhan</span> & Guerrilla warfare</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="ib gold">
+          <div style="font-family:'Cinzel',serif;font-size:0.75rem;font-weight:700;color:var(--gold);letter-spacing:2px;margin-bottom:10px;">🌟 THE GOLDEN FORMULA FOR SSC</div>
+          <ul class="fl chk">
+            <li><span class="hl">WHO</span> built it / did it?</li>
+            <li><span class="hl">WHEN</span> (century/year)?</li>
+            <li><span class="hl">WHERE</span> (location)?</li>
+            <li><span class="hl">WHY</span> (reason/purpose)?</li>
+            <li><span class="hl">WHAT</span> is it famous for?</li>
+          </ul>
+          <p style="margin-top:12px;font-size:0.82rem;">Apply this 5W formula to every monument, battle, reform, and ruler. SSC questions are almost always one of these 5 types!</p>
+        </div>
+
+        <div class="mn" style="margin-top:16px;">
+          <div class="mn-lbl">🎯 Last-Minute Power Phrase</div>
+          <div class="mn-txt">"Sultans Kept Tight Administration. Mughals Built Amazing Structures. Bhakti Sufi Spread Harmony. Marathas Showed Guerrilla Power."</div>
+          <div class="mn-exp">Every word = a major exam chapter. Read this 3 times before your exam!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+</div><div class="bottombar">
+  <button class="bnav-btn" id="prevBtn" onclick="goTo(currentPage-1)" disabled>← Prev</button>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+    <div class="bnav-title" id="bnav-title">Home</div>
+    <div class="bnav-dots" id="dotsRow"></div>
+  </div>
+  <button class="bnav-btn" id="nextBtn" onclick="goTo(currentPage+1)">Next →</button>
+</div>
+
+<script>
+const TOTAL = 20;
+const PAGE_TITLES = [
+  "Home","Overview & Timeline","Early Medieval India","Slave Dynasty",
+  "Khilji Dynasty","Tughlaq Dynasty","Sayyid & Lodi",
+  "Vijayanagara Empire","Bahmani Sultanate","Babur & Humayun",
+  "Akbar the Great","Jahangir & Shah Jahan","Aurangzeb & Decline",
+  "Mughal Administration","Bhakti Movement","Sufi Movement",
+  "Maratha Empire","Medieval Architecture","Key Battles","Quick Fire Revision"
+];
+let currentPage = 0;
+let isAnimating = false;
+
+// Build dots
+const dotsRow = document.getElementById('dotsRow');
+for(let i=0;i<TOTAL;i++){
+  const d = document.createElement('div');
+  d.className = 'dot' + (i===0?' active':'');
+  d.onclick = ()=>goTo(i);
+  d.title = PAGE_TITLES[i];
+  dotsRow.appendChild(d);
+}
+
+function goTo(n){
+  if(isAnimating || n===currentPage || n<0 || n>=TOTAL) return;
+  isAnimating = true;
+  const from = document.getElementById('p'+currentPage);
+  const to   = document.getElementById('p'+n);
+  // Exit current
+  from.classList.remove('active');
+  from.classList.add('exit-left');
+  setTimeout(()=>{
+    from.classList.remove('exit-left');
+    // Scroll new page to top
+    to.scrollTop = 0;
+    to.classList.add('active');
+    isAnimating = false;
+  }, 300);
+  currentPage = n;
+  updateUI();
+}
+
+function updateUI(){
+  // Nav buttons highlight
+  document.querySelectorAll('.nb').forEach((b,i)=>{
+    b.classList.toggle('active', i===currentPage);
+    if(i===currentPage){
+      b.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    }
+  });
+  // Dots
+  document.querySelectorAll('.dot').forEach((d,i)=>{
+    d.classList.toggle('active', i===currentPage);
+  });
+  // Page counter
+  document.getElementById('pageCounter').textContent = (currentPage+1)+' / '+TOTAL;
+  // Bottom title
+  document.getElementById('bnav-title').textContent = PAGE_TITLES[currentPage];
+  // Prev/Next buttons
+  document.getElementById('prevBtn').disabled = currentPage===0;
+  document.getElementById('nextBtn').disabled = currentPage===TOTAL-1;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown') goTo(currentPage+1);
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp') goTo(currentPage-1);
+});
+updateUI();
+</script>
+</body>
+</html>

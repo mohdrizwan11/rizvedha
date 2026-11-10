@@ -1,0 +1,3184 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "quick-facts",
+  "file": "quick_facts_app.html",
+  "mode": "deck",
+  "storageKey": "ssc_quick_facts_v1",
+  "icon": "⚡",
+  "description": "Bilingual study app of quick static GK for SSC: important days, firsts in India, nicknames, headquarters of institutions, founders and designers, and famous committees, with quick quizzes and exam notes.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Quick Facts",
+      "त्वरित तथ्य"
+    ],
+    "hSub": [
+      "SSC Focus · Days, firsts, nicknames, HQs and committees",
+      "SSC फोकस · दिवस, प्रथम, उपनाम, मुख्यालय और समितियाँ"
+    ],
+    "learnTtl": [
+      "Learn quick facts",
+      "त्वरित तथ्य सीखें"
+    ],
+    "learnSub": [
+      "Open any card to read the date, the person, the headquarters, the founder or the subject, with a fact for the exam.",
+      "किसी भी कार्ड को खोलकर तारीख़, व्यक्ति, मुख्यालय, संस्थापक या विषय पढ़ें, परीक्षा के तथ्य सहित।"
+    ],
+    "lvlLabel": [
+      "Level · Static GK rank",
+      "स्तर · स्थिर GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search quick facts",
+      "त्वरित तथ्य खोजें"
+    ],
+    "searchPh": [
+      "Day, person, institution or committee",
+      "दिवस, व्यक्ति, संस्था या समिति"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Cards",
+      "कार्ड"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten quick questions on days, firsts, nicknames, headquarters, founders and committees. Each answer comes with an explanation.",
+      "दिवस, प्रथम, उपनाम, मुख्यालय, संस्थापक और समितियों पर दस छोटे प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "howto": [
+      "Play: ten quick questions with four options and an explanation for each. Choose a topic, or \"My mistakes\" to revise the questions you got wrong (also saved in the app's Mistake Diary).\nLearn → Cards: 134 entries on important days, firsts, nicknames, headquarters, founders and committees.\nLearn → Exam notes: days by month and days that are birthdays.\nStats: your accuracy, best streak, level and badges.\nFacts were checked in October 2026.",
+      "खेलें: चार विकल्पों वाले दस छोटे प्रश्न, हर एक की व्याख्या के साथ। कोई विषय चुनें, या गलत हुए प्रश्न दोहराने के लिए \"मेरी गलतियाँ\" (ये ऐप की गलती डायरी में भी सुरक्षित होते हैं)।\nसीखें → कार्ड: 134 प्रविष्टियाँ महत्त्वपूर्ण दिवसों, प्रथम, उपनामों, मुख्यालयों, संस्थापकों और समितियों पर।\nसीखें → परीक्षा नोट्स: माहवार दिवस और जन्मदिन पर आधारित दिवस।\nआँकड़े: आपकी सटीकता, सबसे लंबी स्ट्रीक, स्तर और बैज।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "day",
+      "icon": "🗓️",
+      "col": "#E65100",
+      "t": [
+        "Important day",
+        "महत्त्वपूर्ण दिवस"
+      ]
+    },
+    {
+      "k": "first",
+      "icon": "🥇",
+      "col": "#B8860B",
+      "t": [
+        "First in India",
+        "भारत में प्रथम"
+      ]
+    },
+    {
+      "k": "nick",
+      "icon": "🏷️",
+      "col": "#6A1B9A",
+      "t": [
+        "Nickname & title",
+        "उपनाम और उपाधि"
+      ]
+    },
+    {
+      "k": "hq",
+      "icon": "🏢",
+      "col": "#1565C0",
+      "t": [
+        "Headquarters",
+        "मुख्यालय"
+      ]
+    },
+    {
+      "k": "found",
+      "icon": "🏛️",
+      "col": "#2E7D32",
+      "t": [
+        "Founder & designer",
+        "संस्थापक और रूपकार"
+      ]
+    },
+    {
+      "k": "cmte",
+      "icon": "📋",
+      "col": "#455A64",
+      "t": [
+        "Committee",
+        "समिति"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "dt",
+      "t": [
+        "Date",
+        "तारीख़"
+      ]
+    },
+    {
+      "k": "who",
+      "t": [
+        "Who",
+        "कौन"
+      ]
+    },
+    {
+      "k": "hq",
+      "t": [
+        "Headquarters",
+        "मुख्यालय"
+      ]
+    },
+    {
+      "k": "fd",
+      "t": [
+        "Founded or designed by",
+        "संस्थापक या रूपकार"
+      ]
+    },
+    {
+      "k": "on",
+      "t": [
+        "Subject",
+        "विषय"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Quick Learner",
+      "hi": "तेज़ विद्यार्थी"
+    },
+    {
+      "min": 60,
+      "en": "Fact Finder",
+      "hi": "तथ्य खोजी"
+    },
+    {
+      "min": 150,
+      "en": "Memory Maker",
+      "hi": "स्मृति निर्माता"
+    },
+    {
+      "min": 320,
+      "en": "Know-it-all",
+      "hi": "सर्वज्ञ"
+    },
+    {
+      "min": 560,
+      "en": "GK Wizard",
+      "hi": "GK जादूगर"
+    },
+    {
+      "min": 900,
+      "en": "Encyclopedia",
+      "hi": "विश्वकोश"
+    },
+    {
+      "min": 1400,
+      "en": "Quick Facts Champion",
+      "hi": "त्वरित तथ्य चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "⚡",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🎯",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "days",
+      "icon": "🗓️",
+      "t": [
+        "Calendar Keeper",
+        "पंचांग रक्षक"
+      ],
+      "d": [
+        "Study every important day",
+        "सभी महत्त्वपूर्ण दिवस पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "day"
+        ]
+      }
+    },
+    {
+      "id": "firsts",
+      "icon": "🥇",
+      "t": [
+        "First Things First",
+        "सबसे पहले प्रथम"
+      ],
+      "d": [
+        "Study every first",
+        "सभी प्रथम पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "first"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Quick Facts Champion",
+        "त्वरित तथ्य चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "dt",
+        "field": "dt",
+        "ask": [
+          "When is it observed?",
+          "यह कब मनाया जाता है?"
+        ],
+        "reverseId": "wd",
+        "reverseAsk": [
+          "Which day is observed on",
+          "कौन-सा दिवस इस दिन मनाया जाता है:"
+        ],
+        "pairs": [
+          [
+            "26 November",
+            "26 November (Milk Day)"
+          ]
+        ]
+      },
+      {
+        "id": "wo",
+        "field": "who",
+        "ask": [
+          "Who is it?",
+          "यह कौन है?"
+        ],
+        "reverseId": "ww",
+        "reverseAsk": [
+          "Which of these describes",
+          "इनमें से कौन-सा इनके बारे में है:"
+        ]
+      },
+      {
+        "id": "hq",
+        "field": "hq",
+        "ask": [
+          "Where is it headquartered?",
+          "इसका मुख्यालय कहाँ है?"
+        ],
+        "reverseId": "wh",
+        "reverseAsk": [
+          "Which of these is headquartered in",
+          "इनमें से किसका मुख्यालय यहाँ है:"
+        ]
+      },
+      {
+        "id": "fd",
+        "field": "fd",
+        "ask": [
+          "Who founded or designed it?",
+          "इसकी स्थापना या रूपरेखा किसने की?"
+        ],
+        "pairs": [
+          [
+            "Edwin Lutyens",
+            "Edwin Lutyens and Herbert Baker"
+          ]
+        ]
+      },
+      {
+        "id": "on",
+        "field": "on",
+        "ask": [
+          "What was it about?",
+          "इसका विषय क्या था?"
+        ],
+        "reverseId": "wc",
+        "reverseAsk": [
+          "Which committee dealt with",
+          "किस समिति का विषय था:"
+        ],
+        "pairs": [
+          [
+            "Three-tier Panchayati Raj",
+            "Two-tier Panchayati Raj"
+          ],
+          [
+            "Three-tier Panchayati Raj",
+            "Constitutional status for panchayats"
+          ],
+          [
+            "Two-tier Panchayati Raj",
+            "Constitutional status for panchayats"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "q": "dt",
+            "n": 2
+          },
+          {
+            "q": "wo",
+            "n": 2
+          },
+          {
+            "q": "hq",
+            "n": 2
+          },
+          {
+            "q": "fd",
+            "n": 1
+          },
+          {
+            "q": "on",
+            "n": 1
+          },
+          {
+            "fixed": [
+              "day",
+              "first",
+              "nick",
+              "hq",
+              "found",
+              "cmte"
+            ],
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "days",
+        "t": [
+          "Important days",
+          "महत्त्वपूर्ण दिवस"
+        ],
+        "mix": [
+          {
+            "q": "dt",
+            "n": 5
+          },
+          {
+            "q": "wd",
+            "n": 3
+          },
+          {
+            "fixed": [
+              "day"
+            ],
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "people",
+        "t": [
+          "Firsts & nicknames",
+          "प्रथम और उपनाम"
+        ],
+        "mix": [
+          {
+            "q": "wo",
+            "n": 6
+          },
+          {
+            "fixed": [
+              "first",
+              "nick"
+            ],
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "orgs",
+        "t": [
+          "HQs, founders & committees",
+          "मुख्यालय, संस्थापक और समितियाँ"
+        ],
+        "mix": [
+          {
+            "q": "hq",
+            "n": 3
+          },
+          {
+            "q": "fd",
+            "n": 2
+          },
+          {
+            "q": "on",
+            "n": 2
+          },
+          {
+            "fixed": [
+              "hq",
+              "found",
+              "cmte"
+            ],
+            "n": 3
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "National Youth Day",
+      "h": "राष्ट्रीय युवा दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "12 January",
+      "sh": "12 जनवरी",
+      "dt": "12 January",
+      "dth": "12 जनवरी",
+      "tag": "12 January",
+      "tagh": "12 जनवरी",
+      "fact": "Swami Vivekananda's birthday.",
+      "facth": "स्वामी विवेकानंद का जन्मदिन।"
+    },
+    {
+      "n": "Indian Army Day",
+      "h": "भारतीय थल सेना दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "15 January",
+      "sh": "15 जनवरी",
+      "dt": "15 January",
+      "dth": "15 जनवरी",
+      "tag": "15 January",
+      "tagh": "15 जनवरी",
+      "fact": "K. M. Cariappa took over as the first Indian Commander-in-Chief on 15 January 1949.",
+      "facth": "के. एम. करियप्पा ने 15 जनवरी 1949 को पहले भारतीय कमांडर-इन-चीफ़ का पद सँभाला।"
+    },
+    {
+      "n": "Parakram Diwas",
+      "h": "पराक्रम दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "23 January",
+      "sh": "23 जनवरी",
+      "dt": "23 January",
+      "dth": "23 जनवरी",
+      "tag": "23 January",
+      "tagh": "23 जनवरी",
+      "fact": "Subhas Chandra Bose's birthday, observed as Parakram Diwas since 2021.",
+      "facth": "सुभाष चंद्र बोस का जन्मदिन, 2021 से पराक्रम दिवस के रूप में मनाया जाता है।"
+    },
+    {
+      "n": "National Girl Child Day",
+      "h": "राष्ट्रीय बालिका दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "24 January",
+      "sh": "24 जनवरी",
+      "dt": "24 January",
+      "dth": "24 जनवरी",
+      "tag": "24 January",
+      "tagh": "24 जनवरी",
+      "fact": "Observed since 2008 to promote the rights of girls.",
+      "facth": "बालिकाओं के अधिकारों को बढ़ावा देने के लिए 2008 से मनाया जाता है।"
+    },
+    {
+      "n": "National Voters' Day",
+      "h": "राष्ट्रीय मतदाता दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "25 January",
+      "sh": "25 जनवरी",
+      "dt": "25 January",
+      "dth": "25 जनवरी",
+      "tag": "25 January",
+      "tagh": "25 जनवरी",
+      "fact": "Marks the founding of the Election Commission of India on 25 January 1950.",
+      "facth": "25 जनवरी 1950 को भारत निर्वाचन आयोग की स्थापना का दिन।"
+    },
+    {
+      "n": "Martyrs' Day (Shaheed Diwas)",
+      "h": "शहीद दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "30 January",
+      "sh": "30 जनवरी",
+      "dt": "30 January",
+      "dth": "30 जनवरी",
+      "tag": "30 January",
+      "tagh": "30 जनवरी",
+      "fact": "Death anniversary of Mahatma Gandhi (1948).",
+      "facth": "महात्मा गांधी की पुण्यतिथि (1948)।"
+    },
+    {
+      "n": "World Wetlands Day",
+      "h": "विश्व आर्द्रभूमि दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "2 February",
+      "sh": "2 फ़रवरी",
+      "dt": "2 February",
+      "dth": "2 फ़रवरी",
+      "tag": "2 February",
+      "tagh": "2 फ़रवरी",
+      "fact": "Marks the Ramsar Convention signed on 2 February 1971.",
+      "facth": "2 फ़रवरी 1971 को हस्ताक्षरित रामसर अभिसमय का दिन।"
+    },
+    {
+      "n": "National Science Day",
+      "h": "राष्ट्रीय विज्ञान दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "28 February",
+      "sh": "28 फ़रवरी",
+      "dt": "28 February",
+      "dth": "28 फ़रवरी",
+      "tag": "28 February",
+      "tagh": "28 फ़रवरी",
+      "fact": "Marks C. V. Raman's discovery of the Raman effect in 1928.",
+      "facth": "1928 में सी. वी. रमन द्वारा रमन प्रभाव की खोज का दिन।"
+    },
+    {
+      "n": "International Women's Day",
+      "h": "अंतरराष्ट्रीय महिला दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "8 March",
+      "sh": "8 मार्च",
+      "dt": "8 March",
+      "dth": "8 मार्च",
+      "tag": "8 March",
+      "tagh": "8 मार्च",
+      "fact": "The Nari Shakti Puraskar is given on this day.",
+      "facth": "इस दिन नारी शक्ति पुरस्कार दिया जाता है।"
+    },
+    {
+      "n": "World Water Day",
+      "h": "विश्व जल दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "22 March",
+      "sh": "22 मार्च",
+      "dt": "22 March",
+      "dth": "22 मार्च",
+      "tag": "22 March",
+      "tagh": "22 मार्च",
+      "fact": "A UN day on freshwater, observed since 1993.",
+      "facth": "मीठे पानी पर संयुक्त राष्ट्र दिवस, 1993 से।"
+    },
+    {
+      "n": "World Health Day",
+      "h": "विश्व स्वास्थ्य दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "7 April",
+      "sh": "7 अप्रैल",
+      "dt": "7 April",
+      "dth": "7 अप्रैल",
+      "tag": "7 April",
+      "tagh": "7 अप्रैल",
+      "fact": "Marks the founding of the WHO in 1948.",
+      "facth": "1948 में WHO की स्थापना का दिन।"
+    },
+    {
+      "n": "Ambedkar Jayanti",
+      "h": "आंबेडकर जयंती",
+      "c": "day",
+      "d": 1,
+      "st": "14 April",
+      "sh": "14 अप्रैल",
+      "dt": "14 April",
+      "dth": "14 अप्रैल",
+      "tag": "14 April",
+      "tagh": "14 अप्रैल",
+      "fact": "B. R. Ambedkar's birthday.",
+      "facth": "बी. आर. आंबेडकर का जन्मदिन।"
+    },
+    {
+      "n": "Earth Day",
+      "h": "पृथ्वी दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "22 April",
+      "sh": "22 अप्रैल",
+      "dt": "22 April",
+      "dth": "22 अप्रैल",
+      "tag": "22 April",
+      "tagh": "22 अप्रैल",
+      "fact": "First observed in 1970.",
+      "facth": "पहली बार 1970 में मनाया गया।"
+    },
+    {
+      "n": "National Panchayati Raj Day",
+      "h": "राष्ट्रीय पंचायती राज दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "24 April",
+      "sh": "24 अप्रैल",
+      "dt": "24 April",
+      "dth": "24 अप्रैल",
+      "tag": "24 April",
+      "tagh": "24 अप्रैल",
+      "fact": "The 73rd Amendment, giving panchayats constitutional status, came into force on 24 April 1993.",
+      "facth": "पंचायतों को संवैधानिक दर्जा देने वाला 73वाँ संशोधन 24 अप्रैल 1993 को लागू हुआ।"
+    },
+    {
+      "n": "National Technology Day",
+      "h": "राष्ट्रीय प्रौद्योगिकी दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "11 May",
+      "sh": "11 मई",
+      "dt": "11 May",
+      "dth": "11 मई",
+      "tag": "11 May",
+      "tagh": "11 मई",
+      "fact": "Marks the Pokhran-II nuclear tests of 11 May 1998.",
+      "facth": "11 मई 1998 के पोखरण-II परमाणु परीक्षणों का दिन।"
+    },
+    {
+      "n": "World Environment Day",
+      "h": "विश्व पर्यावरण दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "5 June",
+      "sh": "5 जून",
+      "dt": "5 June",
+      "dth": "5 जून",
+      "tag": "5 June",
+      "tagh": "5 जून",
+      "fact": "Marks the opening of the Stockholm Conference in 1972.",
+      "facth": "1972 में स्टॉकहोम सम्मेलन के उद्घाटन का दिन।"
+    },
+    {
+      "n": "International Day of Yoga",
+      "h": "अंतरराष्ट्रीय योग दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "21 June",
+      "sh": "21 जून",
+      "dt": "21 June",
+      "dth": "21 जून",
+      "tag": "21 June",
+      "tagh": "21 जून",
+      "fact": "Proposed by India and adopted by the UN; first observed in 2015.",
+      "facth": "भारत के प्रस्ताव पर संयुक्त राष्ट्र द्वारा अपनाया गया; पहली बार 2015 में मनाया गया।"
+    },
+    {
+      "n": "National Statistics Day",
+      "h": "राष्ट्रीय सांख्यिकी दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "29 June",
+      "sh": "29 जून",
+      "dt": "29 June",
+      "dth": "29 जून",
+      "tag": "29 June",
+      "tagh": "29 जून",
+      "fact": "P. C. Mahalanobis's birthday.",
+      "facth": "पी. सी. महालनोबिस का जन्मदिन।"
+    },
+    {
+      "n": "National Doctors' Day",
+      "h": "राष्ट्रीय चिकित्सक दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "1 July",
+      "sh": "1 जुलाई",
+      "dt": "1 July",
+      "dth": "1 जुलाई",
+      "tag": "1 July",
+      "tagh": "1 जुलाई",
+      "fact": "Birth and death anniversary of Dr B. C. Roy.",
+      "facth": "डॉ. बी. सी. राय की जन्म और पुण्यतिथि।"
+    },
+    {
+      "n": "World Population Day",
+      "h": "विश्व जनसंख्या दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "11 July",
+      "sh": "11 जुलाई",
+      "dt": "11 July",
+      "dth": "11 जुलाई",
+      "tag": "11 July",
+      "tagh": "11 जुलाई",
+      "fact": "A UN day observed since 1989.",
+      "facth": "1989 से मनाया जाने वाला संयुक्त राष्ट्र दिवस।"
+    },
+    {
+      "n": "Kargil Vijay Diwas",
+      "h": "कारगिल विजय दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "26 July",
+      "sh": "26 जुलाई",
+      "dt": "26 July",
+      "dth": "26 जुलाई",
+      "tag": "26 July",
+      "tagh": "26 जुलाई",
+      "fact": "Marks victory in the Kargil war of 1999.",
+      "facth": "1999 के कारगिल युद्ध में विजय का दिन।"
+    },
+    {
+      "n": "National Handloom Day",
+      "h": "राष्ट्रीय हथकरघा दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "7 August",
+      "sh": "7 अगस्त",
+      "dt": "7 August",
+      "dth": "7 अगस्त",
+      "tag": "7 August",
+      "tagh": "7 अगस्त",
+      "fact": "Marks the Swadeshi Movement launched on 7 August 1905.",
+      "facth": "7 अगस्त 1905 को शुरू हुए स्वदेशी आंदोलन का दिन।"
+    },
+    {
+      "n": "National Space Day",
+      "h": "राष्ट्रीय अंतरिक्ष दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "23 August",
+      "sh": "23 अगस्त",
+      "dt": "23 August",
+      "dth": "23 अगस्त",
+      "tag": "23 August",
+      "tagh": "23 अगस्त",
+      "fact": "Marks the Chandrayaan-3 landing on 23 August 2023.",
+      "facth": "23 अगस्त 2023 को चंद्रयान-3 के उतरने का दिन।"
+    },
+    {
+      "n": "National Sports Day",
+      "h": "राष्ट्रीय खेल दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "29 August",
+      "sh": "29 अगस्त",
+      "dt": "29 August",
+      "dth": "29 अगस्त",
+      "tag": "29 August",
+      "tagh": "29 अगस्त",
+      "fact": "Major Dhyan Chand's birthday.",
+      "facth": "मेजर ध्यानचंद का जन्मदिन।"
+    },
+    {
+      "n": "Teachers' Day",
+      "h": "शिक्षक दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "5 September",
+      "sh": "5 सितंबर",
+      "dt": "5 September",
+      "dth": "5 सितंबर",
+      "tag": "5 September",
+      "tagh": "5 सितंबर",
+      "fact": "S. Radhakrishnan's birthday.",
+      "facth": "एस. राधाकृष्णन का जन्मदिन।"
+    },
+    {
+      "n": "International Literacy Day",
+      "h": "अंतरराष्ट्रीय साक्षरता दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "8 September",
+      "sh": "8 सितंबर",
+      "dt": "8 September",
+      "dth": "8 सितंबर",
+      "tag": "8 September",
+      "tagh": "8 सितंबर",
+      "fact": "A UNESCO day observed since 1967.",
+      "facth": "1967 से मनाया जाने वाला यूनेस्को दिवस।"
+    },
+    {
+      "n": "Hindi Diwas",
+      "h": "हिंदी दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "14 September",
+      "sh": "14 सितंबर",
+      "dt": "14 September",
+      "dth": "14 सितंबर",
+      "tag": "14 September",
+      "tagh": "14 सितंबर",
+      "fact": "The Constituent Assembly adopted Hindi as the official language on 14 September 1949.",
+      "facth": "संविधान सभा ने 14 सितंबर 1949 को हिंदी को राजभाषा अपनाया।"
+    },
+    {
+      "n": "Engineers' Day",
+      "h": "अभियंता दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "15 September",
+      "sh": "15 सितंबर",
+      "dt": "15 September",
+      "dth": "15 सितंबर",
+      "tag": "15 September",
+      "tagh": "15 सितंबर",
+      "fact": "M. Visvesvaraya's birthday.",
+      "facth": "एम. विश्वेश्वरैया का जन्मदिन।"
+    },
+    {
+      "n": "International Day of Non-Violence",
+      "h": "अंतरराष्ट्रीय अहिंसा दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "2 October",
+      "sh": "2 अक्टूबर",
+      "dt": "2 October",
+      "dth": "2 अक्टूबर",
+      "tag": "2 October",
+      "tagh": "2 अक्टूबर",
+      "fact": "Gandhi Jayanti, declared by the UN in 2007.",
+      "facth": "गांधी जयंती, 2007 में संयुक्त राष्ट्र द्वारा घोषित।"
+    },
+    {
+      "n": "Indian Air Force Day",
+      "h": "भारतीय वायु सेना दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "8 October",
+      "sh": "8 अक्टूबर",
+      "dt": "8 October",
+      "dth": "8 अक्टूबर",
+      "tag": "8 October",
+      "tagh": "8 अक्टूबर",
+      "fact": "The Indian Air Force was set up on 8 October 1932.",
+      "facth": "भारतीय वायु सेना 8 अक्टूबर 1932 को बनी।"
+    },
+    {
+      "n": "World Food Day",
+      "h": "विश्व खाद्य दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "16 October",
+      "sh": "16 अक्टूबर",
+      "dt": "16 October",
+      "dth": "16 अक्टूबर",
+      "tag": "16 October",
+      "tagh": "16 अक्टूबर",
+      "fact": "Marks the founding of the FAO in 1945.",
+      "facth": "1945 में FAO की स्थापना का दिन।"
+    },
+    {
+      "n": "National Unity Day",
+      "h": "राष्ट्रीय एकता दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "31 October",
+      "sh": "31 अक्टूबर",
+      "dt": "31 October",
+      "dth": "31 अक्टूबर",
+      "tag": "31 October",
+      "tagh": "31 अक्टूबर",
+      "fact": "Sardar Vallabhbhai Patel's birthday.",
+      "facth": "सरदार वल्लभभाई पटेल का जन्मदिन।"
+    },
+    {
+      "n": "Children's Day",
+      "h": "बाल दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "14 November",
+      "sh": "14 नवंबर",
+      "dt": "14 November",
+      "dth": "14 नवंबर",
+      "tag": "14 November",
+      "tagh": "14 नवंबर",
+      "fact": "Jawaharlal Nehru's birthday.",
+      "facth": "जवाहरलाल नेहरू का जन्मदिन।"
+    },
+    {
+      "n": "Janjatiya Gaurav Divas",
+      "h": "जनजातीय गौरव दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "15 November",
+      "sh": "15 नवंबर",
+      "dt": "15 November",
+      "dth": "15 नवंबर",
+      "tag": "15 November",
+      "tagh": "15 नवंबर",
+      "fact": "Birsa Munda's birthday, observed since 2021.",
+      "facth": "बिरसा मुंडा का जन्मदिन, 2021 से मनाया जाता है।"
+    },
+    {
+      "n": "Constitution Day",
+      "h": "संविधान दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "26 November",
+      "sh": "26 नवंबर",
+      "dt": "26 November",
+      "dth": "26 नवंबर",
+      "tag": "26 November",
+      "tagh": "26 नवंबर",
+      "fact": "The Constitution was adopted on 26 November 1949.",
+      "facth": "संविधान 26 नवंबर 1949 को अपनाया गया।"
+    },
+    {
+      "n": "National Milk Day",
+      "h": "राष्ट्रीय दुग्ध दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "26 November (Milk Day)",
+      "sh": "26 नवंबर (दुग्ध दिवस)",
+      "dt": "26 November (Milk Day)",
+      "dth": "26 नवंबर (दुग्ध दिवस)",
+      "tag": "26 November (Milk Day)",
+      "tagh": "26 नवंबर (दुग्ध दिवस)",
+      "fact": "Verghese Kurien's birthday.",
+      "facth": "वर्गीज़ कुरियन का जन्मदिन।"
+    },
+    {
+      "n": "World AIDS Day",
+      "h": "विश्व एड्स दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "1 December",
+      "sh": "1 दिसंबर",
+      "dt": "1 December",
+      "dth": "1 दिसंबर",
+      "tag": "1 December",
+      "tagh": "1 दिसंबर",
+      "fact": "Observed since 1988.",
+      "facth": "1988 से मनाया जाता है।"
+    },
+    {
+      "n": "Indian Navy Day",
+      "h": "भारतीय नौसेना दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "4 December",
+      "sh": "4 दिसंबर",
+      "dt": "4 December",
+      "dth": "4 दिसंबर",
+      "tag": "4 December",
+      "tagh": "4 दिसंबर",
+      "fact": "Marks Operation Trident, the 1971 attack on Karachi harbour.",
+      "facth": "1971 में कराची बंदरगाह पर ऑपरेशन ट्राइडेंट हमले का दिन।"
+    },
+    {
+      "n": "Human Rights Day",
+      "h": "मानवाधिकार दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "10 December",
+      "sh": "10 दिसंबर",
+      "dt": "10 December",
+      "dth": "10 दिसंबर",
+      "tag": "10 December",
+      "tagh": "10 दिसंबर",
+      "fact": "The Universal Declaration of Human Rights was adopted on 10 December 1948.",
+      "facth": "मानवाधिकारों की सार्वभौमिक घोषणा 10 दिसंबर 1948 को अपनाई गई।"
+    },
+    {
+      "n": "Vijay Diwas",
+      "h": "विजय दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "16 December",
+      "sh": "16 दिसंबर",
+      "dt": "16 December",
+      "dth": "16 दिसंबर",
+      "tag": "16 December",
+      "tagh": "16 दिसंबर",
+      "fact": "Marks the victory in the 1971 war and the surrender of Pakistan's army in Dhaka.",
+      "facth": "1971 के युद्ध में विजय और ढाका में पाकिस्तानी सेना के आत्मसमर्पण का दिन।"
+    },
+    {
+      "n": "National Mathematics Day",
+      "h": "राष्ट्रीय गणित दिवस",
+      "c": "day",
+      "d": 1,
+      "st": "22 December",
+      "sh": "22 दिसंबर",
+      "dt": "22 December",
+      "dth": "22 दिसंबर",
+      "tag": "22 December",
+      "tagh": "22 दिसंबर",
+      "fact": "Srinivasa Ramanujan's birthday.",
+      "facth": "श्रीनिवास रामानुजन का जन्मदिन।"
+    },
+    {
+      "n": "Good Governance Day",
+      "h": "सुशासन दिवस",
+      "c": "day",
+      "d": 2,
+      "st": "25 December",
+      "sh": "25 दिसंबर",
+      "dt": "25 December",
+      "dth": "25 दिसंबर",
+      "tag": "25 December",
+      "tagh": "25 दिसंबर",
+      "fact": "Atal Bihari Vajpayee's birthday.",
+      "facth": "अटल बिहारी वाजपेयी का जन्मदिन।"
+    },
+    {
+      "n": "First President of India",
+      "h": "भारत के पहले राष्ट्रपति",
+      "c": "first",
+      "d": 1,
+      "st": "Rajendra Prasad",
+      "sh": "राजेंद्र प्रसाद",
+      "who": "Rajendra Prasad",
+      "whoh": "राजेंद्र प्रसाद",
+      "tag": "Rajendra Prasad",
+      "tagh": "राजेंद्र प्रसाद",
+      "fact": "Rajendra Prasad (1950–62) is the only President to serve two full terms.",
+      "facth": "राजेंद्र प्रसाद (1950–62) दो पूर्ण कार्यकाल पूरे करने वाले एकमात्र राष्ट्रपति हैं।"
+    },
+    {
+      "n": "First Prime Minister of India",
+      "h": "भारत के पहले प्रधानमंत्री",
+      "c": "first",
+      "d": 1,
+      "st": "Jawaharlal Nehru",
+      "sh": "जवाहरलाल नेहरू",
+      "who": "Jawaharlal Nehru",
+      "whoh": "जवाहरलाल नेहरू",
+      "tag": "Jawaharlal Nehru",
+      "tagh": "जवाहरलाल नेहरू",
+      "fact": "Jawaharlal Nehru was Prime Minister from 1947 to 1964.",
+      "facth": "जवाहरलाल नेहरू 1947 से 1964 तक प्रधानमंत्री रहे।"
+    },
+    {
+      "n": "First Vice-President of India",
+      "h": "भारत के पहले उपराष्ट्रपति",
+      "c": "first",
+      "d": 1,
+      "st": "S. Radhakrishnan",
+      "sh": "एस. राधाकृष्णन",
+      "who": "S. Radhakrishnan",
+      "whoh": "एस. राधाकृष्णन",
+      "tag": "S. Radhakrishnan",
+      "tagh": "एस. राधाकृष्णन",
+      "fact": "S. Radhakrishnan was Vice-President (1952–62) and then President (1962–67).",
+      "facth": "एस. राधाकृष्णन उपराष्ट्रपति (1952–62) और फिर राष्ट्रपति (1962–67) रहे।"
+    },
+    {
+      "n": "First woman Prime Minister",
+      "h": "पहली महिला प्रधानमंत्री",
+      "c": "first",
+      "d": 1,
+      "st": "Indira Gandhi",
+      "sh": "इंदिरा गांधी",
+      "who": "Indira Gandhi",
+      "whoh": "इंदिरा गांधी",
+      "tag": "Indira Gandhi",
+      "tagh": "इंदिरा गांधी",
+      "fact": "Indira Gandhi became Prime Minister in 1966.",
+      "facth": "इंदिरा गांधी 1966 में प्रधानमंत्री बनीं।"
+    },
+    {
+      "n": "First woman President",
+      "h": "पहली महिला राष्ट्रपति",
+      "c": "first",
+      "d": 1,
+      "st": "Pratibha Patil",
+      "sh": "प्रतिभा पाटिल",
+      "who": "Pratibha Patil",
+      "whoh": "प्रतिभा पाटिल",
+      "tag": "Pratibha Patil",
+      "tagh": "प्रतिभा पाटिल",
+      "fact": "Pratibha Patil was President from 2007 to 2012.",
+      "facth": "प्रतिभा पाटिल 2007 से 2012 तक राष्ट्रपति रहीं।"
+    },
+    {
+      "n": "First tribal woman President",
+      "h": "पहली आदिवासी महिला राष्ट्रपति",
+      "c": "first",
+      "d": 1,
+      "st": "Droupadi Murmu",
+      "sh": "द्रौपदी मुर्मू",
+      "who": "Droupadi Murmu",
+      "whoh": "द्रौपदी मुर्मू",
+      "tag": "Droupadi Murmu",
+      "tagh": "द्रौपदी मुर्मू",
+      "fact": "Droupadi Murmu became the 15th President in 2022.",
+      "facth": "द्रौपदी मुर्मू 2022 में 15वीं राष्ट्रपति बनीं।"
+    },
+    {
+      "n": "First Governor-General of independent India",
+      "h": "स्वतंत्र भारत के पहले गवर्नर-जनरल",
+      "c": "first",
+      "d": 1,
+      "st": "Lord Mountbatten",
+      "sh": "लॉर्ड माउंटबेटन",
+      "who": "Lord Mountbatten",
+      "whoh": "लॉर्ड माउंटबेटन",
+      "tag": "Lord Mountbatten",
+      "tagh": "लॉर्ड माउंटबेटन",
+      "fact": "Lord Mountbatten was the last Viceroy and the first Governor-General of independent India.",
+      "facth": "लॉर्ड माउंटबेटन अंतिम वायसराय और स्वतंत्र भारत के पहले गवर्नर-जनरल थे।"
+    },
+    {
+      "n": "First and last Indian Governor-General",
+      "h": "पहले और अंतिम भारतीय गवर्नर-जनरल",
+      "c": "first",
+      "d": 1,
+      "st": "C. Rajagopalachari",
+      "sh": "सी. राजगोपालाचारी",
+      "who": "C. Rajagopalachari",
+      "whoh": "सी. राजगोपालाचारी",
+      "tag": "C. Rajagopalachari",
+      "tagh": "सी. राजगोपालाचारी",
+      "fact": "C. Rajagopalachari was the only Indian Governor-General (1948–50).",
+      "facth": "सी. राजगोपालाचारी एकमात्र भारतीय गवर्नर-जनरल (1948–50) थे।"
+    },
+    {
+      "n": "First Chief Justice of India",
+      "h": "भारत के पहले मुख्य न्यायाधीश",
+      "c": "first",
+      "d": 2,
+      "st": "H. J. Kania",
+      "sh": "एच. जे. कानिया",
+      "who": "H. J. Kania",
+      "whoh": "एच. जे. कानिया",
+      "tag": "H. J. Kania",
+      "tagh": "एच. जे. कानिया",
+      "fact": "H. J. Kania was the first Chief Justice of the Supreme Court (1950).",
+      "facth": "एच. जे. कानिया सर्वोच्च न्यायालय के पहले मुख्य न्यायाधीश (1950) थे।"
+    },
+    {
+      "n": "First woman judge of the Supreme Court",
+      "h": "सर्वोच्च न्यायालय की पहली महिला न्यायाधीश",
+      "c": "first",
+      "d": 2,
+      "st": "Fathima Beevi",
+      "sh": "फ़ातिमा बीवी",
+      "who": "Fathima Beevi",
+      "whoh": "फ़ातिमा बीवी",
+      "tag": "Fathima Beevi",
+      "tagh": "फ़ातिमा बीवी",
+      "fact": "Justice M. Fathima Beevi joined the Supreme Court in 1989.",
+      "facth": "न्यायमूर्ति एम. फ़ातिमा बीवी 1989 में सर्वोच्च न्यायालय में आईं।"
+    },
+    {
+      "n": "First woman Chief Minister",
+      "h": "पहली महिला मुख्यमंत्री",
+      "c": "first",
+      "d": 1,
+      "st": "Sucheta Kripalani",
+      "sh": "सुचेता कृपलानी",
+      "who": "Sucheta Kripalani",
+      "whoh": "सुचेता कृपलानी",
+      "tag": "Sucheta Kripalani",
+      "tagh": "सुचेता कृपलानी",
+      "fact": "Sucheta Kripalani became Chief Minister of Uttar Pradesh in 1963.",
+      "facth": "सुचेता कृपलानी 1963 में उत्तर प्रदेश की मुख्यमंत्री बनीं।"
+    },
+    {
+      "n": "First woman Governor",
+      "h": "पहली महिला राज्यपाल",
+      "c": "first",
+      "d": 1,
+      "st": "Sarojini Naidu",
+      "sh": "सरोजिनी नायडू",
+      "who": "Sarojini Naidu",
+      "whoh": "सरोजिनी नायडू",
+      "tag": "Sarojini Naidu",
+      "tagh": "सरोजिनी नायडू",
+      "fact": "Sarojini Naidu became Governor of the United Provinces in 1947.",
+      "facth": "सरोजिनी नायडू 1947 में संयुक्त प्रांत की राज्यपाल बनीं।"
+    },
+    {
+      "n": "First Speaker of the Lok Sabha",
+      "h": "लोकसभा के पहले अध्यक्ष",
+      "c": "first",
+      "d": 2,
+      "st": "G. V. Mavalankar",
+      "sh": "जी. वी. मावलंकर",
+      "who": "G. V. Mavalankar",
+      "whoh": "जी. वी. मावलंकर",
+      "tag": "G. V. Mavalankar",
+      "tagh": "जी. वी. मावलंकर",
+      "fact": "G. V. Mavalankar was the first Speaker of the Lok Sabha (1952).",
+      "facth": "जी. वी. मावलंकर लोकसभा के पहले अध्यक्ष (1952) थे।"
+    },
+    {
+      "n": "First woman Speaker of the Lok Sabha",
+      "h": "लोकसभा की पहली महिला अध्यक्ष",
+      "c": "first",
+      "d": 1,
+      "st": "Meira Kumar",
+      "sh": "मीरा कुमार",
+      "who": "Meira Kumar",
+      "whoh": "मीरा कुमार",
+      "tag": "Meira Kumar",
+      "tagh": "मीरा कुमार",
+      "fact": "Meira Kumar became the first woman Speaker in 2009.",
+      "facth": "मीरा कुमार 2009 में पहली महिला अध्यक्ष बनीं।"
+    },
+    {
+      "n": "First Chief Election Commissioner",
+      "h": "पहले मुख्य निर्वाचन आयुक्त",
+      "c": "first",
+      "d": 2,
+      "st": "Sukumar Sen",
+      "sh": "सुकुमार सेन",
+      "who": "Sukumar Sen",
+      "whoh": "सुकुमार सेन",
+      "tag": "Sukumar Sen",
+      "tagh": "सुकुमार सेन",
+      "fact": "Sukumar Sen conducted the first general elections of 1951–52.",
+      "facth": "सुकुमार सेन ने 1951–52 के पहले आम चुनाव कराए।"
+    },
+    {
+      "n": "First Indian in space",
+      "h": "अंतरिक्ष में पहले भारतीय",
+      "c": "first",
+      "d": 1,
+      "st": "Rakesh Sharma",
+      "sh": "राकेश शर्मा",
+      "who": "Rakesh Sharma",
+      "whoh": "राकेश शर्मा",
+      "tag": "Rakesh Sharma",
+      "tagh": "राकेश शर्मा",
+      "fact": "Rakesh Sharma flew on Soyuz T-11 in 1984.",
+      "facth": "राकेश शर्मा 1984 में सोयुज़ T-11 से गए।"
+    },
+    {
+      "n": "First Indian woman to climb Everest",
+      "h": "एवरेस्ट चढ़ने वाली पहली भारतीय महिला",
+      "c": "first",
+      "d": 1,
+      "st": "Bachendri Pal",
+      "sh": "बछेंद्री पाल",
+      "who": "Bachendri Pal",
+      "whoh": "बछेंद्री पाल",
+      "tag": "Bachendri Pal",
+      "tagh": "बछेंद्री पाल",
+      "fact": "Bachendri Pal reached the summit of Everest in 1984.",
+      "facth": "बछेंद्री पाल 1984 में एवरेस्ट के शिखर पर पहुँचीं।"
+    },
+    {
+      "n": "First woman IPS officer",
+      "h": "पहली महिला IPS अधिकारी",
+      "c": "first",
+      "d": 1,
+      "st": "Kiran Bedi",
+      "sh": "किरण बेदी",
+      "who": "Kiran Bedi",
+      "whoh": "किरण बेदी",
+      "tag": "Kiran Bedi",
+      "tagh": "किरण बेदी",
+      "fact": "Kiran Bedi joined the Indian Police Service in 1972.",
+      "facth": "किरण बेदी 1972 में भारतीय पुलिस सेवा में आईं।"
+    },
+    {
+      "n": "First Indian woman Olympic medallist",
+      "h": "पहली भारतीय महिला ओलंपिक पदक विजेता",
+      "c": "first",
+      "d": 1,
+      "st": "Karnam Malleswari",
+      "sh": "कर्णम मल्लेश्वरी",
+      "who": "Karnam Malleswari",
+      "whoh": "कर्णम मल्लेश्वरी",
+      "tag": "Karnam Malleswari",
+      "tagh": "कर्णम मल्लेश्वरी",
+      "fact": "Karnam Malleswari won weightlifting bronze at Sydney 2000.",
+      "facth": "कर्णम मल्लेश्वरी ने सिडनी 2000 में भारोत्तोलन में कांस्य जीता।"
+    },
+    {
+      "n": "First Field Marshal of India",
+      "h": "भारत के पहले फ़ील्ड मार्शल",
+      "c": "first",
+      "d": 1,
+      "st": "Sam Manekshaw",
+      "sh": "सैम मानेकशॉ",
+      "who": "Sam Manekshaw",
+      "whoh": "सैम मानेकशॉ",
+      "tag": "Sam Manekshaw",
+      "tagh": "सैम मानेकशॉ",
+      "fact": "Sam Manekshaw, Army chief in the 1971 war, was made Field Marshal in 1973.",
+      "facth": "1971 के युद्ध के समय सेना प्रमुख सैम मानेकशॉ 1973 में फ़ील्ड मार्शल बने।"
+    },
+    {
+      "n": "Father of the Nation",
+      "h": "राष्ट्रपिता",
+      "c": "nick",
+      "d": 1,
+      "st": "Mahatma Gandhi",
+      "sh": "महात्मा गांधी",
+      "who": "Mahatma Gandhi",
+      "whoh": "महात्मा गांधी",
+      "tag": "Mahatma Gandhi",
+      "tagh": "महात्मा गांधी",
+      "fact": "Subhas Chandra Bose first called Gandhi the Father of the Nation in a 1944 radio address.",
+      "facth": "सुभाष चंद्र बोस ने 1944 के रेडियो संबोधन में पहली बार गांधी को राष्ट्रपिता कहा।"
+    },
+    {
+      "n": "Iron Man of India",
+      "h": "भारत के लौह पुरुष",
+      "c": "nick",
+      "d": 1,
+      "st": "Sardar Vallabhbhai Patel",
+      "sh": "सरदार वल्लभभाई पटेल",
+      "who": "Sardar Vallabhbhai Patel",
+      "whoh": "सरदार वल्लभभाई पटेल",
+      "tag": "Sardar Vallabhbhai Patel",
+      "tagh": "सरदार वल्लभभाई पटेल",
+      "fact": "Patel united the princely states; the Statue of Unity honours him.",
+      "facth": "पटेल ने रियासतों को एक किया; स्टैच्यू ऑफ़ यूनिटी उनके सम्मान में है।"
+    },
+    {
+      "n": "Nightingale of India",
+      "h": "भारत कोकिला",
+      "c": "nick",
+      "d": 1,
+      "st": "Sarojini Naidu",
+      "sh": "सरोजिनी नायडू",
+      "who": "Sarojini Naidu",
+      "whoh": "सरोजिनी नायडू",
+      "tag": "Sarojini Naidu",
+      "tagh": "सरोजिनी नायडू",
+      "fact": "Sarojini Naidu was a poet and the first woman President of the Congress who was Indian (1925).",
+      "facth": "सरोजिनी नायडू कवयित्री और कांग्रेस की पहली भारतीय महिला अध्यक्ष (1925) थीं।"
+    },
+    {
+      "n": "Lokmanya",
+      "h": "लोकमान्य",
+      "c": "nick",
+      "d": 1,
+      "st": "Bal Gangadhar Tilak",
+      "sh": "बाल गंगाधर तिलक",
+      "who": "Bal Gangadhar Tilak",
+      "whoh": "बाल गंगाधर तिलक",
+      "tag": "Bal Gangadhar Tilak",
+      "tagh": "बाल गंगाधर तिलक",
+      "fact": "Tilak said 'Swaraj is my birthright and I shall have it'.",
+      "facth": "तिलक ने कहा 'स्वराज मेरा जन्मसिद्ध अधिकार है और मैं इसे लेकर रहूँगा'।"
+    },
+    {
+      "n": "Netaji",
+      "h": "नेताजी",
+      "c": "nick",
+      "d": 1,
+      "st": "Subhas Chandra Bose",
+      "sh": "सुभाष चंद्र बोस",
+      "who": "Subhas Chandra Bose",
+      "whoh": "सुभाष चंद्र बोस",
+      "tag": "Subhas Chandra Bose",
+      "tagh": "सुभाष चंद्र बोस",
+      "fact": "Bose led the Azad Hind Fauj and gave the slogan Jai Hind.",
+      "facth": "बोस ने आज़ाद हिंद फ़ौज का नेतृत्व किया और जय हिंद का नारा दिया।"
+    },
+    {
+      "n": "Frontier Gandhi",
+      "h": "सीमांत गांधी",
+      "c": "nick",
+      "d": 1,
+      "st": "Khan Abdul Ghaffar Khan",
+      "sh": "ख़ान अब्दुल ग़फ़्फ़ार ख़ान",
+      "who": "Khan Abdul Ghaffar Khan",
+      "whoh": "ख़ान अब्दुल ग़फ़्फ़ार ख़ान",
+      "tag": "Khan Abdul Ghaffar Khan",
+      "tagh": "ख़ान अब्दुल ग़फ़्फ़ार ख़ान",
+      "fact": "He led the Khudai Khidmatgar movement and received the Bharat Ratna in 1987.",
+      "facth": "उन्होंने ख़ुदाई ख़िदमतगार आंदोलन चलाया और 1987 में भारत रत्न पाया।"
+    },
+    {
+      "n": "Grand Old Man of India",
+      "h": "भारत के वयोवृद्ध पुरुष",
+      "c": "nick",
+      "d": 1,
+      "st": "Dadabhai Naoroji",
+      "sh": "दादाभाई नौरोजी",
+      "who": "Dadabhai Naoroji",
+      "whoh": "दादाभाई नौरोजी",
+      "tag": "Dadabhai Naoroji",
+      "tagh": "दादाभाई नौरोजी",
+      "fact": "Naoroji gave the drain of wealth theory and was the first Asian member of the British Parliament.",
+      "facth": "नौरोजी ने धन निकासी सिद्धांत दिया और ब्रिटिश संसद के पहले एशियाई सदस्य बने।"
+    },
+    {
+      "n": "Punjab Kesari",
+      "h": "पंजाब केसरी",
+      "c": "nick",
+      "d": 1,
+      "st": "Lala Lajpat Rai",
+      "sh": "लाला लाजपत राय",
+      "who": "Lala Lajpat Rai",
+      "whoh": "लाला लाजपत राय",
+      "tag": "Lala Lajpat Rai",
+      "tagh": "लाला लाजपत राय",
+      "fact": "Lala Lajpat Rai died after a lathi charge during the Simon Commission protest (1928).",
+      "facth": "लाला लाजपत राय साइमन कमीशन विरोध (1928) में लाठीचार्ज के बाद दिवंगत हुए।"
+    },
+    {
+      "n": "Deshbandhu",
+      "h": "देशबंधु",
+      "c": "nick",
+      "d": 2,
+      "st": "Chittaranjan Das",
+      "sh": "चित्तरंजन दास",
+      "who": "Chittaranjan Das",
+      "whoh": "चित्तरंजन दास",
+      "tag": "Chittaranjan Das",
+      "tagh": "चित्तरंजन दास",
+      "fact": "C. R. Das founded the Swaraj Party with Motilal Nehru in 1923.",
+      "facth": "चित्तरंजन दास ने 1923 में मोतीलाल नेहरू के साथ स्वराज पार्टी बनाई।"
+    },
+    {
+      "n": "Missile Man of India",
+      "h": "भारत के मिसाइल मैन",
+      "c": "nick",
+      "d": 1,
+      "st": "A. P. J. Abdul Kalam",
+      "sh": "ए. पी. जे. अब्दुल कलाम",
+      "who": "A. P. J. Abdul Kalam",
+      "whoh": "ए. पी. जे. अब्दुल कलाम",
+      "tag": "A. P. J. Abdul Kalam",
+      "tagh": "ए. पी. जे. अब्दुल कलाम",
+      "fact": "Kalam led the missile programme and was President from 2002 to 2007.",
+      "facth": "कलाम ने मिसाइल कार्यक्रम का नेतृत्व किया और 2002 से 2007 तक राष्ट्रपति रहे।"
+    },
+    {
+      "n": "Flying Sikh",
+      "h": "फ़्लाइंग सिख",
+      "c": "nick",
+      "d": 1,
+      "st": "Milkha Singh",
+      "sh": "मिल्खा सिंह",
+      "who": "Milkha Singh",
+      "whoh": "मिल्खा सिंह",
+      "tag": "Milkha Singh",
+      "tagh": "मिल्खा सिंह",
+      "fact": "Pakistan's President Ayub Khan gave Milkha Singh this name in 1960.",
+      "facth": "पाकिस्तान के राष्ट्रपति अयूब ख़ान ने 1960 में मिल्खा सिंह को यह नाम दिया।"
+    },
+    {
+      "n": "Payyoli Express",
+      "h": "पय्योली एक्सप्रेस",
+      "c": "nick",
+      "d": 1,
+      "st": "P. T. Usha",
+      "sh": "पी. टी. उषा",
+      "who": "P. T. Usha",
+      "whoh": "पी. टी. उषा",
+      "tag": "P. T. Usha",
+      "tagh": "पी. टी. उषा",
+      "fact": "P. T. Usha, the sprinter from Payyoli in Kerala, became the first woman President of the Indian Olympic Association (2022).",
+      "facth": "केरल के पय्योली की धाविका पी. टी. उषा भारतीय ओलंपिक संघ की पहली महिला अध्यक्ष (2022) बनीं।"
+    },
+    {
+      "n": "The Wizard (of hockey)",
+      "h": "हॉकी के जादूगर",
+      "c": "nick",
+      "d": 1,
+      "st": "Major Dhyan Chand",
+      "sh": "मेजर ध्यानचंद",
+      "who": "Major Dhyan Chand",
+      "whoh": "मेजर ध्यानचंद",
+      "tag": "Major Dhyan Chand",
+      "tagh": "मेजर ध्यानचंद",
+      "fact": "Dhyan Chand won three Olympic golds; National Sports Day marks his birthday.",
+      "facth": "ध्यानचंद ने तीन ओलंपिक स्वर्ण जीते; राष्ट्रीय खेल दिवस उनका जन्मदिन है।"
+    },
+    {
+      "n": "Birdman of India",
+      "h": "भारत के पक्षी पुरुष",
+      "c": "nick",
+      "d": 1,
+      "st": "Salim Ali",
+      "sh": "सालिम अली",
+      "who": "Salim Ali",
+      "whoh": "सालिम अली",
+      "tag": "Salim Ali",
+      "tagh": "सालिम अली",
+      "fact": "Salim Ali wrote The Book of Indian Birds.",
+      "facth": "सालिम अली ने द बुक ऑफ़ इंडियन बर्ड्स लिखी।"
+    },
+    {
+      "n": "Father of the Indian Renaissance",
+      "h": "भारतीय पुनर्जागरण के जनक",
+      "c": "nick",
+      "d": 1,
+      "st": "Raja Ram Mohan Roy",
+      "sh": "राजा राम मोहन राय",
+      "who": "Raja Ram Mohan Roy",
+      "whoh": "राजा राम मोहन राय",
+      "tag": "Raja Ram Mohan Roy",
+      "tagh": "राजा राम मोहन राय",
+      "fact": "Ram Mohan Roy founded the Brahmo Samaj (1828) and campaigned against sati.",
+      "facth": "राम मोहन राय ने ब्रह्म समाज (1828) की स्थापना की और सती के विरुद्ध अभियान चलाया।"
+    },
+    {
+      "n": "Mahamana",
+      "h": "महामना",
+      "c": "nick",
+      "d": 1,
+      "st": "Madan Mohan Malaviya",
+      "sh": "मदन मोहन मालवीय",
+      "who": "Madan Mohan Malaviya",
+      "whoh": "मदन मोहन मालवीय",
+      "tag": "Madan Mohan Malaviya",
+      "tagh": "मदन मोहन मालवीय",
+      "fact": "Malaviya founded the Banaras Hindu University and received the Bharat Ratna in 2015.",
+      "facth": "मालवीय ने बनारस हिंदू विश्वविद्यालय की स्थापना की और 2015 में भारत रत्न पाया।"
+    },
+    {
+      "n": "Shaheed-e-Azam",
+      "h": "शहीद-ए-आज़म",
+      "c": "nick",
+      "d": 1,
+      "st": "Bhagat Singh",
+      "sh": "भगत सिंह",
+      "who": "Bhagat Singh",
+      "whoh": "भगत सिंह",
+      "tag": "Bhagat Singh",
+      "tagh": "भगत सिंह",
+      "fact": "Bhagat Singh was hanged with Rajguru and Sukhdev on 23 March 1931.",
+      "facth": "भगत सिंह को राजगुरु और सुखदेव के साथ 23 मार्च 1931 को फाँसी दी गई।"
+    },
+    {
+      "n": "Lok Nayak",
+      "h": "लोकनायक",
+      "c": "nick",
+      "d": 2,
+      "st": "Jayaprakash Narayan",
+      "sh": "जयप्रकाश नारायण",
+      "who": "Jayaprakash Narayan",
+      "whoh": "जयप्रकाश नारायण",
+      "tag": "Jayaprakash Narayan",
+      "tagh": "जयप्रकाश नारायण",
+      "fact": "JP led the movement for \"Total Revolution\" in 1974.",
+      "facth": "जेपी ने 1974 में \"संपूर्ण क्रांति\" आंदोलन का नेतृत्व किया।"
+    },
+    {
+      "n": "Gurudev",
+      "h": "गुरुदेव",
+      "c": "nick",
+      "d": 1,
+      "st": "Rabindranath Tagore",
+      "sh": "रवींद्रनाथ टैगोर",
+      "who": "Rabindranath Tagore",
+      "whoh": "रवींद्रनाथ टैगोर",
+      "tag": "Rabindranath Tagore",
+      "tagh": "रवींद्रनाथ टैगोर",
+      "fact": "Gandhi called Tagore Gurudev; Tagore gave Gandhi the title Mahatma.",
+      "facth": "गांधी ने टैगोर को गुरुदेव कहा; टैगोर ने गांधी को महात्मा की उपाधि दी।"
+    },
+    {
+      "n": "Sher-e-Kashmir",
+      "h": "शेर-ए-कश्मीर",
+      "c": "nick",
+      "d": 2,
+      "st": "Sheikh Abdullah",
+      "sh": "शेख़ अब्दुल्ला",
+      "who": "Sheikh Abdullah",
+      "whoh": "शेख़ अब्दुल्ला",
+      "tag": "Sheikh Abdullah",
+      "tagh": "शेख़ अब्दुल्ला",
+      "fact": "Sheikh Abdullah founded the National Conference.",
+      "facth": "शेख़ अब्दुल्ला ने नेशनल कॉन्फ़्रेंस की स्थापना की।"
+    },
+    {
+      "n": "Reserve Bank of India",
+      "h": "भारतीय रिज़र्व बैंक",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: Mumbai",
+      "sh": "मुख्यालय: मुंबई",
+      "hq": "Mumbai",
+      "hqh": "मुंबई",
+      "tag": "Headquarters: Mumbai",
+      "tagh": "मुख्यालय: मुंबई",
+      "fact": "The RBI was set up on 1 April 1935 on the Hilton Young Commission's advice and nationalised in 1949.",
+      "facth": "RBI हिल्टन यंग आयोग की सलाह पर 1 अप्रैल 1935 को बना और 1949 में राष्ट्रीयकृत हुआ।"
+    },
+    {
+      "n": "SEBI",
+      "h": "सेबी",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: Mumbai",
+      "sh": "मुख्यालय: मुंबई",
+      "hq": "Mumbai",
+      "hqh": "मुंबई",
+      "tag": "Headquarters: Mumbai",
+      "tagh": "मुख्यालय: मुंबई",
+      "fact": "The Securities and Exchange Board of India regulates the stock market; it became statutory in 1992.",
+      "facth": "भारतीय प्रतिभूति और विनिमय बोर्ड शेयर बाज़ार का नियामक है; यह 1992 में वैधानिक बना।"
+    },
+    {
+      "n": "NABARD",
+      "h": "नाबार्ड",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: Mumbai",
+      "sh": "मुख्यालय: मुंबई",
+      "hq": "Mumbai",
+      "hqh": "मुंबई",
+      "tag": "Headquarters: Mumbai",
+      "tagh": "मुख्यालय: मुंबई",
+      "fact": "The National Bank for Agriculture and Rural Development was set up in 1982 on the Shivaraman Committee's advice.",
+      "facth": "राष्ट्रीय कृषि और ग्रामीण विकास बैंक शिवरामन समिति की सलाह पर 1982 में बना।"
+    },
+    {
+      "n": "SIDBI",
+      "h": "सिडबी",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Lucknow",
+      "sh": "मुख्यालय: लखनऊ",
+      "hq": "Lucknow",
+      "hqh": "लखनऊ",
+      "tag": "Headquarters: Lucknow",
+      "tagh": "मुख्यालय: लखनऊ",
+      "fact": "The Small Industries Development Bank of India, set up in 1990, is headquartered in Lucknow.",
+      "facth": "1990 में बने भारतीय लघु उद्योग विकास बैंक का मुख्यालय लखनऊ में है।"
+    },
+    {
+      "n": "IRDAI",
+      "h": "IRDAI",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Hyderabad",
+      "sh": "मुख्यालय: हैदराबाद",
+      "hq": "Hyderabad",
+      "hqh": "हैदराबाद",
+      "tag": "Headquarters: Hyderabad",
+      "tagh": "मुख्यालय: हैदराबाद",
+      "fact": "The Insurance Regulatory and Development Authority of India, set up on the Malhotra Committee's advice, is headquartered in Hyderabad.",
+      "facth": "मल्होत्रा समिति की सलाह पर बने भारतीय बीमा विनियामक और विकास प्राधिकरण का मुख्यालय हैदराबाद में है।"
+    },
+    {
+      "n": "Life Insurance Corporation",
+      "h": "भारतीय जीवन बीमा निगम",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: Mumbai",
+      "sh": "मुख्यालय: मुंबई",
+      "hq": "Mumbai",
+      "hqh": "मुंबई",
+      "tag": "Headquarters: Mumbai",
+      "tagh": "मुख्यालय: मुंबई",
+      "fact": "LIC was formed in 1956 by nationalising life insurance companies.",
+      "facth": "LIC 1956 में जीवन बीमा कंपनियों के राष्ट्रीयकरण से बना।"
+    },
+    {
+      "n": "Bhabha Atomic Research Centre",
+      "h": "भाभा परमाणु अनुसंधान केंद्र",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: Mumbai",
+      "sh": "मुख्यालय: मुंबई",
+      "hq": "Mumbai",
+      "hqh": "मुंबई",
+      "tag": "Headquarters: Mumbai",
+      "tagh": "मुख्यालय: मुंबई",
+      "fact": "BARC at Trombay, Mumbai, is India's main nuclear research centre.",
+      "facth": "मुंबई के ट्रॉम्बे में BARC भारत का मुख्य परमाणु अनुसंधान केंद्र है।"
+    },
+    {
+      "n": "NITI Aayog",
+      "h": "नीति आयोग",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: New Delhi",
+      "sh": "मुख्यालय: नई दिल्ली",
+      "hq": "New Delhi",
+      "hqh": "नई दिल्ली",
+      "tag": "Headquarters: New Delhi",
+      "tagh": "मुख्यालय: नई दिल्ली",
+      "fact": "NITI Aayog replaced the Planning Commission on 1 January 2015; the Prime Minister is its chairperson.",
+      "facth": "नीति आयोग ने 1 जनवरी 2015 को योजना आयोग की जगह ली; प्रधानमंत्री इसके अध्यक्ष हैं।"
+    },
+    {
+      "n": "Survey of India",
+      "h": "भारतीय सर्वेक्षण विभाग",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Dehradun",
+      "sh": "मुख्यालय: देहरादून",
+      "hq": "Dehradun",
+      "hqh": "देहरादून",
+      "tag": "Headquarters: Dehradun",
+      "tagh": "मुख्यालय: देहरादून",
+      "fact": "The Survey of India, founded in 1767, is India's oldest scientific department.",
+      "facth": "1767 में स्थापित भारतीय सर्वेक्षण विभाग भारत का सबसे पुराना वैज्ञानिक विभाग है।"
+    },
+    {
+      "n": "Forest Research Institute",
+      "h": "वन अनुसंधान संस्थान",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Dehradun",
+      "sh": "मुख्यालय: देहरादून",
+      "hq": "Dehradun",
+      "hqh": "देहरादून",
+      "tag": "Headquarters: Dehradun",
+      "tagh": "मुख्यालय: देहरादून",
+      "fact": "The Forest Research Institute, founded in 1906, is in Dehradun.",
+      "facth": "1906 में स्थापित वन अनुसंधान संस्थान देहरादून में है।"
+    },
+    {
+      "n": "Wildlife Institute of India",
+      "h": "भारतीय वन्यजीव संस्थान",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Dehradun",
+      "sh": "मुख्यालय: देहरादून",
+      "hq": "Dehradun",
+      "hqh": "देहरादून",
+      "tag": "Headquarters: Dehradun",
+      "tagh": "मुख्यालय: देहरादून",
+      "fact": "The Wildlife Institute of India in Dehradun conducts the national tiger census with NTCA.",
+      "facth": "देहरादून का भारतीय वन्यजीव संस्थान NTCA के साथ राष्ट्रीय बाघ गणना करता है।"
+    },
+    {
+      "n": "Zoological Survey of India",
+      "h": "भारतीय प्राणी सर्वेक्षण",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kolkata",
+      "sh": "मुख्यालय: कोलकाता",
+      "hq": "Kolkata",
+      "hqh": "कोलकाता",
+      "tag": "Headquarters: Kolkata",
+      "tagh": "मुख्यालय: कोलकाता",
+      "fact": "The Zoological Survey of India (1916) is headquartered in Kolkata.",
+      "facth": "भारतीय प्राणी सर्वेक्षण (1916) का मुख्यालय कोलकाता में है।"
+    },
+    {
+      "n": "Botanical Survey of India",
+      "h": "भारतीय वनस्पति सर्वेक्षण",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kolkata",
+      "sh": "मुख्यालय: कोलकाता",
+      "hq": "Kolkata",
+      "hqh": "कोलकाता",
+      "tag": "Headquarters: Kolkata",
+      "tagh": "मुख्यालय: कोलकाता",
+      "fact": "The Botanical Survey of India (1890) is headquartered in Kolkata.",
+      "facth": "भारतीय वनस्पति सर्वेक्षण (1890) का मुख्यालय कोलकाता में है।"
+    },
+    {
+      "n": "Geological Survey of India",
+      "h": "भारतीय भूवैज्ञानिक सर्वेक्षण",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kolkata",
+      "sh": "मुख्यालय: कोलकाता",
+      "hq": "Kolkata",
+      "hqh": "कोलकाता",
+      "tag": "Headquarters: Kolkata",
+      "tagh": "मुख्यालय: कोलकाता",
+      "fact": "The Geological Survey of India (1851) is headquartered in Kolkata.",
+      "facth": "भारतीय भूवैज्ञानिक सर्वेक्षण (1851) का मुख्यालय कोलकाता में है।"
+    },
+    {
+      "n": "Coal India Limited",
+      "h": "कोल इंडिया लिमिटेड",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kolkata",
+      "sh": "मुख्यालय: कोलकाता",
+      "hq": "Kolkata",
+      "hqh": "कोलकाता",
+      "tag": "Headquarters: Kolkata",
+      "tagh": "मुख्यालय: कोलकाता",
+      "fact": "Coal India, the largest coal producer in the world, is headquartered in Kolkata.",
+      "facth": "विश्व की सबसे बड़ी कोयला उत्पादक कोल इंडिया का मुख्यालय कोलकाता में है।"
+    },
+    {
+      "n": "Tea Board",
+      "h": "चाय बोर्ड",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kolkata",
+      "sh": "मुख्यालय: कोलकाता",
+      "hq": "Kolkata",
+      "hqh": "कोलकाता",
+      "tag": "Headquarters: Kolkata",
+      "tagh": "मुख्यालय: कोलकाता",
+      "fact": "The Tea Board of India is headquartered in Kolkata.",
+      "facth": "भारतीय चाय बोर्ड का मुख्यालय कोलकाता में है।"
+    },
+    {
+      "n": "Coffee Board",
+      "h": "कॉफ़ी बोर्ड",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Bengaluru",
+      "sh": "मुख्यालय: बेंगलुरु",
+      "hq": "Bengaluru",
+      "hqh": "बेंगलुरु",
+      "tag": "Headquarters: Bengaluru",
+      "tagh": "मुख्यालय: बेंगलुरु",
+      "fact": "The Coffee Board is in Bengaluru; Karnataka grows most of India's coffee.",
+      "facth": "कॉफ़ी बोर्ड बेंगलुरु में है; कर्नाटक भारत की अधिकांश कॉफ़ी उगाता है।"
+    },
+    {
+      "n": "Central Silk Board",
+      "h": "केंद्रीय रेशम बोर्ड",
+      "c": "hq",
+      "d": 3,
+      "st": "HQ: Bengaluru",
+      "sh": "मुख्यालय: बेंगलुरु",
+      "hq": "Bengaluru",
+      "hqh": "बेंगलुरु",
+      "tag": "Headquarters: Bengaluru",
+      "tagh": "मुख्यालय: बेंगलुरु",
+      "fact": "The Central Silk Board is headquartered in Bengaluru.",
+      "facth": "केंद्रीय रेशम बोर्ड का मुख्यालय बेंगलुरु में है।"
+    },
+    {
+      "n": "Rubber Board",
+      "h": "रबर बोर्ड",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kottayam",
+      "sh": "मुख्यालय: कोट्टायम",
+      "hq": "Kottayam",
+      "hqh": "कोट्टायम",
+      "tag": "Headquarters: Kottayam",
+      "tagh": "मुख्यालय: कोट्टायम",
+      "fact": "The Rubber Board is in Kottayam, Kerala, the main rubber-growing state.",
+      "facth": "रबर बोर्ड प्रमुख रबर उत्पादक राज्य केरल के कोट्टायम में है।"
+    },
+    {
+      "n": "Spices Board",
+      "h": "मसाला बोर्ड",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Kochi",
+      "sh": "मुख्यालय: कोच्चि",
+      "hq": "Kochi",
+      "hqh": "कोच्चि",
+      "tag": "Headquarters: Kochi",
+      "tagh": "मुख्यालय: कोच्चि",
+      "fact": "The Spices Board of India is headquartered in Kochi.",
+      "facth": "भारतीय मसाला बोर्ड का मुख्यालय कोच्चि में है।"
+    },
+    {
+      "n": "Coir Board",
+      "h": "नारियल जटा बोर्ड",
+      "c": "hq",
+      "d": 3,
+      "st": "HQ: Kochi",
+      "sh": "मुख्यालय: कोच्चि",
+      "hq": "Kochi",
+      "hqh": "कोच्चि",
+      "tag": "Headquarters: Kochi",
+      "tagh": "मुख्यालय: कोच्चि",
+      "fact": "The Coir Board is headquartered in Kochi, Kerala.",
+      "facth": "नारियल जटा बोर्ड का मुख्यालय कोच्चि, केरल में है।"
+    },
+    {
+      "n": "National Dairy Development Board",
+      "h": "राष्ट्रीय डेयरी विकास बोर्ड",
+      "c": "hq",
+      "d": 2,
+      "st": "HQ: Anand",
+      "sh": "मुख्यालय: आणंद",
+      "hq": "Anand",
+      "hqh": "आणंद",
+      "tag": "Headquarters: Anand",
+      "tagh": "मुख्यालय: आणंद",
+      "fact": "The NDDB at Anand, Gujarat, ran Operation Flood under Verghese Kurien.",
+      "facth": "आणंद, गुजरात में NDDB ने वर्गीज़ कुरियन के नेतृत्व में ऑपरेशन फ़्लड चलाया।"
+    },
+    {
+      "n": "National Institute of Oceanography",
+      "h": "राष्ट्रीय समुद्र विज्ञान संस्थान",
+      "c": "hq",
+      "d": 3,
+      "st": "HQ: Goa (Dona Paula)",
+      "sh": "मुख्यालय: गोवा (दोना पाउला)",
+      "hq": "Goa (Dona Paula)",
+      "hqh": "गोवा (दोना पाउला)",
+      "tag": "Headquarters: Goa (Dona Paula)",
+      "tagh": "मुख्यालय: गोवा (दोना पाउला)",
+      "fact": "The CSIR National Institute of Oceanography is at Dona Paula, Goa.",
+      "facth": "CSIR का राष्ट्रीय समुद्र विज्ञान संस्थान दोना पाउला, गोवा में है।"
+    },
+    {
+      "n": "Indian Institute of Science",
+      "h": "भारतीय विज्ञान संस्थान",
+      "c": "hq",
+      "d": 1,
+      "st": "HQ: Bengaluru",
+      "sh": "मुख्यालय: बेंगलुरु",
+      "hq": "Bengaluru",
+      "hqh": "बेंगलुरु",
+      "tag": "Headquarters: Bengaluru",
+      "tagh": "मुख्यालय: बेंगलुरु",
+      "fact": "The Indian Institute of Science in Bengaluru was founded in 1909 with support from Jamsetji Tata.",
+      "facth": "बेंगलुरु का भारतीय विज्ञान संस्थान 1909 में जमशेदजी टाटा के सहयोग से स्थापित हुआ।"
+    },
+    {
+      "n": "Nalanda Mahavihara",
+      "h": "नालंदा महाविहार",
+      "c": "found",
+      "d": 1,
+      "st": "Kumaragupta I (Gupta dynasty)",
+      "sh": "कुमारगुप्त प्रथम (गुप्त वंश)",
+      "fd": "Kumaragupta I (Gupta dynasty)",
+      "fdh": "कुमारगुप्त प्रथम (गुप्त वंश)",
+      "tag": "Kumaragupta I (Gupta dynasty)",
+      "tagh": "कुमारगुप्त प्रथम (गुप्त वंश)",
+      "fact": "Nalanda in Bihar, founded in the 5th century, was a great Buddhist university; Bakhtiyar Khalji destroyed it around 1193.",
+      "facth": "बिहार का नालंदा, 5वीं सदी में स्थापित, महान बौद्ध विश्वविद्यालय था; बख़्तियार ख़िलजी ने लगभग 1193 में इसे नष्ट किया।"
+    },
+    {
+      "n": "Vikramashila Mahavihara",
+      "h": "विक्रमशिला महाविहार",
+      "c": "found",
+      "d": 2,
+      "st": "Dharmapala (Pala dynasty)",
+      "sh": "धर्मपाल (पाल वंश)",
+      "fd": "Dharmapala (Pala dynasty)",
+      "fdh": "धर्मपाल (पाल वंश)",
+      "tag": "Dharmapala (Pala dynasty)",
+      "tagh": "धर्मपाल (पाल वंश)",
+      "fact": "Vikramashila in Bhagalpur, Bihar, was founded by the Pala king Dharmapala.",
+      "facth": "बिहार के भागलपुर में विक्रमशिला पाल राजा धर्मपाल ने स्थापित किया।"
+    },
+    {
+      "n": "Banaras Hindu University",
+      "h": "बनारस हिंदू विश्वविद्यालय",
+      "c": "found",
+      "d": 1,
+      "st": "Madan Mohan Malaviya",
+      "sh": "मदन मोहन मालवीय",
+      "fd": "Madan Mohan Malaviya",
+      "fdh": "मदन मोहन मालवीय",
+      "tag": "Madan Mohan Malaviya",
+      "tagh": "मदन मोहन मालवीय",
+      "fact": "BHU was founded in 1916 by Madan Mohan Malaviya with the support of Annie Besant.",
+      "facth": "BHU 1916 में मदन मोहन मालवीय ने एनी बेसेंट के सहयोग से स्थापित किया।"
+    },
+    {
+      "n": "Aligarh Muslim University",
+      "h": "अलीगढ़ मुस्लिम विश्वविद्यालय",
+      "c": "found",
+      "d": 1,
+      "st": "Sir Syed Ahmad Khan",
+      "sh": "सर सैयद अहमद ख़ान",
+      "fd": "Sir Syed Ahmad Khan",
+      "fdh": "सर सैयद अहमद ख़ान",
+      "tag": "Sir Syed Ahmad Khan",
+      "tagh": "सर सैयद अहमद ख़ान",
+      "fact": "Sir Syed Ahmad Khan founded the Muhammadan Anglo-Oriental College in 1875; it became AMU in 1920.",
+      "facth": "सर सैयद अहमद ख़ान ने 1875 में मोहम्मडन एंग्लो-ओरिएंटल कॉलेज स्थापित किया; यह 1920 में AMU बना।"
+    },
+    {
+      "n": "Visva-Bharati",
+      "h": "विश्व-भारती",
+      "c": "found",
+      "d": 1,
+      "st": "Rabindranath Tagore",
+      "sh": "रवींद्रनाथ टैगोर",
+      "fd": "Rabindranath Tagore",
+      "fdh": "रवींद्रनाथ टैगोर",
+      "tag": "Rabindranath Tagore",
+      "tagh": "रवींद्रनाथ टैगोर",
+      "fact": "Tagore founded Visva-Bharati at Santiniketan in 1921; Santiniketan is a World Heritage Site (2023).",
+      "facth": "टैगोर ने 1921 में शांतिनिकेतन में विश्व-भारती स्थापित की; शांतिनिकेतन विश्व धरोहर (2023) है।"
+    },
+    {
+      "n": "Gujarat Vidyapith",
+      "h": "गुजरात विद्यापीठ",
+      "c": "found",
+      "d": 2,
+      "st": "Mahatma Gandhi",
+      "sh": "महात्मा गांधी",
+      "fd": "Mahatma Gandhi",
+      "fdh": "महात्मा गांधी",
+      "tag": "Mahatma Gandhi",
+      "tagh": "महात्मा गांधी",
+      "fact": "Gandhi founded Gujarat Vidyapith in Ahmedabad in 1920 during the Non-Cooperation Movement.",
+      "facth": "गांधी ने असहयोग आंदोलन के दौरान 1920 में अहमदाबाद में गुजरात विद्यापीठ स्थापित की।"
+    },
+    {
+      "n": "SNDT Women's University",
+      "h": "SNDT महिला विश्वविद्यालय",
+      "c": "found",
+      "d": 2,
+      "st": "D. K. Karve",
+      "sh": "डी. के. कर्वे",
+      "fd": "D. K. Karve",
+      "fdh": "डी. के. कर्वे",
+      "tag": "D. K. Karve",
+      "tagh": "डी. के. कर्वे",
+      "fact": "Maharshi D. K. Karve founded the first women's university in India in 1916.",
+      "facth": "महर्षि डी. के. कर्वे ने 1916 में भारत का पहला महिला विश्वविद्यालय स्थापित किया।"
+    },
+    {
+      "n": "Asiatic Society",
+      "h": "एशियाटिक सोसाइटी",
+      "c": "found",
+      "d": 2,
+      "st": "William Jones",
+      "sh": "विलियम जोन्स",
+      "fd": "William Jones",
+      "fdh": "विलियम जोन्स",
+      "tag": "William Jones",
+      "tagh": "विलियम जोन्स",
+      "fact": "Sir William Jones founded the Asiatic Society in Calcutta in 1784.",
+      "facth": "सर विलियम जोन्स ने 1784 में कलकत्ता में एशियाटिक सोसाइटी स्थापित की।"
+    },
+    {
+      "n": "Indian Statistical Institute",
+      "h": "भारतीय सांख्यिकी संस्थान",
+      "c": "found",
+      "d": 2,
+      "st": "P. C. Mahalanobis",
+      "sh": "पी. सी. महालनोबिस",
+      "fd": "P. C. Mahalanobis",
+      "fdh": "पी. सी. महालनोबिस",
+      "tag": "P. C. Mahalanobis",
+      "tagh": "पी. सी. महालनोबिस",
+      "fact": "P. C. Mahalanobis founded the Indian Statistical Institute in Kolkata in 1931.",
+      "facth": "पी. सी. महालनोबिस ने 1931 में कोलकाता में भारतीय सांख्यिकी संस्थान स्थापित किया।"
+    },
+    {
+      "n": "Tata Institute of Fundamental Research",
+      "h": "टाटा मूलभूत अनुसंधान संस्थान",
+      "c": "found",
+      "d": 2,
+      "st": "Homi J. Bhabha",
+      "sh": "होमी जे. भाभा",
+      "fd": "Homi J. Bhabha",
+      "fdh": "होमी जे. भाभा",
+      "tag": "Homi J. Bhabha",
+      "tagh": "होमी जे. भाभा",
+      "fact": "Homi Bhabha founded TIFR in 1945 with support from the Tata trusts.",
+      "facth": "होमी भाभा ने 1945 में टाटा ट्रस्टों के सहयोग से TIFR स्थापित किया।"
+    },
+    {
+      "n": "Rashtrapati Bhavan",
+      "h": "राष्ट्रपति भवन",
+      "c": "found",
+      "d": 1,
+      "st": "Edwin Lutyens",
+      "sh": "एडविन लुटियंस",
+      "fd": "Edwin Lutyens",
+      "fdh": "एडविन लुटियंस",
+      "tag": "Edwin Lutyens",
+      "tagh": "एडविन लुटियंस",
+      "fact": "Rashtrapati Bhavan, built as the Viceroy's House, was designed by Edwin Lutyens.",
+      "facth": "वायसराय भवन के रूप में बना राष्ट्रपति भवन एडविन लुटियंस ने डिज़ाइन किया।"
+    },
+    {
+      "n": "Old Parliament House (Samvidhan Sadan)",
+      "h": "पुराना संसद भवन (संविधान सदन)",
+      "c": "found",
+      "d": 1,
+      "st": "Edwin Lutyens and Herbert Baker",
+      "sh": "एडविन लुटियंस और हर्बर्ट बेकर",
+      "fd": "Edwin Lutyens and Herbert Baker",
+      "fdh": "एडविन लुटियंस और हर्बर्ट बेकर",
+      "tag": "Edwin Lutyens and Herbert Baker",
+      "tagh": "एडविन लुटियंस और हर्बर्ट बेकर",
+      "fact": "The circular old Parliament House, opened in 1927, was designed by Lutyens and Baker and is now called Samvidhan Sadan.",
+      "facth": "1927 में खुला गोलाकार पुराना संसद भवन लुटियंस और बेकर ने डिज़ाइन किया और अब इसे संविधान सदन कहते हैं।"
+    },
+    {
+      "n": "New Parliament Building",
+      "h": "नया संसद भवन",
+      "c": "found",
+      "d": 1,
+      "st": "Bimal Patel",
+      "sh": "बिमल पटेल",
+      "fd": "Bimal Patel",
+      "fdh": "बिमल पटेल",
+      "tag": "Bimal Patel",
+      "tagh": "बिमल पटेल",
+      "fact": "The triangular new Parliament building, designed by Bimal Patel, was inaugurated on 28 May 2023.",
+      "facth": "बिमल पटेल द्वारा डिज़ाइन किया गया त्रिकोणीय नया संसद भवन 28 मई 2023 को उद्घाटित हुआ।"
+    },
+    {
+      "n": "India Gate",
+      "h": "इंडिया गेट",
+      "c": "found",
+      "d": 1,
+      "st": "Edwin Lutyens",
+      "sh": "एडविन लुटियंस",
+      "fd": "Edwin Lutyens",
+      "fdh": "एडविन लुटियंस",
+      "tag": "Edwin Lutyens",
+      "tagh": "एडविन लुटियंस",
+      "fact": "India Gate, designed by Lutyens, is a memorial to Indian soldiers who died in the First World War; it stands on Kartavya Path (formerly Rajpath).",
+      "facth": "लुटियंस द्वारा डिज़ाइन इंडिया गेट प्रथम विश्व युद्ध में शहीद भारतीय सैनिकों का स्मारक है; यह कर्तव्य पथ (पहले राजपथ) पर है।"
+    },
+    {
+      "n": "Balwant Rai Mehta Committee (1957)",
+      "h": "बलवंत राय मेहता समिति (1957)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Three-tier Panchayati Raj",
+      "sh": "त्रिस्तरीय पंचायती राज",
+      "on": "Three-tier Panchayati Raj",
+      "onh": "त्रिस्तरीय पंचायती राज",
+      "tag": "Three-tier Panchayati Raj",
+      "tagh": "त्रिस्तरीय पंचायती राज",
+      "fact": "It recommended three-tier Panchayati Raj; Rajasthan (Nagaur, 1959) was the first to adopt it.",
+      "facth": "इसने त्रिस्तरीय पंचायती राज की सिफ़ारिश की; राजस्थान (नागौर, 1959) इसे अपनाने वाला पहला था।"
+    },
+    {
+      "n": "Ashok Mehta Committee (1977)",
+      "h": "अशोक मेहता समिति (1977)",
+      "c": "cmte",
+      "d": 2,
+      "st": "Two-tier Panchayati Raj",
+      "sh": "द्विस्तरीय पंचायती राज",
+      "on": "Two-tier Panchayati Raj",
+      "onh": "द्विस्तरीय पंचायती राज",
+      "tag": "Two-tier Panchayati Raj",
+      "tagh": "द्विस्तरीय पंचायती राज",
+      "fact": "It recommended two-tier panchayats with the district as the first level of decentralisation.",
+      "facth": "इसने ज़िले को विकेंद्रीकरण का पहला स्तर मानकर द्विस्तरीय पंचायतों की सिफ़ारिश की।"
+    },
+    {
+      "n": "L. M. Singhvi Committee (1986)",
+      "h": "एल. एम. सिंघवी समिति (1986)",
+      "c": "cmte",
+      "d": 2,
+      "st": "Constitutional status for panchayats",
+      "sh": "पंचायतों को संवैधानिक दर्जा",
+      "on": "Constitutional status for panchayats",
+      "onh": "पंचायतों को संवैधानिक दर्जा",
+      "tag": "Constitutional status for panchayats",
+      "tagh": "पंचायतों को संवैधानिक दर्जा",
+      "fact": "It recommended constitutional recognition of panchayats, achieved by the 73rd Amendment (1992).",
+      "facth": "इसने पंचायतों को संवैधानिक मान्यता की सिफ़ारिश की, जो 73वें संशोधन (1992) से मिली।"
+    },
+    {
+      "n": "Sarkaria Commission (1983)",
+      "h": "सरकारिया आयोग (1983)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Centre–state relations",
+      "sh": "केंद्र–राज्य संबंध",
+      "on": "Centre–state relations",
+      "onh": "केंद्र–राज्य संबंध",
+      "tag": "Centre–state relations",
+      "tagh": "केंद्र–राज्य संबंध",
+      "fact": "The Sarkaria Commission reviewed Centre–state relations; the Punchhi Commission (2007) did so again.",
+      "facth": "सरकारिया आयोग ने केंद्र–राज्य संबंधों की समीक्षा की; पुंछी आयोग (2007) ने फिर से की।"
+    },
+    {
+      "n": "Mandal Commission (1979)",
+      "h": "मंडल आयोग (1979)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Reservation for backward classes",
+      "sh": "पिछड़े वर्गों के लिए आरक्षण",
+      "on": "Reservation for backward classes",
+      "onh": "पिछड़े वर्गों के लिए आरक्षण",
+      "tag": "Reservation for backward classes",
+      "tagh": "पिछड़े वर्गों के लिए आरक्षण",
+      "fact": "Chaired by B. P. Mandal, it recommended 27% reservation for Other Backward Classes, implemented in 1990.",
+      "facth": "बी. पी. मंडल की अध्यक्षता में इसने अन्य पिछड़े वर्गों के लिए 27% आरक्षण की सिफ़ारिश की, जो 1990 में लागू हुआ।"
+    },
+    {
+      "n": "Kothari Commission (1964)",
+      "h": "कोठारी आयोग (1964)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Education",
+      "sh": "शिक्षा",
+      "on": "Education",
+      "onh": "शिक्षा",
+      "tag": "Education",
+      "tagh": "शिक्षा",
+      "fact": "Chaired by D. S. Kothari, it shaped the National Policy on Education of 1968.",
+      "facth": "डी. एस. कोठारी की अध्यक्षता में इसने 1968 की राष्ट्रीय शिक्षा नीति को आकार दिया।"
+    },
+    {
+      "n": "Swaminathan Commission (2004)",
+      "h": "स्वामीनाथन आयोग (2004)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Farmers' welfare",
+      "sh": "किसान कल्याण",
+      "on": "Farmers' welfare",
+      "onh": "किसान कल्याण",
+      "tag": "Farmers' welfare",
+      "tagh": "किसान कल्याण",
+      "fact": "The National Commission on Farmers under M. S. Swaminathan recommended an MSP of at least 1.5 times the cost of production.",
+      "facth": "एम. एस. स्वामीनाथन की अध्यक्षता में राष्ट्रीय किसान आयोग ने उत्पादन लागत के कम से कम 1.5 गुना MSP की सिफ़ारिश की।"
+    },
+    {
+      "n": "Narasimham Committee (1991)",
+      "h": "नरसिम्हम समिति (1991)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Banking sector reforms",
+      "sh": "बैंकिंग क्षेत्र सुधार",
+      "on": "Banking sector reforms",
+      "onh": "बैंकिंग क्षेत्र सुधार",
+      "tag": "Banking sector reforms",
+      "tagh": "बैंकिंग क्षेत्र सुधार",
+      "fact": "The Narasimham Committee (1991, 1998) recommended reforms of the banking sector.",
+      "facth": "नरसिम्हम समिति (1991, 1998) ने बैंकिंग क्षेत्र के सुधारों की सिफ़ारिश की।"
+    },
+    {
+      "n": "Malhotra Committee (1993)",
+      "h": "मल्होत्रा समिति (1993)",
+      "c": "cmte",
+      "d": 2,
+      "st": "Insurance sector reforms",
+      "sh": "बीमा क्षेत्र सुधार",
+      "on": "Insurance sector reforms",
+      "onh": "बीमा क्षेत्र सुधार",
+      "tag": "Insurance sector reforms",
+      "tagh": "बीमा क्षेत्र सुधार",
+      "fact": "The R. N. Malhotra Committee recommended opening insurance to private companies and an insurance regulator.",
+      "facth": "आर. एन. मल्होत्रा समिति ने बीमा को निजी कंपनियों के लिए खोलने और बीमा नियामक की सिफ़ारिश की।"
+    },
+    {
+      "n": "Kelkar Task Force (2004)",
+      "h": "केलकर कार्यबल (2004)",
+      "c": "cmte",
+      "d": 2,
+      "st": "Goods and Services Tax",
+      "sh": "वस्तु एवं सेवा कर",
+      "on": "Goods and Services Tax",
+      "onh": "वस्तु एवं सेवा कर",
+      "tag": "Goods and Services Tax",
+      "tagh": "वस्तु एवं सेवा कर",
+      "fact": "The Vijay Kelkar task force first proposed a comprehensive Goods and Services Tax; GST began on 1 July 2017.",
+      "facth": "विजय केलकर कार्यबल ने पहली बार व्यापक वस्तु एवं सेवा कर का प्रस्ताव रखा; GST 1 जुलाई 2017 को शुरू हुआ।"
+    },
+    {
+      "n": "Sachar Committee (2005)",
+      "h": "सच्चर समिति (2005)",
+      "c": "cmte",
+      "d": 2,
+      "st": "Socio-economic status of Muslims",
+      "sh": "मुसलमानों की सामाजिक-आर्थिक स्थिति",
+      "on": "Socio-economic status of Muslims",
+      "onh": "मुसलमानों की सामाजिक-आर्थिक स्थिति",
+      "tag": "Socio-economic status of Muslims",
+      "tagh": "मुसलमानों की सामाजिक-आर्थिक स्थिति",
+      "fact": "Justice Rajinder Sachar's committee reported on the social, economic and educational status of Muslims.",
+      "facth": "न्यायमूर्ति राजिंदर सच्चर की समिति ने मुसलमानों की सामाजिक, आर्थिक और शैक्षिक स्थिति पर रिपोर्ट दी।"
+    },
+    {
+      "n": "Justice Verma Committee (2012)",
+      "h": "न्यायमूर्ति वर्मा समिति (2012)",
+      "c": "cmte",
+      "d": 2,
+      "st": "Laws on sexual assault",
+      "sh": "यौन उत्पीड़न संबंधी क़ानून",
+      "on": "Laws on sexual assault",
+      "onh": "यौन उत्पीड़न संबंधी क़ानून",
+      "tag": "Laws on sexual assault",
+      "tagh": "यौन उत्पीड़न संबंधी क़ानून",
+      "fact": "After the December 2012 Delhi case, the J. S. Verma Committee recommended stronger laws against sexual assault.",
+      "facth": "दिसंबर 2012 के दिल्ली मामले के बाद जे. एस. वर्मा समिति ने यौन उत्पीड़न के विरुद्ध कड़े क़ानूनों की सिफ़ारिश की।"
+    },
+    {
+      "n": "Swaran Singh Committee (1976)",
+      "h": "स्वर्ण सिंह समिति (1976)",
+      "c": "cmte",
+      "d": 1,
+      "st": "Fundamental Duties",
+      "sh": "मौलिक कर्तव्य",
+      "on": "Fundamental Duties",
+      "onh": "मौलिक कर्तव्य",
+      "tag": "Fundamental Duties",
+      "tagh": "मौलिक कर्तव्य",
+      "fact": "On its advice the 42nd Amendment (1976) added Fundamental Duties (Article 51A).",
+      "facth": "इसकी सलाह पर 42वें संशोधन (1976) ने मौलिक कर्तव्य (अनुच्छेद 51A) जोड़े।"
+    },
+    {
+      "n": "Urjit Patel Committee (2014)",
+      "h": "उर्जित पटेल समिति (2014)",
+      "c": "cmte",
+      "d": 3,
+      "st": "Monetary policy framework",
+      "sh": "मौद्रिक नीति ढाँचा",
+      "on": "Monetary policy framework",
+      "onh": "मौद्रिक नीति ढाँचा",
+      "tag": "Monetary policy framework",
+      "tagh": "मौद्रिक नीति ढाँचा",
+      "fact": "It recommended inflation targeting and a Monetary Policy Committee, set up in 2016.",
+      "facth": "इसने मुद्रास्फीति लक्ष्यीकरण और मौद्रिक नीति समिति की सिफ़ारिश की, जो 2016 में बनी।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "theme",
+      "icon": "🗓️",
+      "t": [
+        "Days by month: a quick list",
+        "माहवार दिवस: त्वरित सूची"
+      ],
+      "cols": [
+        [
+          "Month",
+          "माह"
+        ],
+        [
+          "Days",
+          "दिवस"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "January",
+            "जनवरी"
+          ],
+          [
+            "12 Youth, 15 Army, 23 Parakram, 24 Girl Child, 25 Voters, 26 Republic, 30 Martyrs",
+            "12 युवा, 15 थल सेना, 23 पराक्रम, 24 बालिका, 25 मतदाता, 26 गणतंत्र, 30 शहीद"
+          ]
+        ],
+        [
+          [
+            "February–March",
+            "फ़रवरी–मार्च"
+          ],
+          [
+            "2 Feb Wetlands, 28 Feb Science, 8 Mar Women, 22 Mar Water",
+            "2 फ़र. आर्द्रभूमि, 28 फ़र. विज्ञान, 8 मार्च महिला, 22 मार्च जल"
+          ]
+        ],
+        [
+          [
+            "April–June",
+            "अप्रैल–जून"
+          ],
+          [
+            "7 Apr Health, 14 Apr Ambedkar, 22 Apr Earth, 24 Apr Panchayati Raj, 11 May Technology, 5 Jun Environment, 21 Jun Yoga, 29 Jun Statistics",
+            "7 अप्रैल स्वास्थ्य, 14 अप्रैल आंबेडकर, 22 अप्रैल पृथ्वी, 24 अप्रैल पंचायती राज, 11 मई प्रौद्योगिकी, 5 जून पर्यावरण, 21 जून योग, 29 जून सांख्यिकी"
+          ]
+        ],
+        [
+          [
+            "July–September",
+            "जुलाई–सितंबर"
+          ],
+          [
+            "1 Jul Doctors, 11 Jul Population, 26 Jul Kargil, 7 Aug Handloom, 23 Aug Space, 29 Aug Sports, 5 Sep Teachers, 14 Sep Hindi, 15 Sep Engineers",
+            "1 जुलाई चिकित्सक, 11 जुलाई जनसंख्या, 26 जुलाई कारगिल, 7 अगस्त हथकरघा, 23 अगस्त अंतरिक्ष, 29 अगस्त खेल, 5 सितंबर शिक्षक, 14 सितंबर हिंदी, 15 सितंबर अभियंता"
+          ]
+        ],
+        [
+          [
+            "October–December",
+            "अक्टूबर–दिसंबर"
+          ],
+          [
+            "2 Oct Non-Violence, 8 Oct Air Force, 16 Oct Food, 31 Oct Unity, 14 Nov Children, 15 Nov Janjatiya Gaurav, 26 Nov Constitution, 4 Dec Navy, 10 Dec Human Rights, 16 Dec Vijay, 22 Dec Mathematics, 25 Dec Good Governance",
+            "2 अक्टूबर अहिंसा, 8 अक्टूबर वायु सेना, 16 अक्टूबर खाद्य, 31 अक्टूबर एकता, 14 नवंबर बाल, 15 नवंबर जनजातीय गौरव, 26 नवंबर संविधान, 4 दिसंबर नौसेना, 10 दिसंबर मानवाधिकार, 16 दिसंबर विजय, 22 दिसंबर गणित, 25 दिसंबर सुशासन"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "jayanti",
+      "icon": "🎂",
+      "t": [
+        "Days that are birthdays",
+        "जन्मदिन पर आधारित दिवस"
+      ],
+      "cols": [
+        [
+          "Day",
+          "दिवस"
+        ],
+        [
+          "Whose birthday",
+          "किसका जन्मदिन"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "National Youth Day",
+            "राष्ट्रीय युवा दिवस"
+          ],
+          [
+            "Swami Vivekananda",
+            "स्वामी विवेकानंद"
+          ]
+        ],
+        [
+          [
+            "Teachers' Day",
+            "शिक्षक दिवस"
+          ],
+          [
+            "S. Radhakrishnan",
+            "एस. राधाकृष्णन"
+          ]
+        ],
+        [
+          [
+            "Engineers' Day",
+            "अभियंता दिवस"
+          ],
+          [
+            "M. Visvesvaraya",
+            "एम. विश्वेश्वरैया"
+          ]
+        ],
+        [
+          [
+            "National Sports Day",
+            "राष्ट्रीय खेल दिवस"
+          ],
+          [
+            "Major Dhyan Chand",
+            "मेजर ध्यानचंद"
+          ]
+        ],
+        [
+          [
+            "National Statistics Day",
+            "राष्ट्रीय सांख्यिकी दिवस"
+          ],
+          [
+            "P. C. Mahalanobis",
+            "पी. सी. महालनोबिस"
+          ]
+        ],
+        [
+          [
+            "National Mathematics Day",
+            "राष्ट्रीय गणित दिवस"
+          ],
+          [
+            "Srinivasa Ramanujan",
+            "श्रीनिवास रामानुजन"
+          ]
+        ],
+        [
+          [
+            "National Unity Day",
+            "राष्ट्रीय एकता दिवस"
+          ],
+          [
+            "Sardar Patel",
+            "सरदार पटेल"
+          ]
+        ],
+        [
+          [
+            "Children's Day",
+            "बाल दिवस"
+          ],
+          [
+            "Jawaharlal Nehru",
+            "जवाहरलाल नेहरू"
+          ]
+        ],
+        [
+          [
+            "National Milk Day",
+            "राष्ट्रीय दुग्ध दिवस"
+          ],
+          [
+            "Verghese Kurien",
+            "वर्गीज़ कुरियन"
+          ]
+        ],
+        [
+          [
+            "Good Governance Day",
+            "सुशासन दिवस"
+          ],
+          [
+            "Atal Bihari Vajpayee",
+            "अटल बिहारी वाजपेयी"
+          ]
+        ],
+        [
+          [
+            "National Doctors' Day",
+            "राष्ट्रीय चिकित्सक दिवस"
+          ],
+          [
+            "B. C. Roy",
+            "बी. सी. राय"
+          ]
+        ],
+        [
+          [
+            "Janjatiya Gaurav Divas",
+            "जनजातीय गौरव दिवस"
+          ],
+          [
+            "Birsa Munda",
+            "बिरसा मुंडा"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "day",
+      "q": [
+        "National Voters' Day (25 January) marks the founding of",
+        "राष्ट्रीय मतदाता दिवस (25 जनवरी) किसकी स्थापना की याद में है?"
+      ],
+      "o": [
+        [
+          "Election Commission of India",
+          "भारत निर्वाचन आयोग"
+        ],
+        [
+          "Lok Sabha",
+          "लोकसभा"
+        ],
+        [
+          "Supreme Court",
+          "सर्वोच्च न्यायालय"
+        ],
+        [
+          "Constituent Assembly",
+          "संविधान सभा"
+        ]
+      ],
+      "e": [
+        "The Election Commission was set up on 25 January 1950.",
+        "निर्वाचन आयोग 25 जनवरी 1950 को बना।"
+      ]
+    },
+    {
+      "t": "day",
+      "q": [
+        "National Technology Day (11 May) marks",
+        "राष्ट्रीय प्रौद्योगिकी दिवस (11 मई) किसकी याद में है?"
+      ],
+      "o": [
+        [
+          "Pokhran-II nuclear tests (1998)",
+          "पोखरण-II परमाणु परीक्षण (1998)"
+        ],
+        [
+          "Launch of Aryabhata",
+          "आर्यभट का प्रक्षेपण"
+        ],
+        [
+          "Chandrayaan-3 landing",
+          "चंद्रयान-3 का उतरना"
+        ],
+        [
+          "First computer in India",
+          "भारत का पहला कंप्यूटर"
+        ]
+      ],
+      "e": [
+        "National Space Day (23 August) marks Chandrayaan-3.",
+        "राष्ट्रीय अंतरिक्ष दिवस (23 अगस्त) चंद्रयान-3 का है।"
+      ]
+    },
+    {
+      "t": "day",
+      "q": [
+        "Constitution Day is observed on",
+        "संविधान दिवस कब मनाया जाता है?"
+      ],
+      "o": [
+        [
+          "26 November",
+          "26 नवंबर"
+        ],
+        [
+          "26 January",
+          "26 जनवरी"
+        ],
+        [
+          "15 August",
+          "15 अगस्त"
+        ],
+        [
+          "9 December",
+          "9 दिसंबर"
+        ]
+      ],
+      "e": [
+        "The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.",
+        "संविधान 26 नवंबर 1949 को अपनाया गया और 26 जनवरी 1950 को लागू हुआ।"
+      ]
+    },
+    {
+      "t": "day",
+      "q": [
+        "Engineers' Day (15 September) is the birthday of",
+        "अभियंता दिवस (15 सितंबर) किसका जन्मदिन है?"
+      ],
+      "o": [
+        [
+          "M. Visvesvaraya",
+          "एम. विश्वेश्वरैया"
+        ],
+        [
+          "A. P. J. Abdul Kalam",
+          "ए. पी. जे. अब्दुल कलाम"
+        ],
+        [
+          "Homi Bhabha",
+          "होमी भाभा"
+        ],
+        [
+          "C. V. Raman",
+          "सी. वी. रमन"
+        ]
+      ],
+      "e": [
+        "Visvesvaraya designed the Krishna Raja Sagara dam.",
+        "विश्वेश्वरैया ने कृष्णराज सागर बाँध डिज़ाइन किया।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Who was the first woman Chief Minister in India?",
+        "भारत की पहली महिला मुख्यमंत्री कौन थीं?"
+      ],
+      "o": [
+        [
+          "Sucheta Kripalani",
+          "सुचेता कृपलानी"
+        ],
+        [
+          "Sarojini Naidu",
+          "सरोजिनी नायडू"
+        ],
+        [
+          "Nandini Satpathy",
+          "नंदिनी सत्पथी"
+        ],
+        [
+          "J. Jayalalithaa",
+          "जे. जयललिता"
+        ]
+      ],
+      "e": [
+        "She became Chief Minister of Uttar Pradesh in 1963.",
+        "वे 1963 में उत्तर प्रदेश की मुख्यमंत्री बनीं।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Who was the only Indian Governor-General of India?",
+        "भारत के एकमात्र भारतीय गवर्नर-जनरल कौन थे?"
+      ],
+      "o": [
+        [
+          "C. Rajagopalachari",
+          "सी. राजगोपालाचारी"
+        ],
+        [
+          "Rajendra Prasad",
+          "राजेंद्र प्रसाद"
+        ],
+        [
+          "Vallabhbhai Patel",
+          "वल्लभभाई पटेल"
+        ],
+        [
+          "S. Radhakrishnan",
+          "एस. राधाकृष्णन"
+        ]
+      ],
+      "e": [
+        "He served from 1948 to 1950.",
+        "उन्होंने 1948 से 1950 तक सेवा की।"
+      ]
+    },
+    {
+      "t": "first",
+      "q": [
+        "Who conducted the first general elections of India as Chief Election Commissioner?",
+        "मुख्य निर्वाचन आयुक्त के रूप में भारत के पहले आम चुनाव किसने कराए?"
+      ],
+      "o": [
+        [
+          "Sukumar Sen",
+          "सुकुमार सेन"
+        ],
+        [
+          "T. N. Seshan",
+          "टी. एन. शेषन"
+        ],
+        [
+          "K. V. K. Sundaram",
+          "के. वी. के. सुंदरम"
+        ],
+        [
+          "S. P. Sen Varma",
+          "एस. पी. सेन वर्मा"
+        ]
+      ],
+      "e": [
+        "The elections were held in 1951–52.",
+        "चुनाव 1951–52 में हुए।"
+      ]
+    },
+    {
+      "t": "nick",
+      "q": [
+        "Who is known as the 'Grand Old Man of India'?",
+        "'भारत के वयोवृद्ध पुरुष' किसे कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Dadabhai Naoroji",
+          "दादाभाई नौरोजी"
+        ],
+        [
+          "Gopal Krishna Gokhale",
+          "गोपाल कृष्ण गोखले"
+        ],
+        [
+          "Bal Gangadhar Tilak",
+          "बाल गंगाधर तिलक"
+        ],
+        [
+          "Surendranath Banerjee",
+          "सुरेंद्रनाथ बनर्जी"
+        ]
+      ],
+      "e": [
+        "He gave the drain of wealth theory.",
+        "उन्होंने धन निकासी का सिद्धांत दिया।"
+      ]
+    },
+    {
+      "t": "nick",
+      "q": [
+        "Who is called 'Frontier Gandhi'?",
+        "'सीमांत गांधी' किसे कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Khan Abdul Ghaffar Khan",
+          "ख़ान अब्दुल ग़फ़्फ़ार ख़ान"
+        ],
+        [
+          "Maulana Azad",
+          "मौलाना आज़ाद"
+        ],
+        [
+          "Sheikh Abdullah",
+          "शेख़ अब्दुल्ला"
+        ],
+        [
+          "Hakim Ajmal Khan",
+          "हकीम अजमल ख़ान"
+        ]
+      ],
+      "e": [
+        "He led the Khudai Khidmatgar (Red Shirts).",
+        "उन्होंने ख़ुदाई ख़िदमतगार (लाल कुर्ती) का नेतृत्व किया।"
+      ]
+    },
+    {
+      "t": "nick",
+      "q": [
+        "Who gave Gandhi the title Mahatma?",
+        "गांधी को महात्मा की उपाधि किसने दी?"
+      ],
+      "o": [
+        [
+          "Rabindranath Tagore",
+          "रवींद्रनाथ टैगोर"
+        ],
+        [
+          "Subhas Chandra Bose",
+          "सुभाष चंद्र बोस"
+        ],
+        [
+          "Jawaharlal Nehru",
+          "जवाहरलाल नेहरू"
+        ],
+        [
+          "Gopal Krishna Gokhale",
+          "गोपाल कृष्ण गोखले"
+        ]
+      ],
+      "e": [
+        "Subhas Bose first called him Father of the Nation (1944).",
+        "सुभाष बोस ने पहली बार उन्हें राष्ट्रपिता (1944) कहा।"
+      ]
+    },
+    {
+      "t": "hq",
+      "q": [
+        "SIDBI is headquartered in",
+        "सिडबी का मुख्यालय कहाँ है?"
+      ],
+      "o": [
+        [
+          "Lucknow",
+          "लखनऊ"
+        ],
+        [
+          "Mumbai",
+          "मुंबई"
+        ],
+        [
+          "New Delhi",
+          "नई दिल्ली"
+        ],
+        [
+          "Kolkata",
+          "कोलकाता"
+        ]
+      ],
+      "e": [
+        "RBI, SEBI and NABARD are in Mumbai.",
+        "RBI, सेबी और नाबार्ड मुंबई में हैं।"
+      ]
+    },
+    {
+      "t": "hq",
+      "q": [
+        "The Rubber Board is located at",
+        "रबर बोर्ड कहाँ स्थित है?"
+      ],
+      "o": [
+        [
+          "Kottayam",
+          "कोट्टायम"
+        ],
+        [
+          "Kochi",
+          "कोच्चि"
+        ],
+        [
+          "Bengaluru",
+          "बेंगलुरु"
+        ],
+        [
+          "Kolkata",
+          "कोलकाता"
+        ]
+      ],
+      "e": [
+        "Spices and Coir Boards are at Kochi; Coffee Board at Bengaluru; Tea Board at Kolkata.",
+        "मसाला और नारियल जटा बोर्ड कोच्चि में; कॉफ़ी बोर्ड बेंगलुरु में; चाय बोर्ड कोलकाता में।"
+      ]
+    },
+    {
+      "t": "hq",
+      "q": [
+        "Which is the oldest scientific department of India?",
+        "भारत का सबसे पुराना वैज्ञानिक विभाग कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Survey of India (1767)",
+          "भारतीय सर्वेक्षण विभाग (1767)"
+        ],
+        [
+          "Geological Survey of India (1851)",
+          "भारतीय भूवैज्ञानिक सर्वेक्षण (1851)"
+        ],
+        [
+          "Botanical Survey of India (1890)",
+          "भारतीय वनस्पति सर्वेक्षण (1890)"
+        ],
+        [
+          "India Meteorological Department (1875)",
+          "भारत मौसम विज्ञान विभाग (1875)"
+        ]
+      ],
+      "e": [
+        "It is headquartered in Dehradun.",
+        "इसका मुख्यालय देहरादून में है।"
+      ]
+    },
+    {
+      "t": "found",
+      "q": [
+        "Who founded Banaras Hindu University?",
+        "बनारस हिंदू विश्वविद्यालय की स्थापना किसने की?"
+      ],
+      "o": [
+        [
+          "Madan Mohan Malaviya",
+          "मदन मोहन मालवीय"
+        ],
+        [
+          "Annie Besant",
+          "एनी बेसेंट"
+        ],
+        [
+          "Swami Dayanand",
+          "स्वामी दयानंद"
+        ],
+        [
+          "Lala Lajpat Rai",
+          "लाला लाजपत राय"
+        ]
+      ],
+      "e": [
+        "It was founded in 1916.",
+        "इसकी स्थापना 1916 में हुई।"
+      ]
+    },
+    {
+      "t": "found",
+      "q": [
+        "Nalanda university was founded by",
+        "नालंदा विश्वविद्यालय की स्थापना किसने की?"
+      ],
+      "o": [
+        [
+          "Kumaragupta I",
+          "कुमारगुप्त प्रथम"
+        ],
+        [
+          "Harshavardhana",
+          "हर्षवर्धन"
+        ],
+        [
+          "Dharmapala",
+          "धर्मपाल"
+        ],
+        [
+          "Ashoka",
+          "अशोक"
+        ]
+      ],
+      "e": [
+        "Dharmapala of the Palas founded Vikramashila.",
+        "पाल राजा धर्मपाल ने विक्रमशिला स्थापित की।"
+      ]
+    },
+    {
+      "t": "found",
+      "q": [
+        "Who designed the new Parliament building inaugurated in 2023?",
+        "2023 में उद्घाटित नया संसद भवन किसने डिज़ाइन किया?"
+      ],
+      "o": [
+        [
+          "Bimal Patel",
+          "बिमल पटेल"
+        ],
+        [
+          "Edwin Lutyens",
+          "एडविन लुटियंस"
+        ],
+        [
+          "Charles Correa",
+          "चार्ल्स कोरिया"
+        ],
+        [
+          "B. V. Doshi",
+          "बी. वी. दोशी"
+        ]
+      ],
+      "e": [
+        "It was inaugurated on 28 May 2023.",
+        "इसका उद्घाटन 28 मई 2023 को हुआ।"
+      ]
+    },
+    {
+      "t": "cmte",
+      "q": [
+        "Which committee recommended three-tier Panchayati Raj?",
+        "किस समिति ने त्रिस्तरीय पंचायती राज की सिफ़ारिश की?"
+      ],
+      "o": [
+        [
+          "Balwant Rai Mehta Committee",
+          "बलवंत राय मेहता समिति"
+        ],
+        [
+          "Ashok Mehta Committee",
+          "अशोक मेहता समिति"
+        ],
+        [
+          "G. V. K. Rao Committee",
+          "जी. वी. के. राव समिति"
+        ],
+        [
+          "L. M. Singhvi Committee",
+          "एल. एम. सिंघवी समिति"
+        ]
+      ],
+      "e": [
+        "Ashok Mehta recommended two tiers.",
+        "अशोक मेहता ने दो स्तरों की सिफ़ारिश की।"
+      ]
+    },
+    {
+      "t": "cmte",
+      "q": [
+        "Fundamental Duties were added on the recommendation of",
+        "मौलिक कर्तव्य किसकी सिफ़ारिश पर जोड़े गए?"
+      ],
+      "o": [
+        [
+          "Swaran Singh Committee",
+          "स्वर्ण सिंह समिति"
+        ],
+        [
+          "Sarkaria Commission",
+          "सरकारिया आयोग"
+        ],
+        [
+          "Verma Committee",
+          "वर्मा समिति"
+        ],
+        [
+          "Kothari Commission",
+          "कोठारी आयोग"
+        ]
+      ],
+      "e": [
+        "The 42nd Amendment (1976) added Article 51A.",
+        "42वें संशोधन (1976) ने अनुच्छेद 51A जोड़ा।"
+      ]
+    },
+    {
+      "t": "cmte",
+      "q": [
+        "The Sarkaria Commission dealt with",
+        "सरकारिया आयोग का विषय क्या था?"
+      ],
+      "o": [
+        [
+          "Centre–state relations",
+          "केंद्र–राज्य संबंध"
+        ],
+        [
+          "Electoral reforms",
+          "चुनाव सुधार"
+        ],
+        [
+          "Banking reforms",
+          "बैंकिंग सुधार"
+        ],
+        [
+          "Police reforms",
+          "पुलिस सुधार"
+        ]
+      ],
+      "e": [
+        "It was set up in 1983 under Justice R. S. Sarkaria.",
+        "इसे 1983 में न्यायमूर्ति आर. एस. सरकारिया के नेतृत्व में बनाया गया।"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1175 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);color:var(--color-text-primary);background:transparent}
+.guide-wrap{padding:1rem 0;max-width:100%}
+.hero{background:linear-gradient(135deg,#26215C 0%,#534AB7 50%,#0C447C 100%);border-radius:var(--border-radius-lg);padding:2rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.05)}
+.hero::after{content:'';position:absolute;bottom:-30px;left:20px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.hero h1{font-size:22px;font-weight:500;color:#fff;margin-bottom:0.4rem}
+.hero p{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.5}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem}
+.badge{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:500}
+.badge-gold{background:#FAC775;color:#412402}
+.badge-blue{background:#B5D4F4;color:#042C53}
+.badge-teal{background:#9FE1CB;color:#04342C}
+
+.nav-scroll{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:1.5rem;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav-btn{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-secondary);cursor:pointer;white-space:nowrap;transition:all 0.2s}
+.nav-btn.active{background:#534AB7;color:#fff;border-color:#534AB7}
+.nav-btn:hover:not(.active){background:var(--color-background-secondary);color:var(--color-text-primary)}
+
+.section{display:none}
+.section.active{display:block}
+
+.timeline-bar{display:flex;align-items:center;gap:0;margin-bottom:1.5rem;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.timeline-bar::-webkit-scrollbar{display:none}
+.t-item{text-align:center;padding:10px 12px;font-size:10px;font-weight:500;color:#fff;white-space:nowrap;min-width:80px;position:relative}
+.t-item:not(:last-child)::after{content:'›';position:absolute;right:-4px;top:50%;transform:translateY(-50%);font-size:16px;color:rgba(255,255,255,0.5);z-index:1}
+.t-p{background:#888780;border-radius:8px 0 0 8px}
+.t-m{background:#639922}
+.t-n{background:#1D9E75}
+.t-c{background:#BA7517}
+.t-i{background:#178ADD}
+.t-v{background:#534AB7}
+.t-mj{background:#D85A30}
+.t-mr{background:#A32D2D}
+.t-g{background:#0F6E56}
+.t-pg{background:#993556}
+
+.period-header{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem}
+.period-icon{width:44px;height:44px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.period-title{font-size:20px;font-weight:500}
+.period-subtitle{font-size:13px;color:var(--color-text-secondary)}
+
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:1rem}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1rem}
+
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem}
+.card h3{font-size:14px;font-weight:500;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
+.card ul{list-style:none;padding:0}
+.card ul li{font-size:13px;color:var(--color-text-secondary);padding:3px 0;border-bottom:0.5px solid var(--color-border-tertiary);display:flex;align-items:flex-start;gap:6px}
+.card ul li:last-child{border-bottom:none}
+.card ul li::before{content:'▸';color:#534AB7;font-size:10px;margin-top:2px;flex-shrink:0}
+
+.highlight-box{border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:1rem}
+.hb-purple{background:#EEEDFE;border-left:3px solid #534AB7}
+.hb-amber{background:#FAEEDA;border-left:3px solid #BA7517}
+.hb-teal{background:#E1F5EE;border-left:3px solid #1D9E75}
+.hb-red{background:#FCEBEB;border-left:3px solid #A32D2D}
+.hb-blue{background:#E6F1FB;border-left:3px solid #185FA5}
+.hb-green{background:#EAF3DE;border-left:3px solid #3B6D11}
+.hb-coral{background:#FAECE7;border-left:3px solid #993C1D}
+.highlight-box h3{font-size:13px;font-weight:500;margin-bottom:0.5rem;color:#26215C}
+.highlight-box p,.highlight-box li{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.highlight-box ul{list-style:none;padding:0}
+.highlight-box ul li::before{content:'✦ '}
+.hb-amber h3{color:#412402}
+.hb-teal h3{color:#04342C}
+.hb-red h3{color:#501313}
+.hb-blue h3{color:#042C53}
+.hb-green h3{color:#173404}
+.hb-coral h3{color:#4A1B0C}
+
+.exam-q{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:0.75rem 1rem;margin-bottom:0.5rem}
+.exam-q .q{font-size:13px;font-weight:500;margin-bottom:4px}
+.exam-q .a{font-size:12px;color:#1D9E75;font-weight:500}
+.exam-q .yr{font-size:11px;color:var(--color-text-tertiary);float:right}
+
+.king-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:0.9rem;display:flex;flex-direction:column;gap:4px}
+.king-card .name{font-size:13px;font-weight:500}
+.king-card .dates{font-size:11px;color:var(--color-text-tertiary)}
+.king-card .feat{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.king-indicator{width:4px;height:40px;border-radius:2px;flex-shrink:0}
+
+.mnemonic{background:#EEEDFE;border-radius:var(--border-radius-md);padding:0.75rem 1rem;margin:0.5rem 0;font-size:13px}
+.mnemonic .label{font-size:11px;font-weight:500;color:#534AB7;margin-bottom:4px}
+.mnemonic .content{color:#26215C;font-weight:500}
+
+.tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:500;margin:2px}
+.tag-hot{background:#FCEBEB;color:#A32D2D}
+.tag-med{background:#FAEEDA;color:#633806}
+.tag-low{background:#EAF3DE;color:#27500A}
+
+.site-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-bottom:1rem}
+.site-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:0.75rem 1rem}
+.site-card .site-name{font-size:13px;font-weight:500;margin-bottom:2px}
+.site-card .site-loc{font-size:11px;color:var(--color-text-tertiary);margin-bottom:4px}
+.site-card .site-fact{font-size:12px;color:var(--color-text-secondary)}
+
+.section-divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:1.25rem 0}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;margin:0.5rem 0 1rem}
+.pill{padding:4px 12px;border-radius:16px;font-size:12px;font-weight:500;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)}
+
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem;margin-bottom:1.5rem}
+.ov-card{border-radius:var(--border-radius-lg);padding:1rem 0.75rem;text-align:center;cursor:pointer;transition:transform 0.15s}
+.ov-card:hover{transform:translateY(-2px)}
+.ov-card .era{font-size:11px;font-weight:500;margin-bottom:4px}
+.ov-card .period{font-size:12px;opacity:0.8}
+.ov-icon{font-size:24px;margin-bottom:6px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+@media(max-width:480px){.two-col{grid-template-columns:1fr}}
+
+.score-bar{margin-bottom:1rem}
+.score-label{display:flex;justify-content:space-between;font-size:12px;color:var(--color-text-secondary);margin-bottom:4px}
+.bar-bg{height:8px;background:var(--color-background-secondary);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px}
+</style>
+
+<div class="guide-wrap">
+<h2 class="sr-only">Ancient Indian History comprehensive study guide for SSC CGL exam preparation</h2>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>🏛️ Ancient Indian History — SSC CGL Master Guide</h1>
+    <p>Photographic memory guide · Mind map format · SSC CGL / CHSL / CPO exam ready · 10-year PYQ coverage</p>
+    <div class="badge-row">
+      <span class="badge badge-gold">⭐ High Priority</span>
+      <span class="badge badge-blue">📝 2500 BCE – 750 CE</span>
+      <span class="badge badge-teal">✅ 10+ Exam Periods</span>
+    </div>
+  </div>
+</div>
+
+<div class="timeline-bar">
+  <div class="t-item t-p">Paleolithic<br><small>500000–10000 BCE</small></div>
+  <div class="t-item t-m">Mesolithic<br><small>10000–6000 BCE</small></div>
+  <div class="t-item t-n">Neolithic<br><small>6000–2500 BCE</small></div>
+  <div class="t-item t-c">Chalcolithic<br><small>3000–1200 BCE</small></div>
+  <div class="t-item t-i">IVC<br><small>2600–1900 BCE</small></div>
+  <div class="t-item t-v">Vedic<br><small>1500–600 BCE</small></div>
+  <div class="t-item t-mj">Mahajanapadas<br><small>600–321 BCE</small></div>
+  <div class="t-item t-mr">Mauryan<br><small>322–185 BCE</small></div>
+  <div class="t-item t-g">Gupta<br><small>320–550 CE</small></div>
+  <div class="t-item t-pg">Post-Gupta<br><small>550–750 CE</small></div>
+</div>
+
+<div class="nav-scroll">
+  <button class="nav-btn active" onclick="showSection('overview')">🗺️ Overview</button>
+  <button class="nav-btn" onclick="showSection('prehistoric')">🪨 Prehistoric</button>
+  <button class="nav-btn" onclick="showSection('ivc')">🏙️ IVC</button>
+  <button class="nav-btn" onclick="showSection('vedic')">📜 Vedic Age</button>
+  <button class="nav-btn" onclick="showSection('mahajanapada')">⚔️ Mahajanapadas</button>
+  <button class="nav-btn" onclick="showSection('religions')">☸️ Buddhism & Jainism</button>
+  <button class="nav-btn" onclick="showSection('mauryan')">👑 Mauryan Empire</button>
+  <button class="nav-btn" onclick="showSection('postmauryan')">🏺 Post-Mauryan</button>
+  <button class="nav-btn" onclick="showSection('gupta')">🌟 Gupta Empire</button>
+  <button class="nav-btn" onclick="showSection('postgupta')">🗡️ Post-Gupta</button>
+  <button class="nav-btn" onclick="showSection('pyq')">🎯 PYQ & Tips</button>
+</div>
+
+<!-- OVERVIEW -->
+<div id="overview" class="section active">
+  <div class="highlight-box hb-purple" style="margin-bottom:1.25rem">
+    <h3>📊 SSC Exam Weightage Analysis (Last 10 Years)</h3>
+    <div class="score-bar" style="margin-top:0.75rem">
+      <div class="score-label"><span>Indus Valley Civilization</span><span style="color:#A32D2D;font-weight:500">🔥 Very High</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:90%;background:#534AB7"></div></div>
+    </div>
+    <div class="score-bar">
+      <div class="score-label"><span>Mauryan Empire (Ashoka)</span><span style="color:#A32D2D;font-weight:500">🔥 Very High</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:88%;background:#534AB7"></div></div>
+    </div>
+    <div class="score-bar">
+      <div class="score-label"><span>Gupta Empire & Golden Age</span><span style="color:#A32D2D;font-weight:500">🔥 High</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:80%;background:#534AB7"></div></div>
+    </div>
+    <div class="score-bar">
+      <div class="score-label"><span>Buddhism & Jainism</span><span style="color:#BA7517;font-weight:500">⚡ High</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:75%;background:#1D9E75"></div></div>
+    </div>
+    <div class="score-bar">
+      <div class="score-label"><span>Vedic Age & Literature</span><span style="color:#BA7517;font-weight:500">⚡ Medium</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%;background:#1D9E75"></div></div>
+    </div>
+    <div class="score-bar">
+      <div class="score-label"><span>Prehistoric Ages</span><span style="color:#3B6D11;font-weight:500">✔ Moderate</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:45%;background:#BA7517"></div></div>
+    </div>
+    <div class="score-bar">
+      <div class="score-label"><span>Post-Mauryan / Post-Gupta</span><span style="color:#3B6D11;font-weight:500">✔ Low-Medium</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:35%;background:#BA7517"></div></div>
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card" style="border-top:3px solid #534AB7">
+      <h3>🪨 Prehistoric India</h3>
+      <ul>
+        <li>Paleolithic — 500000 BCE</li>
+        <li>Mesolithic — 10000 BCE</li>
+        <li>Neolithic — 6000 BCE</li>
+        <li>Chalcolithic — 3000 BCE</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid #178ADD">
+      <h3>🏙️ IVC (2600–1900 BCE)</h3>
+      <ul>
+        <li>Harappa, Mohenjo-daro</li>
+        <li>Dholavira, Kalibangan</li>
+        <li>Urban planning</li>
+        <li>Undeciphered script</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid #1D9E75">
+      <h3>📜 Vedic Age (1500–600 BCE)</h3>
+      <ul>
+        <li>4 Vedas</li>
+        <li>Upanishads & Puranas</li>
+        <li>Janapadas rise</li>
+        <li>Varna system</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid #D85A30">
+      <h3>⚔️ Mahajanapadas (600–321 BCE)</h3>
+      <ul>
+        <li>16 Mahajanapadas</li>
+        <li>Rise of Magadha</li>
+        <li>Nanda dynasty</li>
+        <li>Alexander's invasion</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid #A32D2D">
+      <h3>👑 Mauryan Empire (322–185 BCE)</h3>
+      <ul>
+        <li>Chandragupta Maurya</li>
+        <li>Ashoka the Great</li>
+        <li>Kalinga War 261 BCE</li>
+        <li>Arthashastra (Kautilya)</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid #0F6E56">
+      <h3>🌟 Gupta Empire (320–550 CE)</h3>
+      <ul>
+        <li>Golden Age of India</li>
+        <li>Samudragupta — Napoleon</li>
+        <li>Aryabhatta, Kalidasa</li>
+        <li>Nalanda University</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-amber">
+    <h3>💡 Quick Memory Trick — The 7 Pillars of Ancient India</h3>
+    <p style="margin-top:4px"><strong>P</strong>rehistoric → <strong>I</strong>ndus → <strong>V</strong>edic → <strong>M</strong>ahajanapadas → <strong>M</strong>auryan → <strong>P</strong>ost-Mauryan → <strong>G</strong>upta</p>
+    <p style="margin-top:6px">Remember: <em>"Please Install Very Many More Perfect Games"</em></p>
+  </div>
+</div>
+
+<!-- PREHISTORIC -->
+<div id="prehistoric" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#F1EFE8">🪨</div>
+    <div><div class="period-title">Prehistoric India</div><div class="period-subtitle">500000 BCE – 2500 BCE · Stone Age to Chalcolithic</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="highlight-box hb-teal">
+        <h3>🏔️ Paleolithic Age (Old Stone Age) — 500000–10000 BCE</h3>
+        <ul>
+          <li>Also called: <strong>Quartzite Age</strong> (tools made of quartzite)</li>
+          <li>Three phases: Lower, Middle, Upper Paleolithic</li>
+          <li>People were <strong>hunter-gatherers</strong>, no agriculture</li>
+          <li>Tools: <strong>hand axes, cleavers, choppers</strong></li>
+          <li>Important sites: <strong>Soan/Sohan Valley</strong> (Punjab/Pakistan), <strong>Belan Valley</strong> (Mirzapur, UP), Narmada Valley, Tungabhadra</li>
+          <li>Narmada Man — earliest human fossil found in India</li>
+          <li>Ice Age / Pleistocene period</li>
+        </ul>
+      </div>
+      <div class="highlight-box hb-green">
+        <h3>🌿 Mesolithic Age (Middle Stone Age) — 10000–6000 BCE</h3>
+        <ul>
+          <li>Transitional phase — warmer climate after Ice Age</li>
+          <li>Tools: <strong>Microliths</strong> (tiny blades/tools)</li>
+          <li>Earliest evidence of <strong>domestication of animals</strong></li>
+          <li>Rock paintings: <strong>Bhimbetka</strong> (MP) — UNESCO World Heritage Site</li>
+          <li>Sites: Langhnaj (Gujarat), Bagor (Rajasthan), Adamgarh (MP)</li>
+          <li>Semi-nomadic lifestyle, fishing & hunting</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="highlight-box hb-amber">
+        <h3>🌾 Neolithic Age (New Stone Age) — 6000–2500 BCE</h3>
+        <ul>
+          <li>Beginning of <strong>agriculture</strong> &amp; settled life</li>
+          <li>Tools: <strong>polished stone tools</strong></li>
+          <li>Pottery making begins</li>
+          <li>First evidence of <strong>wheel</strong></li>
+          <li>Key sites: <strong>Mehrgarh</strong> (Baluchistan — earliest Neolithic, 7000 BCE), Burzahom (Kashmir), Chirand (Bihar), Piklihal (Karnataka)</li>
+          <li>Mehrgarh — earliest evidence of farming in South Asia</li>
+          <li>Cattle & sheep domestication</li>
+        </ul>
+      </div>
+      <div class="highlight-box hb-coral">
+        <h3>🥉 Chalcolithic Age (Copper-Stone Age) — 3000–1200 BCE</h3>
+        <ul>
+          <li>Use of both <strong>copper and stone</strong></li>
+          <li>First use of <strong>metal in India</strong></li>
+          <li>Sites: Ahar (Rajasthan), Navdatoli (MP), Inamgaon (Maharashtra), Jorwe culture</li>
+          <li><strong>Kayatha culture</strong> (MP) and <strong>Malwa culture</strong></li>
+          <li>Overlap with IVC period</li>
+          <li>Burial practices begin (dead buried under floors)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:1rem">
+    <h3>📍 Important Sites — Prehistoric India</h3>
+    <div class="site-grid">
+      <div class="site-card">
+        <div class="site-name">Bhimbetka</div>
+        <div class="site-loc">📍 Madhya Pradesh</div>
+        <div class="site-fact">Rock shelters with cave paintings; Mesolithic; UNESCO site</div>
+      </div>
+      <div class="site-card">
+        <div class="site-name">Mehrgarh</div>
+        <div class="site-loc">📍 Baluchistan</div>
+        <div class="site-fact">Earliest Neolithic site in South Asia (~7000 BCE)</div>
+      </div>
+      <div class="site-card">
+        <div class="site-name">Soan Valley</div>
+        <div class="site-loc">📍 Punjab (Pakistan)</div>
+        <div class="site-fact">Earliest Paleolithic tools; hand axes and cleavers</div>
+      </div>
+      <div class="site-card">
+        <div class="site-name">Burzahom</div>
+        <div class="site-loc">📍 Kashmir</div>
+        <div class="site-fact">Neolithic; pit dwellings; dog burial with master</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC Exam Hot Questions — Prehistoric</h3>
+    <ul>
+      <li>Paleolithic tools were made of → <strong>Quartzite</strong></li>
+      <li>Mesolithic tools are called → <strong>Microliths</strong></li>
+      <li>Bhimbetka belongs to → <strong>Mesolithic Age</strong></li>
+      <li>Earliest farming in South Asia → <strong>Mehrgarh</strong></li>
+      <li>Neolithic age characteristic → <strong>Polished stone tools + Agriculture</strong></li>
+      <li>First metal used in India → <strong>Copper</strong> (Chalcolithic)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- IVC -->
+<div id="ivc" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#E6F1FB">🏙️</div>
+    <div><div class="period-title">Indus Valley Civilization (IVC)</div><div class="period-subtitle">2600–1900 BCE · Bronze Age Urban Civilization</div></div>
+  </div>
+
+  <div class="highlight-box hb-blue" style="margin-bottom:1rem">
+    <h3>⭐ Key Facts at a Glance</h3>
+    <ul>
+      <li>Also called <strong>Harappan Civilization</strong> (first site discovered = Harappa)</li>
+      <li>Discovered in 1921 by <strong>Dayaram Sahni</strong> (Harappa) &amp; 1922 by <strong>RD Banerjee</strong> (Mohenjo-daro)</li>
+      <li>Largest Bronze Age civilization in the world</li>
+      <li>Period: <strong>2600–1900 BCE</strong> (Mature phase)</li>
+      <li>Script: <strong>undeciphered boustrophedon</strong> (written right to left, then left to right)</li>
+      <li>Covered: Punjab, Sindh, Rajasthan, Gujarat, Haryana, UP, Maharashtra</li>
+    </ul>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3>🏗️ Town Planning — Most Asked!</h3>
+        <ul>
+          <li>Grid pattern streets — <strong>East-West &amp; North-South</strong></li>
+          <li>Two-storey <strong>burnt brick</strong> houses</li>
+          <li><strong>Great Bath</strong> — Mohenjo-daro (world's first public bath)</li>
+          <li>Elaborate underground <strong>drainage system</strong></li>
+          <li>Granaries (largest: Mohenjo-daro)</li>
+          <li>Separate <strong>Citadel</strong> (upper town) &amp; <strong>lower town</strong></li>
+          <li>No stone buildings (unlike Egypt/Mesopotamia)</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:0.75rem">
+        <h3>🏺 Economy & Trade</h3>
+        <ul>
+          <li>Trade with <strong>Mesopotamia</strong> (Sumer) — called <em>Meluhha</em></li>
+          <li>Weights &amp; measures: binary system (1, 2, 4, 8...)</li>
+          <li>Standard <strong>cuboid weights</strong> made of chert</li>
+          <li>Cotton cultivation — <strong>first in the world</strong></li>
+          <li>No temples found (unique!)</li>
+          <li>Merchants class dominated</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>📍 Major Sites — Must Remember!</h3>
+        <ul>
+          <li><strong>Harappa</strong> — Punjab, Pakistan; first discovered; R-37 cemetery</li>
+          <li><strong>Mohenjo-daro</strong> — Sindh, Pakistan; "Mound of the Dead"; Great Bath</li>
+          <li><strong>Dholavira</strong> — Gujarat, India; unique 3-part city; UNESCO (2021)</li>
+          <li><strong>Kalibangan</strong> — Rajasthan; earliest plowed field &amp; fire altars</li>
+          <li><strong>Lothal</strong> — Gujarat; first dock/port in world; rice cultivation</li>
+          <li><strong>Rakhigarhi</strong> — Haryana; largest IVC site in India</li>
+          <li><strong>Surkotada</strong> — Gujarat; horse bones found</li>
+          <li><strong>Banawali</strong> — Haryana; toy plough found</li>
+          <li><strong>Chanhudaro</strong> — Sindh; inkpot &amp; cartwright found</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+  <div class="grid-2">
+    <div class="highlight-box hb-teal">
+      <h3>🎨 Art & Artefacts</h3>
+      <ul>
+        <li><strong>Dancing Girl</strong> — bronze statue, Mohenjo-daro</li>
+        <li><strong>Priest-King</strong> — steatite sculpture, Mohenjo-daro</li>
+        <li>Pashupati seal — proto-Shiva seated in yogic posture</li>
+        <li>Unicorn seal — most common animal seal</li>
+        <li>Terracotta figurines (Mother Goddess)</li>
+        <li>Beads of carnelian, gold, lapis lazuli</li>
+      </ul>
+    </div>
+    <div class="highlight-box hb-red">
+      <h3>⚠️ Decline of IVC — Theories</h3>
+      <ul>
+        <li>Aryan invasion theory (outdated)</li>
+        <li>Climate change &amp; drought</li>
+        <li>Drying up of <strong>Ghaggar-Hakra</strong> (Saraswati) river</li>
+        <li>Floods (Mohenjo-daro)</li>
+        <li>Environmental degradation</li>
+        <li>Most accepted: <strong>Multiple factors</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC CGL Top PYQs — IVC</h3>
+    <ul>
+      <li>Who discovered Harappa? → <strong>Dayaram Sahni (1921)</strong></li>
+      <li>Great Bath is located at → <strong>Mohenjo-daro</strong></li>
+      <li>First dock in world → <strong>Lothal</strong></li>
+      <li>Earliest plowed field → <strong>Kalibangan</strong></li>
+      <li>IVC script direction → <strong>Right to left (boustrophedon)</strong></li>
+      <li>IVC trade with → <strong>Mesopotamia (Sumer)</strong></li>
+      <li>Dancing Girl found at → <strong>Mohenjo-daro</strong></li>
+      <li>Largest IVC site in India → <strong>Rakhigarhi</strong></li>
+      <li>Cotton cultivation started first → <strong>IVC (India)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- VEDIC -->
+<div id="vedic" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#EEEDFE">📜</div>
+    <div><div class="period-title">Vedic Age</div><div class="period-subtitle">1500–600 BCE · Early Vedic (1500–1000 BCE) &amp; Later Vedic (1000–600 BCE)</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>📚 The Four Vedas — Core!</h3>
+      <ul>
+        <li><strong>Rigveda</strong> — Oldest Veda; hymns to gods; 1028 suktas (hymns); Gayatri Mantra</li>
+        <li><strong>Samaveda</strong> — Songs/melodies; basis of Indian classical music</li>
+        <li><strong>Yajurveda</strong> — Rituals &amp; sacrificial formulas</li>
+        <li><strong>Atharvaveda</strong> — Magic spells, charms, medicine; Brahma priests</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📖 Vedic Literature Structure</h3>
+      <ul>
+        <li><strong>Vedas (Shruti)</strong> — Samhitas (hymns), Brahmanas, Aranyakas, Upanishads</li>
+        <li><strong>Upanishads (108)</strong> — philosophical texts; "end of Vedas" = Vedanta</li>
+        <li><strong>Puranas (18)</strong> — oldest: Matsya Purana</li>
+        <li><strong>Epics</strong> — Ramayana (Valmiki), Mahabharata (Vyasa; largest epic in world)</li>
+        <li><strong>Vedangas (6)</strong> — Shiksha, Kalpa, Vyakarana, Nirukta, Chhanda, Jyotish</li>
+        <li><strong>Dharmashastras</strong> — Manusmriti (laws of Manu)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="highlight-box hb-teal">
+      <h3>🌅 Early Vedic Society (1500–1000 BCE)</h3>
+      <ul>
+        <li>Aryans settled in <strong>Saptasindhu</strong> (land of 7 rivers)</li>
+        <li>Economy: <strong>pastoral</strong> (cattle = wealth)</li>
+        <li>Tribal society; chief = <strong>Rajan</strong></li>
+        <li>Sabha &amp; Samiti — early democratic assemblies</li>
+        <li>Varna based on <strong>occupation</strong> (not birth)</li>
+        <li><strong>Indra</strong> most important god (rain/war)</li>
+        <li>River Saraswati most sacred</li>
+        <li>Women had high status (Gargi, Lopamudra, Maitreyi)</li>
+      </ul>
+    </div>
+    <div class="highlight-box hb-amber">
+      <h3>🌆 Later Vedic Society (1000–600 BCE)</h3>
+      <ul>
+        <li>Eastward expansion to <strong>Ganga plains</strong></li>
+        <li>Agriculture became primary occupation</li>
+        <li>Varna became <strong>birth-based</strong> (rigid caste)</li>
+        <li><strong>Prajapati/Vishnu/Shiva</strong> rose in importance</li>
+        <li>16 Mahajanapadasbegin to emerge</li>
+        <li>Iron tools used for agriculture</li>
+        <li>Women's status declined</li>
+        <li>Capital: <strong>Hastinapur</strong> (Kuru), <strong>Kaushambi</strong> (Vatsa)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:1rem">
+    <h3>🏛️ Vedic Polity — Key Terms</h3>
+    <div class="pill-row">
+      <span class="pill">Rashtra = State</span>
+      <span class="pill">Rajan = Chief/King</span>
+      <span class="pill">Sabha = Upper assembly</span>
+      <span class="pill">Samiti = Lower assembly</span>
+      <span class="pill">Vidatha = Oldest assembly</span>
+      <span class="pill">Gramani = Village head</span>
+      <span class="pill">Purohita = Royal priest</span>
+      <span class="pill">Senani = Army chief</span>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC Hot Questions — Vedic Age</h3>
+    <ul>
+      <li>Oldest Veda → <strong>Rigveda</strong></li>
+      <li>Gayatri Mantra is in → <strong>Rigveda</strong></li>
+      <li>Veda of music → <strong>Samaveda</strong></li>
+      <li>Mahabharata author → <strong>Vyasa</strong></li>
+      <li>Ramayana author → <strong>Valmiki</strong></li>
+      <li>Most important god in Early Vedic = <strong>Indra</strong></li>
+      <li>Upanishads deal with → <strong>Philosophy</strong></li>
+      <li>Sabha &amp; Samiti mentioned in → <strong>Atharvaveda</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- MAHAJANAPADAS -->
+<div id="mahajanapada" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#FAECE7">⚔️</div>
+    <div><div class="period-title">Mahajanapadas & Rise of Magadha</div><div class="period-subtitle">600–321 BCE</div></div>
+  </div>
+
+  <div class="highlight-box hb-coral" style="margin-bottom:1rem">
+    <h3>🗺️ 16 Mahajanapadas (Mnemonic: "KKMAAVCMPK ACMPKS")</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin-top:0.5rem">
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Magadha</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Girivraja/Rajgir→ Pataliputra (Bihar)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Kosala</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Shravasti (UP) — Rama's kingdom</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Vatsa</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Kaushambi (UP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Avanti</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Ujjain/Mahishmati (MP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Kasi</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Varanasi (UP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Anga</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Champa (Bihar/Bengal)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Vajji</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Vaishali — first republic</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Malla</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Kushinara/Pava (UP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Chedi</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Shuktimati (MP/UP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Kuru</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Indraprastha (Delhi)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Panchala</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Ahichhatra/Kampilya (UP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Matsya</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Viratanagara (Rajasthan)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Surasena</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Mathura (UP)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Assaka</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Potana (South of Vindhyas)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Gandhara</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Taxila (Pakistan)</span></div>
+      <div style="background:#FAECE7;border-radius:6px;padding:6px 8px;font-size:12px"><strong>Kamboja</strong><br><span style="color:var(--color-text-secondary);font-size:11px">Rajpur/Hazara (Pakistan)</span></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>🏰 Rise of Magadha — Dynasties</h3>
+      <ul>
+        <li><strong>Haryanka dynasty</strong> (544–413 BCE) — Bimbisara (founder; first to have standing army), Ajatashatru</li>
+        <li><strong>Shishunaga dynasty</strong> (413–345 BCE) — destroyed Avanti</li>
+        <li><strong>Nanda dynasty</strong> (345–321 BCE) — Mahapadma Nanda (first Shudra king); vast empire; Dhana Nanda (last)</li>
+        <li>Advantages: iron resources, fertile land, river routes, strategic location</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🌍 Foreign Invasions (6th–4th c BCE)</h3>
+      <ul>
+        <li><strong>Cyrus II</strong> (Persia) — first invasion ~518 BCE</li>
+        <li><strong>Darius I</strong> — annexed NW India; inscriptions at Persepolis</li>
+        <li><strong>Alexander the Great</strong> (326 BCE) — Battle of Hydaspes (Jhelum); defeated Porus; turned back at Beas (Hyphasis) mutiny</li>
+        <li>Impact: new trade routes, Hellenistic art (Gandhara school)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC Hot Questions — Mahajanapadas</h3>
+    <ul>
+      <li>First republic in India → <strong>Vaishali (Vajji sangha)</strong></li>
+      <li>Alexander defeated → <strong>Porus (Battle of Hydaspes, 326 BCE)</strong></li>
+      <li>Bimbisara belonged to → <strong>Haryanka dynasty</strong></li>
+      <li>First Shudra king of Magadha → <strong>Mahapadma Nanda</strong></li>
+      <li>Alexander turned back at → <strong>River Beas (Hyphasis)</strong></li>
+      <li>Source for 16 Mahajanapadas → <strong>Anguttara Nikaya (Buddhist text)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- RELIGIONS -->
+<div id="religions" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#E1F5EE">☸️</div>
+    <div><div class="period-title">Buddhism & Jainism</div><div class="period-subtitle">6th Century BCE — Most asked in SSC!</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="highlight-box hb-teal">
+        <h3>☸️ Buddhism — Complete Notes</h3>
+        <ul>
+          <li>Founder: <strong>Siddhartha Gautama</strong> (563–483 BCE)</li>
+          <li>Born: <strong>Lumbini</strong> (Nepal) — Kshatriya clan of Shakyas</li>
+          <li>Enlightenment: <strong>Bodh Gaya</strong> (under Peepal/Bodhi tree)</li>
+          <li>First sermon: <strong>Sarnath</strong> (Deer Park) = <em>Dhammachakkapavattana</em></li>
+          <li>Death (Mahaparinirvana): <strong>Kushinagar</strong></li>
+          <li><strong>Four Noble Truths (Arya Satya)</strong>: Life is suffering → Cause is desire → Cessation → Eightfold Path</li>
+          <li><strong>Eightfold Path (Ashtangika Marga)</strong>: Right View, Thought, Speech, Action, Livelihood, Effort, Mindfulness, Concentration</li>
+          <li><strong>Tripitaka</strong>: Vinaya, Sutta, Abhidhamma Pitaka</li>
+          <li>Two sects: <strong>Hinayana</strong> (strict) &amp; <strong>Mahayana</strong> (liberal)</li>
+          <li>Buddhist councils: 1st Rajgriha (483 BCE), 2nd Vaishali (383 BCE), 3rd Pataliputra (250 BCE) — Ashoka, 4th Kashmir (1st c CE) — Kanishka</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="highlight-box hb-amber">
+        <h3>🔱 Jainism — Complete Notes</h3>
+        <ul>
+          <li>24 Tirthankaras (teachers) — <strong>Rishabhadeva</strong> (first), <strong>Mahavira</strong> (last/24th)</li>
+          <li>Mahavira (599–527 BCE) — also called <strong>Vardhamana</strong></li>
+          <li>Born: <strong>Vaishali</strong> (Bihar); Kshatriya (Lichhavi)</li>
+          <li>Enlightenment: <strong>Jrimbhikagrama</strong> (near Rajgir)</li>
+          <li>Death: <strong>Pavapuri</strong> (Bihar)</li>
+          <li><strong>Five Vows (Pancha Mahavrata)</strong>: Ahimsa, Satya, Asteya, Brahmacharya, Aparigraha</li>
+          <li>Three Jewels (Triratna): Right Faith, Right Knowledge, Right Conduct</li>
+          <li>Two sects: <strong>Digambara</strong> (sky-clad) &amp; <strong>Shvetambara</strong> (white-clad)</li>
+          <li>Council: 1st Pataliputra (3rd BCE), 2nd Valabhi (5th CE)</li>
+          <li>Jain texts: <strong>Agamas</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>🔍 Buddhism vs Jainism — Key Differences</h3>
+      <ul>
+        <li>Ahimsa: Both follow, but Jainism is <strong>extreme</strong></li>
+        <li>God: Buddhism — no personal God; Jainism — no creator God</li>
+        <li>Soul: Buddhism — no soul (Anatman); Jainism — <strong>soul exists</strong> (Jiva)</li>
+        <li>Texts: Buddhism = Pali; Jainism = Prakrit/Ardhamagadhi</li>
+        <li>Women: Buddhism accepted in Sangha; Jainism — Digambara no, Shvetambara yes</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏛️ Buddhist Architecture</h3>
+      <ul>
+        <li><strong>Stupa</strong> — relic mound; Sanchi (Ashoka), Bharhut, Amaravati</li>
+        <li><strong>Vihara</strong> — monastery (Nalanda)</li>
+        <li><strong>Chaitya</strong> — prayer hall (Karla caves)</li>
+        <li><strong>Ajanta</strong> — cave paintings (1st c BCE – 6th CE)</li>
+        <li><strong>Ellora</strong> — Buddhist, Hindu, Jain caves</li>
+        <li>Gandhara art — Greek influence (Buddha shown in human form)</li>
+        <li>Mathura art — indigenous (earthy; partially clothed)</li>
+        <li>Amaravati art — finest sculptures</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC Hot Questions — Buddhism & Jainism</h3>
+    <ul>
+      <li>Birthplace of Buddha → <strong>Lumbini</strong> | Mahavira → <strong>Vaishali</strong></li>
+      <li>Buddha's first sermon at → <strong>Sarnath</strong> ("Deer Park")</li>
+      <li>Language of Buddhist texts → <strong>Pali</strong></li>
+      <li>3rd Buddhist Council patron → <strong>Ashoka</strong></li>
+      <li>4th Buddhist Council patron → <strong>Kanishka</strong></li>
+      <li>Founder of Jainism → <strong>Rishabhadeva</strong> | Reformer → <strong>Mahavira</strong></li>
+      <li>Two Jain sects → <strong>Digambara &amp; Shvetambara</strong></li>
+      <li>Pali tripitaka has → <strong>3 pitakas</strong></li>
+      <li>Bodhi tree species → <strong>Ficus religiosa (Peepal)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- MAURYAN -->
+<div id="mauryan" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#FCEBEB">👑</div>
+    <div><div class="period-title">Mauryan Empire</div><div class="period-subtitle">322–185 BCE · India's First Great Empire</div></div>
+  </div>
+
+  <div class="grid-3">
+    <div class="king-card" style="border-left:4px solid #A32D2D">
+      <div class="name">Chandragupta Maurya</div>
+      <div class="dates">322–298 BCE</div>
+      <div class="feat">Founded empire; defeated Nanda dynasty with help of Chanakya/Kautilya; defeated Seleucus Nicator (305 BCE); adopted Jainism; died at Shravanabelagola (fasting)</div>
+    </div>
+    <div class="king-card" style="border-left:4px solid #E24B4A">
+      <div class="name">Bindusara</div>
+      <div class="dates">298–268 BCE</div>
+      <div class="feat">"Amitraghata" (slayer of enemies); expanded to Deccan; maintained Greek diplomatic relations (Megasthenes' successor Deimachus); son = Ashoka</div>
+    </div>
+    <div class="king-card" style="border-left:4px solid #E24B4A">
+      <div class="name">Ashoka the Great</div>
+      <div class="dates">268–232 BCE</div>
+      <div class="feat">Greatest Mauryan; Kalinga War (261 BCE) → converted to Buddhism; Dhamma policy; built stupas; sent missionaries (son Mahendra to Sri Lanka); pillar edicts</div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+  <div class="grid-2">
+    <div class="card">
+      <h3>📋 Mauryan Administration — Key Points</h3>
+      <ul>
+        <li>Capital: <strong>Pataliputra</strong> (Patna)</li>
+        <li>King aided by <strong>Mantri Parishad</strong> (council of ministers)</li>
+        <li>Provinces: 4 major provinces with <strong>royal princes as governors</strong></li>
+        <li>Districts (Ahara/Vishaya) → villages</li>
+        <li>Source: <strong>Arthashastra</strong> (Kautilya) &amp; <strong>Indica</strong> (Megasthenes)</li>
+        <li>Megasthenes: Greek ambassador; described 7 castes in India</li>
+        <li>Spy system: <strong>Gudhapurusha</strong></li>
+        <li>Currency: <strong>Pana</strong> (silver) &amp; <strong>Mashaka</strong></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🗿 Ashoka's Edicts — Must Know!</h3>
+      <ul>
+        <li><strong>14 Major Rock Edicts</strong> — Dhamma principles</li>
+        <li><strong>7 Pillar Edicts</strong> — administration &amp; policy</li>
+        <li>Minor rock edicts + cave inscriptions</li>
+        <li>Script: <strong>Brahmi</strong> (most) &amp; Kharosthi (NW India)</li>
+        <li>Language: <strong>Prakrit</strong> (mostly); Greek &amp; Aramaic (NW)</li>
+        <li>Allahabad Pillar — Samudragupta's feats also inscribed</li>
+        <li>Rock Edict XIII — Kalinga war &amp; repentance</li>
+        <li>Brahmi deciphered by <strong>James Prinsep</strong> (1837)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-amber">
+    <h3>🏛️ Ashoka's Dhamma (Policy of Righteousness)</h3>
+    <ul>
+      <li>Not a religion but a <strong>code of conduct</strong> (ethical conduct)</li>
+      <li>Respect for all religions; tolerance; non-violence</li>
+      <li>Ban on animal sacrifice; welfare works (hospitals, roads, wells)</li>
+      <li>Sent <strong>Dharma Mahamatra</strong> as officers for Dhamma</li>
+      <li>Son <strong>Mahendra</strong> → Sri Lanka; daughter <strong>Sanghamitra</strong> → Sri Lanka with Bodhi tree sapling</li>
+    </ul>
+  </div>
+
+  <div class="grid-2">
+    <div class="highlight-box hb-teal">
+      <h3>🏛️ Mauryan Art & Architecture</h3>
+      <ul>
+        <li><strong>Lion Capital</strong> (Sarnath) — National Emblem of India</li>
+        <li>Ashoka Chakra (24-spoked wheel) — on National Flag</li>
+        <li>Sanchi Stupa — built by Ashoka</li>
+        <li>Barabar caves — earliest rock-cut caves in India</li>
+        <li>Pillars: monolithic, polished sandstone</li>
+        <li>Pataliputra palace — described by Megasthenes as magnificent</li>
+      </ul>
+    </div>
+    <div class="highlight-box hb-red">
+      <h3>📉 Decline of Mauryan Empire</h3>
+      <ul>
+        <li>Weak successors after Ashoka</li>
+        <li>Economic strain (large army &amp; gifts)</li>
+        <li>Brahmin reaction to Ashoka's Buddhism</li>
+        <li>Last ruler: <strong>Brihadratha</strong> (killed by Pushyamitra Shunga, 185 BCE)</li>
+        <li>Provincial governors became independent</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC CGL Top PYQs — Mauryan Empire</h3>
+    <ul>
+      <li>Founder of Mauryan Empire → <strong>Chandragupta Maurya</strong></li>
+      <li>Arthashastra author → <strong>Kautilya/Chanakya/Vishnugupta</strong></li>
+      <li>Kalinga War year → <strong>261 BCE</strong></li>
+      <li>Rock Edict XIII describes → <strong>Kalinga War</strong></li>
+      <li>Brahmi script decoded by → <strong>James Prinsep</strong></li>
+      <li>Ashoka's title → <strong>Devanampiya Piyadassi</strong></li>
+      <li>First Mauryan king to give up conquest → <strong>Ashoka</strong></li>
+      <li>National Emblem source → <strong>Sarnath Lion Capital</strong></li>
+      <li>Megasthenes wrote → <strong>Indica</strong></li>
+      <li>Mauryan currency → <strong>Pana (silver punch-marked coins)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- POST-MAURYAN -->
+<div id="postmauryan" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#EAF3DE">🏺</div>
+    <div><div class="period-title">Post-Mauryan Period</div><div class="period-subtitle">185 BCE – 320 CE · Sungas, Kushans, Satavahanas &amp; Sangam Age</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>🏰 Shunga Dynasty (185–73 BCE)</h3>
+      <ul>
+        <li>Founder: <strong>Pushyamitra Shunga</strong> — Brahmin general who killed Brihadratha</li>
+        <li>Revived Brahminism; performed Ashvamedha (horse sacrifice)</li>
+        <li>Patronized Sanchi stupa (gateway carvings)</li>
+        <li>Fought with Yavanas (Greeks) — Menander's invasion</li>
+        <li>Patanjali wrote Mahabhashya (grammar) under Shungas</li>
+        <li>Last ruler: Devabhuti — killed by Kanva minister Vasudeva</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🌟 Kushana Dynasty (1st–3rd c CE)</h3>
+      <ul>
+        <li>Central Asian tribe; conquered NW India</li>
+        <li>Greatest king: <strong>Kanishka</strong> (78 CE — started Saka era?)</li>
+        <li>Capital: <strong>Purushapura</strong> (Peshawar)</li>
+        <li>Patron of <strong>Buddhism</strong>; 4th Buddhist Council</li>
+        <li>Court: Ashvaghosha (poet, Buddhacharita), Charaka (medicine), Nagarjuna (Buddhist philosopher)</li>
+        <li><strong>Gandhara &amp; Mathura school</strong> of art flourished</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🌾 Satavahana Empire (1st c BCE–3rd c CE)</h3>
+      <ul>
+        <li>Deccan-based; longest ruling dynasty in ancient India</li>
+        <li>Greatest king: <strong>Gautamiputra Satkarni</strong></li>
+        <li>Defeated Shakas (Western Kshatrapas)</li>
+        <li>Capital: <strong>Pratishthan/Paithan</strong> (Maharashtra)</li>
+        <li>Promoted <strong>Prakrit language</strong> (Gathasaptasati by Hala)</li>
+        <li>Issued coins with bilingual inscriptions</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎵 Sangam Age (3rd BCE–3rd CE)</h3>
+      <ul>
+        <li>Tamil kingdoms: <strong>Chera, Chola, Pandya</strong></li>
+        <li>Three Sangams (literary academies) at Madurai</li>
+        <li>Sangam literature: <strong>Tolkappiyam</strong> (earliest Tamil grammar), Purananuru, Silappathikaram</li>
+        <li>Trade with Rome — "Pepper for Roman gold"</li>
+        <li>Ports: <strong>Muzuris (Muchiri)</strong>, Puhar/Kaveripattinam</li>
+        <li>Silappadikaram &amp; Manimekalai — twin epics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-blue">
+    <h3>🌍 Indo-Greeks & Other Foreign Rulers</h3>
+    <ul>
+      <li><strong>Indo-Greeks</strong> — first to issue gold coins in India; Menander (Milinda) — dialogue with Buddhist monk Nagasena in <em>Milindapanha</em></li>
+      <li><strong>Shakas</strong> (Scythians) — Rudradaman I (best Sanskrit inscription at Junagadh); patronized Sanskrit</li>
+      <li><strong>Parthians</strong> — Gondophernes (during whose reign St. Thomas came to India)</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC Hot Questions — Post-Mauryan</h3>
+    <ul>
+      <li>Shunga dynasty founder → <strong>Pushyamitra Shunga</strong></li>
+      <li>Greatest Kushana king → <strong>Kanishka</strong></li>
+      <li>4th Buddhist Council organized by → <strong>Kanishka</strong></li>
+      <li>Gandhara art shows → <strong>Greek influence on Buddha images</strong></li>
+      <li>Satavahana greatest king → <strong>Gautamiputra Satkarni</strong></li>
+      <li>Milindapanha is dialogue between → <strong>Menander &amp; Nagasena</strong></li>
+      <li>Oldest Tamil grammar → <strong>Tolkappiyam</strong></li>
+      <li>Nagarjuna was → <strong>Buddhist philosopher (Madhyamika school)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- GUPTA -->
+<div id="gupta" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#E1F5EE">🌟</div>
+    <div><div class="period-title">Gupta Empire — Golden Age of India</div><div class="period-subtitle">320–550 CE · Greatest cultural flowering</div></div>
+  </div>
+
+  <div class="grid-3">
+    <div class="king-card" style="border-left:4px solid #0F6E56">
+      <div class="name">Chandragupta I</div>
+      <div class="dates">320–335 CE</div>
+      <div class="feat">Founded Gupta Empire; started Gupta Era (319–320 CE); married Licchhavi princess Kumaradevi; title "Maharajadhiraja"</div>
+    </div>
+    <div class="king-card" style="border-left:4px solid #1D9E75">
+      <div class="name">Samudragupta</div>
+      <div class="dates">335–380 CE</div>
+      <div class="feat">"Napoleon of India" (Vincent A. Smith); military genius; Allahabad Pillar Inscription (by Harishena); played veena; Ashvamedha yajna</div>
+    </div>
+    <div class="king-card" style="border-left:4px solid #5DCAA5">
+      <div class="name">Chandragupta II "Vikramaditya"</div>
+      <div class="dates">380–415 CE</div>
+      <div class="feat">Golden Age peak; defeated Shakas; Fa Hien visited (399–414 CE); Navratnas in court including Kalidasa; Iron Pillar at Delhi</div>
+    </div>
+    <div class="king-card" style="border-left:4px solid #9FE1CB">
+      <div class="name">Kumaragupta I</div>
+      <div class="dates">415–455 CE</div>
+      <div class="feat">Founded Nalanda University; maintained empire; faced Pushyamitra attacks</div>
+    </div>
+    <div class="king-card" style="border-left:4px solid #9FE1CB">
+      <div class="name">Skandagupta</div>
+      <div class="dates">455–467 CE</div>
+      <div class="feat">Repelled Huna invasions; last great Gupta king; after him, rapid decline</div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+  <div class="grid-2">
+    <div class="card">
+      <h3>🔬 Science & Mathematics — Gupta</h3>
+      <ul>
+        <li><strong>Aryabhatta</strong> — value of π (3.14); Earth rotates; zero concept; Aryabhatiya</li>
+        <li><strong>Varahamihira</strong> — Brihat Samhita (astronomy, astrology)</li>
+        <li><strong>Brahmagupta</strong> — rules for zero and negative numbers</li>
+        <li><strong>Charaka</strong> — Charaka Samhita (medicine)</li>
+        <li><strong>Sushruta</strong> — Sushruta Samhita (surgery); plastic surgery pioneer</li>
+        <li><strong>Dhanvantari</strong> — court physician; Ayurveda</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📚 Literature — Gupta</h3>
+      <ul>
+        <li><strong>Kalidasa</strong> (greatest poet) — Shakuntala, Meghaduta, Kumarasambhava, Raghuvamsha, Malavikagnimitra, Vikramorvasiya</li>
+        <li><strong>Vishakhadatta</strong> — Mudrarakshasa (play on Chandragupta Maurya)</li>
+        <li><strong>Sudraka</strong> — Mrichchhakatika (Clay Cart)</li>
+        <li><strong>Amarasimha</strong> — Amarakosha (Sanskrit dictionary)</li>
+        <li>Panchatantra (Vishnu Sharma) — fables</li>
+        <li>Fa Hien's account — Chinese pilgrim; traveled 399–414 CE</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎨 Art & Architecture — Gupta</h3>
+      <ul>
+        <li>Temples: Dashavatara Temple (Deogarh), Bhitargaon temple</li>
+        <li><strong>Iron Pillar</strong> (Delhi) — no rust for 1600 years; Chandragupta II</li>
+        <li>Ajanta caves (paintings) — peak under Guptas</li>
+        <li>Mathura &amp; Sarnath school — pure indigenous style</li>
+        <li>Nagara style temples (North India)</li>
+        <li>Gupta coins — excellent craftsmanship</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏛️ Gupta Administration</h3>
+      <ul>
+        <li>More decentralized than Mauryan</li>
+        <li>Feudal tendencies began</li>
+        <li>Revenue: <strong>1/6th of produce</strong></li>
+        <li>Land grants (Agrahara) to Brahmins</li>
+        <li>Chinese traveler <strong>Fa Hien</strong> praised law &amp; order</li>
+        <li>No capital punishment for ordinary crimes</li>
+        <li>Nalanda University (Bihar) — world's first residential university</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-amber">
+    <h3>⭐ The Navratnas of Chandragupta II — Vikramaditya's Court</h3>
+    <div class="pill-row">
+      <span class="pill" style="background:#FAEEDA;color:#412402">Kalidasa (poet)</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Varahamihira (astronomer)</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Dhanvantari (physician)</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Vetalbhatta (magician)</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Amarasimha (lexicographer)</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Vararuchi</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Ksapanaka</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Shanku</span>
+      <span class="pill" style="background:#FAEEDA;color:#412402">Ghatakarpar</span>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC CGL Top PYQs — Gupta Empire</h3>
+    <ul>
+      <li>"Napoleon of India" → <strong>Samudragupta</strong> (by Vincent A. Smith)</li>
+      <li>Gupta Era started in → <strong>319–320 CE</strong></li>
+      <li>Aryabhatta's book → <strong>Aryabhatiya</strong></li>
+      <li>Fa Hien visited during reign of → <strong>Chandragupta II</strong></li>
+      <li>Iron Pillar made by → <strong>Chandragupta II (Vikramaditya)</strong></li>
+      <li>Kalidasa wrote → <strong>Meghaduta, Shakuntala, Kumarasambhava</strong></li>
+      <li>Nalanda University founded by → <strong>Kumaragupta I</strong></li>
+      <li>Huna invasion stopped by → <strong>Skandagupta</strong></li>
+      <li>Allahabad Pillar inscription written by → <strong>Harishena</strong></li>
+      <li>Sushruta Samhita deals with → <strong>Surgery</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- POST-GUPTA -->
+<div id="postgupta" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#FBEAF0">🗡️</div>
+    <div><div class="period-title">Post-Gupta Period</div><div class="period-subtitle">550–750 CE · Harsha, Chalukyas, Pallavas</div></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>👑 Harsha (606–647 CE) — Key Figure</h3>
+      <ul>
+        <li>King of Thanesar; united much of North India</li>
+        <li>Capital: <strong>Kanauj</strong></li>
+        <li>Defeated by <strong>Pulakesi II</strong> (Chalukya) on Narmada</li>
+        <li>Chinese pilgrim <strong>Hiuen Tsang (Xuanzang)</strong> visited his court</li>
+        <li>Harsha wrote: <strong>Nagananda, Ratnavali, Priyadarshika</strong></li>
+        <li>Court poet <strong>Bana</strong> wrote Harshacharita (biography) &amp; Kadambari</li>
+        <li>Patronized both Buddhism &amp; Shaivism</li>
+        <li>Organized Kumbh Mela at Prayag (every 5 years)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏰 Chalukyas of Badami (543–753 CE)</h3>
+      <ul>
+        <li>Founder: <strong>Pulakesi I</strong> (543 CE)</li>
+        <li>Greatest: <strong>Pulakesi II</strong> — defeated Harsha; contemporary of Hiuen Tsang</li>
+        <li>Capital: <strong>Vatapi/Badami</strong> (Karnataka)</li>
+        <li>Hiuen Tsang visited Chalukya court</li>
+        <li>Aihole inscription — by court poet Ravikirti</li>
+        <li>Rock-cut temples at <strong>Badami, Aihole, Pattadakal</strong></li>
+        <li>Pattadakal — UNESCO World Heritage Site</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏛️ Pallava Dynasty (4th–9th c CE)</h3>
+      <ul>
+        <li>South Indian dynasty; capital <strong>Kanchipuram</strong></li>
+        <li>Greatest king: <strong>Mahendravarman I</strong> and <strong>Narasimhavarman I</strong></li>
+        <li>Shore Temple at <strong>Mamallapuram</strong> (Mahabalipuram)</li>
+        <li>Pancha Rathas (5 monolithic temples)</li>
+        <li>Dravidian temple architecture — pioneered</li>
+        <li>Hiuen Tsang visited Kanchipuram</li>
+        <li>Defeated Chalukyas multiple times</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>✈️ Foreign Travelers — Complete List</h3>
+      <ul>
+        <li><strong>Megasthenes</strong> — Greek; Chandragupta Maurya; wrote Indica</li>
+        <li><strong>Fa Hien</strong> — Chinese; Chandragupta II (399–414 CE)</li>
+        <li><strong>Hiuen Tsang</strong> — Chinese; Harsha (629–645 CE); wrote Si-Yu-Ki</li>
+        <li><strong>I-Tsing</strong> — Chinese; 7th c CE; Nalanda University</li>
+        <li><strong>Ptolemy</strong> — Greek geographer; 2nd c CE</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box hb-purple">
+    <h3>🎯 SSC Hot Questions — Post-Gupta</h3>
+    <ul>
+      <li>Hiuen Tsang visited India during → <strong>Harsha's reign</strong></li>
+      <li>Harsha's biography → <strong>Harshacharita by Bana</strong></li>
+      <li>Harsha's capital → <strong>Kanauj</strong></li>
+      <li>Shore Temple is at → <strong>Mahabalipuram (Pallavas)</strong></li>
+      <li>Chalukyas defeated Harsha at → <strong>River Narmada</strong></li>
+      <li>Pattadakal belongs to → <strong>Chalukyas (UNESCO site)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- PYQ & TIPS -->
+<div id="pyq" class="section">
+  <div class="period-header">
+    <div class="period-icon" style="background:#FAEEDA">🎯</div>
+    <div><div class="period-title">PYQ Bank & Exam Strategy</div><div class="period-subtitle">SSC CGL / CHSL / CPO · Last 10 Years Questions</div></div>
+  </div>
+
+  <div class="highlight-box hb-amber" style="margin-bottom:1rem">
+    <h3>📊 Topic-wise SSC Question Frequency (Ancient History)</h3>
+    <ul>
+      <li><span class="tag tag-hot">🔥 IVC</span> — 8–10 questions over 10 years: sites, features, discoveries</li>
+      <li><span class="tag tag-hot">🔥 Mauryan</span> — 7–9 questions: Ashoka edicts, Arthashastra, administration</li>
+      <li><span class="tag tag-hot">🔥 Gupta</span> — 6–8 questions: rulers, scholars, Golden Age achievements</li>
+      <li><span class="tag tag-med">⚡ Buddhism/Jainism</span> — 5–7 questions: founders, councils, sites</li>
+      <li><span class="tag tag-med">⚡ Vedic Age</span> — 3–5 questions: Vedas, literature, society</li>
+      <li><span class="tag tag-low">✔ Prehistoric</span> — 2–3 questions: age characteristics, sites</li>
+      <li><span class="tag tag-low">✔ Post-Gupta</span> — 2–3 questions: Harsha, Chalukyas, travelers</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-bottom:1rem">
+    <h3>📝 50 Most Important PYQs — Ancient History</h3>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Who wrote Arthashastra?</div><div class="a">✅ Kautilya / Chanakya / Vishnugupta</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. The Kalinga War was fought in which year?</div><div class="a">✅ 261 BCE</div></div>
+    <div class="exam-q"><span class="yr">SSC CHSL</span><div class="q">Q. The "Napoleon of India" refers to which ruler?</div><div class="a">✅ Samudragupta</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Great Bath is associated with which civilization?</div><div class="a">✅ Indus Valley Civilization (Mohenjo-daro)</div></div>
+    <div class="exam-q"><span class="yr">SSC CPO</span><div class="q">Q. Which Veda contains the Gayatri Mantra?</div><div class="a">✅ Rigveda</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Fa Hien visited India during reign of which king?</div><div class="a">✅ Chandragupta II (Vikramaditya)</div></div>
+    <div class="exam-q"><span class="yr">SSC CHSL</span><div class="q">Q. Who decoded the Brahmi script?</div><div class="a">✅ James Prinsep (1837)</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Aryabhatta wrote which book?</div><div class="a">✅ Aryabhatiya</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. The first Buddhist Council was held at?</div><div class="a">✅ Rajgriha (483 BCE) — presided by Mahakassapa</div></div>
+    <div class="exam-q"><span class="yr">SSC CPO</span><div class="q">Q. Which IVC site has the first dock/port?</div><div class="a">✅ Lothal (Gujarat)</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Hiuen Tsang visited during reign of?</div><div class="a">✅ Harsha (606–647 CE)</div></div>
+    <div class="exam-q"><span class="yr">SSC CHSL</span><div class="q">Q. Which Pallava ruler built Shore Temple?</div><div class="a">✅ Narasimhavarman II (Rajasimha)</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Megasthenes described Indian society as having how many castes?</div><div class="a">✅ 7 castes</div></div>
+    <div class="exam-q"><span class="yr">SSC MTS</span><div class="q">Q. Milindapanha is a dialogue between Menander and?</div><div class="a">✅ Nagasena</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Which Gupta king assumed the title 'Vikramaditya'?</div><div class="a">✅ Chandragupta II</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Nalanda University was founded by which Gupta ruler?</div><div class="a">✅ Kumaragupta I</div></div>
+    <div class="exam-q"><span class="yr">SSC CHSL</span><div class="q">Q. Which pillar has inscriptions of Mauryan, Gupta &amp; Mughal periods?</div><div class="a">✅ Allahabad (Prayagraj) Pillar</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Iron Pillar at Qutub Minar was erected by?</div><div class="a">✅ Chandragupta II (anti-corrosion metals)</div></div>
+    <div class="exam-q"><span class="yr">SSC CPO</span><div class="q">Q. The first metal used in India was?</div><div class="a">✅ Copper</div></div>
+    <div class="exam-q"><span class="yr">SSC CGL</span><div class="q">Q. Buddhist text listing 16 Mahajanapadas?</div><div class="a">✅ Anguttara Nikaya</div></div>
+  </div>
+
+  <div class="highlight-box hb-teal" style="margin-bottom:1rem">
+    <h3>🧠 Power Mnemonics — Remember Forever!</h3>
+    <ul>
+      <li><strong>4 Vedas</strong>: <em>"Rishi Sings Yamuna's Aarti"</em> → Rigveda, Samaveda, Yajurveda, Atharvaveda</li>
+      <li><strong>Buddhist Councils</strong>: <em>"Rajgriha Very Peacefully Keeps"</em> → Rajgriha, Vaishali, Pataliputra, Kashmir</li>
+      <li><strong>Mauryan rulers</strong>: <em>"Chandra Binds Ashes"</em> → Chandragupta, Bindusara, Ashoka</li>
+      <li><strong>Gupta rulers</strong>: <em>"Chandra Samudra Chandra Kumar Skanda"</em> → Chandragupta I, Samudragupta, Chandragupta II, Kumaragupta, Skandagupta</li>
+      <li><strong>IVC sites in India</strong>: <em>"Dholavira Kalibangan Lothal Rakhigarhi Banawali"</em> → DKLRB</li>
+      <li><strong>Prehistoric Ages</strong>: <em>"Please Make Nice Cakes"</em> → Paleolithic, Mesolithic, Neolithic, Chalcolithic</li>
+      <li><strong>3 Buddhist jewels</strong>: <em>"Buddha Dharma Sangha"</em></li>
+    </ul>
+  </div>
+
+  <div class="highlight-box hb-green">
+    <h3>📅 Critical Dates to Memorize</h3>
+    <ul>
+      <li>~2600 BCE — IVC mature phase begins</li>
+      <li>1921 CE — Harappa discovered (Dayaram Sahni)</li>
+      <li>563 BCE — Gautama Buddha born (Lumbini)</li>
+      <li>599 BCE — Mahavira born (Vaishali)</li>
+      <li>483 BCE — 1st Buddhist Council (Rajgriha)</li>
+      <li>326 BCE — Alexander invades India (Battle of Hydaspes)</li>
+      <li>322 BCE — Chandragupta Maurya founds empire</li>
+      <li>261 BCE — Kalinga War (Ashoka)</li>
+      <li>185 BCE — Shunga dynasty begins</li>
+      <li>319–320 CE — Gupta Era begins</li>
+      <li>399–414 CE — Fa Hien visits India</li>
+      <li>629–645 CE — Hiuen Tsang visits India</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box hb-red">
+    <h3>⚠️ Common Mistakes to Avoid</h3>
+    <ul>
+      <li>IVC = Harappan civilization (NOT Dravidian — not proven)</li>
+      <li>Mahavira ≠ founder of Jainism — he was 24th Tirthankara; Rishabhadeva was first</li>
+      <li>Ashoka Rock Edict XIII ≠ Allahabad Pillar — different inscriptions!</li>
+      <li>Gupta Era starts 319–320 CE, NOT with Samudragupta</li>
+      <li>"Napoleon of India" = Samudragupta NOT Chandragupta II</li>
+      <li>Saka Era (78 CE) ≠ Gupta Era (319 CE)</li>
+      <li>Bhimbetka = Mesolithic (NOT Paleolithic)</li>
+      <li>Lothal = first dock, NOT first IVC site discovered</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const btns = document.querySelectorAll('.nav-btn');
+  btns.forEach(b => { if(b.getAttribute('onclick').includes(id)) b.classList.add('active'); });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>

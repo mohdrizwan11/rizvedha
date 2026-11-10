@@ -1,0 +1,4275 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "sports",
+  "file": "sports_of_india_app.html",
+  "storageKey": "ssc_sports_game_v1",
+  "icon": "🏅",
+  "description": "Bilingual study app on sports for SSC: traditional sports and stadiums on the map, exam notes on the Olympics, rules, terms, trophies and governing bodies, and an MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Sports for SSC",
+      "SSC के लिए खेल"
+    ],
+    "hSub": [
+      "SSC Focus · Sports map and notes",
+      "SSC फोकस · खेल मानचित्र व नोट्स"
+    ],
+    "qLabel": [
+      "Select the state of this sport or venue",
+      "इस खेल या स्थल का राज्य चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "learnTtl": [
+      "Learn sports",
+      "खेल सीखें"
+    ],
+    "learnSub": [
+      "Open any traditional sport, stadium or institute to read its place, what it is and the facts asked in exams.",
+      "किसी भी पारंपरिक खेल, स्टेडियम या संस्थान को खोलकर उसका स्थान, परिचय और परीक्षा में पूछे जाने वाले तथ्य पढ़ें।"
+    ],
+    "atlasSub": [
+      "Every sport and venue on the map, coloured by kind.",
+      "हर खेल और स्थल मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "lvlLabel": [
+      "Level · Sports GK rank",
+      "स्तर · खेल GK रैंक"
+    ],
+    "howto": [
+      "Play: a traditional sport, stadium or institute is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Sports: India's traditional sports and martial arts, major stadiums and sports institutes, with exam facts.\nLearn → Exam notes: tables on India at the Olympics, the Asian and Commonwealth Games, players per team, measurements, terms, cups and trophies, governing bodies, awards and national sports.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every sport and venue on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई पारंपरिक खेल, स्टेडियम या संस्थान दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → खेल: भारत के पारंपरिक खेल और युद्ध कलाएँ, प्रमुख स्टेडियम और खेल संस्थान, परीक्षा तथ्यों सहित।\nसीखें → परीक्षा नोट्स: ओलंपिक में भारत, एशियाई और राष्ट्रमंडल खेल, प्रति टीम खिलाड़ी, माप, शब्दावली, कप और ट्रॉफी, खेल संस्थाएँ, पुरस्कार और राष्ट्रीय खेल की तालिकाएँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर खेल और स्थल मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read a sport or venue, or a state to list its entries.",
+      "किसी चिह्न को छूकर खेल या स्थल पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No sport or venue from this state in the deck.",
+      "इस राज्य का कोई खेल या स्थल सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this sport or venue.",
+      "भारत का मानचित्र। इस खेल या स्थल का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its sports and venues.",
+      "भारत का मानचित्र। किसी राज्य के खेल और स्थल देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "filterGroup": [
+      "Filter by kind or region",
+      "प्रकार या क्षेत्र से छाँटें"
+    ],
+    "searchLabel": [
+      "Search sports and venues",
+      "खेल और स्थल खोजें"
+    ],
+    "searchPh": [
+      "Sport, stadium, city or state",
+      "खेल, स्टेडियम, शहर या राज्य"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "plantMarker": [
+      "sport or venue",
+      "खेल या स्थल"
+    ],
+    "atlasPickerLabel": [
+      "Browse a sport or venue",
+      "खेल या स्थल खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select a sport or venue",
+      "खेल या स्थल चुनें"
+    ],
+    "ltPlants": [
+      "Sports",
+      "खेल"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on the Olympics and other Games, rules, terms, trophies, governing bodies and traditional sports. Each answer comes with an explanation.",
+      "ओलंपिक व अन्य खेल आयोजन, नियम, शब्दावली, ट्रॉफी, खेल संस्थाएँ और पारंपरिक खेलों पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ]
+  },
+  "types": [
+    {
+      "k": "martial",
+      "icon": "🥋",
+      "col": "#B23A2B",
+      "t": [
+        "Martial art & wrestling",
+        "युद्ध कला और कुश्ती"
+      ]
+    },
+    {
+      "k": "trad",
+      "icon": "🎯",
+      "col": "#7B5E2A",
+      "t": [
+        "Traditional sport",
+        "पारंपरिक खेल"
+      ]
+    },
+    {
+      "k": "race",
+      "icon": "🛶",
+      "col": "#0277BD",
+      "t": [
+        "Boat & animal sport",
+        "नौका और पशु खेल"
+      ]
+    },
+    {
+      "k": "cricket",
+      "icon": "🏏",
+      "col": "#2E7D32",
+      "t": [
+        "Cricket stadium",
+        "क्रिकेट स्टेडियम"
+      ]
+    },
+    {
+      "k": "venue",
+      "icon": "🏟️",
+      "col": "#6A1B9A",
+      "t": [
+        "Other stadium & circuit",
+        "अन्य स्टेडियम और सर्किट"
+      ]
+    },
+    {
+      "k": "inst",
+      "icon": "🎓",
+      "col": "#E65100",
+      "t": [
+        "Sports institute",
+        "खेल संस्थान"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Location",
+        "स्थान"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "What it is",
+        "क्या है"
+      ]
+    },
+    {
+      "k": "yr",
+      "t": [
+        "Since",
+        "कब से"
+      ]
+    },
+    {
+      "extras": true
+    }
+  ],
+  "extras": {
+    "known": [
+      "Known for",
+      "किसके लिए प्रसिद्ध"
+    ],
+    "also": [
+      "Also called",
+      "अन्य नाम"
+    ]
+  },
+  "feedback": [
+    "st",
+    "kd"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Rookie",
+      "hi": "नवागंतुक"
+    },
+    {
+      "min": 60,
+      "en": "Warm-up Learner",
+      "hi": "वार्म-अप विद्यार्थी"
+    },
+    {
+      "min": 150,
+      "en": "Team Player",
+      "hi": "टीम खिलाड़ी"
+    },
+    {
+      "min": 320,
+      "en": "Match Winner",
+      "hi": "मैच विजेता"
+    },
+    {
+      "min": 560,
+      "en": "Sports GK Captain",
+      "hi": "खेल GK कप्तान"
+    },
+    {
+      "min": 900,
+      "en": "Sports GK Champion",
+      "hi": "खेल GK चैंपियन"
+    },
+    {
+      "min": 1400,
+      "en": "Hall of Fame",
+      "hi": "हॉल ऑफ़ फ़ेम"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🏅",
+      "t": [
+        "First Medal",
+        "पहला पदक"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Warmed Up",
+        "वार्म-अप पूरा"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Sports Mapper",
+        "खेल मैपर"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "martial",
+      "icon": "🥋",
+      "t": [
+        "Martial Arts Scholar",
+        "युद्ध कला विद्वान"
+      ],
+      "d": [
+        "Study every martial art",
+        "सभी युद्ध कलाएँ पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "martial"
+        ]
+      }
+    },
+    {
+      "id": "stadiums",
+      "icon": "🏏",
+      "t": [
+        "Stadium Hopper",
+        "स्टेडियम यात्री"
+      ],
+      "d": [
+        "Study every cricket stadium",
+        "सभी क्रिकेट स्टेडियम पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "cricket"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Sports GK Champion",
+        "खेल GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "kd",
+        "field": "kd",
+        "ask": [
+          "What is this?",
+          "यह क्या है?"
+        ],
+        "reverseId": "wk",
+        "reverseAsk": [
+          "Which of these is described as:",
+          "इनमें से किसका परिचय यह है:"
+        ],
+        "pairs": [
+          [
+            "Stick fighting",
+            "Staff (stick) fighting"
+          ],
+          [
+            "Traditional wrestling",
+            "Manipuri wrestling"
+          ],
+          [
+            "Cricket stadium",
+            "World's largest cricket stadium"
+          ],
+          [
+            "Hockey stadium",
+            "Hockey stadium and athletics venue"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "olympics",
+              "games",
+              "rules",
+              "terms",
+              "cups",
+              "bodies",
+              "awards",
+              "origin",
+              "trad"
+            ],
+            "n": 6
+          },
+          {
+            "q": "st",
+            "n": 2
+          },
+          {
+            "q": "kd",
+            "n": 1
+          },
+          {
+            "q": "wk",
+            "n": 1
+          }
+        ]
+      },
+      {
+        "id": "olympics",
+        "t": [
+          "Olympics & Games",
+          "ओलंपिक और खेल आयोजन"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "olympics",
+              "games"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "rules",
+        "t": [
+          "Rules & terms",
+          "नियम और शब्दावली"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "rules",
+              "terms"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "cups",
+        "t": [
+          "Trophies, bodies & awards",
+          "ट्रॉफी, संस्थाएँ और पुरस्कार"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "cups",
+              "bodies",
+              "awards",
+              "origin"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "trad",
+        "t": [
+          "Traditional sports & venues",
+          "पारंपरिक खेल और स्थल"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "trad"
+            ],
+            "n": 4
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "kd",
+            "n": 2
+          },
+          {
+            "q": "is",
+            "n": 1
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Kalaripayattu",
+      "h": "कलारीपयट्टू",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "martial",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.2,
+      "lng": 76.6,
+      "kd": "Martial art",
+      "kdh": "युद्ध कला",
+      "tag": "Kerala's ancient martial art",
+      "tagh": "केरल की प्राचीन युद्ध कला",
+      "fact": "Kalaripayattu is Kerala's traditional martial art, taught in a training ground called a kalari. Its weapons include the urumi, a flexible sword.",
+      "facth": "कलारीपयट्टू केरल की पारंपरिक युद्ध कला है, जिसे कलारी नामक प्रशिक्षण स्थल में सिखाया जाता है। इसके हथियारों में उरुमी (लचीली तलवार) शामिल है।"
+    },
+    {
+      "n": "Vallam Kali",
+      "h": "वल्लम कली",
+      "s": "Kerala",
+      "st": "Alappuzha and the backwaters, Kerala",
+      "sh": "अलप्पुझा और बैकवाटर, केरल",
+      "c": "race",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.45,
+      "lng": 76.55,
+      "kd": "Snake boat race",
+      "kdh": "सर्प नौका दौड़",
+      "tag": "Kerala's snake boat race",
+      "tagh": "केरल की सर्प नौका दौड़",
+      "fact": "Vallam Kali is the boat race of Kerala's backwaters, raced in long snake boats called chundan vallam. The best known is the Nehru Trophy Boat Race on Punnamada Lake, Alappuzha.",
+      "facth": "वल्लम कली केरल के बैकवाटर की नौका दौड़ है, जो चुंडन वल्लम नामक लंबी सर्प नौकाओं में होती है। सबसे प्रसिद्ध अलप्पुझा की पुन्नमडा झील पर होने वाली नेहरू ट्रॉफी नौका दौड़ है।",
+      "x": [
+        [
+          "known",
+          "Nehru Trophy Boat Race, Punnamada Lake",
+          "नेहरू ट्रॉफी नौका दौड़, पुन्नमडा झील"
+        ]
+      ]
+    },
+    {
+      "n": "Kambala",
+      "h": "कंबाला",
+      "s": "Karnataka",
+      "st": "Coastal Karnataka (Dakshina Kannada and Udupi)",
+      "sh": "तटीय कर्नाटक (दक्षिण कन्नड़ और उडुपी)",
+      "c": "race",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.1,
+      "lng": 75.15,
+      "kd": "Buffalo race",
+      "kdh": "भैंसा दौड़",
+      "tag": "Buffalo race in slushy paddy fields",
+      "tagh": "कीचड़ भरे धान के खेतों में भैंसा दौड़",
+      "fact": "Kambala is a buffalo race held in slushy paddy fields of coastal Karnataka, where a pair of buffaloes is driven by a farmer running behind them.",
+      "facth": "कंबाला तटीय कर्नाटक के कीचड़ भरे धान के खेतों में होने वाली भैंसा दौड़ है, जिसमें एक किसान पीछे दौड़ते हुए भैंसों की जोड़ी को हाँकता है।"
+    },
+    {
+      "n": "Jallikattu",
+      "h": "जल्लीकट्टू",
+      "s": "Tamil Nadu",
+      "st": "Madurai region, Tamil Nadu",
+      "sh": "मदुरै क्षेत्र, तमिलनाडु",
+      "c": "race",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.95,
+      "lng": 78.1,
+      "kd": "Bull-taming sport",
+      "kdh": "बैल वश में करने का खेल",
+      "tag": "Bull-taming sport held at Pongal",
+      "tagh": "पोंगल पर होने वाला बैल वश में करने का खेल",
+      "fact": "Jallikattu is a bull-taming sport of Tamil Nadu held during Pongal; participants try to hold on to the hump of a running bull. Alanganallur near Madurai is its best-known venue.",
+      "facth": "जल्लीकट्टू तमिलनाडु का बैल वश में करने का खेल है जो पोंगल के समय होता है; प्रतिभागी दौड़ते बैल का कूबड़ पकड़े रहने का प्रयास करते हैं। मदुरै के पास अलंगानल्लूर इसका सबसे प्रसिद्ध स्थल है।"
+    },
+    {
+      "n": "Silambam",
+      "h": "सिलंबम",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "martial",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.8,
+      "lng": 78.7,
+      "kd": "Staff (stick) fighting",
+      "kdh": "लाठी (डंडा) युद्ध कला",
+      "tag": "Tamil staff-fighting art",
+      "tagh": "तमिल लाठी युद्ध कला",
+      "fact": "Silambam is a martial art of Tamil Nadu fought with a long bamboo staff.",
+      "facth": "सिलंबम तमिलनाडु की युद्ध कला है जो लंबे बाँस के डंडे से लड़ी जाती है।"
+    },
+    {
+      "n": "Thang-Ta",
+      "h": "थांग-ता",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "martial",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.8,
+      "lng": 93.94,
+      "kd": "Sword and spear martial art",
+      "kdh": "तलवार और भाले की युद्ध कला",
+      "tag": "Manipur's sword and spear art",
+      "tagh": "मणिपुर की तलवार और भाले की कला",
+      "fact": "Thang-Ta, also called Huyen Langlon, is Manipur's martial art: thang means sword and ta means spear.",
+      "facth": "थांग-ता, जिसे ह्यूएन लांगलोन भी कहते हैं, मणिपुर की युद्ध कला है: थांग का अर्थ तलवार और ता का अर्थ भाला है।",
+      "x": [
+        [
+          "also",
+          "Huyen Langlon",
+          "ह्यूएन लांगलोन"
+        ]
+      ]
+    },
+    {
+      "n": "Mukna",
+      "h": "मुकना",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "martial",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.62,
+      "lng": 93.8,
+      "kd": "Manipuri wrestling",
+      "kdh": "मणिपुरी कुश्ती",
+      "tag": "Traditional wrestling of Manipur",
+      "tagh": "मणिपुर की पारंपरिक कुश्ती",
+      "fact": "Mukna is the traditional wrestling of Manipur, in which wrestlers grip each other's waist belts.",
+      "facth": "मुकना मणिपुर की पारंपरिक कुश्ती है, जिसमें पहलवान एक-दूसरे की कमर की पट्टी पकड़ते हैं।"
+    },
+    {
+      "n": "Sagol Kangjei",
+      "h": "सगोल कांगजेई",
+      "s": "Manipur",
+      "st": "Imphal, Manipur",
+      "sh": "इंफाल, मणिपुर",
+      "c": "trad",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.9,
+      "lng": 93.95,
+      "kd": "Traditional polo",
+      "kdh": "पारंपरिक पोलो",
+      "tag": "Manipuri polo, origin of modern polo",
+      "tagh": "मणिपुरी पोलो, आधुनिक पोलो का स्रोत",
+      "fact": "Sagol Kangjei is Manipur's traditional polo played on Manipuri ponies; British officers learned it in Manipur, and it developed into modern polo.",
+      "facth": "सगोल कांगजेई मणिपुरी टट्टुओं पर खेला जाने वाला मणिपुर का पारंपरिक पोलो है; ब्रिटिश अधिकारियों ने इसे मणिपुर में सीखा और इसी से आधुनिक पोलो बना।"
+    },
+    {
+      "n": "Yubi Lakpi",
+      "h": "युबी लाक्पी",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "trad",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.7,
+      "lng": 94.05,
+      "kd": "Coconut ball game",
+      "kdh": "नारियल से खेला जाने वाला खेल",
+      "tag": "Manipur's coconut 'rugby'",
+      "tagh": "मणिपुर का नारियल ‘रग्बी’",
+      "fact": "Yubi Lakpi is a traditional team game of Manipur played with a greased coconut, often compared to rugby.",
+      "facth": "युबी लाक्पी मणिपुर का पारंपरिक टीम खेल है जो चिकने किए गए नारियल से खेला जाता है; इसकी तुलना अक्सर रग्बी से की जाती है।"
+    },
+    {
+      "n": "Gatka",
+      "h": "गतका",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "martial",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.6,
+      "lng": 75,
+      "kd": "Sikh martial art",
+      "kdh": "सिख युद्ध कला",
+      "tag": "Sikh martial art with sticks and swords",
+      "tagh": "लाठी और तलवार की सिख युद्ध कला",
+      "fact": "Gatka is a Sikh martial art of Punjab, practised with wooden sticks and swords.",
+      "facth": "गतका पंजाब की सिख युद्ध कला है, जिसका अभ्यास लकड़ी की लाठियों और तलवारों से किया जाता है।"
+    },
+    {
+      "n": "Mallakhamb",
+      "h": "मलखंब",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh (also Maharashtra)",
+      "sh": "मध्य प्रदेश (महाराष्ट्र में भी)",
+      "c": "trad",
+      "rg": "C",
+      "d": 1,
+      "lat": 23.26,
+      "lng": 77.41,
+      "kd": "Pole gymnastics",
+      "kdh": "खंभे पर जिम्नास्टिक",
+      "tag": "State sport of Madhya Pradesh",
+      "tagh": "मध्य प्रदेश का राजकीय खेल",
+      "fact": "Mallakhamb is gymnastics and yoga performed on a vertical wooden pole or a hanging rope. Madhya Pradesh declared it its state sport in 2013.",
+      "facth": "मलखंब लकड़ी के खड़े खंभे या लटकती रस्सी पर किया जाने वाला जिम्नास्टिक और योग है। मध्य प्रदेश ने 2013 में इसे अपना राजकीय खेल घोषित किया।"
+    },
+    {
+      "n": "Kho-kho",
+      "h": "खो-खो",
+      "s": "Maharashtra",
+      "st": "Maharashtra (origin)",
+      "sh": "महाराष्ट्र (उद्गम)",
+      "c": "trad",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.6,
+      "lng": 73.95,
+      "kd": "Tag game",
+      "kdh": "छूने-भागने का खेल",
+      "tag": "Indian chasing game from Maharashtra",
+      "tagh": "महाराष्ट्र से निकला भारतीय पीछा करने का खेल",
+      "fact": "Kho-kho is an Indian chasing game that took shape in Maharashtra; each side has 9 players on the field. The first Kho Kho World Cup was held in New Delhi in January 2025, and India won both the men's and women's titles.",
+      "facth": "खो-खो भारतीय पीछा करने का खेल है जो महाराष्ट्र में विकसित हुआ; मैदान पर हर टीम के 9 खिलाड़ी होते हैं। पहला खो-खो विश्व कप जनवरी 2025 में नई दिल्ली में हुआ और भारत ने पुरुष व महिला दोनों खिताब जीते।"
+    },
+    {
+      "n": "Mardani Khel",
+      "h": "मर्दानी खेल",
+      "s": "Maharashtra",
+      "st": "Kolhapur, Maharashtra",
+      "sh": "कोल्हापुर, महाराष्ट्र",
+      "c": "martial",
+      "rg": "W",
+      "d": 2,
+      "lat": 16.7,
+      "lng": 74.25,
+      "kd": "Weapon-based martial art",
+      "kdh": "हथियार आधारित युद्ध कला",
+      "tag": "Maratha martial art",
+      "tagh": "मराठा युद्ध कला",
+      "fact": "Mardani Khel is a weapon-based martial art of Maharashtra, associated with the Marathas and practised especially in Kolhapur.",
+      "facth": "मर्दानी खेल महाराष्ट्र की हथियार आधारित युद्ध कला है, जो मराठों से जुड़ी है और विशेष रूप से कोल्हापुर में प्रचलित है।"
+    },
+    {
+      "n": "Lathi Khela",
+      "h": "लाठी खेला",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "पश्चिम बंगाल",
+      "c": "martial",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.2,
+      "lng": 87.9,
+      "kd": "Stick fighting",
+      "kdh": "लाठी युद्ध",
+      "tag": "Bengal's stick-fighting art",
+      "tagh": "बंगाल की लाठी युद्ध कला",
+      "fact": "Lathi Khela is the traditional stick-fighting martial art of Bengal.",
+      "facth": "लाठी खेला बंगाल की पारंपरिक लाठी युद्ध कला है।"
+    },
+    {
+      "n": "Paika Akhada",
+      "h": "पाइका अखाड़ा",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "martial",
+      "rg": "E",
+      "d": 2,
+      "lat": 20.2,
+      "lng": 85.6,
+      "kd": "Warrior martial art",
+      "kdh": "योद्धाओं की युद्ध कला",
+      "tag": "Martial tradition of Odisha's Paika warriors",
+      "tagh": "ओडिशा के पाइका योद्धाओं की युद्ध परंपरा",
+      "fact": "Paika Akhada is the martial tradition of Odisha's Paika warriors, performed with swords, shields and sticks.",
+      "facth": "पाइका अखाड़ा ओडिशा के पाइका योद्धाओं की युद्ध परंपरा है, जो तलवार, ढाल और लाठी से प्रदर्शित की जाती है।"
+    },
+    {
+      "n": "Thoda",
+      "h": "ठोडा",
+      "s": "Himachal Pradesh",
+      "st": "Himachal Pradesh",
+      "sh": "हिमाचल प्रदेश",
+      "c": "martial",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.1,
+      "lng": 77.3,
+      "kd": "Archery martial game",
+      "kdh": "तीरंदाज़ी आधारित खेल",
+      "tag": "Himachal's archery game",
+      "tagh": "हिमाचल का तीरंदाज़ी खेल",
+      "fact": "Thoda is a traditional game of Himachal Pradesh that combines martial art with archery, played between two teams with bows and blunt arrows aimed at the legs.",
+      "facth": "ठोडा हिमाचल प्रदेश का पारंपरिक खेल है जिसमें युद्ध कला और तीरंदाज़ी का मेल है; दो टीमें धनुष और कुंद तीरों से पैरों को निशाना बनाती हैं।"
+    },
+    {
+      "n": "Inbuan",
+      "h": "इनबुआन",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "martial",
+      "rg": "NE",
+      "d": 2,
+      "lat": 23.7,
+      "lng": 92.75,
+      "kd": "Traditional wrestling",
+      "kdh": "पारंपरिक कुश्ती",
+      "tag": "Traditional wrestling of Mizoram",
+      "tagh": "मिज़ोरम की पारंपरिक कुश्ती",
+      "fact": "Inbuan is the traditional wrestling of the Mizo people of Mizoram.",
+      "facth": "इनबुआन मिज़ोरम के मिज़ो लोगों की पारंपरिक कुश्ती है।"
+    },
+    {
+      "n": "Pari-khanda",
+      "h": "परी-खांडा",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "martial",
+      "rg": "E",
+      "d": 3,
+      "lat": 25.6,
+      "lng": 85.3,
+      "kd": "Sword and shield martial art",
+      "kdh": "तलवार और ढाल की युद्ध कला",
+      "tag": "Sword and shield art of Bihar",
+      "tagh": "बिहार की तलवार और ढाल कला",
+      "fact": "Pari-khanda is a sword (khanda) and shield (pari) martial art of Bihar; some of its steps appear in the Chhau dance.",
+      "facth": "परी-खांडा बिहार की तलवार (खांडा) और ढाल (परी) की युद्ध कला है; इसके कुछ चरण छऊ नृत्य में दिखाई देते हैं।"
+    },
+    {
+      "n": "Sqay",
+      "h": "स्क्वे",
+      "s": "Jammu and Kashmir",
+      "st": "Kashmir, Jammu and Kashmir",
+      "sh": "कश्मीर, जम्मू और कश्मीर",
+      "c": "martial",
+      "rg": "N",
+      "d": 3,
+      "lat": 34,
+      "lng": 74.85,
+      "kd": "Kashmiri sword art",
+      "kdh": "कश्मीरी तलवारबाज़ी",
+      "tag": "Martial art of Kashmir",
+      "tagh": "कश्मीर की युद्ध कला",
+      "fact": "Sqay is a traditional sword-fighting martial art of Kashmir.",
+      "facth": "स्क्वे कश्मीर की पारंपरिक तलवारबाज़ी की युद्ध कला है।"
+    },
+    {
+      "n": "Narendra Modi Stadium",
+      "h": "नरेंद्र मोदी स्टेडियम",
+      "s": "Gujarat",
+      "st": "Motera, Ahmedabad, Gujarat",
+      "sh": "मोटेरा, अहमदाबाद, गुजरात",
+      "c": "cricket",
+      "rg": "W",
+      "d": 1,
+      "lat": 23.09,
+      "lng": 72.6,
+      "kd": "World's largest cricket stadium",
+      "kdh": "विश्व का सबसे बड़ा क्रिकेट स्टेडियम",
+      "tag": "World's largest cricket stadium",
+      "tagh": "विश्व का सबसे बड़ा क्रिकेट स्टेडियम",
+      "fact": "The Narendra Modi Stadium in Motera, Ahmedabad, rebuilt as the world's largest cricket stadium, was renamed from Sardar Patel Stadium in 2021. It hosted the 2023 Cricket World Cup final.",
+      "facth": "अहमदाबाद के मोटेरा का नरेंद्र मोदी स्टेडियम, जो विश्व के सबसे बड़े क्रिकेट स्टेडियम के रूप में फिर से बना, 2021 में सरदार पटेल स्टेडियम से नया नाम पाया। इसमें 2023 क्रिकेट विश्व कप का फ़ाइनल हुआ।",
+      "x": [
+        [
+          "also",
+          "Motera (formerly Sardar Patel Stadium)",
+          "मोटेरा (पहले सरदार पटेल स्टेडियम)"
+        ]
+      ]
+    },
+    {
+      "n": "Eden Gardens",
+      "h": "ईडन गार्डन्स",
+      "s": "West Bengal",
+      "st": "Kolkata, West Bengal",
+      "sh": "कोलकाता, पश्चिम बंगाल",
+      "c": "cricket",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.56,
+      "lng": 88.34,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "yr": "1864",
+      "yrh": "1864",
+      "tag": "India's oldest cricket stadium",
+      "tagh": "भारत का सबसे पुराना क्रिकेट स्टेडियम",
+      "fact": "Eden Gardens in Kolkata, established in 1864, is the oldest cricket stadium in India. It hosted the 1987 World Cup final.",
+      "facth": "कोलकाता का ईडन गार्डन्स, 1864 में स्थापित, भारत का सबसे पुराना क्रिकेट स्टेडियम है। इसमें 1987 विश्व कप का फ़ाइनल हुआ।"
+    },
+    {
+      "n": "Wankhede Stadium",
+      "h": "वानखेड़े स्टेडियम",
+      "s": "Maharashtra",
+      "st": "Mumbai, Maharashtra",
+      "sh": "मुंबई, महाराष्ट्र",
+      "c": "cricket",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.05,
+      "lng": 72.95,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "tag": "Venue of the 2011 World Cup final",
+      "tagh": "2011 विश्व कप फ़ाइनल का स्थल",
+      "fact": "The Wankhede Stadium in Mumbai hosted the 2011 Cricket World Cup final, which India won against Sri Lanka.",
+      "facth": "मुंबई के वानखेड़े स्टेडियम में 2011 क्रिकेट विश्व कप का फ़ाइनल हुआ, जिसे भारत ने श्रीलंका को हराकर जीता।"
+    },
+    {
+      "n": "M. Chinnaswamy Stadium",
+      "h": "एम. चिन्नास्वामी स्टेडियम",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "cricket",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.98,
+      "lng": 77.6,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "tag": "Bengaluru's international cricket ground",
+      "tagh": "बेंगलुरु का अंतरराष्ट्रीय क्रिकेट मैदान",
+      "fact": "The M. Chinnaswamy Stadium is the international cricket ground of Bengaluru.",
+      "facth": "एम. चिन्नास्वामी स्टेडियम बेंगलुरु का अंतरराष्ट्रीय क्रिकेट मैदान है।"
+    },
+    {
+      "n": "M. A. Chidambaram Stadium",
+      "h": "एम. ए. चिदंबरम स्टेडियम",
+      "s": "Tamil Nadu",
+      "st": "Chepauk, Chennai, Tamil Nadu",
+      "sh": "चेपॉक, चेन्नई, तमिलनाडु",
+      "c": "cricket",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.06,
+      "lng": 80.24,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "tag": "Chennai's Chepauk ground",
+      "tagh": "चेन्नई का चेपॉक मैदान",
+      "fact": "The M. A. Chidambaram Stadium at Chepauk is the international cricket ground of Chennai.",
+      "facth": "चेपॉक का एम. ए. चिदंबरम स्टेडियम चेन्नई का अंतरराष्ट्रीय क्रिकेट मैदान है।",
+      "x": [
+        [
+          "also",
+          "Chepauk",
+          "चेपॉक"
+        ]
+      ]
+    },
+    {
+      "n": "Arun Jaitley Stadium",
+      "h": "अरुण जेटली स्टेडियम",
+      "s": "Delhi",
+      "st": "New Delhi, Delhi",
+      "sh": "नई दिल्ली, दिल्ली",
+      "c": "cricket",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.64,
+      "lng": 77.24,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "tag": "Formerly Feroz Shah Kotla",
+      "tagh": "पहले फ़िरोज़ शाह कोटला",
+      "fact": "The Arun Jaitley Stadium in Delhi was known as the Feroz Shah Kotla ground until it was renamed in 2019.",
+      "facth": "दिल्ली का अरुण जेटली स्टेडियम 2019 में नाम बदले जाने तक फ़िरोज़ शाह कोटला मैदान के नाम से जाना जाता था।",
+      "x": [
+        [
+          "also",
+          "Feroz Shah Kotla",
+          "फ़िरोज़ शाह कोटला"
+        ]
+      ]
+    },
+    {
+      "n": "Green Park Stadium",
+      "h": "ग्रीन पार्क स्टेडियम",
+      "s": "Uttar Pradesh",
+      "st": "Kanpur, Uttar Pradesh",
+      "sh": "कानपुर, उत्तर प्रदेश",
+      "c": "cricket",
+      "rg": "N",
+      "d": 2,
+      "lat": 26.48,
+      "lng": 80.35,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "tag": "Kanpur's Test cricket ground",
+      "tagh": "कानपुर का टेस्ट क्रिकेट मैदान",
+      "fact": "Green Park in Kanpur is one of India's older Test cricket grounds.",
+      "facth": "कानपुर का ग्रीन पार्क भारत के पुराने टेस्ट क्रिकेट मैदानों में से एक है।"
+    },
+    {
+      "n": "HPCA Stadium",
+      "h": "एचपीसीए स्टेडियम",
+      "s": "Himachal Pradesh",
+      "st": "Dharamshala, Himachal Pradesh",
+      "sh": "धर्मशाला, हिमाचल प्रदेश",
+      "c": "cricket",
+      "rg": "N",
+      "d": 2,
+      "lat": 32.2,
+      "lng": 76.4,
+      "kd": "Cricket stadium",
+      "kdh": "क्रिकेट स्टेडियम",
+      "tag": "High-altitude cricket ground below the Dhauladhar range",
+      "tagh": "धौलाधार पर्वतमाला के नीचे ऊँचाई पर स्थित क्रिकेट मैदान",
+      "fact": "The Himachal Pradesh Cricket Association Stadium in Dharamshala is one of the highest international cricket grounds, set against the Dhauladhar range.",
+      "facth": "धर्मशाला का हिमाचल प्रदेश क्रिकेट संघ स्टेडियम सबसे ऊँचे अंतरराष्ट्रीय क्रिकेट मैदानों में से एक है, जिसकी पृष्ठभूमि में धौलाधार पर्वतमाला है।"
+    },
+    {
+      "n": "Major Dhyan Chand National Stadium",
+      "h": "मेजर ध्यानचंद राष्ट्रीय स्टेडियम",
+      "s": "Delhi",
+      "st": "New Delhi, Delhi",
+      "sh": "नई दिल्ली, दिल्ली",
+      "c": "venue",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.61,
+      "lng": 77.23,
+      "kd": "Hockey stadium",
+      "kdh": "हॉकी स्टेडियम",
+      "tag": "Venue of the first Asian Games (1951)",
+      "tagh": "पहले एशियाई खेलों (1951) का स्थल",
+      "fact": "The National Stadium in New Delhi, now named after Major Dhyan Chand, was the main venue of the first Asian Games in 1951.",
+      "facth": "नई दिल्ली का राष्ट्रीय स्टेडियम, जिसका नाम अब मेजर ध्यानचंद के नाम पर है, 1951 के पहले एशियाई खेलों का मुख्य स्थल था।",
+      "x": [
+        [
+          "also",
+          "National Stadium",
+          "राष्ट्रीय स्टेडियम"
+        ]
+      ]
+    },
+    {
+      "n": "Jawaharlal Nehru Stadium, Delhi",
+      "h": "जवाहरलाल नेहरू स्टेडियम, दिल्ली",
+      "s": "Delhi",
+      "st": "New Delhi, Delhi",
+      "sh": "नई दिल्ली, दिल्ली",
+      "c": "venue",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.58,
+      "lng": 77.23,
+      "kd": "Multi-sport stadium",
+      "kdh": "बहु-खेल स्टेडियम",
+      "yr": "1982",
+      "yrh": "1982",
+      "tag": "Main venue of the 1982 Asian Games and 2010 Commonwealth Games",
+      "tagh": "1982 एशियाई खेलों और 2010 राष्ट्रमंडल खेलों का मुख्य स्थल",
+      "fact": "The Jawaharlal Nehru Stadium in New Delhi was built for the 1982 Asian Games and was the main venue of the 2010 Commonwealth Games.",
+      "facth": "नई दिल्ली का जवाहरलाल नेहरू स्टेडियम 1982 के एशियाई खेलों के लिए बना और 2010 राष्ट्रमंडल खेलों का मुख्य स्थल था।"
+    },
+    {
+      "n": "Salt Lake Stadium",
+      "h": "साल्ट लेक स्टेडियम",
+      "s": "West Bengal",
+      "st": "Kolkata, West Bengal",
+      "sh": "कोलकाता, पश्चिम बंगाल",
+      "c": "venue",
+      "rg": "E",
+      "d": 2,
+      "lat": 22.57,
+      "lng": 88.41,
+      "kd": "Football stadium",
+      "kdh": "फ़ुटबॉल स्टेडियम",
+      "tag": "Kolkata's big football stadium",
+      "tagh": "कोलकाता का बड़ा फ़ुटबॉल स्टेडियम",
+      "fact": "The Salt Lake Stadium, officially the Vivekananda Yuba Bharati Krirangan, is a large football stadium in Kolkata.",
+      "facth": "साल्ट लेक स्टेडियम, जिसका आधिकारिक नाम विवेकानंद युवा भारती क्रीड़ांगन है, कोलकाता का बड़ा फ़ुटबॉल स्टेडियम है।",
+      "x": [
+        [
+          "also",
+          "Vivekananda Yuba Bharati Krirangan",
+          "विवेकानंद युवा भारती क्रीड़ांगन"
+        ]
+      ]
+    },
+    {
+      "n": "Kalinga Stadium",
+      "h": "कलिंग स्टेडियम",
+      "s": "Odisha",
+      "st": "Bhubaneswar, Odisha",
+      "sh": "भुवनेश्वर, ओडिशा",
+      "c": "venue",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.29,
+      "lng": 85.82,
+      "kd": "Hockey stadium and athletics venue",
+      "kdh": "हॉकी स्टेडियम और एथलेटिक्स स्थल",
+      "tag": "Host of the Hockey World Cups of 2018 and 2023",
+      "tagh": "2018 और 2023 हॉकी विश्व कप का मेज़बान",
+      "fact": "Kalinga Stadium in Bhubaneswar hosted the men's Hockey World Cup in 2018 and, with Rourkela, in 2023. It also hosted the 2017 Asian Athletics Championships.",
+      "facth": "भुवनेश्वर के कलिंग स्टेडियम ने 2018 में और राउरकेला के साथ 2023 में पुरुष हॉकी विश्व कप की मेज़बानी की। इसमें 2017 की एशियाई एथलेटिक्स चैंपियनशिप भी हुई।"
+    },
+    {
+      "n": "Birsa Munda International Hockey Stadium",
+      "h": "बिरसा मुंडा अंतरराष्ट्रीय हॉकी स्टेडियम",
+      "s": "Odisha",
+      "st": "Rourkela, Odisha",
+      "sh": "राउरकेला, ओडिशा",
+      "c": "venue",
+      "rg": "E",
+      "d": 2,
+      "lat": 22.25,
+      "lng": 84.85,
+      "kd": "Hockey stadium",
+      "kdh": "हॉकी स्टेडियम",
+      "yr": "2023",
+      "yrh": "2023",
+      "tag": "Large hockey stadium built for the 2023 World Cup",
+      "tagh": "2023 विश्व कप के लिए बना बड़ा हॉकी स्टेडियम",
+      "fact": "The Birsa Munda International Hockey Stadium in Rourkela was built for the 2023 men's Hockey World Cup and is one of the largest hockey stadiums in the world.",
+      "facth": "राउरकेला का बिरसा मुंडा अंतरराष्ट्रीय हॉकी स्टेडियम 2023 के पुरुष हॉकी विश्व कप के लिए बना और यह विश्व के सबसे बड़े हॉकी स्टेडियमों में से एक है।"
+    },
+    {
+      "n": "Buddh International Circuit",
+      "h": "बुद्ध अंतरराष्ट्रीय सर्किट",
+      "s": "Uttar Pradesh",
+      "st": "Greater Noida, Uttar Pradesh",
+      "sh": "ग्रेटर नोएडा, उत्तर प्रदेश",
+      "c": "venue",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.35,
+      "lng": 77.53,
+      "kd": "Motorsport circuit",
+      "kdh": "मोटरस्पोर्ट सर्किट",
+      "tag": "Host of the Indian Formula One Grand Prix (2011–2013)",
+      "tagh": "भारतीय फ़ॉर्मूला वन ग्रां प्री (2011–2013) का मेज़बान",
+      "fact": "The Buddh International Circuit in Greater Noida hosted the Indian Formula One Grand Prix from 2011 to 2013 and the first MotoGP race in India in 2023.",
+      "facth": "ग्रेटर नोएडा के बुद्ध अंतरराष्ट्रीय सर्किट ने 2011 से 2013 तक भारतीय फ़ॉर्मूला वन ग्रां प्री और 2023 में भारत की पहली मोटोजीपी रेस की मेज़बानी की।"
+    },
+    {
+      "n": "NIS Patiala",
+      "h": "एनआईएस पटियाला",
+      "s": "Punjab",
+      "st": "Patiala, Punjab",
+      "sh": "पटियाला, पंजाब",
+      "c": "inst",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.34,
+      "lng": 76.39,
+      "kd": "Sports institute",
+      "kdh": "खेल संस्थान",
+      "yr": "1961",
+      "yrh": "1961",
+      "tag": "Netaji Subhas National Institute of Sports",
+      "tagh": "नेताजी सुभाष राष्ट्रीय खेल संस्थान",
+      "fact": "The Netaji Subhas National Institute of Sports in Patiala, set up in 1961 in the Moti Bagh palace, trains national coaches and athletes and is part of the Sports Authority of India.",
+      "facth": "पटियाला का नेताजी सुभाष राष्ट्रीय खेल संस्थान 1961 में मोती बाग महल में स्थापित हुआ; यह राष्ट्रीय प्रशिक्षकों और खिलाड़ियों को प्रशिक्षण देता है और भारतीय खेल प्राधिकरण का हिस्सा है।",
+      "x": [
+        [
+          "also",
+          "Netaji Subhas National Institute of Sports",
+          "नेताजी सुभाष राष्ट्रीय खेल संस्थान"
+        ]
+      ]
+    },
+    {
+      "n": "LNIPE Gwalior",
+      "h": "एलएनआईपीई ग्वालियर",
+      "s": "Madhya Pradesh",
+      "st": "Gwalior, Madhya Pradesh",
+      "sh": "ग्वालियर, मध्य प्रदेश",
+      "c": "inst",
+      "rg": "C",
+      "d": 2,
+      "lat": 26.21,
+      "lng": 78.18,
+      "kd": "Physical education university",
+      "kdh": "शारीरिक शिक्षा विश्वविद्यालय",
+      "yr": "1957",
+      "yrh": "1957",
+      "tag": "Lakshmibai National Institute of Physical Education",
+      "tagh": "लक्ष्मीबाई राष्ट्रीय शारीरिक शिक्षा संस्थान",
+      "fact": "The Lakshmibai National Institute of Physical Education in Gwalior, set up in 1957, is a deemed university for physical education.",
+      "facth": "ग्वालियर का लक्ष्मीबाई राष्ट्रीय शारीरिक शिक्षा संस्थान, 1957 में स्थापित, शारीरिक शिक्षा का डीम्ड विश्वविद्यालय है।"
+    },
+    {
+      "n": "National Sports University",
+      "h": "राष्ट्रीय खेल विश्वविद्यालय",
+      "s": "Manipur",
+      "st": "Imphal, Manipur",
+      "sh": "इंफाल, मणिपुर",
+      "c": "inst",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.75,
+      "lng": 93.88,
+      "kd": "Sports university",
+      "kdh": "खेल विश्वविद्यालय",
+      "yr": "2018",
+      "yrh": "2018",
+      "tag": "India's first national sports university",
+      "tagh": "भारत का पहला राष्ट्रीय खेल विश्वविद्यालय",
+      "fact": "The National Sports University in Imphal, Manipur, set up by an Act of Parliament in 2018, is India's first national sports university.",
+      "facth": "इंफाल, मणिपुर का राष्ट्रीय खेल विश्वविद्यालय, 2018 में संसद के अधिनियम से स्थापित, भारत का पहला राष्ट्रीय खेल विश्वविद्यालय है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "olympics",
+      "icon": "🥇",
+      "t": [
+        "India at the Olympics: firsts",
+        "ओलंपिक में भारत: प्रथम"
+      ],
+      "cols": [
+        [
+          "Record",
+          "रिकॉर्ड"
+        ],
+        [
+          "Who / when",
+          "कौन / कब"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First Olympic medals (silver, 200 m and 200 m hurdles)",
+            "पहले ओलंपिक पदक (रजत, 200 मी और 200 मी बाधा दौड़)"
+          ],
+          [
+            "Norman Pritchard, Paris 1900",
+            "नॉर्मन प्रिचर्ड, पेरिस 1900"
+          ]
+        ],
+        [
+          [
+            "First hockey gold",
+            "पहला हॉकी स्वर्ण"
+          ],
+          [
+            "Amsterdam 1928 (Dhyan Chand in the team)",
+            "एम्स्टर्डम 1928 (टीम में ध्यानचंद)"
+          ]
+        ],
+        [
+          [
+            "Hockey golds in all (men)",
+            "कुल हॉकी स्वर्ण (पुरुष)"
+          ],
+          [
+            "8: 1928, 1932, 1936, 1948, 1952, 1956, 1964, 1980",
+            "8: 1928, 1932, 1936, 1948, 1952, 1956, 1964, 1980"
+          ]
+        ],
+        [
+          [
+            "First individual medal after independence",
+            "स्वतंत्रता के बाद पहला व्यक्तिगत पदक"
+          ],
+          [
+            "K. D. Jadhav, wrestling bronze, Helsinki 1952",
+            "के. डी. जाधव, कुश्ती कांस्य, हेलसिंकी 1952"
+          ]
+        ],
+        [
+          [
+            "First woman medallist",
+            "पहली महिला पदक विजेता"
+          ],
+          [
+            "Karnam Malleswari, weightlifting bronze, Sydney 2000",
+            "कर्णम मल्लेश्वरी, भारोत्तोलन कांस्य, सिडनी 2000"
+          ]
+        ],
+        [
+          [
+            "First individual gold",
+            "पहला व्यक्तिगत स्वर्ण"
+          ],
+          [
+            "Abhinav Bindra, 10 m air rifle, Beijing 2008",
+            "अभिनव बिंद्रा, 10 मी एयर राइफ़ल, बीजिंग 2008"
+          ]
+        ],
+        [
+          [
+            "First boxing medal",
+            "मुक्केबाज़ी का पहला पदक"
+          ],
+          [
+            "Vijender Singh, bronze, Beijing 2008",
+            "विजेंदर सिंह, कांस्य, बीजिंग 2008"
+          ]
+        ],
+        [
+          [
+            "First athletics gold",
+            "एथलेटिक्स का पहला स्वर्ण"
+          ],
+          [
+            "Neeraj Chopra, javelin, Tokyo 2020",
+            "नीरज चोपड़ा, भाला फेंक, टोक्यो 2020"
+          ]
+        ],
+        [
+          [
+            "Best total",
+            "सर्वाधिक पदक"
+          ],
+          [
+            "7 medals, Tokyo 2020 (1 gold, 2 silver, 4 bronze)",
+            "7 पदक, टोक्यो 2020 (1 स्वर्ण, 2 रजत, 4 कांस्य)"
+          ]
+        ],
+        [
+          [
+            "First woman with two individual medals",
+            "दो व्यक्तिगत पदक जीतने वाली पहली महिला"
+          ],
+          [
+            "P. V. Sindhu, badminton: silver 2016, bronze 2020",
+            "पी. वी. सिंधु, बैडमिंटन: रजत 2016, कांस्य 2020"
+          ]
+        ],
+        [
+          [
+            "Two medals at one Games (after independence)",
+            "एक ही ओलंपिक में दो पदक (स्वतंत्रता के बाद)"
+          ],
+          [
+            "Manu Bhaker, two shooting bronzes, Paris 2024",
+            "मनु भाकर, निशानेबाज़ी में दो कांस्य, पेरिस 2024"
+          ]
+        ],
+        [
+          [
+            "Paris 2024",
+            "पेरिस 2024"
+          ],
+          [
+            "6 medals (1 silver, 5 bronze)",
+            "6 पदक (1 रजत, 5 कांस्य)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "games",
+      "icon": "🏟️",
+      "t": [
+        "Olympic, Asian and Commonwealth Games",
+        "ओलंपिक, एशियाई और राष्ट्रमंडल खेल"
+      ],
+      "cols": [
+        [
+          "Point",
+          "बिंदु"
+        ],
+        [
+          "Fact",
+          "तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First modern Olympics",
+            "पहला आधुनिक ओलंपिक"
+          ],
+          [
+            "Athens, 1896",
+            "एथेंस, 1896"
+          ]
+        ],
+        [
+          [
+            "Next Summer Olympics",
+            "अगला ग्रीष्मकालीन ओलंपिक"
+          ],
+          [
+            "Los Angeles 2028, then Brisbane 2032",
+            "लॉस एंजिल्स 2028, फिर ब्रिस्बेन 2032"
+          ]
+        ],
+        [
+          [
+            "Olympic gold medal is mostly",
+            "ओलंपिक स्वर्ण पदक मुख्यतः"
+          ],
+          [
+            "Silver, plated with gold",
+            "चाँदी का, सोने की परत चढ़ा"
+          ]
+        ],
+        [
+          [
+            "First Asian Games",
+            "पहले एशियाई खेल"
+          ],
+          [
+            "New Delhi, 1951",
+            "नई दिल्ली, 1951"
+          ]
+        ],
+        [
+          [
+            "India hosted the Asian Games",
+            "भारत ने एशियाई खेलों की मेज़बानी की"
+          ],
+          [
+            "Twice: 1951 and 1982 (both New Delhi)",
+            "दो बार: 1951 और 1982 (दोनों नई दिल्ली)"
+          ]
+        ],
+        [
+          [
+            "Held every",
+            "आयोजन का अंतराल"
+          ],
+          [
+            "4 years (Olympics, Asian and Commonwealth Games)",
+            "4 वर्ष (ओलंपिक, एशियाई और राष्ट्रमंडल खेल)"
+          ]
+        ],
+        [
+          [
+            "India at Hangzhou 2022 (held 2023)",
+            "हांगझोउ 2022 (2023 में आयोजित) में भारत"
+          ],
+          [
+            "107 medals (28 gold), 4th",
+            "107 पदक (28 स्वर्ण), चौथा स्थान"
+          ]
+        ],
+        [
+          [
+            "First Commonwealth Games",
+            "पहले राष्ट्रमंडल खेल"
+          ],
+          [
+            "Hamilton, Canada, 1930 (as the British Empire Games)",
+            "हैमिल्टन, कनाडा, 1930 (ब्रिटिश एम्पायर गेम्स के रूप में)"
+          ]
+        ],
+        [
+          [
+            "India hosted the Commonwealth Games",
+            "भारत ने राष्ट्रमंडल खेलों की मेज़बानी की"
+          ],
+          [
+            "New Delhi, 2010",
+            "नई दिल्ली, 2010"
+          ]
+        ],
+        [
+          [
+            "India at Birmingham 2022",
+            "बर्मिंघम 2022 में भारत"
+          ],
+          [
+            "61 medals (22 gold)",
+            "61 पदक (22 स्वर्ण)"
+          ]
+        ],
+        [
+          [
+            "First Youth Olympics",
+            "पहला युवा ओलंपिक"
+          ],
+          [
+            "Singapore, 2010",
+            "सिंगापुर, 2010"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "players",
+      "icon": "👥",
+      "t": [
+        "Players per side (on the field)",
+        "प्रति टीम खिलाड़ी (मैदान पर)"
+      ],
+      "cols": [
+        [
+          "Sport",
+          "खेल"
+        ],
+        [
+          "Players",
+          "खिलाड़ी"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Cricket, football, hockey",
+            "क्रिकेट, फ़ुटबॉल, हॉकी"
+          ],
+          [
+            "11",
+            "11"
+          ]
+        ],
+        [
+          [
+            "Rugby union",
+            "रग्बी यूनियन"
+          ],
+          [
+            "15",
+            "15"
+          ]
+        ],
+        [
+          [
+            "Rugby league",
+            "रग्बी लीग"
+          ],
+          [
+            "13",
+            "13"
+          ]
+        ],
+        [
+          [
+            "Baseball",
+            "बेसबॉल"
+          ],
+          [
+            "9",
+            "9"
+          ]
+        ],
+        [
+          [
+            "Kho-kho",
+            "खो-खो"
+          ],
+          [
+            "9",
+            "9"
+          ]
+        ],
+        [
+          [
+            "Kabaddi",
+            "कबड्डी"
+          ],
+          [
+            "7",
+            "7"
+          ]
+        ],
+        [
+          [
+            "Handball, water polo, netball, rugby sevens",
+            "हैंडबॉल, वॉटर पोलो, नेटबॉल, रग्बी सेवन्स"
+          ],
+          [
+            "7",
+            "7"
+          ]
+        ],
+        [
+          [
+            "Volleyball, ice hockey",
+            "वॉलीबॉल, आइस हॉकी"
+          ],
+          [
+            "6",
+            "6"
+          ]
+        ],
+        [
+          [
+            "Basketball",
+            "बास्केटबॉल"
+          ],
+          [
+            "5",
+            "5"
+          ]
+        ],
+        [
+          [
+            "Polo",
+            "पोलो"
+          ],
+          [
+            "4",
+            "4"
+          ]
+        ],
+        [
+          [
+            "Beach volleyball",
+            "बीच वॉलीबॉल"
+          ],
+          [
+            "2",
+            "2"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "measures",
+      "icon": "📏",
+      "t": [
+        "Measurements asked in exams",
+        "परीक्षा में पूछे जाने वाले माप"
+      ],
+      "cols": [
+        [
+          "Item",
+          "वस्तु"
+        ],
+        [
+          "Measure",
+          "माप"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Cricket pitch length",
+            "क्रिकेट पिच की लंबाई"
+          ],
+          [
+            "22 yards (20.12 m)",
+            "22 गज़ (20.12 मी)"
+          ]
+        ],
+        [
+          [
+            "Football goal",
+            "फ़ुटबॉल गोल"
+          ],
+          [
+            "7.32 m wide, 2.44 m high",
+            "7.32 मी चौड़ा, 2.44 मी ऊँचा"
+          ]
+        ],
+        [
+          [
+            "Basketball ring height",
+            "बास्केटबॉल रिंग की ऊँचाई"
+          ],
+          [
+            "3.05 m (10 feet)",
+            "3.05 मी (10 फ़ुट)"
+          ]
+        ],
+        [
+          [
+            "Basketball three-point line (international)",
+            "बास्केटबॉल तीन-अंक रेखा (अंतरराष्ट्रीय)"
+          ],
+          [
+            "6.75 m from the basket",
+            "बास्केट से 6.75 मी"
+          ]
+        ],
+        [
+          [
+            "Basketball court",
+            "बास्केटबॉल कोर्ट"
+          ],
+          [
+            "28 m × 15 m",
+            "28 मी × 15 मी"
+          ]
+        ],
+        [
+          [
+            "Volleyball court",
+            "वॉलीबॉल कोर्ट"
+          ],
+          [
+            "18 m × 9 m",
+            "18 मी × 9 मी"
+          ]
+        ],
+        [
+          [
+            "Kabaddi court (men)",
+            "कबड्डी कोर्ट (पुरुष)"
+          ],
+          [
+            "13 m × 10 m",
+            "13 मी × 10 मी"
+          ]
+        ],
+        [
+          [
+            "Table tennis ball",
+            "टेबल टेनिस गेंद"
+          ],
+          [
+            "40 mm diameter",
+            "40 मिमी व्यास"
+          ]
+        ],
+        [
+          [
+            "Table tennis table",
+            "टेबल टेनिस टेबल"
+          ],
+          [
+            "2.74 m × 1.525 m, 76 cm high",
+            "2.74 मी × 1.525 मी, 76 सेमी ऊँची"
+          ]
+        ],
+        [
+          [
+            "Marathon",
+            "मैराथन"
+          ],
+          [
+            "42.195 km",
+            "42.195 किमी"
+          ]
+        ],
+        [
+          [
+            "Shot put, men / women",
+            "गोला फेंक, पुरुष / महिला"
+          ],
+          [
+            "7.26 kg / 4 kg",
+            "7.26 किग्रा / 4 किग्रा"
+          ]
+        ],
+        [
+          [
+            "Javelin, men / women",
+            "भाला, पुरुष / महिला"
+          ],
+          [
+            "800 g / 600 g",
+            "800 ग्राम / 600 ग्राम"
+          ]
+        ],
+        [
+          [
+            "Discus, men / women",
+            "चक्का, पुरुष / महिला"
+          ],
+          [
+            "2 kg / 1 kg",
+            "2 किग्रा / 1 किग्रा"
+          ]
+        ],
+        [
+          [
+            "Chess board",
+            "शतरंज की बिसात"
+          ],
+          [
+            "64 squares",
+            "64 खाने"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "terms",
+      "icon": "🗣️",
+      "t": [
+        "Terms by sport",
+        "खेल के अनुसार शब्दावली"
+      ],
+      "cols": [
+        [
+          "Sport",
+          "खेल"
+        ],
+        [
+          "Terms",
+          "शब्द"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Cricket",
+            "क्रिकेट"
+          ],
+          [
+            "Googly, yorker, maiden over, LBW, hat-trick, duck, outswinger",
+            "गुगली, यॉर्कर, मेडन ओवर, LBW, हैट्रिक, डक, आउटस्विंगर"
+          ]
+        ],
+        [
+          [
+            "Football",
+            "फ़ुटबॉल"
+          ],
+          [
+            "Offside, penalty kick, corner kick, free kick",
+            "ऑफ़साइड, पेनल्टी किक, कॉर्नर किक, फ़्री किक"
+          ]
+        ],
+        [
+          [
+            "Hockey",
+            "हॉकी"
+          ],
+          [
+            "Penalty corner, penalty stroke, bully, dribble",
+            "पेनल्टी कॉर्नर, पेनल्टी स्ट्रोक, बुली, ड्रिबल"
+          ]
+        ],
+        [
+          [
+            "Tennis",
+            "टेनिस"
+          ],
+          [
+            "Ace, deuce, love, advantage, grand slam",
+            "ऐस, ड्यूस, लव, एडवांटेज, ग्रैंड स्लैम"
+          ]
+        ],
+        [
+          [
+            "Badminton",
+            "बैडमिंटन"
+          ],
+          [
+            "Smash, drop, clear, let, shuttlecock",
+            "स्मैश, ड्रॉप, क्लियर, लेट, शटलकॉक"
+          ]
+        ],
+        [
+          [
+            "Golf",
+            "गोल्फ़"
+          ],
+          [
+            "Birdie, eagle, bogey, par, tee, putt, caddie",
+            "बर्डी, ईगल, बोगी, पार, टी, पट, कैडी"
+          ]
+        ],
+        [
+          [
+            "Chess",
+            "शतरंज"
+          ],
+          [
+            "Checkmate, castling, stalemate, gambit",
+            "चेकमेट, कैसलिंग, स्टेलमेट, गैम्बिट"
+          ]
+        ],
+        [
+          [
+            "Boxing",
+            "मुक्केबाज़ी"
+          ],
+          [
+            "Knockout, jab, hook, uppercut",
+            "नॉकआउट, जैब, हुक, अपरकट"
+          ]
+        ],
+        [
+          [
+            "Kabaddi",
+            "कबड्डी"
+          ],
+          [
+            "Raider, cant, bonus line, lobby",
+            "रेडर, कैंट, बोनस लाइन, लॉबी"
+          ]
+        ],
+        [
+          [
+            "Basketball",
+            "बास्केटबॉल"
+          ],
+          [
+            "Dunk, rebound, free throw, three-pointer",
+            "डंक, रिबाउंड, फ़्री थ्रो, थ्री-पॉइंटर"
+          ]
+        ],
+        [
+          [
+            "Volleyball",
+            "वॉलीबॉल"
+          ],
+          [
+            "Spike, block, libero",
+            "स्पाइक, ब्लॉक, लिबेरो"
+          ]
+        ],
+        [
+          [
+            "Polo",
+            "पोलो"
+          ],
+          [
+            "Chukker (a period of play)",
+            "चक्कर (खेल की एक अवधि)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "cups",
+      "icon": "🏆",
+      "t": [
+        "Cups and trophies",
+        "कप और ट्रॉफी"
+      ],
+      "cols": [
+        [
+          "Trophy",
+          "ट्रॉफी"
+        ],
+        [
+          "Sport",
+          "खेल"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Ranji Trophy, Duleep Trophy, Irani Cup, Vijay Hazare Trophy",
+            "रणजी ट्रॉफी, दलीप ट्रॉफी, ईरानी कप, विजय हज़ारे ट्रॉफी"
+          ],
+          [
+            "Cricket (Indian domestic)",
+            "क्रिकेट (भारतीय घरेलू)"
+          ]
+        ],
+        [
+          [
+            "Border–Gavaskar Trophy",
+            "बॉर्डर-गावस्कर ट्रॉफी"
+          ],
+          [
+            "Cricket: India v Australia Tests",
+            "क्रिकेट: भारत बनाम ऑस्ट्रेलिया टेस्ट"
+          ]
+        ],
+        [
+          [
+            "The Ashes",
+            "द एशेज़"
+          ],
+          [
+            "Cricket: England v Australia Tests",
+            "क्रिकेट: इंग्लैंड बनाम ऑस्ट्रेलिया टेस्ट"
+          ]
+        ],
+        [
+          [
+            "Durand Cup (1888, Asia's oldest football tournament), Santosh Trophy",
+            "डूरंड कप (1888, एशिया का सबसे पुराना फ़ुटबॉल टूर्नामेंट), संतोष ट्रॉफी"
+          ],
+          [
+            "Football",
+            "फ़ुटबॉल"
+          ]
+        ],
+        [
+          [
+            "Beighton Cup, Aga Khan Cup",
+            "बेटन कप, आगा खान कप"
+          ],
+          [
+            "Hockey",
+            "हॉकी"
+          ]
+        ],
+        [
+          [
+            "Thomas Cup (men), Uber Cup (women), Sudirman Cup (mixed)",
+            "थॉमस कप (पुरुष), उबेर कप (महिला), सुदीरमन कप (मिश्रित)"
+          ],
+          [
+            "Badminton",
+            "बैडमिंटन"
+          ]
+        ],
+        [
+          [
+            "Davis Cup (men), Billie Jean King Cup (women)",
+            "डेविस कप (पुरुष), बिली जीन किंग कप (महिला)"
+          ],
+          [
+            "Tennis",
+            "टेनिस"
+          ]
+        ],
+        [
+          [
+            "Swaythling Cup (men), Corbillon Cup (women)",
+            "स्वेथलिंग कप (पुरुष), कॉर्बिलन कप (महिला)"
+          ],
+          [
+            "Table tennis",
+            "टेबल टेनिस"
+          ]
+        ],
+        [
+          [
+            "Ryder Cup",
+            "राइडर कप"
+          ],
+          [
+            "Golf",
+            "गोल्फ़"
+          ]
+        ],
+        [
+          [
+            "America's Cup",
+            "अमेरिका कप"
+          ],
+          [
+            "Sailing (yachting)",
+            "नौकायन (यॉटिंग)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "bodies",
+      "icon": "🏛️",
+      "t": [
+        "Governing bodies and headquarters",
+        "शासी संस्थाएँ और मुख्यालय"
+      ],
+      "cols": [
+        [
+          "Body",
+          "संस्था"
+        ],
+        [
+          "Headquarters",
+          "मुख्यालय"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "International Olympic Committee (IOC)",
+            "अंतरराष्ट्रीय ओलंपिक समिति (IOC)"
+          ],
+          [
+            "Lausanne, Switzerland",
+            "लॉज़ेन, स्विट्ज़रलैंड"
+          ]
+        ],
+        [
+          [
+            "FIFA (football)",
+            "फ़ीफ़ा (फ़ुटबॉल)"
+          ],
+          [
+            "Zurich, Switzerland",
+            "ज़्यूरिख़, स्विट्ज़रलैंड"
+          ]
+        ],
+        [
+          [
+            "International Cricket Council (ICC)",
+            "अंतरराष्ट्रीय क्रिकेट परिषद (ICC)"
+          ],
+          [
+            "Dubai, UAE",
+            "दुबई, संयुक्त अरब अमीरात"
+          ]
+        ],
+        [
+          [
+            "International Hockey Federation (FIH)",
+            "अंतरराष्ट्रीय हॉकी महासंघ (FIH)"
+          ],
+          [
+            "Lausanne, Switzerland",
+            "लॉज़ेन, स्विट्ज़रलैंड"
+          ]
+        ],
+        [
+          [
+            "World Athletics",
+            "विश्व एथलेटिक्स"
+          ],
+          [
+            "Monaco",
+            "मोनाको"
+          ]
+        ],
+        [
+          [
+            "Badminton World Federation (BWF)",
+            "विश्व बैडमिंटन महासंघ (BWF)"
+          ],
+          [
+            "Kuala Lumpur, Malaysia",
+            "कुआलालंपुर, मलेशिया"
+          ]
+        ],
+        [
+          [
+            "FIDE (chess)",
+            "फ़िडे (शतरंज)"
+          ],
+          [
+            "Lausanne, Switzerland",
+            "लॉज़ेन, स्विट्ज़रलैंड"
+          ]
+        ],
+        [
+          [
+            "World Anti-Doping Agency (WADA)",
+            "विश्व डोपिंग रोधी एजेंसी (WADA)"
+          ],
+          [
+            "Montreal, Canada",
+            "मॉन्ट्रियल, कनाडा"
+          ]
+        ],
+        [
+          [
+            "Olympic Council of Asia",
+            "एशिया ओलंपिक परिषद"
+          ],
+          [
+            "Kuwait City, Kuwait",
+            "कुवैत सिटी, कुवैत"
+          ]
+        ],
+        [
+          [
+            "BCCI (cricket, India)",
+            "BCCI (क्रिकेट, भारत)"
+          ],
+          [
+            "Mumbai",
+            "मुंबई"
+          ]
+        ],
+        [
+          [
+            "Indian Olympic Association, Sports Authority of India, AIFF, Hockey India",
+            "भारतीय ओलंपिक संघ, भारतीय खेल प्राधिकरण, AIFF, हॉकी इंडिया"
+          ],
+          [
+            "New Delhi",
+            "नई दिल्ली"
+          ]
+        ],
+        [
+          [
+            "First woman president of the Indian Olympic Association",
+            "भारतीय ओलंपिक संघ की पहली महिला अध्यक्ष"
+          ],
+          [
+            "P. T. Usha (2022)",
+            "पी. टी. उषा (2022)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "awards",
+      "icon": "🎖️",
+      "t": [
+        "India's sports awards and days",
+        "भारत के खेल पुरस्कार और दिवस"
+      ],
+      "cols": [
+        [
+          "Award / day",
+          "पुरस्कार / दिवस"
+        ],
+        [
+          "For",
+          "किसके लिए"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Major Dhyan Chand Khel Ratna",
+            "मेजर ध्यानचंद खेल रत्न"
+          ],
+          [
+            "India's highest sports honour (named Rajiv Gandhi Khel Ratna until 2021)",
+            "भारत का सर्वोच्च खेल सम्मान (2021 तक राजीव गांधी खेल रत्न)"
+          ]
+        ],
+        [
+          [
+            "Arjuna Award",
+            "अर्जुन पुरस्कार"
+          ],
+          [
+            "Outstanding performance by sportspersons (since 1961)",
+            "खिलाड़ियों का उत्कृष्ट प्रदर्शन (1961 से)"
+          ]
+        ],
+        [
+          [
+            "Dronacharya Award",
+            "द्रोणाचार्य पुरस्कार"
+          ],
+          [
+            "Coaches",
+            "प्रशिक्षक"
+          ]
+        ],
+        [
+          [
+            "Major Dhyan Chand Award",
+            "मेजर ध्यानचंद पुरस्कार"
+          ],
+          [
+            "Lifetime achievement in sports",
+            "खेलों में आजीवन उपलब्धि"
+          ]
+        ],
+        [
+          [
+            "Maulana Abul Kalam Azad Trophy",
+            "मौलाना अबुल कलाम आज़ाद ट्रॉफी"
+          ],
+          [
+            "Best university in inter-university sports",
+            "अंतर-विश्वविद्यालय खेलों में सर्वश्रेष्ठ विश्वविद्यालय"
+          ]
+        ],
+        [
+          [
+            "Tenzing Norgay National Adventure Award",
+            "तेनज़िंग नोर्गे राष्ट्रीय साहसिक पुरस्कार"
+          ],
+          [
+            "Adventure on land, sea and air",
+            "थल, जल और वायु में साहसिक कार्य"
+          ]
+        ],
+        [
+          [
+            "National Sports Day",
+            "राष्ट्रीय खेल दिवस"
+          ],
+          [
+            "29 August, birth anniversary of Major Dhyan Chand",
+            "29 अगस्त, मेजर ध्यानचंद की जयंती"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "origins",
+      "icon": "💡",
+      "t": [
+        "Origins and inventors",
+        "उद्गम और आविष्कारक"
+      ],
+      "cols": [
+        [
+          "Sport",
+          "खेल"
+        ],
+        [
+          "Origin",
+          "उद्गम"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Basketball",
+            "बास्केटबॉल"
+          ],
+          [
+            "James Naismith, 1891 (USA)",
+            "जेम्स नैस्मिथ, 1891 (अमेरिका)"
+          ]
+        ],
+        [
+          [
+            "Volleyball",
+            "वॉलीबॉल"
+          ],
+          [
+            "William G. Morgan, 1895 (USA)",
+            "विलियम जी. मॉर्गन, 1895 (अमेरिका)"
+          ]
+        ],
+        [
+          [
+            "Modern polo",
+            "आधुनिक पोलो"
+          ],
+          [
+            "From Sagol Kangjei of Manipur",
+            "मणिपुर के सगोल कांगजेई से"
+          ]
+        ],
+        [
+          [
+            "Snooker",
+            "स्नूकर"
+          ],
+          [
+            "Devised by British army officers in Jabalpur, 1875",
+            "1875 में जबलपुर में ब्रिटिश सैन्य अधिकारियों द्वारा"
+          ]
+        ],
+        [
+          [
+            "Chess",
+            "शतरंज"
+          ],
+          [
+            "From chaturanga of ancient India",
+            "प्राचीन भारत के चतुरंग से"
+          ]
+        ],
+        [
+          [
+            "Badminton",
+            "बैडमिंटन"
+          ],
+          [
+            "Played by British officers in India as 'Poona'; named after Badminton House, England",
+            "ब्रिटिश अधिकारी भारत में इसे ‘पूना’ नाम से खेलते थे; नाम इंग्लैंड के बैडमिंटन हाउस से"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "national",
+      "icon": "🌐",
+      "t": [
+        "National sports of countries",
+        "देशों के राष्ट्रीय खेल"
+      ],
+      "cols": [
+        [
+          "Country",
+          "देश"
+        ],
+        [
+          "National sport",
+          "राष्ट्रीय खेल"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "India",
+            "भारत"
+          ],
+          [
+            "No official national sport (hockey is often thought to be)",
+            "कोई आधिकारिक राष्ट्रीय खेल नहीं (अक्सर हॉकी माना जाता है)"
+          ]
+        ],
+        [
+          [
+            "United States",
+            "संयुक्त राज्य अमेरिका"
+          ],
+          [
+            "Baseball",
+            "बेसबॉल"
+          ]
+        ],
+        [
+          [
+            "Canada",
+            "कनाडा"
+          ],
+          [
+            "Lacrosse (summer) and ice hockey (winter)",
+            "लैक्रोस (ग्रीष्म) और आइस हॉकी (शीत)"
+          ]
+        ],
+        [
+          [
+            "Japan",
+            "जापान"
+          ],
+          [
+            "Sumo wrestling",
+            "सूमो कुश्ती"
+          ]
+        ],
+        [
+          [
+            "Bangladesh",
+            "बांग्लादेश"
+          ],
+          [
+            "Kabaddi",
+            "कबड्डी"
+          ]
+        ],
+        [
+          [
+            "Pakistan",
+            "पाकिस्तान"
+          ],
+          [
+            "Field hockey",
+            "हॉकी"
+          ]
+        ],
+        [
+          [
+            "Sri Lanka",
+            "श्रीलंका"
+          ],
+          [
+            "Volleyball",
+            "वॉलीबॉल"
+          ]
+        ],
+        [
+          [
+            "Bhutan",
+            "भूटान"
+          ],
+          [
+            "Archery",
+            "तीरंदाज़ी"
+          ]
+        ],
+        [
+          [
+            "Afghanistan",
+            "अफ़ग़ानिस्तान"
+          ],
+          [
+            "Buzkashi",
+            "बुज़काशी"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "olympics",
+      "q": [
+        "Who won India's first individual Olympic gold medal?",
+        "भारत का पहला व्यक्तिगत ओलंपिक स्वर्ण पदक किसने जीता?"
+      ],
+      "o": [
+        [
+          "Abhinav Bindra",
+          "अभिनव बिंद्रा"
+        ],
+        [
+          "Rajyavardhan Singh Rathore",
+          "राज्यवर्धन सिंह राठौड़"
+        ],
+        [
+          "Neeraj Chopra",
+          "नीरज चोपड़ा"
+        ],
+        [
+          "Gagan Narang",
+          "गगन नारंग"
+        ]
+      ],
+      "e": [
+        "Abhinav Bindra won the 10 m air rifle gold at Beijing 2008.",
+        "अभिनव बिंद्रा ने बीजिंग 2008 में 10 मी एयर राइफ़ल का स्वर्ण जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "Who won independent India's first individual Olympic medal?",
+        "स्वतंत्र भारत का पहला व्यक्तिगत ओलंपिक पदक किसने जीता?"
+      ],
+      "o": [
+        [
+          "K. D. Jadhav",
+          "के. डी. जाधव"
+        ],
+        [
+          "Milkha Singh",
+          "मिल्खा सिंह"
+        ],
+        [
+          "Leander Paes",
+          "लिएंडर पेस"
+        ],
+        [
+          "Norman Pritchard",
+          "नॉर्मन प्रिचर्ड"
+        ]
+      ],
+      "e": [
+        "Khashaba Dadasaheb Jadhav won a wrestling bronze at Helsinki 1952.",
+        "खाशाबा दादासाहेब जाधव ने हेलसिंकी 1952 में कुश्ती का कांस्य जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "Who was the first Indian woman to win an Olympic medal?",
+        "ओलंपिक पदक जीतने वाली पहली भारतीय महिला कौन थीं?"
+      ],
+      "o": [
+        [
+          "Karnam Malleswari",
+          "कर्णम मल्लेश्वरी"
+        ],
+        [
+          "P. T. Usha",
+          "पी. टी. उषा"
+        ],
+        [
+          "M. C. Mary Kom",
+          "एम. सी. मैरी कॉम"
+        ],
+        [
+          "Saina Nehwal",
+          "साइना नेहवाल"
+        ]
+      ],
+      "e": [
+        "Karnam Malleswari won a weightlifting bronze at Sydney 2000.",
+        "कर्णम मल्लेश्वरी ने सिडनी 2000 में भारोत्तोलन का कांस्य जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "Norman Pritchard won India's first Olympic medals, two silvers in the 200 m and 200 m hurdles, at which Games?",
+        "नॉर्मन प्रिचर्ड ने 200 मी और 200 मी बाधा दौड़ में दो रजत, यानी भारत के पहले ओलंपिक पदक, किस ओलंपिक में जीते?"
+      ],
+      "o": [
+        [
+          "Paris 1900",
+          "पेरिस 1900"
+        ],
+        [
+          "Athens 1896",
+          "एथेंस 1896"
+        ],
+        [
+          "London 1908",
+          "लंदन 1908"
+        ],
+        [
+          "Amsterdam 1928",
+          "एम्स्टर्डम 1928"
+        ]
+      ],
+      "e": [
+        "Pritchard won both silvers at the 1900 Paris Olympics.",
+        "प्रिचर्ड ने 1900 के पेरिस ओलंपिक में दोनों रजत जीते।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "At which Olympics did Neeraj Chopra win the javelin gold?",
+        "नीरज चोपड़ा ने भाला फेंक का स्वर्ण किस ओलंपिक में जीता?"
+      ],
+      "o": [
+        [
+          "Tokyo 2020",
+          "टोक्यो 2020"
+        ],
+        [
+          "Rio 2016",
+          "रियो 2016"
+        ],
+        [
+          "Paris 2024",
+          "पेरिस 2024"
+        ],
+        [
+          "London 2012",
+          "लंदन 2012"
+        ]
+      ],
+      "e": [
+        "Neeraj Chopra won gold at Tokyo 2020 (held in 2021), India's first Olympic gold in athletics. He won silver at Paris 2024.",
+        "नीरज चोपड़ा ने टोक्यो 2020 (2021 में आयोजित) में स्वर्ण जीता, जो एथलेटिक्स में भारत का पहला ओलंपिक स्वर्ण है। पेरिस 2024 में उन्होंने रजत जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "How many Olympic gold medals has India's men's hockey team won?",
+        "भारत की पुरुष हॉकी टीम ने कितने ओलंपिक स्वर्ण पदक जीते हैं?"
+      ],
+      "o": [
+        [
+          "8",
+          "8"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "7",
+          "7"
+        ],
+        [
+          "10",
+          "10"
+        ]
+      ],
+      "e": [
+        "Eight: 1928, 1932, 1936, 1948, 1952, 1956, 1964 and 1980.",
+        "आठ: 1928, 1932, 1936, 1948, 1952, 1956, 1964 और 1980।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "India won its first Olympic hockey gold in",
+        "भारत ने अपना पहला ओलंपिक हॉकी स्वर्ण कब जीता?"
+      ],
+      "o": [
+        [
+          "1928, Amsterdam",
+          "1928, एम्स्टर्डम"
+        ],
+        [
+          "1932, Los Angeles",
+          "1932, लॉस एंजिल्स"
+        ],
+        [
+          "1936, Berlin",
+          "1936, बर्लिन"
+        ],
+        [
+          "1948, London",
+          "1948, लंदन"
+        ]
+      ],
+      "e": [
+        "The 1928 Amsterdam team, with Dhyan Chand, won India's first hockey gold.",
+        "ध्यानचंद वाली 1928 एम्स्टर्डम टीम ने भारत का पहला हॉकी स्वर्ण जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "How many medals did India win at the Tokyo 2020 Olympics?",
+        "टोक्यो 2020 ओलंपिक में भारत ने कितने पदक जीते?"
+      ],
+      "o": [
+        [
+          "7",
+          "7"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "e": [
+        "7 medals (1 gold, 2 silver, 4 bronze), India's best Olympic total.",
+        "7 पदक (1 स्वर्ण, 2 रजत, 4 कांस्य), भारत का अब तक का सर्वश्रेष्ठ ओलंपिक प्रदर्शन।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "What did Manu Bhaker achieve at the Paris 2024 Olympics?",
+        "पेरिस 2024 ओलंपिक में मनु भाकर ने क्या उपलब्धि हासिल की?"
+      ],
+      "o": [
+        [
+          "Two bronze medals in shooting at one Games",
+          "एक ही ओलंपिक में निशानेबाज़ी में दो कांस्य पदक"
+        ],
+        [
+          "A gold and a bronze in shooting",
+          "निशानेबाज़ी में एक स्वर्ण और एक कांस्य"
+        ],
+        [
+          "Two silver medals in archery",
+          "तीरंदाज़ी में दो रजत पदक"
+        ],
+        [
+          "A silver medal in wrestling",
+          "कुश्ती में एक रजत पदक"
+        ]
+      ],
+      "e": [
+        "She won bronze in the women's 10 m air pistol and the mixed team 10 m air pistol, the first Indian since independence to win two medals at one Games.",
+        "उन्होंने महिला 10 मी एयर पिस्टल और मिश्रित टीम 10 मी एयर पिस्टल में कांस्य जीता; स्वतंत्रता के बाद एक ही ओलंपिक में दो पदक जीतने वाली वे पहली भारतीय हैं।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "Who was the first Indian woman to win two individual Olympic medals?",
+        "दो व्यक्तिगत ओलंपिक पदक जीतने वाली पहली भारतीय महिला कौन हैं?"
+      ],
+      "o": [
+        [
+          "P. V. Sindhu",
+          "पी. वी. सिंधु"
+        ],
+        [
+          "Saina Nehwal",
+          "साइना नेहवाल"
+        ],
+        [
+          "M. C. Mary Kom",
+          "एम. सी. मैरी कॉम"
+        ],
+        [
+          "Sakshi Malik",
+          "साक्षी मलिक"
+        ]
+      ],
+      "e": [
+        "P. V. Sindhu won badminton silver at Rio 2016 and bronze at Tokyo 2020.",
+        "पी. वी. सिंधु ने रियो 2016 में बैडमिंटन का रजत और टोक्यो 2020 में कांस्य जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "Who won India's first Olympic medal in boxing?",
+        "मुक्केबाज़ी में भारत का पहला ओलंपिक पदक किसने जीता?"
+      ],
+      "o": [
+        [
+          "Vijender Singh",
+          "विजेंदर सिंह"
+        ],
+        [
+          "M. C. Mary Kom",
+          "एम. सी. मैरी कॉम"
+        ],
+        [
+          "Lovlina Borgohain",
+          "लवलीना बोरगोहेन"
+        ],
+        [
+          "Akhil Kumar",
+          "अखिल कुमार"
+        ]
+      ],
+      "e": [
+        "Vijender Singh won bronze at Beijing 2008.",
+        "विजेंदर सिंह ने बीजिंग 2008 में कांस्य जीता।"
+      ]
+    },
+    {
+      "t": "olympics",
+      "q": [
+        "The Olympic gold medal is made mostly of",
+        "ओलंपिक स्वर्ण पदक मुख्यतः किससे बना होता है?"
+      ],
+      "o": [
+        [
+          "Silver",
+          "चाँदी"
+        ],
+        [
+          "Gold",
+          "सोना"
+        ],
+        [
+          "Bronze",
+          "कांस्य"
+        ],
+        [
+          "Platinum",
+          "प्लैटिनम"
+        ]
+      ],
+      "e": [
+        "Olympic gold medals are silver plated with gold.",
+        "ओलंपिक स्वर्ण पदक चाँदी के होते हैं जिन पर सोने की परत चढ़ी होती है।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "Where were the first modern Olympic Games held?",
+        "पहले आधुनिक ओलंपिक खेल कहाँ हुए?"
+      ],
+      "o": [
+        [
+          "Athens, 1896",
+          "एथेंस, 1896"
+        ],
+        [
+          "Paris, 1900",
+          "पेरिस, 1900"
+        ],
+        [
+          "London, 1908",
+          "लंदन, 1908"
+        ],
+        [
+          "Stockholm, 1912",
+          "स्टॉकहोम, 1912"
+        ]
+      ],
+      "e": [
+        "The first modern Olympics were held in Athens in 1896.",
+        "पहले आधुनिक ओलंपिक 1896 में एथेंस में हुए।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "Which city hosted the first Asian Games in 1951?",
+        "1951 में पहले एशियाई खेलों की मेज़बानी किस शहर ने की?"
+      ],
+      "o": [
+        [
+          "New Delhi",
+          "नई दिल्ली"
+        ],
+        [
+          "Manila",
+          "मनीला"
+        ],
+        [
+          "Tokyo",
+          "टोक्यो"
+        ],
+        [
+          "Jakarta",
+          "जकार्ता"
+        ]
+      ],
+      "e": [
+        "The first Asian Games were held in New Delhi in 1951.",
+        "पहले एशियाई खेल 1951 में नई दिल्ली में हुए।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "How many times has India hosted the Asian Games?",
+        "भारत ने कितनी बार एशियाई खेलों की मेज़बानी की है?"
+      ],
+      "o": [
+        [
+          "Twice",
+          "दो बार"
+        ],
+        [
+          "Once",
+          "एक बार"
+        ],
+        [
+          "Three times",
+          "तीन बार"
+        ],
+        [
+          "Four times",
+          "चार बार"
+        ]
+      ],
+      "e": [
+        "Twice, in 1951 and 1982, both in New Delhi.",
+        "दो बार, 1951 और 1982 में, दोनों बार नई दिल्ली में।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "How many medals did India win at the Hangzhou Asian Games (held in 2023)?",
+        "हांगझोउ एशियाई खेलों (2023 में आयोजित) में भारत ने कितने पदक जीते?"
+      ],
+      "o": [
+        [
+          "107",
+          "107"
+        ],
+        [
+          "70",
+          "70"
+        ],
+        [
+          "101",
+          "101"
+        ],
+        [
+          "95",
+          "95"
+        ]
+      ],
+      "e": [
+        "India won 107 medals, including 28 gold, its best Asian Games total.",
+        "भारत ने 28 स्वर्ण सहित 107 पदक जीते, जो एशियाई खेलों में उसका सर्वश्रेष्ठ प्रदर्शन है।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "In which country were the first Commonwealth Games held in 1930?",
+        "1930 में पहले राष्ट्रमंडल खेल किस देश में हुए?"
+      ],
+      "o": [
+        [
+          "Canada",
+          "कनाडा"
+        ],
+        [
+          "England",
+          "इंग्लैंड"
+        ],
+        [
+          "Australia",
+          "ऑस्ट्रेलिया"
+        ],
+        [
+          "Scotland",
+          "स्कॉटलैंड"
+        ]
+      ],
+      "e": [
+        "They were held in Hamilton, Canada, as the British Empire Games.",
+        "वे हैमिल्टन, कनाडा में ब्रिटिश एम्पायर गेम्स के रूप में हुए।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "In which year did India host the Commonwealth Games?",
+        "भारत ने किस वर्ष राष्ट्रमंडल खेलों की मेज़बानी की?"
+      ],
+      "o": [
+        [
+          "2010",
+          "2010"
+        ],
+        [
+          "2006",
+          "2006"
+        ],
+        [
+          "2014",
+          "2014"
+        ],
+        [
+          "1998",
+          "1998"
+        ]
+      ],
+      "e": [
+        "New Delhi hosted the Commonwealth Games in 2010.",
+        "नई दिल्ली ने 2010 में राष्ट्रमंडल खेलों की मेज़बानी की।"
+      ]
+    },
+    {
+      "t": "games",
+      "q": [
+        "The Asian Games are held every",
+        "एशियाई खेल कितने वर्षों में होते हैं?"
+      ],
+      "o": [
+        [
+          "4 years",
+          "4 वर्ष"
+        ],
+        [
+          "2 years",
+          "2 वर्ष"
+        ],
+        [
+          "3 years",
+          "3 वर्ष"
+        ],
+        [
+          "5 years",
+          "5 वर्ष"
+        ]
+      ],
+      "e": [
+        "Like the Olympics and the Commonwealth Games, the Asian Games are held every 4 years.",
+        "ओलंपिक और राष्ट्रमंडल खेलों की तरह एशियाई खेल भी हर 4 वर्ष में होते हैं।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "How many players does a kabaddi team have on the court?",
+        "कबड्डी टीम के कोर्ट पर कितने खिलाड़ी होते हैं?"
+      ],
+      "o": [
+        [
+          "7",
+          "7"
+        ],
+        [
+          "9",
+          "9"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "11",
+          "11"
+        ]
+      ],
+      "e": [
+        "A kabaddi side has 7 players on the court.",
+        "कबड्डी की एक टीम के कोर्ट पर 7 खिलाड़ी होते हैं।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "How many players of each side are on the field in kho-kho?",
+        "खो-खो में हर टीम के कितने खिलाड़ी मैदान पर होते हैं?"
+      ],
+      "o": [
+        [
+          "9",
+          "9"
+        ],
+        [
+          "7",
+          "7"
+        ],
+        [
+          "11",
+          "11"
+        ],
+        [
+          "12",
+          "12"
+        ]
+      ],
+      "e": [
+        "Each kho-kho side has 9 players on the field.",
+        "खो-खो में हर टीम के 9 खिलाड़ी मैदान पर होते हैं।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "How many players does a volleyball team have on the court?",
+        "वॉलीबॉल टीम के कोर्ट पर कितने खिलाड़ी होते हैं?"
+      ],
+      "o": [
+        [
+          "6",
+          "6"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "7",
+          "7"
+        ],
+        [
+          "9",
+          "9"
+        ]
+      ],
+      "e": [
+        "A volleyball side has 6 players on the court.",
+        "वॉलीबॉल की एक टीम के कोर्ट पर 6 खिलाड़ी होते हैं।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "How many players does a polo team have?",
+        "पोलो टीम में कितने खिलाड़ी होते हैं?"
+      ],
+      "o": [
+        [
+          "4",
+          "4"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "7",
+          "7"
+        ]
+      ],
+      "e": [
+        "A polo team has 4 players.",
+        "पोलो टीम में 4 खिलाड़ी होते हैं।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "What is the length of a cricket pitch?",
+        "क्रिकेट पिच की लंबाई कितनी होती है?"
+      ],
+      "o": [
+        [
+          "22 yards",
+          "22 गज़"
+        ],
+        [
+          "20 yards",
+          "20 गज़"
+        ],
+        [
+          "24 yards",
+          "24 गज़"
+        ],
+        [
+          "26 yards",
+          "26 गज़"
+        ]
+      ],
+      "e": [
+        "A cricket pitch is 22 yards (20.12 m) long.",
+        "क्रिकेट पिच 22 गज़ (20.12 मी) लंबी होती है।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "What is the diameter of a table tennis ball?",
+        "टेबल टेनिस गेंद का व्यास कितना होता है?"
+      ],
+      "o": [
+        [
+          "40 mm",
+          "40 मिमी"
+        ],
+        [
+          "38 mm",
+          "38 मिमी"
+        ],
+        [
+          "42 mm",
+          "42 मिमी"
+        ],
+        [
+          "45 mm",
+          "45 मिमी"
+        ]
+      ],
+      "e": [
+        "The standard table tennis ball is 40 mm across.",
+        "मानक टेबल टेनिस गेंद का व्यास 40 मिमी होता है।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "At what height is the basketball ring fixed?",
+        "बास्केटबॉल रिंग कितनी ऊँचाई पर लगी होती है?"
+      ],
+      "o": [
+        [
+          "3.05 m",
+          "3.05 मी"
+        ],
+        [
+          "2.75 m",
+          "2.75 मी"
+        ],
+        [
+          "3.25 m",
+          "3.25 मी"
+        ],
+        [
+          "3.50 m",
+          "3.50 मी"
+        ]
+      ],
+      "e": [
+        "The ring is 3.05 m (10 feet) above the floor.",
+        "रिंग फ़र्श से 3.05 मी (10 फ़ुट) ऊपर होती है।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "What is the distance of a marathon?",
+        "मैराथन की दूरी कितनी होती है?"
+      ],
+      "o": [
+        [
+          "42.195 km",
+          "42.195 किमी"
+        ],
+        [
+          "40 km",
+          "40 किमी"
+        ],
+        [
+          "42 km",
+          "42 किमी"
+        ],
+        [
+          "44.195 km",
+          "44.195 किमी"
+        ]
+      ],
+      "e": [
+        "A marathon is 42.195 km.",
+        "मैराथन 42.195 किमी की होती है।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "What is the weight of the men's shot put?",
+        "पुरुषों के गोला फेंक के गोले का भार कितना होता है?"
+      ],
+      "o": [
+        [
+          "7.26 kg",
+          "7.26 किग्रा"
+        ],
+        [
+          "6 kg",
+          "6 किग्रा"
+        ],
+        [
+          "5 kg",
+          "5 किग्रा"
+        ],
+        [
+          "8.5 kg",
+          "8.5 किग्रा"
+        ]
+      ],
+      "e": [
+        "The men's shot weighs 7.26 kg; the women's weighs 4 kg.",
+        "पुरुषों का गोला 7.26 किग्रा और महिलाओं का 4 किग्रा का होता है।"
+      ]
+    },
+    {
+      "t": "rules",
+      "q": [
+        "In international basketball, how far from the basket is the three-point line?",
+        "अंतरराष्ट्रीय बास्केटबॉल में तीन-अंक रेखा बास्केट से कितनी दूर होती है?"
+      ],
+      "o": [
+        [
+          "6.75 m",
+          "6.75 मी"
+        ],
+        [
+          "6.25 m",
+          "6.25 मी"
+        ],
+        [
+          "7.24 m",
+          "7.24 मी"
+        ],
+        [
+          "5.80 m",
+          "5.80 मी"
+        ]
+      ],
+      "e": [
+        "Under FIBA rules the three-point line is 6.75 m from the basket.",
+        "FIBA नियमों के अनुसार तीन-अंक रेखा बास्केट से 6.75 मी दूर होती है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "The term 'raider' is associated with",
+        "‘रेडर’ शब्द किस खेल से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Kabaddi",
+          "कबड्डी"
+        ],
+        [
+          "Kho-kho",
+          "खो-खो"
+        ],
+        [
+          "Wrestling",
+          "कुश्ती"
+        ],
+        [
+          "Polo",
+          "पोलो"
+        ]
+      ],
+      "e": [
+        "In kabaddi the raider enters the opponents' half to tag defenders.",
+        "कबड्डी में रेडर विपक्षी पाले में जाकर रक्षकों को छूता है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "'Googly' is a term used in",
+        "‘गुगली’ शब्द किस खेल में प्रयोग होता है?"
+      ],
+      "o": [
+        [
+          "Cricket",
+          "क्रिकेट"
+        ],
+        [
+          "Golf",
+          "गोल्फ़"
+        ],
+        [
+          "Baseball",
+          "बेसबॉल"
+        ],
+        [
+          "Tennis",
+          "टेनिस"
+        ]
+      ],
+      "e": [
+        "A googly is a delivery by a leg-spinner that turns the other way.",
+        "गुगली लेग-स्पिनर की वह गेंद है जो उल्टी दिशा में घूमती है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "'Birdie', 'eagle' and 'bogey' are terms of",
+        "‘बर्डी’, ‘ईगल’ और ‘बोगी’ किस खेल के शब्द हैं?"
+      ],
+      "o": [
+        [
+          "Golf",
+          "गोल्फ़"
+        ],
+        [
+          "Badminton",
+          "बैडमिंटन"
+        ],
+        [
+          "Polo",
+          "पोलो"
+        ],
+        [
+          "Archery",
+          "तीरंदाज़ी"
+        ]
+      ],
+      "e": [
+        "They describe golf scores against par.",
+        "ये गोल्फ़ में पार के मुकाबले स्कोर बताते हैं।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "'Castling' is a move in",
+        "‘कैसलिंग’ किस खेल की चाल है?"
+      ],
+      "o": [
+        [
+          "Chess",
+          "शतरंज"
+        ],
+        [
+          "Carrom",
+          "कैरम"
+        ],
+        [
+          "Billiards",
+          "बिलियर्ड्स"
+        ],
+        [
+          "Bridge",
+          "ब्रिज"
+        ]
+      ],
+      "e": [
+        "Castling moves the king and a rook together in chess.",
+        "शतरंज में कैसलिंग में राजा और हाथी एक साथ चलते हैं।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "'Penalty corner' is a term of",
+        "‘पेनल्टी कॉर्नर’ किस खेल का शब्द है?"
+      ],
+      "o": [
+        [
+          "Hockey",
+          "हॉकी"
+        ],
+        [
+          "Football",
+          "फ़ुटबॉल"
+        ],
+        [
+          "Basketball",
+          "बास्केटबॉल"
+        ],
+        [
+          "Handball",
+          "हैंडबॉल"
+        ]
+      ],
+      "e": [
+        "The penalty corner is awarded in field hockey.",
+        "पेनल्टी कॉर्नर हॉकी में दिया जाता है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "Which sport has a defensive player called the 'libero'?",
+        "किस खेल में ‘लिबेरो’ नामक रक्षात्मक खिलाड़ी होता है?"
+      ],
+      "o": [
+        [
+          "Volleyball",
+          "वॉलीबॉल"
+        ],
+        [
+          "Basketball",
+          "बास्केटबॉल"
+        ],
+        [
+          "Kabaddi",
+          "कबड्डी"
+        ],
+        [
+          "Rugby",
+          "रग्बी"
+        ]
+      ],
+      "e": [
+        "The libero is a defensive specialist in volleyball.",
+        "लिबेरो वॉलीबॉल का रक्षात्मक विशेषज्ञ खिलाड़ी है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "A 'chukker' is a period of play in",
+        "‘चक्कर’ किस खेल में खेल की एक अवधि है?"
+      ],
+      "o": [
+        [
+          "Polo",
+          "पोलो"
+        ],
+        [
+          "Golf",
+          "गोल्फ़"
+        ],
+        [
+          "Hockey",
+          "हॉकी"
+        ],
+        [
+          "Cricket",
+          "क्रिकेट"
+        ]
+      ],
+      "e": [
+        "A polo match is played in periods called chukkers.",
+        "पोलो का मैच चक्कर नामक अवधियों में खेला जाता है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Thomas Cup is associated with",
+        "थॉमस कप किस खेल से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Badminton",
+          "बैडमिंटन"
+        ],
+        [
+          "Tennis",
+          "टेनिस"
+        ],
+        [
+          "Table tennis",
+          "टेबल टेनिस"
+        ],
+        [
+          "Golf",
+          "गोल्फ़"
+        ]
+      ],
+      "e": [
+        "The Thomas Cup is the men's world team championship of badminton.",
+        "थॉमस कप बैडमिंटन की पुरुष विश्व टीम चैंपियनशिप है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Durand Cup, first held in 1888, is a tournament of",
+        "1888 में पहली बार आयोजित डूरंड कप किस खेल का टूर्नामेंट है?"
+      ],
+      "o": [
+        [
+          "Football",
+          "फ़ुटबॉल"
+        ],
+        [
+          "Hockey",
+          "हॉकी"
+        ],
+        [
+          "Cricket",
+          "क्रिकेट"
+        ],
+        [
+          "Polo",
+          "पोलो"
+        ]
+      ],
+      "e": [
+        "The Durand Cup is Asia's oldest football tournament.",
+        "डूरंड कप एशिया का सबसे पुराना फ़ुटबॉल टूर्नामेंट है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Ranji Trophy is associated with",
+        "रणजी ट्रॉफी किस खेल से जुड़ी है?"
+      ],
+      "o": [
+        [
+          "Cricket",
+          "क्रिकेट"
+        ],
+        [
+          "Football",
+          "फ़ुटबॉल"
+        ],
+        [
+          "Hockey",
+          "हॉकी"
+        ],
+        [
+          "Badminton",
+          "बैडमिंटन"
+        ]
+      ],
+      "e": [
+        "It is India's domestic first-class cricket championship.",
+        "यह भारत की घरेलू प्रथम श्रेणी क्रिकेट चैंपियनशिप है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Davis Cup is associated with",
+        "डेविस कप किस खेल से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Tennis",
+          "टेनिस"
+        ],
+        [
+          "Golf",
+          "गोल्फ़"
+        ],
+        [
+          "Badminton",
+          "बैडमिंटन"
+        ],
+        [
+          "Squash",
+          "स्क्वैश"
+        ]
+      ],
+      "e": [
+        "The Davis Cup is the men's international team competition in tennis.",
+        "डेविस कप टेनिस की पुरुष अंतरराष्ट्रीय टीम प्रतियोगिता है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Swaythling Cup is associated with",
+        "स्वेथलिंग कप किस खेल से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Table tennis",
+          "टेबल टेनिस"
+        ],
+        [
+          "Badminton",
+          "बैडमिंटन"
+        ],
+        [
+          "Lawn tennis",
+          "लॉन टेनिस"
+        ],
+        [
+          "Squash",
+          "स्क्वैश"
+        ]
+      ],
+      "e": [
+        "It is the men's team trophy of the World Table Tennis Championships.",
+        "यह विश्व टेबल टेनिस चैंपियनशिप की पुरुष टीम ट्रॉफी है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Ryder Cup is associated with",
+        "राइडर कप किस खेल से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Golf",
+          "गोल्फ़"
+        ],
+        [
+          "Polo",
+          "पोलो"
+        ],
+        [
+          "Tennis",
+          "टेनिस"
+        ],
+        [
+          "Sailing",
+          "नौकायन"
+        ]
+      ],
+      "e": [
+        "The Ryder Cup is a golf competition between Europe and the United States.",
+        "राइडर कप यूरोप और अमेरिका के बीच गोल्फ़ प्रतियोगिता है।"
+      ]
+    },
+    {
+      "t": "cups",
+      "q": [
+        "The Border–Gavaskar Trophy is contested between India and",
+        "बॉर्डर-गावस्कर ट्रॉफी भारत और किस देश के बीच होती है?"
+      ],
+      "o": [
+        [
+          "Australia",
+          "ऑस्ट्रेलिया"
+        ],
+        [
+          "England",
+          "इंग्लैंड"
+        ],
+        [
+          "South Africa",
+          "दक्षिण अफ़्रीका"
+        ],
+        [
+          "New Zealand",
+          "न्यूज़ीलैंड"
+        ]
+      ],
+      "e": [
+        "It is the Test cricket series between India and Australia.",
+        "यह भारत और ऑस्ट्रेलिया के बीच टेस्ट क्रिकेट श्रृंखला है।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "What is India's highest sports honour?",
+        "भारत का सर्वोच्च खेल सम्मान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Major Dhyan Chand Khel Ratna",
+          "मेजर ध्यानचंद खेल रत्न"
+        ],
+        [
+          "Arjuna Award",
+          "अर्जुन पुरस्कार"
+        ],
+        [
+          "Dronacharya Award",
+          "द्रोणाचार्य पुरस्कार"
+        ],
+        [
+          "Padma Shri",
+          "पद्मश्री"
+        ]
+      ],
+      "e": [
+        "The Major Dhyan Chand Khel Ratna (named Rajiv Gandhi Khel Ratna until 2021) is India's highest sports honour.",
+        "मेजर ध्यानचंद खेल रत्न (2021 तक राजीव गांधी खेल रत्न) भारत का सर्वोच्च खेल सम्मान है।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "The Dronacharya Award is given to",
+        "द्रोणाचार्य पुरस्कार किसे दिया जाता है?"
+      ],
+      "o": [
+        [
+          "Coaches",
+          "प्रशिक्षकों को"
+        ],
+        [
+          "Sportspersons",
+          "खिलाड़ियों को"
+        ],
+        [
+          "Sports journalists",
+          "खेल पत्रकारों को"
+        ],
+        [
+          "Universities",
+          "विश्वविद्यालयों को"
+        ]
+      ],
+      "e": [
+        "The Dronacharya Award honours outstanding coaches.",
+        "द्रोणाचार्य पुरस्कार उत्कृष्ट प्रशिक्षकों को सम्मानित करता है।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "National Sports Day is observed on",
+        "राष्ट्रीय खेल दिवस कब मनाया जाता है?"
+      ],
+      "o": [
+        [
+          "29 August",
+          "29 अगस्त"
+        ],
+        [
+          "15 October",
+          "15 अक्टूबर"
+        ],
+        [
+          "2 October",
+          "2 अक्टूबर"
+        ],
+        [
+          "21 June",
+          "21 जून"
+        ]
+      ],
+      "e": [
+        "29 August is the birth anniversary of hockey great Major Dhyan Chand.",
+        "29 अगस्त हॉकी के महान खिलाड़ी मेजर ध्यानचंद की जयंती है।"
+      ]
+    },
+    {
+      "t": "bodies",
+      "q": [
+        "Where is the International Olympic Committee headquartered?",
+        "अंतरराष्ट्रीय ओलंपिक समिति का मुख्यालय कहाँ है?"
+      ],
+      "o": [
+        [
+          "Lausanne",
+          "लॉज़ेन"
+        ],
+        [
+          "Geneva",
+          "जिनेवा"
+        ],
+        [
+          "Zurich",
+          "ज़्यूरिख़"
+        ],
+        [
+          "Paris",
+          "पेरिस"
+        ]
+      ],
+      "e": [
+        "The IOC is headquartered in Lausanne, Switzerland.",
+        "IOC का मुख्यालय लॉज़ेन, स्विट्ज़रलैंड में है।"
+      ]
+    },
+    {
+      "t": "bodies",
+      "q": [
+        "Where is FIFA headquartered?",
+        "फ़ीफ़ा का मुख्यालय कहाँ है?"
+      ],
+      "o": [
+        [
+          "Zurich",
+          "ज़्यूरिख़"
+        ],
+        [
+          "Lausanne",
+          "लॉज़ेन"
+        ],
+        [
+          "Geneva",
+          "जिनेवा"
+        ],
+        [
+          "Monaco",
+          "मोनाको"
+        ]
+      ],
+      "e": [
+        "FIFA is headquartered in Zurich, Switzerland.",
+        "फ़ीफ़ा का मुख्यालय ज़्यूरिख़, स्विट्ज़रलैंड में है।"
+      ]
+    },
+    {
+      "t": "bodies",
+      "q": [
+        "Where is the International Cricket Council headquartered?",
+        "अंतरराष्ट्रीय क्रिकेट परिषद का मुख्यालय कहाँ है?"
+      ],
+      "o": [
+        [
+          "Dubai",
+          "दुबई"
+        ],
+        [
+          "London",
+          "लंदन"
+        ],
+        [
+          "Mumbai",
+          "मुंबई"
+        ],
+        [
+          "Melbourne",
+          "मेलबर्न"
+        ]
+      ],
+      "e": [
+        "The ICC is headquartered in Dubai, UAE.",
+        "ICC का मुख्यालय दुबई, संयुक्त अरब अमीरात में है।"
+      ]
+    },
+    {
+      "t": "bodies",
+      "q": [
+        "Where is World Athletics headquartered?",
+        "विश्व एथलेटिक्स का मुख्यालय कहाँ है?"
+      ],
+      "o": [
+        [
+          "Monaco",
+          "मोनाको"
+        ],
+        [
+          "Lausanne",
+          "लॉज़ेन"
+        ],
+        [
+          "London",
+          "लंदन"
+        ],
+        [
+          "Paris",
+          "पेरिस"
+        ]
+      ],
+      "e": [
+        "World Athletics is headquartered in Monaco.",
+        "विश्व एथलेटिक्स का मुख्यालय मोनाको में है।"
+      ]
+    },
+    {
+      "t": "bodies",
+      "q": [
+        "Who became the first woman president of the Indian Olympic Association in 2022?",
+        "2022 में भारतीय ओलंपिक संघ की पहली महिला अध्यक्ष कौन बनीं?"
+      ],
+      "o": [
+        [
+          "P. T. Usha",
+          "पी. टी. उषा"
+        ],
+        [
+          "Anju Bobby George",
+          "अंजू बॉबी जॉर्ज"
+        ],
+        [
+          "M. C. Mary Kom",
+          "एम. सी. मैरी कॉम"
+        ],
+        [
+          "Karnam Malleswari",
+          "कर्णम मल्लेश्वरी"
+        ]
+      ],
+      "e": [
+        "P. T. Usha was elected president of the Indian Olympic Association in 2022.",
+        "पी. टी. उषा 2022 में भारतीय ओलंपिक संघ की अध्यक्ष चुनी गईं।"
+      ]
+    },
+    {
+      "t": "origin",
+      "q": [
+        "Who invented basketball in 1891?",
+        "1891 में बास्केटबॉल का आविष्कार किसने किया?"
+      ],
+      "o": [
+        [
+          "James Naismith",
+          "जेम्स नैस्मिथ"
+        ],
+        [
+          "William G. Morgan",
+          "विलियम जी. मॉर्गन"
+        ],
+        [
+          "Walter Camp",
+          "वॉल्टर कैंप"
+        ],
+        [
+          "Abner Doubleday",
+          "एब्नर डबलडे"
+        ]
+      ],
+      "e": [
+        "James Naismith invented basketball in Springfield, USA, in 1891.",
+        "जेम्स नैस्मिथ ने 1891 में अमेरिका के स्प्रिंगफ़ील्ड में बास्केटबॉल का आविष्कार किया।"
+      ]
+    },
+    {
+      "t": "origin",
+      "q": [
+        "Who invented volleyball in 1895?",
+        "1895 में वॉलीबॉल का आविष्कार किसने किया?"
+      ],
+      "o": [
+        [
+          "William G. Morgan",
+          "विलियम जी. मॉर्गन"
+        ],
+        [
+          "James Naismith",
+          "जेम्स नैस्मिथ"
+        ],
+        [
+          "Walter Wingfield",
+          "वॉल्टर विंगफ़ील्ड"
+        ],
+        [
+          "William Webb Ellis",
+          "विलियम वेब एलिस"
+        ]
+      ],
+      "e": [
+        "William G. Morgan devised volleyball in the USA in 1895.",
+        "विलियम जी. मॉर्गन ने 1895 में अमेरिका में वॉलीबॉल बनाया।"
+      ]
+    },
+    {
+      "t": "origin",
+      "q": [
+        "Modern polo developed from Sagol Kangjei, a traditional game of",
+        "आधुनिक पोलो सगोल कांगजेई से विकसित हुआ, जो किस राज्य का पारंपरिक खेल है?"
+      ],
+      "o": [
+        [
+          "Manipur",
+          "मणिपुर"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Punjab",
+          "पंजाब"
+        ],
+        [
+          "Assam",
+          "असम"
+        ]
+      ],
+      "e": [
+        "British officers learned polo in Manipur, where Sagol Kangjei is played.",
+        "ब्रिटिश अधिकारियों ने पोलो मणिपुर में सीखा, जहाँ सगोल कांगजेई खेला जाता है।"
+      ]
+    },
+    {
+      "t": "origin",
+      "q": [
+        "Snooker was devised in 1875 in which Indian city?",
+        "स्नूकर 1875 में किस भारतीय शहर में बना?"
+      ],
+      "o": [
+        [
+          "Jabalpur",
+          "जबलपुर"
+        ],
+        [
+          "Shimla",
+          "शिमला"
+        ],
+        [
+          "Kolkata",
+          "कोलकाता"
+        ],
+        [
+          "Pune",
+          "पुणे"
+        ]
+      ],
+      "e": [
+        "British army officers devised snooker in Jabalpur in 1875.",
+        "ब्रिटिश सैन्य अधिकारियों ने 1875 में जबलपुर में स्नूकर बनाया।"
+      ]
+    },
+    {
+      "t": "trad",
+      "q": [
+        "Kambala, a buffalo race in paddy fields, belongs to",
+        "धान के खेतों में होने वाली भैंसा दौड़ कंबाला किस राज्य की है?"
+      ],
+      "o": [
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Goa",
+          "गोवा"
+        ]
+      ],
+      "e": [
+        "Kambala is held in coastal Karnataka.",
+        "कंबाला तटीय कर्नाटक में होता है।"
+      ]
+    },
+    {
+      "t": "trad",
+      "q": [
+        "Vallam Kali, raced in snake boats, belongs to",
+        "सर्प नौकाओं में होने वाली वल्लम कली किस राज्य की है?"
+      ],
+      "o": [
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ],
+        [
+          "Assam",
+          "असम"
+        ]
+      ],
+      "e": [
+        "Vallam Kali is Kerala's backwater boat race; the Nehru Trophy race is on Punnamada Lake.",
+        "वल्लम कली केरल के बैकवाटर की नौका दौड़ है; नेहरू ट्रॉफी दौड़ पुन्नमडा झील पर होती है।"
+      ]
+    },
+    {
+      "t": "trad",
+      "q": [
+        "Thang-Ta is a martial art of",
+        "थांग-ता किस राज्य की युद्ध कला है?"
+      ],
+      "o": [
+        [
+          "Manipur",
+          "मणिपुर"
+        ],
+        [
+          "Mizoram",
+          "मिज़ोरम"
+        ],
+        [
+          "Nagaland",
+          "नागालैंड"
+        ],
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ]
+      ],
+      "e": [
+        "Thang-Ta (sword and spear) is Manipur's martial art.",
+        "थांग-ता (तलवार और भाला) मणिपुर की युद्ध कला है।"
+      ]
+    },
+    {
+      "t": "trad",
+      "q": [
+        "Which state declared Mallakhamb its state sport in 2013?",
+        "किस राज्य ने 2013 में मलखंब को अपना राजकीय खेल घोषित किया?"
+      ],
+      "o": [
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ]
+      ],
+      "e": [
+        "Madhya Pradesh declared Mallakhamb its state sport in 2013.",
+        "मध्य प्रदेश ने 2013 में मलखंब को अपना राजकीय खेल घोषित किया।"
+      ]
+    },
+    {
+      "t": "trad",
+      "q": [
+        "Which martial art uses the urumi, a flexible sword?",
+        "किस युद्ध कला में उरुमी नामक लचीली तलवार का प्रयोग होता है?"
+      ],
+      "o": [
+        [
+          "Kalaripayattu",
+          "कलारीपयट्टू"
+        ],
+        [
+          "Gatka",
+          "गतका"
+        ],
+        [
+          "Silambam",
+          "सिलंबम"
+        ],
+        [
+          "Thang-Ta",
+          "थांग-ता"
+        ]
+      ],
+      "e": [
+        "The urumi is used in Kalaripayattu of Kerala.",
+        "उरुमी केरल की कलारीपयट्टू में प्रयोग होती है।"
+      ]
+    },
+    {
+      "t": "trad",
+      "q": [
+        "Thoda, which combines martial art with archery, is played in",
+        "युद्ध कला और तीरंदाज़ी को मिलाने वाला ठोडा कहाँ खेला जाता है?"
+      ],
+      "o": [
+        [
+          "Himachal Pradesh",
+          "हिमाचल प्रदेश"
+        ],
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ],
+        [
+          "Sikkim",
+          "सिक्किम"
+        ],
+        [
+          "Arunachal Pradesh",
+          "अरुणाचल प्रदेश"
+        ]
+      ],
+      "e": [
+        "Thoda is a traditional archery game of Himachal Pradesh.",
+        "ठोडा हिमाचल प्रदेश का पारंपरिक तीरंदाज़ी खेल है।"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import {readFileSync,readdirSync} from 'node:fs';import {TopicSchema} from '../src/v22/schema.js';
+const path='src/v22/datasets/';let failed=false;for(const file of readdirSync(path).filter(x=>x.endsWith('.json'))){try{const data=JSON.parse(readFileSync(path+file,'utf8'));const result=TopicSchema.safeParse(data);if(!result.success){failed=true;console.error(file,JSON.stringify(result.error.issues,null,2))}else console.log(`✓ ${file}: ${data.entries.length} entries`)}catch(e){failed=true;console.error(file,e.message)}}if(failed)process.exit(1);

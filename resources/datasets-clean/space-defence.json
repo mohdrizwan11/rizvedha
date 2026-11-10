@@ -1,0 +1,2789 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "space-defence",
+  "file": "space_defence_of_india_app.html",
+  "storageKey": "ssc_space_defence_v1",
+  "icon": "🚀",
+  "description": "Bilingual study app on India's space and defence: ISRO centres, observatories, military commands, academies, test ranges and shipyards on the map, with exam notes on missions, rockets, missiles, exercises and operations.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Space & Defence",
+      "अंतरिक्ष और रक्षा"
+    ],
+    "hSub": [
+      "SSC Focus · Space and defence map and notes",
+      "SSC फोकस · अंतरिक्ष-रक्षा मानचित्र व नोट्स"
+    ],
+    "learnTtl": [
+      "Learn space and defence",
+      "अंतरिक्ष और रक्षा सीखें"
+    ],
+    "learnSub": [
+      "Open any space centre, observatory, command, academy or defence site to read where it is, what it does and the exam facts.",
+      "किसी भी अंतरिक्ष केंद्र, वेधशाला, कमान, अकादमी या रक्षा स्थल को खोलकर उसका स्थान, कार्य और परीक्षा तथ्य पढ़ें।"
+    ],
+    "lvlLabel": [
+      "Level · Space and defence GK rank",
+      "स्तर · अंतरिक्ष-रक्षा GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search places",
+      "स्थान खोजें"
+    ],
+    "searchPh": [
+      "Centre, command, city or state",
+      "केंद्र, कमान, शहर या राज्य"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Places",
+      "स्थान"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on missions, rockets, missiles, exercises, operations and where the centres are. Each answer comes with an explanation.",
+      "अभियान, रॉकेट, मिसाइल, अभ्यास, ऑपरेशन और केंद्रों के स्थान पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qLabel": [
+      "Select the state of this place",
+      "इस स्थान का राज्य चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "atlasSub": [
+      "Every entry on the map, coloured by kind.",
+      "हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read an entry, or a state to list its entries.",
+      "किसी चिह्न को छूकर प्रविष्टि पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No entry from this state in the deck.",
+      "इस राज्य की कोई प्रविष्टि सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this place.",
+      "भारत का मानचित्र। इस स्थान का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its entries.",
+      "भारत का मानचित्र। किसी राज्य की प्रविष्टियाँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "plantMarker": [
+      "entry",
+      "प्रविष्टि"
+    ],
+    "atlasPickerLabel": [
+      "Browse an entry",
+      "प्रविष्टि खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select an entry",
+      "प्रविष्टि चुनें"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ],
+    "howto": [
+      "Play: a space centre, observatory, military command, academy or defence site is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Places: 62 entries on ISRO centres, observatories, commands, academies, test ranges and shipyards.\nLearn → Exam notes: space milestones from Aryabhata to SpaDeX, launch vehicles, missiles, joint exercises, operations and defence firsts.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every entry on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई अंतरिक्ष केंद्र, वेधशाला, सैन्य कमान, अकादमी या रक्षा स्थल दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → स्थान: 62 प्रविष्टियाँ ISRO केंद्रों, वेधशालाओं, कमानों, अकादमियों, परीक्षण रेंजों और शिपयार्डों पर।\nसीखें → परीक्षा नोट्स: आर्यभट से स्पेडेक्स तक अंतरिक्ष पड़ाव, प्रक्षेपण यान, मिसाइलें, संयुक्त अभ्यास, अभियान और रक्षा क्षेत्र की पहली घटनाएँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "space",
+      "icon": "🚀",
+      "col": "#1565C0",
+      "t": [
+        "Space centre",
+        "अंतरिक्ष केंद्र"
+      ]
+    },
+    {
+      "k": "obs",
+      "icon": "🔭",
+      "col": "#4527A0",
+      "t": [
+        "Observatory",
+        "वेधशाला"
+      ]
+    },
+    {
+      "k": "cmd",
+      "icon": "🎖️",
+      "col": "#33691E",
+      "t": [
+        "Military command",
+        "सैन्य कमान"
+      ]
+    },
+    {
+      "k": "acad",
+      "icon": "🎓",
+      "col": "#E65100",
+      "t": [
+        "Defence academy",
+        "रक्षा अकादमी"
+      ]
+    },
+    {
+      "k": "strat",
+      "icon": "🛡️",
+      "col": "#B71C1C",
+      "t": [
+        "Strategic & test site",
+        "सामरिक और परीक्षण स्थल"
+      ]
+    },
+    {
+      "k": "ind",
+      "icon": "🏭",
+      "col": "#455A64",
+      "t": [
+        "Defence industry & DRDO",
+        "रक्षा उद्योग और DRDO"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Location",
+        "स्थान"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "What it is",
+        "क्या है"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Known for",
+        "पहचान"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "kd"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Cadet",
+      "hi": "कैडेट"
+    },
+    {
+      "min": 60,
+      "en": "Launch Crew",
+      "hi": "प्रक्षेपण दल"
+    },
+    {
+      "min": 150,
+      "en": "Mission Planner",
+      "hi": "अभियान योजनाकार"
+    },
+    {
+      "min": 320,
+      "en": "Flight Controller",
+      "hi": "उड़ान नियंत्रक"
+    },
+    {
+      "min": 560,
+      "en": "Commander",
+      "hi": "कमांडर"
+    },
+    {
+      "min": 900,
+      "en": "Space Scientist",
+      "hi": "अंतरिक्ष वैज्ञानिक"
+    },
+    {
+      "min": 1400,
+      "en": "Space & Defence Champion",
+      "hi": "अंतरिक्ष-रक्षा चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🚀",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "isro",
+      "icon": "🚀",
+      "t": [
+        "Rocket Scientist",
+        "रॉकेट वैज्ञानिक"
+      ],
+      "d": [
+        "Study every space centre",
+        "सभी अंतरिक्ष केंद्र पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "space"
+        ]
+      }
+    },
+    {
+      "id": "cmd",
+      "icon": "🎖️",
+      "t": [
+        "Commands Known",
+        "कमानों का ज्ञाता"
+      ],
+      "d": [
+        "Study every military command",
+        "सभी सैन्य कमान पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "cmd"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Space & Defence Champion",
+        "अंतरिक्ष-रक्षा चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "kd",
+        "field": "kd",
+        "ask": [
+          "What is this?",
+          "यह क्या है?"
+        ],
+        "reverseId": "wk",
+        "reverseAsk": [
+          "Which of these is a",
+          "इनमें से कौन-सा है:"
+        ],
+        "pairs": [
+          [
+            "Army command HQ",
+            "Army training command HQ"
+          ],
+          [
+            "Navy command HQ",
+            "Navy training command HQ"
+          ],
+          [
+            "Air Force command HQ",
+            "Air Force training command HQ"
+          ],
+          [
+            "Air Force command HQ",
+            "Air Force maintenance command HQ"
+          ],
+          [
+            "Optical observatory",
+            "High-altitude observatory"
+          ],
+          [
+            "Shipyard",
+            "Warship builder"
+          ],
+          [
+            "Shipyard",
+            "Warship and submarine yard"
+          ],
+          [
+            "Warship builder",
+            "Warship and submarine yard"
+          ],
+          [
+            "Army officer academy",
+            "Army officer academy (short service)"
+          ],
+          [
+            "Satellite design centre",
+            "Satellite payload centre"
+          ],
+          [
+            "Rocket engine centre",
+            "Engine test centre"
+          ],
+          [
+            "War memorial",
+            "National war memorial"
+          ],
+          [
+            "Missile test range",
+            "Missile test island"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "space",
+              "defence"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "kd",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "space",
+        "t": [
+          "Space",
+          "अंतरिक्ष"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "space"
+            ],
+            "n": 7
+          },
+          {
+            "q": "st",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "defence",
+        "t": [
+          "Defence",
+          "रक्षा"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "defence"
+            ],
+            "n": 7
+          },
+          {
+            "q": "kd",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "where",
+        "t": [
+          "Where is it?",
+          "कहाँ है?"
+        ],
+        "mix": [
+          {
+            "q": "st",
+            "n": 6
+          },
+          {
+            "q": "is",
+            "n": 4
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Satish Dhawan Space Centre",
+      "h": "सतीश धवन अंतरिक्ष केंद्र",
+      "s": "Andhra Pradesh",
+      "st": "Sriharikota, Tirupati district, Andhra Pradesh",
+      "sh": "श्रीहरिकोटा, तिरुपति ज़िला, आंध्र प्रदेश",
+      "c": "space",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.72,
+      "lng": 80.2,
+      "kd": "India's main spaceport",
+      "kdh": "भारत का मुख्य अंतरिक्ष प्रक्षेपण केंद्र",
+      "tag": "Launch site of PSLV, GSLV and LVM3",
+      "tagh": "PSLV, GSLV और LVM3 का प्रक्षेपण स्थल",
+      "fact": "Sriharikota, an island off Andhra Pradesh, is India's main launch site; its 100th launch was GSLV-F15 with NVS-02 on 29 January 2025.",
+      "facth": "आंध्र प्रदेश के तट पर द्वीप श्रीहरिकोटा भारत का मुख्य प्रक्षेपण स्थल है; यहाँ से 100वाँ प्रक्षेपण 29 जनवरी 2025 को NVS-02 के साथ GSLV-F15 था।",
+      "sea": true
+    },
+    {
+      "n": "Vikram Sarabhai Space Centre",
+      "h": "विक्रम साराभाई अंतरिक्ष केंद्र",
+      "s": "Kerala",
+      "st": "Thiruvananthapuram, Kerala",
+      "sh": "तिरुवनंतपुरम, केरल",
+      "c": "space",
+      "rg": "S",
+      "d": 1,
+      "lat": 8.53,
+      "lng": 76.93,
+      "kd": "ISRO launch vehicle centre",
+      "kdh": "ISRO प्रक्षेपण यान केंद्र",
+      "tag": "Designs and builds ISRO rockets",
+      "tagh": "ISRO के रॉकेट डिज़ाइन और निर्माण",
+      "fact": "VSSC in Thiruvananthapuram is ISRO's lead centre for designing launch vehicles; it is named after Vikram Sarabhai.",
+      "facth": "तिरुवनंतपुरम का VSSC प्रक्षेपण यानों के डिज़ाइन का ISRO का प्रमुख केंद्र है; यह विक्रम साराभाई के नाम पर है।"
+    },
+    {
+      "n": "Thumba Equatorial Rocket Launching Station",
+      "h": "थुंबा भूमध्यरेखीय रॉकेट प्रक्षेपण केंद्र",
+      "s": "Kerala",
+      "st": "Thumba, Thiruvananthapuram, Kerala",
+      "sh": "थुंबा, तिरुवनंतपुरम, केरल",
+      "c": "space",
+      "rg": "S",
+      "d": 1,
+      "lat": 8.56,
+      "lng": 76.9,
+      "kd": "First rocket launch site",
+      "kdh": "पहला रॉकेट प्रक्षेपण स्थल",
+      "tag": "First rocket launch, 21 November 1963",
+      "tagh": "पहला रॉकेट प्रक्षेपण, 21 नवंबर 1963",
+      "fact": "India launched its first sounding rocket, a Nike-Apache, from Thumba on 21 November 1963; the station lies near the magnetic equator.",
+      "facth": "भारत ने अपना पहला साउंडिंग रॉकेट, नाइकी-अपाचे, 21 नवंबर 1963 को थुंबा से छोड़ा; यह केंद्र चुंबकीय भूमध्यरेखा के पास है।"
+    },
+    {
+      "n": "ISRO Headquarters",
+      "h": "ISRO मुख्यालय",
+      "s": "Karnataka",
+      "st": "Antariksh Bhavan, Bengaluru, Karnataka",
+      "sh": "अंतरिक्ष भवन, बेंगलुरु, कर्नाटक",
+      "c": "space",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.03,
+      "lng": 77.57,
+      "kd": "Space agency headquarters",
+      "kdh": "अंतरिक्ष एजेंसी मुख्यालय",
+      "tag": "ISRO founded 15 August 1969",
+      "tagh": "ISRO की स्थापना 15 अगस्त 1969",
+      "fact": "The Indian Space Research Organisation, founded on 15 August 1969, has its headquarters at Antariksh Bhavan, Bengaluru; V. Narayanan became chairman in January 2025.",
+      "facth": "15 अगस्त 1969 को स्थापित भारतीय अंतरिक्ष अनुसंधान संगठन का मुख्यालय अंतरिक्ष भवन, बेंगलुरु में है; वी. नारायणन जनवरी 2025 में अध्यक्ष बने।"
+    },
+    {
+      "n": "U R Rao Satellite Centre",
+      "h": "यू आर राव उपग्रह केंद्र",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "space",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.96,
+      "lng": 77.69,
+      "kd": "Satellite design centre",
+      "kdh": "उपग्रह डिज़ाइन केंद्र",
+      "tag": "Formerly ISRO Satellite Centre",
+      "tagh": "पहले ISRO उपग्रह केंद्र",
+      "fact": "The U R Rao Satellite Centre in Bengaluru builds ISRO's satellites; it is named after U. R. Rao, who led the team that built Aryabhata.",
+      "facth": "बेंगलुरु का यू आर राव उपग्रह केंद्र ISRO के उपग्रह बनाता है; यह आर्यभट बनाने वाली टीम के प्रमुख यू. आर. राव के नाम पर है।"
+    },
+    {
+      "n": "Space Applications Centre",
+      "h": "अंतरिक्ष उपयोग केंद्र",
+      "s": "Gujarat",
+      "st": "Ahmedabad, Gujarat",
+      "sh": "अहमदाबाद, गुजरात",
+      "c": "space",
+      "rg": "W",
+      "d": 2,
+      "lat": 23.03,
+      "lng": 72.53,
+      "kd": "Satellite payload centre",
+      "kdh": "उपग्रह नीतभार केंद्र",
+      "tag": "Builds communication and remote-sensing payloads",
+      "tagh": "संचार और सुदूर संवेदन नीतभार बनाता है",
+      "fact": "The Space Applications Centre in Ahmedabad designs satellite payloads for communication, navigation and remote sensing.",
+      "facth": "अहमदाबाद का अंतरिक्ष उपयोग केंद्र संचार, नेविगेशन और सुदूर संवेदन के लिए उपग्रह नीतभार डिज़ाइन करता है।"
+    },
+    {
+      "n": "Physical Research Laboratory",
+      "h": "भौतिक अनुसंधान प्रयोगशाला",
+      "s": "Gujarat",
+      "st": "Ahmedabad, Gujarat",
+      "sh": "अहमदाबाद, गुजरात",
+      "c": "space",
+      "rg": "W",
+      "d": 2,
+      "lat": 23.04,
+      "lng": 72.56,
+      "kd": "Space science laboratory",
+      "kdh": "अंतरिक्ष विज्ञान प्रयोगशाला",
+      "tag": "Cradle of India's space sciences",
+      "tagh": "भारत के अंतरिक्ष विज्ञान का उद्गम",
+      "fact": "The Physical Research Laboratory, founded by Vikram Sarabhai in 1947, is called the cradle of India's space sciences.",
+      "facth": "1947 में विक्रम साराभाई द्वारा स्थापित भौतिक अनुसंधान प्रयोगशाला को भारत के अंतरिक्ष विज्ञान का उद्गम कहा जाता है।"
+    },
+    {
+      "n": "National Remote Sensing Centre",
+      "h": "राष्ट्रीय सुदूर संवेदन केंद्र",
+      "s": "Telangana",
+      "st": "Hyderabad, Telangana",
+      "sh": "हैदराबाद, तेलंगाना",
+      "c": "space",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.45,
+      "lng": 78.4,
+      "kd": "Earth observation data centre",
+      "kdh": "पृथ्वी अवलोकन डेटा केंद्र",
+      "tag": "Receives and processes satellite imagery",
+      "tagh": "उपग्रह चित्र प्राप्त और संसाधित करता है",
+      "fact": "The National Remote Sensing Centre in Hyderabad receives and processes data from Earth observation satellites for maps, crops and disasters.",
+      "facth": "हैदराबाद का राष्ट्रीय सुदूर संवेदन केंद्र मानचित्र, फ़सल और आपदा के लिए पृथ्वी अवलोकन उपग्रहों का डेटा प्राप्त और संसाधित करता है।"
+    },
+    {
+      "n": "Liquid Propulsion Systems Centre",
+      "h": "द्रव नोदन प्रणाली केंद्र",
+      "s": "Kerala",
+      "st": "Valiamala, Thiruvananthapuram, Kerala",
+      "sh": "वलियामला, तिरुवनंतपुरम, केरल",
+      "c": "space",
+      "rg": "S",
+      "d": 3,
+      "lat": 8.62,
+      "lng": 77.03,
+      "kd": "Rocket engine centre",
+      "kdh": "रॉकेट इंजन केंद्र",
+      "tag": "Liquid and cryogenic engines",
+      "tagh": "द्रव और क्रायोजेनिक इंजन",
+      "fact": "The Liquid Propulsion Systems Centre develops liquid and cryogenic engines for ISRO's rockets, with units at Valiamala and Bengaluru.",
+      "facth": "द्रव नोदन प्रणाली केंद्र ISRO के रॉकेटों के लिए द्रव और क्रायोजेनिक इंजन बनाता है, जिसकी इकाइयाँ वलियामला और बेंगलुरु में हैं।"
+    },
+    {
+      "n": "ISRO Propulsion Complex",
+      "h": "ISRO नोदन परिसर",
+      "s": "Tamil Nadu",
+      "st": "Mahendragiri, Tirunelveli, Tamil Nadu",
+      "sh": "महेंद्रगिरि, तिरुनेलवेली, तमिलनाडु",
+      "c": "space",
+      "rg": "S",
+      "d": 3,
+      "lat": 8.38,
+      "lng": 77.53,
+      "kd": "Engine test centre",
+      "kdh": "इंजन परीक्षण केंद्र",
+      "tag": "Tests rocket engines and stages",
+      "tagh": "रॉकेट इंजन और चरणों का परीक्षण",
+      "fact": "The ISRO Propulsion Complex at Mahendragiri tests and assembles liquid engines and cryogenic stages.",
+      "facth": "महेंद्रगिरि का ISRO नोदन परिसर द्रव इंजनों और क्रायोजेनिक चरणों का परीक्षण और संयोजन करता है।"
+    },
+    {
+      "n": "Kulasekarapattinam Spaceport",
+      "h": "कुलशेखरपट्टिनम अंतरिक्ष केंद्र",
+      "s": "Tamil Nadu",
+      "st": "Thoothukudi, Tamil Nadu",
+      "sh": "थूथुकुडी, तमिलनाडु",
+      "c": "space",
+      "rg": "S",
+      "d": 2,
+      "lat": 8.45,
+      "lng": 78,
+      "kd": "India's second spaceport",
+      "kdh": "भारत का दूसरा अंतरिक्ष प्रक्षेपण केंद्र",
+      "tag": "Built for the SSLV",
+      "tagh": "SSLV के लिए बनाया गया",
+      "fact": "Kulasekarapattinam in Thoothukudi is being built as India's second spaceport, mainly for small rockets (SSLV); its foundation stone was laid in February 2024.",
+      "facth": "थूथुकुडी का कुलशेखरपट्टिनम भारत का दूसरा अंतरिक्ष प्रक्षेपण केंद्र बन रहा है, मुख्य रूप से छोटे रॉकेटों (SSLV) के लिए; इसकी आधारशिला फ़रवरी 2024 में रखी गई।"
+    },
+    {
+      "n": "Master Control Facility",
+      "h": "मास्टर नियंत्रण सुविधा",
+      "s": "Karnataka",
+      "st": "Hassan, Karnataka (also Bhopal)",
+      "sh": "हासन, कर्नाटक (भोपाल में भी)",
+      "c": "space",
+      "rg": "S",
+      "d": 3,
+      "lat": 13,
+      "lng": 76.1,
+      "kd": "Satellite control centre",
+      "kdh": "उपग्रह नियंत्रण केंद्र",
+      "tag": "Controls geostationary satellites",
+      "tagh": "भूस्थिर उपग्रहों का नियंत्रण",
+      "fact": "The Master Control Facility at Hassan (with a second at Bhopal) monitors and controls ISRO's geostationary satellites.",
+      "facth": "हासन की मास्टर नियंत्रण सुविधा (दूसरी भोपाल में) ISRO के भूस्थिर उपग्रहों की निगरानी और नियंत्रण करती है।"
+    },
+    {
+      "n": "Indian Deep Space Network",
+      "h": "भारतीय गहन अंतरिक्ष नेटवर्क",
+      "s": "Karnataka",
+      "st": "Byalalu, near Bengaluru, Karnataka",
+      "sh": "ब्यालालु, बेंगलुरु के पास, कर्नाटक",
+      "c": "space",
+      "rg": "S",
+      "d": 3,
+      "lat": 12.9,
+      "lng": 77.37,
+      "kd": "Deep-space tracking station",
+      "kdh": "गहन अंतरिक्ष ट्रैकिंग स्टेशन",
+      "tag": "Tracks Chandrayaan and Mangalyaan",
+      "tagh": "चंद्रयान और मंगलयान को ट्रैक करता है",
+      "fact": "The Indian Deep Space Network at Byalalu tracks deep-space missions such as Chandrayaan and Mangalyaan with large dish antennas.",
+      "facth": "ब्यालालु का भारतीय गहन अंतरिक्ष नेटवर्क बड़े डिश एंटेना से चंद्रयान और मंगलयान जैसे गहन अंतरिक्ष अभियानों को ट्रैक करता है।"
+    },
+    {
+      "n": "Human Space Flight Centre",
+      "h": "मानव अंतरिक्ष उड़ान केंद्र",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "space",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.08,
+      "lng": 77.6,
+      "kd": "Human spaceflight centre",
+      "kdh": "मानव अंतरिक्ष उड़ान केंद्र",
+      "tag": "Runs the Gaganyaan programme",
+      "tagh": "गगनयान कार्यक्रम का संचालन",
+      "fact": "The Human Space Flight Centre in Bengaluru leads Gaganyaan, the mission to send Indian astronauts (gaganyatris) to low Earth orbit.",
+      "facth": "बेंगलुरु का मानव अंतरिक्ष उड़ान केंद्र गगनयान का नेतृत्व करता है, जो भारतीय अंतरिक्ष यात्रियों (गगनयात्रियों) को निम्न पृथ्वी कक्षा में भेजने का अभियान है।"
+    },
+    {
+      "n": "North Eastern Space Applications Centre",
+      "h": "उत्तर पूर्वी अंतरिक्ष उपयोग केंद्र",
+      "s": "Meghalaya",
+      "st": "Umiam, Meghalaya",
+      "sh": "उमियम, मेघालय",
+      "c": "space",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.65,
+      "lng": 91.9,
+      "kd": "Regional space applications centre",
+      "kdh": "क्षेत्रीय अंतरिक्ष उपयोग केंद्र",
+      "tag": "Space technology for the North-East",
+      "tagh": "उत्तर-पूर्व के लिए अंतरिक्ष तकनीक",
+      "fact": "The North Eastern Space Applications Centre at Umiam applies satellite data to planning and disaster management in the North-East.",
+      "facth": "उमियम का उत्तर पूर्वी अंतरिक्ष उपयोग केंद्र उत्तर-पूर्व में योजना और आपदा प्रबंधन के लिए उपग्रह डेटा का उपयोग करता है।"
+    },
+    {
+      "n": "Semi-Conductor Laboratory",
+      "h": "सेमी-कंडक्टर प्रयोगशाला",
+      "s": "Punjab",
+      "st": "Mohali, Punjab",
+      "sh": "मोहाली, पंजाब",
+      "c": "space",
+      "rg": "N",
+      "d": 3,
+      "lat": 30.7,
+      "lng": 76.7,
+      "kd": "Microelectronics laboratory",
+      "kdh": "सूक्ष्म इलेक्ट्रॉनिकी प्रयोगशाला",
+      "tag": "Chips for space and strategic use",
+      "tagh": "अंतरिक्ष और सामरिक उपयोग के चिप",
+      "fact": "The Semi-Conductor Laboratory at Mohali, under the Department of Space, makes microelectronic chips for space and strategic uses.",
+      "facth": "अंतरिक्ष विभाग के अधीन मोहाली की सेमी-कंडक्टर प्रयोगशाला अंतरिक्ष और सामरिक उपयोग के सूक्ष्म इलेक्ट्रॉनिक चिप बनाती है।"
+    },
+    {
+      "n": "National Atmospheric Research Laboratory",
+      "h": "राष्ट्रीय वायुमंडलीय अनुसंधान प्रयोगशाला",
+      "s": "Andhra Pradesh",
+      "st": "Gadanki, Tirupati, Andhra Pradesh",
+      "sh": "गडांकी, तिरुपति, आंध्र प्रदेश",
+      "c": "space",
+      "rg": "S",
+      "d": 3,
+      "lat": 13.46,
+      "lng": 79.17,
+      "kd": "Atmospheric research laboratory",
+      "kdh": "वायुमंडलीय अनुसंधान प्रयोगशाला",
+      "tag": "Home of the MST radar",
+      "tagh": "MST रडार का स्थान",
+      "fact": "The National Atmospheric Research Laboratory at Gadanki studies the atmosphere with its MST radar.",
+      "facth": "गडांकी की राष्ट्रीय वायुमंडलीय अनुसंधान प्रयोगशाला अपने MST रडार से वायुमंडल का अध्ययन करती है।"
+    },
+    {
+      "n": "Indian Astronomical Observatory",
+      "h": "भारतीय खगोलीय वेधशाला",
+      "s": "Ladakh",
+      "st": "Hanle, Ladakh",
+      "sh": "हानले, लद्दाख",
+      "c": "obs",
+      "rg": "N",
+      "d": 2,
+      "lat": 32.78,
+      "lng": 78.96,
+      "kd": "High-altitude observatory",
+      "kdh": "ऊँचाई पर स्थित वेधशाला",
+      "tag": "One of the highest observatories in the world",
+      "tagh": "विश्व की सबसे ऊँची वेधशालाओं में",
+      "fact": "The Indian Astronomical Observatory at Hanle, about 4,500 m high, is one of the highest observatories in the world; Hanle is also a dark-sky reserve.",
+      "facth": "लगभग 4,500 मीटर ऊँचाई पर हानले की भारतीय खगोलीय वेधशाला विश्व की सबसे ऊँची वेधशालाओं में है; हानले एक डार्क स्काई रिज़र्व भी है।"
+    },
+    {
+      "n": "Giant Metrewave Radio Telescope",
+      "h": "जायंट मीटरवेव रेडियो टेलीस्कोप",
+      "s": "Maharashtra",
+      "st": "Narayangaon, Pune, Maharashtra",
+      "sh": "नारायणगाँव, पुणे, महाराष्ट्र",
+      "c": "obs",
+      "rg": "W",
+      "d": 2,
+      "lat": 19.1,
+      "lng": 74.05,
+      "kd": "Radio telescope array",
+      "kdh": "रेडियो टेलीस्कोप समूह",
+      "tag": "30 dishes of 45 m each",
+      "tagh": "45 मीटर के 30 डिश",
+      "fact": "The Giant Metrewave Radio Telescope near Pune is an array of thirty 45-metre dishes, run by NCRA-TIFR.",
+      "facth": "पुणे के पास जायंट मीटरवेव रेडियो टेलीस्कोप 45 मीटर के तीस डिशों का समूह है, जिसे NCRA-TIFR चलाता है।"
+    },
+    {
+      "n": "Devasthal Observatory",
+      "h": "देवस्थल वेधशाला",
+      "s": "Uttarakhand",
+      "st": "Devasthal, Nainital, Uttarakhand",
+      "sh": "देवस्थल, नैनीताल, उत्तराखंड",
+      "c": "obs",
+      "rg": "N",
+      "d": 3,
+      "lat": 29.36,
+      "lng": 79.68,
+      "kd": "Optical observatory",
+      "kdh": "प्रकाशीय वेधशाला",
+      "tag": "Asia's largest optical telescope (3.6 m)",
+      "tagh": "एशिया का सबसे बड़ा प्रकाशीय टेलीस्कोप (3.6 मीटर)",
+      "fact": "Devasthal, run by ARIES Nainital, has the 3.6 m Devasthal Optical Telescope and the International Liquid Mirror Telescope.",
+      "facth": "ARIES नैनीताल द्वारा संचालित देवस्थल में 3.6 मीटर का देवस्थल प्रकाशीय टेलीस्कोप और अंतरराष्ट्रीय द्रव दर्पण टेलीस्कोप है।"
+    },
+    {
+      "n": "Kodaikanal Solar Observatory",
+      "h": "कोडाइकनाल सौर वेधशाला",
+      "s": "Tamil Nadu",
+      "st": "Kodaikanal, Tamil Nadu",
+      "sh": "कोडाइकनाल, तमिलनाडु",
+      "c": "obs",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.23,
+      "lng": 77.46,
+      "kd": "Solar observatory",
+      "kdh": "सौर वेधशाला",
+      "tag": "Evershed effect discovered here (1909)",
+      "tagh": "यहाँ एवरशेड प्रभाव खोजा गया (1909)",
+      "fact": "The Kodaikanal Solar Observatory, set up in 1899, is where John Evershed discovered the Evershed effect in sunspots in 1909.",
+      "facth": "1899 में स्थापित कोडाइकनाल सौर वेधशाला वह स्थान है जहाँ जॉन एवरशेड ने 1909 में सौर कलंकों में एवरशेड प्रभाव खोजा।"
+    },
+    {
+      "n": "Vainu Bappu Observatory",
+      "h": "वेणु बप्पू वेधशाला",
+      "s": "Tamil Nadu",
+      "st": "Kavalur, Tamil Nadu",
+      "sh": "कावलूर, तमिलनाडु",
+      "c": "obs",
+      "rg": "S",
+      "d": 3,
+      "lat": 12.57,
+      "lng": 78.83,
+      "kd": "Optical observatory",
+      "kdh": "प्रकाशीय वेधशाला",
+      "tag": "Run by the Indian Institute of Astrophysics",
+      "tagh": "भारतीय खगोलभौतिकी संस्थान द्वारा संचालित",
+      "fact": "The Vainu Bappu Observatory at Kavalur, run by the Indian Institute of Astrophysics, has a 2.3 m telescope.",
+      "facth": "भारतीय खगोलभौतिकी संस्थान द्वारा संचालित कावलूर की वेणु बप्पू वेधशाला में 2.3 मीटर का टेलीस्कोप है।"
+    },
+    {
+      "n": "Northern Command",
+      "h": "उत्तरी कमान",
+      "s": "Jammu and Kashmir",
+      "st": "Udhampur, Jammu and Kashmir",
+      "sh": "उधमपुर, जम्मू और कश्मीर",
+      "c": "cmd",
+      "rg": "N",
+      "d": 2,
+      "lat": 32.93,
+      "lng": 75.14,
+      "kd": "Army command HQ",
+      "kdh": "थल सेना कमान मुख्यालय",
+      "tag": "Guards Jammu, Kashmir and Ladakh",
+      "tagh": "जम्मू, कश्मीर और लद्दाख की सुरक्षा",
+      "fact": "The Indian Army's Northern Command is headquartered at Udhampur and covers Jammu and Kashmir and Ladakh.",
+      "facth": "भारतीय थल सेना की उत्तरी कमान का मुख्यालय उधमपुर में है और यह जम्मू-कश्मीर और लद्दाख को देखती है।"
+    },
+    {
+      "n": "Western Command",
+      "h": "पश्चिमी कमान",
+      "s": "Haryana",
+      "st": "Chandimandir, Panchkula, Haryana",
+      "sh": "चंडीमंदिर, पंचकूला, हरियाणा",
+      "c": "cmd",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.72,
+      "lng": 76.89,
+      "kd": "Army command HQ",
+      "kdh": "थल सेना कमान मुख्यालय",
+      "tag": "Punjab and Haryana sector",
+      "tagh": "पंजाब और हरियाणा क्षेत्र",
+      "fact": "The Army's Western Command is headquartered at Chandimandir near Chandigarh.",
+      "facth": "थल सेना की पश्चिमी कमान का मुख्यालय चंडीगढ़ के पास चंडीमंदिर में है।"
+    },
+    {
+      "n": "South Western Command",
+      "h": "दक्षिण पश्चिमी कमान",
+      "s": "Rajasthan",
+      "st": "Jaipur, Rajasthan",
+      "sh": "जयपुर, राजस्थान",
+      "c": "cmd",
+      "rg": "W",
+      "d": 3,
+      "lat": 26.95,
+      "lng": 75.85,
+      "kd": "Army command HQ",
+      "kdh": "थल सेना कमान मुख्यालय",
+      "tag": "Youngest Army command (2005)",
+      "tagh": "सबसे नई थल सेना कमान (2005)",
+      "fact": "The South Western Command, the youngest Army command, was raised in 2005 with its headquarters at Jaipur.",
+      "facth": "सबसे नई थल सेना कमान दक्षिण पश्चिमी कमान 2005 में जयपुर मुख्यालय के साथ बनाई गई।"
+    },
+    {
+      "n": "Central Command",
+      "h": "मध्य कमान",
+      "s": "Uttar Pradesh",
+      "st": "Lucknow, Uttar Pradesh",
+      "sh": "लखनऊ, उत्तर प्रदेश",
+      "c": "cmd",
+      "rg": "N",
+      "d": 2,
+      "lat": 26.83,
+      "lng": 80.92,
+      "kd": "Army command HQ",
+      "kdh": "थल सेना कमान मुख्यालय",
+      "tag": "Covers the central sector",
+      "tagh": "मध्य क्षेत्र",
+      "fact": "The Army's Central Command is headquartered at Lucknow.",
+      "facth": "थल सेना की मध्य कमान का मुख्यालय लखनऊ में है।"
+    },
+    {
+      "n": "Eastern Command",
+      "h": "पूर्वी कमान",
+      "s": "West Bengal",
+      "st": "Fort William, Kolkata, West Bengal",
+      "sh": "फ़ोर्ट विलियम, कोलकाता, पश्चिम बंगाल",
+      "c": "cmd",
+      "rg": "E",
+      "d": 2,
+      "lat": 22.56,
+      "lng": 88.34,
+      "kd": "Army command HQ",
+      "kdh": "थल सेना कमान मुख्यालय",
+      "tag": "Headquarters at Fort William",
+      "tagh": "मुख्यालय फ़ोर्ट विलियम में",
+      "fact": "The Army's Eastern Command is headquartered at Fort William, Kolkata, and covers the eastern and north-eastern borders.",
+      "facth": "थल सेना की पूर्वी कमान का मुख्यालय फ़ोर्ट विलियम, कोलकाता में है और यह पूर्वी व उत्तर-पूर्वी सीमाओं को देखती है।"
+    },
+    {
+      "n": "Southern Command",
+      "h": "दक्षिणी कमान",
+      "s": "Maharashtra",
+      "st": "Pune, Maharashtra",
+      "sh": "पुणे, महाराष्ट्र",
+      "c": "cmd",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.52,
+      "lng": 73.87,
+      "kd": "Army command HQ",
+      "kdh": "थल सेना कमान मुख्यालय",
+      "tag": "The Army's oldest command (1895)",
+      "tagh": "थल सेना की सबसे पुरानी कमान (1895)",
+      "fact": "The Southern Command, raised in 1895, is the Indian Army's oldest command, headquartered at Pune.",
+      "facth": "1895 में गठित दक्षिणी कमान भारतीय थल सेना की सबसे पुरानी कमान है, जिसका मुख्यालय पुणे में है।"
+    },
+    {
+      "n": "Army Training Command",
+      "h": "सेना प्रशिक्षण कमान",
+      "s": "Himachal Pradesh",
+      "st": "Shimla, Himachal Pradesh",
+      "sh": "शिमला, हिमाचल प्रदेश",
+      "c": "cmd",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.1,
+      "lng": 77.17,
+      "kd": "Army training command HQ",
+      "kdh": "थल सेना प्रशिक्षण कमान मुख्यालय",
+      "tag": "ARTRAC",
+      "tagh": "ARTRAC",
+      "fact": "The Army Training Command (ARTRAC), which shapes training and doctrine, is headquartered at Shimla.",
+      "facth": "प्रशिक्षण और सिद्धांत तय करने वाली सेना प्रशिक्षण कमान (ARTRAC) का मुख्यालय शिमला में है।"
+    },
+    {
+      "n": "Western Naval Command",
+      "h": "पश्चिमी नौसेना कमान",
+      "s": "Maharashtra",
+      "st": "Mumbai, Maharashtra",
+      "sh": "मुंबई, महाराष्ट्र",
+      "c": "cmd",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.97,
+      "lng": 72.85,
+      "kd": "Navy command HQ",
+      "kdh": "नौसेना कमान मुख्यालय",
+      "tag": "The Navy's 'Sword Arm'",
+      "tagh": "नौसेना की 'तलवार भुजा'",
+      "fact": "The Western Naval Command, called the Sword Arm of the Navy, is headquartered at Mumbai.",
+      "facth": "नौसेना की 'तलवार भुजा' कही जाने वाली पश्चिमी नौसेना कमान का मुख्यालय मुंबई में है।"
+    },
+    {
+      "n": "Eastern Naval Command",
+      "h": "पूर्वी नौसेना कमान",
+      "s": "Andhra Pradesh",
+      "st": "Visakhapatnam, Andhra Pradesh",
+      "sh": "विशाखापत्तनम, आंध्र प्रदेश",
+      "c": "cmd",
+      "rg": "S",
+      "d": 1,
+      "lat": 17.72,
+      "lng": 83.22,
+      "kd": "Navy command HQ",
+      "kdh": "नौसेना कमान मुख्यालय",
+      "tag": "Home of the submarine arm",
+      "tagh": "पनडुब्बी शाखा का घर",
+      "fact": "The Eastern Naval Command is headquartered at Visakhapatnam, home of the Navy's submarine arm.",
+      "facth": "पूर्वी नौसेना कमान का मुख्यालय विशाखापत्तनम में है, जो नौसेना की पनडुब्बी शाखा का घर है।"
+    },
+    {
+      "n": "Southern Naval Command",
+      "h": "दक्षिणी नौसेना कमान",
+      "s": "Kerala",
+      "st": "Kochi, Kerala",
+      "sh": "कोच्चि, केरल",
+      "c": "cmd",
+      "rg": "S",
+      "d": 2,
+      "lat": 9.97,
+      "lng": 76.29,
+      "kd": "Navy training command HQ",
+      "kdh": "नौसेना प्रशिक्षण कमान मुख्यालय",
+      "tag": "The Navy's training command",
+      "tagh": "नौसेना की प्रशिक्षण कमान",
+      "fact": "The Southern Naval Command at Kochi is the Navy's training command.",
+      "facth": "कोच्चि की दक्षिणी नौसेना कमान नौसेना की प्रशिक्षण कमान है।"
+    },
+    {
+      "n": "Western Air Command",
+      "h": "पश्चिमी वायु कमान",
+      "s": "Delhi",
+      "st": "Subroto Park, New Delhi",
+      "sh": "सुब्रतो पार्क, नई दिल्ली",
+      "c": "cmd",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.57,
+      "lng": 77.15,
+      "kd": "Air Force command HQ",
+      "kdh": "वायु सेना कमान मुख्यालय",
+      "tag": "Largest IAF command",
+      "tagh": "वायु सेना की सबसे बड़ी कमान",
+      "fact": "The Western Air Command, the Indian Air Force's largest, is headquartered at Subroto Park, New Delhi.",
+      "facth": "भारतीय वायु सेना की सबसे बड़ी पश्चिमी वायु कमान का मुख्यालय सुब्रतो पार्क, नई दिल्ली में है।"
+    },
+    {
+      "n": "South Western Air Command",
+      "h": "दक्षिण पश्चिमी वायु कमान",
+      "s": "Gujarat",
+      "st": "Gandhinagar, Gujarat",
+      "sh": "गांधीनगर, गुजरात",
+      "c": "cmd",
+      "rg": "W",
+      "d": 3,
+      "lat": 23.22,
+      "lng": 72.65,
+      "kd": "Air Force command HQ",
+      "kdh": "वायु सेना कमान मुख्यालय",
+      "tag": "Guards the western sea and land border",
+      "tagh": "पश्चिमी समुद्री और थल सीमा की सुरक्षा",
+      "fact": "The South Western Air Command of the IAF is headquartered at Gandhinagar.",
+      "facth": "वायु सेना की दक्षिण पश्चिमी वायु कमान का मुख्यालय गांधीनगर में है।"
+    },
+    {
+      "n": "Central Air Command",
+      "h": "मध्य वायु कमान",
+      "s": "Uttar Pradesh",
+      "st": "Prayagraj, Uttar Pradesh",
+      "sh": "प्रयागराज, उत्तर प्रदेश",
+      "c": "cmd",
+      "rg": "N",
+      "d": 3,
+      "lat": 25.44,
+      "lng": 81.85,
+      "kd": "Air Force command HQ",
+      "kdh": "वायु सेना कमान मुख्यालय",
+      "tag": "Covers central India",
+      "tagh": "मध्य भारत",
+      "fact": "The Central Air Command of the IAF is headquartered at Prayagraj.",
+      "facth": "वायु सेना की मध्य वायु कमान का मुख्यालय प्रयागराज में है।"
+    },
+    {
+      "n": "Eastern Air Command",
+      "h": "पूर्वी वायु कमान",
+      "s": "Meghalaya",
+      "st": "Shillong, Meghalaya",
+      "sh": "शिलॉन्ग, मेघालय",
+      "c": "cmd",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.57,
+      "lng": 91.88,
+      "kd": "Air Force command HQ",
+      "kdh": "वायु सेना कमान मुख्यालय",
+      "tag": "Covers the North-East",
+      "tagh": "उत्तर-पूर्व",
+      "fact": "The Eastern Air Command of the IAF is headquartered at Shillong.",
+      "facth": "वायु सेना की पूर्वी वायु कमान का मुख्यालय शिलॉन्ग में है।"
+    },
+    {
+      "n": "Southern Air Command",
+      "h": "दक्षिणी वायु कमान",
+      "s": "Kerala",
+      "st": "Thiruvananthapuram, Kerala",
+      "sh": "तिरुवनंतपुरम, केरल",
+      "c": "cmd",
+      "rg": "S",
+      "d": 3,
+      "lat": 8.5,
+      "lng": 76.97,
+      "kd": "Air Force command HQ",
+      "kdh": "वायु सेना कमान मुख्यालय",
+      "tag": "Covers peninsular India and island territories",
+      "tagh": "प्रायद्वीपीय भारत और द्वीप क्षेत्र",
+      "fact": "The Southern Air Command of the IAF is headquartered at Thiruvananthapuram.",
+      "facth": "वायु सेना की दक्षिणी वायु कमान का मुख्यालय तिरुवनंतपुरम में है।"
+    },
+    {
+      "n": "Training Command (IAF)",
+      "h": "प्रशिक्षण कमान (वायु सेना)",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "cmd",
+      "rg": "S",
+      "d": 3,
+      "lat": 12.98,
+      "lng": 77.6,
+      "kd": "Air Force training command HQ",
+      "kdh": "वायु सेना प्रशिक्षण कमान मुख्यालय",
+      "tag": "Trains IAF pilots and personnel",
+      "tagh": "वायु सेना के पायलटों और कर्मियों का प्रशिक्षण",
+      "fact": "The IAF Training Command is headquartered at Bengaluru.",
+      "facth": "वायु सेना की प्रशिक्षण कमान का मुख्यालय बेंगलुरु में है।"
+    },
+    {
+      "n": "Maintenance Command (IAF)",
+      "h": "अनुरक्षण कमान (वायु सेना)",
+      "s": "Maharashtra",
+      "st": "Nagpur, Maharashtra",
+      "sh": "नागपुर, महाराष्ट्र",
+      "c": "cmd",
+      "rg": "W",
+      "d": 3,
+      "lat": 21.15,
+      "lng": 79.08,
+      "kd": "Air Force maintenance command HQ",
+      "kdh": "वायु सेना अनुरक्षण कमान मुख्यालय",
+      "tag": "Keeps aircraft and equipment serviceable",
+      "tagh": "विमान और उपकरणों का रखरखाव",
+      "fact": "The IAF Maintenance Command is headquartered at Nagpur.",
+      "facth": "वायु सेना की अनुरक्षण कमान का मुख्यालय नागपुर में है।"
+    },
+    {
+      "n": "Andaman and Nicobar Command",
+      "h": "अंडमान और निकोबार कमान",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Sri Vijaya Puram (Port Blair)",
+      "sh": "श्री विजयपुरम (पोर्ट ब्लेयर)",
+      "c": "cmd",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.62,
+      "lng": 92.72,
+      "kd": "Tri-service command HQ",
+      "kdh": "त्रि-सेवा कमान मुख्यालय",
+      "tag": "India's first integrated theatre command (2001)",
+      "tagh": "भारत की पहली एकीकृत थिएटर कमान (2001)",
+      "fact": "The Andaman and Nicobar Command, set up in 2001 at Port Blair (renamed Sri Vijaya Puram in 2024), is India's only tri-service command.",
+      "facth": "2001 में पोर्ट ब्लेयर (2024 में श्री विजयपुरम नाम) में बनी अंडमान और निकोबार कमान भारत की एकमात्र त्रि-सेवा कमान है।"
+    },
+    {
+      "n": "National Defence Academy",
+      "h": "राष्ट्रीय रक्षा अकादमी",
+      "s": "Maharashtra",
+      "st": "Khadakwasla, Pune, Maharashtra",
+      "sh": "खड़कवासला, पुणे, महाराष्ट्र",
+      "c": "acad",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.43,
+      "lng": 73.77,
+      "kd": "Joint services academy",
+      "kdh": "संयुक्त सेवा अकादमी",
+      "tag": "First tri-service academy in the world",
+      "tagh": "विश्व की पहली त्रि-सेवा अकादमी",
+      "fact": "The National Defence Academy at Khadakwasla trains cadets of the Army, Navy and Air Force together; it was the first tri-service academy in the world.",
+      "facth": "खड़कवासला की राष्ट्रीय रक्षा अकादमी थल, जल और वायु सेना के कैडेटों को साथ प्रशिक्षण देती है; यह विश्व की पहली त्रि-सेवा अकादमी थी।"
+    },
+    {
+      "n": "Indian Military Academy",
+      "h": "भारतीय सैन्य अकादमी",
+      "s": "Uttarakhand",
+      "st": "Dehradun, Uttarakhand",
+      "sh": "देहरादून, उत्तराखंड",
+      "c": "acad",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.33,
+      "lng": 78,
+      "kd": "Army officer academy",
+      "kdh": "थल सेना अधिकारी अकादमी",
+      "tag": "Founded 1932",
+      "tagh": "1932 में स्थापित",
+      "fact": "The Indian Military Academy in Dehradun, founded in 1932, trains officers for the Army; Field Marshal Sam Manekshaw was in its first batch.",
+      "facth": "1932 में स्थापित देहरादून की भारतीय सैन्य अकादमी थल सेना के अधिकारियों को प्रशिक्षण देती है; फ़ील्ड मार्शल सैम मानेकशॉ इसके पहले बैच में थे।"
+    },
+    {
+      "n": "Indian Naval Academy",
+      "h": "भारतीय नौसेना अकादमी",
+      "s": "Kerala",
+      "st": "Ezhimala, Kannur, Kerala",
+      "sh": "एझिमला, कन्नूर, केरल",
+      "c": "acad",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.03,
+      "lng": 75.25,
+      "kd": "Navy officer academy",
+      "kdh": "नौसेना अधिकारी अकादमी",
+      "tag": "Largest naval academy in Asia",
+      "tagh": "एशिया की सबसे बड़ी नौसेना अकादमी",
+      "fact": "The Indian Naval Academy at Ezhimala in Kerala trains naval officers and is among the largest naval academies in Asia.",
+      "facth": "केरल के एझिमला की भारतीय नौसेना अकादमी नौसेना अधिकारियों को प्रशिक्षण देती है और एशिया की सबसे बड़ी नौसेना अकादमियों में है।"
+    },
+    {
+      "n": "Air Force Academy",
+      "h": "वायु सेना अकादमी",
+      "s": "Telangana",
+      "st": "Dundigal, Hyderabad, Telangana",
+      "sh": "डुंडीगल, हैदराबाद, तेलंगाना",
+      "c": "acad",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.63,
+      "lng": 78.42,
+      "kd": "Air Force officer academy",
+      "kdh": "वायु सेना अधिकारी अकादमी",
+      "tag": "Trains IAF officers",
+      "tagh": "वायु सेना अधिकारियों का प्रशिक्षण",
+      "fact": "The Air Force Academy at Dundigal near Hyderabad trains officers of the Indian Air Force.",
+      "facth": "हैदराबाद के पास डुंडीगल की वायु सेना अकादमी भारतीय वायु सेना के अधिकारियों को प्रशिक्षण देती है।"
+    },
+    {
+      "n": "Officers Training Academy",
+      "h": "अधिकारी प्रशिक्षण अकादमी",
+      "s": "Tamil Nadu",
+      "st": "Chennai, Tamil Nadu (also Gaya)",
+      "sh": "चेन्नई, तमिलनाडु (गया में भी)",
+      "c": "acad",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.98,
+      "lng": 80.17,
+      "kd": "Army officer academy (short service)",
+      "kdh": "थल सेना अधिकारी अकादमी (अल्प सेवा)",
+      "tag": "Trains short service commission officers",
+      "tagh": "अल्प सेवा कमीशन अधिकारियों का प्रशिक्षण",
+      "fact": "The Officers Training Academy in Chennai (and Gaya) trains Short Service Commission officers, including women officers.",
+      "facth": "चेन्नई (और गया) की अधिकारी प्रशिक्षण अकादमी महिला अधिकारियों सहित अल्प सेवा कमीशन अधिकारियों को प्रशिक्षण देती है।"
+    },
+    {
+      "n": "Defence Services Staff College",
+      "h": "रक्षा सेवा स्टाफ़ कॉलेज",
+      "s": "Tamil Nadu",
+      "st": "Wellington, Nilgiris, Tamil Nadu",
+      "sh": "वेलिंगटन, नीलगिरि, तमिलनाडु",
+      "c": "acad",
+      "rg": "S",
+      "d": 3,
+      "lat": 11.37,
+      "lng": 76.8,
+      "kd": "Staff college for mid-career officers",
+      "kdh": "मध्य-करियर अधिकारियों का स्टाफ़ कॉलेज",
+      "tag": "Tri-service staff college",
+      "tagh": "त्रि-सेवा स्टाफ़ कॉलेज",
+      "fact": "The Defence Services Staff College at Wellington trains mid-career officers of all three services.",
+      "facth": "वेलिंगटन का रक्षा सेवा स्टाफ़ कॉलेज तीनों सेनाओं के मध्य-करियर अधिकारियों को प्रशिक्षण देता है।"
+    },
+    {
+      "n": "High Altitude Warfare School",
+      "h": "उच्च तुंगता युद्ध विद्यालय",
+      "s": "Jammu and Kashmir",
+      "st": "Gulmarg, Jammu and Kashmir",
+      "sh": "गुलमर्ग, जम्मू और कश्मीर",
+      "c": "acad",
+      "rg": "N",
+      "d": 3,
+      "lat": 34.05,
+      "lng": 74.38,
+      "kd": "Mountain warfare school",
+      "kdh": "पर्वतीय युद्ध विद्यालय",
+      "tag": "Snow and mountain warfare training",
+      "tagh": "बर्फ़ और पर्वतीय युद्ध प्रशिक्षण",
+      "fact": "The High Altitude Warfare School at Gulmarg trains soldiers in mountain and snow warfare.",
+      "facth": "गुलमर्ग का उच्च तुंगता युद्ध विद्यालय सैनिकों को पर्वतीय और बर्फ़ीले युद्ध का प्रशिक्षण देता है।"
+    },
+    {
+      "n": "Counter Insurgency and Jungle Warfare School",
+      "h": "आतंकवाद-रोधी और जंगल युद्ध विद्यालय",
+      "s": "Mizoram",
+      "st": "Vairengte, Mizoram",
+      "sh": "वैरेंग्टे, मिज़ोरम",
+      "c": "acad",
+      "rg": "NE",
+      "d": 3,
+      "lat": 24.48,
+      "lng": 92.75,
+      "kd": "Jungle warfare school",
+      "kdh": "जंगल युद्ध विद्यालय",
+      "tag": "Trains soldiers for jungle operations",
+      "tagh": "जंगल अभियानों का प्रशिक्षण",
+      "fact": "The Counter Insurgency and Jungle Warfare School at Vairengte in Mizoram trains soldiers, including from foreign armies, in jungle warfare.",
+      "facth": "मिज़ोरम के वैरेंग्टे का आतंकवाद-रोधी और जंगल युद्ध विद्यालय विदेशी सेनाओं सहित सैनिकों को जंगल युद्ध का प्रशिक्षण देता है।"
+    },
+    {
+      "n": "Pokhran",
+      "h": "पोखरण",
+      "s": "Rajasthan",
+      "st": "Jaisalmer, Rajasthan",
+      "sh": "जैसलमेर, राजस्थान",
+      "c": "strat",
+      "rg": "W",
+      "d": 1,
+      "lat": 27.1,
+      "lng": 71.75,
+      "kd": "Nuclear test site",
+      "kdh": "परमाणु परीक्षण स्थल",
+      "tag": "Tests of 1974 and 1998",
+      "tagh": "1974 और 1998 के परीक्षण",
+      "fact": "India's nuclear tests were held at Pokhran: Smiling Buddha on 18 May 1974 and Operation Shakti (Pokhran-II) on 11 and 13 May 1998; 11 May is National Technology Day.",
+      "facth": "भारत के परमाणु परीक्षण पोखरण में हुए: 18 मई 1974 को स्माइलिंग बुद्धा और 11 व 13 मई 1998 को ऑपरेशन शक्ति (पोखरण-II); 11 मई राष्ट्रीय प्रौद्योगिकी दिवस है।"
+    },
+    {
+      "n": "Integrated Test Range, Chandipur",
+      "h": "एकीकृत परीक्षण रेंज, चांदीपुर",
+      "s": "Odisha",
+      "st": "Chandipur, Balasore, Odisha",
+      "sh": "चांदीपुर, बालासोर, ओडिशा",
+      "c": "strat",
+      "rg": "E",
+      "d": 2,
+      "lat": 21.45,
+      "lng": 86.95,
+      "kd": "Missile test range",
+      "kdh": "मिसाइल परीक्षण रेंज",
+      "tag": "DRDO missile tests",
+      "tagh": "DRDO के मिसाइल परीक्षण",
+      "fact": "The DRDO's Integrated Test Range at Chandipur in Odisha tests missiles such as Akash and Prithvi.",
+      "facth": "ओडिशा के चांदीपुर में DRDO की एकीकृत परीक्षण रेंज आकाश और पृथ्वी जैसी मिसाइलों का परीक्षण करती है।"
+    },
+    {
+      "n": "Dr A P J Abdul Kalam Island",
+      "h": "डॉ. ए. पी. जे. अब्दुल कलाम द्वीप",
+      "s": "Odisha",
+      "st": "Off the coast of Bhadrak, Odisha",
+      "sh": "भद्रक के तट से दूर, ओडिशा",
+      "c": "strat",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.76,
+      "lng": 87.08,
+      "kd": "Missile test island",
+      "kdh": "मिसाइल परीक्षण द्वीप",
+      "tag": "Formerly Wheeler Island",
+      "tagh": "पहले व्हीलर द्वीप",
+      "fact": "Wheeler Island off Odisha, renamed Dr A P J Abdul Kalam Island in 2015, is the launch site for long-range missiles such as Agni-V.",
+      "facth": "ओडिशा के तट से दूर व्हीलर द्वीप, जिसका नाम 2015 में डॉ. ए. पी. जे. अब्दुल कलाम द्वीप रखा गया, अग्नि-V जैसी लंबी दूरी की मिसाइलों का प्रक्षेपण स्थल है।",
+      "sea": true
+    },
+    {
+      "n": "INS Kadamba",
+      "h": "आईएनएस कदंबा",
+      "s": "Karnataka",
+      "st": "Karwar, Karnataka",
+      "sh": "कारवार, कर्नाटक",
+      "c": "strat",
+      "rg": "S",
+      "d": 2,
+      "lat": 14.83,
+      "lng": 74.16,
+      "kd": "Naval base",
+      "kdh": "नौसैनिक अड्डा",
+      "tag": "Project Seabird",
+      "tagh": "प्रोजेक्ट सीबर्ड",
+      "fact": "INS Kadamba at Karwar, built under Project Seabird, is set to be the largest naval base east of the Suez Canal.",
+      "facth": "प्रोजेक्ट सीबर्ड के अंतर्गत बना कारवार का आईएनएस कदंबा स्वेज़ नहर के पूर्व का सबसे बड़ा नौसैनिक अड्डा बनने जा रहा है।"
+    },
+    {
+      "n": "Siachen Glacier",
+      "h": "सियाचिन ग्लेशियर",
+      "s": "Ladakh",
+      "st": "Karakoram range, Ladakh",
+      "sh": "काराकोरम पर्वतमाला, लद्दाख",
+      "c": "strat",
+      "rg": "N",
+      "d": 1,
+      "lat": 35.4,
+      "lng": 77.1,
+      "kd": "Highest battlefield",
+      "kdh": "सबसे ऊँचा युद्धक्षेत्र",
+      "tag": "Operation Meghdoot (1984)",
+      "tagh": "ऑपरेशन मेघदूत (1984)",
+      "fact": "Siachen, the highest battlefield in the world, has been held by India since Operation Meghdoot on 13 April 1984.",
+      "facth": "विश्व का सबसे ऊँचा युद्धक्षेत्र सियाचिन 13 अप्रैल 1984 के ऑपरेशन मेघदूत से भारत के नियंत्रण में है।"
+    },
+    {
+      "n": "Kargil War Memorial",
+      "h": "कारगिल युद्ध स्मारक",
+      "s": "Ladakh",
+      "st": "Drass, Ladakh",
+      "sh": "द्रास, लद्दाख",
+      "c": "strat",
+      "rg": "N",
+      "d": 1,
+      "lat": 34.43,
+      "lng": 75.75,
+      "kd": "War memorial",
+      "kdh": "युद्ध स्मारक",
+      "tag": "Operation Vijay (1999)",
+      "tagh": "ऑपरेशन विजय (1999)",
+      "fact": "The Kargil War Memorial at Drass honours soldiers of the 1999 Kargil war (Operation Vijay); 26 July is Kargil Vijay Diwas.",
+      "facth": "द्रास का कारगिल युद्ध स्मारक 1999 के कारगिल युद्ध (ऑपरेशन विजय) के सैनिकों को सम्मान देता है; 26 जुलाई कारगिल विजय दिवस है।"
+    },
+    {
+      "n": "National War Memorial",
+      "h": "राष्ट्रीय युद्ध स्मारक",
+      "s": "Delhi",
+      "st": "Near India Gate, New Delhi",
+      "sh": "इंडिया गेट के पास, नई दिल्ली",
+      "c": "strat",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.61,
+      "lng": 77.23,
+      "kd": "National war memorial",
+      "kdh": "राष्ट्रीय युद्ध स्मारक",
+      "tag": "Inaugurated 2019",
+      "tagh": "2019 में उद्घाटन",
+      "fact": "The National War Memorial near India Gate, inaugurated in February 2019, honours soldiers who died after independence; the Amar Jawan Jyoti flame was merged into it in 2022.",
+      "facth": "इंडिया गेट के पास फ़रवरी 2019 में उद्घाटित राष्ट्रीय युद्ध स्मारक स्वतंत्रता के बाद शहीद सैनिकों को सम्मान देता है; अमर जवान ज्योति 2022 में इसमें विलीन की गई।"
+    },
+    {
+      "n": "Hindustan Aeronautics Limited",
+      "h": "हिंदुस्तान एयरोनॉटिक्स लिमिटेड",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "ind",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.95,
+      "lng": 77.67,
+      "kd": "Aircraft maker",
+      "kdh": "विमान निर्माता",
+      "tag": "Makes the Tejas fighter",
+      "tagh": "तेजस लड़ाकू विमान बनाता है",
+      "fact": "HAL, headquartered in Bengaluru, builds the Tejas light combat aircraft, the Prachand light combat helicopter and the Dhruv helicopter.",
+      "facth": "बेंगलुरु मुख्यालय वाला HAL तेजस हल्का लड़ाकू विमान, प्रचंड हल्का लड़ाकू हेलीकॉप्टर और ध्रुव हेलीकॉप्टर बनाता है।"
+    },
+    {
+      "n": "Mazagon Dock Shipbuilders",
+      "h": "मझगाँव डॉक शिपबिल्डर्स",
+      "s": "Maharashtra",
+      "st": "Mumbai, Maharashtra",
+      "sh": "मुंबई, महाराष्ट्र",
+      "c": "ind",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.96,
+      "lng": 72.84,
+      "kd": "Warship and submarine yard",
+      "kdh": "युद्धपोत और पनडुब्बी गोदी",
+      "tag": "Built the Scorpene (Kalvari-class) submarines",
+      "tagh": "स्कॉर्पीन (कलवरी श्रेणी) पनडुब्बियाँ बनाईं",
+      "fact": "Mazagon Dock in Mumbai builds destroyers, frigates and the Kalvari-class (Scorpene) submarines.",
+      "facth": "मुंबई का मझगाँव डॉक विध्वंसक, फ़्रिगेट और कलवरी श्रेणी (स्कॉर्पीन) पनडुब्बियाँ बनाता है।"
+    },
+    {
+      "n": "Cochin Shipyard",
+      "h": "कोचीन शिपयार्ड",
+      "s": "Kerala",
+      "st": "Kochi, Kerala",
+      "sh": "कोच्चि, केरल",
+      "c": "ind",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.95,
+      "lng": 76.29,
+      "kd": "Shipyard",
+      "kdh": "पोत निर्माण गोदी",
+      "tag": "Built INS Vikrant",
+      "tagh": "आईएनएस विक्रांत बनाया",
+      "fact": "Cochin Shipyard built INS Vikrant, India's first indigenous aircraft carrier, commissioned on 2 September 2022.",
+      "facth": "कोचीन शिपयार्ड ने भारत का पहला स्वदेशी विमानवाहक पोत आईएनएस विक्रांत बनाया, जो 2 सितंबर 2022 को सेवा में आया।"
+    },
+    {
+      "n": "Garden Reach Shipbuilders",
+      "h": "गार्डन रीच शिपबिल्डर्स",
+      "s": "West Bengal",
+      "st": "Kolkata, West Bengal",
+      "sh": "कोलकाता, पश्चिम बंगाल",
+      "c": "ind",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.54,
+      "lng": 88.31,
+      "kd": "Warship builder",
+      "kdh": "युद्धपोत निर्माता",
+      "tag": "First Indian yard to deliver 100 warships",
+      "tagh": "100 युद्धपोत देने वाली पहली भारतीय गोदी",
+      "fact": "Garden Reach Shipbuilders and Engineers in Kolkata was the first Indian shipyard to build 100 warships.",
+      "facth": "कोलकाता का गार्डन रीच शिपबिल्डर्स एंड इंजीनियर्स 100 युद्धपोत बनाने वाली पहली भारतीय गोदी था।"
+    },
+    {
+      "n": "Hindustan Shipyard",
+      "h": "हिंदुस्तान शिपयार्ड",
+      "s": "Andhra Pradesh",
+      "st": "Visakhapatnam, Andhra Pradesh",
+      "sh": "विशाखापत्तनम, आंध्र प्रदेश",
+      "c": "ind",
+      "rg": "S",
+      "d": 3,
+      "lat": 17.68,
+      "lng": 83.24,
+      "kd": "Shipyard",
+      "kdh": "पोत निर्माण गोदी",
+      "tag": "Built the first indigenous ship, Jala Usha (1948)",
+      "tagh": "पहला स्वदेशी जहाज़ जल उषा बनाया (1948)",
+      "fact": "Hindustan Shipyard in Visakhapatnam, founded as Scindia Shipyard, launched Jala Usha, the first ship built in independent India, in 1948.",
+      "facth": "सिंधिया शिपयार्ड के रूप में स्थापित विशाखापत्तनम के हिंदुस्तान शिपयार्ड ने 1948 में स्वतंत्र भारत में बना पहला जहाज़ जल उषा उतारा।"
+    },
+    {
+      "n": "DRDO Headquarters",
+      "h": "DRDO मुख्यालय",
+      "s": "Delhi",
+      "st": "DRDO Bhawan, New Delhi",
+      "sh": "DRDO भवन, नई दिल्ली",
+      "c": "ind",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.6,
+      "lng": 77.2,
+      "kd": "Defence research HQ",
+      "kdh": "रक्षा अनुसंधान मुख्यालय",
+      "tag": "Founded 1958",
+      "tagh": "1958 में स्थापित",
+      "fact": "The Defence Research and Development Organisation, founded in 1958, is headquartered in New Delhi and develops missiles, radars and other systems.",
+      "facth": "1958 में स्थापित रक्षा अनुसंधान एवं विकास संगठन का मुख्यालय नई दिल्ली में है और यह मिसाइल, रडार और अन्य प्रणालियाँ विकसित करता है।"
+    },
+    {
+      "n": "Dr A P J Abdul Kalam Missile Complex",
+      "h": "डॉ. ए. पी. जे. अब्दुल कलाम मिसाइल परिसर",
+      "s": "Telangana",
+      "st": "Hyderabad, Telangana",
+      "sh": "हैदराबाद, तेलंगाना",
+      "c": "ind",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.33,
+      "lng": 78.5,
+      "kd": "Missile development complex",
+      "kdh": "मिसाइल विकास परिसर",
+      "tag": "Home of DRDL; Agni and Prithvi",
+      "tagh": "DRDL का घर; अग्नि और पृथ्वी",
+      "fact": "The missile complex in Hyderabad, home of DRDL, developed missiles of the Integrated Guided Missile Development Programme begun in 1983 under A. P. J. Abdul Kalam.",
+      "facth": "हैदराबाद का मिसाइल परिसर, DRDL का घर, 1983 में ए. पी. जे. अब्दुल कलाम के नेतृत्व में शुरू एकीकृत निर्देशित मिसाइल विकास कार्यक्रम की मिसाइलें बना चुका है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "missions",
+      "icon": "🚀",
+      "t": [
+        "Milestones of the Indian space programme",
+        "भारतीय अंतरिक्ष कार्यक्रम के पड़ाव"
+      ],
+      "cols": [
+        [
+          "Mission or event",
+          "अभियान या घटना"
+        ],
+        [
+          "Key facts",
+          "मुख्य तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Aryabhata (1975)",
+            "आर्यभट (1975)"
+          ],
+          [
+            "India's first satellite, launched on 19 April 1975 by a Soviet rocket",
+            "भारत का पहला उपग्रह, 19 अप्रैल 1975 को सोवियत रॉकेट से प्रक्षेपित"
+          ]
+        ],
+        [
+          [
+            "SLV-3 and Rohini (1980)",
+            "SLV-3 और रोहिणी (1980)"
+          ],
+          [
+            "First satellite launched by an Indian rocket; A. P. J. Abdul Kalam was project director",
+            "भारतीय रॉकेट से प्रक्षेपित पहला उपग्रह; ए. पी. जे. अब्दुल कलाम परियोजना निदेशक थे"
+          ]
+        ],
+        [
+          [
+            "Rakesh Sharma (1984)",
+            "राकेश शर्मा (1984)"
+          ],
+          [
+            "First Indian in space, aboard Soyuz T-11; \"Saare Jahan Se Achha\"",
+            "अंतरिक्ष में पहले भारतीय, सोयुज़ T-11 पर; \"सारे जहाँ से अच्छा\""
+          ]
+        ],
+        [
+          [
+            "Chandrayaan-1 (2008)",
+            "चंद्रयान-1 (2008)"
+          ],
+          [
+            "First lunar mission (PSLV-C11); helped find water molecules on the Moon",
+            "पहला चंद्र अभियान (PSLV-C11); चंद्रमा पर जल अणुओं की खोज में मदद"
+          ]
+        ],
+        [
+          [
+            "Mangalyaan (2013-14)",
+            "मंगलयान (2013-14)"
+          ],
+          [
+            "Mars Orbiter Mission launched 5 November 2013, reached Mars 24 September 2014; first Asian country to Mars, on the first attempt",
+            "मंगल कक्षित्र अभियान 5 नवंबर 2013 को प्रक्षेपित, 24 सितंबर 2014 को मंगल पहुँचा; मंगल पहुँचने वाला पहला एशियाई देश, पहले प्रयास में"
+          ]
+        ],
+        [
+          [
+            "Chandrayaan-3 (2023)",
+            "चंद्रयान-3 (2023)"
+          ],
+          [
+            "Launched 14 July 2023 on LVM3; Vikram landed near the lunar south pole on 23 August 2023 (Shiv Shakti point), now National Space Day",
+            "14 जुलाई 2023 को LVM3 से प्रक्षेपित; विक्रम 23 अगस्त 2023 को चंद्र दक्षिणी ध्रुव के पास उतरा (शिव शक्ति बिंदु), अब राष्ट्रीय अंतरिक्ष दिवस"
+          ]
+        ],
+        [
+          [
+            "Aditya-L1 (2023-24)",
+            "आदित्य-L1 (2023-24)"
+          ],
+          [
+            "India's first solar mission, launched 2 September 2023, reached the L1 point on 6 January 2024",
+            "भारत का पहला सौर अभियान, 2 सितंबर 2023 को प्रक्षेपित, 6 जनवरी 2024 को L1 बिंदु पहुँचा"
+          ]
+        ],
+        [
+          [
+            "XPoSat (2024)",
+            "XPoSat (2024)"
+          ],
+          [
+            "India's first X-ray polarimetry satellite, launched 1 January 2024",
+            "भारत का पहला एक्स-रे ध्रुवणमापी उपग्रह, 1 जनवरी 2024 को प्रक्षेपित"
+          ]
+        ],
+        [
+          [
+            "SpaDeX (2024-25)",
+            "स्पेडेक्स (2024-25)"
+          ],
+          [
+            "Space docking experiment; docking achieved on 16 January 2025, making India the fourth country to dock in space",
+            "अंतरिक्ष डॉकिंग प्रयोग; 16 जनवरी 2025 को डॉकिंग, भारत अंतरिक्ष में डॉकिंग करने वाला चौथा देश"
+          ]
+        ],
+        [
+          [
+            "Axiom-4 (2025)",
+            "एक्सिओम-4 (2025)"
+          ],
+          [
+            "Shubhanshu Shukla flew to the International Space Station in June 2025, the second Indian in space",
+            "शुभांशु शुक्ला जून 2025 में अंतरराष्ट्रीय अंतरिक्ष स्टेशन गए, अंतरिक्ष जाने वाले दूसरे भारतीय"
+          ]
+        ],
+        [
+          [
+            "NISAR (2025)",
+            "निसार (2025)"
+          ],
+          [
+            "NASA-ISRO radar satellite launched on 30 July 2025 by GSLV-F16",
+            "नासा-ISRO रडार उपग्रह, 30 जुलाई 2025 को GSLV-F16 से प्रक्षेपित"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "rockets",
+      "icon": "🛰️",
+      "t": [
+        "Launch vehicles and space bodies",
+        "प्रक्षेपण यान और अंतरिक्ष संस्थाएँ"
+      ],
+      "cols": [
+        [
+          "Name",
+          "नाम"
+        ],
+        [
+          "Know this",
+          "यह जानें"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "PSLV",
+            "PSLV"
+          ],
+          [
+            "Polar Satellite Launch Vehicle, ISRO's workhorse; four stages alternating solid and liquid",
+            "ध्रुवीय उपग्रह प्रक्षेपण यान, ISRO का भरोसेमंद यान; ठोस और द्रव के बारी-बारी से चार चरण"
+          ]
+        ],
+        [
+          [
+            "GSLV",
+            "GSLV"
+          ],
+          [
+            "Geosynchronous Satellite Launch Vehicle, with a cryogenic upper stage",
+            "भू-तुल्यकाली उपग्रह प्रक्षेपण यान, क्रायोजेनिक ऊपरी चरण के साथ"
+          ]
+        ],
+        [
+          [
+            "LVM3",
+            "LVM3"
+          ],
+          [
+            "India's heaviest rocket (formerly GSLV Mk III); launched Chandrayaan-3 and is chosen for Gaganyaan",
+            "भारत का सबसे भारी रॉकेट (पहले GSLV Mk III); चंद्रयान-3 छोड़ा और गगनयान के लिए चुना गया"
+          ]
+        ],
+        [
+          [
+            "SSLV",
+            "SSLV"
+          ],
+          [
+            "Small Satellite Launch Vehicle for satellites up to 500 kg",
+            "500 किलो तक के उपग्रहों के लिए लघु उपग्रह प्रक्षेपण यान"
+          ]
+        ],
+        [
+          [
+            "Founders",
+            "संस्थापक"
+          ],
+          [
+            "Vikram Sarabhai, father of the Indian space programme; INCOSPAR (1962) became ISRO (1969); Department of Space 1972",
+            "विक्रम साराभाई, भारतीय अंतरिक्ष कार्यक्रम के जनक; इनकोस्पार (1962) ISRO (1969) बना; अंतरिक्ष विभाग 1972"
+          ]
+        ],
+        [
+          [
+            "IN-SPACe and NSIL",
+            "इन-स्पेस और NSIL"
+          ],
+          [
+            "IN-SPACe (2020) authorises private space firms; NewSpace India Limited is ISRO's commercial arm",
+            "इन-स्पेस (2020) निजी अंतरिक्ष कंपनियों को अनुमति देता है; न्यूस्पेस इंडिया लिमिटेड ISRO की वाणिज्यिक शाखा है"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "missiles",
+      "icon": "🎯",
+      "t": [
+        "Missiles of India",
+        "भारत की मिसाइलें"
+      ],
+      "cols": [
+        [
+          "Missile",
+          "मिसाइल"
+        ],
+        [
+          "Type",
+          "प्रकार"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Agni series",
+            "अग्नि श्रृंखला"
+          ],
+          [
+            "Surface-to-surface ballistic; Agni-V range over 5,000 km; Mission Divyastra (March 2024) tested MIRV",
+            "सतह से सतह बैलिस्टिक; अग्नि-V की मारक दूरी 5,000 किमी से अधिक; मिशन दिव्यास्त्र (मार्च 2024) में MIRV परीक्षण"
+          ]
+        ],
+        [
+          [
+            "Prithvi",
+            "पृथ्वी"
+          ],
+          [
+            "Short-range surface-to-surface ballistic (first missile of the IGMDP)",
+            "कम दूरी की सतह से सतह बैलिस्टिक (IGMDP की पहली मिसाइल)"
+          ]
+        ],
+        [
+          [
+            "Akash",
+            "आकाश"
+          ],
+          [
+            "Medium-range surface-to-air",
+            "मध्यम दूरी की सतह से हवा"
+          ]
+        ],
+        [
+          [
+            "Nag",
+            "नाग"
+          ],
+          [
+            "Anti-tank guided missile",
+            "टैंक-रोधी निर्देशित मिसाइल"
+          ]
+        ],
+        [
+          [
+            "BrahMos",
+            "ब्रह्मोस"
+          ],
+          [
+            "Supersonic cruise missile, India-Russia joint venture; named after the Brahmaputra and Moskva rivers",
+            "सुपरसोनिक क्रूज़ मिसाइल, भारत-रूस संयुक्त उद्यम; ब्रह्मपुत्र और मोस्कवा नदियों के नाम पर"
+          ]
+        ],
+        [
+          [
+            "Astra",
+            "अस्त्र"
+          ],
+          [
+            "Beyond-visual-range air-to-air",
+            "दृश्य सीमा से परे हवा से हवा"
+          ]
+        ],
+        [
+          [
+            "IGMDP",
+            "IGMDP"
+          ],
+          [
+            "Integrated Guided Missile Development Programme, 1983, led by A. P. J. Abdul Kalam, the \"Missile Man of India\"",
+            "एकीकृत निर्देशित मिसाइल विकास कार्यक्रम, 1983, ए. पी. जे. अब्दुल कलाम (\"भारत के मिसाइल मैन\") के नेतृत्व में"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "exercises",
+      "icon": "🤝",
+      "t": [
+        "Joint military exercises",
+        "संयुक्त सैन्य अभ्यास"
+      ],
+      "cols": [
+        [
+          "Exercise",
+          "अभ्यास"
+        ],
+        [
+          "With",
+          "किसके साथ"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Yudh Abhyas",
+            "युद्ध अभ्यास"
+          ],
+          [
+            "USA (army)",
+            "अमेरिका (थल सेना)"
+          ]
+        ],
+        [
+          [
+            "Malabar",
+            "मालाबार"
+          ],
+          [
+            "USA, Japan and Australia (navy)",
+            "अमेरिका, जापान और ऑस्ट्रेलिया (नौसेना)"
+          ]
+        ],
+        [
+          [
+            "Varuna / Shakti / Garuda",
+            "वरुण / शक्ति / गरुड़"
+          ],
+          [
+            "France (navy / army / air force)",
+            "फ़्रांस (नौसेना / थल सेना / वायु सेना)"
+          ]
+        ],
+        [
+          [
+            "INDRA",
+            "इंद्र"
+          ],
+          [
+            "Russia",
+            "रूस"
+          ]
+        ],
+        [
+          [
+            "Mitra Shakti / SLINEX",
+            "मित्र शक्ति / स्लाइनेक्स"
+          ],
+          [
+            "Sri Lanka (army / navy)",
+            "श्रीलंका (थल सेना / नौसेना)"
+          ]
+        ],
+        [
+          [
+            "Surya Kiran",
+            "सूर्य किरण"
+          ],
+          [
+            "Nepal",
+            "नेपाल"
+          ]
+        ],
+        [
+          [
+            "Sampriti",
+            "संप्रीति"
+          ],
+          [
+            "Bangladesh",
+            "बांग्लादेश"
+          ]
+        ],
+        [
+          [
+            "Nomadic Elephant",
+            "नोमैडिक एलीफ़ेंट"
+          ],
+          [
+            "Mongolia",
+            "मंगोलिया"
+          ]
+        ],
+        [
+          [
+            "Dharma Guardian / JIMEX",
+            "धर्म गार्डियन / जिमेक्स"
+          ],
+          [
+            "Japan (army / navy)",
+            "जापान (थल सेना / नौसेना)"
+          ]
+        ],
+        [
+          [
+            "Ajeya Warrior / Konkan",
+            "अजेय वॉरियर / कोंकण"
+          ],
+          [
+            "United Kingdom (army / navy)",
+            "ब्रिटेन (थल सेना / नौसेना)"
+          ]
+        ],
+        [
+          [
+            "AUSTRAHIND / AUSINDEX",
+            "ऑस्ट्राहिंद / ऑसइंडेक्स"
+          ],
+          [
+            "Australia (army / navy)",
+            "ऑस्ट्रेलिया (थल सेना / नौसेना)"
+          ]
+        ],
+        [
+          [
+            "Ekuverin",
+            "एकुवेरिन"
+          ],
+          [
+            "Maldives",
+            "मालदीव"
+          ]
+        ],
+        [
+          [
+            "Tarang Shakti",
+            "तरंग शक्ति"
+          ],
+          [
+            "India's first multinational air exercise (2024)",
+            "भारत का पहला बहुराष्ट्रीय वायु अभ्यास (2024)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ops",
+      "icon": "🪖",
+      "t": [
+        "Operations and defence firsts",
+        "अभियान और रक्षा क्षेत्र की पहली घटनाएँ"
+      ],
+      "cols": [
+        [
+          "Name",
+          "नाम"
+        ],
+        [
+          "What it was",
+          "क्या था"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Operation Meghdoot (1984)",
+            "ऑपरेशन मेघदूत (1984)"
+          ],
+          [
+            "Securing the Siachen Glacier",
+            "सियाचिन ग्लेशियर पर नियंत्रण"
+          ]
+        ],
+        [
+          [
+            "Operation Vijay (1999)",
+            "ऑपरेशन विजय (1999)"
+          ],
+          [
+            "Kargil war; 26 July is Kargil Vijay Diwas",
+            "कारगिल युद्ध; 26 जुलाई कारगिल विजय दिवस"
+          ]
+        ],
+        [
+          [
+            "Operation Shakti (1998)",
+            "ऑपरेशन शक्ति (1998)"
+          ],
+          [
+            "Pokhran-II nuclear tests",
+            "पोखरण-II परमाणु परीक्षण"
+          ]
+        ],
+        [
+          [
+            "Operation Sindoor (May 2025)",
+            "ऑपरेशन सिंदूर (मई 2025)"
+          ],
+          [
+            "Strikes on terror camps in Pakistan and Pakistan-occupied Kashmir after the Pahalgam attack",
+            "पहलगाम हमले के बाद पाकिस्तान और पाकिस्तान अधिकृत कश्मीर में आतंकी ठिकानों पर हमले"
+          ]
+        ],
+        [
+          [
+            "First Chief of Defence Staff",
+            "पहले रक्षा प्रमुख (CDS)"
+          ],
+          [
+            "General Bipin Rawat (1 January 2020)",
+            "जनरल बिपिन रावत (1 जनवरी 2020)"
+          ]
+        ],
+        [
+          [
+            "INS Vikrant (2022)",
+            "आईएनएस विक्रांत (2022)"
+          ],
+          [
+            "First indigenous aircraft carrier, built at Cochin Shipyard",
+            "पहला स्वदेशी विमानवाहक पोत, कोचीन शिपयार्ड में बना"
+          ]
+        ],
+        [
+          [
+            "INS Arihant",
+            "आईएनएस अरिहंत"
+          ],
+          [
+            "India's first nuclear-powered ballistic missile submarine",
+            "भारत की पहली परमाणु ऊर्जा चालित बैलिस्टिक मिसाइल पनडुब्बी"
+          ]
+        ],
+        [
+          [
+            "Field Marshals",
+            "फ़ील्ड मार्शल"
+          ],
+          [
+            "Sam Manekshaw (1973) and K. M. Cariappa (1986); Marshal of the IAF: Arjan Singh",
+            "सैम मानेकशॉ (1973) और के. एम. करियप्पा (1986); वायु सेना मार्शल: अर्जन सिंह"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "space",
+      "q": [
+        "Which was India's first satellite?",
+        "भारत का पहला उपग्रह कौन-सा था?"
+      ],
+      "o": [
+        [
+          "Aryabhata",
+          "आर्यभट"
+        ],
+        [
+          "Bhaskara",
+          "भास्कर"
+        ],
+        [
+          "Rohini",
+          "रोहिणी"
+        ],
+        [
+          "INSAT-1A",
+          "INSAT-1A"
+        ]
+      ],
+      "e": [
+        "Aryabhata was launched on 19 April 1975 by a Soviet rocket.",
+        "आर्यभट 19 अप्रैल 1975 को सोवियत रॉकेट से प्रक्षेपित हुआ।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "What does \"G\" stand for in GSLV?",
+        "GSLV में \"G\" का अर्थ क्या है?"
+      ],
+      "o": [
+        [
+          "Geosynchronous",
+          "भू-तुल्यकाली"
+        ],
+        [
+          "Global",
+          "वैश्विक"
+        ],
+        [
+          "Geological",
+          "भूवैज्ञानिक"
+        ],
+        [
+          "Gaganyaan",
+          "गगनयान"
+        ]
+      ],
+      "e": [
+        "GSLV is the Geosynchronous Satellite Launch Vehicle.",
+        "GSLV भू-तुल्यकाली उपग्रह प्रक्षेपण यान है।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "Mangalyaan (Mars Orbiter Mission) was launched by which vehicle?",
+        "मंगलयान किस प्रक्षेपण यान से छोड़ा गया?"
+      ],
+      "o": [
+        [
+          "PSLV",
+          "PSLV"
+        ],
+        [
+          "GSLV",
+          "GSLV"
+        ],
+        [
+          "LVM3",
+          "LVM3"
+        ],
+        [
+          "SSLV",
+          "SSLV"
+        ]
+      ],
+      "e": [
+        "PSLV-C25 launched it on 5 November 2013.",
+        "PSLV-C25 ने इसे 5 नवंबर 2013 को छोड़ा।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "Chandrayaan-3 landed near the lunar south pole on",
+        "चंद्रयान-3 चंद्र दक्षिणी ध्रुव के पास कब उतरा?"
+      ],
+      "o": [
+        [
+          "23 August 2023",
+          "23 अगस्त 2023"
+        ],
+        [
+          "14 July 2023",
+          "14 जुलाई 2023"
+        ],
+        [
+          "6 September 2019",
+          "6 सितंबर 2019"
+        ],
+        [
+          "2 September 2023",
+          "2 सितंबर 2023"
+        ]
+      ],
+      "e": [
+        "23 August is now celebrated as National Space Day; the landing site is Shiv Shakti point.",
+        "23 अगस्त अब राष्ट्रीय अंतरिक्ष दिवस है; उतरने का स्थान शिव शक्ति बिंदु है।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "Which is India's first space mission to study the Sun?",
+        "सूर्य का अध्ययन करने वाला भारत का पहला अंतरिक्ष अभियान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Aditya-L1",
+          "आदित्य-L1"
+        ],
+        [
+          "XPoSat",
+          "XPoSat"
+        ],
+        [
+          "Astrosat",
+          "एस्ट्रोसैट"
+        ],
+        [
+          "NISAR",
+          "निसार"
+        ]
+      ],
+      "e": [
+        "Aditya-L1 orbits the Sun-Earth L1 point.",
+        "आदित्य-L1 सूर्य-पृथ्वी L1 बिंदु की परिक्रमा करता है।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "When did India complete its first space docking (SpaDeX)?",
+        "भारत ने अपनी पहली अंतरिक्ष डॉकिंग (स्पेडेक्स) कब पूरी की?"
+      ],
+      "o": [
+        [
+          "16 January 2025",
+          "16 जनवरी 2025"
+        ],
+        [
+          "30 December 2024",
+          "30 दिसंबर 2024"
+        ],
+        [
+          "23 August 2023",
+          "23 अगस्त 2023"
+        ],
+        [
+          "15 August 2024",
+          "15 अगस्त 2024"
+        ]
+      ],
+      "e": [
+        "SpaDeX launched on 30 December 2024; India became the fourth country to dock in space.",
+        "स्पेडेक्स 30 दिसंबर 2024 को प्रक्षेपित हुआ; भारत अंतरिक्ष में डॉकिंग करने वाला चौथा देश बना।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "Who is known as the father of the Indian space programme?",
+        "भारतीय अंतरिक्ष कार्यक्रम का जनक किसे कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Vikram Sarabhai",
+          "विक्रम साराभाई"
+        ],
+        [
+          "Homi J. Bhabha",
+          "होमी जे. भाभा"
+        ],
+        [
+          "Satish Dhawan",
+          "सतीश धवन"
+        ],
+        [
+          "A. P. J. Abdul Kalam",
+          "ए. पी. जे. अब्दुल कलाम"
+        ]
+      ],
+      "e": [
+        "Homi Bhabha is the father of the Indian nuclear programme.",
+        "होमी भाभा भारतीय परमाणु कार्यक्रम के जनक हैं।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "Which Indian flew to the International Space Station on Axiom-4 in 2025?",
+        "2025 में एक्सिओम-4 से अंतरराष्ट्रीय अंतरिक्ष स्टेशन कौन-से भारतीय गए?"
+      ],
+      "o": [
+        [
+          "Shubhanshu Shukla",
+          "शुभांशु शुक्ला"
+        ],
+        [
+          "Rakesh Sharma",
+          "राकेश शर्मा"
+        ],
+        [
+          "Prashanth Nair",
+          "प्रशांत नायर"
+        ],
+        [
+          "Ajit Krishnan",
+          "अजीत कृष्णन"
+        ]
+      ],
+      "e": [
+        "He is the second Indian in space after Rakesh Sharma (1984).",
+        "वे राकेश शर्मा (1984) के बाद अंतरिक्ष जाने वाले दूसरे भारतीय हैं।"
+      ]
+    },
+    {
+      "t": "space",
+      "q": [
+        "From where did India launch its first rocket in 1963?",
+        "भारत ने 1963 में अपना पहला रॉकेट कहाँ से छोड़ा?"
+      ],
+      "o": [
+        [
+          "Thumba, Kerala",
+          "थुंबा, केरल"
+        ],
+        [
+          "Sriharikota, Andhra Pradesh",
+          "श्रीहरिकोटा, आंध्र प्रदेश"
+        ],
+        [
+          "Chandipur, Odisha",
+          "चांदीपुर, ओडिशा"
+        ],
+        [
+          "Balasore, Odisha",
+          "बालासोर, ओडिशा"
+        ]
+      ],
+      "e": [
+        "A Nike-Apache sounding rocket was launched on 21 November 1963.",
+        "21 नवंबर 1963 को नाइकी-अपाचे साउंडिंग रॉकेट छोड़ा गया।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "BrahMos is a joint venture of India and",
+        "ब्रह्मोस भारत और किस देश का संयुक्त उद्यम है?"
+      ],
+      "o": [
+        [
+          "Russia",
+          "रूस"
+        ],
+        [
+          "Israel",
+          "इज़राइल"
+        ],
+        [
+          "France",
+          "फ़्रांस"
+        ],
+        [
+          "USA",
+          "अमेरिका"
+        ]
+      ],
+      "e": [
+        "It is named after the Brahmaputra and Moskva rivers.",
+        "इसका नाम ब्रह्मपुत्र और मोस्कवा नदियों पर है।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Akash is which type of missile?",
+        "आकाश किस प्रकार की मिसाइल है?"
+      ],
+      "o": [
+        [
+          "Surface-to-air",
+          "सतह से हवा"
+        ],
+        [
+          "Anti-tank",
+          "टैंक-रोधी"
+        ],
+        [
+          "Air-to-air",
+          "हवा से हवा"
+        ],
+        [
+          "Intercontinental ballistic",
+          "अंतरमहाद्वीपीय बैलिस्टिक"
+        ]
+      ],
+      "e": [
+        "Nag is anti-tank; Astra is air-to-air; Agni-V is long-range ballistic.",
+        "नाग टैंक-रोधी है; अस्त्र हवा से हवा; अग्नि-V लंबी दूरी की बैलिस्टिक।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Exercise Yudh Abhyas is held between India and",
+        "युद्ध अभ्यास भारत और किस देश के बीच होता है?"
+      ],
+      "o": [
+        [
+          "USA",
+          "अमेरिका"
+        ],
+        [
+          "Russia",
+          "रूस"
+        ],
+        [
+          "France",
+          "फ़्रांस"
+        ],
+        [
+          "Japan",
+          "जापान"
+        ]
+      ],
+      "e": [
+        "Yudh Abhyas is an India-US army exercise.",
+        "युद्ध अभ्यास भारत-अमेरिका थल सेना अभ्यास है।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Exercise Surya Kiran is held between India and",
+        "सूर्य किरण अभ्यास भारत और किस देश के बीच होता है?"
+      ],
+      "o": [
+        [
+          "Nepal",
+          "नेपाल"
+        ],
+        [
+          "Bhutan",
+          "भूटान"
+        ],
+        [
+          "Bangladesh",
+          "बांग्लादेश"
+        ],
+        [
+          "Sri Lanka",
+          "श्रीलंका"
+        ]
+      ],
+      "e": [
+        "Sampriti is with Bangladesh and Mitra Shakti with Sri Lanka.",
+        "संप्रीति बांग्लादेश के साथ और मित्र शक्ति श्रीलंका के साथ है।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Which naval exercise brings India, the USA, Japan and Australia together?",
+        "कौन-सा नौसैनिक अभ्यास भारत, अमेरिका, जापान और ऑस्ट्रेलिया को साथ लाता है?"
+      ],
+      "o": [
+        [
+          "Malabar",
+          "मालाबार"
+        ],
+        [
+          "Varuna",
+          "वरुण"
+        ],
+        [
+          "SIMBEX",
+          "सिम्बेक्स"
+        ],
+        [
+          "Konkan",
+          "कोंकण"
+        ]
+      ],
+      "e": [
+        "Malabar began in 1992 as an India-US exercise.",
+        "मालाबार 1992 में भारत-अमेरिका अभ्यास के रूप में शुरू हुआ।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Operation Meghdoot (1984) is associated with",
+        "ऑपरेशन मेघदूत (1984) किससे जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Siachen Glacier",
+          "सियाचिन ग्लेशियर"
+        ],
+        [
+          "Kargil",
+          "कारगिल"
+        ],
+        [
+          "Pokhran",
+          "पोखरण"
+        ],
+        [
+          "Golden Temple",
+          "स्वर्ण मंदिर"
+        ]
+      ],
+      "e": [
+        "Operation Vijay was the Kargil war of 1999.",
+        "ऑपरेशन विजय 1999 का कारगिल युद्ध था।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Who was India's first Chief of Defence Staff?",
+        "भारत के पहले रक्षा प्रमुख (CDS) कौन थे?"
+      ],
+      "o": [
+        [
+          "General Bipin Rawat",
+          "जनरल बिपिन रावत"
+        ],
+        [
+          "General M. M. Naravane",
+          "जनरल एम. एम. नरवणे"
+        ],
+        [
+          "General Anil Chauhan",
+          "जनरल अनिल चौहान"
+        ],
+        [
+          "Field Marshal Sam Manekshaw",
+          "फ़ील्ड मार्शल सैम मानेकशॉ"
+        ]
+      ],
+      "e": [
+        "He took office on 1 January 2020.",
+        "उन्होंने 1 जनवरी 2020 को पद सँभाला।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "India's first indigenous aircraft carrier INS Vikrant was built at",
+        "भारत का पहला स्वदेशी विमानवाहक पोत आईएनएस विक्रांत कहाँ बना?"
+      ],
+      "o": [
+        [
+          "Cochin Shipyard",
+          "कोचीन शिपयार्ड"
+        ],
+        [
+          "Mazagon Dock",
+          "मझगाँव डॉक"
+        ],
+        [
+          "Garden Reach Shipbuilders",
+          "गार्डन रीच शिपबिल्डर्स"
+        ],
+        [
+          "Goa Shipyard",
+          "गोवा शिपयार्ड"
+        ]
+      ],
+      "e": [
+        "It was commissioned on 2 September 2022.",
+        "यह 2 सितंबर 2022 को सेवा में आया।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Which is the only tri-service command of India?",
+        "भारत की एकमात्र त्रि-सेवा कमान कौन-सी है?"
+      ],
+      "o": [
+        [
+          "Andaman and Nicobar Command",
+          "अंडमान और निकोबार कमान"
+        ],
+        [
+          "Northern Command",
+          "उत्तरी कमान"
+        ],
+        [
+          "Strategic Forces Command",
+          "सामरिक बल कमान"
+        ],
+        [
+          "Southern Naval Command",
+          "दक्षिणी नौसेना कमान"
+        ]
+      ],
+      "e": [
+        "It was set up at Port Blair in 2001.",
+        "इसे 2001 में पोर्ट ब्लेयर में बनाया गया।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "HAL-developed Prachand is which type of aircraft?",
+        "HAL द्वारा विकसित प्रचंड किस प्रकार का विमान है?"
+      ],
+      "o": [
+        [
+          "Light combat helicopter",
+          "हल्का लड़ाकू हेलीकॉप्टर"
+        ],
+        [
+          "Light combat aircraft",
+          "हल्का लड़ाकू विमान"
+        ],
+        [
+          "Transport aircraft",
+          "परिवहन विमान"
+        ],
+        [
+          "Trainer jet",
+          "प्रशिक्षक जेट"
+        ]
+      ],
+      "e": [
+        "Tejas is the light combat aircraft; Prachand is the light combat helicopter.",
+        "तेजस हल्का लड़ाकू विमान है; प्रचंड हल्का लड़ाकू हेलीकॉप्टर।"
+      ]
+    },
+    {
+      "t": "defence",
+      "q": [
+        "Which is the Indian Army's oldest command?",
+        "भारतीय थल सेना की सबसे पुरानी कमान कौन-सी है?"
+      ],
+      "o": [
+        [
+          "Southern Command, Pune",
+          "दक्षिणी कमान, पुणे"
+        ],
+        [
+          "Eastern Command, Kolkata",
+          "पूर्वी कमान, कोलकाता"
+        ],
+        [
+          "Northern Command, Udhampur",
+          "उत्तरी कमान, उधमपुर"
+        ],
+        [
+          "Central Command, Lucknow",
+          "मध्य कमान, लखनऊ"
+        ]
+      ],
+      "e": [
+        "Southern Command was raised in 1895; South Western Command (2005) is the youngest.",
+        "दक्षिणी कमान 1895 में बनी; दक्षिण पश्चिमी कमान (2005) सबसे नई है।"
+      ]
+    }
+  ]
+}

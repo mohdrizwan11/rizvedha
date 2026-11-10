@@ -1,0 +1,3718 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "physical-india",
+  "file": "physical_india_app.html",
+  "storageKey": "ssc_physical_india_v1",
+  "icon": "⛰️",
+  "description": "Bilingual study app on India's physical and economic geography: passes, ranges and peaks, mines and oilfields, seaports and airports, dams and waterfalls on the map, with exam notes and an MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Physical India",
+      "भौतिक भारत"
+    ],
+    "hSub": [
+      "SSC Focus · Passes, minerals, ports, dams and falls",
+      "SSC फोकस · दर्रे, खनिज, बंदरगाह, बाँध और जलप्रपात"
+    ],
+    "learnTtl": [
+      "Learn physical India",
+      "भौतिक भारत सीखें"
+    ],
+    "learnSub": [
+      "Open any pass, peak, mine, port, dam or waterfall to read where it is, what it is known for and the exam facts.",
+      "किसी भी दर्रे, चोटी, खदान, बंदरगाह, बाँध या जलप्रपात को खोलकर उसका स्थान, पहचान और परीक्षा तथ्य पढ़ें।"
+    ],
+    "lvlLabel": [
+      "Level · Geography GK rank",
+      "स्तर · भूगोल GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search places",
+      "स्थान खोजें"
+    ],
+    "searchPh": [
+      "Place, river, mineral or state",
+      "स्थान, नदी, खनिज या राज्य"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Places",
+      "स्थान"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on passes, peaks, minerals, ports, dams and waterfalls. Each answer comes with an explanation.",
+      "दर्रों, चोटियों, खनिजों, बंदरगाहों, बाँधों और जलप्रपातों पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qLabel": [
+      "Select the state of this place",
+      "इस स्थान का राज्य चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "atlasSub": [
+      "Every entry on the map, coloured by kind.",
+      "हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read an entry, or a state to list its entries.",
+      "किसी चिह्न को छूकर प्रविष्टि पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No entry from this state in the deck.",
+      "इस राज्य की कोई प्रविष्टि सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this place.",
+      "भारत का मानचित्र। इस स्थान का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its entries.",
+      "भारत का मानचित्र। किसी राज्य की प्रविष्टियाँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "plantMarker": [
+      "entry",
+      "प्रविष्टि"
+    ],
+    "atlasPickerLabel": [
+      "Browse an entry",
+      "प्रविष्टि खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select an entry",
+      "प्रविष्टि चुनें"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ],
+    "howto": [
+      "Play: a pass, peak, mine, port, dam or waterfall is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Places: 107 entries on passes, ranges and peaks, minerals, ports and airports, dams and waterfalls.\nLearn → Exam notes: passes by state, ranges of the Himalaya, minerals and where they are found, major ports and geography records.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every entry on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई दर्रा, चोटी, खदान, बंदरगाह, बाँध या जलप्रपात दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → स्थान: 107 प्रविष्टियाँ दर्रों, पर्वत श्रेणियों और चोटियों, खनिजों, बंदरगाहों और हवाई अड्डों, बाँधों और जलप्रपातों पर।\nसीखें → परीक्षा नोट्स: राज्यवार दर्रे, हिमालय की श्रेणियाँ, खनिज और उनके क्षेत्र, प्रमुख बंदरगाह और भूगोल के रिकॉर्ड।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "pass",
+      "icon": "🛣️",
+      "col": "#5D4037",
+      "t": [
+        "Mountain pass",
+        "पर्वतीय दर्रा"
+      ]
+    },
+    {
+      "k": "range",
+      "icon": "⛰️",
+      "col": "#2E7D32",
+      "t": [
+        "Range, hill & peak",
+        "पर्वत, पहाड़ी और चोटी"
+      ]
+    },
+    {
+      "k": "mineral",
+      "icon": "⛏️",
+      "col": "#455A64",
+      "t": [
+        "Mineral & energy",
+        "खनिज और ऊर्जा"
+      ]
+    },
+    {
+      "k": "port",
+      "icon": "⚓",
+      "col": "#1565C0",
+      "t": [
+        "Seaport",
+        "बंदरगाह"
+      ]
+    },
+    {
+      "k": "air",
+      "icon": "✈️",
+      "col": "#6A1B9A",
+      "t": [
+        "Airport",
+        "हवाई अड्डा"
+      ]
+    },
+    {
+      "k": "dam",
+      "icon": "🌊",
+      "col": "#00838F",
+      "t": [
+        "Dam & barrage",
+        "बाँध और बैराज"
+      ]
+    },
+    {
+      "k": "falls",
+      "icon": "💧",
+      "col": "#0277BD",
+      "t": [
+        "Waterfall",
+        "जलप्रपात"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Location",
+        "स्थान"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "What it is",
+        "क्या है"
+      ]
+    },
+    {
+      "k": "rv",
+      "t": [
+        "River",
+        "नदी"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Known for",
+        "पहचान"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "tag"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Trekker",
+      "hi": "ट्रेकर"
+    },
+    {
+      "min": 60,
+      "en": "Surveyor",
+      "hi": "सर्वेक्षक"
+    },
+    {
+      "min": 150,
+      "en": "Pathfinder",
+      "hi": "मार्गदर्शक"
+    },
+    {
+      "min": 320,
+      "en": "Cartographer",
+      "hi": "मानचित्रकार"
+    },
+    {
+      "min": 560,
+      "en": "Geographer",
+      "hi": "भूगोलवेत्ता"
+    },
+    {
+      "min": 900,
+      "en": "Explorer of India",
+      "hi": "भारत खोजी"
+    },
+    {
+      "min": 1400,
+      "en": "Geography GK Champion",
+      "hi": "भूगोल GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "⛰️",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "passes",
+      "icon": "🛣️",
+      "t": [
+        "Pass Master",
+        "दर्रों का ज्ञाता"
+      ],
+      "d": [
+        "Study every pass",
+        "सभी दर्रे पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "pass"
+        ]
+      }
+    },
+    {
+      "id": "ports",
+      "icon": "⚓",
+      "t": [
+        "Harbour Pilot",
+        "बंदरगाह पायलट"
+      ],
+      "d": [
+        "Study every seaport",
+        "सभी बंदरगाह पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "port"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Geography GK Champion",
+        "भूगोल GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "rv",
+        "field": "rv",
+        "ask": [
+          "On which river is it?",
+          "यह किस नदी पर है?"
+        ],
+        "reverseId": "wr",
+        "reverseAsk": [
+          "Which of these is on the river",
+          "इनमें से कौन-सा इस नदी पर है:"
+        ]
+      },
+      {
+        "id": "kd",
+        "field": "kd",
+        "ask": [
+          "What is this?",
+          "यह क्या है?"
+        ],
+        "pairs": [
+          [
+            "Coalfield",
+            "Lignite field"
+          ],
+          [
+            "Iron ore mine",
+            "Iron ore belt"
+          ],
+          [
+            "Iron ore mine",
+            "Iron ore (mining closed)"
+          ],
+          [
+            "Iron ore belt",
+            "Iron ore (mining closed)"
+          ],
+          [
+            "Gold mine",
+            "Gold mine (closed)"
+          ],
+          [
+            "Uranium mine",
+            "Uranium deposit"
+          ],
+          [
+            "Zinc-lead mine",
+            "Zinc mine"
+          ],
+          [
+            "Oilfield",
+            "Offshore oilfield"
+          ],
+          [
+            "Oilfield",
+            "Oilfield and refinery"
+          ],
+          [
+            "Offshore oilfield",
+            "Oilfield and refinery"
+          ],
+          [
+            "Mountain range",
+            "Hills"
+          ],
+          [
+            "Dam",
+            "Arch dam"
+          ],
+          [
+            "Dam",
+            "Multipurpose project"
+          ],
+          [
+            "Dam",
+            "Barrage"
+          ],
+          [
+            "Mountain pass",
+            "Ghat pass"
+          ],
+          [
+            "Mountain pass",
+            "Gap in the Western Ghats"
+          ],
+          [
+            "Ghat pass",
+            "Gap in the Western Ghats"
+          ],
+          [
+            "Major seaport",
+            "Deep-water transhipment port"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "pass",
+              "range",
+              "mineral",
+              "port",
+              "dam",
+              "falls"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "rv",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "mountains",
+        "t": [
+          "Passes & peaks",
+          "दर्रे और चोटियाँ"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "pass",
+              "range"
+            ],
+            "n": 6
+          },
+          {
+            "q": "st",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "t": [
+          "Minerals & ports",
+          "खनिज और बंदरगाह"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "mineral",
+              "port"
+            ],
+            "n": 6
+          },
+          {
+            "q": "kd",
+            "n": 2
+          },
+          {
+            "q": "st",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "water",
+        "t": [
+          "Dams & waterfalls",
+          "बाँध और जलप्रपात"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "dam",
+              "falls"
+            ],
+            "n": 5
+          },
+          {
+            "q": "rv",
+            "n": 3
+          },
+          {
+            "q": "wr",
+            "n": 2
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Zoji La",
+      "h": "ज़ोजी ला",
+      "s": "Ladakh",
+      "st": "Between Kashmir valley and Kargil",
+      "sh": "कश्मीर घाटी और कारगिल के बीच",
+      "c": "pass",
+      "rg": "N",
+      "d": 1,
+      "lat": 34.28,
+      "lng": 75.47,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Srinagar–Leh road; Zojila tunnel",
+      "tagh": "श्रीनगर–लेह मार्ग; ज़ोजिला सुरंग",
+      "fact": "Zoji La links the Kashmir valley with Ladakh on the Srinagar–Leh highway; the Zojila tunnel is being built under it.",
+      "facth": "ज़ोजी ला श्रीनगर–लेह राजमार्ग पर कश्मीर घाटी को लद्दाख से जोड़ता है; इसके नीचे ज़ोजिला सुरंग बन रही है।",
+      "s2": [
+        "Jammu and Kashmir"
+      ]
+    },
+    {
+      "n": "Khardung La",
+      "h": "खारदुंग ला",
+      "s": "Ladakh",
+      "st": "Leh, Ladakh",
+      "sh": "लेह, लद्दाख",
+      "c": "pass",
+      "rg": "N",
+      "d": 2,
+      "lat": 34.28,
+      "lng": 77.6,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Gateway to the Nubra valley",
+      "tagh": "नुब्रा घाटी का प्रवेश द्वार",
+      "fact": "Khardung La near Leh leads to the Nubra and Shyok valleys and on towards Siachen.",
+      "facth": "लेह के पास खारदुंग ला नुब्रा और श्योक घाटियों और आगे सियाचिन की ओर ले जाता है।"
+    },
+    {
+      "n": "Banihal Pass",
+      "h": "बनिहाल दर्रा",
+      "s": "Jammu and Kashmir",
+      "st": "Pir Panjal range, Jammu and Kashmir",
+      "sh": "पीर पंजाल श्रेणी, जम्मू और कश्मीर",
+      "c": "pass",
+      "rg": "N",
+      "d": 2,
+      "lat": 33.42,
+      "lng": 75.2,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Jammu–Srinagar route; Jawahar Tunnel",
+      "tagh": "जम्मू–श्रीनगर मार्ग; जवाहर सुरंग",
+      "fact": "Banihal Pass in the Pir Panjal range links Jammu with the Kashmir valley; the Jawahar Tunnel and the Banihal–Qazigund road tunnel run beneath it.",
+      "facth": "पीर पंजाल श्रेणी का बनिहाल दर्रा जम्मू को कश्मीर घाटी से जोड़ता है; इसके नीचे जवाहर सुरंग और बनिहाल–काज़ीगुंड सड़क सुरंग हैं।"
+    },
+    {
+      "n": "Rohtang Pass",
+      "h": "रोहतांग दर्रा",
+      "s": "Himachal Pradesh",
+      "st": "Between Kullu and Lahaul, Himachal Pradesh",
+      "sh": "कुल्लू और लाहौल के बीच, हिमाचल प्रदेश",
+      "c": "pass",
+      "rg": "N",
+      "d": 1,
+      "lat": 32.37,
+      "lng": 77.25,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Bypassed by the Atal Tunnel (2020)",
+      "tagh": "अटल सुरंग (2020) से बाईपास",
+      "fact": "Rohtang Pass in the Pir Panjal links Kullu with Lahaul-Spiti; the Atal Tunnel, opened in 2020, bypasses it.",
+      "facth": "पीर पंजाल का रोहतांग दर्रा कुल्लू को लाहौल-स्पीति से जोड़ता है; 2020 में खुली अटल सुरंग इसे बाईपास करती है।"
+    },
+    {
+      "n": "Shipki La",
+      "h": "शिपकी ला",
+      "s": "Himachal Pradesh",
+      "st": "Kinnaur, Himachal Pradesh",
+      "sh": "किन्नौर, हिमाचल प्रदेश",
+      "c": "pass",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.75,
+      "lng": 78.55,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Where the Sutlej enters India",
+      "tagh": "जहाँ सतलुज भारत में प्रवेश करती है",
+      "fact": "Shipki La in Kinnaur is a trade pass to Tibet; the Sutlej enters India near it.",
+      "facth": "किन्नौर का शिपकी ला तिब्बत का व्यापारिक दर्रा है; इसके पास सतलुज भारत में प्रवेश करती है।"
+    },
+    {
+      "n": "Baralacha La",
+      "h": "बारालाचा ला",
+      "s": "Himachal Pradesh",
+      "st": "Lahaul, Himachal Pradesh",
+      "sh": "लाहौल, हिमाचल प्रदेश",
+      "c": "pass",
+      "rg": "N",
+      "d": 3,
+      "lat": 32.75,
+      "lng": 77.42,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "On the Manali–Leh highway",
+      "tagh": "मनाली–लेह राजमार्ग पर",
+      "fact": "Baralacha La on the Manali–Leh highway is near the source of the Chandra and Bhaga rivers.",
+      "facth": "मनाली–लेह राजमार्ग पर बारालाचा ला चंद्रा और भागा नदियों के स्रोत के पास है।"
+    },
+    {
+      "n": "Lipulekh Pass",
+      "h": "लिपुलेख दर्रा",
+      "s": "Uttarakhand",
+      "st": "Pithoragarh, Uttarakhand",
+      "sh": "पिथौरागढ़, उत्तराखंड",
+      "c": "pass",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.23,
+      "lng": 81,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Kailash Mansarovar route",
+      "tagh": "कैलाश मानसरोवर मार्ग",
+      "fact": "Lipulekh Pass, near the India–Nepal–China tri-junction, is a route for the Kailash Mansarovar Yatra.",
+      "facth": "भारत–नेपाल–चीन त्रि-संगम के पास लिपुलेख दर्रा कैलाश मानसरोवर यात्रा का मार्ग है।"
+    },
+    {
+      "n": "Mana Pass",
+      "h": "माणा दर्रा",
+      "s": "Uttarakhand",
+      "st": "Chamoli, Uttarakhand",
+      "sh": "चमोली, उत्तराखंड",
+      "c": "pass",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.07,
+      "lng": 79.42,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Beyond Badrinath",
+      "tagh": "बद्रीनाथ से आगे",
+      "fact": "Mana Pass, beyond Badrinath and Mana village, is one of the highest motorable passes and leads to Tibet.",
+      "facth": "बद्रीनाथ और माणा गाँव से आगे माणा दर्रा सबसे ऊँचे वाहन योग्य दर्रों में है और तिब्बत की ओर जाता है।"
+    },
+    {
+      "n": "Nathu La",
+      "h": "नाथू ला",
+      "s": "Sikkim",
+      "st": "East Sikkim",
+      "sh": "पूर्वी सिक्किम",
+      "c": "pass",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.38,
+      "lng": 88.65,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Old Silk Route; border trade reopened 2006",
+      "tagh": "पुराना रेशम मार्ग; सीमा व्यापार 2006 में फिर शुरू",
+      "fact": "Nathu La on the old Silk Route between Sikkim and Tibet reopened for border trade in 2006 and is a Kailash yatra route.",
+      "facth": "सिक्किम और तिब्बत के बीच पुराने रेशम मार्ग पर नाथू ला 2006 में सीमा व्यापार के लिए फिर खुला और यह कैलाश यात्रा का मार्ग है।"
+    },
+    {
+      "n": "Jelep La",
+      "h": "जेलेप ला",
+      "s": "Sikkim",
+      "st": "East Sikkim",
+      "sh": "पूर्वी सिक्किम",
+      "c": "pass",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.3,
+      "lng": 88.68,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Links Sikkim with the Chumbi valley",
+      "tagh": "सिक्किम को चुंबी घाटी से जोड़ता है",
+      "fact": "Jelep La, south of Nathu La, links Sikkim with the Chumbi valley of Tibet.",
+      "facth": "नाथू ला के दक्षिण में जेलेप ला सिक्किम को तिब्बत की चुंबी घाटी से जोड़ता है।"
+    },
+    {
+      "n": "Bomdi La",
+      "h": "बोमडी ला",
+      "s": "Arunachal Pradesh",
+      "st": "West Kameng, Arunachal Pradesh",
+      "sh": "पश्चिम कामेंग, अरुणाचल प्रदेश",
+      "c": "pass",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.25,
+      "lng": 92.42,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Route to Tawang",
+      "tagh": "तवांग का मार्ग",
+      "fact": "Bomdi La in West Kameng is on the road to Tawang and links Arunachal Pradesh with Lhasa.",
+      "facth": "पश्चिम कामेंग का बोमडी ला तवांग के मार्ग पर है और अरुणाचल प्रदेश को ल्हासा से जोड़ता है।"
+    },
+    {
+      "n": "Sela Pass",
+      "h": "सेला दर्रा",
+      "s": "Arunachal Pradesh",
+      "st": "Tawang, Arunachal Pradesh",
+      "sh": "तवांग, अरुणाचल प्रदेश",
+      "c": "pass",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.5,
+      "lng": 92.1,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "Sela Tunnel opened 2024",
+      "tagh": "सेला सुरंग 2024 में खुली",
+      "fact": "Sela Pass leads to Tawang; the Sela Tunnel, among the longest twin-lane road tunnels at high altitude, opened in 2024.",
+      "facth": "सेला दर्रा तवांग की ओर जाता है; ऊँचाई पर सबसे लंबी दो-लेन सड़क सुरंगों में से एक सेला सुरंग 2024 में खुली।"
+    },
+    {
+      "n": "Diphu Pass",
+      "h": "दीफू दर्रा",
+      "s": "Arunachal Pradesh",
+      "st": "Anjaw, Arunachal Pradesh",
+      "sh": "अंजॉ, अरुणाचल प्रदेश",
+      "c": "pass",
+      "rg": "NE",
+      "d": 3,
+      "lat": 28.17,
+      "lng": 97.3,
+      "kd": "Mountain pass",
+      "kdh": "पर्वतीय दर्रा",
+      "tag": "At the India–China–Myanmar tri-junction",
+      "tagh": "भारत–चीन–म्यांमार त्रि-संगम पर",
+      "fact": "Diphu Pass, at the eastern end of the McMahon Line, lies near the tri-junction of India, China and Myanmar.",
+      "facth": "मैकमोहन रेखा के पूर्वी छोर पर दीफू दर्रा भारत, चीन और म्यांमार के त्रि-संगम के पास है।"
+    },
+    {
+      "n": "Palakkad Gap",
+      "h": "पालक्काड दर्रा",
+      "s": "Kerala",
+      "st": "Palakkad, Kerala",
+      "sh": "पालक्काड, केरल",
+      "c": "pass",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.78,
+      "lng": 76.75,
+      "kd": "Gap in the Western Ghats",
+      "kdh": "पश्चिमी घाट में दर्रा",
+      "tag": "Between the Nilgiri and Anaimalai hills",
+      "tagh": "नीलगिरि और अन्नामलाई पहाड़ियों के बीच",
+      "fact": "The Palakkad (Palghat) Gap, between the Nilgiri and Anaimalai hills, links Kerala with Tamil Nadu by road and rail.",
+      "facth": "नीलगिरि और अन्नामलाई पहाड़ियों के बीच पालक्काड (पालघाट) दर्रा सड़क और रेल से केरल को तमिलनाडु से जोड़ता है।"
+    },
+    {
+      "n": "Thal Ghat",
+      "h": "थाल घाट",
+      "s": "Maharashtra",
+      "st": "Kasara, Nashik–Thane, Maharashtra",
+      "sh": "कसारा, नासिक–ठाणे, महाराष्ट्र",
+      "c": "pass",
+      "rg": "W",
+      "d": 3,
+      "lat": 19.68,
+      "lng": 73.5,
+      "kd": "Ghat pass",
+      "kdh": "घाट दर्रा",
+      "tag": "Mumbai–Nashik route",
+      "tagh": "मुंबई–नासिक मार्ग",
+      "fact": "Thal Ghat (Kasara Ghat) in the Western Ghats carries the road and railway between Mumbai and Nashik.",
+      "facth": "पश्चिमी घाट का थाल घाट (कसारा घाट) मुंबई और नासिक के बीच सड़क और रेल मार्ग ले जाता है।"
+    },
+    {
+      "n": "Bhor Ghat",
+      "h": "भोर घाट",
+      "s": "Maharashtra",
+      "st": "Khandala, Maharashtra",
+      "sh": "खंडाला, महाराष्ट्र",
+      "c": "pass",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.75,
+      "lng": 73.38,
+      "kd": "Ghat pass",
+      "kdh": "घाट दर्रा",
+      "tag": "Mumbai–Pune route",
+      "tagh": "मुंबई–पुणे मार्ग",
+      "fact": "Bhor Ghat near Khandala carries the Mumbai–Pune railway and expressway across the Western Ghats.",
+      "facth": "खंडाला के पास भोर घाट पश्चिमी घाट के पार मुंबई–पुणे रेल और एक्सप्रेसवे ले जाता है।"
+    },
+    {
+      "n": "Aravalli Range",
+      "h": "अरावली पर्वतमाला",
+      "s": "Rajasthan",
+      "st": "Rajasthan to Delhi",
+      "sh": "राजस्थान से दिल्ली तक",
+      "c": "range",
+      "rg": "W",
+      "d": 1,
+      "lat": 24.65,
+      "lng": 72.78,
+      "kd": "Mountain range",
+      "kdh": "पर्वतमाला",
+      "tag": "Oldest fold mountains; Guru Shikhar",
+      "tagh": "सबसे पुराने वलित पर्वत; गुरु शिखर",
+      "fact": "The Aravallis are the oldest fold mountains of India; their highest point is Guru Shikhar (1,722 m) at Mount Abu.",
+      "facth": "अरावली भारत के सबसे पुराने वलित पर्वत हैं; इनका सबसे ऊँचा बिंदु माउंट आबू का गुरु शिखर (1,722 मीटर) है।"
+    },
+    {
+      "n": "Vindhya Range",
+      "h": "विंध्य पर्वतमाला",
+      "s": "Madhya Pradesh",
+      "st": "North of the Narmada, Madhya Pradesh",
+      "sh": "नर्मदा के उत्तर, मध्य प्रदेश",
+      "c": "range",
+      "rg": "C",
+      "d": 2,
+      "lat": 23.6,
+      "lng": 78.5,
+      "kd": "Mountain range",
+      "kdh": "पर्वतमाला",
+      "tag": "Traditional divide of north and south India",
+      "tagh": "उत्तर और दक्षिण भारत की पारंपरिक विभाजक",
+      "fact": "The Vindhya Range, north of the Narmada valley, is traditionally seen as the divide between north and south India.",
+      "facth": "नर्मदा घाटी के उत्तर में विंध्य पर्वतमाला को पारंपरिक रूप से उत्तर और दक्षिण भारत की विभाजक माना जाता है।"
+    },
+    {
+      "n": "Satpura Range",
+      "h": "सतपुड़ा पर्वतमाला",
+      "s": "Madhya Pradesh",
+      "st": "Between the Narmada and Tapi, Madhya Pradesh",
+      "sh": "नर्मदा और ताप्ती के बीच, मध्य प्रदेश",
+      "c": "range",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.45,
+      "lng": 78.37,
+      "kd": "Mountain range",
+      "kdh": "पर्वतमाला",
+      "tag": "Highest point Dhupgarh (Pachmarhi)",
+      "tagh": "सबसे ऊँचा बिंदु धूपगढ़ (पचमढ़ी)",
+      "fact": "The Satpura Range lies between the Narmada and the Tapi; its highest peak is Dhupgarh near Pachmarhi.",
+      "facth": "सतपुड़ा पर्वतमाला नर्मदा और ताप्ती के बीच है; इसकी सबसे ऊँची चोटी पचमढ़ी के पास धूपगढ़ है।"
+    },
+    {
+      "n": "Sahyadri (Western Ghats)",
+      "h": "सह्याद्रि (पश्चिमी घाट)",
+      "s": "Maharashtra",
+      "st": "Maharashtra to Kerala",
+      "sh": "महाराष्ट्र से केरल तक",
+      "c": "range",
+      "rg": "W",
+      "d": 1,
+      "lat": 17.92,
+      "lng": 73.66,
+      "kd": "Mountain range",
+      "kdh": "पर्वतमाला",
+      "tag": "UNESCO World Heritage Site (2012)",
+      "tagh": "यूनेस्को विश्व धरोहर (2012)",
+      "fact": "The Western Ghats, called the Sahyadri in Maharashtra, run along the west coast and are a UNESCO World Heritage Site (2012) and a biodiversity hotspot.",
+      "facth": "महाराष्ट्र में सह्याद्रि कहलाने वाले पश्चिमी घाट पश्चिमी तट के साथ चलते हैं और यूनेस्को विश्व धरोहर (2012) तथा जैव विविधता हॉटस्पॉट हैं।"
+    },
+    {
+      "n": "Anamudi",
+      "h": "अनामुडी",
+      "s": "Kerala",
+      "st": "Idukki, Kerala",
+      "sh": "इडुक्की, केरल",
+      "c": "range",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.17,
+      "lng": 77.06,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest peak of south India (2,695 m)",
+      "tagh": "दक्षिण भारत की सबसे ऊँची चोटी (2,695 मीटर)",
+      "fact": "Anamudi (2,695 m) in the Anaimalai hills is the highest peak in India south of the Himalayas.",
+      "facth": "अन्नामलाई पहाड़ियों में अनामुडी (2,695 मीटर) हिमालय के दक्षिण में भारत की सबसे ऊँची चोटी है।"
+    },
+    {
+      "n": "Doddabetta",
+      "h": "दोड्डाबेट्टा",
+      "s": "Tamil Nadu",
+      "st": "Nilgiris, Tamil Nadu",
+      "sh": "नीलगिरि, तमिलनाडु",
+      "c": "range",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.4,
+      "lng": 76.73,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest peak of the Nilgiris",
+      "tagh": "नीलगिरि की सबसे ऊँची चोटी",
+      "fact": "Doddabetta (2,637 m) near Ooty is the highest peak of the Nilgiri hills.",
+      "facth": "ऊटी के पास दोड्डाबेट्टा (2,637 मीटर) नीलगिरि पहाड़ियों की सबसे ऊँची चोटी है।"
+    },
+    {
+      "n": "Arma Konda",
+      "h": "अरमा कोंडा",
+      "s": "Andhra Pradesh",
+      "st": "Alluri Sitharama Raju district, Andhra Pradesh",
+      "sh": "अल्लूरी सीताराम राजू ज़िला, आंध्र प्रदेश",
+      "c": "range",
+      "rg": "S",
+      "d": 3,
+      "lat": 18.23,
+      "lng": 82.73,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest peak of the Eastern Ghats",
+      "tagh": "पूर्वी घाट की सबसे ऊँची चोटी",
+      "fact": "Arma Konda (Jindhagada), about 1,680 m, is the highest peak of the Eastern Ghats.",
+      "facth": "लगभग 1,680 मीटर ऊँची अरमा कोंडा (जिंधगढ़ा) पूर्वी घाट की सबसे ऊँची चोटी है।"
+    },
+    {
+      "n": "Kangchenjunga",
+      "h": "कंचनजंगा",
+      "s": "Sikkim",
+      "st": "Sikkim–Nepal border",
+      "sh": "सिक्किम–नेपाल सीमा",
+      "c": "range",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.62,
+      "lng": 88.3,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest peak in India (8,586 m)",
+      "tagh": "भारत की सबसे ऊँची चोटी (8,586 मीटर)",
+      "fact": "Kangchenjunga (8,586 m) on the Sikkim–Nepal border is the highest peak in India and the third highest in the world.",
+      "facth": "सिक्किम–नेपाल सीमा पर कंचनजंगा (8,586 मीटर) भारत की सबसे ऊँची और विश्व की तीसरी सबसे ऊँची चोटी है।"
+    },
+    {
+      "n": "Nanda Devi",
+      "h": "नंदा देवी",
+      "s": "Uttarakhand",
+      "st": "Chamoli, Uttarakhand",
+      "sh": "चमोली, उत्तराखंड",
+      "c": "range",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.38,
+      "lng": 79.97,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest peak wholly in India",
+      "tagh": "पूरी तरह भारत में स्थित सबसे ऊँची चोटी",
+      "fact": "Nanda Devi (7,816 m) is the highest peak lying entirely within India; its national park is a World Heritage Site.",
+      "facth": "नंदा देवी (7,816 मीटर) पूरी तरह भारत में स्थित सबसे ऊँची चोटी है; इसका राष्ट्रीय उद्यान विश्व धरोहर है।"
+    },
+    {
+      "n": "Saramati",
+      "h": "सारामती",
+      "s": "Nagaland",
+      "st": "Kiphire, Nagaland",
+      "sh": "किफ़िरे, नागालैंड",
+      "c": "range",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.74,
+      "lng": 95.03,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest peak of Nagaland",
+      "tagh": "नागालैंड की सबसे ऊँची चोटी",
+      "fact": "Saramati (3,826 m) on the India–Myanmar border is the highest peak of Nagaland.",
+      "facth": "भारत–म्यांमार सीमा पर सारामती (3,826 मीटर) नागालैंड की सबसे ऊँची चोटी है।"
+    },
+    {
+      "n": "Garo, Khasi and Jaintia Hills",
+      "h": "गारो, खासी और जयंतिया पहाड़ियाँ",
+      "s": "Meghalaya",
+      "st": "Meghalaya plateau",
+      "sh": "मेघालय पठार",
+      "c": "range",
+      "rg": "NE",
+      "d": 1,
+      "lat": 25.5,
+      "lng": 91.4,
+      "kd": "Hills",
+      "kdh": "पहाड़ियाँ",
+      "tag": "Part of the peninsular plateau",
+      "tagh": "प्रायद्वीपीय पठार का भाग",
+      "fact": "The Garo, Khasi and Jaintia hills of the Meghalaya plateau are an extension of the peninsular plateau, cut off by the Malda gap.",
+      "facth": "मेघालय पठार की गारो, खासी और जयंतिया पहाड़ियाँ प्रायद्वीपीय पठार का विस्तार हैं, जो माल्दा दरार से अलग हुई हैं।"
+    },
+    {
+      "n": "Patkai Hills",
+      "h": "पटकाई पहाड़ियाँ",
+      "s": "Arunachal Pradesh",
+      "st": "India–Myanmar border",
+      "sh": "भारत–म्यांमार सीमा",
+      "c": "range",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.2,
+      "lng": 95.8,
+      "kd": "Hills",
+      "kdh": "पहाड़ियाँ",
+      "tag": "Purvanchal on the Myanmar border",
+      "tagh": "म्यांमार सीमा पर पूर्वांचल",
+      "fact": "The Patkai hills form the northern part of the Purvanchal along the India–Myanmar border; the Stilwell (Ledo) Road crossed them.",
+      "facth": "पटकाई पहाड़ियाँ भारत–म्यांमार सीमा पर पूर्वांचल का उत्तरी भाग हैं; स्टिलवेल (लेडो) सड़क इन्हें पार करती थी।"
+    },
+    {
+      "n": "Pir Panjal Range",
+      "h": "पीर पंजाल श्रेणी",
+      "s": "Jammu and Kashmir",
+      "st": "Jammu and Kashmir and Himachal Pradesh",
+      "sh": "जम्मू-कश्मीर और हिमाचल प्रदेश",
+      "c": "range",
+      "rg": "N",
+      "d": 2,
+      "lat": 33.6,
+      "lng": 74.6,
+      "kd": "Mountain range",
+      "kdh": "पर्वत श्रेणी",
+      "tag": "Longest range of the Lesser Himalaya",
+      "tagh": "लघु हिमालय की सबसे लंबी श्रेणी",
+      "fact": "The Pir Panjal is the longest range of the Lesser (Middle) Himalaya, crossed by the Banihal and Rohtang passes.",
+      "facth": "पीर पंजाल लघु (मध्य) हिमालय की सबसे लंबी श्रेणी है, जिसे बनिहाल और रोहतांग दर्रे पार करते हैं।"
+    },
+    {
+      "n": "Shivalik Hills",
+      "h": "शिवालिक पहाड़ियाँ",
+      "s": "Uttarakhand",
+      "st": "Outer Himalaya, Uttarakhand to Jammu",
+      "sh": "बाहरी हिमालय, उत्तराखंड से जम्मू तक",
+      "c": "range",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.45,
+      "lng": 77.8,
+      "kd": "Hills",
+      "kdh": "पहाड़ियाँ",
+      "tag": "Outermost and youngest Himalayan range",
+      "tagh": "सबसे बाहरी और सबसे नई हिमालयी श्रेणी",
+      "fact": "The Shivaliks are the outermost and youngest range of the Himalaya; flat valleys between them and the Lesser Himalaya are called duns, like Dehradun.",
+      "facth": "शिवालिक हिमालय की सबसे बाहरी और सबसे नई श्रेणी है; इनके और लघु हिमालय के बीच समतल घाटियों को दून कहते हैं, जैसे देहरादून।"
+    },
+    {
+      "n": "Cardamom Hills",
+      "h": "इलायची पहाड़ियाँ",
+      "s": "Kerala",
+      "st": "Kerala–Tamil Nadu border",
+      "sh": "केरल–तमिलनाडु सीमा",
+      "c": "range",
+      "rg": "S",
+      "d": 3,
+      "lat": 9.7,
+      "lng": 77.15,
+      "kd": "Hills",
+      "kdh": "पहाड़ियाँ",
+      "tag": "Southern end of the Western Ghats",
+      "tagh": "पश्चिमी घाट का दक्षिणी छोर",
+      "fact": "The Cardamom Hills at the southern end of the Western Ghats are known for cardamom and the Periyar Tiger Reserve.",
+      "facth": "पश्चिमी घाट के दक्षिणी छोर पर इलायची पहाड़ियाँ इलायची और पेरियार बाघ अभयारण्य के लिए जानी जाती हैं।"
+    },
+    {
+      "n": "Rajmahal Hills",
+      "h": "राजमहल पहाड़ियाँ",
+      "s": "Jharkhand",
+      "st": "Sahebganj, Jharkhand",
+      "sh": "साहिबगंज, झारखंड",
+      "c": "range",
+      "rg": "E",
+      "d": 3,
+      "lat": 25,
+      "lng": 87.6,
+      "kd": "Hills",
+      "kdh": "पहाड़ियाँ",
+      "tag": "North-eastern edge of the peninsular plateau",
+      "tagh": "प्रायद्वीपीय पठार का उत्तर-पूर्वी छोर",
+      "fact": "The Rajmahal Hills mark the north-eastern edge of the peninsular plateau, where the Ganga turns south.",
+      "facth": "राजमहल पहाड़ियाँ प्रायद्वीपीय पठार का उत्तर-पूर्वी छोर हैं, जहाँ गंगा दक्षिण की ओर मुड़ती है।"
+    },
+    {
+      "n": "Saddle Peak",
+      "h": "सैडल पीक",
+      "s": "Andaman and Nicobar Islands",
+      "st": "North Andaman",
+      "sh": "उत्तरी अंडमान",
+      "c": "range",
+      "rg": "S",
+      "d": 3,
+      "lat": 13.15,
+      "lng": 93,
+      "kd": "Peak",
+      "kdh": "चोटी",
+      "tag": "Highest point of the Andaman Islands",
+      "tagh": "अंडमान द्वीपों का सबसे ऊँचा बिंदु",
+      "fact": "Saddle Peak (732 m) in North Andaman is the highest point of the Andaman and Nicobar Islands.",
+      "facth": "उत्तरी अंडमान में सैडल पीक (732 मीटर) अंडमान और निकोबार द्वीपसमूह का सबसे ऊँचा बिंदु है।"
+    },
+    {
+      "n": "Jharia Coalfield",
+      "h": "झरिया कोयला क्षेत्र",
+      "s": "Jharkhand",
+      "st": "Dhanbad, Jharkhand",
+      "sh": "धनबाद, झारखंड",
+      "c": "mineral",
+      "rg": "E",
+      "d": 1,
+      "lat": 23.75,
+      "lng": 86.42,
+      "kd": "Coalfield",
+      "kdh": "कोयला क्षेत्र",
+      "tag": "Largest store of coking coal",
+      "tagh": "कोकिंग कोयले का सबसे बड़ा भंडार",
+      "fact": "Jharia near Dhanbad, India's 'coal capital', holds the largest reserves of coking coal used in steel-making; parts have burned underground for a century.",
+      "facth": "भारत की 'कोयला राजधानी' धनबाद के पास झरिया में इस्पात निर्माण के कोकिंग कोयले का सबसे बड़ा भंडार है; इसके कुछ भाग सौ वर्ष से भूमिगत जल रहे हैं।"
+    },
+    {
+      "n": "Raniganj Coalfield",
+      "h": "रानीगंज कोयला क्षेत्र",
+      "s": "West Bengal",
+      "st": "Paschim Bardhaman, West Bengal",
+      "sh": "पश्चिम बर्धमान, पश्चिम बंगाल",
+      "c": "mineral",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.6,
+      "lng": 87.13,
+      "kd": "Coalfield",
+      "kdh": "कोयला क्षेत्र",
+      "tag": "India's oldest coalfield (1774)",
+      "tagh": "भारत का सबसे पुराना कोयला क्षेत्र (1774)",
+      "fact": "Coal mining in India began at Raniganj in 1774.",
+      "facth": "भारत में कोयला खनन 1774 में रानीगंज में शुरू हुआ।"
+    },
+    {
+      "n": "Korba Coalfield",
+      "h": "कोरबा कोयला क्षेत्र",
+      "s": "Chhattisgarh",
+      "st": "Korba, Chhattisgarh",
+      "sh": "कोरबा, छत्तीसगढ़",
+      "c": "mineral",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.35,
+      "lng": 82.68,
+      "kd": "Coalfield",
+      "kdh": "कोयला क्षेत्र",
+      "tag": "Power capital of Chhattisgarh; Gevra mine",
+      "tagh": "छत्तीसगढ़ की ऊर्जा राजधानी; गेवरा खदान",
+      "fact": "Korba is a major coalfield and power hub; its Gevra opencast mine is among the largest coal mines in Asia.",
+      "facth": "कोरबा प्रमुख कोयला क्षेत्र और ऊर्जा केंद्र है; इसकी गेवरा खुली खदान एशिया की सबसे बड़ी कोयला खदानों में है।"
+    },
+    {
+      "n": "Talcher Coalfield",
+      "h": "तालचेर कोयला क्षेत्र",
+      "s": "Odisha",
+      "st": "Angul, Odisha",
+      "sh": "अंगुल, ओडिशा",
+      "c": "mineral",
+      "rg": "E",
+      "d": 3,
+      "lat": 20.95,
+      "lng": 85.23,
+      "kd": "Coalfield",
+      "kdh": "कोयला क्षेत्र",
+      "tag": "Large non-coking coal reserves",
+      "tagh": "बड़े ग़ैर-कोकिंग कोयला भंडार",
+      "fact": "Talcher in Angul district of Odisha has some of the largest non-coking coal reserves in India.",
+      "facth": "ओडिशा के अंगुल ज़िले का तालचेर भारत के सबसे बड़े ग़ैर-कोकिंग कोयला भंडारों में है।"
+    },
+    {
+      "n": "Singrauli Coalfield",
+      "h": "सिंगरौली कोयला क्षेत्र",
+      "s": "Madhya Pradesh",
+      "st": "Singrauli, Madhya Pradesh",
+      "sh": "सिंगरौली, मध्य प्रदेश",
+      "c": "mineral",
+      "rg": "C",
+      "d": 2,
+      "lat": 24.2,
+      "lng": 82.67,
+      "kd": "Coalfield",
+      "kdh": "कोयला क्षेत्र",
+      "tag": "India's energy capital",
+      "tagh": "भारत की ऊर्जा राजधानी",
+      "fact": "Singrauli, on the Madhya Pradesh–Uttar Pradesh border, is called India's energy capital for its coal mines and power plants.",
+      "facth": "मध्य प्रदेश–उत्तर प्रदेश सीमा पर सिंगरौली को कोयला खदानों और बिजली संयंत्रों के कारण भारत की ऊर्जा राजधानी कहा जाता है।"
+    },
+    {
+      "n": "Neyveli",
+      "h": "नेवेली",
+      "s": "Tamil Nadu",
+      "st": "Cuddalore, Tamil Nadu",
+      "sh": "कुड्डालोर, तमिलनाडु",
+      "c": "mineral",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.6,
+      "lng": 79.48,
+      "kd": "Lignite field",
+      "kdh": "लिग्नाइट क्षेत्र",
+      "tag": "Largest lignite deposits",
+      "tagh": "सबसे बड़े लिग्नाइट भंडार",
+      "fact": "Neyveli holds India's largest lignite (brown coal) deposits, used by NLC India to generate power.",
+      "facth": "नेवेली में भारत के सबसे बड़े लिग्नाइट (भूरा कोयला) भंडार हैं, जिनसे NLC इंडिया बिजली बनाती है।"
+    },
+    {
+      "n": "Bailadila",
+      "h": "बैलाडीला",
+      "s": "Chhattisgarh",
+      "st": "Dantewada, Chhattisgarh",
+      "sh": "दंतेवाड़ा, छत्तीसगढ़",
+      "c": "mineral",
+      "rg": "C",
+      "d": 1,
+      "lat": 18.7,
+      "lng": 81.2,
+      "kd": "Iron ore mine",
+      "kdh": "लौह अयस्क खदान",
+      "tag": "Hills shaped like a bullock's hump",
+      "tagh": "बैल के कूबड़ जैसी पहाड़ियाँ",
+      "fact": "Bailadila, named for hills shaped like a bullock's hump, has high-grade haematite iron ore mined by NMDC.",
+      "facth": "बैल के कूबड़ जैसी पहाड़ियों के नाम पर बैलाडीला में NMDC उच्च गुणवत्ता का हेमेटाइट लौह अयस्क निकालती है।"
+    },
+    {
+      "n": "Kudremukh",
+      "h": "कुद्रेमुख",
+      "s": "Karnataka",
+      "st": "Chikkamagaluru, Karnataka",
+      "sh": "चिक्कमगलुरु, कर्नाटक",
+      "c": "mineral",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.22,
+      "lng": 75.27,
+      "kd": "Iron ore (mining closed)",
+      "kdh": "लौह अयस्क (खनन बंद)",
+      "tag": "Horse-face peak; now a national park",
+      "tagh": "घोड़े के चेहरे जैसी चोटी; अब राष्ट्रीय उद्यान",
+      "fact": "Kudremukh ('horse face') had a large iron ore mine, closed in 2006 to protect the Kudremukh National Park.",
+      "facth": "कुद्रेमुख ('घोड़े का चेहरा') में बड़ी लौह अयस्क खदान थी, जिसे कुद्रेमुख राष्ट्रीय उद्यान की रक्षा के लिए 2006 में बंद किया गया।"
+    },
+    {
+      "n": "Noamundi",
+      "h": "नोआमुंडी",
+      "s": "Jharkhand",
+      "st": "West Singhbhum, Jharkhand",
+      "sh": "पश्चिमी सिंहभूम, झारखंड",
+      "c": "mineral",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.15,
+      "lng": 85.53,
+      "kd": "Iron ore mine",
+      "kdh": "लौह अयस्क खदान",
+      "tag": "Supplies Jamshedpur steel",
+      "tagh": "जमशेदपुर इस्पात को आपूर्ति",
+      "fact": "Noamundi in the Singhbhum iron ore belt supplies ore to the Tata steel plant at Jamshedpur.",
+      "facth": "सिंहभूम लौह अयस्क पट्टी का नोआमुंडी जमशेदपुर के टाटा इस्पात संयंत्र को अयस्क देता है।"
+    },
+    {
+      "n": "Ballari iron ore",
+      "h": "बल्लारी लौह अयस्क",
+      "s": "Karnataka",
+      "st": "Ballari and Hospet, Karnataka",
+      "sh": "बल्लारी और होसपेट, कर्नाटक",
+      "c": "mineral",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.14,
+      "lng": 76.92,
+      "kd": "Iron ore belt",
+      "kdh": "लौह अयस्क पट्टी",
+      "tag": "Hospet–Ballari iron belt",
+      "tagh": "होसपेट–बल्लारी लौह पट्टी",
+      "fact": "The Ballari–Hospet belt is one of the richest iron ore regions of India.",
+      "facth": "बल्लारी–होसपेट पट्टी भारत के सबसे समृद्ध लौह अयस्क क्षेत्रों में है।"
+    },
+    {
+      "n": "Kolar Gold Fields",
+      "h": "कोलार गोल्ड फ़ील्ड्स",
+      "s": "Karnataka",
+      "st": "Kolar, Karnataka",
+      "sh": "कोलार, कर्नाटक",
+      "c": "mineral",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.95,
+      "lng": 78.27,
+      "kd": "Gold mine (closed)",
+      "kdh": "सोने की खदान (बंद)",
+      "tag": "Among the deepest gold mines; closed 2001",
+      "tagh": "सबसे गहरी सोने की खदानों में; 2001 में बंद",
+      "fact": "The Kolar Gold Fields, among the deepest gold mines in the world, closed in 2001.",
+      "facth": "विश्व की सबसे गहरी सोने की खदानों में से कोलार गोल्ड फ़ील्ड्स 2001 में बंद हुईं।"
+    },
+    {
+      "n": "Hutti Gold Mines",
+      "h": "हट्टी गोल्ड माइंस",
+      "s": "Karnataka",
+      "st": "Raichur, Karnataka",
+      "sh": "रायचूर, कर्नाटक",
+      "c": "mineral",
+      "rg": "S",
+      "d": 2,
+      "lat": 16.2,
+      "lng": 76.65,
+      "kd": "Gold mine",
+      "kdh": "सोने की खदान",
+      "tag": "India's main working gold mine",
+      "tagh": "भारत की प्रमुख चालू सोने की खदान",
+      "fact": "Hutti in Raichur is the main working gold mine of India.",
+      "facth": "रायचूर का हट्टी भारत की प्रमुख चालू सोने की खदान है।"
+    },
+    {
+      "n": "Khetri",
+      "h": "खेतड़ी",
+      "s": "Rajasthan",
+      "st": "Jhunjhunu, Rajasthan",
+      "sh": "झुंझुनू, राजस्थान",
+      "c": "mineral",
+      "rg": "W",
+      "d": 2,
+      "lat": 28,
+      "lng": 75.8,
+      "kd": "Copper mine",
+      "kdh": "ताँबे की खदान",
+      "tag": "Khetri copper belt",
+      "tagh": "खेतड़ी ताँबा पट्टी",
+      "fact": "The Khetri copper belt in Jhunjhunu is worked by Hindustan Copper Limited.",
+      "facth": "झुंझुनू की खेतड़ी ताँबा पट्टी में हिंदुस्तान कॉपर लिमिटेड खनन करती है।"
+    },
+    {
+      "n": "Malanjkhand",
+      "h": "मलाजखंड",
+      "s": "Madhya Pradesh",
+      "st": "Balaghat, Madhya Pradesh",
+      "sh": "बालाघाट, मध्य प्रदेश",
+      "c": "mineral",
+      "rg": "C",
+      "d": 2,
+      "lat": 22,
+      "lng": 80.7,
+      "kd": "Copper mine",
+      "kdh": "ताँबे की खदान",
+      "tag": "India's largest copper mine",
+      "tagh": "भारत की सबसे बड़ी ताँबे की खदान",
+      "fact": "Malanjkhand in Balaghat is India's largest copper mine, an opencast mine of Hindustan Copper.",
+      "facth": "बालाघाट का मलाजखंड भारत की सबसे बड़ी ताँबे की खदान है, जो हिंदुस्तान कॉपर की खुली खदान है।"
+    },
+    {
+      "n": "Zawar",
+      "h": "ज़ावर",
+      "s": "Rajasthan",
+      "st": "Udaipur, Rajasthan",
+      "sh": "उदयपुर, राजस्थान",
+      "c": "mineral",
+      "rg": "W",
+      "d": 2,
+      "lat": 24.35,
+      "lng": 73.7,
+      "kd": "Zinc-lead mine",
+      "kdh": "जस्ता-सीसा खदान",
+      "tag": "Ancient zinc smelting site",
+      "tagh": "प्राचीन जस्ता गलाने का स्थल",
+      "fact": "Zawar near Udaipur has zinc-lead mines and is among the earliest known sites of zinc smelting in the world.",
+      "facth": "उदयपुर के पास ज़ावर में जस्ता-सीसा खदानें हैं और यह विश्व में जस्ता गलाने के सबसे पुराने ज्ञात स्थलों में है।"
+    },
+    {
+      "n": "Rampura Agucha",
+      "h": "रामपुरा आगुचा",
+      "s": "Rajasthan",
+      "st": "Bhilwara, Rajasthan",
+      "sh": "भीलवाड़ा, राजस्थान",
+      "c": "mineral",
+      "rg": "W",
+      "d": 3,
+      "lat": 25.83,
+      "lng": 74.73,
+      "kd": "Zinc mine",
+      "kdh": "जस्ता खदान",
+      "tag": "One of the largest zinc mines in the world",
+      "tagh": "विश्व की सबसे बड़ी जस्ता खदानों में",
+      "fact": "Rampura Agucha in Bhilwara, run by Hindustan Zinc, is one of the largest zinc mines in the world.",
+      "facth": "हिंदुस्तान ज़िंक द्वारा संचालित भीलवाड़ा का रामपुरा आगुचा विश्व की सबसे बड़ी जस्ता खदानों में है।"
+    },
+    {
+      "n": "Jaduguda",
+      "h": "जादूगोड़ा",
+      "s": "Jharkhand",
+      "st": "East Singhbhum, Jharkhand",
+      "sh": "पूर्वी सिंहभूम, झारखंड",
+      "c": "mineral",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.65,
+      "lng": 86.35,
+      "kd": "Uranium mine",
+      "kdh": "यूरेनियम खदान",
+      "tag": "India's first uranium mine (1967)",
+      "tagh": "भारत की पहली यूरेनियम खदान (1967)",
+      "fact": "Jaduguda, run by the Uranium Corporation of India, became India's first uranium mine in 1967.",
+      "facth": "यूरेनियम कॉर्पोरेशन ऑफ़ इंडिया द्वारा संचालित जादूगोड़ा 1967 में भारत की पहली यूरेनियम खदान बना।"
+    },
+    {
+      "n": "Tummalapalle",
+      "h": "तुम्मलापल्ले",
+      "s": "Andhra Pradesh",
+      "st": "Kadapa, Andhra Pradesh",
+      "sh": "कडप्पा, आंध्र प्रदेश",
+      "c": "mineral",
+      "rg": "S",
+      "d": 3,
+      "lat": 14.32,
+      "lng": 78.27,
+      "kd": "Uranium deposit",
+      "kdh": "यूरेनियम भंडार",
+      "tag": "Among the largest uranium reserves",
+      "tagh": "सबसे बड़े यूरेनियम भंडारों में",
+      "fact": "Tummalapalle in Kadapa district has one of the largest uranium reserves in India.",
+      "facth": "कडप्पा ज़िले के तुम्मलापल्ले में भारत के सबसे बड़े यूरेनियम भंडारों में से एक है।"
+    },
+    {
+      "n": "Koderma",
+      "h": "कोडरमा",
+      "s": "Jharkhand",
+      "st": "Koderma, Jharkhand",
+      "sh": "कोडरमा, झारखंड",
+      "c": "mineral",
+      "rg": "E",
+      "d": 2,
+      "lat": 24.47,
+      "lng": 85.6,
+      "kd": "Mica belt",
+      "kdh": "अभ्रक पट्टी",
+      "tag": "'Mica capital of India'",
+      "tagh": "'भारत की अभ्रक राजधानी'",
+      "fact": "Koderma is called the mica capital of India for its rich mica belt.",
+      "facth": "समृद्ध अभ्रक पट्टी के कारण कोडरमा को भारत की अभ्रक राजधानी कहा जाता है।"
+    },
+    {
+      "n": "Panchpatmali",
+      "h": "पंचपटमाली",
+      "s": "Odisha",
+      "st": "Koraput, Odisha",
+      "sh": "कोरापुट, ओडिशा",
+      "c": "mineral",
+      "rg": "E",
+      "d": 2,
+      "lat": 18.78,
+      "lng": 82.97,
+      "kd": "Bauxite mine",
+      "kdh": "बॉक्साइट खदान",
+      "tag": "NALCO's bauxite mine",
+      "tagh": "NALCO की बॉक्साइट खदान",
+      "fact": "Panchpatmali in Koraput is a large bauxite mine of NALCO, feeding its alumina refinery at Damanjodi.",
+      "facth": "कोरापुट का पंचपटमाली NALCO की बड़ी बॉक्साइट खदान है, जो दमनजोड़ी की एल्यूमिना रिफ़ाइनरी को अयस्क देती है।"
+    },
+    {
+      "n": "Balaghat manganese",
+      "h": "बालाघाट मैंगनीज़",
+      "s": "Madhya Pradesh",
+      "st": "Balaghat, Madhya Pradesh",
+      "sh": "बालाघाट, मध्य प्रदेश",
+      "c": "mineral",
+      "rg": "C",
+      "d": 3,
+      "lat": 21.8,
+      "lng": 80.18,
+      "kd": "Manganese mine",
+      "kdh": "मैंगनीज़ खदान",
+      "tag": "Large manganese ore deposits",
+      "tagh": "बड़े मैंगनीज़ अयस्क भंडार",
+      "fact": "Balaghat has some of the largest manganese ore deposits in India, mined by MOIL.",
+      "facth": "बालाघाट में भारत के सबसे बड़े मैंगनीज़ अयस्क भंडारों में से कुछ हैं, जिनका खनन MOIL करती है।"
+    },
+    {
+      "n": "Panna diamond mine",
+      "h": "पन्ना हीरा खदान",
+      "s": "Madhya Pradesh",
+      "st": "Majhgawan, Panna, Madhya Pradesh",
+      "sh": "मझगवाँ, पन्ना, मध्य प्रदेश",
+      "c": "mineral",
+      "rg": "C",
+      "d": 1,
+      "lat": 24.72,
+      "lng": 80.18,
+      "kd": "Diamond mine",
+      "kdh": "हीरे की खदान",
+      "tag": "India's only active diamond mine",
+      "tagh": "भारत की एकमात्र चालू हीरा खदान",
+      "fact": "Majhgawan near Panna, run by NMDC, is India's only mechanised diamond mine.",
+      "facth": "NMDC द्वारा संचालित पन्ना के पास मझगवाँ भारत की एकमात्र यंत्रीकृत हीरा खदान है।"
+    },
+    {
+      "n": "Makrana",
+      "h": "मकराना",
+      "s": "Rajasthan",
+      "st": "Didwana-Kuchaman, Rajasthan",
+      "sh": "डीडवाना-कुचामन, राजस्थान",
+      "c": "mineral",
+      "rg": "W",
+      "d": 1,
+      "lat": 27.05,
+      "lng": 74.72,
+      "kd": "Marble quarry",
+      "kdh": "संगमरमर खदान",
+      "tag": "Marble of the Taj Mahal",
+      "tagh": "ताजमहल का संगमरमर",
+      "fact": "The white marble of Makrana was used to build the Taj Mahal and the Victoria Memorial.",
+      "facth": "मकराना के सफ़ेद संगमरमर से ताजमहल और विक्टोरिया मेमोरियल बने।"
+    },
+    {
+      "n": "Sukinda",
+      "h": "सुकिंदा",
+      "s": "Odisha",
+      "st": "Jajpur, Odisha",
+      "sh": "जाजपुर, ओडिशा",
+      "c": "mineral",
+      "rg": "E",
+      "d": 3,
+      "lat": 21,
+      "lng": 85.75,
+      "kd": "Chromite mine",
+      "kdh": "क्रोमाइट खदान",
+      "tag": "Nearly all of India's chromite",
+      "tagh": "भारत का लगभग पूरा क्रोमाइट",
+      "fact": "The Sukinda valley in Odisha holds nearly all of India's chromite ore.",
+      "facth": "ओडिशा की सुकिंदा घाटी में भारत का लगभग पूरा क्रोमाइट अयस्क है।"
+    },
+    {
+      "n": "Digboi",
+      "h": "डिगबोई",
+      "s": "Assam",
+      "st": "Tinsukia, Assam",
+      "sh": "तिनसुकिया, असम",
+      "c": "mineral",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.39,
+      "lng": 95.62,
+      "kd": "Oilfield and refinery",
+      "kdh": "तेल क्षेत्र और रिफ़ाइनरी",
+      "tag": "Asia's oldest working refinery (1901)",
+      "tagh": "एशिया की सबसे पुरानी चालू रिफ़ाइनरी (1901)",
+      "fact": "Digboi has India's first oil well and Asia's oldest operating refinery, set up in 1901.",
+      "facth": "डिगबोई में भारत का पहला तेल कुआँ और 1901 में बनी एशिया की सबसे पुरानी चालू रिफ़ाइनरी है।"
+    },
+    {
+      "n": "Mumbai High",
+      "h": "मुंबई हाई",
+      "s": "Maharashtra",
+      "st": "Arabian Sea, off Mumbai",
+      "sh": "अरब सागर, मुंबई के तट से दूर",
+      "c": "mineral",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.4,
+      "lng": 71.3,
+      "kd": "Offshore oilfield",
+      "kdh": "अपतटीय तेल क्षेत्र",
+      "tag": "India's largest oilfield",
+      "tagh": "भारत का सबसे बड़ा तेल क्षेत्र",
+      "fact": "Mumbai High, about 160 km off Mumbai and found in 1974, is India's largest oilfield, run by ONGC.",
+      "facth": "1974 में खोजा गया और मुंबई से लगभग 160 किमी दूर मुंबई हाई भारत का सबसे बड़ा तेल क्षेत्र है, जिसे ONGC चलाती है।",
+      "sea": true
+    },
+    {
+      "n": "Ankleshwar",
+      "h": "अंकलेश्वर",
+      "s": "Gujarat",
+      "st": "Bharuch, Gujarat",
+      "sh": "भरूच, गुजरात",
+      "c": "mineral",
+      "rg": "W",
+      "d": 2,
+      "lat": 21.63,
+      "lng": 73,
+      "kd": "Oilfield",
+      "kdh": "तेल क्षेत्र",
+      "tag": "Gujarat's oldest major oilfield",
+      "tagh": "गुजरात का सबसे पुराना प्रमुख तेल क्षेत्र",
+      "fact": "Ankleshwar near Bharuch, struck in 1960, was among the first major oilfields found after independence.",
+      "facth": "भरूच के पास अंकलेश्वर, 1960 में खोजा गया, स्वतंत्रता के बाद मिले पहले प्रमुख तेल क्षेत्रों में था।"
+    },
+    {
+      "n": "Barmer oilfield",
+      "h": "बाड़मेर तेल क्षेत्र",
+      "s": "Rajasthan",
+      "st": "Barmer, Rajasthan",
+      "sh": "बाड़मेर, राजस्थान",
+      "c": "mineral",
+      "rg": "W",
+      "d": 3,
+      "lat": 25.75,
+      "lng": 71.4,
+      "kd": "Oilfield",
+      "kdh": "तेल क्षेत्र",
+      "tag": "Mangala field (2004)",
+      "tagh": "मंगला क्षेत्र (2004)",
+      "fact": "The Mangala field in Barmer, found in 2004, is one of India's largest onshore oil discoveries.",
+      "facth": "2004 में खोजा गया बाड़मेर का मंगला क्षेत्र भारत की सबसे बड़ी स्थलीय तेल खोजों में है।"
+    },
+    {
+      "n": "Deendayal Port",
+      "h": "दीनदयाल बंदरगाह",
+      "s": "Gujarat",
+      "st": "Kandla, Kutch, Gujarat",
+      "sh": "कांडला, कच्छ, गुजरात",
+      "c": "port",
+      "rg": "W",
+      "d": 1,
+      "lat": 23.08,
+      "lng": 70.13,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Tidal port; India's first export processing zone (1965)",
+      "tagh": "ज्वारीय बंदरगाह; भारत का पहला निर्यात प्रसंस्करण क्षेत्र (1965)",
+      "fact": "Deendayal Port at Kandla is a tidal port on the Gulf of Kutch; Asia's first export processing zone was set up here in 1965.",
+      "facth": "कांडला का दीनदयाल बंदरगाह कच्छ की खाड़ी पर ज्वारीय बंदरगाह है; एशिया का पहला निर्यात प्रसंस्करण क्षेत्र यहाँ 1965 में बना।"
+    },
+    {
+      "n": "Mumbai Port",
+      "h": "मुंबई बंदरगाह",
+      "s": "Maharashtra",
+      "st": "Mumbai, Maharashtra",
+      "sh": "मुंबई, महाराष्ट्र",
+      "c": "port",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.94,
+      "lng": 72.84,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Natural harbour",
+      "tagh": "प्राकृतिक बंदरगाह",
+      "fact": "Mumbai Port is one of the finest natural harbours on the west coast.",
+      "facth": "मुंबई बंदरगाह पश्चिमी तट के सबसे अच्छे प्राकृतिक बंदरगाहों में है।"
+    },
+    {
+      "n": "Jawaharlal Nehru Port",
+      "h": "जवाहरलाल नेहरू बंदरगाह",
+      "s": "Maharashtra",
+      "st": "Nhava Sheva, Navi Mumbai, Maharashtra",
+      "sh": "न्हावा शेवा, नवी मुंबई, महाराष्ट्र",
+      "c": "port",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.95,
+      "lng": 72.95,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Largest container port",
+      "tagh": "सबसे बड़ा कंटेनर बंदरगाह",
+      "fact": "Jawaharlal Nehru Port (Nhava Sheva) is India's largest container port.",
+      "facth": "जवाहरलाल नेहरू बंदरगाह (न्हावा शेवा) भारत का सबसे बड़ा कंटेनर बंदरगाह है।"
+    },
+    {
+      "n": "Mormugao Port",
+      "h": "मोरमुगाओ बंदरगाह",
+      "s": "Goa",
+      "st": "Vasco da Gama, Goa",
+      "sh": "वास्को दा गामा, गोवा",
+      "c": "port",
+      "rg": "W",
+      "d": 2,
+      "lat": 15.38,
+      "lng": 73.9,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Iron ore export port",
+      "tagh": "लौह अयस्क निर्यात बंदरगाह",
+      "fact": "Mormugao in Goa has been a leading iron ore export port.",
+      "facth": "गोवा का मोरमुगाओ प्रमुख लौह अयस्क निर्यात बंदरगाह रहा है।"
+    },
+    {
+      "n": "New Mangalore Port",
+      "h": "न्यू मंगलौर बंदरगाह",
+      "s": "Karnataka",
+      "st": "Panambur, Mangaluru, Karnataka",
+      "sh": "पणंबूर, मंगलुरु, कर्नाटक",
+      "c": "port",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.93,
+      "lng": 74.84,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Karnataka's only major port",
+      "tagh": "कर्नाटक का एकमात्र प्रमुख बंदरगाह",
+      "fact": "New Mangalore Port is Karnataka's only major port, handling crude oil and Kudremukh-era iron ore.",
+      "facth": "न्यू मंगलौर बंदरगाह कर्नाटक का एकमात्र प्रमुख बंदरगाह है, जो कच्चा तेल और लौह अयस्क संभालता है।"
+    },
+    {
+      "n": "Cochin Port",
+      "h": "कोचीन बंदरगाह",
+      "s": "Kerala",
+      "st": "Kochi, Kerala",
+      "sh": "कोच्चि, केरल",
+      "c": "port",
+      "rg": "S",
+      "d": 2,
+      "lat": 9.96,
+      "lng": 76.27,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "'Queen of the Arabian Sea'",
+      "tagh": "'अरब सागर की रानी'",
+      "fact": "Cochin Port on Willingdon Island has the Vallarpadam international container transhipment terminal; Kochi is called the Queen of the Arabian Sea.",
+      "facth": "विलिंगडन द्वीप पर कोचीन बंदरगाह में वल्लारपडम अंतरराष्ट्रीय कंटेनर ट्रांसशिपमेंट टर्मिनल है; कोच्चि को 'अरब सागर की रानी' कहा जाता है।"
+    },
+    {
+      "n": "Vizhinjam International Seaport",
+      "h": "विझिंजम अंतरराष्ट्रीय बंदरगाह",
+      "s": "Kerala",
+      "st": "Thiruvananthapuram, Kerala",
+      "sh": "तिरुवनंतपुरम, केरल",
+      "c": "port",
+      "rg": "S",
+      "d": 2,
+      "lat": 8.45,
+      "lng": 77.03,
+      "kd": "Deep-water transhipment port",
+      "kdh": "गहरे पानी का ट्रांसशिपमेंट बंदरगाह",
+      "tag": "India's first deep-water transhipment port",
+      "tagh": "भारत का पहला गहरे पानी का ट्रांसशिपमेंट बंदरगाह",
+      "fact": "Vizhinjam, close to international shipping routes, is India's first dedicated deep-water container transhipment port; it was dedicated to the nation in May 2025.",
+      "facth": "अंतरराष्ट्रीय जहाज़ी मार्गों के पास विझिंजम भारत का पहला समर्पित गहरे पानी का कंटेनर ट्रांसशिपमेंट बंदरगाह है; इसे मई 2025 में राष्ट्र को समर्पित किया गया।"
+    },
+    {
+      "n": "V. O. Chidambaranar Port",
+      "h": "वी. ओ. चिदंबरनार बंदरगाह",
+      "s": "Tamil Nadu",
+      "st": "Thoothukudi, Tamil Nadu",
+      "sh": "थूथुकुडी, तमिलनाडु",
+      "c": "port",
+      "rg": "S",
+      "d": 2,
+      "lat": 8.76,
+      "lng": 78.18,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Formerly Tuticorin Port",
+      "tagh": "पहले तूतीकोरिन बंदरगाह",
+      "fact": "V. O. Chidambaranar Port at Thoothukudi is named after the freedom fighter who ran the Swadeshi Steam Navigation Company.",
+      "facth": "थूथुकुडी का वी. ओ. चिदंबरनार बंदरगाह स्वदेशी स्टीम नेविगेशन कंपनी चलाने वाले स्वतंत्रता सेनानी के नाम पर है।"
+    },
+    {
+      "n": "Chennai Port",
+      "h": "चेन्नई बंदरगाह",
+      "s": "Tamil Nadu",
+      "st": "Chennai, Tamil Nadu",
+      "sh": "चेन्नई, तमिलनाडु",
+      "c": "port",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.1,
+      "lng": 80.28,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Artificial harbour; one of the oldest ports",
+      "tagh": "कृत्रिम बंदरगाह; सबसे पुराने बंदरगाहों में",
+      "fact": "Chennai Port is one of the oldest artificial harbours on the east coast.",
+      "facth": "चेन्नई बंदरगाह पूर्वी तट के सबसे पुराने कृत्रिम बंदरगाहों में है।"
+    },
+    {
+      "n": "Kamarajar Port",
+      "h": "कामराजर बंदरगाह",
+      "s": "Tamil Nadu",
+      "st": "Ennore, Chennai, Tamil Nadu",
+      "sh": "एन्नोर, चेन्नई, तमिलनाडु",
+      "c": "port",
+      "rg": "S",
+      "d": 3,
+      "lat": 13.25,
+      "lng": 80.31,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "First corporatised major port",
+      "tagh": "पहला निगमित प्रमुख बंदरगाह",
+      "fact": "Kamarajar Port at Ennore was the first major port set up as a company.",
+      "facth": "एन्नोर का कामराजर बंदरगाह कंपनी के रूप में बना पहला प्रमुख बंदरगाह था।"
+    },
+    {
+      "n": "Visakhapatnam Port",
+      "h": "विशाखापत्तनम बंदरगाह",
+      "s": "Andhra Pradesh",
+      "st": "Visakhapatnam, Andhra Pradesh",
+      "sh": "विशाखापत्तनम, आंध्र प्रदेश",
+      "c": "port",
+      "rg": "S",
+      "d": 1,
+      "lat": 17.69,
+      "lng": 83.27,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Deepest land-locked protected port",
+      "tagh": "सबसे गहरा स्थल-घिरा सुरक्षित बंदरगाह",
+      "fact": "Visakhapatnam Port is India's deepest land-locked and protected port, sheltered by the Dolphin's Nose headland.",
+      "facth": "विशाखापत्तनम बंदरगाह भारत का सबसे गहरा स्थल-घिरा सुरक्षित बंदरगाह है, जिसे डॉल्फ़िन्स नोज़ अंतरीप आश्रय देता है।"
+    },
+    {
+      "n": "Paradip Port",
+      "h": "पारादीप बंदरगाह",
+      "s": "Odisha",
+      "st": "Jagatsinghpur, Odisha",
+      "sh": "जगतसिंहपुर, ओडिशा",
+      "c": "port",
+      "rg": "E",
+      "d": 2,
+      "lat": 20.27,
+      "lng": 86.66,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "At the mouth of the Mahanadi",
+      "tagh": "महानदी के मुहाने पर",
+      "fact": "Paradip Port near the mouth of the Mahanadi handles coal, iron ore and petroleum.",
+      "facth": "महानदी के मुहाने के पास पारादीप बंदरगाह कोयला, लौह अयस्क और पेट्रोलियम संभालता है।"
+    },
+    {
+      "n": "Syama Prasad Mookerjee Port",
+      "h": "श्यामा प्रसाद मुखर्जी बंदरगाह",
+      "s": "West Bengal",
+      "st": "Kolkata and Haldia, West Bengal",
+      "sh": "कोलकाता और हल्दिया, पश्चिम बंगाल",
+      "c": "port",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.55,
+      "lng": 88.32,
+      "kd": "Major seaport",
+      "kdh": "प्रमुख बंदरगाह",
+      "tag": "Only riverine major port",
+      "tagh": "एकमात्र नदी तटीय प्रमुख बंदरगाह",
+      "fact": "Syama Prasad Mookerjee Port (Kolkata, with Haldia dock) on the Hooghly is India's only riverine major port.",
+      "facth": "हुगली पर श्यामा प्रसाद मुखर्जी बंदरगाह (कोलकाता, हल्दिया डॉक सहित) भारत का एकमात्र नदी तटीय प्रमुख बंदरगाह है।"
+    },
+    {
+      "n": "Indira Gandhi International Airport",
+      "h": "इंदिरा गांधी अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "Delhi",
+      "st": "New Delhi",
+      "sh": "नई दिल्ली",
+      "c": "air",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.56,
+      "lng": 77.1,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "India's busiest airport",
+      "tagh": "भारत का सबसे व्यस्त हवाई अड्डा",
+      "fact": "Indira Gandhi International Airport in Delhi is India's busiest airport.",
+      "facth": "दिल्ली का इंदिरा गांधी अंतरराष्ट्रीय हवाई अड्डा भारत का सबसे व्यस्त हवाई अड्डा है।"
+    },
+    {
+      "n": "Chhatrapati Shivaji Maharaj International Airport",
+      "h": "छत्रपति शिवाजी महाराज अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "Maharashtra",
+      "st": "Mumbai, Maharashtra",
+      "sh": "मुंबई, महाराष्ट्र",
+      "c": "air",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.09,
+      "lng": 72.87,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "Mumbai's main airport",
+      "tagh": "मुंबई का मुख्य हवाई अड्डा",
+      "fact": "Mumbai's Chhatrapati Shivaji Maharaj International Airport, formerly Sahar, is the second busiest in India.",
+      "facth": "मुंबई का छत्रपति शिवाजी महाराज अंतरराष्ट्रीय हवाई अड्डा, पहले सहार, भारत का दूसरा सबसे व्यस्त हवाई अड्डा है।"
+    },
+    {
+      "n": "Kempegowda International Airport",
+      "h": "केम्पेगौड़ा अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "air",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.2,
+      "lng": 77.71,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "Named after the founder of Bengaluru",
+      "tagh": "बेंगलुरु के संस्थापक के नाम पर",
+      "fact": "Bengaluru's airport is named after Kempegowda, the 16th-century chieftain who founded the city.",
+      "facth": "बेंगलुरु का हवाई अड्डा 16वीं सदी के सरदार केम्पेगौड़ा के नाम पर है, जिन्होंने शहर बसाया।"
+    },
+    {
+      "n": "Rajiv Gandhi International Airport",
+      "h": "राजीव गांधी अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "Telangana",
+      "st": "Shamshabad, Hyderabad, Telangana",
+      "sh": "शमशाबाद, हैदराबाद, तेलंगाना",
+      "c": "air",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.24,
+      "lng": 78.43,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "Hyderabad's airport",
+      "tagh": "हैदराबाद का हवाई अड्डा",
+      "fact": "Hyderabad's Rajiv Gandhi International Airport is at Shamshabad.",
+      "facth": "हैदराबाद का राजीव गांधी अंतरराष्ट्रीय हवाई अड्डा शमशाबाद में है।"
+    },
+    {
+      "n": "Netaji Subhas Chandra Bose International Airport",
+      "h": "नेताजी सुभाष चंद्र बोस अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "West Bengal",
+      "st": "Kolkata, West Bengal",
+      "sh": "कोलकाता, पश्चिम बंगाल",
+      "c": "air",
+      "rg": "E",
+      "d": 2,
+      "lat": 22.65,
+      "lng": 88.45,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "Kolkata's airport (Dum Dum)",
+      "tagh": "कोलकाता का हवाई अड्डा (दमदम)",
+      "fact": "Kolkata's Netaji Subhas Chandra Bose International Airport at Dum Dum is the main airport of eastern India.",
+      "facth": "दमदम में कोलकाता का नेताजी सुभाष चंद्र बोस अंतरराष्ट्रीय हवाई अड्डा पूर्वी भारत का मुख्य हवाई अड्डा है।"
+    },
+    {
+      "n": "Cochin International Airport",
+      "h": "कोचीन अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "Kerala",
+      "st": "Nedumbassery, Kochi, Kerala",
+      "sh": "नेदुम्बस्सेरी, कोच्चि, केरल",
+      "c": "air",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.15,
+      "lng": 76.4,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "World's first fully solar-powered airport",
+      "tagh": "विश्व का पहला पूर्णतः सौर ऊर्जा चालित हवाई अड्डा",
+      "fact": "Cochin International Airport became the first fully solar-powered airport in the world in 2015; it was also the first airport built by public participation.",
+      "facth": "कोचीन अंतरराष्ट्रीय हवाई अड्डा 2015 में विश्व का पहला पूर्णतः सौर ऊर्जा चालित हवाई अड्डा बना; यह जन-भागीदारी से बना पहला हवाई अड्डा भी था।"
+    },
+    {
+      "n": "Sardar Vallabhbhai Patel International Airport",
+      "h": "सरदार वल्लभभाई पटेल अंतरराष्ट्रीय हवाई अड्डा",
+      "s": "Gujarat",
+      "st": "Ahmedabad, Gujarat",
+      "sh": "अहमदाबाद, गुजरात",
+      "c": "air",
+      "rg": "W",
+      "d": 2,
+      "lat": 23.07,
+      "lng": 72.63,
+      "kd": "International airport",
+      "kdh": "अंतरराष्ट्रीय हवाई अड्डा",
+      "tag": "Ahmedabad's airport",
+      "tagh": "अहमदाबाद का हवाई अड्डा",
+      "fact": "Ahmedabad's airport is named after Sardar Vallabhbhai Patel, India's first Deputy Prime Minister.",
+      "facth": "अहमदाबाद का हवाई अड्डा भारत के पहले उप-प्रधानमंत्री सरदार वल्लभभाई पटेल के नाम पर है।"
+    },
+    {
+      "n": "Tehri Dam",
+      "h": "टिहरी बाँध",
+      "s": "Uttarakhand",
+      "st": "Tehri Garhwal, Uttarakhand",
+      "sh": "टिहरी गढ़वाल, उत्तराखंड",
+      "c": "dam",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.38,
+      "lng": 78.48,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Tallest dam in India, on the Bhagirathi",
+      "tagh": "भारत का सबसे ऊँचा बाँध, भागीरथी पर",
+      "fact": "Tehri Dam on the Bhagirathi, about 260 m high, is the tallest dam in India.",
+      "facth": "भागीरथी पर लगभग 260 मीटर ऊँचा टिहरी बाँध भारत का सबसे ऊँचा बाँध है।",
+      "rv": "Bhagirathi",
+      "rvh": "भागीरथी"
+    },
+    {
+      "n": "Bhakra Dam",
+      "h": "भाखड़ा बाँध",
+      "s": "Himachal Pradesh",
+      "st": "Bilaspur, Himachal Pradesh",
+      "sh": "बिलासपुर, हिमाचल प्रदेश",
+      "c": "dam",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.41,
+      "lng": 76.43,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Gobind Sagar reservoir on the Sutlej",
+      "tagh": "सतलुज पर गोबिंद सागर जलाशय",
+      "fact": "Bhakra Dam on the Sutlej forms the Gobind Sagar reservoir; Nehru called such projects the 'temples of modern India'.",
+      "facth": "सतलुज पर भाखड़ा बाँध गोबिंद सागर जलाशय बनाता है; नेहरू ने ऐसी परियोजनाओं को 'आधुनिक भारत के मंदिर' कहा।",
+      "rv": "Sutlej",
+      "rvh": "सतलुज"
+    },
+    {
+      "n": "Sardar Sarovar Dam",
+      "h": "सरदार सरोवर बाँध",
+      "s": "Gujarat",
+      "st": "Kevadia, Narmada, Gujarat",
+      "sh": "केवड़िया, नर्मदा, गुजरात",
+      "c": "dam",
+      "rg": "W",
+      "d": 1,
+      "lat": 21.83,
+      "lng": 73.75,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Statue of Unity stands nearby",
+      "tagh": "पास में स्टैच्यू ऑफ़ यूनिटी",
+      "fact": "Sardar Sarovar Dam on the Narmada serves Gujarat, Madhya Pradesh, Maharashtra and Rajasthan; the Statue of Unity stands nearby.",
+      "facth": "नर्मदा पर सरदार सरोवर बाँध गुजरात, मध्य प्रदेश, महाराष्ट्र और राजस्थान को लाभ देता है; पास में स्टैच्यू ऑफ़ यूनिटी है।",
+      "rv": "Narmada",
+      "rvh": "नर्मदा"
+    },
+    {
+      "n": "Hirakud Dam",
+      "h": "हीराकुंड बाँध",
+      "s": "Odisha",
+      "st": "Sambalpur, Odisha",
+      "sh": "संबलपुर, ओडिशा",
+      "c": "dam",
+      "rg": "E",
+      "d": 1,
+      "lat": 21.53,
+      "lng": 83.87,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "One of the longest earthen dams",
+      "tagh": "सबसे लंबे मिट्टी के बाँधों में",
+      "fact": "Hirakud Dam on the Mahanadi near Sambalpur is one of the longest earthen dams in the world.",
+      "facth": "संबलपुर के पास महानदी पर हीराकुंड बाँध विश्व के सबसे लंबे मिट्टी के बाँधों में है।",
+      "rv": "Mahanadi",
+      "rvh": "महानदी"
+    },
+    {
+      "n": "Nagarjuna Sagar Dam",
+      "h": "नागार्जुन सागर बाँध",
+      "s": "Telangana",
+      "st": "Telangana–Andhra Pradesh border",
+      "sh": "तेलंगाना–आंध्र प्रदेश सीमा",
+      "c": "dam",
+      "rg": "S",
+      "d": 2,
+      "lat": 16.57,
+      "lng": 79.31,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Large masonry dam on the Krishna",
+      "tagh": "कृष्णा पर बड़ा चिनाई बाँध",
+      "fact": "Nagarjuna Sagar on the Krishna is one of the largest masonry dams in the world.",
+      "facth": "कृष्णा पर नागार्जुन सागर विश्व के सबसे बड़े चिनाई बाँधों में है।",
+      "rv": "Krishna",
+      "rvh": "कृष्णा",
+      "s2": [
+        "Andhra Pradesh"
+      ]
+    },
+    {
+      "n": "Indira Sagar Dam",
+      "h": "इंदिरा सागर बाँध",
+      "s": "Madhya Pradesh",
+      "st": "Khandwa, Madhya Pradesh",
+      "sh": "खंडवा, मध्य प्रदेश",
+      "c": "dam",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.28,
+      "lng": 76.47,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "One of the largest reservoirs in India",
+      "tagh": "भारत के सबसे बड़े जलाशयों में",
+      "fact": "Indira Sagar on the Narmada in Khandwa forms one of the largest reservoirs in India.",
+      "facth": "खंडवा में नर्मदा पर इंदिरा सागर भारत के सबसे बड़े जलाशयों में से एक बनाता है।",
+      "rv": "Narmada",
+      "rvh": "नर्मदा"
+    },
+    {
+      "n": "Idukki Dam",
+      "h": "इडुक्की बाँध",
+      "s": "Kerala",
+      "st": "Idukki, Kerala",
+      "sh": "इडुक्की, केरल",
+      "c": "dam",
+      "rg": "S",
+      "d": 2,
+      "lat": 9.84,
+      "lng": 76.98,
+      "kd": "Arch dam",
+      "kdh": "मेहराबी बाँध",
+      "tag": "Double-curvature arch dam",
+      "tagh": "दोहरी वक्रता वाला मेहराबी बाँध",
+      "fact": "Idukki Dam on the Periyar, built between two granite hills, is one of the highest arch dams in Asia.",
+      "facth": "पेरियार पर दो ग्रेनाइट पहाड़ियों के बीच बना इडुक्की बाँध एशिया के सबसे ऊँचे मेहराबी बाँधों में है।",
+      "rv": "Periyar",
+      "rvh": "पेरियार"
+    },
+    {
+      "n": "Mettur Dam",
+      "h": "मेट्टूर बाँध",
+      "s": "Tamil Nadu",
+      "st": "Salem, Tamil Nadu",
+      "sh": "सेलम, तमिलनाडु",
+      "c": "dam",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.79,
+      "lng": 77.8,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Stanley Reservoir on the Kaveri",
+      "tagh": "कावेरी पर स्टेनली जलाशय",
+      "fact": "Mettur Dam on the Kaveri, completed in 1934, forms the Stanley Reservoir.",
+      "facth": "1934 में बना कावेरी पर मेट्टूर बाँध स्टेनली जलाशय बनाता है।",
+      "rv": "Kaveri",
+      "rvh": "कावेरी"
+    },
+    {
+      "n": "Koyna Dam",
+      "h": "कोयना बाँध",
+      "s": "Maharashtra",
+      "st": "Satara, Maharashtra",
+      "sh": "सातारा, महाराष्ट्र",
+      "c": "dam",
+      "rg": "W",
+      "d": 2,
+      "lat": 17.4,
+      "lng": 73.75,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Shivaji Sagar lake; 1967 earthquake",
+      "tagh": "शिवाजी सागर झील; 1967 का भूकंप",
+      "fact": "Koyna Dam forms Shivaji Sagar lake; the Koynanagar earthquake of 1967 is linked to its reservoir.",
+      "facth": "कोयना बाँध शिवाजी सागर झील बनाता है; 1967 का कोयनानगर भूकंप इसके जलाशय से जोड़ा जाता है।",
+      "rv": "Koyna",
+      "rvh": "कोयना"
+    },
+    {
+      "n": "Tungabhadra Dam",
+      "h": "तुंगभद्रा बाँध",
+      "s": "Karnataka",
+      "st": "Hosapete, Karnataka",
+      "sh": "होसपेटे, कर्नाटक",
+      "c": "dam",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.27,
+      "lng": 76.33,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Near Hampi",
+      "tagh": "हम्पी के पास",
+      "fact": "Tungabhadra Dam at Hosapete, near Hampi, serves Karnataka, Andhra Pradesh and Telangana.",
+      "facth": "हम्पी के पास होसपेटे में तुंगभद्रा बाँध कर्नाटक, आंध्र प्रदेश और तेलंगाना को लाभ देता है।",
+      "rv": "Tungabhadra",
+      "rvh": "तुंगभद्रा"
+    },
+    {
+      "n": "Rihand Dam",
+      "h": "रिहंद बाँध",
+      "s": "Uttar Pradesh",
+      "st": "Sonbhadra, Uttar Pradesh",
+      "sh": "सोनभद्र, उत्तर प्रदेश",
+      "c": "dam",
+      "rg": "N",
+      "d": 2,
+      "lat": 24.2,
+      "lng": 83,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Govind Ballabh Pant Sagar",
+      "tagh": "गोविंद बल्लभ पंत सागर",
+      "fact": "Rihand Dam on the Rihand river forms Govind Ballabh Pant Sagar, one of the largest artificial lakes in India.",
+      "facth": "रिहंद नदी पर रिहंद बाँध गोविंद बल्लभ पंत सागर बनाता है, जो भारत की सबसे बड़ी कृत्रिम झीलों में है।",
+      "rv": "Rihand",
+      "rvh": "रिहंद"
+    },
+    {
+      "n": "Gandhi Sagar Dam",
+      "h": "गांधी सागर बाँध",
+      "s": "Madhya Pradesh",
+      "st": "Mandsaur, Madhya Pradesh",
+      "sh": "मंदसौर, मध्य प्रदेश",
+      "c": "dam",
+      "rg": "C",
+      "d": 3,
+      "lat": 24.55,
+      "lng": 75.55,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "First of the Chambal valley dams",
+      "tagh": "चंबल घाटी के बाँधों में पहला",
+      "fact": "Gandhi Sagar is the first of the four Chambal valley dams; the others are Rana Pratap Sagar, Jawahar Sagar and the Kota Barrage.",
+      "facth": "गांधी सागर चंबल घाटी के चार बाँधों में पहला है; बाकी राणा प्रताप सागर, जवाहर सागर और कोटा बैराज हैं।",
+      "rv": "Chambal",
+      "rvh": "चंबल"
+    },
+    {
+      "n": "Farakka Barrage",
+      "h": "फरक्का बैराज",
+      "s": "West Bengal",
+      "st": "Murshidabad, West Bengal",
+      "sh": "मुर्शिदाबाद, पश्चिम बंगाल",
+      "c": "dam",
+      "rg": "E",
+      "d": 1,
+      "lat": 24.8,
+      "lng": 87.92,
+      "kd": "Barrage",
+      "kdh": "बैराज",
+      "tag": "Diverts Ganga water to the Hooghly",
+      "tagh": "गंगा का जल हुगली की ओर मोड़ता है",
+      "fact": "The Farakka Barrage on the Ganga diverts water into the Hooghly to keep Kolkata port navigable.",
+      "facth": "गंगा पर फरक्का बैराज कोलकाता बंदरगाह को नौगम्य रखने के लिए जल हुगली की ओर मोड़ता है।",
+      "rv": "Ganga",
+      "rvh": "गंगा"
+    },
+    {
+      "n": "Krishna Raja Sagara",
+      "h": "कृष्णराज सागर",
+      "s": "Karnataka",
+      "st": "Mandya, Karnataka",
+      "sh": "मंड्या, कर्नाटक",
+      "c": "dam",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.42,
+      "lng": 76.57,
+      "kd": "Dam",
+      "kdh": "बाँध",
+      "tag": "Brindavan Gardens; designed by Visvesvaraya",
+      "tagh": "वृंदावन उद्यान; विश्वेश्वरैया द्वारा डिज़ाइन",
+      "fact": "Krishna Raja Sagara Dam on the Kaveri near Mysuru was designed by M. Visvesvaraya and has the Brindavan Gardens below it.",
+      "facth": "मैसूरु के पास कावेरी पर कृष्णराज सागर बाँध एम. विश्वेश्वरैया ने डिज़ाइन किया और इसके नीचे वृंदावन उद्यान है।",
+      "rv": "Kaveri",
+      "rvh": "कावेरी"
+    },
+    {
+      "n": "Polavaram Project",
+      "h": "पोलावरम परियोजना",
+      "s": "Andhra Pradesh",
+      "st": "Eluru, Andhra Pradesh",
+      "sh": "एलुरु, आंध्र प्रदेश",
+      "c": "dam",
+      "rg": "S",
+      "d": 3,
+      "lat": 17.25,
+      "lng": 81.65,
+      "kd": "Multipurpose project",
+      "kdh": "बहुउद्देशीय परियोजना",
+      "tag": "National project on the Godavari",
+      "tagh": "गोदावरी पर राष्ट्रीय परियोजना",
+      "fact": "The Polavaram multipurpose project on the Godavari is a national project under construction.",
+      "facth": "गोदावरी पर पोलावरम बहुउद्देशीय परियोजना निर्माणाधीन राष्ट्रीय परियोजना है।",
+      "rv": "Godavari",
+      "rvh": "गोदावरी"
+    },
+    {
+      "n": "Kunchikal Falls",
+      "h": "कुंचिकल जलप्रपात",
+      "s": "Karnataka",
+      "st": "Shivamogga, Karnataka",
+      "sh": "शिवमोग्गा, कर्नाटक",
+      "c": "falls",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.5,
+      "lng": 75.05,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Highest waterfall in India",
+      "tagh": "भारत का सबसे ऊँचा जलप्रपात",
+      "fact": "Kunchikal Falls on the Varahi river (about 455 m) is the highest waterfall in India.",
+      "facth": "वाराही नदी पर कुंचिकल जलप्रपात (लगभग 455 मीटर) भारत का सबसे ऊँचा जलप्रपात है।",
+      "rv": "Varahi",
+      "rvh": "वाराही"
+    },
+    {
+      "n": "Jog Falls",
+      "h": "जोग जलप्रपात",
+      "s": "Karnataka",
+      "st": "Shivamogga, Karnataka",
+      "sh": "शिवमोग्गा, कर्नाटक",
+      "c": "falls",
+      "rg": "S",
+      "d": 1,
+      "lat": 14.23,
+      "lng": 74.81,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Raja, Rani, Rocket and Roarer",
+      "tagh": "राजा, रानी, रॉकेट और रोरर",
+      "fact": "Jog Falls (Gersoppa Falls) on the Sharavathi drops about 253 m in four streams called Raja, Rani, Rocket and Roarer.",
+      "facth": "शरावती पर जोग (गेरसोप्पा) जलप्रपात लगभग 253 मीटर चार धाराओं में गिरता है, जिन्हें राजा, रानी, रॉकेट और रोरर कहते हैं।",
+      "rv": "Sharavathi",
+      "rvh": "शरावती"
+    },
+    {
+      "n": "Dudhsagar Falls",
+      "h": "दूधसागर जलप्रपात",
+      "s": "Goa",
+      "st": "Goa–Karnataka border",
+      "sh": "गोवा–कर्नाटक सीमा",
+      "c": "falls",
+      "rg": "W",
+      "d": 1,
+      "lat": 15.31,
+      "lng": 74.31,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "'Sea of milk'",
+      "tagh": "'दूध का सागर'",
+      "fact": "Dudhsagar Falls ('sea of milk') on the Mandovi is a four-tiered waterfall on the Goa–Karnataka border.",
+      "facth": "मांडवी पर दूधसागर ('दूध का सागर') जलप्रपात गोवा–कर्नाटक सीमा पर चार स्तरों वाला जलप्रपात है।",
+      "rv": "Mandovi",
+      "rvh": "मांडवी"
+    },
+    {
+      "n": "Athirappilly Falls",
+      "h": "अथिरापल्ली जलप्रपात",
+      "s": "Kerala",
+      "st": "Thrissur, Kerala",
+      "sh": "त्रिशूर, केरल",
+      "c": "falls",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.29,
+      "lng": 76.57,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Largest waterfall in Kerala",
+      "tagh": "केरल का सबसे बड़ा जलप्रपात",
+      "fact": "Athirappilly Falls on the Chalakudy river is the largest waterfall in Kerala.",
+      "facth": "चालक्कुडी नदी पर अथिरापल्ली जलप्रपात केरल का सबसे बड़ा जलप्रपात है।",
+      "rv": "Chalakudy",
+      "rvh": "चालक्कुडी"
+    },
+    {
+      "n": "Hogenakkal Falls",
+      "h": "होगेनक्कल जलप्रपात",
+      "s": "Tamil Nadu",
+      "st": "Dharmapuri, Tamil Nadu",
+      "sh": "धर्मपुरी, तमिलनाडु",
+      "c": "falls",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.12,
+      "lng": 77.78,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Coracle rides on the Kaveri",
+      "tagh": "कावेरी पर टोकरी नाव की सवारी",
+      "fact": "Hogenakkal ('smoking rocks') on the Kaveri is known for its coracle rides and carbonatite rocks.",
+      "facth": "कावेरी पर होगेनक्कल ('धुएँ वाली चट्टानें') टोकरी नाव की सवारी और कार्बोनेटाइट चट्टानों के लिए जाना जाता है।",
+      "rv": "Kaveri",
+      "rvh": "कावेरी"
+    },
+    {
+      "n": "Shivanasamudra Falls",
+      "h": "शिवनसमुद्र जलप्रपात",
+      "s": "Karnataka",
+      "st": "Chamarajanagar–Mandya, Karnataka",
+      "sh": "चामराजनगर–मंड्या, कर्नाटक",
+      "c": "falls",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.27,
+      "lng": 77.17,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Asia's first hydroelectric power station (1902)",
+      "tagh": "एशिया का पहला जलविद्युत केंद्र (1902)",
+      "fact": "Shivanasamudra on the Kaveri, with its Gaganachukki and Bharachukki falls, powered one of Asia's first hydroelectric stations in 1902.",
+      "facth": "कावेरी पर गगनचुक्की और भरचुक्की प्रपातों वाले शिवनसमुद्र ने 1902 में एशिया के पहले जलविद्युत केंद्रों में से एक को बिजली दी।",
+      "rv": "Kaveri",
+      "rvh": "कावेरी"
+    },
+    {
+      "n": "Chitrakote Falls",
+      "h": "चित्रकोट जलप्रपात",
+      "s": "Chhattisgarh",
+      "st": "Bastar, Chhattisgarh",
+      "sh": "बस्तर, छत्तीसगढ़",
+      "c": "falls",
+      "rg": "C",
+      "d": 1,
+      "lat": 19.21,
+      "lng": 81.7,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "'Niagara of India'",
+      "tagh": "'भारत का नियाग्रा'",
+      "fact": "Chitrakote Falls on the Indravati, the widest in India, is called the Niagara of India.",
+      "facth": "इंद्रावती पर चित्रकोट जलप्रपात, भारत का सबसे चौड़ा, भारत का नियाग्रा कहलाता है।",
+      "rv": "Indravati",
+      "rvh": "इंद्रावती"
+    },
+    {
+      "n": "Hundru Falls",
+      "h": "हुंडरू जलप्रपात",
+      "s": "Jharkhand",
+      "st": "Ranchi, Jharkhand",
+      "sh": "राँची, झारखंड",
+      "c": "falls",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.45,
+      "lng": 85.65,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "On the Subarnarekha",
+      "tagh": "सुवर्णरेखा पर",
+      "fact": "Hundru Falls near Ranchi is formed by the Subarnarekha river.",
+      "facth": "राँची के पास हुंडरू जलप्रपात सुवर्णरेखा नदी से बनता है।",
+      "rv": "Subarnarekha",
+      "rvh": "सुवर्णरेखा"
+    },
+    {
+      "n": "Nohkalikai Falls",
+      "h": "नोहकालिकाई जलप्रपात",
+      "s": "Meghalaya",
+      "st": "Sohra (Cherrapunji), Meghalaya",
+      "sh": "सोहरा (चेरापूंजी), मेघालय",
+      "c": "falls",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.27,
+      "lng": 91.68,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Tallest plunge waterfall in India",
+      "tagh": "भारत का सबसे ऊँचा सीधा गिरने वाला जलप्रपात",
+      "fact": "Nohkalikai Falls near Sohra is the tallest plunge waterfall in India (about 340 m).",
+      "facth": "सोहरा के पास नोहकालिकाई जलप्रपात भारत का सबसे ऊँचा सीधा गिरने वाला जलप्रपात (लगभग 340 मीटर) है।"
+    },
+    {
+      "n": "Dhuandhar Falls",
+      "h": "धुआँधार जलप्रपात",
+      "s": "Madhya Pradesh",
+      "st": "Bhedaghat, Jabalpur, Madhya Pradesh",
+      "sh": "भेड़ाघाट, जबलपुर, मध्य प्रदेश",
+      "c": "falls",
+      "rg": "C",
+      "d": 1,
+      "lat": 23.13,
+      "lng": 79.8,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Marble Rocks of Bhedaghat",
+      "tagh": "भेड़ाघाट की संगमरमर चट्टानें",
+      "fact": "Dhuandhar ('smoke cascade') on the Narmada at Bhedaghat flows through gorges of white marble.",
+      "facth": "भेड़ाघाट में नर्मदा पर धुआँधार ('धुएँ का झरना') सफ़ेद संगमरमर की घाटियों से बहता है।",
+      "rv": "Narmada",
+      "rvh": "नर्मदा"
+    },
+    {
+      "n": "Barehipani Falls",
+      "h": "बरेहीपानी जलप्रपात",
+      "s": "Odisha",
+      "st": "Simlipal, Mayurbhanj, Odisha",
+      "sh": "सिमलीपाल, मयूरभंज, ओडिशा",
+      "c": "falls",
+      "rg": "E",
+      "d": 3,
+      "lat": 21.88,
+      "lng": 86.33,
+      "kd": "Waterfall",
+      "kdh": "जलप्रपात",
+      "tag": "Highest waterfall in Odisha",
+      "tagh": "ओडिशा का सबसे ऊँचा जलप्रपात",
+      "fact": "Barehipani Falls in Simlipal National Park is the highest waterfall in Odisha.",
+      "facth": "सिमलीपाल राष्ट्रीय उद्यान का बरेहीपानी जलप्रपात ओडिशा का सबसे ऊँचा जलप्रपात है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "passes",
+      "icon": "⛰️",
+      "t": [
+        "Mountain passes by state",
+        "राज्यवार पर्वतीय दर्रे"
+      ],
+      "cols": [
+        [
+          "State or UT",
+          "राज्य या केंद्रशासित प्रदेश"
+        ],
+        [
+          "Passes",
+          "दर्रे"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Ladakh",
+            "लद्दाख"
+          ],
+          [
+            "Zoji La, Khardung La, Chang La, Lanak La",
+            "ज़ोजी ला, खारदुंग ला, चांग ला, लानक ला"
+          ]
+        ],
+        [
+          [
+            "Jammu and Kashmir",
+            "जम्मू और कश्मीर"
+          ],
+          [
+            "Banihal, Pir Panjal",
+            "बनिहाल, पीर पंजाल"
+          ]
+        ],
+        [
+          [
+            "Himachal Pradesh",
+            "हिमाचल प्रदेश"
+          ],
+          [
+            "Rohtang, Shipki La, Baralacha La",
+            "रोहतांग, शिपकी ला, बारालाचा ला"
+          ]
+        ],
+        [
+          [
+            "Uttarakhand",
+            "उत्तराखंड"
+          ],
+          [
+            "Lipulekh, Mana, Niti",
+            "लिपुलेख, माणा, नीति"
+          ]
+        ],
+        [
+          [
+            "Sikkim",
+            "सिक्किम"
+          ],
+          [
+            "Nathu La, Jelep La",
+            "नाथू ला, जेलेप ला"
+          ]
+        ],
+        [
+          [
+            "Arunachal Pradesh",
+            "अरुणाचल प्रदेश"
+          ],
+          [
+            "Bomdi La, Sela, Diphu",
+            "बोमडी ला, सेला, दीफू"
+          ]
+        ],
+        [
+          [
+            "Western Ghats",
+            "पश्चिमी घाट"
+          ],
+          [
+            "Thal Ghat, Bhor Ghat, Palakkad Gap, Shencottah Gap",
+            "थाल घाट, भोर घाट, पालक्काड दर्रा, शेनकोट्टा दर्रा"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "himalaya",
+      "icon": "🏔️",
+      "t": [
+        "Ranges of the Himalaya",
+        "हिमालय की श्रेणियाँ"
+      ],
+      "cols": [
+        [
+          "Range",
+          "श्रेणी"
+        ],
+        [
+          "Know this",
+          "यह जानें"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Himadri (Greater Himalaya)",
+            "हिमाद्रि (महान हिमालय)"
+          ],
+          [
+            "Highest peaks; Kangchenjunga, Nanda Devi",
+            "सबसे ऊँची चोटियाँ; कंचनजंगा, नंदा देवी"
+          ]
+        ],
+        [
+          [
+            "Himachal (Lesser Himalaya)",
+            "हिमाचल (लघु हिमालय)"
+          ],
+          [
+            "Pir Panjal, Dhauladhar, Mahabharat; hill stations",
+            "पीर पंजाल, धौलाधार, महाभारत; पर्वतीय नगर"
+          ]
+        ],
+        [
+          [
+            "Shivalik (Outer Himalaya)",
+            "शिवालिक (बाहरी हिमालय)"
+          ],
+          [
+            "Youngest range; duns such as Dehradun lie behind it",
+            "सबसे नई श्रेणी; इसके पीछे देहरादून जैसे दून"
+          ]
+        ],
+        [
+          [
+            "Trans-Himalaya",
+            "पार-हिमालय"
+          ],
+          [
+            "Karakoram (K2), Ladakh and Zaskar ranges",
+            "काराकोरम (K2), लद्दाख और ज़ास्कर श्रेणियाँ"
+          ]
+        ],
+        [
+          [
+            "Purvanchal",
+            "पूर्वांचल"
+          ],
+          [
+            "Patkai, Naga, Manipur and Mizo hills on the Myanmar border",
+            "म्यांमार सीमा पर पटकाई, नागा, मणिपुर और मिज़ो पहाड़ियाँ"
+          ]
+        ],
+        [
+          [
+            "Highest peaks",
+            "सबसे ऊँची चोटियाँ"
+          ],
+          [
+            "K2 (8,611 m, in Ladakh as shown on Indian maps), Kangchenjunga (8,586 m)",
+            "K2 (8,611 मीटर, भारतीय मानचित्र में लद्दाख में), कंचनजंगा (8,586 मीटर)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "minerals",
+      "icon": "⛏️",
+      "t": [
+        "Minerals and where they are found",
+        "खनिज और उनके क्षेत्र"
+      ],
+      "cols": [
+        [
+          "Mineral",
+          "खनिज"
+        ],
+        [
+          "Main areas",
+          "प्रमुख क्षेत्र"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Coal",
+            "कोयला"
+          ],
+          [
+            "Jharia, Bokaro (Jharkhand); Raniganj (West Bengal); Korba (Chhattisgarh); Talcher (Odisha); Singrauli",
+            "झरिया, बोकारो (झारखंड); रानीगंज (पश्चिम बंगाल); कोरबा (छत्तीसगढ़); तालचेर (ओडिशा); सिंगरौली"
+          ]
+        ],
+        [
+          [
+            "Iron ore",
+            "लौह अयस्क"
+          ],
+          [
+            "Bailadila (Chhattisgarh), Noamundi (Jharkhand), Ballari (Karnataka), Keonjhar (Odisha), Goa",
+            "बैलाडीला (छत्तीसगढ़), नोआमुंडी (झारखंड), बल्लारी (कर्नाटक), क्योंझर (ओडिशा), गोवा"
+          ]
+        ],
+        [
+          [
+            "Copper",
+            "ताँबा"
+          ],
+          [
+            "Malanjkhand (Madhya Pradesh), Khetri (Rajasthan), Singhbhum (Jharkhand)",
+            "मलाजखंड (मध्य प्रदेश), खेतड़ी (राजस्थान), सिंहभूम (झारखंड)"
+          ]
+        ],
+        [
+          [
+            "Bauxite",
+            "बॉक्साइट"
+          ],
+          [
+            "Panchpatmali (Odisha), Amarkantak plateau, Jharkhand",
+            "पंचपटमाली (ओडिशा), अमरकंटक पठार, झारखंड"
+          ]
+        ],
+        [
+          [
+            "Mica",
+            "अभ्रक"
+          ],
+          [
+            "Koderma (Jharkhand), Nellore (Andhra Pradesh), Rajasthan",
+            "कोडरमा (झारखंड), नेल्लोर (आंध्र प्रदेश), राजस्थान"
+          ]
+        ],
+        [
+          [
+            "Gold",
+            "सोना"
+          ],
+          [
+            "Hutti and Kolar (Karnataka)",
+            "हट्टी और कोलार (कर्नाटक)"
+          ]
+        ],
+        [
+          [
+            "Uranium",
+            "यूरेनियम"
+          ],
+          [
+            "Jaduguda (Jharkhand), Tummalapalle (Andhra Pradesh)",
+            "जादूगोड़ा (झारखंड), तुम्मलापल्ले (आंध्र प्रदेश)"
+          ]
+        ],
+        [
+          [
+            "Petroleum",
+            "पेट्रोलियम"
+          ],
+          [
+            "Mumbai High, Ankleshwar (Gujarat), Digboi (Assam), Barmer (Rajasthan)",
+            "मुंबई हाई, अंकलेश्वर (गुजरात), डिगबोई (असम), बाड़मेर (राजस्थान)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ports",
+      "icon": "⚓",
+      "t": [
+        "Major ports of India",
+        "भारत के प्रमुख बंदरगाह"
+      ],
+      "cols": [
+        [
+          "Coast",
+          "तट"
+        ],
+        [
+          "Ports, north to south",
+          "बंदरगाह, उत्तर से दक्षिण"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "West coast",
+            "पश्चिमी तट"
+          ],
+          [
+            "Deendayal (Kandla), Mumbai, Jawaharlal Nehru (Nhava Sheva), Mormugao, New Mangalore, Cochin",
+            "दीनदयाल (कांडला), मुंबई, जवाहरलाल नेहरू (न्हावा शेवा), मोरमुगाओ, न्यू मंगलौर, कोचीन"
+          ]
+        ],
+        [
+          [
+            "East coast",
+            "पूर्वी तट"
+          ],
+          [
+            "Syama Prasad Mookerjee (Kolkata–Haldia), Paradip, Visakhapatnam, Kamarajar (Ennore), Chennai, V. O. Chidambaranar (Thoothukudi)",
+            "श्यामा प्रसाद मुखर्जी (कोलकाता–हल्दिया), पारादीप, विशाखापत्तनम, कामराजर (एन्नोर), चेन्नई, वी. ओ. चिदंबरनार (थूथुकुडी)"
+          ]
+        ],
+        [
+          [
+            "New",
+            "नए"
+          ],
+          [
+            "Vadhavan (Maharashtra, under construction) as the 13th major port; Vizhinjam (Kerala) deep-water transhipment port",
+            "वाढवण (महाराष्ट्र, निर्माणाधीन) 13वाँ प्रमुख बंदरगाह; विझिंजम (केरल) गहरे पानी का ट्रांसशिपमेंट बंदरगाह"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "firsts",
+      "icon": "🥇",
+      "t": [
+        "Firsts and records",
+        "प्रथम और रिकॉर्ड"
+      ],
+      "cols": [
+        [
+          "Record",
+          "रिकॉर्ड"
+        ],
+        [
+          "Answer",
+          "उत्तर"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First hydroelectric power station",
+            "पहला जलविद्युत केंद्र"
+          ],
+          [
+            "Sidrapong, Darjeeling (1897)",
+            "सिद्रापोंग, दार्जिलिंग (1897)"
+          ]
+        ],
+        [
+          [
+            "Oldest working oil refinery",
+            "सबसे पुरानी चालू तेल रिफ़ाइनरी"
+          ],
+          [
+            "Digboi, Assam (1901)",
+            "डिगबोई, असम (1901)"
+          ]
+        ],
+        [
+          [
+            "Tallest dam",
+            "सबसे ऊँचा बाँध"
+          ],
+          [
+            "Tehri (Bhagirathi)",
+            "टिहरी (भागीरथी)"
+          ]
+        ],
+        [
+          [
+            "Highest waterfall",
+            "सबसे ऊँचा जलप्रपात"
+          ],
+          [
+            "Kunchikal Falls, Karnataka",
+            "कुंचिकल जलप्रपात, कर्नाटक"
+          ]
+        ],
+        [
+          [
+            "Widest waterfall",
+            "सबसे चौड़ा जलप्रपात"
+          ],
+          [
+            "Chitrakote, Chhattisgarh",
+            "चित्रकोट, छत्तीसगढ़"
+          ]
+        ],
+        [
+          [
+            "Highest peak of south India",
+            "दक्षिण भारत की सबसे ऊँची चोटी"
+          ],
+          [
+            "Anamudi, Kerala",
+            "अनामुडी, केरल"
+          ]
+        ],
+        [
+          [
+            "Oldest mountains",
+            "सबसे पुराने पर्वत"
+          ],
+          [
+            "Aravalli",
+            "अरावली"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "pass",
+      "q": [
+        "Which pass links Srinagar with Leh?",
+        "कौन-सा दर्रा श्रीनगर को लेह से जोड़ता है?"
+      ],
+      "o": [
+        [
+          "Zoji La",
+          "ज़ोजी ला"
+        ],
+        [
+          "Nathu La",
+          "नाथू ला"
+        ],
+        [
+          "Bomdi La",
+          "बोमडी ला"
+        ],
+        [
+          "Shipki La",
+          "शिपकी ला"
+        ]
+      ],
+      "e": [
+        "Zoji La is on the Srinagar–Leh highway.",
+        "ज़ोजी ला श्रीनगर–लेह राजमार्ग पर है।"
+      ]
+    },
+    {
+      "t": "pass",
+      "q": [
+        "The Atal Tunnel bypasses which pass?",
+        "अटल सुरंग किस दर्रे को बाईपास करती है?"
+      ],
+      "o": [
+        [
+          "Rohtang Pass",
+          "रोहतांग दर्रा"
+        ],
+        [
+          "Banihal Pass",
+          "बनिहाल दर्रा"
+        ],
+        [
+          "Zoji La",
+          "ज़ोजी ला"
+        ],
+        [
+          "Baralacha La",
+          "बारालाचा ला"
+        ]
+      ],
+      "e": [
+        "The Atal Tunnel under the Pir Panjal opened in 2020.",
+        "पीर पंजाल के नीचे अटल सुरंग 2020 में खुली।"
+      ]
+    },
+    {
+      "t": "pass",
+      "q": [
+        "Nathu La pass is in",
+        "नाथू ला दर्रा कहाँ है?"
+      ],
+      "o": [
+        [
+          "Sikkim",
+          "सिक्किम"
+        ],
+        [
+          "Arunachal Pradesh",
+          "अरुणाचल प्रदेश"
+        ],
+        [
+          "Himachal Pradesh",
+          "हिमाचल प्रदेश"
+        ],
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ]
+      ],
+      "e": [
+        "It is on the old Silk Route and reopened for trade in 2006.",
+        "यह पुराने रेशम मार्ग पर है और 2006 में व्यापार के लिए फिर खुला।"
+      ]
+    },
+    {
+      "t": "pass",
+      "q": [
+        "The Palakkad Gap lies between which hills?",
+        "पालक्काड दर्रा किन पहाड़ियों के बीच है?"
+      ],
+      "o": [
+        [
+          "Nilgiri and Anaimalai",
+          "नीलगिरि और अन्नामलाई"
+        ],
+        [
+          "Nilgiri and Cardamom",
+          "नीलगिरि और इलायची"
+        ],
+        [
+          "Anaimalai and Palani",
+          "अन्नामलाई और पलनी"
+        ],
+        [
+          "Javadi and Shevaroy",
+          "जावदी और शेवरॉय"
+        ]
+      ],
+      "e": [
+        "It links Kerala and Tamil Nadu.",
+        "यह केरल और तमिलनाडु को जोड़ता है।"
+      ]
+    },
+    {
+      "t": "pass",
+      "q": [
+        "Which pass is near the tri-junction of India, China and Myanmar?",
+        "कौन-सा दर्रा भारत, चीन और म्यांमार के त्रि-संगम के पास है?"
+      ],
+      "o": [
+        [
+          "Diphu Pass",
+          "दीफू दर्रा"
+        ],
+        [
+          "Lipulekh Pass",
+          "लिपुलेख दर्रा"
+        ],
+        [
+          "Bomdi La",
+          "बोमडी ला"
+        ],
+        [
+          "Jelep La",
+          "जेलेप ला"
+        ]
+      ],
+      "e": [
+        "Lipulekh is near the India–Nepal–China tri-junction.",
+        "लिपुलेख भारत–नेपाल–चीन त्रि-संगम के पास है।"
+      ]
+    },
+    {
+      "t": "range",
+      "q": [
+        "Which is the highest peak in India south of the Himalayas?",
+        "हिमालय के दक्षिण में भारत की सबसे ऊँची चोटी कौन-सी है?"
+      ],
+      "o": [
+        [
+          "Anamudi",
+          "अनामुडी"
+        ],
+        [
+          "Doddabetta",
+          "दोड्डाबेट्टा"
+        ],
+        [
+          "Guru Shikhar",
+          "गुरु शिखर"
+        ],
+        [
+          "Dhupgarh",
+          "धूपगढ़"
+        ]
+      ],
+      "e": [
+        "Anamudi (2,695 m) is in the Anaimalai hills of Kerala.",
+        "अनामुडी (2,695 मीटर) केरल की अन्नामलाई पहाड़ियों में है।"
+      ]
+    },
+    {
+      "t": "range",
+      "q": [
+        "Guru Shikhar is the highest peak of which range?",
+        "गुरु शिखर किस पर्वतमाला की सबसे ऊँची चोटी है?"
+      ],
+      "o": [
+        [
+          "Aravalli",
+          "अरावली"
+        ],
+        [
+          "Vindhya",
+          "विंध्य"
+        ],
+        [
+          "Satpura",
+          "सतपुड़ा"
+        ],
+        [
+          "Western Ghats",
+          "पश्चिमी घाट"
+        ]
+      ],
+      "e": [
+        "It is at Mount Abu in Rajasthan.",
+        "यह राजस्थान के माउंट आबू में है।"
+      ]
+    },
+    {
+      "t": "range",
+      "q": [
+        "Which is the youngest range of the Himalaya?",
+        "हिमालय की सबसे नई श्रेणी कौन-सी है?"
+      ],
+      "o": [
+        [
+          "Shivalik",
+          "शिवालिक"
+        ],
+        [
+          "Himadri",
+          "हिमाद्रि"
+        ],
+        [
+          "Himachal",
+          "हिमाचल"
+        ],
+        [
+          "Karakoram",
+          "काराकोरम"
+        ]
+      ],
+      "e": [
+        "Valleys behind the Shivaliks are called duns.",
+        "शिवालिक के पीछे की घाटियाँ दून कहलाती हैं।"
+      ]
+    },
+    {
+      "t": "range",
+      "q": [
+        "Which is the highest peak lying entirely within India?",
+        "पूरी तरह भारत में स्थित सबसे ऊँची चोटी कौन-सी है?"
+      ],
+      "o": [
+        [
+          "Nanda Devi",
+          "नंदा देवी"
+        ],
+        [
+          "Kangchenjunga",
+          "कंचनजंगा"
+        ],
+        [
+          "Kamet",
+          "कामेत"
+        ],
+        [
+          "Trishul",
+          "त्रिशूल"
+        ]
+      ],
+      "e": [
+        "Kangchenjunga is higher but lies on the Nepal border.",
+        "कंचनजंगा ऊँची है पर नेपाल सीमा पर है।"
+      ]
+    },
+    {
+      "t": "mineral",
+      "q": [
+        "Which is the oldest coalfield of India?",
+        "भारत का सबसे पुराना कोयला क्षेत्र कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Raniganj",
+          "रानीगंज"
+        ],
+        [
+          "Jharia",
+          "झरिया"
+        ],
+        [
+          "Korba",
+          "कोरबा"
+        ],
+        [
+          "Singrauli",
+          "सिंगरौली"
+        ]
+      ],
+      "e": [
+        "Mining began at Raniganj in 1774.",
+        "रानीगंज में खनन 1774 में शुरू हुआ।"
+      ]
+    },
+    {
+      "t": "mineral",
+      "q": [
+        "Neyveli in Tamil Nadu is famous for",
+        "तमिलनाडु का नेवेली किसके लिए प्रसिद्ध है?"
+      ],
+      "o": [
+        [
+          "Lignite",
+          "लिग्नाइट"
+        ],
+        [
+          "Gold",
+          "सोना"
+        ],
+        [
+          "Mica",
+          "अभ्रक"
+        ],
+        [
+          "Bauxite",
+          "बॉक्साइट"
+        ]
+      ],
+      "e": [
+        "It has the largest lignite deposits in India.",
+        "यहाँ भारत के सबसे बड़े लिग्नाइट भंडार हैं।"
+      ]
+    },
+    {
+      "t": "mineral",
+      "q": [
+        "Which place is called the mica capital of India?",
+        "किस स्थान को भारत की अभ्रक राजधानी कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Koderma",
+          "कोडरमा"
+        ],
+        [
+          "Jharia",
+          "झरिया"
+        ],
+        [
+          "Khetri",
+          "खेतड़ी"
+        ],
+        [
+          "Bailadila",
+          "बैलाडीला"
+        ]
+      ],
+      "e": [
+        "Koderma is in Jharkhand.",
+        "कोडरमा झारखंड में है।"
+      ]
+    },
+    {
+      "t": "mineral",
+      "q": [
+        "Asia's oldest working oil refinery is at",
+        "एशिया की सबसे पुरानी चालू तेल रिफ़ाइनरी कहाँ है?"
+      ],
+      "o": [
+        [
+          "Digboi",
+          "डिगबोई"
+        ],
+        [
+          "Barauni",
+          "बरौनी"
+        ],
+        [
+          "Koyali",
+          "कोयली"
+        ],
+        [
+          "Mathura",
+          "मथुरा"
+        ]
+      ],
+      "e": [
+        "Digboi refinery in Assam started in 1901.",
+        "असम की डिगबोई रिफ़ाइनरी 1901 में शुरू हुई।"
+      ]
+    },
+    {
+      "t": "mineral",
+      "q": [
+        "India's only mechanised diamond mine is at",
+        "भारत की एकमात्र यंत्रीकृत हीरा खदान कहाँ है?"
+      ],
+      "o": [
+        [
+          "Panna (Majhgawan)",
+          "पन्ना (मझगवाँ)"
+        ],
+        [
+          "Golconda",
+          "गोलकुंडा"
+        ],
+        [
+          "Kolar",
+          "कोलार"
+        ],
+        [
+          "Hutti",
+          "हट्टी"
+        ]
+      ],
+      "e": [
+        "NMDC runs the Majhgawan mine in Madhya Pradesh.",
+        "NMDC मध्य प्रदेश में मझगवाँ खदान चलाती है।"
+      ]
+    },
+    {
+      "t": "mineral",
+      "q": [
+        "Jaduguda in Jharkhand is known for",
+        "झारखंड का जादूगोड़ा किसके लिए जाना जाता है?"
+      ],
+      "o": [
+        [
+          "Uranium",
+          "यूरेनियम"
+        ],
+        [
+          "Copper",
+          "ताँबा"
+        ],
+        [
+          "Mica",
+          "अभ्रक"
+        ],
+        [
+          "Manganese",
+          "मैंगनीज़"
+        ]
+      ],
+      "e": [
+        "It became India's first uranium mine in 1967.",
+        "यह 1967 में भारत की पहली यूरेनियम खदान बना।"
+      ]
+    },
+    {
+      "t": "port",
+      "q": [
+        "Which is India's only riverine major port?",
+        "भारत का एकमात्र नदी तटीय प्रमुख बंदरगाह कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Syama Prasad Mookerjee Port, Kolkata",
+          "श्यामा प्रसाद मुखर्जी बंदरगाह, कोलकाता"
+        ],
+        [
+          "Paradip Port",
+          "पारादीप बंदरगाह"
+        ],
+        [
+          "Cochin Port",
+          "कोचीन बंदरगाह"
+        ],
+        [
+          "Mumbai Port",
+          "मुंबई बंदरगाह"
+        ]
+      ],
+      "e": [
+        "It is on the Hooghly, with a dock at Haldia.",
+        "यह हुगली पर है, हल्दिया में डॉक के साथ।"
+      ]
+    },
+    {
+      "t": "port",
+      "q": [
+        "Which is India's largest container port?",
+        "भारत का सबसे बड़ा कंटेनर बंदरगाह कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Jawaharlal Nehru Port (Nhava Sheva)",
+          "जवाहरलाल नेहरू बंदरगाह (न्हावा शेवा)"
+        ],
+        [
+          "Mumbai Port",
+          "मुंबई बंदरगाह"
+        ],
+        [
+          "Chennai Port",
+          "चेन्नई बंदरगाह"
+        ],
+        [
+          "Deendayal Port",
+          "दीनदयाल बंदरगाह"
+        ]
+      ],
+      "e": [
+        "It is in Navi Mumbai.",
+        "यह नवी मुंबई में है।"
+      ]
+    },
+    {
+      "t": "port",
+      "q": [
+        "Which airport became the first fully solar-powered airport in the world?",
+        "कौन-सा हवाई अड्डा विश्व का पहला पूर्णतः सौर ऊर्जा चालित हवाई अड्डा बना?"
+      ],
+      "o": [
+        [
+          "Cochin International Airport",
+          "कोचीन अंतरराष्ट्रीय हवाई अड्डा"
+        ],
+        [
+          "Indira Gandhi International Airport",
+          "इंदिरा गांधी अंतरराष्ट्रीय हवाई अड्डा"
+        ],
+        [
+          "Kempegowda International Airport",
+          "केम्पेगौड़ा अंतरराष्ट्रीय हवाई अड्डा"
+        ],
+        [
+          "Rajiv Gandhi International Airport",
+          "राजीव गांधी अंतरराष्ट्रीय हवाई अड्डा"
+        ]
+      ],
+      "e": [
+        "It achieved this in 2015.",
+        "इसने यह 2015 में हासिल किया।"
+      ]
+    },
+    {
+      "t": "dam",
+      "q": [
+        "Tehri Dam is built on which river?",
+        "टिहरी बाँध किस नदी पर बना है?"
+      ],
+      "o": [
+        [
+          "Bhagirathi",
+          "भागीरथी"
+        ],
+        [
+          "Alaknanda",
+          "अलकनंदा"
+        ],
+        [
+          "Yamuna",
+          "यमुना"
+        ],
+        [
+          "Sutlej",
+          "सतलुज"
+        ]
+      ],
+      "e": [
+        "It is the tallest dam in India.",
+        "यह भारत का सबसे ऊँचा बाँध है।"
+      ]
+    },
+    {
+      "t": "dam",
+      "q": [
+        "Gobind Sagar reservoir is formed by which dam?",
+        "गोबिंद सागर जलाशय किस बाँध से बनता है?"
+      ],
+      "o": [
+        [
+          "Bhakra Dam",
+          "भाखड़ा बाँध"
+        ],
+        [
+          "Pong Dam",
+          "पौंग बाँध"
+        ],
+        [
+          "Tehri Dam",
+          "टिहरी बाँध"
+        ],
+        [
+          "Ranjit Sagar Dam",
+          "रणजीत सागर बाँध"
+        ]
+      ],
+      "e": [
+        "Bhakra is on the Sutlej in Himachal Pradesh.",
+        "भाखड़ा हिमाचल प्रदेश में सतलुज पर है।"
+      ]
+    },
+    {
+      "t": "dam",
+      "q": [
+        "Hirakud Dam is built on which river?",
+        "हीराकुंड बाँध किस नदी पर बना है?"
+      ],
+      "o": [
+        [
+          "Mahanadi",
+          "महानदी"
+        ],
+        [
+          "Godavari",
+          "गोदावरी"
+        ],
+        [
+          "Brahmani",
+          "ब्राह्मणी"
+        ],
+        [
+          "Subarnarekha",
+          "सुवर्णरेखा"
+        ]
+      ],
+      "e": [
+        "It is near Sambalpur, Odisha.",
+        "यह संबलपुर, ओडिशा के पास है।"
+      ]
+    },
+    {
+      "t": "dam",
+      "q": [
+        "Which dam on the Kaveri was designed by M. Visvesvaraya?",
+        "कावेरी पर कौन-सा बाँध एम. विश्वेश्वरैया ने डिज़ाइन किया?"
+      ],
+      "o": [
+        [
+          "Krishna Raja Sagara",
+          "कृष्णराज सागर"
+        ],
+        [
+          "Mettur",
+          "मेट्टूर"
+        ],
+        [
+          "Tungabhadra",
+          "तुंगभद्रा"
+        ],
+        [
+          "Idukki",
+          "इडुक्की"
+        ]
+      ],
+      "e": [
+        "Engineers Day, 15 September, marks his birthday.",
+        "अभियंता दिवस, 15 सितंबर, उनका जन्मदिन है।"
+      ]
+    },
+    {
+      "t": "falls",
+      "q": [
+        "Which is the highest waterfall in India?",
+        "भारत का सबसे ऊँचा जलप्रपात कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Kunchikal Falls",
+          "कुंचिकल जलप्रपात"
+        ],
+        [
+          "Jog Falls",
+          "जोग जलप्रपात"
+        ],
+        [
+          "Dudhsagar Falls",
+          "दूधसागर जलप्रपात"
+        ],
+        [
+          "Nohkalikai Falls",
+          "नोहकालिकाई जलप्रपात"
+        ]
+      ],
+      "e": [
+        "Kunchikal on the Varahi in Karnataka is about 455 m high.",
+        "कर्नाटक में वाराही पर कुंचिकल लगभग 455 मीटर ऊँचा है।"
+      ]
+    },
+    {
+      "t": "falls",
+      "q": [
+        "Which waterfall is called the 'Niagara of India'?",
+        "किस जलप्रपात को 'भारत का नियाग्रा' कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Chitrakote Falls",
+          "चित्रकोट जलप्रपात"
+        ],
+        [
+          "Jog Falls",
+          "जोग जलप्रपात"
+        ],
+        [
+          "Hogenakkal Falls",
+          "होगेनक्कल जलप्रपात"
+        ],
+        [
+          "Dhuandhar Falls",
+          "धुआँधार जलप्रपात"
+        ]
+      ],
+      "e": [
+        "It is on the Indravati in Bastar, Chhattisgarh.",
+        "यह छत्तीसगढ़ के बस्तर में इंद्रावती पर है।"
+      ]
+    },
+    {
+      "t": "falls",
+      "q": [
+        "Jog Falls is formed by which river?",
+        "जोग जलप्रपात किस नदी से बनता है?"
+      ],
+      "o": [
+        [
+          "Sharavathi",
+          "शरावती"
+        ],
+        [
+          "Kaveri",
+          "कावेरी"
+        ],
+        [
+          "Tungabhadra",
+          "तुंगभद्रा"
+        ],
+        [
+          "Netravati",
+          "नेत्रावती"
+        ]
+      ],
+      "e": [
+        "Its four streams are Raja, Rani, Rocket and Roarer.",
+        "इसकी चार धाराएँ राजा, रानी, रॉकेट और रोरर हैं।"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>🌍 Physical Geography Master Guide — SSC CGL & IB ACIO</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  *{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --navy:#0d1b2a;--blue:#1a3a5c;--teal:#0e9aa7;--gold:#f0a500;
+    --green:#27ae60;--red:#e74c3c;--purple:#8e44ad;--orange:#e67e22;
+    --light:#f4f8fb;--card:#ffffff;--text:#222;--muted:#666;
+    --border:#dde4ef;--shadow:0 4px 18px rgba(0,0,0,.10);
+    --radius:14px;--transition:.25s ease;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--light);color:var(--text);min-height:100vh;}
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar{width:7px;}
+  ::-webkit-scrollbar-track{background:#e0e9f4;}
+  ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:4px;}
+
+  /* ===== TOP NAVBAR ===== */
+  #topbar{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 18px;height:56px;box-shadow:0 2px 12px rgba(0,0,0,.3);
+  }
+  #topbar .logo{font-size:1.15rem;font-weight:700;letter-spacing:.3px;}
+  #topbar .logo span{color:var(--gold);}
+  #hamburger{display:none;background:none;border:none;cursor:pointer;color:#fff;font-size:1.5rem;}
+
+  /* ===== SIDEBAR ===== */
+  #sidebar{
+    position:fixed;top:56px;left:0;bottom:0;width:260px;
+    background:var(--blue);overflow-y:auto;z-index:900;
+    transition:transform var(--transition);
+  }
+  #sidebar .nav-section{padding:10px 0 4px 16px;font-size:.7rem;font-weight:700;
+    letter-spacing:1.2px;color:var(--gold);text-transform:uppercase;margin-top:8px;}
+  #sidebar a{
+    display:flex;align-items:center;gap:10px;padding:10px 16px;
+    color:#cde;text-decoration:none;font-size:.88rem;border-left:3px solid transparent;
+    transition:all var(--transition);
+  }
+  #sidebar a:hover,#sidebar a.active{
+    background:rgba(255,255,255,.1);border-left-color:var(--gold);color:#fff;
+  }
+  #sidebar a .icon{font-size:1rem;width:20px;text-align:center;}
+
+  /* ===== MAIN CONTENT ===== */
+  #main{margin-left:260px;margin-top:56px;padding:28px 32px 60px;}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 50%,var(--teal) 100%);
+    color:#fff;border-radius:var(--radius);padding:44px 36px;margin-bottom:32px;
+    position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:'🌏';position:absolute;right:30px;top:20px;font-size:6rem;opacity:.15;
+  }
+  .hero h1{font-size:2rem;font-weight:800;margin-bottom:8px;}
+  .hero p{font-size:1rem;color:#aee;margin-bottom:16px;max-width:600px;}
+  .hero .badges{display:flex;gap:10px;flex-wrap:wrap;}
+  .badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);
+    color:#fff;padding:4px 14px;border-radius:20px;font-size:.8rem;font-weight:600;}
+
+  /* ===== SECTIONS ===== */
+  .section{display:none;animation:fadeIn .35s ease;}
+  .section.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+  /* ===== SECTION HEADER ===== */
+  .sec-header{
+    display:flex;align-items:center;gap:14px;margin-bottom:24px;
+    padding-bottom:12px;border-bottom:2px solid var(--border);
+  }
+  .sec-header .sec-icon{
+    width:52px;height:52px;border-radius:12px;display:flex;align-items:center;
+    justify-content:center;font-size:1.6rem;flex-shrink:0;
+  }
+  .sec-header h2{font-size:1.55rem;font-weight:800;color:var(--navy);}
+  .sec-header p{font-size:.88rem;color:var(--muted);margin-top:2px;}
+
+  /* ===== CARDS GRID ===== */
+  .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px;margin-bottom:28px;}
+  .card{
+    background:var(--card);border-radius:var(--radius);padding:22px;
+    box-shadow:var(--shadow);border-top:4px solid var(--teal);
+    transition:transform var(--transition),box-shadow var(--transition);
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.14);}
+  .card h3{font-size:1rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .card ul{padding-left:18px;}
+  .card ul li{font-size:.86rem;line-height:1.7;color:#333;}
+  .card .tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.72rem;
+    font-weight:700;margin-bottom:8px;}
+
+  /* colour variants */
+  .card.green{border-top-color:var(--green);}
+  .card.red{border-top-color:var(--red);}
+  .card.gold{border-top-color:var(--gold);}
+  .card.purple{border-top-color:var(--purple);}
+  .card.orange{border-top-color:var(--orange);}
+
+  /* ===== SOIL TABLE ===== */
+  .tbl-wrap{overflow-x:auto;margin-bottom:24px;border-radius:var(--radius);box-shadow:var(--shadow);}
+  table{width:100%;border-collapse:collapse;background:var(--card);}
+  thead tr{background:var(--navy);color:#fff;}
+  th,td{padding:11px 14px;text-align:left;font-size:.83rem;border-bottom:1px solid var(--border);}
+  tbody tr:hover{background:#f0f7ff;}
+  .dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:middle;}
+
+  /* ===== MINDMAP ===== */
+  .mindmap{
+    background:var(--card);border-radius:var(--radius);padding:24px;
+    box-shadow:var(--shadow);margin-bottom:24px;
+  }
+  .mindmap h3{font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:14px;}
+  .mm-center{
+    background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;
+    border-radius:12px;padding:12px 20px;text-align:center;font-weight:700;
+    font-size:1rem;margin-bottom:16px;
+  }
+  .mm-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+  .mm-node{
+    padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:600;
+    color:#fff;cursor:default;transition:transform var(--transition);
+  }
+  .mm-node:hover{transform:scale(1.06);}
+
+  /* ===== HIGHLIGHT BOXES ===== */
+  .info-box{
+    border-radius:10px;padding:14px 18px;margin-bottom:16px;
+    display:flex;gap:12px;align-items:flex-start;
+  }
+  .info-box .ib-icon{font-size:1.3rem;margin-top:2px;}
+  .info-box p{font-size:.87rem;line-height:1.6;}
+  .info-box.blue{background:#e8f4fd;border-left:4px solid #2980b9;}
+  .info-box.green{background:#e9f7ef;border-left:4px solid var(--green);}
+  .info-box.gold{background:#fef9e7;border-left:4px solid var(--gold);}
+  .info-box.red{background:#fdedec;border-left:4px solid var(--red);}
+  .info-box.purple{background:#f5eef8;border-left:4px solid var(--purple);}
+
+  /* ===== EXAM ALERT ===== */
+  .exam-tag{
+    display:inline-flex;align-items:center;gap:5px;
+    background:#fff3cd;border:1px solid #ffc107;
+    color:#7a5c00;font-size:.75rem;font-weight:700;
+    padding:3px 10px;border-radius:14px;margin:2px 2px 6px;
+  }
+
+  /* ===== ACCORDION ===== */
+  .accordion{margin-bottom:10px;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);}
+  .acc-head{
+    background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:.92rem;
+    transition:background var(--transition);
+  }
+  .acc-head:hover{background:var(--teal);}
+  .acc-body{background:var(--card);padding:0;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;}
+  .acc-body.open{max-height:800px;padding:18px;}
+  .acc-arrow{transition:transform var(--transition);}
+  .acc-head.open .acc-arrow{transform:rotate(180deg);}
+
+  /* ===== QUIZ ===== */
+  #quiz-section .quiz-box{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);}
+  .q-progress{background:#e0e9f4;border-radius:20px;height:8px;margin-bottom:20px;}
+  .q-progress-bar{background:linear-gradient(90deg,var(--teal),var(--green));height:8px;border-radius:20px;transition:width .4s ease;}
+  .q-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+  .q-counter{font-size:.85rem;color:var(--muted);font-weight:600;}
+  .q-score-live{font-size:.85rem;color:var(--green);font-weight:700;}
+  .q-text{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;}
+  .q-options{display:grid;gap:10px;}
+  .q-opt{
+    background:#f4f8fb;border:2px solid var(--border);border-radius:10px;
+    padding:12px 16px;cursor:pointer;font-size:.92rem;text-align:left;
+    transition:all var(--transition);font-family:inherit;color:var(--text);
+  }
+  .q-opt:hover:not(:disabled){background:#e8f4fd;border-color:var(--teal);}
+  .q-opt.correct{background:#e9f7ef;border-color:var(--green);color:#155724;font-weight:700;}
+  .q-opt.wrong{background:#fdedec;border-color:var(--red);color:#721c24;}
+  .q-opt:disabled{cursor:default;}
+  .q-explanation{
+    margin-top:14px;padding:12px 16px;background:#fef9e7;border-left:4px solid var(--gold);
+    border-radius:8px;font-size:.87rem;display:none;
+  }
+  .q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;}
+  .btn{
+    padding:10px 24px;border-radius:8px;border:none;cursor:pointer;
+    font-weight:700;font-size:.92rem;font-family:inherit;transition:all var(--transition);
+  }
+  .btn-primary{background:var(--teal);color:#fff;}
+  .btn-primary:hover{background:#0b8591;}
+  .btn-secondary{background:var(--blue);color:#fff;}
+  .btn-secondary:hover{background:var(--navy);}
+  .btn-gold{background:var(--gold);color:#fff;}
+  .btn-gold:hover{background:#d4900a;}
+  .btn-danger{background:var(--red);color:#fff;}
+  .btn-danger:hover{background:#c0392b;}
+
+  /* Result panel */
+  #quiz-result{display:none;text-align:center;padding:30px 20px;}
+  #quiz-result .big-score{font-size:3.5rem;font-weight:900;color:var(--teal);}
+  #quiz-result .grade{font-size:1.3rem;font-weight:700;margin:8px 0 16px;}
+  .result-bars{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:0 auto 20px;}
+  .r-bar{background:#f4f8fb;border-radius:10px;padding:14px;text-align:center;}
+  .r-bar .r-num{font-size:1.8rem;font-weight:900;}
+  .r-bar .r-label{font-size:.75rem;color:var(--muted);font-weight:600;}
+
+  /* ===== STATS CHIPS ===== */
+  .stat-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+  .chip{
+    background:var(--card);border:1.5px solid var(--border);border-radius:12px;
+    padding:10px 16px;display:flex;align-items:center;gap:8px;font-size:.85rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .chip .chip-num{font-size:1.2rem;font-weight:800;color:var(--teal);}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:800px){
+    #sidebar{transform:translateX(-100%);}
+    #sidebar.open{transform:translateX(0);}
+    #hamburger{display:block;}
+    #main{margin-left:0;padding:18px 14px 60px;}
+    .hero h1{font-size:1.4rem;}
+    .hero::before{display:none;}
+    .cards-grid{grid-template-columns:1fr;}
+    .result-bars{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:480px){
+    #topbar .logo{font-size:.95rem;}
+    .sec-header h2{font-size:1.2rem;}
+    .q-text{font-size:.95rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header id="topbar">
+  <div class="logo">🌍 <span>Geo Mastery</span> — SSC CGL & IB ACIO</div>
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+</header>
+
+<!-- ===== SIDEBAR ===== -->
+<nav id="sidebar">
+  <div class="nav-section">🏠 Start Here</div>
+  <a href="#" class="active" onclick="showSection('home',this)"><span class="icon">🏠</span>Dashboard</a>
+
+  <div class="nav-section">🇮🇳 Indian Geography</div>
+  <a href="#" onclick="showSection('soils',this)"><span class="icon">🟤</span>Soils of India</a>
+  <a href="#" onclick="showSection('agriculture',this)"><span class="icon">🌾</span>Agriculture</a>
+  <a href="#" onclick="showSection('minerals',this)"><span class="icon">⛏️</span>Minerals & Resources</a>
+
+  <div class="nav-section">🌍 World Geography</div>
+  <a href="#" onclick="showSection('continents',this)"><span class="icon">🗺️</span>Continents</a>
+  <a href="#" onclick="showSection('oceans',this)"><span class="icon">🌊</span>Oceans & Currents</a>
+
+  <div class="nav-section">📖 Physical Geography</div>
+  <a href="#" onclick="showSection('physgeo',this)"><span class="icon">🏔️</span>Physical Features</a>
+  <a href="#" onclick="showSection('climate',this)"><span class="icon">🌤️</span>Climate & Atmosphere</a>
+
+  <div class="nav-section">📝 Test Yourself</div>
+  <a href="#" onclick="showSection('quiz-section',this)"><span class="icon">✅</span>50-Q Exam Quiz</a>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main id="main">
+
+<!-- ========== HOME DASHBOARD ========== -->
+<div id="home" class="section active">
+  <div class="hero">
+    <h1>📚 Physical Geography — Photographic Memory Guide</h1>
+    <p>Comprehensive, exam-oriented notes for SSC CGL, IB ACIO & all SSC exams. Navigate topics using the sidebar.</p>
+    <div class="badges">
+      <span class="badge">✅ SSC CGL Pattern</span>
+      <span class="badge">✅ IB ACIO Ready</span>
+      <span class="badge">✅ 50-Q Quiz Included</span>
+      <span class="badge">✅ Mind Maps</span>
+      <span class="badge">✅ Exam Alerts</span>
+    </div>
+  </div>
+
+  <div class="stat-chips">
+    <div class="chip"><span class="chip-num">8</span> Soil Types Covered</div>
+    <div class="chip"><span class="chip-num">7</span> Continents</div>
+    <div class="chip"><span class="chip-num">5</span> Oceans</div>
+    <div class="chip"><span class="chip-num">50</span> Quiz Questions</div>
+    <div class="chip"><span class="chip-num">6</span> Major Minerals</div>
+    <div class="chip"><span class="chip-num">3</span> Cropping Seasons</div>
+  </div>
+
+  <div class="info-box gold">
+    <span class="ib-icon">⭐</span>
+    <p><strong>Exam Tip:</strong> According to SSC CGL analysis, Physical Geography accounts for 4–6 questions per exam, with Climate, Soils, and Minerals being the highest-weightage topics. Focus 85% on Indian Geography and 15% on World Geography.</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card green" onclick="showSection('soils',document.querySelector('[onclick*=soils]'))">
+      <h3>🟤 Soils of India</h3>
+      <ul>
+        <li>8 ICAR-classified soil types</li>
+        <li>Alluvial, Black, Red, Laterite...</li>
+        <li>Distribution, Crops & Conservation</li>
+      </ul>
+    </div>
+    <div class="card gold" onclick="showSection('agriculture',document.querySelector('[onclick*=agriculture]'))">
+      <h3>🌾 Agriculture</h3>
+      <ul>
+        <li>Kharif, Rabi, Zaid seasons</li>
+        <li>Green Revolution & HYV seeds</li>
+        <li>Major crops & irrigation methods</li>
+      </ul>
+    </div>
+    <div class="card red" onclick="showSection('minerals',document.querySelector('[onclick*=minerals]'))">
+      <h3>⛏️ Minerals</h3>
+      <ul>
+        <li>Coal, Iron Ore, Petroleum</li>
+        <li>Bauxite, Manganese, Mica</li>
+        <li>State-wise distribution</li>
+      </ul>
+    </div>
+    <div class="card purple" onclick="showSection('continents',document.querySelector('[onclick*=continents]'))">
+      <h3>🗺️ Continents</h3>
+      <ul>
+        <li>7 continents — key facts</li>
+        <li>Largest countries, rivers, peaks</li>
+        <li>Population distribution</li>
+      </ul>
+    </div>
+    <div class="card orange" onclick="showSection('oceans',document.querySelector('[onclick*=oceans]'))">
+      <h3>🌊 Oceans & Currents</h3>
+      <ul>
+        <li>5 Oceans, ocean currents</li>
+        <li>Climate influence & trade routes</li>
+        <li>Marine resources</li>
+      </ul>
+    </div>
+    <div class="card" onclick="showSection('quiz-section',document.querySelector('[onclick*=quiz-section]'))">
+      <h3>✅ 50-Q Exam Quiz</h3>
+      <ul>
+        <li>Based on past SSC CGL papers</li>
+        <li>Instant feedback & explanations</li>
+        <li>Live score tracker</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mindmap">
+    <h3>🧠 Geography Topics — Mind Map Overview</h3>
+    <div class="mm-center">🌍 PHYSICAL GEOGRAPHY — SSC/IB ACIO</div>
+    <div class="mm-row">
+      <div class="mm-node" style="background:#1a3a5c;">🟤 Soils</div>
+      <div class="mm-node" style="background:#27ae60;">🌾 Agriculture</div>
+      <div class="mm-node" style="background:#e74c3c;">⛏️ Minerals</div>
+      <div class="mm-node" style="background:#8e44ad;">🗺️ Continents</div>
+      <div class="mm-node" style="background:#0e9aa7;">🌊 Oceans</div>
+      <div class="mm-node" style="background:#e67e22;">🏔️ Physical Features</div>
+      <div class="mm-node" style="background:#2980b9;">🌤️ Climate</div>
+      <div class="mm-node" style="background:#7f8c8d;">✅ 50-Q Quiz</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SOILS SECTION ========== -->
+<div id="soils" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#fef3e2;">🟤</div>
+    <div>
+      <h2>Soils of India</h2>
+      <p>ICAR Classification — 8 Major Types | Distribution, Characteristics, Crops & Conservation</p>
+    </div>
+  </div>
+
+  <div class="info-box gold">
+    <span class="ib-icon">⭐</span>
+    <p><strong>ICAR Classification:</strong> The Indian Council of Agricultural Research (ICAR) classifies Indian soils into <strong>8 major types</strong> based on colour, texture, origin, and fertility. <span class="exam-tag">🎯 Frequently Asked</span></p>
+  </div>
+
+  <div class="mindmap">
+    <h3>🧠 Soils Mind Map</h3>
+    <div class="mm-center">🟤 SOILS OF INDIA — 8 ICAR Types</div>
+    <div class="mm-row">
+      <div class="mm-node" style="background:#b8860b;">🟡 Alluvial (43%)</div>
+      <div class="mm-node" style="background:#1a1a1a;">⚫ Black/Regur</div>
+      <div class="mm-node" style="background:#c0392b;">🔴 Red & Yellow</div>
+      <div class="mm-node" style="background:#e67e22;">🟠 Laterite</div>
+      <div class="mm-node" style="background:#d4ac0d;">🟨 Arid/Desert</div>
+      <div class="mm-node" style="background:#2980b9;">🔵 Saline/Alkaline</div>
+      <div class="mm-node" style="background:#117a65;">🟢 Peaty/Marshy</div>
+      <div class="mm-node" style="background:#6c3483;">🟣 Forest/Mountain</div>
+    </div>
+  </div>
+
+  <!-- SOIL TABLE -->
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Soil Type</th>
+          <th>Also Known As</th>
+          <th>Area (%)</th>
+          <th>Key States</th>
+          <th>Rich In</th>
+          <th>Deficient In</th>
+          <th>Major Crops</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="dot" style="background:#c8a96e;"></span><strong>Alluvial</strong></td>
+          <td>Transported Soil<br><small>Khadar (new) / Bhangar (old)</small></td>
+          <td><strong>~43%</strong></td>
+          <td>Punjab, Haryana, UP, Bihar, WB, Assam</td>
+          <td>Potash, Lime</td>
+          <td>Nitrogen, Phosphorus</td>
+          <td>Rice, Wheat, Sugarcane, Jute, Pulses</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#1a1a1a;"></span><strong>Black (Regur)</strong></td>
+          <td>Cotton Soil / Black Cotton Soil</td>
+          <td><strong>~16.6%</strong></td>
+          <td>Maharashtra, MP, Gujarat, AP, Tamil Nadu</td>
+          <td>Iron, Lime, Magnesia, Alumina</td>
+          <td>Nitrogen, Phosphorus, Organic matter</td>
+          <td>Cotton, Sugarcane, Tobacco, Jowar, Wheat</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#c0392b;"></span><strong>Red & Yellow</strong></td>
+          <td>—</td>
+          <td><strong>~10.6%</strong></td>
+          <td>Tamil Nadu, Karnataka, Odisha, S. Bihar, E. Rajasthan</td>
+          <td>Iron oxide</td>
+          <td>Nitrogen, Phosphorus, Lime, Humus</td>
+          <td>Millets, Pulses, Groundnut, Cotton</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#e67e22;"></span><strong>Laterite</strong></td>
+          <td>"Brick Soil" (from Latin "Later" = Brick)</td>
+          <td><strong>~3.7%</strong></td>
+          <td>Kerala, Karnataka, W. Ghats, NE India</td>
+          <td>Iron oxide, Alumina, Potash</td>
+          <td>Organic matter, Nitrogen, Phosphate, Calcium</td>
+          <td>Tea, Coffee, Cashew, Tapioca, Rice, Ragi</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#d4ac0d;"></span><strong>Arid/Desert</strong></td>
+          <td>Sandy Soil</td>
+          <td><strong>~4.32%</strong></td>
+          <td>Rajasthan, Gujarat (NW India)</td>
+          <td>Soluble salts, Phosphate</td>
+          <td>Moisture, Humus, Nitrogen</td>
+          <td>Barley, Cotton, Wheat, Millets (with irrigation)</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#2980b9;"></span><strong>Saline/Alkaline</strong></td>
+          <td>Reh / Usar / Thur / Kal</td>
+          <td>Small patches</td>
+          <td>UP, Punjab, Haryana, Bihar, Maharashtra coasts</td>
+          <td>Na, K, Mg salts</td>
+          <td>Nitrogen, Calcium (infertile)</td>
+          <td>Leguminous crops (limited); treated with Gypsum</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#117a65;"></span><strong>Peaty/Marshy</strong></td>
+          <td>—</td>
+          <td>Very small</td>
+          <td>N. Bihar, Kerala (Kuttanad), Tamil Nadu coast, WB delta</td>
+          <td>Organic matter (up to 40–50%)</td>
+          <td>Potash, Phosphate</td>
+          <td>Jute, Rice, Spices, Rubber (Malabar)</td>
+        </tr>
+        <tr>
+          <td><span class="dot" style="background:#6c3483;"></span><strong>Forest/Mountain</strong></td>
+          <td>—</td>
+          <td>~8%</td>
+          <td>Himalayan region, W. & E. Ghats, NE States</td>
+          <td>Organic matter, Humus</td>
+          <td>Varies with altitude; acidic in higher zones</td>
+          <td>Tea, Coffee, Spices, Fruits (temperate)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card green">
+      <span class="tag" style="background:#e9f7ef;color:#1e8449;">🌱 Key Feature</span>
+      <h3>⚫ Black (Regur) Soil — Special Properties</h3>
+      <ul>
+        <li><strong>Self-ploughing:</strong> Develops wide cracks when dry — acts as natural tilling</li>
+        <li><strong>Highly water-retentive:</strong> Swells when wet, shrinks when dry</li>
+        <li>Formed from <strong>basaltic lava rocks</strong> of Deccan Plateau</li>
+        <li>Also called <strong>"Cotton Soil"</strong> — ideal for rainfed cotton</li>
+        <li>Covers approx. <strong>16.6%</strong> of India's total land area</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <span class="tag" style="background:#fef9e7;color:#9a7d0a;">🔥 Special Fact</span>
+      <h3>🟠 Laterite Soil — Unique Characteristics</h3>
+      <ul>
+        <li>Formed in <strong>high temperature + heavy rainfall</strong> zones</li>
+        <li>Intense leaching removes lime & silica; leaves iron oxide & aluminium</li>
+        <li>Name from Latin <strong>"Later" = Brick</strong></li>
+        <li>Soft when wet, <strong>very hard when dry</strong> — used in construction</li>
+        <li>Low humus content due to high bacterial activity</li>
+        <li>Tea & coffee grow on high-altitude laterite soils</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <span class="tag" style="background:#fef9e7;color:#9a7d0a;">📍 Most Important</span>
+      <h3>🟡 Alluvial Soil — Key Facts</h3>
+      <ul>
+        <li>Most widespread — covers <strong>~43%</strong> of India's land area</li>
+        <li>Deposited by <strong>rivers (Indo-Gangetic Plain)</strong></li>
+        <li><strong>Khadar</strong> = new alluvium (lighter, more fertile, near rivers)</li>
+        <li><strong>Bhangar</strong> = old alluvium (darker, less fertile, elevated)</li>
+        <li>Rich in potash & lime; deficient in nitrogen & phosphorus</li>
+        <li>Supports India's wheat & rice belts</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <span class="tag" style="background:#fdedec;color:#922b21;">⚠️ Exam Alert</span>
+      <h3>🔴 Red Soil — Key Facts</h3>
+      <ul>
+        <li>Red colour due to <strong>iron oxide (Fe₂O₃)</strong> diffusion</li>
+        <li>Formed from weathering of <strong>crystalline igneous rocks</strong></li>
+        <li>Yellow when hydrated (iron in hydrated form)</li>
+        <li>Poor in nitrogen, phosphorus & organic matter</li>
+        <li>Found in <strong>Tamil Nadu, Karnataka, Odisha, S. Bihar, E. Rajasthan</strong></li>
+        <li>Fine-grained red soils in valleys = fertile; coarse upland = poor</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Soil Conservation -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">
+      🛡️ Soil Conservation Methods <span class="acc-arrow">▼</span>
+    </div>
+    <div class="acc-body">
+      <div class="cards-grid">
+        <div class="card green">
+          <h3>🌳 Vegetative Methods</h3>
+          <ul>
+            <li><strong>Afforestation:</strong> Planting trees to bind soil</li>
+            <li><strong>Shelter belts:</strong> Tree rows to reduce wind erosion</li>
+            <li><strong>Strip cropping:</strong> Alternate strips of crops</li>
+            <li><strong>Contour farming:</strong> Farming along contours of slopes</li>
+          </ul>
+        </div>
+        <div class="card gold">
+          <h3>🔧 Mechanical Methods</h3>
+          <ul>
+            <li><strong>Contour bunding:</strong> Earthen embankments along contours</li>
+            <li><strong>Terraced/Step farming:</strong> For hilly slopes</li>
+            <li><strong>Gully plugging:</strong> Filling gullies with rocks & boulders</li>
+            <li><strong>Check dams:</strong> Slow water runoff</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🌱 Other Methods</h3>
+          <ul>
+            <li><strong>Crop rotation:</strong> Maintains soil nutrient balance</li>
+            <li><strong>Mixed farming:</strong> Multiple crops together</li>
+            <li><strong>Adding Gypsum:</strong> To treat alkaline/saline soils</li>
+            <li><strong>Leaching:</strong> Controlled to remove excess salts</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-box red">
+        <span class="ib-icon">🔑</span>
+        <p><strong>Key fact for SSC:</strong> The transfer of minerals from topsoil to subsoil through water is called <strong>leaching</strong>. Soil erosion on hill slopes is best controlled by <strong>contour/linear ploughing</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box blue">
+    <span class="ib-icon">💡</span>
+    <p><strong>Quick Mnemonics:</strong> <em>"All Black Rats Love Animals, So Please Feed"</em> = Alluvial, Black, Red, Laterite, Arid, Saline, Peaty, Forest — the 8 ICAR soil types!</p>
+  </div>
+</div>
+
+<!-- ========== AGRICULTURE SECTION ========== -->
+<div id="agriculture" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#e9f7ef;">🌾</div>
+    <div>
+      <h2>Agriculture in India</h2>
+      <p>Cropping Seasons, Major Crops, Green Revolution, Irrigation & Modern Practices</p>
+    </div>
+  </div>
+
+  <div class="info-box gold">
+    <span class="ib-icon">⭐</span>
+    <p><strong>Key Stat:</strong> Agriculture accounts for approximately <strong>18% of India's GDP</strong> and provides livelihood to about <strong>60% of the population</strong> (Economic Survey 2023–24).</p>
+  </div>
+
+  <!-- Cropping seasons -->
+  <div class="mindmap">
+    <h3>🧠 Cropping Seasons Mind Map</h3>
+    <div class="mm-center">🌾 THREE CROPPING SEASONS OF INDIA</div>
+    <div class="mm-row">
+      <div class="mm-node" style="background:#27ae60;">☀️ Kharif (Jun–Nov)</div>
+      <div class="mm-node" style="background:#2980b9;">❄️ Rabi (Oct/Nov – Mar/Apr)</div>
+      <div class="mm-node" style="background:#e67e22;">🌤️ Zaid (Mar–Jun)</div>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card green">
+      <span class="tag" style="background:#e9f7ef;color:#1e8449;">☀️ Summer Crop</span>
+      <h3>Kharif (Monsoon Crops)</h3>
+      <ul>
+        <li><strong>Season:</strong> June – November</li>
+        <li><strong>Sown:</strong> With onset of monsoon</li>
+        <li><strong>Harvested:</strong> September–October</li>
+        <li><strong>Key Crops:</strong> Rice, Maize, Sorghum (Jowar), Bajra, Cotton, Groundnut, Jute, Sugarcane, Soybean, Turmeric</li>
+        <li>Require <strong>hot, wet climate</strong></li>
+      </ul>
+    </div>
+    <div class="card" style="border-top-color:#2980b9;">
+      <span class="tag" style="background:#eaf4fb;color:#1a5276;">❄️ Winter Crop</span>
+      <h3>Rabi (Winter Crops)</h3>
+      <ul>
+        <li><strong>Season:</strong> Oct/Nov – March/April</li>
+        <li><strong>Sown:</strong> After retreat of monsoon</li>
+        <li><strong>Harvested:</strong> March–April</li>
+        <li><strong>Key Crops:</strong> Wheat, Barley, Mustard, Pea, Gram (Chickpea), Linseed, Rapeseed</li>
+        <li>Require <strong>cool, dry climate</strong></li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <span class="tag" style="background:#fef5e7;color:#935116;">🌤️ Summer Crop</span>
+      <h3>Zaid (Short Summer Crops)</h3>
+      <ul>
+        <li><strong>Season:</strong> March – June</li>
+        <li><strong>Between Rabi & Kharif</strong></li>
+        <li><strong>Key Crops:</strong> Watermelon, Muskmelon, Cucumber, Bitter Gourd, Pumpkin, Moong</li>
+        <li>Grown mainly on <strong>irrigated lands</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Major Crops Table -->
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Crop</th><th>Season</th><th>Type of Soil</th><th>Top Producing States</th><th>Key Fact</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🌾 Rice</td><td>Kharif</td><td>Alluvial, clay, deltaic</td><td>WB, UP, Punjab, AP, Bihar</td><td>India is 2nd largest producer globally</td></tr>
+        <tr><td>🌿 Wheat</td><td>Rabi</td><td>Alluvial loam</td><td>UP, Punjab, Haryana, MP, Rajasthan</td><td>Punjab–Haryana = "Wheat Bowl of India"</td></tr>
+        <tr><td>🌱 Cotton</td><td>Kharif</td><td>Black/Regur soil</td><td>Gujarat, Maharashtra, Telangana, AP</td><td>India = largest producer of cotton</td></tr>
+        <tr><td>☕ Jute</td><td>Kharif</td><td>Alluvial, deltaic</td><td>WB, Bihar, Assam, Odisha</td><td>"Golden Fibre of India"; WB = largest</td></tr>
+        <tr><td>🍬 Sugarcane</td><td>Both</td><td>Alluvial, deep loam</td><td>UP, Maharashtra, Karnataka, TN</td><td>India = 2nd largest sugar producer</td></tr>
+        <tr><td>☕ Tea</td><td>Perennial</td><td>Laterite, forest (acidic)</td><td>Assam, W. Bengal (Darjeeling), Kerala</td><td>India = 2nd largest tea producer; Assam = #1 state</td></tr>
+        <tr><td>☕ Coffee</td><td>Perennial</td><td>Laterite, red loam</td><td>Karnataka (~71%), Kerala, TN</td><td>Arabica & Robusta; grown in Western Ghats</td></tr>
+        <tr><td>🥜 Groundnut</td><td>Kharif</td><td>Red, sandy loam</td><td>Gujarat, AP, TN, Rajasthan</td><td>India = largest producer globally</td></tr>
+        <tr><td>🌿 Mustard/Rapeseed</td><td>Rabi</td><td>Alluvial, sandy loam</td><td>Rajasthan, UP, Haryana, MP</td><td>Major oilseed crop</td></tr>
+        <tr><td>🌽 Maize</td><td>Kharif</td><td>Alluvial, well-drained</td><td>Karnataka, MP, Bihar, TN</td><td>Used as food, feed & bio-fuel</td></tr>
+        <tr><td>🌿 Rubber</td><td>Perennial</td><td>Laterite, well-drained</td><td>Kerala (~90%), Karnataka, TN</td><td>India = 4th largest producer globally</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Green Revolution -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">🟢 Green Revolution — Complete Notes <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="cards-grid">
+        <div class="card green">
+          <h3>📖 What is the Green Revolution?</h3>
+          <ul>
+            <li>Launched in India in <strong>late 1960s</strong> (mid-1960s globally)</li>
+            <li>Introduced by <strong>Dr. M.S. Swaminathan</strong> (Father of Green Revolution in India)</li>
+            <li>Global pioneer: <strong>Dr. Norman Borlaug</strong> (Nobel Peace Prize 1970)</li>
+            <li>Aimed to achieve <strong>food self-sufficiency</strong> after 1965–66 famine</li>
+          </ul>
+        </div>
+        <div class="card gold">
+          <h3>🔬 Key Features</h3>
+          <ul>
+            <li><strong>HYV (High Yielding Variety) seeds</strong> — dwarf wheat & rice</li>
+            <li>Increased use of <strong>chemical fertilizers & pesticides</strong></li>
+            <li>Expansion of <strong>irrigation infrastructure</strong></li>
+            <li>First benefited <strong>Punjab, Haryana, Western UP</strong></li>
+            <li>Focused mainly on <strong>wheat & rice</strong></li>
+          </ul>
+        </div>
+        <div class="card orange">
+          <h3>⚠️ Limitations</h3>
+          <ul>
+            <li>Limited to wheat & rice initially — not pulses/millets</li>
+            <li>Led to <strong>soil degradation & waterlogging</strong> in Punjab-Haryana</li>
+            <li>Benefits mostly in irrigated areas; rain-fed areas left behind</li>
+            <li>Increased use of groundwater → <strong>water table decline</strong></li>
+            <li>Promoted monoculture → <strong>loss of biodiversity</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-box blue">
+        <span class="ib-icon">💡</span>
+        <p><strong>Later Revolutions:</strong> <strong>White Revolution</strong> = Operation Flood (Dairy — Dr. Verghese Kurien) | <strong>Blue Revolution</strong> = Fisheries | <strong>Yellow Revolution</strong> = Oilseeds | <strong>Pink Revolution</strong> = Meat & Poultry | <strong>Golden Revolution</strong> = Fruits & Honey</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Irrigation Methods -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">💧 Irrigation Methods & Types <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="cards-grid">
+        <div class="card">
+          <h3>🌊 Surface Irrigation</h3>
+          <ul>
+            <li><strong>Canal irrigation:</strong> From rivers/reservoirs via channels; largest irrigated area in India</li>
+            <li><strong>Tank irrigation:</strong> Common in South India (TN, AP, Karnataka)</li>
+            <li>Suitable for flat, alluvial plains</li>
+          </ul>
+        </div>
+        <div class="card green">
+          <h3>🔵 Well & Tube-Well Irrigation</h3>
+          <ul>
+            <li><strong>Most widely used</strong> irrigation method in India</li>
+            <li>Depends on groundwater table</li>
+            <li>Common in: UP, Punjab, Rajasthan, Bihar</li>
+            <li>Over-exploitation → declining water tables</li>
+          </ul>
+        </div>
+        <div class="card gold">
+          <h3>💧 Modern Methods</h3>
+          <ul>
+            <li><strong>Drip irrigation:</strong> Water at root level — highly efficient; promoted under <strong>PM Krishi Sinchayee Yojana</strong></li>
+            <li><strong>Sprinkler irrigation:</strong> Spray water like rain; good for uneven terrain</li>
+            <li>Save 30–50% water compared to flood irrigation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-box gold">
+        <span class="ib-icon">⭐</span>
+        <p><strong>SSC Fact:</strong> An irrigation project is categorized as a <strong>Major Project</strong> if it covers a Cultivable Command Area (CCA) of <strong>above 10,000 hectares</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shifting Cultivation -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">🔄 Shifting Cultivation & Regional Names <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Region</th><th>Local Name</th><th>State</th></tr></thead>
+          <tbody>
+            <tr><td>North-East India</td><td><strong>Jhum</strong></td><td>Assam, Meghalaya, Nagaland, Manipur, Mizoram</td></tr>
+            <tr><td>Andhra Pradesh</td><td><strong>Podu</strong></td><td>AP, Telangana</td></tr>
+            <tr><td>Odisha</td><td><strong>Penda / Bewar</strong></td><td>Odisha, MP</td></tr>
+            <tr><td>Madhya Pradesh</td><td><strong>Dahia / Bewar / Mashan</strong></td><td>MP, Chhattisgarh</td></tr>
+            <tr><td>Rajasthan</td><td><strong>Walre</strong></td><td>Rajasthan</td></tr>
+            <tr><td>Kerala</td><td><strong>Kumari</strong></td><td>Kerala</td></tr>
+            <tr><td>Sri Lanka</td><td><strong>Chena</strong></td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-box red">
+        <span class="ib-icon">🎯</span>
+        <p><strong>SSC CGL Direct Question:</strong> 'Shifting cultivation' is also known as <strong>Jhum</strong> in north-east India. (SSC CGL Previously Asked!)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MINERALS SECTION ========== -->
+<div id="minerals" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#fdedec;">⛏️</div>
+    <div>
+      <h2>Minerals & Resources of India</h2>
+      <p>Coal, Petroleum, Iron Ore, Bauxite, Manganese, Mica — Distribution & Economic Importance</p>
+    </div>
+  </div>
+
+  <div class="info-box gold">
+    <span class="ib-icon">⭐</span>
+    <p><strong>Exam Focus:</strong> Questions typically ask "Largest producer of X mineral" or "State known for Y resource." Focus on: Coal (Jharkhand, Odisha, Chhattisgarh), Iron ore (Odisha, Jharkhand, Karnataka), Petroleum (Mumbai High, Digboi), Bauxite (Odisha, Gujarat). <span class="exam-tag">🎯 High Weightage</span></p>
+  </div>
+
+  <div class="mindmap">
+    <h3>🧠 Minerals Mind Map</h3>
+    <div class="mm-center">⛏️ MINERALS OF INDIA</div>
+    <div class="mm-row">
+      <div class="mm-node" style="background:#1a1a1a;">🖤 Coal</div>
+      <div class="mm-node" style="background:#8B4513;">🟤 Iron Ore</div>
+      <div class="mm-node" style="background:#2980b9;">🔵 Petroleum</div>
+      <div class="mm-node" style="background:#e74c3c;">🔴 Bauxite</div>
+      <div class="mm-node" style="background:#8e44ad;">🟣 Manganese</div>
+      <div class="mm-node" style="background:#d4ac0d;">🟡 Mica</div>
+      <div class="mm-node" style="background:#27ae60;">🟢 Copper</div>
+      <div class="mm-node" style="background:#e67e22;">🟠 Gold</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Mineral</th><th>Type</th><th>Top States (Mnemonic)</th><th>Key Mining Centres</th><th>Economic Importance</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🖤 <strong>Coal</strong></td><td>Energy Mineral</td>
+          <td>Jharkhand, Odisha, Chhattisgarh, WB, MP<br><small>🔑 <em>"JOCWM"</em></small></td>
+          <td>Jharia (Jharkhand) — largest coalfield; Raniganj (WB) — oldest; Bokaro, Korba, Singrauli</td>
+          <td>Thermal power, steel industry; India = 3rd largest producer globally</td>
+        </tr>
+        <tr>
+          <td>🟤 <strong>Iron Ore</strong></td><td>Metallic Mineral</td>
+          <td>Odisha, Jharkhand, Karnataka, Chhattisgarh, Goa<br><small>🔑 <em>"JOCK"</em> for iron ore</small></td>
+          <td>Bellary-Hospet (Karnataka); Kiriburu (Jharkhand); Bailadila (CG); Kudremukh (Karnataka)</td>
+          <td>Steel industry backbone; India has ~8% of world's iron ore reserves</td>
+        </tr>
+        <tr>
+          <td>🔵 <strong>Petroleum (Crude Oil)</strong></td><td>Energy Mineral</td>
+          <td>Maharashtra (offshore), Gujarat, Assam, Rajasthan</td>
+          <td>Mumbai High (largest offshore); Digboi (Assam, oldest refinery in Asia); Kalol, Ankleshwar (Gujarat); Barmer (Rajasthan)</td>
+          <td>Fuel, petrochemicals, plastics; India = significant importer</td>
+        </tr>
+        <tr>
+          <td>🔴 <strong>Bauxite</strong></td><td>Metallic Mineral</td>
+          <td>Odisha, Gujarat, Jharkhand, Maharashtra, MP</td>
+          <td>Panchpatmali (Odisha, largest); Mandla (MP); Kolhapur (Maharashtra)</td>
+          <td>Raw material for aluminium; used in aerospace, construction</td>
+        </tr>
+        <tr>
+          <td>🟣 <strong>Manganese</strong></td><td>Metallic Mineral</td>
+          <td>Odisha, Karnataka, MP, Maharashtra, Goa</td>
+          <td>Balaghat (MP); Shimoga (Karnataka); Vizianagaram (AP)</td>
+          <td>Steel hardening agent, batteries, fertilizers; India = 3rd largest producer</td>
+        </tr>
+        <tr>
+          <td>🟡 <strong>Mica</strong></td><td>Non-Metallic</td>
+          <td>Jharkhand, AP, Rajasthan (80% of world supply!)</td>
+          <td>Hazaribagh, Koderma (Jharkhand); Nellore (AP); Ajmer (Rajasthan)</td>
+          <td>Electrical insulation, electronics; India = leading producer</td>
+        </tr>
+        <tr>
+          <td>🟢 <strong>Copper</strong></td><td>Metallic Mineral</td>
+          <td>Rajasthan, MP, Jharkhand</td>
+          <td>Khetri (Rajasthan, largest mine); Malanjkhand (MP); Singhbhum (Jharkhand)</td>
+          <td>Electrical wiring, coins, alloys</td>
+        </tr>
+        <tr>
+          <td>🟠 <strong>Gold</strong></td><td>Precious Metal</td>
+          <td>Karnataka (>90% of India's gold)</td>
+          <td>Kolar Gold Fields (KGF); Hutti (Karnataka)</td>
+          <td>Jewellery, forex reserves</td>
+        </tr>
+        <tr>
+          <td>💎 <strong>Diamonds</strong></td><td>Precious Stone</td>
+          <td>Madhya Pradesh</td>
+          <td>Panna (MP) — only diamond mine in Asia</td>
+          <td>Jewellery, cutting tools</td>
+        </tr>
+        <tr>
+          <td>⬛ <strong>Limestone</strong></td><td>Non-Metallic</td>
+          <td>MP, Rajasthan, AP, TN, Karnataka</td>
+          <td>Katni (MP); Jodhpur (Rajasthan)</td>
+          <td>Cement industry (primary raw material)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Coal types -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">🖤 Types of Coal — Grades & Quality <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Carbon %</th><th>Rank</th><th>Use</th><th>Found In</th></tr></thead>
+          <tbody>
+            <tr><td>💎 <strong>Anthracite</strong></td><td>90–95%</td><td>Highest</td><td>Best fuel; industrial</td><td>J&K (rare in India)</td></tr>
+            <tr><td>🖤 <strong>Bituminous</strong></td><td>60–80%</td><td>High</td><td>Coking coal for steel; most common</td><td>Jharkhand, Odisha, WB</td></tr>
+            <tr><td>⬛ <strong>Lignite (Brown Coal)</strong></td><td>40–55%</td><td>Medium</td><td>Thermal power; lower grade</td><td>Tamil Nadu (Neyveli), Rajasthan</td></tr>
+            <tr><td>🪵 <strong>Peat</strong></td><td>&lt;40%</td><td>Lowest</td><td>Early stage; poor fuel</td><td>Marshy areas</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-box blue">
+        <span class="ib-icon">💡</span>
+        <p><strong>Memory Trick:</strong> <em>"A Big Lumpy Piece"</em> = Anthracite → Bituminous → Lignite → Peat (decreasing carbon content/quality)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nuclear minerals -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">☢️ Nuclear & Strategic Minerals <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="cards-grid">
+        <div class="card red">
+          <h3>☢️ Uranium</h3>
+          <ul>
+            <li><strong>Jadugoda</strong> (Jharkhand) — India's first uranium mine</li>
+            <li>Also in Tummalapalle (AP) — one of world's largest uranium reserves</li>
+            <li>Used in nuclear power plants</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h3>⚡ Thorium</h3>
+          <ul>
+            <li>India has <strong>world's largest thorium reserves</strong> (~25%)</li>
+            <li>Found in <strong>monazite sands</strong> of Kerala, TN coasts</li>
+            <li>Palakkad, Quilon (Kerala); Odisha coast</li>
+            <li>Used in India's 3-stage nuclear program</li>
+          </ul>
+        </div>
+        <div class="card green">
+          <h3>⛽ Natural Gas</h3>
+          <ul>
+            <li>Krishna-Godavari Basin (KG Basin, AP) — largest reserves</li>
+            <li>Bombay High (Maharashtra)</li>
+            <li>Used as clean fuel (CNG, PNG), fertilizers</li>
+            <li>India promotes gas-based economy under 2030 target</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONTINENTS SECTION ========== -->
+<div id="continents" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#f5eef8;">🗺️</div>
+    <div>
+      <h2>Seven Continents of the World</h2>
+      <p>Physical Features, Area, Population, Highest Peaks, Longest Rivers & Unique Facts</p>
+    </div>
+  </div>
+
+  <div class="mindmap">
+    <h3>🧠 Continents Mind Map</h3>
+    <div class="mm-center">🌍 7 CONTINENTS (Largest → Smallest by Area)</div>
+    <div class="mm-row">
+      <div class="mm-node" style="background:#1a3a5c;">1. Asia</div>
+      <div class="mm-node" style="background:#27ae60;">2. Africa</div>
+      <div class="mm-node" style="background:#e67e22;">3. N. America</div>
+      <div class="mm-node" style="background:#8e44ad;">4. S. America</div>
+      <div class="mm-node" style="background:#2980b9;">5. Antarctica</div>
+      <div class="mm-node" style="background:#c0392b;">6. Europe</div>
+      <div class="mm-node" style="background:#16a085;">7. Australia</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Continent</th><th>Area (mn km²)</th><th>% of Land</th><th>Population</th><th>Highest Peak</th><th>Longest River</th><th>Key Facts</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>🌏 <strong>Asia</strong></td><td>44.6</td><td>30%</td><td>~4.7 billion</td>
+          <td>Mt. Everest (8,848.86m)</td><td>Yangtze (6,300 km)</td>
+          <td>Largest & most populous; all 14 peaks >8000m here</td>
+        </tr>
+        <tr>
+          <td>2</td><td>🌍 <strong>Africa</strong></td><td>30.4</td><td>20.4%</td><td>~1.4 billion</td>
+          <td>Mt. Kilimanjaro (5,895m)</td><td>Nile (6,650 km) — longest river in world</td>
+          <td>Largest desert (Sahara); cradle of humanity; bisected by Equator</td>
+        </tr>
+        <tr>
+          <td>3</td><td>🌎 <strong>N. America</strong></td><td>24.7</td><td>16.5%</td><td>~590 million</td>
+          <td>Denali/Mt. McKinley (6,190m)</td><td>Mississippi-Missouri (6,275 km)</td>
+          <td>Panama Canal; Great Lakes; Rocky Mountains; Caribbean Sea</td>
+        </tr>
+        <tr>
+          <td>4</td><td>🌎 <strong>S. America</strong></td><td>17.8</td><td>12%</td><td>~430 million</td>
+          <td>Aconcagua (6,961m)</td><td>Amazon (6,400 km) — largest by discharge</td>
+          <td>Amazon Rainforest; Angel Falls (world's highest waterfall); Atacama Desert</td>
+        </tr>
+        <tr>
+          <td>5</td><td>❄️ <strong>Antarctica</strong></td><td>14.2</td><td>9.2%</td><td>~0 permanent</td>
+          <td>Vinson Massif (4,892m)</td><td>—</td>
+          <td>5th largest; coldest, driest, windiest; India's stations: Maitri, Bharati, Dakshin Gangotri</td>
+        </tr>
+        <tr>
+          <td>6</td><td>🌍 <strong>Europe</strong></td><td>10.5</td><td>6.8%</td><td>~750 million</td>
+          <td>Mont Blanc (4,808m) / Elbrus (5,642m)</td><td>Volga (3,690 km)</td>
+          <td>Smallest continent after Australia; peninsula of Eurasia; birthplace of Renaissance</td>
+        </tr>
+        <tr>
+          <td>7</td><td>🦘 <strong>Australia</strong></td><td>7.7</td><td>5.2%</td><td>~26 million</td>
+          <td>Mt. Kosciuszko (2,228m)</td><td>Murray-Darling (3,750 km)</td>
+          <td>Smallest continent; only continent = one country; Great Barrier Reef; unique marsupials</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Continent Cards -->
+  <div class="cards-grid">
+    <div class="card" style="border-top-color:#1a3a5c;">
+      <h3>🌏 Asia — Quick Facts</h3>
+      <ul>
+        <li>Largest continent: <strong>44.6 million km²</strong></li>
+        <li>Most populous: <strong>~4.7 billion people (~60% of world)</strong></li>
+        <li>Contains the <strong>highest point</strong> (Everest) and <strong>lowest point</strong> (Dead Sea, −430m)</li>
+        <li>Gobi Desert (largest cold desert); Arabian Desert</li>
+        <li>Major rivers: Indus, Ganges, Brahmaputra, Yangtze, Yellow, Mekong, Irrawaddy</li>
+        <li>Separated from Europe by Ural Mountains</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>🌍 Africa — Quick Facts</h3>
+      <ul>
+        <li>2nd largest continent; crossed by <strong>Equator, Tropic of Cancer & Capricorn</strong></li>
+        <li>Sahara = world's largest hot desert</li>
+        <li>Nile = world's longest river (6,650 km)</li>
+        <li>Congo Rainforest = 2nd largest after Amazon</li>
+        <li>Victoria Lake = largest lake in Africa (2nd in world)</li>
+        <li>Rich in minerals: gold, diamonds, platinum (South Africa)</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>🌎 Americas — Key Contrasts</h3>
+      <ul>
+        <li><strong>N. America:</strong> Rocky, Appalachian Mountains; Great Plains</li>
+        <li><strong>Amazon (S. America):</strong> Largest river by volume; 6,400 km</li>
+        <li><strong>Andes:</strong> Longest mountain range on land (South America)</li>
+        <li><strong>Angel Falls</strong> (Venezuela) = world's highest waterfall</li>
+        <li><strong>Amazon Rainforest</strong> = lungs of the Earth (~40% of world's rainforests)</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>❄️ Antarctica — Exam Facts</h3>
+      <ul>
+        <li>5th largest continent; covered by ice (average 1.9 km thick)</li>
+        <li>No permanent human population</li>
+        <li>India's research stations: <strong>Maitri, Bharati, Dakshin Gangotri</strong></li>
+        <li>Governed by Antarctic Treaty (1959) — no military, only science</li>
+        <li>Contains ~70% of world's fresh water (as ice)</li>
+        <li>Coldest temperature recorded: −89.2°C (Vostok Station)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box blue">
+    <span class="ib-icon">🎯</span>
+    <p><strong>SSC Exam Tip:</strong> Know basic superlatives — Largest country: Russia | Smallest country: Vatican City | Most populous country: India (surpassed China in 2023) | Largest ocean: Pacific | Longest river: Nile | Highest peak: Everest | Largest hot desert: Sahara | Largest cold desert: Antarctica.</p>
+  </div>
+</div>
+
+<!-- ========== OCEANS SECTION ========== -->
+<div id="oceans" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#eaf4fb;">🌊</div>
+    <div>
+      <h2>Oceans of the World</h2>
+      <p>5 Oceans, Ocean Currents, Climate Influence, Marine Resources & Global Trade</p>
+    </div>
+  </div>
+
+  <div class="mindmap">
+    <h3>🧠 Oceans Mind Map</h3>
+    <div class="mm-center">🌊 5 OCEANS (Largest → Smallest)</div>
+    <div class="mm-row">
+      <div class="mm-node" style="background:#2980b9;">1. 🌊 Pacific</div>
+      <div class="mm-node" style="background:#117a65;">2. 🌊 Atlantic</div>
+      <div class="mm-node" style="background:#1a5276;">3. 🌊 Indian</div>
+      <div class="mm-node" style="background:#6c3483;">4. ❄️ Southern</div>
+      <div class="mm-node" style="background:#1e8449;">5. ❄️ Arctic</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Ocean</th><th>Area (mn km²)</th><th>Max Depth</th><th>Key Features</th></tr></thead>
+      <tbody>
+        <tr><td>🌊 <strong>Pacific</strong></td><td>165.2 (largest)</td><td>Mariana Trench — 11,034m (deepest point on Earth)</td><td>Largest & deepest ocean; Ring of Fire surrounds it; covers more than all landmasses combined</td></tr>
+        <tr><td>🌊 <strong>Atlantic</strong></td><td>106.5</td><td>Puerto Rico Trench — 8,376m</td><td>2nd largest; S-shaped; Gulf Stream (warm current); most important for trade routes; Mid-Atlantic Ridge (underwater mountain range)</td></tr>
+        <tr><td>🌊 <strong>Indian</strong></td><td>73.6</td><td>Java Trench — 7,258m</td><td>3rd largest; monsoon-driven currents; key trade route (Middle East–Asia); no passage to Arctic</td></tr>
+        <tr><td>❄️ <strong>Southern</strong></td><td>21.96</td><td>South Sandwich Trench — 7,235m</td><td>4th; surrounds Antarctica; strong westerly winds; recognized as separate ocean in 2000 by IHO</td></tr>
+        <tr><td>❄️ <strong>Arctic</strong></td><td>14.1 (smallest)</td><td>Fram Basin — 5,450m</td><td>Smallest & shallowest; mostly frozen; Northwest Passage; rich in oil & gas deposits</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Ocean Currents -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">🔄 Ocean Currents — Warm & Cold <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="cards-grid">
+        <div class="card" style="border-top-color:#e74c3c;">
+          <h3>🔴 Warm Ocean Currents</h3>
+          <ul>
+            <li><strong>Gulf Stream</strong> — Atlantic; warms Western Europe</li>
+            <li><strong>Kuroshio (Japan Current)</strong> — Pacific; warms Japan, E. Asia</li>
+            <li><strong>North Atlantic Drift</strong> — Extension of Gulf Stream; keeps Europe ice-free</li>
+            <li><strong>Agulhas Current</strong> — Indian Ocean; SE Africa coast</li>
+            <li><strong>Brazil Current</strong> — S. Atlantic; along Brazil coast</li>
+            <li><strong>El Niño</strong> — Warm current that disrupts Pacific weather</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top-color:#2980b9;">
+          <h3>🔵 Cold Ocean Currents</h3>
+          <ul>
+            <li><strong>Labrador Current</strong> — N. Atlantic; cools Canada's east coast</li>
+            <li><strong>Canary Current</strong> — E. Atlantic; cools NW Africa coast</li>
+            <li><strong>Benguela Current</strong> — S. Atlantic; cools SW Africa; creates Namib Desert</li>
+            <li><strong>Humboldt/Peru Current</strong> — S. Pacific; cools Peru-Chile coasts</li>
+            <li><strong>California Current</strong> — N. Pacific; cools US west coast</li>
+            <li><strong>Oyashio Current</strong> — N. Pacific; near Japan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-box gold">
+        <span class="ib-icon">⭐</span>
+        <p><strong>Key Rule (SSC):</strong> Warm currents flow from <em>tropics to poles</em>; Cold currents flow from <em>poles to tropics</em>. Coriolis Force deflects currents <strong>to the right in Northern Hemisphere</strong> and <strong>to the left in Southern Hemisphere</strong>. <span class="exam-tag">🎯 Asked in SSC CGL 2013</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Climate Influence -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">🌤️ Ocean Currents & Their Climate Influence <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="cards-grid">
+        <div class="card green">
+          <h3>🌡️ Warm Currents → Warming Effect</h3>
+          <ul>
+            <li>Western Europe mild despite high latitude → due to <strong>Gulf Stream & North Atlantic Drift</strong></li>
+            <li>Bring <strong>moisture → rainfall</strong> on adjacent coasts</li>
+            <li>Help in <strong>fog formation</strong> when meeting cold air</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top-color:#2980b9;">
+          <h3>❄️ Cold Currents → Cooling + Desert Formation</h3>
+          <ul>
+            <li><strong>Atacama Desert</strong> (Peru) — caused by Humboldt Current</li>
+            <li><strong>Namib Desert</strong> (Africa) — caused by Benguela Current</li>
+            <li>Cold currents cause <strong>aridity, fog, cold weather</strong></li>
+            <li>Rich fishing grounds — upwelling brings nutrients to surface</li>
+          </ul>
+        </div>
+        <div class="card gold">
+          <h3>🐟 Marine Resources</h3>
+          <ul>
+            <li><strong>Fishing grounds:</strong> Grand Banks (Atlantic); Georges Bank; North Sea</li>
+            <li><strong>EEZ (Exclusive Economic Zone):</strong> 200 nautical miles from coast</li>
+            <li>India's EEZ = <strong>2.02 million km²</strong> — rich in fish, oil & gas</li>
+            <li>Polymetallic nodules (manganese, cobalt, nickel) found on ocean floors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box blue">
+    <span class="ib-icon">💡</span>
+    <p><strong>El Niño vs La Niña:</strong> <strong>El Niño</strong> = Warm water in E. Pacific → weakens Indian monsoon, causes drought. <strong>La Niña</strong> = Cold water in E. Pacific → strengthens Indian monsoon, causes floods. Both are <strong>ENSO (El Niño Southern Oscillation)</strong> events.</p>
+  </div>
+</div>
+
+<!-- ========== PHYSICAL GEOGRAPHY ========== -->
+<div id="physgeo" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#fef5e7;">🏔️</div>
+    <div>
+      <h2>Physical Geography — Core Concepts</h2>
+      <p>Earth Structure, Landforms, Mountains, Rivers, Atmosphere — SSC Exam Essentials</p>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card" style="border-top-color:#1a3a5c;">
+      <h3>🌐 Earth — Basic Facts</h3>
+      <ul>
+        <li>Shape: <strong>Oblate Spheroid</strong> (flattened at poles)</li>
+        <li>Age: ~<strong>4.6 billion years</strong></li>
+        <li>Area: 510 million km² (71% water, 29% land)</li>
+        <li>Rotation: 23 hrs 56 min (Sidereal Day)</li>
+        <li>Revolution: 365 days 5 hrs 48 min</li>
+        <li>Axis tilt: <strong>23.5°</strong> (causes seasons)</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>🔵 Layers of Earth</h3>
+      <ul>
+        <li><strong>Crust:</strong> 0–70 km; SIAL (Si + Al) under continents; SIMA (Si + Mg) under oceans</li>
+        <li><strong>Mantle:</strong> 70–2900 km; Asthenosphere (plastic layer) here</li>
+        <li><strong>Outer Core:</strong> 2900–5100 km; liquid iron & nickel</li>
+        <li><strong>Inner Core:</strong> 5100–6370 km; solid iron & nickel; densest layer</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <h3>🏔️ Mountain Types</h3>
+      <ul>
+        <li><strong>Fold Mountains:</strong> Himalayas, Alps, Andes, Rockies (most common)</li>
+        <li><strong>Block Mountains:</strong> Vosges (France), Vindhya, Satpura</li>
+        <li><strong>Volcanic Mountains:</strong> Mt. Fuji, Mt. Etna, Kilimanjaro</li>
+        <li><strong>Residual Mountains:</strong> Aravallis (India's oldest mountain range)</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>🏞️ Types of Plateaus</h3>
+      <ul>
+        <li><strong>Intermontane:</strong> Tibet (world's highest), Bolivia</li>
+        <li><strong>Continental:</strong> Deccan Plateau, Brazilian Plateau</li>
+        <li><strong>Piedmont:</strong> Colorado Plateau (USA)</li>
+        <li><strong>Dissected:</strong> Shillong, Meghalaya Plateau</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>🌋 Volcanoes & Earthquake Zones</h3>
+      <ul>
+        <li><strong>Ring of Fire:</strong> Pacific Ocean rim; 75% of world's volcanoes</li>
+        <li><strong>Active volcano:</strong> Mt. Etna (Europe's most active); Barren Island (India, Andaman)</li>
+        <li><strong>Dormant:</strong> Mt. Fuji, Mt. Kilimanjaro</li>
+        <li><strong>Extinct:</strong> Mt. Kenia</li>
+        <li>2004 Indian Ocean tsunami — triggered by Sumatra earthquake</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>🏗️ Layers of Atmosphere</h3>
+      <ul>
+        <li><strong>Troposphere:</strong> 0–12 km; weather occurs here; temperature ↓ with altitude</li>
+        <li><strong>Stratosphere:</strong> 12–50 km; <strong>Ozone layer (15–35 km)</strong> absorbs UV rays</li>
+        <li><strong>Mesosphere:</strong> 50–80 km; coldest layer; meteors burn here</li>
+        <li><strong>Thermosphere/Ionosphere:</strong> 80–700 km; radio waves reflect; Northern Lights</li>
+        <li><strong>Exosphere:</strong> 700+ km; outermost; satellites orbit here</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box gold">
+    <span class="ib-icon">⭐</span>
+    <p><strong>SSC CGL 2013 Asked:</strong> The atmospheric layer that absorbs <strong>ultraviolet rays</strong> of the sun is the <strong>Ozonosphere/Stratosphere</strong> (Ozone layer). Correct arrangement of layers: <strong>Troposphere → Stratosphere → Mesosphere → Ionosphere → Exosphere</strong>. <span class="exam-tag">🎯 Direct Exam Question</span></p>
+  </div>
+
+  <!-- Indian Physical Divisions -->
+  <div class="accordion">
+    <div class="acc-head" onclick="toggleAcc(this)">🇮🇳 Physical Divisions of India <span class="acc-arrow">▼</span></div>
+    <div class="acc-body">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Division</th><th>Area (mn km²)</th><th>Key Features</th><th>States</th></tr></thead>
+          <tbody>
+            <tr><td>🏔️ <strong>The Himalayas</strong></td><td>0.5</td><td>Young fold mountains; 3 ranges: Himadri (Great), Himachal (Middle), Shivalik (Outer); Peaks: Everest, K2, Kanchenjunga</td><td>J&K, HP, Uttarakhand, Sikkim, Arunachal</td></tr>
+            <tr><td>🌾 <strong>Great Northern Plains</strong></td><td>0.7</td><td>Formed by alluvial deposits; Indo-Gangetic-Brahmaputra Plains; most fertile; granary of India</td><td>Punjab to Assam</td></tr>
+            <tr><td>🏜️ <strong>Peninsular Plateau</strong></td><td>0.16</td><td>Oldest rock system; Deccan Trap (volcanic); Narmada-Tapti rift valleys; Western & Eastern Ghats</td><td>TN, Karnataka, AP, Maharashtra, MP</td></tr>
+            <tr><td>🏖️ <strong>Coastal Plains</strong></td><td>—</td><td>Western (narrow, steep) & Eastern (wide, deltaic); major ports and backwaters</td><td>Gujarat to Kerala; Odisha to TN</td></tr>
+            <tr><td>🏝️ <strong>Islands</strong></td><td>—</td><td>Andaman & Nicobar (Bay of Bengal); Lakshadweep (Arabian Sea, coral islands)</td><td>UT</td></tr>
+            <tr><td>🏜️ <strong>Thar Desert</strong></td><td>—</td><td>World's 9th largest hot desert; Rajasthan's arid zone; Indira Gandhi Canal</td><td>Rajasthan (mainly), Gujarat</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CLIMATE SECTION ========== -->
+<div id="climate" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#eaf4fb;">🌤️</div>
+    <div>
+      <h2>Climate & Atmosphere</h2>
+      <p>Indian Monsoon, Climate Zones, Wind Systems & Key Atmospheric Phenomena</p>
+    </div>
+  </div>
+
+  <div class="info-box gold">
+    <span class="ib-icon">⭐</span>
+    <p><strong>Exam Importance:</strong> Climatology is the <strong>highest-weightage sub-topic</strong> — approximately <strong>40% of physical geography questions</strong> in SSC CGL come from climate topics.</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card green">
+      <h3>☔ Indian Monsoon — Key Facts</h3>
+      <ul>
+        <li>India has a <strong>Tropical Monsoon</strong> climate type</li>
+        <li><strong>South-West Monsoon</strong> (June–September): Main rainy season; brings 75–90% of India's annual rainfall</li>
+        <li><strong>North-East Monsoon</strong> (Oct–Dec): Retreating monsoon; rains Tamil Nadu coast</li>
+        <li><strong>Onset:</strong> Kerala coast (1st June approximately)</li>
+        <li>Caused by differential heating of land & sea (land heats faster)</li>
+        <li><strong>Mawsynram</strong> (Meghalaya) = wettest place in India & world (~11,871 mm annually)</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top-color:#2980b9;">
+      <h3>🌡️ Climate Zones of India</h3>
+      <ul>
+        <li><strong>Tropical Rainforest:</strong> Andaman & Nicobar, NE India</li>
+        <li><strong>Tropical Monsoon:</strong> Most of India</li>
+        <li><strong>Tropical Savanna:</strong> Parts of Deccan</li>
+        <li><strong>Hot Arid Desert:</strong> Rajasthan (Thar Desert)</li>
+        <li><strong>Semi-Arid (Steppe):</strong> Parts of Rajasthan, AP</li>
+        <li><strong>Subtropical Highland:</strong> Sikkim, Himachal (Koppen: Cwa)</li>
+        <li><strong>Alpine/Tundra:</strong> High Himalayan region</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>💨 Global Wind Systems</h3>
+      <ul>
+        <li><strong>Trade Winds:</strong> 0°–30°; blow towards equator; NE in NH, SE in SH</li>
+        <li><strong>Westerlies:</strong> 30°–60°; blow towards poles</li>
+        <li><strong>Polar Easterlies:</strong> 60°–90°; blow towards equator from poles</li>
+        <li><strong>Jet Stream:</strong> High altitude (upper troposphere); affects monsoon</li>
+        <li><strong>Doldrums:</strong> Equatorial belt; calm winds</li>
+        <li><strong>Horse Latitudes:</strong> ~30°; subtropical high pressure; calm</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>🌪️ Local Winds — India & World</h3>
+      <ul>
+        <li><strong>Loo:</strong> Hot, dry wind; North India (UP, Haryana) in summers</li>
+        <li><strong>Mango Showers:</strong> Pre-monsoon rainfall; Karnataka, Kerala</li>
+        <li><strong>Norwester/Kalbaisakhi:</strong> Thunderstorm; WB, Assam (tea cultivation benefit)</li>
+        <li><strong>Mistral:</strong> Cold, dry wind; S. France to Mediterranean</li>
+        <li><strong>Foehn/Chinook:</strong> Warm, dry wind; descending leeward slopes</li>
+        <li><strong>Harmattan:</strong> NE trade wind; W. Africa</li>
+        <li><strong>Sirocco:</strong> Hot, dusty; Sahara → Mediterranean</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>🌊 Humidity & Precipitation Types</h3>
+      <ul>
+        <li><strong>Convectional Rainfall:</strong> Equatorial region; afternoon thunderstorms</li>
+        <li><strong>Orographic Rainfall:</strong> Windward side of mountains (Western Ghats, Himalayas)</li>
+        <li><strong>Cyclonic/Frontal Rainfall:</strong> Temperate regions; frontal cyclones</li>
+        <li><strong>Cherrapunji vs Mawsynram:</strong> Both in Meghalaya; receive world's highest rainfall</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <h3>🌡️ Temperature & Insolation</h3>
+      <ul>
+        <li><strong>Insolation:</strong> Amount of solar radiation received by Earth's surface</li>
+        <li><strong>Albedo:</strong> Reflectivity of surface (snow = high; forest = low)</li>
+        <li><strong>Lapse Rate:</strong> Temperature decreases 6.5°C per 1,000m altitude</li>
+        <li><strong>Isohyet:</strong> Lines connecting equal rainfall points</li>
+        <li><strong>Isobar:</strong> Lines of equal pressure</li>
+        <li><strong>Isotherm:</strong> Lines of equal temperature</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========== QUIZ SECTION ========== -->
+<div id="quiz-section" class="section">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#e9f7ef;">✅</div>
+    <div>
+      <h2>50-Question Exam Quiz</h2>
+      <p>Based on Past SSC CGL & IB ACIO Papers — Test Your Knowledge!</p>
+    </div>
+  </div>
+
+  <div id="quiz-panel" class="quiz-box">
+    <div id="quiz-intro" style="text-align:center;padding:20px 10px;">
+      <div style="font-size:3rem;margin-bottom:12px;">📝</div>
+      <h3 style="font-size:1.4rem;color:var(--navy);margin-bottom:8px;">Physical Geography — 50 MCQs</h3>
+      <p style="color:var(--muted);margin-bottom:20px;">Based on actual SSC CGL, SSC CHSL & IB ACIO previous year papers. Instant feedback + explanations!</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;">
+        <div class="chip"><span class="chip-num">50</span> Questions</div>
+        <div class="chip"><span class="chip-num">No</span> Time Limit</div>
+        <div class="chip"><span class="chip-num">+1</span> Per Correct</div>
+      </div>
+      <button class="btn btn-primary" style="font-size:1rem;padding:13px 36px;" onclick="startQuiz()">🚀 Start Quiz</button>
+    </div>
+
+    <div id="quiz-active" style="display:none;">
+      <div class="q-progress"><div class="q-progress-bar" id="q-pbar"></div></div>
+      <div class="q-header">
+        <span class="q-counter" id="q-counter">Question 1 of 50</span>
+        <span class="q-score-live" id="q-score-live">Score: 0</span>
+      </div>
+      <div class="q-text" id="q-text"></div>
+      <div class="q-options" id="q-options"></div>
+      <div class="q-explanation" id="q-explanation"></div>
+      <div class="q-nav">
+        <span id="q-status" style="font-size:.82rem;color:var(--muted);"></span>
+        <button class="btn btn-primary" id="q-next-btn" onclick="nextQuestion()" style="display:none;">Next →</button>
+      </div>
+    </div>
+
+    <div id="quiz-result">
+      <div style="font-size:3rem;margin-bottom:8px;">🏆</div>
+      <div class="big-score" id="r-score"></div>
+      <div class="grade" id="r-grade"></div>
+      <div class="result-bars">
+        <div class="r-bar"><div class="r-num" id="r-correct" style="color:var(--green)"></div><div class="r-label">✅ Correct</div></div>
+        <div class="r-bar"><div class="r-num" id="r-wrong" style="color:var(--red)"></div><div class="r-label">❌ Wrong</div></div>
+        <div class="r-bar"><div class="r-num" id="r-pct"></div><div class="r-label">📊 Accuracy</div></div>
+        <div class="r-bar"><div class="r-num" id="r-skip"></div><div class="r-label">⏭ Skipped</div></div>
+      </div>
+      <p id="r-msg" style="margin-bottom:20px;color:var(--muted);font-size:.95rem;"></p>
+      <button class="btn btn-primary" onclick="restartQuiz()">🔄 Retry Quiz</button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<script>
+// ==================== NAVIGATION ====================
+function showSection(id, el){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('#sidebar a').forEach(a=>a.classList.remove('active'));
+  if(el) el.classList.add('active');
+  if(window.innerWidth<=800) document.getElementById('sidebar').classList.remove('open');
+  window.scrollTo(0,0);
+}
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+}
+function toggleAcc(head){
+  const body = head.nextElementSibling;
+  body.classList.toggle('open');
+  head.classList.toggle('open');
+}
+
+// ==================== QUIZ DATA (50 Questions) ====================
+const quizData = [
+  // SOILS
+  {q:"Which soil type is most widespread in India, covering approximately 43% of the total land area?",opts:["Black Soil","Red Soil","Alluvial Soil","Laterite Soil"],ans:2,exp:"Alluvial soil is the most widespread soil in India, covering about 43% of the country's total land area. It is found across the Indo-Gangetic Plain and river deltas."},
+  {q:"Black soil is also known as:",opts:["Bhangar","Regur","Khadar","Laterite"],ans:1,exp:"Black soil is known as 'Regur' soil (from Telugu word meaning cotton soil). It is also called Black Cotton Soil due to its suitability for cotton cultivation."},
+  {q:"The self-ploughing characteristic is associated with which soil type?",opts:["Alluvial Soil","Red Soil","Laterite Soil","Black Soil"],ans:3,exp:"Black soil develops wide cracks when it dries, which is known as 'self-ploughing.' This helps in aeration and moisture retention."},
+  {q:"Laterite soil gets its name from the Latin word 'Later' which means:",opts:["Stone","Brick","Sand","Clay"],ans:1,exp:"The word 'Laterite' is derived from the Latin word 'Later' meaning Brick. This soil becomes hard like a brick when it dries, and is widely used in construction."},
+  {q:"Which soil is formed under conditions of high temperature and heavy rainfall with alternate wet and dry periods?",opts:["Alluvial","Black","Laterite","Desert"],ans:2,exp:"Laterite soil is formed under wet tropical climate conditions — high temperature and heavy rainfall with alternating wet and dry periods. This leads to intense leaching, leaving iron oxide and aluminium compounds."},
+  {q:"The new alluvium deposit near river banks is called:",opts:["Bhangar","Regur","Khadar","Usar"],ans:2,exp:"Khadar is the newer alluvium deposited during floods, found near riverbanks. It is lighter and more fertile. Bhangar is the older alluvium located further away from rivers."},
+  {q:"Which soil is rendered infertile by the presence of excess iron?",opts:["Black Soil","Alluvial Soil","Laterite Soil","Peaty Soil"],ans:2,exp:"Laterite soil is infertile due to the presence of excess iron oxide, which is left behind after intense leaching removes lime and silica. It requires heavy doses of manures and fertilizers."},
+  {q:"Red soil gets its colour due to:",opts:["Magnesium content","Iron Oxide (Fe₂O₃)","Titaniferous Magnetite","Humus"],ans:1,exp:"Red soil gets its reddish color due to the wide diffusion of iron oxide (Fe₂O₃) in crystalline and metamorphic rocks. When hydrated, it turns yellow."},
+  {q:"The transfer of minerals from topsoil to subsoil through soil water is called:",opts:["Percolation","Conduction","Leaching","Transpiration"],ans:2,exp:"Leaching is the process by which essential minerals are lost from the topsoil as they get dissolved and carried downward by water. It is a major cause of soil degradation in high-rainfall areas."},
+  {q:"Which type of soil is best suited for cotton cultivation?",opts:["Red Soil","Alluvial Soil","Laterite Soil","Black Soil"],ans:3,exp:"Black soil (Regur) is best suited for cotton cultivation due to its high water retention capacity, moisture retentiveness, and clay-rich nature. Black soil is also called 'Cotton Soil'."},
+  // AGRICULTURE
+  {q:"Kharif crops are sown with the onset of:",opts:["Winter","Monsoon","Spring","Post-monsoon"],ans:1,exp:"Kharif crops are sown at the beginning of the monsoon season (June–July) and harvested in September–October. Examples: Rice, Maize, Cotton, Groundnut, Soybean."},
+  {q:"Which crop is known as the 'Golden Fibre of India'?",opts:["Cotton","Silk","Jute","Flax"],ans:2,exp:"Jute is known as the 'Golden Fibre' because of its golden colour and high economic value. West Bengal is the largest producer of jute in India."},
+  {q:"The Green Revolution in India was primarily associated with:",opts:["Pulses and Oil seeds","Wheat and Rice","Cotton and Jute","Sugarcane and Tea"],ans:1,exp:"The Green Revolution in India (late 1960s) primarily focused on wheat and rice through the introduction of High Yielding Variety (HYV) seeds. It was initiated by Dr. M.S. Swaminathan in India."},
+  {q:"'Shifting cultivation' is also known as _____ in North-East India.",opts:["Podu","Dahia","Jhum","Chena"],ans:2,exp:"Shifting cultivation is called 'Jhum' in North-East India (Assam, Meghalaya, Nagaland, Manipur, Mizoram). It involves cutting and burning forest, cultivating briefly, then moving on."},
+  {q:"Which type of farming uses water at the root level, making it highly efficient?",opts:["Sprinkler Irrigation","Canal Irrigation","Drip Irrigation","Tank Irrigation"],ans:2,exp:"Drip irrigation delivers water directly to the root zone of plants through a system of emitters. It saves 30–50% water compared to traditional methods and is promoted under Pradhan Mantri Krishi Sinchayee Yojana."},
+  {q:"An irrigation project is categorized as a 'Major Project' if it covers a CCA of:",opts:["Less than 2,000 hectares","2,000 to 10,000 hectares","Above 10,000 hectares","Above 50,000 hectares"],ans:2,exp:"An irrigation project is categorized as a Major Project if it covers a Cultivable Command Area (CCA) of above 10,000 hectares. (SSC CGL 2013 directly asked this question.)"},
+  {q:"The Father of the Green Revolution in India is:",opts:["Norman Borlaug","V. Kurien","M.S. Swaminathan","C. Subramaniam"],ans:2,exp:"Dr. M.S. Swaminathan is known as the Father of the Green Revolution in India. Dr. Norman Borlaug is known as the Father of the Green Revolution globally (Nobel Peace Prize 1970)."},
+  {q:"The White Revolution in India is associated with:",opts:["Egg production","Milk/Dairy production","Cotton production","Fish production"],ans:1,exp:"The White Revolution (Operation Flood) was associated with dairy/milk production in India. It was led by Dr. Verghese Kurien and made India the world's largest milk producer."},
+  {q:"Which crop grows in the Zaid season?",opts:["Wheat","Rice","Watermelon","Cotton"],ans:2,exp:"Zaid season (March–June) is a short summer season. Crops grown include watermelon, muskmelon, cucumber, bitter gourd, and moong dal. These are mainly grown on irrigated lands."},
+  {q:"Punjab and Haryana are called the 'Wheat Bowl of India' because:",opts:["They produce the most wheat in India","They have the largest irrigated area","They have black cotton soil","They receive the highest rainfall"],ans:0,exp:"Punjab and Haryana are called the 'Wheat Bowl of India' because they are the top wheat-producing states, benefiting from canal and tube-well irrigation, alluvial soil, and favorable climate."},
+  // MINERALS
+  {q:"India's largest coalfield is located at:",opts:["Raniganj","Bokaro","Jharia","Singrauli"],ans:2,exp:"Jharia (Jharkhand) is India's largest coalfield and also one of the largest in Asia. It produces bituminous coal, which is used as coking coal for iron & steel industries."},
+  {q:"The first uranium mine in India is located at:",opts:["Tummalapalle","Jadugoda","Kolar","Panna"],ans:1,exp:"Jadugoda in Jharkhand (Singhbhum district) is India's first uranium mine. It has been operational since 1967 and is managed by Uranium Corporation of India Limited (UCIL)."},
+  {q:"India's only active volcano is located at:",opts:["Andaman Islands","Lakshadweep","Nicobar Islands","Barren Island"],ans:3,exp:"Barren Island (Andaman & Nicobar Islands) is India's only active volcano. It is also the only confirmed active volcano in the South Asian region."},
+  {q:"The Kolar Gold Fields (KGF) are located in which state?",opts:["Andhra Pradesh","Telangana","Karnataka","Tamil Nadu"],ans:2,exp:"The Kolar Gold Fields (KGF) are located in Karnataka. They were once among the richest gold-producing mines in the world, though most mines are now closed due to depletion."},
+  {q:"Mumbai High is known for the production of:",opts:["Coal","Iron Ore","Petroleum","Bauxite"],ans:2,exp:"Mumbai High (Bombay High) is an offshore oil field in the Arabian Sea, Maharashtra. It is India's largest offshore petroleum-producing field."},
+  {q:"Which state is the largest producer of mica in India?",opts:["Rajasthan","Karnataka","Jharkhand","Odisha"],ans:2,exp:"Jharkhand is the largest producer of mica in India. The Hazaribagh and Koderma districts are the main mica-producing areas. India accounts for about 80% of world's mica supply."},
+  {q:"The only diamond mine in Asia is located in:",opts:["Jharkhand","Andhra Pradesh","Madhya Pradesh","Rajasthan"],ans:2,exp:"Panna (Madhya Pradesh) has the only diamond mine in Asia. It is operated by the National Mineral Development Corporation (NMDC)."},
+  {q:"Digboi in Assam is famous for:",opts:["Coal mining","India's oldest oil refinery","Iron ore mining","Tea production"],ans:1,exp:"Digboi in Assam is famous for being the site of India's (and Asia's) oldest oil refinery. It was established in 1901 during British rule and continues to operate."},
+  {q:"Which mineral is found at Tummalapalle in Andhra Pradesh?",opts:["Iron ore","Coal","Uranium","Gold"],ans:2,exp:"Tummalapalle (Andhra Pradesh) is one of the world's largest uranium deposits. It was discovered by the Atomic Minerals Directorate (AMD) and has potential to significantly reduce India's uranium imports."},
+  {q:"India has the world's largest reserves of which nuclear mineral?",opts:["Uranium","Plutonium","Thorium","Radium"],ans:2,exp:"India has approximately 25% of the world's thorium reserves — the largest in the world. These are found as monazite sands along the coasts of Kerala, Tamil Nadu, and Odisha."},
+  // CONTINENTS & OCEANS
+  {q:"Which is the largest continent in the world?",opts:["Africa","North America","Europe","Asia"],ans:3,exp:"Asia is the largest continent, covering about 44.6 million km² or approximately 30% of Earth's total land area. It is also the most populous continent with approximately 4.7 billion people."},
+  {q:"The world's longest river is:",opts:["Amazon","Yangtze","Mississippi","Nile"],ans:3,exp:"The Nile River in Africa (6,650 km) is considered the world's longest river, though the Amazon River also claims this title by some measurements. The Nile flows through 11 countries."},
+  {q:"The deepest point on Earth is located in which ocean?",opts:["Atlantic Ocean","Indian Ocean","Pacific Ocean","Arctic Ocean"],ans:2,exp:"The Mariana Trench in the Pacific Ocean is the deepest point on Earth at approximately 11,034 metres (36,000 feet). It is located in the western Pacific Ocean near the Mariana Islands."},
+  {q:"India's research station 'Maitri' is located in:",opts:["Arctic","Antarctic","Himalayas","Pacific Ocean"],ans:1,exp:"Maitri is India's second and current research station in Antarctica. India's research stations in Antarctica are: Dakshin Gangotri (1st, now a supply base), Maitri (2nd), and Bharati (3rd)."},
+  {q:"Which ocean current keeps Western Europe warm despite its high latitude?",opts:["Labrador Current","Gulf Stream","Canary Current","Humboldt Current"],ans:1,exp:"The Gulf Stream (and its extension, the North Atlantic Drift) is a powerful warm ocean current that flows from the Gulf of Mexico northeastward across the Atlantic, significantly warming Western Europe."},
+  {q:"The Atacama Desert in South America was created by which ocean current?",opts:["California Current","Brazil Current","Benguela Current","Humboldt/Peru Current"],ans:3,exp:"The cold Humboldt (Peru) Current flows along the west coast of South America. It stabilizes the air above, suppressing rainfall and creating the extremely arid Atacama Desert in Chile and Peru."},
+  {q:"El Niño refers to:",opts:["A cold current in the Indian Ocean","A warm current in the Eastern Pacific","A cold current in the Atlantic","A warm current in the Atlantic"],ans:1,exp:"El Niño refers to the abnormal warming of surface waters in the central and eastern tropical Pacific Ocean. It occurs every 2–7 years and disrupts global weather patterns, often weakening the Indian monsoon."},
+  {q:"Which is the world's largest hot desert?",opts:["Arabian Desert","Gobi Desert","Sahara Desert","Thar Desert"],ans:2,exp:"The Sahara Desert in North Africa is the world's largest hot desert, covering about 9.2 million km². It spans 11 countries including Algeria, Libya, Egypt, Mali, Niger, and Sudan."},
+  {q:"The Coriolis Force deflects wind in the Northern Hemisphere towards the:",opts:["Left","Right","No deflection","Upward"],ans:1,exp:"In the Northern Hemisphere, the Coriolis Force deflects moving objects (including wind and ocean currents) to the right. In the Southern Hemisphere, deflection is to the left. (SSC CGL 2013 asked this question directly.)"},
+  {q:"Which mountain range is the longest on land?",opts:["Himalayas","Rocky Mountains","Alps","Andes"],ans:3,exp:"The Andes mountain range in South America is the world's longest continental mountain range, stretching about 7,000 km along the western coast of South America. The Himalayas are the world's highest mountain range."},
+  // PHYSICAL GEOGRAPHY - ATMOSPHERE/CLIMATE
+  {q:"Which atmospheric layer absorbs ultraviolet rays of the Sun?",opts:["Troposphere","Mesosphere","Ionosphere","Stratosphere (Ozone Layer)"],ans:3,exp:"The Ozone layer, located within the Stratosphere (15–35 km altitude), absorbs harmful UV radiation from the Sun. (This was directly asked in SSC CGL 2013.)"},
+  {q:"The correct arrangement of atmospheric layers from Earth's surface is:",opts:["Stratosphere, Troposphere, Mesosphere, Ionosphere, Exosphere","Troposphere, Stratosphere, Mesosphere, Ionosphere, Exosphere","Ionosphere, Exosphere, Mesosphere, Troposphere, Stratosphere","Mesosphere, Troposphere, Stratosphere, Ionosphere, Exosphere"],ans:1,exp:"The correct order from Earth's surface outward is: Troposphere (0–12 km) → Stratosphere (12–50 km) → Mesosphere (50–80 km) → Ionosphere/Thermosphere (80–700 km) → Exosphere (700+ km). (SSC CGL 2015 asked this.)"},
+  {q:"Which is the wettest place in the world?",opts:["Cherrapunji","Mawsynram","Assam","Mumbai"],ans:1,exp:"Mawsynram in Meghalaya holds the record for the highest annual rainfall in the world (~11,871 mm). Cherrapunji (also in Meghalaya) holds the record for highest rainfall in a calendar month."},
+  {q:"'Loo' is a type of wind that blows in:",opts:["North India in summers","South India in winters","West India during monsoon","East India post-monsoon"],ans:0,exp:"'Loo' is a hot, dry, and often dusty local wind that blows from the west and northwest during the hot weather season (April–June) across northern India (UP, Haryana, Punjab, Rajasthan)."},
+  {q:"The Aravalli Range is significant because it is:",opts:["Highest mountain range in India","Longest mountain range in India","Oldest mountain range in India","Most densely forested range in India"],ans:2,exp:"The Aravalli Range is the oldest mountain range in India (and one of the oldest in the world). It runs through Rajasthan and Gujarat. It acts as a barrier protecting the fertile Gangetic Plain from desert winds."},
+  {q:"Orographic rainfall occurs on:",opts:["Coastal plains","Leeward side of mountains","Windward side of mountains","Desert regions"],ans:2,exp:"Orographic (relief) rainfall occurs when moist air is forced to rise over mountains on the windward side, cools, and condenses to form rain. The Western Ghats receive heavy orographic rainfall from the South-West Monsoon."},
+  {q:"What is the name of India's first research station in Antarctica?",opts:["Maitri","Bharati","Dakshin Gangotri","Himadri"],ans:2,exp:"Dakshin Gangotri was India's first research station in Antarctica, established in 1983. It is now used as a supply base. India's current active stations are Maitri (1989) and Bharati (2012)."},
+  {q:"The Western Ghats is considered as an 'Ecological Hot Spot of India' because:",opts:["It has major gold mines","It has rich and unique biodiversity","It receives highest rainfall","It has largest tribal population"],ans:1,exp:"The Western Ghats is one of the world's eight 'hottest biodiversity hotspots.' It harbors a large variety of endemic plants and animals. (SSC CGL 2010 asked this question directly.)"},
+  {q:"Which is the largest maximum consumer of water in India among industries?",opts:["Textile","Engineering","Paper and Pulp","Thermal Power"],ans:3,exp:"Thermal Power plants are the maximum consumers of water in India among industries. Large amounts of water are needed for cooling purposes in thermal power generation. (SSC CGL 2015 asked this question.)"},
+  {q:"The Ring of Fire is associated with which ocean?",opts:["Atlantic Ocean","Indian Ocean","Arctic Ocean","Pacific Ocean"],ans:3,exp:"The Ring of Fire is a major area in the basin of the Pacific Ocean where a large number of earthquakes and volcanic eruptions occur. It encompasses about 75% of the world's volcanoes and 90% of the world's earthquakes."},
+  {q:"India surpassed which country to become the world's most populous country?",opts:["USA","Indonesia","Russia","China"],ans:3,exp:"India surpassed China to become the world's most populous nation in 2023, according to UN estimates. India's population is approximately 1.43 billion as of 2023."}
+];
+
+// ==================== QUIZ LOGIC ====================
+let cIdx=0, score=0, answered=0;
+
+function startQuiz(){
+  document.getElementById('quiz-intro').style.display='none';
+  document.getElementById('quiz-active').style.display='block';
+  document.getElementById('quiz-result').style.display='none';
+  cIdx=0; score=0; answered=0;
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const q=quizData[cIdx];
+  const total=quizData.length;
+  document.getElementById('q-pbar').style.width=((cIdx/total)*100)+'%';
+  document.getElementById('q-counter').textContent='Question '+(cIdx+1)+' of '+total;
+  document.getElementById('q-score-live').textContent='Score: '+score;
+  document.getElementById('q-text').textContent=(cIdx+1)+'. '+q.q;
+  document.getElementById('q-explanation').style.display='none';
+  document.getElementById('q-next-btn').style.display='none';
+  document.getElementById('q-status').textContent='';
+  const optsEl=document.getElementById('q-options');
+  optsEl.innerHTML='';
+  q.opts.forEach((opt,i)=>{
+    const btn=document.createElement('button');
+    btn.className='q-opt'; btn.textContent=opt;
+    btn.onclick=()=>selectAnswer(i,btn);
+    optsEl.appendChild(btn);
+  });
+}
+
+function selectAnswer(i,btn){
+
+  const q=quizData[cIdx];
+  const allOpts=document.querySelectorAll('.q-opt');
+  allOpts.forEach(b=>b.disabled=true);
+  answered++;
+  if(i===q.ans){ btn.classList.add('correct'); score++; document.getElementById('q-status').textContent='✅ Correct!'; }
+  else{ btn.classList.add('wrong'); allOpts[q.ans].classList.add('correct'); document.getElementById('q-status').textContent='❌ Incorrect'; }
+  const expEl=document.getElementById('q-explanation');
+  expEl.style.display='block';
+  expEl.innerHTML='<strong>💡 Explanation:</strong> '+q.exp;
+  document.getElementById('q-score-live').textContent='Score: '+score;
+  const nextBtn=document.getElementById('q-next-btn');
+  nextBtn.style.display='block';
+  nextBtn.textContent = (cIdx < quizData.length-1) ? 'Next →' : 'See Results 🏆';
+}
+
+function nextQuestion(){
+  cIdx++;
+  if(cIdx<quizData.length){ renderQuestion(); }
+  else{ showResult(); }
+}
+
+function showResult(){
+  document.getElementById('quiz-active').style.display='none';
+  const res=document.getElementById('quiz-result');
+  res.style.display='block';
+  const pct=Math.round((score/quizData.length)*100);
+  const wrong=answered-score;
+  const skip=quizData.length-answered;
+  document.getElementById('r-score').textContent=score+'/'+quizData.length;
+  document.getElementById('r-correct').textContent=score;
+  document.getElementById('r-wrong').textContent=wrong;
+  document.getElementById('r-pct').textContent=pct+'%';
+  document.getElementById('r-skip').textContent=skip;
+  let grade,msg;
+  if(pct>=90){grade='🥇 Excellent! (A+)'; msg='Outstanding performance! You\'re exam-ready!';}
+  else if(pct>=75){grade='🥈 Good (B+)'; msg='Great effort! Revise the topics you missed and you\'re set!';}
+  else if(pct>=60){grade='🥉 Average (C+)'; msg='Decent attempt. Focus on weak areas like Minerals and Oceans.';}
+  else if(pct>=40){grade='📚 Needs Work (D)'; msg='Keep studying! Revise the notes and take the quiz again.';}
+  else{grade='📖 Study More (F)'; msg='Don\'t be discouraged. Go through the notes carefully and retry!';}
+  document.getElementById('r-grade').textContent=grade;
+  document.getElementById('r-msg').textContent=msg;
+}
+
+function restartQuiz(){
+  document.getElementById('quiz-result').style.display='none';
+  document.getElementById('quiz-intro').style.display='block';
+}
+</script>
+</body>
+</html>

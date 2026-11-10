@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "rivers",
+    "title": "Rivers of India",
+    "file": "rivers_of_india.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "waterways",
+    "title": "National Waterways",
+    "file": "national_waterways_of_india-1.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "power-plants",
+    "title": "Power Plants",
+    "file": "power_plants_of_india_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "railway-zones",
+    "title": "Railway Zones",
+    "file": "railway_zones_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "temples",
+    "title": "Temples of India",
+    "file": "temples_of_india-1.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "cm-governors",
+    "title": "CMs & Governors",
+    "file": "chief_ministers_governors_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "festivals",
+    "title": "Festivals of India",
+    "file": "festivals_of_india-1.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "highways",
+    "title": "Highways",
+    "file": "highways_of_india-1.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "dances",
+    "title": "Dances of India",
+    "file": "dance_of_india.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "music",
+    "title": "Music of India",
+    "file": "music_of_india.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "national-parks",
+    "title": "National Parks",
+    "file": "national_parks_india.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "tribes",
+    "title": "Tribes of India",
+    "file": "tribes_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "gi-tags",
+    "title": "GI Tags",
+    "file": "gi_tags_of_india.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "ancient-dynasties",
+    "title": "Ancient Dynasties",
+    "file": "ancient_dynasties_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "medieval-empires",
+    "title": "Medieval Empires",
+    "file": "medieval_empires_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "freedom-movement",
+    "title": "Freedom Movement",
+    "file": "freedom_movement_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "monuments",
+    "title": "Historical Monuments",
+    "file": "historical_monuments_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "crops",
+    "title": "Crops & Agriculture",
+    "file": "crops_agriculture_regions_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "soils",
+    "title": "Soil Types",
+    "file": "soil_types_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "lakes",
+    "title": "Lakes of India",
+    "file": "lakes_of_india.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "biosphere-reserves",
+    "title": "Biosphere Reserves",
+    "file": "biosphere_reserves_of_india_app.html",
+    "type": "legacy-map",
+    "entityCount": 36,
+    "sampleFields": "n, hi, p"
+  },
+  {
+    "slug": "mountain-peaks",
+    "title": "Mountain Peaks",
+    "file": "mountain_peaks_of_the_world_app.html",
+    "type": "legacy-map",
+    "entityCount": 62,
+    "sampleFields": "n, h, cont, conth, cat, cath, range, rangeh"
+  },
+  {
+    "slug": "sports",
+    "title": "Sports",
+    "file": "sports_of_india_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "art-culture",
+    "title": "Art & Culture",
+    "file": "art_culture_of_india_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "books-authors",
+    "title": "Books & Authors",
+    "file": "books_authors_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "awards-honours",
+    "title": "Awards & Honours",
+    "file": "awards_honours_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "space-defence",
+    "title": "Space & Defence",
+    "file": "space_defence_of_india_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "world-gk",
+    "title": "World GK",
+    "file": "world_gk_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "physical-india",
+    "title": "Physical India",
+    "file": "physical_india_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "india-basics",
+    "title": "India Basics",
+    "file": "india_basics_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "battles-treaties",
+    "title": "Battles & Treaties",
+    "file": "battles_treaties_india_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "science-facts",
+    "title": "Science Facts",
+    "file": "science_facts_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  },
+  {
+    "slug": "quick-facts",
+    "title": "Quick Facts",
+    "file": "quick_facts_app.html",
+    "type": "study-edition (unparsed JSON)",
+    "entityCount": 0,
+    "sampleFields": ""
+  }
+]
