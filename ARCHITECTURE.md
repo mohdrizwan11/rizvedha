@@ -233,3 +233,4 @@ npm run test:e2e:sprint
 1. **GOLD:** Confirmed against two independent, directly fetched official/authoritative sources (e.g. NCERT + Britannica or Government Ministry portal).
 2. **SILVER:** Supported by one reliable fetched source; awaiting second independent confirmation.
 3. **BRONZE / UNVERIFIED:** Needs review; must be explicitly marked unverified. Never invent questions, answers, years, or frequencies.
+

@@ -32,3 +32,4 @@ Historical sprint logs, verification queues, and audit reports:
 | [`reports/MAP-DATA.md`](reports/MAP-DATA.md) | Lineage and transformation of TopoJSON geometry (Natural Earth / Bharatlas), boundary caveats. |
 | [`reports/V3-TOC-REVIEW.md`](reports/V3-TOC-REVIEW.md) | Comprehensive review and audit of the 84-chapter Table of Contents. |
 | [`reports/batch2-build.log`](reports/batch2-build.log) | Reference build output and bundle analysis from Batch 2 build. |
+

@@ -1,0 +1,1138 @@
+{
+  "items": [
+    {
+      "n": "Ganga",
+      "h": "गंगा",
+      "org": "Gangotri Glacier (Gaumukh)",
+      "orgh": "गंगोत्री हिमनद (गौमुख)",
+      "olat": 30.99,
+      "olng": 79.07,
+      "drain": "Bay of Bengal",
+      "drainh": "बंगाल की खाड़ी",
+      "L": 2525,
+      "st": "UK, UP, Bihar, WB",
+      "sh": "उत्तराखंड, यूपी, बिहार, प.बंगाल",
+      "tr": "Yamuna, Ghaghara, Gandak, Kosi, Son",
+      "trh": "यमुना, घाघरा, गंडक, कोसी, सोन",
+      "fact": "India's longest & holiest river; Bhagirathi+Alaknanda meet at Devprayag to form Ganga.",
+      "facth": "भारत की सबसे लंबी व पवित्र नदी; देवप्रयाग में भागीरथी+अलकनंदा मिलकर गंगा बनती हैं।",
+      "rg": "N",
+      "d": 1,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          79.07,
+          30.99
+        ],
+        [
+          78.6,
+          30.15
+        ],
+        [
+          78.16,
+          29.95
+        ],
+        [
+          80.33,
+          26.45
+        ],
+        [
+          81.85,
+          25.43
+        ],
+        [
+          82.97,
+          25.32
+        ],
+        [
+          85.14,
+          25.59
+        ],
+        [
+          87,
+          25.25
+        ],
+        [
+          87.93,
+          24.8
+        ],
+        [
+          88.36,
+          22.57
+        ],
+        [
+          88.1,
+          21.7
+        ]
+      ]
+    },
+    {
+      "n": "Yamuna",
+      "h": "यमुना",
+      "org": "Yamunotri Glacier",
+      "orgh": "यमुनोत्री हिमनद",
+      "olat": 31.01,
+      "olng": 78.45,
+      "drain": "Joins Ganga at Prayagraj",
+      "drainh": "प्रयागराज में गंगा से संगम",
+      "L": 1376,
+      "st": "UK, HR, Delhi, UP",
+      "sh": "उत्तराखंड, हरियाणा, दिल्ली, यूपी",
+      "tr": "Chambal, Betwa, Ken, Sind",
+      "trh": "चंबल, बेतवा, केन, सिंध",
+      "fact": "Largest tributary of the Ganga; meets it at the Triveni Sangam, Prayagraj.",
+      "facth": "गंगा की सबसे बड़ी सहायक; प्रयागराज के त्रिवेणी संगम में मिलती है।",
+      "rg": "N",
+      "d": 1,
+      "out": "in",
+      "parent": "Ganga",
+      "wp": [
+        [
+          78.45,
+          31.01
+        ],
+        [
+          77.23,
+          28.66
+        ],
+        [
+          77.67,
+          27.49
+        ],
+        [
+          78.02,
+          27.18
+        ],
+        [
+          79,
+          26.7
+        ],
+        [
+          81.85,
+          25.43
+        ]
+      ]
+    },
+    {
+      "n": "Indus",
+      "h": "सिंधु",
+      "org": "Near Lake Mansarovar, Tibet",
+      "orgh": "मानसरोवर झील, तिब्बत",
+      "olat": 31,
+      "olng": 81.8,
+      "drain": "Arabian Sea (via Pakistan)",
+      "drainh": "अरब सागर (पाकिस्तान)",
+      "L": 3180,
+      "st": "Ladakh",
+      "sh": "लद्दाख",
+      "tr": "Jhelum, Chenab, Ravi, Beas, Sutlej",
+      "trh": "झेलम, चिनाब, रावी, ब्यास, सतलज",
+      "fact": "Originates in Tibet; only its upper course & Ladakh lie in India. Indus Waters Treaty 1960.",
+      "facth": "तिब्बत में उद्गम; केवल ऊपरी भाग व लद्दाख भारत में। सिंधु जल संधि 1960।",
+      "rg": "N",
+      "d": 1,
+      "out": "out",
+      "parent": null,
+      "wp": [
+        [
+          81.8,
+          31
+        ],
+        [
+          79,
+          33.3
+        ],
+        [
+          77.58,
+          34.15
+        ],
+        [
+          76,
+          35
+        ],
+        [
+          74.5,
+          35.3
+        ],
+        [
+          73,
+          34.5
+        ]
+      ]
+    },
+    {
+      "n": "Brahmaputra",
+      "h": "ब्रह्मपुत्र",
+      "org": "Angsi Glacier (Kailash range), Tibet",
+      "orgh": "अंग्सी हिमनद, तिब्बत",
+      "olat": 30.95,
+      "olng": 82.2,
+      "drain": "Bay of Bengal",
+      "drainh": "बंगाल की खाड़ी",
+      "L": 2900,
+      "st": "Arunachal, Assam",
+      "sh": "अरुणाचल, असम",
+      "tr": "Subansiri, Manas, Teesta, Dibang",
+      "trh": "सुबनसिरी, मानस, तीस्ता, दिबांग",
+      "fact": "Called Tsangpo in Tibet, Siang in Arunachal; a braided river prone to floods.",
+      "facth": "तिब्बत में त्संगपो, अरुणाचल में सियांग; बाढ़-प्रवण विसर्पी नदी।",
+      "rg": "NE",
+      "d": 1,
+      "out": "out",
+      "parent": null,
+      "wp": [
+        [
+          82.2,
+          30.95
+        ],
+        [
+          88,
+          29.3
+        ],
+        [
+          94,
+          29.3
+        ],
+        [
+          95.4,
+          28.5
+        ],
+        [
+          94.91,
+          27.48
+        ],
+        [
+          91.74,
+          26.14
+        ],
+        [
+          90,
+          25.2
+        ],
+        [
+          90.3,
+          23.8
+        ]
+      ]
+    },
+    {
+      "n": "Sutlej",
+      "h": "सतलज",
+      "org": "Rakshastal Lake, Tibet",
+      "orgh": "राक्षसताल झील, तिब्बत",
+      "olat": 30.7,
+      "olng": 81.2,
+      "drain": "Joins the Indus (via Punjab)",
+      "drainh": "सिंधु में मिलती है",
+      "L": 1450,
+      "st": "HP, Punjab",
+      "sh": "हिमाचल, पंजाब",
+      "tr": "Beas, Spiti, Baspa",
+      "trh": "ब्यास, स्पीति, बसपा",
+      "fact": "Easternmost Indus tributary; site of the Bhakra-Nangal Dam.",
+      "facth": "सिंधु की सबसे पूर्वी सहायक; भाखड़ा-नांगल बांध यहीं।",
+      "rg": "N",
+      "d": 2,
+      "out": "out",
+      "parent": "Indus",
+      "wp": [
+        [
+          81.2,
+          30.7
+        ],
+        [
+          78.7,
+          31.8
+        ],
+        [
+          76.43,
+          31.41
+        ],
+        [
+          75.2,
+          31.1
+        ],
+        [
+          74.2,
+          30.9
+        ]
+      ]
+    },
+    {
+      "n": "Chenab",
+      "h": "चिनाब",
+      "org": "Bara Lacha Pass (Chandra+Bhaga), HP",
+      "orgh": "बारालाचा दर्रा, हिमाचल",
+      "olat": 32.7,
+      "olng": 77.4,
+      "drain": "Joins the Indus",
+      "drainh": "सिंधु में मिलती है",
+      "L": 960,
+      "st": "HP, J&K",
+      "sh": "हिमाचल, ज&क",
+      "tr": "Marusudar, Tawi",
+      "trh": "मरुसुदर, तवी",
+      "fact": "Largest of the five Punjab rivers; formed by Chandra & Bhaga (Chandrabhaga).",
+      "facth": "पंजाब की पाँच नदियों में सबसे बड़ी; चंद्रा व भागा से बनी।",
+      "rg": "N",
+      "d": 2,
+      "out": "in",
+      "parent": "Indus",
+      "wp": [
+        [
+          77.4,
+          32.7
+        ],
+        [
+          76,
+          33.2
+        ],
+        [
+          75,
+          33
+        ],
+        [
+          74,
+          32.9
+        ]
+      ]
+    },
+    {
+      "n": "Jhelum",
+      "h": "झेलम",
+      "org": "Verinag Spring, Kashmir",
+      "orgh": "वेरीनाग झरना, कश्मीर",
+      "olat": 33.53,
+      "olng": 75.25,
+      "drain": "Joins the Chenab",
+      "drainh": "चिनाब में मिलती है",
+      "L": 725,
+      "st": "J&K",
+      "sh": "ज&क",
+      "tr": "Lidder, Sind, Pohru",
+      "trh": "लिद्दर, सिंध, पोहरू",
+      "fact": "Flows through Srinagar & Wular Lake; westernmost of the five Punjab rivers.",
+      "facth": "श्रीनगर व वुलर झील से बहती; पंजाब की पाँच नदियों में सबसे पश्चिमी।",
+      "rg": "N",
+      "d": 2,
+      "out": "in",
+      "parent": "Chenab",
+      "wp": [
+        [
+          75.25,
+          33.53
+        ],
+        [
+          74.8,
+          34.08
+        ],
+        [
+          74.4,
+          34.3
+        ],
+        [
+          74,
+          34
+        ]
+      ]
+    },
+    {
+      "n": "Ravi",
+      "h": "रावी",
+      "org": "Bara Bangal, HP",
+      "orgh": "बड़ा भंगाल, हिमाचल",
+      "olat": 32.4,
+      "olng": 76.8,
+      "drain": "Joins the Chenab",
+      "drainh": "चिनाब में मिलती है",
+      "L": 720,
+      "st": "HP, Punjab",
+      "sh": "हिमाचल, पंजाब",
+      "tr": "Budhil, Siul",
+      "trh": "बुधिल, सिउल",
+      "fact": "Flows past Chamba; the smallest of the five Punjab rivers.",
+      "facth": "चंबा से बहती; पंजाब की पाँच नदियों में सबसे छोटी।",
+      "rg": "N",
+      "d": 2,
+      "out": "in",
+      "parent": "Chenab",
+      "wp": [
+        [
+          76.8,
+          32.4
+        ],
+        [
+          76.13,
+          32.55
+        ],
+        [
+          75.65,
+          32.27
+        ],
+        [
+          75,
+          32
+        ]
+      ]
+    },
+    {
+      "n": "Beas",
+      "h": "ब्यास",
+      "org": "Beas Kund, Rohtang Pass, HP",
+      "orgh": "ब्यास कुंड, रोहतांग, हिमाचल",
+      "olat": 32.37,
+      "olng": 77.1,
+      "drain": "Joins the Sutlej at Harike",
+      "drainh": "हरिके में सतलज से संगम",
+      "L": 470,
+      "st": "HP, Punjab",
+      "sh": "हिमाचल, पंजाब",
+      "tr": "Parbati, Sainj",
+      "trh": "पार्वती, सैंज",
+      "fact": "Entirely within India; joins the Sutlej at Harike wetland.",
+      "facth": "पूर्णतः भारत में; हरिके में सतलज से मिलती है।",
+      "rg": "N",
+      "d": 2,
+      "out": "in",
+      "parent": "Sutlej",
+      "wp": [
+        [
+          77.1,
+          32.37
+        ],
+        [
+          77.1,
+          31.96
+        ],
+        [
+          76.93,
+          31.71
+        ],
+        [
+          75.2,
+          31.17
+        ]
+      ]
+    },
+    {
+      "n": "Ghaghara",
+      "h": "घाघरा",
+      "org": "Mapchachungo Glacier, Tibet",
+      "orgh": "मापचाचुंगो हिमनद, तिब्बत",
+      "olat": 30.3,
+      "olng": 81.3,
+      "drain": "Joins the Ganga",
+      "drainh": "गंगा में मिलती है",
+      "L": 1080,
+      "st": "Nepal, UP, Bihar",
+      "sh": "नेपाल, यूपी, बिहार",
+      "tr": "Sharda (Kali), Rapti",
+      "trh": "शारदा (काली), राप्ती",
+      "fact": "Called Karnali in Nepal; largest tributary of the Ganga by volume.",
+      "facth": "नेपाल में करनाली; आयतन में गंगा की सबसे बड़ी सहायक।",
+      "rg": "N",
+      "d": 2,
+      "out": "out",
+      "parent": "Ganga",
+      "wp": [
+        [
+          81.3,
+          30.3
+        ],
+        [
+          81.2,
+          28.4
+        ],
+        [
+          82.5,
+          27
+        ],
+        [
+          84.75,
+          25.78
+        ]
+      ]
+    },
+    {
+      "n": "Gandak",
+      "h": "गंडक",
+      "org": "Nhubine Himal Glacier, Nepal",
+      "orgh": "न्हुबिने हिमाल, नेपाल",
+      "olat": 29.3,
+      "olng": 84.1,
+      "drain": "Joins the Ganga at Hajipur",
+      "drainh": "हाजीपुर में गंगा से संगम",
+      "L": 630,
+      "st": "Nepal, Bihar",
+      "sh": "नेपाल, बिहार",
+      "tr": "Trishuli, Kali Gandaki",
+      "trh": "त्रिशूली, काली गंडकी",
+      "fact": "Called Gandaki/Narayani in Nepal; meets the Ganga near Patna.",
+      "facth": "नेपाल में गंडकी/नारायणी; पटना के पास गंगा से मिलती।",
+      "rg": "N",
+      "d": 3,
+      "out": "out",
+      "parent": "Ganga",
+      "wp": [
+        [
+          84.1,
+          29.3
+        ],
+        [
+          84.4,
+          27.5
+        ],
+        [
+          85.2,
+          25.7
+        ]
+      ]
+    },
+    {
+      "n": "Kosi",
+      "h": "कोसी",
+      "org": "Tibet/Nepal (Sapta Kosi)",
+      "orgh": "तिब्बत/नेपाल (सप्त कोसी)",
+      "olat": 28,
+      "olng": 86.5,
+      "drain": "Joins the Ganga",
+      "drainh": "गंगा में मिलती है",
+      "L": 720,
+      "st": "Nepal, Bihar",
+      "sh": "नेपाल, बिहार",
+      "tr": "Sun Kosi, Arun, Tamur",
+      "trh": "सुन कोसी, अरुण, तमुर",
+      "fact": "The 'Sorrow of Bihar' — notorious for shifting course & floods.",
+      "facth": "'बिहार का शोक' — मार्ग बदलने व बाढ़ के लिए कुख्यात।",
+      "rg": "N",
+      "d": 2,
+      "out": "out",
+      "parent": "Ganga",
+      "wp": [
+        [
+          86.5,
+          28
+        ],
+        [
+          87,
+          26.5
+        ],
+        [
+          87.2,
+          25.4
+        ]
+      ]
+    },
+    {
+      "n": "Teesta",
+      "h": "तीस्ता",
+      "org": "Tso Lhamo Lake, Sikkim",
+      "orgh": "त्सो ल्हामो झील, सिक्किम",
+      "olat": 28,
+      "olng": 88.7,
+      "drain": "Joins the Brahmaputra",
+      "drainh": "ब्रह्मपुत्र में मिलती है",
+      "L": 315,
+      "st": "Sikkim, WB",
+      "sh": "सिक्किम, प.बंगाल",
+      "tr": "Rangeet, Rangpo",
+      "trh": "रंगीत, रंगपो",
+      "fact": "Lifeline of Sikkim; joins the Brahmaputra in Bangladesh.",
+      "facth": "सिक्किम की जीवनरेखा; बांग्लादेश में ब्रह्मपुत्र से मिलती।",
+      "rg": "NE",
+      "d": 3,
+      "out": "in",
+      "parent": "Brahmaputra",
+      "wp": [
+        [
+          88.7,
+          28
+        ],
+        [
+          88.5,
+          27.3
+        ],
+        [
+          88.4,
+          26.7
+        ],
+        [
+          89.6,
+          25.8
+        ]
+      ]
+    },
+    {
+      "n": "Godavari",
+      "h": "गोदावरी",
+      "org": "Trimbakeshwar, Nashik, Maharashtra",
+      "orgh": "त्र्यंबकेश्वर, नासिक, महाराष्ट्र",
+      "olat": 19.93,
+      "olng": 73.53,
+      "drain": "Bay of Bengal",
+      "drainh": "बंगाल की खाड़ी",
+      "L": 1465,
+      "st": "MH, Telangana, AP",
+      "sh": "महाराष्ट्र, तेलंगाना, आं.प्र.",
+      "tr": "Pranhita, Indravati, Manjira",
+      "trh": "प्राणहिता, इंद्रावती, मंजीरा",
+      "fact": "Largest peninsular river — the 'Dakshin Ganga' (Ganga of the South).",
+      "facth": "सबसे बड़ी प्रायद्वीपीय नदी — 'दक्षिण गंगा'।",
+      "rg": "S",
+      "d": 1,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          73.53,
+          19.93
+        ],
+        [
+          77.32,
+          19.15
+        ],
+        [
+          79.5,
+          18.9
+        ],
+        [
+          81.78,
+          17
+        ],
+        [
+          82.3,
+          16.3
+        ]
+      ]
+    },
+    {
+      "n": "Krishna",
+      "h": "कृष्णा",
+      "org": "Mahabaleshwar, Maharashtra",
+      "orgh": "महाबलेश्वर, महाराष्ट्र",
+      "olat": 17.92,
+      "olng": 73.66,
+      "drain": "Bay of Bengal",
+      "drainh": "बंगाल की खाड़ी",
+      "L": 1400,
+      "st": "MH, Karnataka, Telangana, AP",
+      "sh": "महा., कर्नाटक, तेलंगाना, आं.प्र.",
+      "tr": "Tungabhadra, Bhima, Koyna",
+      "trh": "तुंगभद्रा, भीमा, कोयना",
+      "fact": "Second-largest peninsular river; Tungabhadra is its biggest tributary.",
+      "facth": "दूसरी सबसे बड़ी प्रायद्वीपीय नदी; तुंगभद्रा सबसे बड़ी सहायक।",
+      "rg": "S",
+      "d": 1,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          73.66,
+          17.92
+        ],
+        [
+          74.57,
+          16.85
+        ],
+        [
+          78,
+          16.5
+        ],
+        [
+          80.62,
+          16.51
+        ],
+        [
+          81,
+          15.8
+        ]
+      ]
+    },
+    {
+      "n": "Kaveri",
+      "h": "कावेरी",
+      "org": "Talakaveri, Brahmagiri Hills, Karnataka",
+      "orgh": "तालकावेरी, ब्रह्मगिरि, कर्नाटक",
+      "olat": 12.39,
+      "olng": 75.49,
+      "drain": "Bay of Bengal",
+      "drainh": "बंगाल की खाड़ी",
+      "L": 805,
+      "st": "Karnataka, Tamil Nadu",
+      "sh": "कर्नाटक, तमिलनाडु",
+      "tr": "Kabini, Bhavani, Amaravati",
+      "trh": "कबिनी, भवानी, अमरावती",
+      "fact": "The 'Ganga of the South' for Tamils; Sivasamudram falls lie on it.",
+      "facth": "तमिलों की 'दक्षिण गंगा'; शिवसमुद्रम जलप्रपात इसी पर।",
+      "rg": "S",
+      "d": 1,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          75.49,
+          12.39
+        ],
+        [
+          76.69,
+          12.41
+        ],
+        [
+          77.8,
+          12
+        ],
+        [
+          78.7,
+          10.79
+        ],
+        [
+          79.85,
+          11.15
+        ]
+      ]
+    },
+    {
+      "n": "Narmada",
+      "h": "नर्मदा",
+      "org": "Amarkantak Plateau, MP",
+      "orgh": "अमरकंटक पठार, मध्य प्रदेश",
+      "olat": 22.67,
+      "olng": 81.76,
+      "drain": "Arabian Sea (Gulf of Khambhat)",
+      "drainh": "अरब सागर (खंभात की खाड़ी)",
+      "L": 1312,
+      "st": "MP, Maharashtra, Gujarat",
+      "sh": "म.प्र., महा., गुजरात",
+      "tr": "Tawa, Hiran, Orsang",
+      "trh": "तवा, हिरण, ओरसांग",
+      "fact": "Largest WEST-flowing river; runs through a rift valley between Vindhya & Satpura.",
+      "facth": "सबसे बड़ी पश्चिम-वाहिनी नदी; विंध्य-सतपुड़ा के बीच भ्रंश घाटी में बहती।",
+      "rg": "C",
+      "d": 1,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          81.76,
+          22.67
+        ],
+        [
+          79.95,
+          23.16
+        ],
+        [
+          77.73,
+          22.75
+        ],
+        [
+          74.5,
+          22
+        ],
+        [
+          72.98,
+          21.7
+        ],
+        [
+          72.6,
+          21.5
+        ]
+      ]
+    },
+    {
+      "n": "Tapti",
+      "h": "ताप्ती",
+      "org": "Multai, Betul, MP",
+      "orgh": "मुलताई, बैतूल, म.प्र.",
+      "olat": 21.77,
+      "olng": 78.23,
+      "drain": "Arabian Sea (Gulf of Khambhat)",
+      "drainh": "अरब सागर (खंभात की खाड़ी)",
+      "L": 724,
+      "st": "MP, Maharashtra, Gujarat",
+      "sh": "म.प्र., महा., गुजरात",
+      "tr": "Purna, Girna",
+      "trh": "पूर्णा, गिरना",
+      "fact": "West-flowing river running parallel & south of the Narmada.",
+      "facth": "नर्मदा के समानांतर व दक्षिण में बहने वाली पश्चिम-वाहिनी नदी।",
+      "rg": "W",
+      "d": 2,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          78.23,
+          21.77
+        ],
+        [
+          76.23,
+          21.3
+        ],
+        [
+          74,
+          21.2
+        ],
+        [
+          72.83,
+          21.17
+        ],
+        [
+          72.6,
+          21
+        ]
+      ]
+    },
+    {
+      "n": "Mahanadi",
+      "h": "महानदी",
+      "org": "Sihawa, Dhamtari, Chhattisgarh",
+      "orgh": "सिहावा, धमतरी, छत्तीसगढ़",
+      "olat": 20.28,
+      "olng": 81.95,
+      "drain": "Bay of Bengal",
+      "drainh": "बंगाल की खाड़ी",
+      "L": 858,
+      "st": "Chhattisgarh, Odisha",
+      "sh": "छत्तीसगढ़, ओडिशा",
+      "tr": "Seonath, Hasdeo, Tel",
+      "trh": "शिवनाथ, हसदेव, तेल",
+      "fact": "Hirakud, one of the world's longest dams, is built across it.",
+      "facth": "विश्व के सबसे लंबे बांधों में से एक हीराकुंड इसी पर।",
+      "rg": "E",
+      "d": 2,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          81.95,
+          20.28
+        ],
+        [
+          82.5,
+          21
+        ],
+        [
+          83.87,
+          21.47
+        ],
+        [
+          85.88,
+          20.46
+        ],
+        [
+          86.7,
+          20.3
+        ]
+      ]
+    },
+    {
+      "n": "Chambal",
+      "h": "चंबल",
+      "org": "Janapav Hill, Mhow, MP",
+      "orgh": "जानापाव पहाड़ी, महू, म.प्र.",
+      "olat": 22.5,
+      "olng": 75.6,
+      "drain": "Joins the Yamuna",
+      "drainh": "यमुना में मिलती है",
+      "L": 960,
+      "st": "MP, Rajasthan, UP",
+      "sh": "म.प्र., राजस्थान, यूपी",
+      "tr": "Banas, Kali Sindh, Parbati",
+      "trh": "बनास, काली सिंध, पार्वती",
+      "fact": "Famous for ravines & the Gandhi Sagar / Kota dams; a Yamuna tributary.",
+      "facth": "बीहड़ों व गांधी सागर/कोटा बांधों के लिए प्रसिद्ध; यमुना की सहायक।",
+      "rg": "C",
+      "d": 2,
+      "out": "in",
+      "parent": "Yamuna",
+      "wp": [
+        [
+          75.6,
+          22.5
+        ],
+        [
+          75.83,
+          25.18
+        ],
+        [
+          77.5,
+          26.4
+        ],
+        [
+          79,
+          26.7
+        ]
+      ]
+    },
+    {
+      "n": "Betwa",
+      "h": "बेतवा",
+      "org": "Vindhya Range, Raisen, MP",
+      "orgh": "विंध्य श्रेणी, रायसेन, म.प्र.",
+      "olat": 23,
+      "olng": 77.7,
+      "drain": "Joins the Yamuna at Hamirpur",
+      "drainh": "हमीरपुर में यमुना से संगम",
+      "L": 590,
+      "st": "MP, UP",
+      "sh": "म.प्र., यूपी",
+      "tr": "Dhasan, Jamni",
+      "trh": "धसान, जमनी",
+      "fact": "Flows past Orchha; a major right-bank tributary of the Yamuna.",
+      "facth": "ओरछा से बहती; यमुना की सहायक नदी।",
+      "rg": "C",
+      "d": 3,
+      "out": "in",
+      "parent": "Yamuna",
+      "wp": [
+        [
+          77.7,
+          23
+        ],
+        [
+          78.64,
+          25.35
+        ],
+        [
+          80.15,
+          25.95
+        ]
+      ]
+    },
+    {
+      "n": "Son",
+      "h": "सोन",
+      "org": "Amarkantak, MP",
+      "orgh": "अमरकंटक, म.प्र.",
+      "olat": 22.7,
+      "olng": 81.7,
+      "drain": "Joins the Ganga",
+      "drainh": "गंगा में मिलती है",
+      "L": 784,
+      "st": "MP, UP, Jharkhand, Bihar",
+      "sh": "म.प्र., यूपी, झारखंड, बिहार",
+      "tr": "Rihand, North Koel",
+      "trh": "रिहंद, उत्तरी कोयल",
+      "fact": "Rises near the Narmada at Amarkantak but flows NE into the Ganga.",
+      "facth": "अमरकंटक में नर्मदा के पास उद्गम पर उत्तर-पूर्व में गंगा की ओर बहती।",
+      "rg": "C",
+      "d": 3,
+      "out": "in",
+      "parent": "Ganga",
+      "wp": [
+        [
+          81.7,
+          22.7
+        ],
+        [
+          82.8,
+          24.2
+        ],
+        [
+          84,
+          24.8
+        ],
+        [
+          84.9,
+          25.6
+        ]
+      ]
+    },
+    {
+      "n": "Damodar",
+      "h": "दामोदर",
+      "org": "Chhotanagpur Plateau, Jharkhand",
+      "orgh": "छोटानागपुर पठार, झारखंड",
+      "olat": 23.6,
+      "olng": 84.7,
+      "drain": "Joins the Hooghly",
+      "drainh": "हुगली में मिलती है",
+      "L": 592,
+      "st": "Jharkhand, WB",
+      "sh": "झारखंड, प.बंगाल",
+      "tr": "Barakar, Konar",
+      "trh": "बराकर, कोनार",
+      "fact": "Once the 'Sorrow of Bengal'; tamed by the Damodar Valley Corporation (DVC).",
+      "facth": "कभी 'बंगाल का शोक'; दामोदर घाटी निगम (DVC) ने नियंत्रित किया।",
+      "rg": "E",
+      "d": 2,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          84.7,
+          23.6
+        ],
+        [
+          86.4,
+          23.8
+        ],
+        [
+          87.3,
+          23.5
+        ],
+        [
+          88,
+          22.3
+        ]
+      ]
+    },
+    {
+      "n": "Sabarmati",
+      "h": "साबरमती",
+      "org": "Aravalli Range, Udaipur, Rajasthan",
+      "orgh": "अरावली, उदयपुर, राजस्थान",
+      "olat": 24.3,
+      "olng": 73.4,
+      "drain": "Arabian Sea (Gulf of Khambhat)",
+      "drainh": "अरब सागर (खंभात की खाड़ी)",
+      "L": 371,
+      "st": "Rajasthan, Gujarat",
+      "sh": "राजस्थान, गुजरात",
+      "tr": "Wakal, Hathmati",
+      "trh": "वाकल, हाथमती",
+      "fact": "Ahmedabad sits on its banks; home to Gandhi's Sabarmati Ashram.",
+      "facth": "अहमदाबाद इसके तट पर; गांधी का साबरमती आश्रम यहीं।",
+      "rg": "W",
+      "d": 3,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          73.4,
+          24.3
+        ],
+        [
+          72.9,
+          23.6
+        ],
+        [
+          72.58,
+          23.03
+        ],
+        [
+          72.6,
+          22.3
+        ]
+      ]
+    },
+    {
+      "n": "Mahi",
+      "h": "माही",
+      "org": "Vindhya, Dhar, MP",
+      "orgh": "विंध्य, धार, म.प्र.",
+      "olat": 22.4,
+      "olng": 74.9,
+      "drain": "Arabian Sea (Gulf of Khambhat)",
+      "drainh": "अरब सागर (खंभात की खाड़ी)",
+      "L": 580,
+      "st": "MP, Rajasthan, Gujarat",
+      "sh": "म.प्र., राजस्थान, गुजरात",
+      "tr": "Som, Anas, Panam",
+      "trh": "सोम, अनास, पनाम",
+      "fact": "One of the few rivers to cross the Tropic of Cancer twice.",
+      "facth": "कर्क रेखा को दो बार पार करने वाली गिनी-चुनी नदियों में से एक।",
+      "rg": "W",
+      "d": 3,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          74.9,
+          22.4
+        ],
+        [
+          74,
+          23.5
+        ],
+        [
+          73,
+          22.8
+        ],
+        [
+          72.9,
+          22.3
+        ]
+      ]
+    },
+    {
+      "n": "Luni",
+      "h": "लूनी",
+      "org": "Naga Hills, Aravalli (Ajmer), Rajasthan",
+      "orgh": "नाग पहाड़ी, अरावली (अजमेर), राजस्थान",
+      "olat": 26.4,
+      "olng": 74.6,
+      "drain": "Rann of Kutch",
+      "drainh": "कच्छ का रण",
+      "L": 495,
+      "st": "Rajasthan, Gujarat",
+      "sh": "राजस्थान, गुजरात",
+      "tr": "Sukri, Jawai, Bandi",
+      "trh": "सुकरी, जवाई, बांडी",
+      "fact": "Rajasthan's main river; turns saline downstream & ends in the Rann of Kutch.",
+      "facth": "राजस्थान की मुख्य नदी; आगे खारी होकर कच्छ के रण में समाप्त।",
+      "rg": "W",
+      "d": 3,
+      "out": "in",
+      "parent": null,
+      "wp": [
+        [
+          74.6,
+          26.4
+        ],
+        [
+          73,
+          25.3
+        ],
+        [
+          71.8,
+          24.6
+        ],
+        [
+          71,
+          24
+        ]
+      ]
+    },
+    {
+      "n": "Tungabhadra",
+      "h": "तुंगभद्रा",
+      "org": "Koodli, Karnataka (Tunga+Bhadra)",
+      "orgh": "कूडली, कर्नाटक (तुंगा+भद्रा)",
+      "olat": 14,
+      "olng": 75.7,
+      "drain": "Joins the Krishna",
+      "drainh": "कृष्णा में मिलती है",
+      "L": 531,
+      "st": "Karnataka, AP, Telangana",
+      "sh": "कर्नाटक, आं.प्र., तेलंगाना",
+      "tr": "Vedavati, Hagari",
+      "trh": "वेदवती, हगरी",
+      "fact": "Flows past Hampi (Vijayanagara); the largest tributary of the Krishna.",
+      "facth": "हम्पी (विजयनगर) से बहती; कृष्णा की सबसे बड़ी सहायक।",
+      "rg": "S",
+      "d": 3,
+      "out": "in",
+      "parent": "Krishna",
+      "wp": [
+        [
+          75.7,
+          14
+        ],
+        [
+          76.47,
+          15.33
+        ],
+        [
+          77.5,
+          15.9
+        ],
+        [
+          78.3,
+          16
+        ]
+      ]
+    }
+  ],
+  "arrayName": "RIVERS"
+}

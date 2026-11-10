@@ -1,0 +1,2262 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "awards-honours",
+  "file": "awards_honours_app.html",
+  "mode": "deck",
+  "storageKey": "ssc_awards_honours_v1",
+  "icon": "🏆",
+  "description": "Bilingual study app on awards and honours for SSC: civilian, gallantry, sports, literary, film, science and international awards, with quick quizzes and exam notes on recipients.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Awards & Honours",
+      "पुरस्कार और सम्मान"
+    ],
+    "hSub": [
+      "SSC Focus · Awards and honours",
+      "SSC फोकस · पुरस्कार और सम्मान"
+    ],
+    "learnTtl": [
+      "Learn awards",
+      "पुरस्कार सीखें"
+    ],
+    "learnSub": [
+      "Open any award to read what it honours, who gives it, since when and its famous recipients.",
+      "किसी भी पुरस्कार को खोलकर पढ़ें कि वह किसके लिए है, कौन देता है, कब से और उसके प्रसिद्ध प्राप्तकर्ता।"
+    ],
+    "lvlLabel": [
+      "Level · Awards GK rank",
+      "स्तर · पुरस्कार GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search awards",
+      "पुरस्कार खोजें"
+    ],
+    "searchPh": [
+      "Award, field or recipient",
+      "पुरस्कार, क्षेत्र या प्राप्तकर्ता"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Awards",
+      "पुरस्कार"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten quick questions on what each award honours, who gives it and famous recipients. Each answer comes with an explanation.",
+      "हर पुरस्कार किसके लिए है, कौन देता है और प्रसिद्ध प्राप्तकर्ता पर दस छोटे प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "howto": [
+      "Play: ten quick questions with four options and an explanation for each. Choose a topic, or \"My mistakes\" to revise the questions you got wrong (also saved in the app's Mistake Diary).\nLearn → Awards: 41 entries on civilian, gallantry, sports, literary, film, science and international awards.\nLearn → Exam notes: Bharat Ratna facts, Nobel laureates linked to India, the order of gallantry awards and recent winners.\nStats: your accuracy, best streak, level and badges.\nFacts were checked in October 2026.",
+      "खेलें: चार विकल्पों वाले दस छोटे प्रश्न, हर एक की व्याख्या के साथ। कोई विषय चुनें, या गलत हुए प्रश्न दोहराने के लिए \"मेरी गलतियाँ\" (ये ऐप की गलती डायरी में भी सुरक्षित होते हैं)।\nसीखें → पुरस्कार: 41 प्रविष्टियाँ नागरिक, वीरता, खेल, साहित्य, फ़िल्म, विज्ञान और अंतरराष्ट्रीय पुरस्कारों पर।\nसीखें → परीक्षा नोट्स: भारत रत्न तथ्य, भारत से जुड़े नोबेल विजेता, वीरता पुरस्कारों का क्रम और हाल के विजेता।\nआँकड़े: आपकी सटीकता, सबसे लंबी स्ट्रीक, स्तर और बैज।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "civil",
+      "icon": "🎖️",
+      "col": "#B8860B",
+      "t": [
+        "Civilian",
+        "नागरिक"
+      ]
+    },
+    {
+      "k": "gallant",
+      "icon": "🪖",
+      "col": "#33691E",
+      "t": [
+        "Gallantry",
+        "वीरता"
+      ]
+    },
+    {
+      "k": "sport",
+      "icon": "🏅",
+      "col": "#1565C0",
+      "t": [
+        "Sports",
+        "खेल"
+      ]
+    },
+    {
+      "k": "lit",
+      "icon": "📚",
+      "col": "#6A1B9A",
+      "t": [
+        "Literature",
+        "साहित्य"
+      ]
+    },
+    {
+      "k": "arts",
+      "icon": "🎬",
+      "col": "#C2185B",
+      "t": [
+        "Film, music & arts",
+        "फ़िल्म, संगीत और कला"
+      ]
+    },
+    {
+      "k": "sci",
+      "icon": "🔬",
+      "col": "#00838F",
+      "t": [
+        "Science & maths",
+        "विज्ञान और गणित"
+      ]
+    },
+    {
+      "k": "intl",
+      "icon": "🌐",
+      "col": "#455A64",
+      "t": [
+        "Peace & international",
+        "शांति और अंतरराष्ट्रीय"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "fd",
+      "t": [
+        "Given for",
+        "किसके लिए"
+      ]
+    },
+    {
+      "k": "by",
+      "t": [
+        "Given by",
+        "प्रदाता"
+      ]
+    },
+    {
+      "k": "est",
+      "t": [
+        "Since",
+        "कब से"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Know this",
+        "यह जानें"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "fd"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Nominee",
+      "hi": "नामांकित"
+    },
+    {
+      "min": 60,
+      "en": "Shortlisted",
+      "hi": "चयनित"
+    },
+    {
+      "min": 150,
+      "en": "Honouree",
+      "hi": "सम्मानित"
+    },
+    {
+      "min": 320,
+      "en": "Medal Winner",
+      "hi": "पदक विजेता"
+    },
+    {
+      "min": 560,
+      "en": "Laureate",
+      "hi": "पुरस्कार विजेता"
+    },
+    {
+      "min": 900,
+      "en": "Ratna",
+      "hi": "रत्न"
+    },
+    {
+      "min": 1400,
+      "en": "Awards GK Champion",
+      "hi": "पुरस्कार GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🏆",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🎯",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "gallant",
+      "icon": "🪖",
+      "t": [
+        "Salute",
+        "सलामी"
+      ],
+      "d": [
+        "Study every gallantry award",
+        "सभी वीरता पुरस्कार पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "gallant"
+        ]
+      }
+    },
+    {
+      "id": "civil",
+      "icon": "🎖️",
+      "t": [
+        "Padma Path",
+        "पद्म पथ"
+      ],
+      "d": [
+        "Study every civilian honour",
+        "सभी नागरिक सम्मान पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "civil"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Awards GK Champion",
+        "पुरस्कार GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "fd",
+        "field": "fd",
+        "ask": [
+          "What is it given for?",
+          "यह किसके लिए दिया जाता है?"
+        ],
+        "reverseId": "wf",
+        "reverseAsk": [
+          "Which award is given for:",
+          "कौन-सा पुरस्कार इसके लिए दिया जाता है:"
+        ]
+      },
+      {
+        "id": "gb",
+        "field": "by",
+        "ask": [
+          "Who gives it?",
+          "इसे कौन देता है?"
+        ],
+        "pairs": [
+          [
+            "President of India",
+            "Government of India"
+          ],
+          [
+            "Ministry of Youth Affairs and Sports",
+            "Government of India"
+          ],
+          [
+            "Ministry of Women and Child Development",
+            "Government of India"
+          ],
+          [
+            "President of India",
+            "Ministry of Youth Affairs and Sports"
+          ],
+          [
+            "President of India",
+            "Ministry of Women and Child Development"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "q": "fd",
+            "n": 3
+          },
+          {
+            "q": "wf",
+            "n": 3
+          },
+          {
+            "fixed": [
+              "civil",
+              "gallant",
+              "sport",
+              "lit",
+              "arts",
+              "sci",
+              "intl"
+            ],
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "what",
+        "t": [
+          "What is it for?",
+          "किसके लिए?"
+        ],
+        "mix": [
+          {
+            "q": "fd",
+            "n": 5
+          },
+          {
+            "q": "wf",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "india",
+        "t": [
+          "Indian honours",
+          "भारतीय सम्मान"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "civil",
+              "gallant",
+              "sport"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "t": [
+          "Literature, arts & world",
+          "साहित्य, कला और विश्व"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "lit",
+              "arts",
+              "sci",
+              "intl"
+            ],
+            "n": 7
+          },
+          {
+            "q": "gb",
+            "n": 3
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Bharat Ratna",
+      "h": "भारत रत्न",
+      "st": "Highest civilian honour",
+      "sh": "सर्वोच्च नागरिक सम्मान",
+      "c": "civil",
+      "d": 1,
+      "fd": "Highest civilian honour",
+      "fdh": "सर्वोच्च नागरिक सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1954",
+      "esth": "1954",
+      "tag": "First: C. Rajagopalachari, S. Radhakrishnan, C. V. Raman",
+      "tagh": "पहले: सी. राजगोपालाचारी, एस. राधाकृष्णन, सी. वी. रमन",
+      "fact": "The Bharat Ratna, instituted in 1954, is India's highest civilian award; it was first given to C. Rajagopalachari, S. Radhakrishnan and C. V. Raman.",
+      "facth": "1954 में स्थापित भारत रत्न भारत का सर्वोच्च नागरिक सम्मान है; यह पहली बार सी. राजगोपालाचारी, एस. राधाकृष्णन और सी. वी. रमन को मिला।"
+    },
+    {
+      "n": "Padma Vibhushan",
+      "h": "पद्म विभूषण",
+      "st": "Second-highest civilian honour",
+      "sh": "दूसरा सर्वोच्च नागरिक सम्मान",
+      "c": "civil",
+      "d": 1,
+      "fd": "Second-highest civilian honour",
+      "fdh": "दूसरा सर्वोच्च नागरिक सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1954",
+      "esth": "1954",
+      "tag": "Exceptional and distinguished service",
+      "tagh": "असाधारण और विशिष्ट सेवा",
+      "fact": "The Padma Vibhushan is the second-highest civilian award, announced each year on Republic Day eve with the Padma Bhushan and Padma Shri.",
+      "facth": "पद्म विभूषण दूसरा सर्वोच्च नागरिक सम्मान है, जिसकी घोषणा हर वर्ष गणतंत्र दिवस की पूर्व संध्या पर पद्म भूषण और पद्मश्री के साथ होती है।"
+    },
+    {
+      "n": "Padma Bhushan",
+      "h": "पद्म भूषण",
+      "st": "Third-highest civilian honour",
+      "sh": "तीसरा सर्वोच्च नागरिक सम्मान",
+      "c": "civil",
+      "d": 1,
+      "fd": "Third-highest civilian honour",
+      "fdh": "तीसरा सर्वोच्च नागरिक सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1954",
+      "esth": "1954",
+      "tag": "Distinguished service of a high order",
+      "tagh": "उच्च कोटि की विशिष्ट सेवा",
+      "fact": "The Padma Bhushan is the third-highest civilian award in India.",
+      "facth": "पद्म भूषण भारत का तीसरा सर्वोच्च नागरिक सम्मान है।"
+    },
+    {
+      "n": "Padma Shri",
+      "h": "पद्मश्री",
+      "st": "Fourth-highest civilian honour",
+      "sh": "चौथा सर्वोच्च नागरिक सम्मान",
+      "c": "civil",
+      "d": 1,
+      "fd": "Fourth-highest civilian honour",
+      "fdh": "चौथा सर्वोच्च नागरिक सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1954",
+      "esth": "1954",
+      "tag": "Distinguished service in any field",
+      "tagh": "किसी भी क्षेत्र में विशिष्ट सेवा",
+      "fact": "The Padma Shri is the fourth-highest civilian award, often given to grassroots achievers.",
+      "facth": "पद्मश्री चौथा सर्वोच्च नागरिक सम्मान है, जो अक्सर ज़मीनी स्तर के उपलब्धि हासिल करने वालों को मिलता है।"
+    },
+    {
+      "n": "Nari Shakti Puraskar",
+      "h": "नारी शक्ति पुरस्कार",
+      "st": "Women's empowerment",
+      "sh": "महिला सशक्तिकरण",
+      "c": "civil",
+      "d": 2,
+      "fd": "Women's empowerment",
+      "fdh": "महिला सशक्तिकरण",
+      "by": "Ministry of Women and Child Development",
+      "byh": "महिला एवं बाल विकास मंत्रालय",
+      "est": "2016 (as Stree Shakti from 1999)",
+      "esth": "2016 (as Stree Shakti from 1999)",
+      "tag": "Given on International Women's Day",
+      "tagh": "अंतरराष्ट्रीय महिला दिवस पर दिया जाता है",
+      "fact": "The Nari Shakti Puraskar, India's highest honour for women, is given by the President on International Women's Day, 8 March.",
+      "facth": "महिलाओं का भारत का सर्वोच्च सम्मान नारी शक्ति पुरस्कार राष्ट्रपति अंतरराष्ट्रीय महिला दिवस, 8 मार्च, को देते हैं।"
+    },
+    {
+      "n": "Param Vir Chakra",
+      "h": "परमवीर चक्र",
+      "st": "Highest gallantry in war",
+      "sh": "युद्धकाल का सर्वोच्च वीरता सम्मान",
+      "c": "gallant",
+      "d": 1,
+      "fd": "Highest gallantry in war",
+      "fdh": "युद्धकाल का सर्वोच्च वीरता सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1950 (from 1947)",
+      "esth": "1950 (from 1947)",
+      "tag": "First: Major Somnath Sharma (1947)",
+      "tagh": "पहले: मेजर सोमनाथ शर्मा (1947)",
+      "fact": "The Param Vir Chakra, the highest wartime gallantry award, was first given (posthumously) to Major Somnath Sharma for the Battle of Badgam, 1947; Savitri Khanolkar designed it.",
+      "facth": "युद्धकाल का सर्वोच्च वीरता सम्मान परमवीर चक्र पहली बार (मरणोपरांत) मेजर सोमनाथ शर्मा को 1947 की बडगाम लड़ाई के लिए मिला; इसकी रूपरेखा सावित्री खानोलकर ने बनाई।"
+    },
+    {
+      "n": "Maha Vir Chakra",
+      "h": "महावीर चक्र",
+      "st": "Second-highest gallantry in war",
+      "sh": "युद्धकाल का दूसरा सर्वोच्च वीरता सम्मान",
+      "c": "gallant",
+      "d": 2,
+      "fd": "Second-highest gallantry in war",
+      "fdh": "युद्धकाल का दूसरा सर्वोच्च वीरता सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1950",
+      "esth": "1950",
+      "tag": "Conspicuous gallantry in the presence of the enemy",
+      "tagh": "शत्रु के सामने विशिष्ट वीरता",
+      "fact": "The Maha Vir Chakra is the second-highest wartime gallantry award, after the Param Vir Chakra.",
+      "facth": "महावीर चक्र परमवीर चक्र के बाद युद्धकाल का दूसरा सर्वोच्च वीरता सम्मान है।"
+    },
+    {
+      "n": "Vir Chakra",
+      "h": "वीर चक्र",
+      "st": "Third-highest gallantry in war",
+      "sh": "युद्धकाल का तीसरा सर्वोच्च वीरता सम्मान",
+      "c": "gallant",
+      "d": 2,
+      "fd": "Third-highest gallantry in war",
+      "fdh": "युद्धकाल का तीसरा सर्वोच्च वीरता सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1950",
+      "esth": "1950",
+      "tag": "Acts of bravery on the battlefield",
+      "tagh": "युद्धभूमि में वीरता",
+      "fact": "The Vir Chakra is the third-highest wartime gallantry award.",
+      "facth": "वीर चक्र युद्धकाल का तीसरा सर्वोच्च वीरता सम्मान है।"
+    },
+    {
+      "n": "Ashoka Chakra",
+      "h": "अशोक चक्र",
+      "st": "Highest gallantry in peacetime",
+      "sh": "शांतिकाल का सर्वोच्च वीरता सम्मान",
+      "c": "gallant",
+      "d": 1,
+      "fd": "Highest gallantry in peacetime",
+      "fdh": "शांतिकाल का सर्वोच्च वीरता सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1952",
+      "esth": "1952",
+      "tag": "Also given to civilians",
+      "tagh": "नागरिकों को भी दिया जाता है",
+      "fact": "The Ashoka Chakra is the highest peacetime gallantry award and can be given to civilians; Rakesh Sharma, the first Indian in space, received it.",
+      "facth": "अशोक चक्र शांतिकाल का सर्वोच्च वीरता सम्मान है और नागरिकों को भी दिया जा सकता है; अंतरिक्ष जाने वाले पहले भारतीय राकेश शर्मा को यह मिला।"
+    },
+    {
+      "n": "Kirti Chakra",
+      "h": "कीर्ति चक्र",
+      "st": "Second-highest gallantry in peacetime",
+      "sh": "शांतिकाल का दूसरा सर्वोच्च वीरता सम्मान",
+      "c": "gallant",
+      "d": 2,
+      "fd": "Second-highest gallantry in peacetime",
+      "fdh": "शांतिकाल का दूसरा सर्वोच्च वीरता सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1952",
+      "esth": "1952",
+      "tag": "Conspicuous gallantry away from the battlefield",
+      "tagh": "युद्धभूमि से दूर विशिष्ट वीरता",
+      "fact": "The Kirti Chakra is the second-highest peacetime gallantry award.",
+      "facth": "कीर्ति चक्र शांतिकाल का दूसरा सर्वोच्च वीरता सम्मान है।"
+    },
+    {
+      "n": "Shaurya Chakra",
+      "h": "शौर्य चक्र",
+      "st": "Third-highest gallantry in peacetime",
+      "sh": "शांतिकाल का तीसरा सर्वोच्च वीरता सम्मान",
+      "c": "gallant",
+      "d": 2,
+      "fd": "Third-highest gallantry in peacetime",
+      "fdh": "शांतिकाल का तीसरा सर्वोच्च वीरता सम्मान",
+      "by": "President of India",
+      "byh": "भारत के राष्ट्रपति",
+      "est": "1952",
+      "esth": "1952",
+      "tag": "Gallantry other than in the face of the enemy",
+      "tagh": "शत्रु के सामने के अलावा वीरता",
+      "fact": "The Shaurya Chakra is the third-highest peacetime gallantry award.",
+      "facth": "शौर्य चक्र शांतिकाल का तीसरा सर्वोच्च वीरता सम्मान है।"
+    },
+    {
+      "n": "Major Dhyan Chand Khel Ratna",
+      "h": "मेजर ध्यानचंद खेल रत्न",
+      "st": "Highest sporting honour",
+      "sh": "सर्वोच्च खेल सम्मान",
+      "c": "sport",
+      "d": 1,
+      "fd": "Highest sporting honour",
+      "fdh": "सर्वोच्च खेल सम्मान",
+      "by": "Ministry of Youth Affairs and Sports",
+      "byh": "युवा कार्यक्रम एवं खेल मंत्रालय",
+      "est": "1991-92",
+      "esth": "1991-92",
+      "tag": "Renamed after Dhyan Chand in 2021",
+      "tagh": "2021 में ध्यानचंद के नाम पर नामकरण",
+      "fact": "The Khel Ratna, India's highest sports award, began in 1991-92 (first: Viswanathan Anand) and was renamed after hockey legend Major Dhyan Chand in 2021.",
+      "facth": "भारत का सर्वोच्च खेल सम्मान खेल रत्न 1991-92 में शुरू हुआ (पहले: विश्वनाथन आनंद) और 2021 में हॉकी के दिग्गज मेजर ध्यानचंद के नाम पर रखा गया।"
+    },
+    {
+      "n": "Arjuna Award",
+      "h": "अर्जुन पुरस्कार",
+      "st": "Outstanding performance in sport",
+      "sh": "खेल में उत्कृष्ट प्रदर्शन",
+      "c": "sport",
+      "d": 1,
+      "fd": "Outstanding performance in sport",
+      "fdh": "खेल में उत्कृष्ट प्रदर्शन",
+      "by": "Ministry of Youth Affairs and Sports",
+      "byh": "युवा कार्यक्रम एवं खेल मंत्रालय",
+      "est": "1961",
+      "esth": "1961",
+      "tag": "Bronze statuette of Arjuna",
+      "tagh": "अर्जुन की कांस्य प्रतिमा",
+      "fact": "The Arjuna Award, instituted in 1961, honours outstanding sportspersons with a bronze statuette of Arjuna.",
+      "facth": "1961 में स्थापित अर्जुन पुरस्कार उत्कृष्ट खिलाड़ियों को अर्जुन की कांस्य प्रतिमा के साथ सम्मानित करता है।"
+    },
+    {
+      "n": "Dronacharya Award",
+      "h": "द्रोणाचार्य पुरस्कार",
+      "st": "Outstanding sports coaching",
+      "sh": "उत्कृष्ट खेल प्रशिक्षण",
+      "c": "sport",
+      "d": 1,
+      "fd": "Outstanding sports coaching",
+      "fdh": "उत्कृष्ट खेल प्रशिक्षण",
+      "by": "Ministry of Youth Affairs and Sports",
+      "byh": "युवा कार्यक्रम एवं खेल मंत्रालय",
+      "est": "1985",
+      "esth": "1985",
+      "tag": "Award for coaches",
+      "tagh": "प्रशिक्षकों का पुरस्कार",
+      "fact": "The Dronacharya Award, instituted in 1985, honours coaches; O. M. Nambiar, P. T. Usha's coach, was among the first recipients.",
+      "facth": "1985 में स्थापित द्रोणाचार्य पुरस्कार प्रशिक्षकों को सम्मानित करता है; पी. टी. उषा के प्रशिक्षक ओ. एम. नांबियार पहले प्राप्तकर्ताओं में थे।"
+    },
+    {
+      "n": "Arjuna Award (Lifetime)",
+      "h": "अर्जुन पुरस्कार (आजीवन)",
+      "st": "Lifetime contribution to sport",
+      "sh": "खेल में आजीवन योगदान",
+      "c": "sport",
+      "d": 3,
+      "fd": "Lifetime contribution to sport",
+      "fdh": "खेल में आजीवन योगदान",
+      "by": "Ministry of Youth Affairs and Sports",
+      "byh": "युवा कार्यक्रम एवं खेल मंत्रालय",
+      "est": "2002 (as the Dhyan Chand Award)",
+      "esth": "2002 (as the Dhyan Chand Award)",
+      "tag": "Formerly the Dhyan Chand Award",
+      "tagh": "पहले ध्यानचंद पुरस्कार",
+      "fact": "The award for lifetime achievement in sport, started in 2002 as the Dhyan Chand Award, has been called the Arjuna Award (Lifetime) since 2023.",
+      "facth": "खेल में आजीवन उपलब्धि का पुरस्कार 2002 में ध्यानचंद पुरस्कार के रूप में शुरू हुआ और 2023 से अर्जुन पुरस्कार (आजीवन) कहलाता है।"
+    },
+    {
+      "n": "Maulana Abul Kalam Azad Trophy",
+      "h": "मौलाना अबुल कलाम आज़ाद ट्रॉफ़ी",
+      "st": "Best university in inter-university sport",
+      "sh": "अंतर-विश्वविद्यालय खेलों में सर्वश्रेष्ठ विश्वविद्यालय",
+      "c": "sport",
+      "d": 2,
+      "fd": "Best university in inter-university sport",
+      "fdh": "अंतर-विश्वविद्यालय खेलों में सर्वश्रेष्ठ विश्वविद्यालय",
+      "by": "Ministry of Youth Affairs and Sports",
+      "byh": "युवा कार्यक्रम एवं खेल मंत्रालय",
+      "est": "1956-57",
+      "esth": "1956-57",
+      "tag": "Known as the MAKA Trophy",
+      "tagh": "MAKA ट्रॉफ़ी के नाम से प्रसिद्ध",
+      "fact": "The MAKA Trophy goes to the university with the best overall performance in inter-university sport.",
+      "facth": "MAKA ट्रॉफ़ी अंतर-विश्वविद्यालय खेलों में सर्वश्रेष्ठ समग्र प्रदर्शन वाले विश्वविद्यालय को मिलती है।"
+    },
+    {
+      "n": "Tenzing Norgay National Adventure Award",
+      "h": "तेनज़िंग नोर्गे राष्ट्रीय साहसिक पुरस्कार",
+      "st": "Adventure on land, sea and in the air",
+      "sh": "थल, जल और वायु में साहसिक कार्य",
+      "c": "sport",
+      "d": 2,
+      "fd": "Adventure on land, sea and in the air",
+      "fdh": "थल, जल और वायु में साहसिक कार्य",
+      "by": "Ministry of Youth Affairs and Sports",
+      "byh": "युवा कार्यक्रम एवं खेल मंत्रालय",
+      "est": "1994",
+      "esth": "1994",
+      "tag": "Named after the Everest pioneer",
+      "tagh": "एवरेस्ट अग्रणी के नाम पर",
+      "fact": "The Tenzing Norgay National Adventure Award honours adventure on land, at sea and in the air; it is named after Tenzing Norgay, who climbed Everest in 1953.",
+      "facth": "तेनज़िंग नोर्गे राष्ट्रीय साहसिक पुरस्कार थल, जल और वायु के साहसिक कार्यों को सम्मानित करता है; यह 1953 में एवरेस्ट चढ़ने वाले तेनज़िंग नोर्गे के नाम पर है।"
+    },
+    {
+      "n": "Jnanpith Award",
+      "h": "ज्ञानपीठ पुरस्कार",
+      "st": "Highest literary honour for Indian languages",
+      "sh": "भारतीय भाषाओं का सर्वोच्च साहित्य सम्मान",
+      "c": "lit",
+      "d": 1,
+      "fd": "Highest literary honour for Indian languages",
+      "fdh": "भारतीय भाषाओं का सर्वोच्च साहित्य सम्मान",
+      "by": "Bharatiya Jnanpith",
+      "byh": "भारतीय ज्ञानपीठ",
+      "est": "1961 (first given 1965)",
+      "esth": "1961 (first given 1965)",
+      "tag": "First: G. Sankara Kurup (Malayalam)",
+      "tagh": "पहले: जी. शंकर कुरुप (मलयालम)",
+      "fact": "The Jnanpith Award, India's highest literary award, was first given in 1965 to G. Sankara Kurup; the 59th (for 2024) went to Vinod Kumar Shukla.",
+      "facth": "भारत का सर्वोच्च साहित्यिक सम्मान ज्ञानपीठ पहली बार 1965 में जी. शंकर कुरुप को मिला; 59वाँ (2024 के लिए) विनोद कुमार शुक्ल को मिला।"
+    },
+    {
+      "n": "Sahitya Akademi Award",
+      "h": "साहित्य अकादमी पुरस्कार",
+      "st": "Literature in 24 Indian languages",
+      "sh": "24 भारतीय भाषाओं में साहित्य",
+      "c": "lit",
+      "d": 1,
+      "fd": "Literature in 24 Indian languages",
+      "fdh": "24 भारतीय भाषाओं में साहित्य",
+      "by": "Sahitya Akademi",
+      "byh": "साहित्य अकादमी",
+      "est": "1954",
+      "esth": "1954",
+      "tag": "Given in 24 languages each year",
+      "tagh": "हर वर्ष 24 भाषाओं में",
+      "fact": "The Sahitya Akademi, the National Academy of Letters, gives its award each year for books in 24 languages, including English.",
+      "facth": "राष्ट्रीय साहित्य संस्थान साहित्य अकादमी हर वर्ष अंग्रेज़ी सहित 24 भाषाओं की पुस्तकों को पुरस्कार देती है।"
+    },
+    {
+      "n": "Saraswati Samman",
+      "h": "सरस्वती सम्मान",
+      "st": "Outstanding literary work in an Indian language",
+      "sh": "किसी भारतीय भाषा की उत्कृष्ट साहित्यिक कृति",
+      "c": "lit",
+      "d": 2,
+      "fd": "Outstanding literary work in an Indian language",
+      "fdh": "किसी भारतीय भाषा की उत्कृष्ट साहित्यिक कृति",
+      "by": "K. K. Birla Foundation",
+      "byh": "के. के. बिड़ला फ़ाउंडेशन",
+      "est": "1991",
+      "esth": "1991",
+      "tag": "First: Harivansh Rai Bachchan",
+      "tagh": "पहले: हरिवंश राय बच्चन",
+      "fact": "The Saraswati Samman of the K. K. Birla Foundation was first given in 1991 to Harivansh Rai Bachchan for his autobiography.",
+      "facth": "के. के. बिड़ला फ़ाउंडेशन का सरस्वती सम्मान पहली बार 1991 में हरिवंश राय बच्चन को उनकी आत्मकथा के लिए मिला।"
+    },
+    {
+      "n": "Vyas Samman",
+      "h": "व्यास सम्मान",
+      "st": "Outstanding Hindi literary work",
+      "sh": "उत्कृष्ट हिंदी साहित्यिक कृति",
+      "c": "lit",
+      "d": 2,
+      "fd": "Outstanding Hindi literary work",
+      "fdh": "उत्कृष्ट हिंदी साहित्यिक कृति",
+      "by": "K. K. Birla Foundation",
+      "byh": "के. के. बिड़ला फ़ाउंडेशन",
+      "est": "1991",
+      "esth": "1991",
+      "tag": "For Hindi literature only",
+      "tagh": "केवल हिंदी साहित्य के लिए",
+      "fact": "The Vyas Samman of the K. K. Birla Foundation honours an outstanding Hindi work of the past ten years; Ram Vilas Sharma was the first winner.",
+      "facth": "के. के. बिड़ला फ़ाउंडेशन का व्यास सम्मान पिछले दस वर्षों की उत्कृष्ट हिंदी कृति को मिलता है; रामविलास शर्मा पहले विजेता थे।"
+    },
+    {
+      "n": "Booker Prize",
+      "h": "बुकर पुरस्कार",
+      "st": "Best novel in English published in the UK or Ireland",
+      "sh": "ब्रिटेन या आयरलैंड में प्रकाशित सर्वश्रेष्ठ अंग्रेज़ी उपन्यास",
+      "c": "lit",
+      "d": 1,
+      "fd": "Best novel in English published in the UK or Ireland",
+      "fdh": "ब्रिटेन या आयरलैंड में प्रकाशित सर्वश्रेष्ठ अंग्रेज़ी उपन्यास",
+      "by": "Booker Prize Foundation (UK)",
+      "byh": "बुकर पुरस्कार फ़ाउंडेशन (ब्रिटेन)",
+      "est": "1969",
+      "esth": "1969",
+      "tag": "Indian winners include Rushdie, Roy, Desai, Adiga",
+      "tagh": "भारतीय विजेताओं में रुश्दी, रॉय, देसाई, अडिगा",
+      "fact": "The Booker Prize, started in 1969, goes to the best novel in English; the International Booker honours fiction translated into English.",
+      "facth": "1969 में शुरू बुकर पुरस्कार सर्वश्रेष्ठ अंग्रेज़ी उपन्यास को मिलता है; अंतरराष्ट्रीय बुकर अंग्रेज़ी में अनूदित कथा को सम्मानित करता है।"
+    },
+    {
+      "n": "Pulitzer Prize",
+      "h": "पुलित्ज़र पुरस्कार",
+      "st": "Journalism, literature and music in the USA",
+      "sh": "अमेरिका में पत्रकारिता, साहित्य और संगीत",
+      "c": "lit",
+      "d": 1,
+      "fd": "Journalism, literature and music in the USA",
+      "fdh": "अमेरिका में पत्रकारिता, साहित्य और संगीत",
+      "by": "Columbia University (USA)",
+      "byh": "कोलंबिया विश्वविद्यालय (अमेरिका)",
+      "est": "1917",
+      "esth": "1917",
+      "tag": "Named after Joseph Pulitzer",
+      "tagh": "जोसेफ़ पुलित्ज़र के नाम पर",
+      "fact": "The Pulitzer Prize, run by Columbia University since 1917, honours journalism, letters and music; Gobind Behari Lal was the first Indian winner (1937).",
+      "facth": "1917 से कोलंबिया विश्वविद्यालय द्वारा दिया जाने वाला पुलित्ज़र पुरस्कार पत्रकारिता, साहित्य और संगीत को सम्मानित करता है; गोबिंद बिहारी लाल पहले भारतीय विजेता (1937) थे।"
+    },
+    {
+      "n": "Nobel Prize",
+      "h": "नोबेल पुरस्कार",
+      "st": "Physics, chemistry, medicine, literature, peace and economics",
+      "sh": "भौतिकी, रसायन, चिकित्सा, साहित्य, शांति और अर्थशास्त्र",
+      "c": "intl",
+      "d": 1,
+      "fd": "Physics, chemistry, medicine, literature, peace and economics",
+      "fdh": "भौतिकी, रसायन, चिकित्सा, साहित्य, शांति और अर्थशास्त्र",
+      "by": "Nobel institutions (Sweden; Peace in Norway)",
+      "byh": "नोबेल संस्थाएँ (स्वीडन; शांति नॉर्वे में)",
+      "est": "1901",
+      "esth": "1901",
+      "tag": "Founded by the will of Alfred Nobel",
+      "tagh": "अल्फ़्रेड नोबेल की वसीयत से स्थापित",
+      "fact": "The Nobel Prizes, founded by the will of Alfred Nobel, were first given in 1901; the Peace Prize is given in Oslo and the economics prize was added in 1968.",
+      "facth": "अल्फ़्रेड नोबेल की वसीयत से स्थापित नोबेल पुरस्कार पहली बार 1901 में दिए गए; शांति पुरस्कार ओस्लो में दिया जाता है और अर्थशास्त्र का पुरस्कार 1968 में जुड़ा।"
+    },
+    {
+      "n": "Dadasaheb Phalke Award",
+      "h": "दादासाहेब फाल्के पुरस्कार",
+      "st": "Lifetime contribution to Indian cinema",
+      "sh": "भारतीय सिनेमा में आजीवन योगदान",
+      "c": "arts",
+      "d": 1,
+      "fd": "Lifetime contribution to Indian cinema",
+      "fdh": "भारतीय सिनेमा में आजीवन योगदान",
+      "by": "Government of India",
+      "byh": "भारत सरकार",
+      "est": "1969",
+      "esth": "1969",
+      "tag": "First: Devika Rani",
+      "tagh": "पहली: देविका रानी",
+      "fact": "The Dadasaheb Phalke Award, India's highest film honour, is named after the maker of Raja Harishchandra (1913); Devika Rani was the first recipient.",
+      "facth": "भारत का सर्वोच्च फ़िल्म सम्मान दादासाहेब फाल्के पुरस्कार राजा हरिश्चंद्र (1913) के निर्माता के नाम पर है; देविका रानी पहली प्राप्तकर्ता थीं।"
+    },
+    {
+      "n": "Academy Awards",
+      "h": "अकादमी पुरस्कार",
+      "st": "Excellence in world cinema",
+      "sh": "विश्व सिनेमा में उत्कृष्टता",
+      "c": "arts",
+      "d": 1,
+      "fd": "Excellence in world cinema",
+      "fdh": "विश्व सिनेमा में उत्कृष्टता",
+      "by": "Academy of Motion Picture Arts and Sciences (USA)",
+      "byh": "एकेडमी ऑफ़ मोशन पिक्चर आर्ट्स एंड साइंसेज़ (अमेरिका)",
+      "est": "1929",
+      "esth": "1929",
+      "tag": "The Oscars",
+      "tagh": "ऑस्कर",
+      "fact": "Bhanu Athaiya was the first Indian to win an Oscar (costume design, Gandhi, 1983); in 2023 Naatu Naatu (RRR) and The Elephant Whisperers won.",
+      "facth": "भानु अथैया ऑस्कर जीतने वाली पहली भारतीय थीं (वेशभूषा, गांधी, 1983); 2023 में नाटू नाटू (RRR) और द एलिफ़ेंट व्हिस्परर्स ने जीता।"
+    },
+    {
+      "n": "Grammy Awards",
+      "h": "ग्रैमी पुरस्कार",
+      "st": "Excellence in recorded music",
+      "sh": "रिकॉर्ड किए गए संगीत में उत्कृष्टता",
+      "c": "arts",
+      "d": 1,
+      "fd": "Excellence in recorded music",
+      "fdh": "रिकॉर्ड किए गए संगीत में उत्कृष्टता",
+      "by": "Recording Academy (USA)",
+      "byh": "रिकॉर्डिंग एकेडमी (अमेरिका)",
+      "est": "1959",
+      "esth": "1959",
+      "tag": "Music's highest honour",
+      "tagh": "संगीत का सर्वोच्च सम्मान",
+      "fact": "Ravi Shankar was the first Indian to win a Grammy (1968); Zakir Hussain won three at once in 2024 and Ricky Kej has three.",
+      "facth": "रवि शंकर ग्रैमी जीतने वाले पहले भारतीय थे (1968); ज़ाकिर हुसैन ने 2024 में एक साथ तीन जीते और रिकी केज के पास तीन हैं।"
+    },
+    {
+      "n": "Sangeet Natak Akademi Award",
+      "h": "संगीत नाटक अकादमी पुरस्कार",
+      "st": "Music, dance and theatre",
+      "sh": "संगीत, नृत्य और रंगमंच",
+      "c": "arts",
+      "d": 2,
+      "fd": "Music, dance and theatre",
+      "fdh": "संगीत, नृत्य और रंगमंच",
+      "by": "Sangeet Natak Akademi",
+      "byh": "संगीत नाटक अकादमी",
+      "est": "1952",
+      "esth": "1952",
+      "tag": "National honour for performing artists",
+      "tagh": "प्रदर्शन कलाकारों का राष्ट्रीय सम्मान",
+      "fact": "The Sangeet Natak Akademi, India's national academy for music, dance and drama, honours performing artists each year.",
+      "facth": "संगीत, नृत्य और नाटक की राष्ट्रीय अकादमी संगीत नाटक अकादमी हर वर्ष प्रदर्शन कलाकारों को सम्मानित करती है।"
+    },
+    {
+      "n": "Pritzker Prize",
+      "h": "प्रित्ज़कर पुरस्कार",
+      "st": "Architecture",
+      "sh": "वास्तुकला",
+      "c": "arts",
+      "d": 2,
+      "fd": "Architecture",
+      "fdh": "वास्तुकला",
+      "by": "Hyatt Foundation (USA)",
+      "byh": "हयात फ़ाउंडेशन (अमेरिका)",
+      "est": "1979",
+      "esth": "1979",
+      "tag": "Architecture's highest honour",
+      "tagh": "वास्तुकला का सर्वोच्च सम्मान",
+      "fact": "The Pritzker Prize is called the Nobel of architecture; B. V. Doshi became the first Indian winner in 2018.",
+      "facth": "प्रित्ज़कर पुरस्कार को वास्तुकला का नोबेल कहा जाता है; बी. वी. दोशी 2018 में पहले भारतीय विजेता बने।"
+    },
+    {
+      "n": "Rashtriya Vigyan Puraskar",
+      "h": "राष्ट्रीय विज्ञान पुरस्कार",
+      "st": "Science, technology and innovation",
+      "sh": "विज्ञान, प्रौद्योगिकी और नवाचार",
+      "c": "sci",
+      "d": 2,
+      "fd": "Science, technology and innovation",
+      "fdh": "विज्ञान, प्रौद्योगिकी और नवाचार",
+      "by": "Government of India",
+      "byh": "भारत सरकार",
+      "est": "2023 (first given 2024)",
+      "esth": "2023 (first given 2024)",
+      "tag": "Vigyan Ratna is its highest category",
+      "tagh": "विज्ञान रत्न इसकी सर्वोच्च श्रेणी",
+      "fact": "The Rashtriya Vigyan Puraskar replaced many science awards; its categories are Vigyan Ratna, Vigyan Shri, Vigyan Yuva-Shanti Swarup Bhatnagar and Vigyan Team. G. Padmanabhan received the first Vigyan Ratna (2024).",
+      "facth": "राष्ट्रीय विज्ञान पुरस्कार ने कई विज्ञान पुरस्कारों की जगह ली; इसकी श्रेणियाँ विज्ञान रत्न, विज्ञान श्री, विज्ञान युवा-शांति स्वरूप भटनागर और विज्ञान टीम हैं। पहला विज्ञान रत्न (2024) जी. पद्मनाभन को मिला।"
+    },
+    {
+      "n": "Shanti Swarup Bhatnagar Prize",
+      "h": "शांति स्वरूप भटनागर पुरस्कार",
+      "st": "Young scientists (under 45)",
+      "sh": "युवा वैज्ञानिक (45 वर्ष से कम)",
+      "c": "sci",
+      "d": 2,
+      "fd": "Young scientists (under 45)",
+      "fdh": "युवा वैज्ञानिक (45 वर्ष से कम)",
+      "by": "CSIR",
+      "byh": "CSIR",
+      "est": "1958",
+      "esth": "1958",
+      "tag": "Named after the first CSIR Director-General",
+      "tagh": "CSIR के पहले महानिदेशक के नाम पर",
+      "fact": "The Shanti Swarup Bhatnagar Prize of CSIR honoured scientists under 45 from 1958; it now continues as Vigyan Yuva-Shanti Swarup Bhatnagar within the Rashtriya Vigyan Puraskar.",
+      "facth": "CSIR का शांति स्वरूप भटनागर पुरस्कार 1958 से 45 वर्ष से कम आयु के वैज्ञानिकों को मिलता था; अब यह राष्ट्रीय विज्ञान पुरस्कार में विज्ञान युवा-शांति स्वरूप भटनागर के रूप में जारी है।"
+    },
+    {
+      "n": "Kalinga Prize",
+      "h": "कलिंग पुरस्कार",
+      "st": "Popularising science",
+      "sh": "विज्ञान को लोकप्रिय बनाना",
+      "c": "sci",
+      "d": 2,
+      "fd": "Popularising science",
+      "fdh": "विज्ञान को लोकप्रिय बनाना",
+      "by": "UNESCO",
+      "byh": "यूनेस्को",
+      "est": "1952",
+      "esth": "1952",
+      "tag": "Funded by Biju Patnaik",
+      "tagh": "बीजू पटनायक द्वारा वित्तपोषित",
+      "fact": "UNESCO's Kalinga Prize for popularising science was set up in 1952 with funds from Biju Patnaik of Odisha.",
+      "facth": "विज्ञान को लोकप्रिय बनाने का यूनेस्को का कलिंग पुरस्कार 1952 में ओडिशा के बीजू पटनायक के धन से स्थापित हुआ।"
+    },
+    {
+      "n": "Abel Prize",
+      "h": "एबेल पुरस्कार",
+      "st": "Mathematics",
+      "sh": "गणित",
+      "c": "sci",
+      "d": 3,
+      "fd": "Mathematics",
+      "fdh": "गणित",
+      "by": "Norwegian Academy of Science and Letters",
+      "byh": "नॉर्वेजियन विज्ञान एवं साहित्य अकादमी",
+      "est": "2003",
+      "esth": "2003",
+      "tag": "Called the Nobel of mathematics",
+      "tagh": "गणित का नोबेल कहा जाता है",
+      "fact": "The Abel Prize, given by Norway since 2003, is often called the Nobel of mathematics; S. R. Srinivasa Varadhan won it in 2007.",
+      "facth": "2003 से नॉर्वे द्वारा दिया जाने वाला एबेल पुरस्कार गणित का नोबेल कहा जाता है; एस. आर. श्रीनिवास वरदन ने इसे 2007 में जीता।"
+    },
+    {
+      "n": "Fields Medal",
+      "h": "फ़ील्ड्स मेडल",
+      "st": "Mathematicians under 40",
+      "sh": "40 वर्ष से कम आयु के गणितज्ञ",
+      "c": "sci",
+      "d": 2,
+      "fd": "Mathematicians under 40",
+      "fdh": "40 वर्ष से कम आयु के गणितज्ञ",
+      "by": "International Mathematical Union",
+      "byh": "अंतरराष्ट्रीय गणितीय संघ",
+      "est": "1936",
+      "esth": "1936",
+      "tag": "Given every four years",
+      "tagh": "हर चार वर्ष में",
+      "fact": "The Fields Medal is given every four years to mathematicians under 40; Manjul Bhargava, of Indian origin, won it in 2014.",
+      "facth": "फ़ील्ड्स मेडल हर चार वर्ष में 40 वर्ष से कम आयु के गणितज्ञों को मिलता है; भारतीय मूल के मंजुल भार्गव ने इसे 2014 में जीता।"
+    },
+    {
+      "n": "Gandhi Peace Prize",
+      "h": "गांधी शांति पुरस्कार",
+      "st": "Social, economic and political change through non-violence",
+      "sh": "अहिंसा द्वारा सामाजिक, आर्थिक और राजनीतिक परिवर्तन",
+      "c": "intl",
+      "d": 1,
+      "fd": "Social, economic and political change through non-violence",
+      "fdh": "अहिंसा द्वारा सामाजिक, आर्थिक और राजनीतिक परिवर्तन",
+      "by": "Government of India",
+      "byh": "भारत सरकार",
+      "est": "1995",
+      "esth": "1995",
+      "tag": "Gandhi's 125th birth anniversary",
+      "tagh": "गांधी की 125वीं जयंती",
+      "fact": "The Gandhi Peace Prize was started in 1995 on Gandhi's 125th birth anniversary; Julius Nyerere of Tanzania was the first recipient.",
+      "facth": "गांधी शांति पुरस्कार 1995 में गांधी की 125वीं जयंती पर शुरू हुआ; तंज़ानिया के जूलियस न्येरेरे पहले प्राप्तकर्ता थे।"
+    },
+    {
+      "n": "Ramon Magsaysay Award",
+      "h": "रेमन मैग्सेसे पुरस्कार",
+      "st": "Public service and leadership in Asia",
+      "sh": "एशिया में लोक सेवा और नेतृत्व",
+      "c": "intl",
+      "d": 1,
+      "fd": "Public service and leadership in Asia",
+      "fdh": "एशिया में लोक सेवा और नेतृत्व",
+      "by": "Ramon Magsaysay Award Foundation (Philippines)",
+      "byh": "रेमन मैग्सेसे अवार्ड फ़ाउंडेशन (फ़िलीपींस)",
+      "est": "1957",
+      "esth": "1957",
+      "tag": "Called Asia's Nobel Prize",
+      "tagh": "एशिया का नोबेल कहा जाता है",
+      "fact": "The Ramon Magsaysay Award, called Asia's Nobel Prize, is named after a President of the Philippines; Vinoba Bhave was the first Indian winner (1958).",
+      "facth": "एशिया का नोबेल कहे जाने वाला रेमन मैग्सेसे पुरस्कार फ़िलीपींस के एक राष्ट्रपति के नाम पर है; विनोबा भावे पहले भारतीय विजेता (1958) थे।"
+    },
+    {
+      "n": "Indira Gandhi Prize for Peace, Disarmament and Development",
+      "h": "इंदिरा गांधी शांति, निरस्त्रीकरण और विकास पुरस्कार",
+      "st": "Peace, disarmament and development",
+      "sh": "शांति, निरस्त्रीकरण और विकास",
+      "c": "intl",
+      "d": 3,
+      "fd": "Peace, disarmament and development",
+      "fdh": "शांति, निरस्त्रीकरण और विकास",
+      "by": "Indira Gandhi Memorial Trust",
+      "byh": "इंदिरा गांधी स्मारक ट्रस्ट",
+      "est": "1986",
+      "esth": "1986",
+      "tag": "Given to people and organisations worldwide",
+      "tagh": "दुनिया भर के व्यक्तियों और संगठनों को",
+      "fact": "The Indira Gandhi Prize, given by the Indira Gandhi Memorial Trust since 1986, honours work for peace, disarmament and development.",
+      "facth": "1986 से इंदिरा गांधी स्मारक ट्रस्ट द्वारा दिया जाने वाला इंदिरा गांधी पुरस्कार शांति, निरस्त्रीकरण और विकास के कार्य को सम्मानित करता है।"
+    },
+    {
+      "n": "Right Livelihood Award",
+      "h": "राइट लाइवलीहुड पुरस्कार",
+      "st": "Practical solutions to global problems",
+      "sh": "वैश्विक समस्याओं के व्यावहारिक समाधान",
+      "c": "intl",
+      "d": 3,
+      "fd": "Practical solutions to global problems",
+      "fdh": "वैश्विक समस्याओं के व्यावहारिक समाधान",
+      "by": "Right Livelihood Foundation (Sweden)",
+      "byh": "राइट लाइवलीहुड फ़ाउंडेशन (स्वीडन)",
+      "est": "1980",
+      "esth": "1980",
+      "tag": "Called the 'Alternative Nobel'",
+      "tagh": "'वैकल्पिक नोबेल' कहा जाता है",
+      "fact": "The Right Livelihood Award of Sweden, called the 'Alternative Nobel Prize', honours practical answers to global challenges; Indian winners include Ela Bhatt and Medha Patkar.",
+      "facth": "स्वीडन का राइट लाइवलीहुड पुरस्कार, जिसे 'वैकल्पिक नोबेल' कहते हैं, वैश्विक चुनौतियों के व्यावहारिक उत्तरों को सम्मानित करता है; भारतीय विजेताओं में इला भट्ट और मेधा पाटकर हैं।"
+    },
+    {
+      "n": "Templeton Prize",
+      "h": "टेम्पलटन पुरस्कार",
+      "st": "Contribution to the spiritual dimension of life",
+      "sh": "जीवन के आध्यात्मिक आयाम में योगदान",
+      "c": "intl",
+      "d": 3,
+      "fd": "Contribution to the spiritual dimension of life",
+      "fdh": "जीवन के आध्यात्मिक आयाम में योगदान",
+      "by": "Templeton Foundation",
+      "byh": "टेम्पलटन फ़ाउंडेशन",
+      "est": "1973",
+      "esth": "1973",
+      "tag": "First: Mother Teresa",
+      "tagh": "पहली: मदर टेरेसा",
+      "fact": "The Templeton Prize honours work on the spiritual side of life; Mother Teresa was its first recipient in 1973.",
+      "facth": "टेम्पलटन पुरस्कार जीवन के आध्यात्मिक पक्ष के कार्य को सम्मानित करता है; मदर टेरेसा 1973 में इसकी पहली प्राप्तकर्ता थीं।"
+    },
+    {
+      "n": "Tagore Award for Cultural Harmony",
+      "h": "सांस्कृतिक सद्भाव के लिए टैगोर पुरस्कार",
+      "st": "Cultural harmony",
+      "sh": "सांस्कृतिक सद्भाव",
+      "c": "intl",
+      "d": 3,
+      "fd": "Cultural harmony",
+      "fdh": "सांस्कृतिक सद्भाव",
+      "by": "Government of India",
+      "byh": "भारत सरकार",
+      "est": "2012",
+      "esth": "2012",
+      "tag": "Tagore's 150th birth anniversary",
+      "tagh": "टैगोर की 150वीं जयंती",
+      "fact": "The Tagore Award for Cultural Harmony was started in 2012 on Tagore's 150th birth anniversary; Pandit Ravi Shankar was the first recipient.",
+      "facth": "सांस्कृतिक सद्भाव के लिए टैगोर पुरस्कार 2012 में टैगोर की 150वीं जयंती पर शुरू हुआ; पंडित रवि शंकर पहले प्राप्तकर्ता थे।"
+    },
+    {
+      "n": "Champions of the Earth",
+      "h": "चैंपियंस ऑफ़ द अर्थ",
+      "st": "Environmental leadership",
+      "sh": "पर्यावरण नेतृत्व",
+      "c": "intl",
+      "d": 2,
+      "fd": "Environmental leadership",
+      "fdh": "पर्यावरण नेतृत्व",
+      "by": "UN Environment Programme",
+      "byh": "संयुक्त राष्ट्र पर्यावरण कार्यक्रम",
+      "est": "2005",
+      "esth": "2005",
+      "tag": "The UN's top environmental honour",
+      "tagh": "संयुक्त राष्ट्र का सर्वोच्च पर्यावरण सम्मान",
+      "fact": "Champions of the Earth is the UN Environment Programme's highest environmental honour; Narendra Modi and Emmanuel Macron received it in 2018 for the International Solar Alliance.",
+      "facth": "चैंपियंस ऑफ़ द अर्थ संयुक्त राष्ट्र पर्यावरण कार्यक्रम का सर्वोच्च पर्यावरण सम्मान है; नरेंद्र मोदी और इमैनुएल मैक्रों को 2018 में अंतरराष्ट्रीय सौर गठबंधन के लिए मिला।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "bharat",
+      "icon": "🎖️",
+      "t": [
+        "Bharat Ratna facts",
+        "भारत रत्न तथ्य"
+      ],
+      "cols": [
+        [
+          "Fact",
+          "तथ्य"
+        ],
+        [
+          "Detail",
+          "विवरण"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First recipients (1954)",
+            "पहले प्राप्तकर्ता (1954)"
+          ],
+          [
+            "C. Rajagopalachari, S. Radhakrishnan, C. V. Raman",
+            "सी. राजगोपालाचारी, एस. राधाकृष्णन, सी. वी. रमन"
+          ]
+        ],
+        [
+          [
+            "First posthumous (1966)",
+            "पहला मरणोपरांत (1966)"
+          ],
+          [
+            "Lal Bahadur Shastri",
+            "लाल बहादुर शास्त्री"
+          ]
+        ],
+        [
+          [
+            "First woman (1971)",
+            "पहली महिला (1971)"
+          ],
+          [
+            "Indira Gandhi",
+            "इंदिरा गांधी"
+          ]
+        ],
+        [
+          [
+            "Non-Indian citizens",
+            "ग़ैर-भारतीय नागरिक"
+          ],
+          [
+            "Khan Abdul Ghaffar Khan (1987), Nelson Mandela (1990)",
+            "ख़ान अब्दुल ग़फ़्फ़ार ख़ान (1987), नेल्सन मंडेला (1990)"
+          ]
+        ],
+        [
+          [
+            "Youngest",
+            "सबसे कम आयु"
+          ],
+          [
+            "Sachin Tendulkar (2014, aged 40); also the first sportsperson",
+            "सचिन तेंदुलकर (2014, 40 वर्ष); पहले खिलाड़ी भी"
+          ]
+        ],
+        [
+          [
+            "2024 (five recipients)",
+            "2024 (पाँच प्राप्तकर्ता)"
+          ],
+          [
+            "Karpoori Thakur, L. K. Advani, P. V. Narasimha Rao, Chaudhary Charan Singh, M. S. Swaminathan",
+            "कर्पूरी ठाकुर, एल. के. आडवाणी, पी. वी. नरसिम्हा राव, चौधरी चरण सिंह, एम. एस. स्वामीनाथन"
+          ]
+        ],
+        [
+          [
+            "Limit",
+            "सीमा"
+          ],
+          [
+            "Normally at most three a year; it carries no title and no cash award",
+            "सामान्यतः एक वर्ष में अधिकतम तीन; इसमें न उपाधि है न नक़द राशि"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "nobel",
+      "icon": "🏅",
+      "t": [
+        "Nobel laureates linked to India",
+        "भारत से जुड़े नोबेल विजेता"
+      ],
+      "cols": [
+        [
+          "Laureate",
+          "विजेता"
+        ],
+        [
+          "Field and year",
+          "क्षेत्र और वर्ष"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Rabindranath Tagore",
+            "रवींद्रनाथ टैगोर"
+          ],
+          [
+            "Literature, 1913 (first Asian)",
+            "साहित्य, 1913 (पहले एशियाई)"
+          ]
+        ],
+        [
+          [
+            "C. V. Raman",
+            "सी. वी. रमन"
+          ],
+          [
+            "Physics, 1930 (Raman effect)",
+            "भौतिकी, 1930 (रमन प्रभाव)"
+          ]
+        ],
+        [
+          [
+            "Har Gobind Khorana",
+            "हरगोविंद खुराना"
+          ],
+          [
+            "Medicine, 1968",
+            "चिकित्सा, 1968"
+          ]
+        ],
+        [
+          [
+            "Mother Teresa",
+            "मदर टेरेसा"
+          ],
+          [
+            "Peace, 1979",
+            "शांति, 1979"
+          ]
+        ],
+        [
+          [
+            "S. Chandrasekhar",
+            "एस. चंद्रशेखर"
+          ],
+          [
+            "Physics, 1983",
+            "भौतिकी, 1983"
+          ]
+        ],
+        [
+          [
+            "Amartya Sen",
+            "अमर्त्य सेन"
+          ],
+          [
+            "Economics, 1998",
+            "अर्थशास्त्र, 1998"
+          ]
+        ],
+        [
+          [
+            "Venkatraman Ramakrishnan",
+            "वेंकटरामन रामकृष्णन"
+          ],
+          [
+            "Chemistry, 2009",
+            "रसायन, 2009"
+          ]
+        ],
+        [
+          [
+            "Kailash Satyarthi",
+            "कैलाश सत्यार्थी"
+          ],
+          [
+            "Peace, 2014 (with Malala Yousafzai)",
+            "शांति, 2014 (मलाला यूसुफ़ज़ई के साथ)"
+          ]
+        ],
+        [
+          [
+            "Abhijit Banerjee",
+            "अभिजीत बनर्जी"
+          ],
+          [
+            "Economics, 2019 (with Esther Duflo and Michael Kremer)",
+            "अर्थशास्त्र, 2019 (एस्थर डुफ़्लो और माइकल क्रेमर के साथ)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "order",
+      "icon": "🪖",
+      "t": [
+        "Order of gallantry awards",
+        "वीरता पुरस्कारों का क्रम"
+      ],
+      "cols": [
+        [
+          "Rank",
+          "स्थान"
+        ],
+        [
+          "Wartime / peacetime",
+          "युद्धकाल / शांतिकाल"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "Param Vir Chakra / Ashoka Chakra",
+            "परमवीर चक्र / अशोक चक्र"
+          ]
+        ],
+        [
+          [
+            "2",
+            "2"
+          ],
+          [
+            "Maha Vir Chakra / Kirti Chakra",
+            "महावीर चक्र / कीर्ति चक्र"
+          ]
+        ],
+        [
+          [
+            "3",
+            "3"
+          ],
+          [
+            "Vir Chakra / Shaurya Chakra",
+            "वीर चक्र / शौर्य चक्र"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "recent",
+      "icon": "🆕",
+      "t": [
+        "Recent winners to remember",
+        "याद रखने योग्य हाल के विजेता"
+      ],
+      "cols": [
+        [
+          "Award",
+          "पुरस्कार"
+        ],
+        [
+          "Winner",
+          "विजेता"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Khel Ratna 2024 (given January 2025)",
+            "खेल रत्न 2024 (जनवरी 2025 में दिया)"
+          ],
+          [
+            "Manu Bhaker, D. Gukesh, Harmanpreet Singh, Praveen Kumar",
+            "मनु भाकर, डी. गुकेश, हरमनप्रीत सिंह, प्रवीण कुमार"
+          ]
+        ],
+        [
+          [
+            "Dadasaheb Phalke Award",
+            "दादासाहेब फाल्के पुरस्कार"
+          ],
+          [
+            "2019 Rajinikanth, 2020 Asha Parekh, 2021 Waheeda Rehman, 2022 Mithun Chakraborty, 2023 Mohanlal",
+            "2019 रजनीकांत, 2020 आशा पारेख, 2021 वहीदा रहमान, 2022 मिथुन चक्रवर्ती, 2023 मोहनलाल"
+          ]
+        ],
+        [
+          [
+            "Jnanpith",
+            "ज्ञानपीठ"
+          ],
+          [
+            "2023 Gulzar and Rambhadracharya; 2024 Vinod Kumar Shukla",
+            "2023 गुलज़ार और रामभद्राचार्य; 2024 विनोद कुमार शुक्ल"
+          ]
+        ],
+        [
+          [
+            "Oscars 2023",
+            "ऑस्कर 2023"
+          ],
+          [
+            "Naatu Naatu (RRR), best original song; The Elephant Whisperers, best documentary short",
+            "नाटू नाटू (RRR), सर्वश्रेष्ठ मौलिक गीत; द एलिफ़ेंट व्हिस्परर्स, सर्वश्रेष्ठ लघु वृत्तचित्र"
+          ]
+        ],
+        [
+          [
+            "First Vigyan Ratna (2024)",
+            "पहला विज्ञान रत्न (2024)"
+          ],
+          [
+            "G. Padmanabhan, biochemist",
+            "जी. पद्मनाभन, जैव-रसायनज्ञ"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "civil",
+      "q": [
+        "Who were the first recipients of the Bharat Ratna in 1954?",
+        "1954 में भारत रत्न के पहले प्राप्तकर्ता कौन थे?"
+      ],
+      "o": [
+        [
+          "C. Rajagopalachari, S. Radhakrishnan and C. V. Raman",
+          "सी. राजगोपालाचारी, एस. राधाकृष्णन और सी. वी. रमन"
+        ],
+        [
+          "Jawaharlal Nehru, B. R. Ambedkar and Rajendra Prasad",
+          "जवाहरलाल नेहरू, बी. आर. आंबेडकर और राजेंद्र प्रसाद"
+        ],
+        [
+          "Vallabhbhai Patel, Abul Kalam Azad and Rajendra Prasad",
+          "वल्लभभाई पटेल, अबुल कलाम आज़ाद और राजेंद्र प्रसाद"
+        ],
+        [
+          "Mahatma Gandhi, Nehru and Tagore",
+          "महात्मा गांधी, नेहरू और टैगोर"
+        ]
+      ],
+      "e": [
+        "All three were honoured in 1954, the year the award began.",
+        "तीनों को 1954 में सम्मानित किया गया, जिस वर्ष यह पुरस्कार शुरू हुआ।"
+      ]
+    },
+    {
+      "t": "civil",
+      "q": [
+        "Who was the first person to receive the Bharat Ratna posthumously?",
+        "मरणोपरांत भारत रत्न पाने वाले पहले व्यक्ति कौन थे?"
+      ],
+      "o": [
+        [
+          "Lal Bahadur Shastri",
+          "लाल बहादुर शास्त्री"
+        ],
+        [
+          "Mahatma Gandhi",
+          "महात्मा गांधी"
+        ],
+        [
+          "Vallabhbhai Patel",
+          "वल्लभभाई पटेल"
+        ],
+        [
+          "Subhas Chandra Bose",
+          "सुभाष चंद्र बोस"
+        ]
+      ],
+      "e": [
+        "Shastri received it in 1966.",
+        "शास्त्री को यह 1966 में मिला।"
+      ]
+    },
+    {
+      "t": "civil",
+      "q": [
+        "Which of these did NOT receive the Bharat Ratna in 2024?",
+        "इनमें से किसे 2024 में भारत रत्न नहीं मिला?"
+      ],
+      "o": [
+        [
+          "Pranab Mukherjee",
+          "प्रणब मुखर्जी"
+        ],
+        [
+          "Karpoori Thakur",
+          "कर्पूरी ठाकुर"
+        ],
+        [
+          "M. S. Swaminathan",
+          "एम. एस. स्वामीनाथन"
+        ],
+        [
+          "P. V. Narasimha Rao",
+          "पी. वी. नरसिम्हा राव"
+        ]
+      ],
+      "e": [
+        "Pranab Mukherjee received it in 2019; 2024 also honoured L. K. Advani and Chaudhary Charan Singh.",
+        "प्रणब मुखर्जी को 2019 में मिला; 2024 में एल. के. आडवाणी और चौधरी चरण सिंह भी सम्मानित हुए।"
+      ]
+    },
+    {
+      "t": "civil",
+      "q": [
+        "Which non-Indian received the Bharat Ratna in 1990?",
+        "1990 में किस ग़ैर-भारतीय को भारत रत्न मिला?"
+      ],
+      "o": [
+        [
+          "Nelson Mandela",
+          "नेल्सन मंडेला"
+        ],
+        [
+          "Martin Luther King Jr",
+          "मार्टिन लूथर किंग जूनियर"
+        ],
+        [
+          "Dalai Lama",
+          "दलाई लामा"
+        ],
+        [
+          "Mother Teresa",
+          "मदर टेरेसा"
+        ]
+      ],
+      "e": [
+        "Khan Abdul Ghaffar Khan (1987) and Nelson Mandela (1990) are the non-Indian citizens honoured.",
+        "ख़ान अब्दुल ग़फ़्फ़ार ख़ान (1987) और नेल्सन मंडेला (1990) सम्मानित ग़ैर-भारतीय नागरिक हैं।"
+      ]
+    },
+    {
+      "t": "gallant",
+      "q": [
+        "Who was the first recipient of the Param Vir Chakra?",
+        "परमवीर चक्र के पहले प्राप्तकर्ता कौन थे?"
+      ],
+      "o": [
+        [
+          "Major Somnath Sharma",
+          "मेजर सोमनाथ शर्मा"
+        ],
+        [
+          "Captain Vikram Batra",
+          "कैप्टन विक्रम बत्रा"
+        ],
+        [
+          "Abdul Hamid",
+          "अब्दुल हमीद"
+        ],
+        [
+          "Major Shaitan Singh",
+          "मेजर शैतान सिंह"
+        ]
+      ],
+      "e": [
+        "He received it posthumously for the Battle of Badgam, 1947.",
+        "उन्हें 1947 की बडगाम लड़ाई के लिए यह मरणोपरांत मिला।"
+      ]
+    },
+    {
+      "t": "gallant",
+      "q": [
+        "Which is the highest peacetime gallantry award?",
+        "शांतिकाल का सर्वोच्च वीरता सम्मान कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Ashoka Chakra",
+          "अशोक चक्र"
+        ],
+        [
+          "Kirti Chakra",
+          "कीर्ति चक्र"
+        ],
+        [
+          "Param Vir Chakra",
+          "परमवीर चक्र"
+        ],
+        [
+          "Shaurya Chakra",
+          "शौर्य चक्र"
+        ]
+      ],
+      "e": [
+        "Param Vir Chakra is the highest in war; Ashoka Chakra in peace.",
+        "युद्ध में सर्वोच्च परमवीर चक्र है; शांति में अशोक चक्र।"
+      ]
+    },
+    {
+      "t": "gallant",
+      "q": [
+        "Who designed the Param Vir Chakra?",
+        "परमवीर चक्र की रूपरेखा किसने बनाई?"
+      ],
+      "o": [
+        [
+          "Savitri Khanolkar",
+          "सावित्री खानोलकर"
+        ],
+        [
+          "Nandalal Bose",
+          "नंदलाल बोस"
+        ],
+        [
+          "Pingali Venkayya",
+          "पिंगली वेंकैया"
+        ],
+        [
+          "D. Udaya Kumar",
+          "डी. उदय कुमार"
+        ]
+      ],
+      "e": [
+        "Pingali Venkayya designed the flag; D. Udaya Kumar the rupee symbol.",
+        "पिंगली वेंकैया ने ध्वज और डी. उदय कुमार ने रुपये का प्रतीक बनाया।"
+      ]
+    },
+    {
+      "t": "sport",
+      "q": [
+        "The Rajiv Gandhi Khel Ratna was renamed after whom in 2021?",
+        "2021 में राजीव गांधी खेल रत्न का नाम किसके नाम पर रखा गया?"
+      ],
+      "o": [
+        [
+          "Major Dhyan Chand",
+          "मेजर ध्यानचंद"
+        ],
+        [
+          "Milkha Singh",
+          "मिल्खा सिंह"
+        ],
+        [
+          "P. T. Usha",
+          "पी. टी. उषा"
+        ],
+        [
+          "Kapil Dev",
+          "कपिल देव"
+        ]
+      ],
+      "e": [
+        "Dhyan Chand won three Olympic hockey golds (1928, 1932, 1936).",
+        "ध्यानचंद ने तीन ओलंपिक हॉकी स्वर्ण (1928, 1932, 1936) जीते।"
+      ]
+    },
+    {
+      "t": "sport",
+      "q": [
+        "The Dronacharya Award is given to",
+        "द्रोणाचार्य पुरस्कार किसे दिया जाता है?"
+      ],
+      "o": [
+        [
+          "Sports coaches",
+          "खेल प्रशिक्षकों"
+        ],
+        [
+          "Teachers",
+          "शिक्षकों"
+        ],
+        [
+          "Athletes",
+          "खिलाड़ियों"
+        ],
+        [
+          "Sports journalists",
+          "खेल पत्रकारों"
+        ]
+      ],
+      "e": [
+        "It was instituted in 1985.",
+        "इसे 1985 में स्थापित किया गया।"
+      ]
+    },
+    {
+      "t": "sport",
+      "q": [
+        "Who received the first Khel Ratna (1991-92)?",
+        "पहला खेल रत्न (1991-92) किसे मिला?"
+      ],
+      "o": [
+        [
+          "Viswanathan Anand",
+          "विश्वनाथन आनंद"
+        ],
+        [
+          "Sachin Tendulkar",
+          "सचिन तेंदुलकर"
+        ],
+        [
+          "Leander Paes",
+          "लिएंडर पेस"
+        ],
+        [
+          "Karnam Malleswari",
+          "कर्णम मल्लेश्वरी"
+        ]
+      ],
+      "e": [
+        "Chess grandmaster Viswanathan Anand was the first.",
+        "शतरंज ग्रैंडमास्टर विश्वनाथन आनंद पहले थे।"
+      ]
+    },
+    {
+      "t": "sport",
+      "q": [
+        "Which of these did NOT receive the Khel Ratna for 2024?",
+        "इनमें से किसे 2024 का खेल रत्न नहीं मिला?"
+      ],
+      "o": [
+        [
+          "Neeraj Chopra",
+          "नीरज चोपड़ा"
+        ],
+        [
+          "Manu Bhaker",
+          "मनु भाकर"
+        ],
+        [
+          "D. Gukesh",
+          "डी. गुकेश"
+        ],
+        [
+          "Harmanpreet Singh",
+          "हरमनप्रीत सिंह"
+        ]
+      ],
+      "e": [
+        "The fourth 2024 awardee was para-athlete Praveen Kumar; Neeraj Chopra received it in 2021.",
+        "2024 के चौथे विजेता पैरा-एथलीट प्रवीण कुमार थे; नीरज चोपड़ा को यह 2021 में मिला।"
+      ]
+    },
+    {
+      "t": "lit",
+      "q": [
+        "The Jnanpith Award is given by",
+        "ज्ञानपीठ पुरस्कार कौन देता है?"
+      ],
+      "o": [
+        [
+          "Bharatiya Jnanpith",
+          "भारतीय ज्ञानपीठ"
+        ],
+        [
+          "Sahitya Akademi",
+          "साहित्य अकादमी"
+        ],
+        [
+          "K. K. Birla Foundation",
+          "के. के. बिड़ला फ़ाउंडेशन"
+        ],
+        [
+          "Ministry of Culture",
+          "संस्कृति मंत्रालय"
+        ]
+      ],
+      "e": [
+        "The Saraswati and Vyas Sammans are given by the K. K. Birla Foundation.",
+        "सरस्वती और व्यास सम्मान के. के. बिड़ला फ़ाउंडेशन देता है।"
+      ]
+    },
+    {
+      "t": "lit",
+      "q": [
+        "Who received the first Saraswati Samman (1991)?",
+        "पहला सरस्वती सम्मान (1991) किसे मिला?"
+      ],
+      "o": [
+        [
+          "Harivansh Rai Bachchan",
+          "हरिवंश राय बच्चन"
+        ],
+        [
+          "Mahadevi Verma",
+          "महादेवी वर्मा"
+        ],
+        [
+          "Amrita Pritam",
+          "अमृता प्रीतम"
+        ],
+        [
+          "Ramdhari Singh Dinkar",
+          "रामधारी सिंह दिनकर"
+        ]
+      ],
+      "e": [
+        "He was honoured for his four-volume autobiography.",
+        "उन्हें उनकी चार खंडों की आत्मकथा के लिए सम्मानित किया गया।"
+      ]
+    },
+    {
+      "t": "lit",
+      "q": [
+        "The Pulitzer Prize is administered by",
+        "पुलित्ज़र पुरस्कार किसके द्वारा दिया जाता है?"
+      ],
+      "o": [
+        [
+          "Columbia University",
+          "कोलंबिया विश्वविद्यालय"
+        ],
+        [
+          "Harvard University",
+          "हार्वर्ड विश्वविद्यालय"
+        ],
+        [
+          "Oxford University",
+          "ऑक्सफ़ोर्ड विश्वविद्यालय"
+        ],
+        [
+          "The Nobel Foundation",
+          "नोबेल फ़ाउंडेशन"
+        ]
+      ],
+      "e": [
+        "It began in 1917 under the will of Joseph Pulitzer.",
+        "यह 1917 में जोसेफ़ पुलित्ज़र की वसीयत के अनुसार शुरू हुआ।"
+      ]
+    },
+    {
+      "t": "arts",
+      "q": [
+        "Who was the first recipient of the Dadasaheb Phalke Award?",
+        "दादासाहेब फाल्के पुरस्कार की पहली प्राप्तकर्ता कौन थीं?"
+      ],
+      "o": [
+        [
+          "Devika Rani",
+          "देविका रानी"
+        ],
+        [
+          "Nargis",
+          "नरगिस"
+        ],
+        [
+          "Lata Mangeshkar",
+          "लता मंगेशकर"
+        ],
+        [
+          "Madhubala",
+          "मधुबाला"
+        ]
+      ],
+      "e": [
+        "Devika Rani received it in 1969.",
+        "देविका रानी को यह 1969 में मिला।"
+      ]
+    },
+    {
+      "t": "arts",
+      "q": [
+        "Who was the first Indian to win an Oscar?",
+        "ऑस्कर जीतने वाली पहली भारतीय कौन थीं?"
+      ],
+      "o": [
+        [
+          "Bhanu Athaiya",
+          "भानु अथैया"
+        ],
+        [
+          "Satyajit Ray",
+          "सत्यजित राय"
+        ],
+        [
+          "A. R. Rahman",
+          "ए. आर. रहमान"
+        ],
+        [
+          "Resul Pookutty",
+          "रसूल पूकुट्टी"
+        ]
+      ],
+      "e": [
+        "She won for costume design in Gandhi (1983); Satyajit Ray received an honorary Oscar in 1992.",
+        "उन्होंने गांधी (1983) की वेशभूषा के लिए जीता; सत्यजित राय को 1992 में मानद ऑस्कर मिला।"
+      ]
+    },
+    {
+      "t": "arts",
+      "q": [
+        "Who was the first Indian to win the Pritzker Prize for architecture?",
+        "वास्तुकला का प्रित्ज़कर पुरस्कार जीतने वाले पहले भारतीय कौन थे?"
+      ],
+      "o": [
+        [
+          "B. V. Doshi",
+          "बी. वी. दोशी"
+        ],
+        [
+          "Charles Correa",
+          "चार्ल्स कोरिया"
+        ],
+        [
+          "Laurie Baker",
+          "लॉरी बेकर"
+        ],
+        [
+          "Raj Rewal",
+          "राज रेवाल"
+        ]
+      ],
+      "e": [
+        "Balkrishna Doshi won it in 2018.",
+        "बालकृष्ण दोशी ने इसे 2018 में जीता।"
+      ]
+    },
+    {
+      "t": "arts",
+      "q": [
+        "Which Indian song won the Oscar for best original song in 2023?",
+        "2023 में सर्वश्रेष्ठ मौलिक गीत का ऑस्कर किस भारतीय गीत ने जीता?"
+      ],
+      "o": [
+        [
+          "Naatu Naatu",
+          "नाटू नाटू"
+        ],
+        [
+          "Jai Ho",
+          "जय हो"
+        ],
+        [
+          "Chaiyya Chaiyya",
+          "छैयाँ छैयाँ"
+        ],
+        [
+          "Kesariya",
+          "केसरिया"
+        ]
+      ],
+      "e": [
+        "Naatu Naatu is from the film RRR; Jai Ho won in 2009.",
+        "नाटू नाटू फ़िल्म RRR से है; जय हो ने 2009 में जीता।"
+      ]
+    },
+    {
+      "t": "sci",
+      "q": [
+        "UNESCO's Kalinga Prize is given for",
+        "यूनेस्को का कलिंग पुरस्कार किसके लिए दिया जाता है?"
+      ],
+      "o": [
+        [
+          "Popularising science",
+          "विज्ञान को लोकप्रिय बनाने"
+        ],
+        [
+          "Peace",
+          "शांति"
+        ],
+        [
+          "Literature",
+          "साहित्य"
+        ],
+        [
+          "Heritage conservation",
+          "धरोहर संरक्षण"
+        ]
+      ],
+      "e": [
+        "It was set up in 1952 with funds from Biju Patnaik.",
+        "इसे 1952 में बीजू पटनायक के धन से स्थापित किया गया।"
+      ]
+    },
+    {
+      "t": "sci",
+      "q": [
+        "Who received the first Vigyan Ratna in 2024?",
+        "2024 में पहला विज्ञान रत्न किसे मिला?"
+      ],
+      "o": [
+        [
+          "G. Padmanabhan",
+          "जी. पद्मनाभन"
+        ],
+        [
+          "K. Sivan",
+          "के. सिवन"
+        ],
+        [
+          "C. N. R. Rao",
+          "सी. एन. आर. राव"
+        ],
+        [
+          "Tessy Thomas",
+          "टेसी थॉमस"
+        ]
+      ],
+      "e": [
+        "Vigyan Ratna is the top category of the Rashtriya Vigyan Puraskar.",
+        "विज्ञान रत्न राष्ट्रीय विज्ञान पुरस्कार की सर्वोच्च श्रेणी है।"
+      ]
+    },
+    {
+      "t": "intl",
+      "q": [
+        "Which award is called 'Asia's Nobel Prize'?",
+        "किस पुरस्कार को 'एशिया का नोबेल' कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Ramon Magsaysay Award",
+          "रेमन मैग्सेसे पुरस्कार"
+        ],
+        [
+          "Kalinga Prize",
+          "कलिंग पुरस्कार"
+        ],
+        [
+          "Gandhi Peace Prize",
+          "गांधी शांति पुरस्कार"
+        ],
+        [
+          "Fukuoka Prize",
+          "फ़ुकुओका पुरस्कार"
+        ]
+      ],
+      "e": [
+        "It is given by a foundation in the Philippines.",
+        "यह फ़िलीपींस का एक फ़ाउंडेशन देता है।"
+      ]
+    },
+    {
+      "t": "intl",
+      "q": [
+        "Who was the first recipient of the Gandhi Peace Prize (1995)?",
+        "गांधी शांति पुरस्कार (1995) के पहले प्राप्तकर्ता कौन थे?"
+      ],
+      "o": [
+        [
+          "Julius Nyerere",
+          "जूलियस न्येरेरे"
+        ],
+        [
+          "Nelson Mandela",
+          "नेल्सन मंडेला"
+        ],
+        [
+          "Desmond Tutu",
+          "डेसमंड टूटू"
+        ],
+        [
+          "Baba Amte",
+          "बाबा आमटे"
+        ]
+      ],
+      "e": [
+        "Nyerere was the first President of Tanzania.",
+        "न्येरेरे तंज़ानिया के पहले राष्ट्रपति थे।"
+      ]
+    },
+    {
+      "t": "intl",
+      "q": [
+        "Which award is called the 'Alternative Nobel Prize'?",
+        "किस पुरस्कार को 'वैकल्पिक नोबेल' कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Right Livelihood Award",
+          "राइट लाइवलीहुड पुरस्कार"
+        ],
+        [
+          "Templeton Prize",
+          "टेम्पलटन पुरस्कार"
+        ],
+        [
+          "Ramon Magsaysay Award",
+          "रेमन मैग्सेसे पुरस्कार"
+        ],
+        [
+          "Abel Prize",
+          "एबेल पुरस्कार"
+        ]
+      ],
+      "e": [
+        "It is given in Sweden since 1980.",
+        "यह 1980 से स्वीडन में दिया जाता है।"
+      ]
+    },
+    {
+      "t": "intl",
+      "q": [
+        "Which Indian shared the 2014 Nobel Peace Prize?",
+        "2014 का नोबेल शांति पुरस्कार किस भारतीय ने साझा किया?"
+      ],
+      "o": [
+        [
+          "Kailash Satyarthi",
+          "कैलाश सत्यार्थी"
+        ],
+        [
+          "Medha Patkar",
+          "मेधा पाटकर"
+        ],
+        [
+          "Anna Hazare",
+          "अन्ना हज़ारे"
+        ],
+        [
+          "Bunker Roy",
+          "बंकर रॉय"
+        ]
+      ],
+      "e": [
+        "He shared it with Malala Yousafzai.",
+        "उन्होंने इसे मलाला यूसुफ़ज़ई के साथ साझा किया।"
+      ]
+    },
+    {
+      "t": "intl",
+      "q": [
+        "Who was the first Indian to win the Nobel Prize in Physics?",
+        "भौतिकी का नोबेल जीतने वाले पहले भारतीय कौन थे?"
+      ],
+      "o": [
+        [
+          "C. V. Raman (1930)",
+          "सी. वी. रमन (1930)"
+        ],
+        [
+          "S. Chandrasekhar (1983)",
+          "एस. चंद्रशेखर (1983)"
+        ],
+        [
+          "Homi Bhabha",
+          "होमी भाभा"
+        ],
+        [
+          "Meghnad Saha",
+          "मेघनाद साहा"
+        ]
+      ],
+      "e": [
+        "Raman won for the Raman effect; National Science Day (28 February) marks its discovery.",
+        "रमन को रमन प्रभाव के लिए मिला; राष्ट्रीय विज्ञान दिवस (28 फ़रवरी) इसकी खोज का दिन है।"
+      ]
+    }
+  ]
+}

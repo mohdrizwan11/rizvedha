@@ -1,0 +1,2347 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "battles-treaties",
+  "file": "battles_treaties_india_app.html",
+  "storageKey": "ssc_battles_treaties_v1",
+  "icon": "⚔️",
+  "description": "Bilingual study app on the battles and treaties of Indian history: from Kalinga to Kargil and from Purandar to Simla on the map, with exam notes on the Panipat, Anglo-Mysore, Anglo-Maratha, Anglo-Sikh and Carnatic wars.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Battles & Treaties",
+      "युद्ध और संधियाँ"
+    ],
+    "hSub": [
+      "SSC Focus · Battles and treaties of India",
+      "SSC फोकस · भारत के युद्ध और संधियाँ"
+    ],
+    "learnTtl": [
+      "Learn battles and treaties",
+      "युद्ध और संधियाँ सीखें"
+    ],
+    "learnSub": [
+      "Open any battle or treaty to read where and when it happened, who was involved and the result.",
+      "किसी भी युद्ध या संधि को खोलकर पढ़ें कि यह कहाँ और कब हुआ, कौन शामिल था और परिणाम क्या रहा।"
+    ],
+    "lvlLabel": [
+      "Level · History GK rank",
+      "स्तर · इतिहास GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search battles and treaties",
+      "युद्ध और संधियाँ खोजें"
+    ],
+    "searchPh": [
+      "Battle, ruler, year or state",
+      "युद्ध, शासक, वर्ष या राज्य"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Battles & treaties",
+      "युद्ध और संधियाँ"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on battles, treaties, years and results. Each answer comes with an explanation.",
+      "युद्धों, संधियों, वर्षों और परिणामों पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qLabel": [
+      "Select the state where this took place",
+      "जहाँ यह हुआ उस राज्य को चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "atlasSub": [
+      "Every entry on the map, coloured by kind.",
+      "हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read an entry, or a state to list its entries.",
+      "किसी चिह्न को छूकर प्रविष्टि पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No entry from this state in the deck.",
+      "इस राज्य की कोई प्रविष्टि सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state where this took place.",
+      "भारत का मानचित्र। जहाँ यह हुआ उस राज्य को चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its entries.",
+      "भारत का मानचित्र। किसी राज्य की प्रविष्टियाँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "plantMarker": [
+      "entry",
+      "प्रविष्टि"
+    ],
+    "atlasPickerLabel": [
+      "Browse an entry",
+      "प्रविष्टि खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select an entry",
+      "प्रविष्टि चुनें"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ],
+    "howto": [
+      "Play: a battle or treaty is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Battles & treaties: 50 entries on battles and treaties from ancient times to Kargil.\nLearn → Exam notes: the three battles of Panipat, the Anglo-Mysore, Anglo-Maratha, Anglo-Sikh and Carnatic wars, and the wars of independent India.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every entry on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई युद्ध या संधि दिखेगी; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → युद्ध और संधियाँ: 50 प्रविष्टियाँ प्राचीन काल से कारगिल तक के युद्धों और संधियों पर।\nसीखें → परीक्षा नोट्स: पानीपत के तीन युद्ध, आंग्ल-मैसूर, आंग्ल-मराठा, आंग्ल-सिख और कर्नाटक युद्ध, और स्वतंत्र भारत के युद्ध।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "ancient",
+      "icon": "🏹",
+      "col": "#795548",
+      "t": [
+        "Ancient battle",
+        "प्राचीन युद्ध"
+      ]
+    },
+    {
+      "k": "medieval",
+      "icon": "⚔️",
+      "col": "#B71C1C",
+      "t": [
+        "Medieval battle",
+        "मध्यकालीन युद्ध"
+      ]
+    },
+    {
+      "k": "modern",
+      "icon": "💂",
+      "col": "#1565C0",
+      "t": [
+        "British-era battle",
+        "ब्रिटिश काल का युद्ध"
+      ]
+    },
+    {
+      "k": "post",
+      "icon": "🎖️",
+      "col": "#33691E",
+      "t": [
+        "Since independence",
+        "स्वतंत्रता के बाद"
+      ]
+    },
+    {
+      "k": "treaty",
+      "icon": "📜",
+      "col": "#6A1B9A",
+      "t": [
+        "Treaty & pact",
+        "संधि और समझौता"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Place",
+        "स्थान"
+      ]
+    },
+    {
+      "k": "yr",
+      "t": [
+        "Year",
+        "वर्ष"
+      ]
+    },
+    {
+      "k": "bw",
+      "t": [
+        "Between",
+        "किनके बीच"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Result",
+        "परिणाम"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "yr",
+    "bw"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Foot Soldier",
+      "hi": "पैदल सैनिक"
+    },
+    {
+      "min": 60,
+      "en": "Archer",
+      "hi": "धनुर्धर"
+    },
+    {
+      "min": 150,
+      "en": "Cavalry Rider",
+      "hi": "घुड़सवार"
+    },
+    {
+      "min": 320,
+      "en": "Captain",
+      "hi": "कप्तान"
+    },
+    {
+      "min": 560,
+      "en": "General",
+      "hi": "सेनापति"
+    },
+    {
+      "min": 900,
+      "en": "Chronicler",
+      "hi": "इतिहासकार"
+    },
+    {
+      "min": 1400,
+      "en": "History GK Champion",
+      "hi": "इतिहास GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "⚔️",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "panipat",
+      "icon": "⚔️",
+      "t": [
+        "Medieval Marshal",
+        "मध्यकालीन मार्शल"
+      ],
+      "d": [
+        "Study every medieval battle",
+        "सभी मध्यकालीन युद्ध पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "medieval"
+        ]
+      }
+    },
+    {
+      "id": "treaty",
+      "icon": "📜",
+      "t": [
+        "Treaty Keeper",
+        "संधि रक्षक"
+      ],
+      "d": [
+        "Study every treaty",
+        "सभी संधियाँ पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "treaty"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "History GK Champion",
+        "इतिहास GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "yr",
+        "field": "yr",
+        "ask": [
+          "When did it happen?",
+          "यह कब हुआ?"
+        ],
+        "reverseId": "wy",
+        "reverseAsk": [
+          "Which of these happened in",
+          "इनमें से कौन-सा इस वर्ष हुआ:"
+        ],
+        "pairs": [
+          [
+            "1962",
+            "1962"
+          ],
+          [
+            "Rigvedic age",
+            "261 BCE"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "medieval",
+              "modern",
+              "post"
+            ],
+            "n": 4
+          },
+          {
+            "q": "yr",
+            "n": 3
+          },
+          {
+            "q": "st",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "medieval",
+        "t": [
+          "Ancient & medieval",
+          "प्राचीन और मध्यकालीन"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "medieval"
+            ],
+            "n": 6
+          },
+          {
+            "q": "yr",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "modern",
+        "t": [
+          "British era & treaties",
+          "ब्रिटिश काल और संधियाँ"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "modern"
+            ],
+            "n": 7
+          },
+          {
+            "q": "wy",
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "where",
+        "t": [
+          "Where did it happen?",
+          "कहाँ हुआ?"
+        ],
+        "mix": [
+          {
+            "q": "st",
+            "n": 6
+          },
+          {
+            "q": "is",
+            "n": 4
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Kalinga War",
+      "h": "कलिंग युद्ध",
+      "s": "Odisha",
+      "st": "Dhauli, near Bhubaneswar, Odisha",
+      "sh": "धौली, भुवनेश्वर के पास, ओडिशा",
+      "c": "ancient",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.19,
+      "lng": 85.84,
+      "yr": "261 BCE",
+      "yrh": "261 ई.पू.",
+      "bw": "Ashoka vs Kalinga",
+      "bwh": "अशोक बनाम कलिंग",
+      "tag": "Ashoka won and turned to Buddhism",
+      "tagh": "अशोक जीता और बौद्ध धर्म अपनाया",
+      "fact": "The bloodshed of the Kalinga War made Ashoka give up war and follow dhamma; his Rock Edict XIII describes it.",
+      "facth": "कलिंग युद्ध के रक्तपात ने अशोक को युद्ध छोड़कर धम्म अपनाने को प्रेरित किया; उसका तेरहवाँ शिलालेख इसका वर्णन करता है।"
+    },
+    {
+      "n": "Battle of the Ten Kings",
+      "h": "दशराज्ञ युद्ध",
+      "s": "Punjab",
+      "st": "Banks of the Parushni (Ravi)",
+      "sh": "परुष्णी (रावी) नदी के तट",
+      "c": "ancient",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.6,
+      "lng": 75,
+      "yr": "Rigvedic age",
+      "yrh": "ऋग्वैदिक काल",
+      "bw": "Sudas (Bharatas) vs ten tribes",
+      "bwh": "सुदास (भरत) बनाम दस जनजातियाँ",
+      "tag": "Sudas of the Bharatas won",
+      "tagh": "भरतों के सुदास जीते",
+      "fact": "The Rigveda describes the Battle of the Ten Kings on the Parushni (Ravi), won by King Sudas of the Bharata tribe.",
+      "facth": "ऋग्वेद में परुष्णी (रावी) के तट पर दशराज्ञ युद्ध का वर्णन है, जिसे भरत जनजाति के राजा सुदास ने जीता।"
+    },
+    {
+      "n": "First Battle of Tarain",
+      "h": "तराइन का प्रथम युद्ध",
+      "s": "Haryana",
+      "st": "Taraori, Karnal, Haryana",
+      "sh": "तरावड़ी, करनाल, हरियाणा",
+      "c": "medieval",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.8,
+      "lng": 76.92,
+      "yr": "1191",
+      "yrh": "1191",
+      "bw": "Prithviraj Chauhan vs Muhammad Ghori",
+      "bwh": "पृथ्वीराज चौहान बनाम मुहम्मद ग़ोरी",
+      "tag": "Prithviraj Chauhan won",
+      "tagh": "पृथ्वीराज चौहान जीते",
+      "fact": "In the first battle of Tarain (1191), Prithviraj Chauhan defeated Muhammad Ghori.",
+      "facth": "तराइन के प्रथम युद्ध (1191) में पृथ्वीराज चौहान ने मुहम्मद ग़ोरी को हराया।"
+    },
+    {
+      "n": "Second Battle of Tarain",
+      "h": "तराइन का द्वितीय युद्ध",
+      "s": "Haryana",
+      "st": "Taraori, Karnal, Haryana",
+      "sh": "तरावड़ी, करनाल, हरियाणा",
+      "c": "medieval",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.84,
+      "lng": 76.97,
+      "yr": "1192",
+      "yrh": "1192",
+      "bw": "Muhammad Ghori vs Prithviraj Chauhan",
+      "bwh": "मुहम्मद ग़ोरी बनाम पृथ्वीराज चौहान",
+      "tag": "Ghori won; Turkish rule began in north India",
+      "tagh": "ग़ोरी जीता; उत्तर भारत में तुर्क शासन शुरू",
+      "fact": "In the second battle of Tarain (1192), Muhammad Ghori defeated Prithviraj Chauhan, opening north India to Turkish rule.",
+      "facth": "तराइन के द्वितीय युद्ध (1192) में मुहम्मद ग़ोरी ने पृथ्वीराज चौहान को हराया, जिससे उत्तर भारत में तुर्क शासन का रास्ता खुला।"
+    },
+    {
+      "n": "Battle of Chandawar",
+      "h": "चंदावर का युद्ध",
+      "s": "Uttar Pradesh",
+      "st": "Firozabad, Uttar Pradesh",
+      "sh": "फ़िरोज़ाबाद, उत्तर प्रदेश",
+      "c": "medieval",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.15,
+      "lng": 78.4,
+      "yr": "1194",
+      "yrh": "1194",
+      "bw": "Muhammad Ghori vs Jaichand of Kannauj",
+      "bwh": "मुहम्मद ग़ोरी बनाम कन्नौज के जयचंद",
+      "tag": "Ghori won",
+      "tagh": "ग़ोरी जीता",
+      "fact": "At Chandawar on the Yamuna (1194), Muhammad Ghori defeated Jaichand, the Gahadavala ruler of Kannauj.",
+      "facth": "यमुना तट पर चंदावर (1194) में मुहम्मद ग़ोरी ने कन्नौज के गहड़वाल शासक जयचंद को हराया।"
+    },
+    {
+      "n": "First Battle of Panipat",
+      "h": "पानीपत का प्रथम युद्ध",
+      "s": "Haryana",
+      "st": "Panipat, Haryana",
+      "sh": "पानीपत, हरियाणा",
+      "c": "medieval",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.39,
+      "lng": 76.97,
+      "yr": "1526",
+      "yrh": "1526",
+      "bw": "Babur vs Ibrahim Lodi",
+      "bwh": "बाबर बनाम इब्राहिम लोदी",
+      "tag": "Babur won; the Mughal empire began",
+      "tagh": "बाबर जीता; मुग़ल साम्राज्य की शुरुआत",
+      "fact": "At Panipat in 1526, Babur used field artillery and the tulughma tactic to defeat Ibrahim Lodi and found the Mughal empire.",
+      "facth": "1526 में पानीपत में बाबर ने तोपख़ाने और तुलुग़मा युक्ति से इब्राहिम लोदी को हराकर मुग़ल साम्राज्य की नींव रखी।"
+    },
+    {
+      "n": "Battle of Khanwa",
+      "h": "खानवा का युद्ध",
+      "s": "Rajasthan",
+      "st": "Khanwa, Bharatpur, Rajasthan",
+      "sh": "खानवा, भरतपुर, राजस्थान",
+      "c": "medieval",
+      "rg": "W",
+      "d": 1,
+      "lat": 27.03,
+      "lng": 77.5,
+      "yr": "1527",
+      "yrh": "1527",
+      "bw": "Babur vs Rana Sanga",
+      "bwh": "बाबर बनाम राणा सांगा",
+      "tag": "Babur won",
+      "tagh": "बाबर जीता",
+      "fact": "At Khanwa in 1527 Babur defeated Rana Sanga of Mewar; Babur declared it a jihad and took the title Ghazi.",
+      "facth": "1527 में खानवा में बाबर ने मेवाड़ के राणा सांगा को हराया; बाबर ने इसे जिहाद घोषित कर ग़ाज़ी की उपाधि ली।"
+    },
+    {
+      "n": "Battle of Ghaghra",
+      "h": "घाघरा का युद्ध",
+      "s": "Bihar",
+      "st": "Ghaghra river near Chhapra, Bihar",
+      "sh": "छपरा के पास घाघरा नदी, बिहार",
+      "c": "medieval",
+      "rg": "E",
+      "d": 3,
+      "lat": 25.78,
+      "lng": 84.73,
+      "yr": "1529",
+      "yrh": "1529",
+      "bw": "Babur vs the Afghans of Bihar and Bengal",
+      "bwh": "बाबर बनाम बिहार और बंगाल के अफ़ग़ान",
+      "tag": "Babur won",
+      "tagh": "बाबर जीता",
+      "fact": "The Battle of Ghaghra (1529) was Babur's last major battle, against the Afghan chiefs of Bihar and Bengal.",
+      "facth": "घाघरा का युद्ध (1529) बिहार और बंगाल के अफ़ग़ान सरदारों के विरुद्ध बाबर का अंतिम बड़ा युद्ध था।"
+    },
+    {
+      "n": "Battle of Chausa",
+      "h": "चौसा का युद्ध",
+      "s": "Bihar",
+      "st": "Chausa, Buxar, Bihar",
+      "sh": "चौसा, बक्सर, बिहार",
+      "c": "medieval",
+      "rg": "E",
+      "d": 1,
+      "lat": 25.5,
+      "lng": 83.95,
+      "yr": "1539",
+      "yrh": "1539",
+      "bw": "Sher Shah Suri vs Humayun",
+      "bwh": "शेरशाह सूरी बनाम हुमायूँ",
+      "tag": "Sher Shah won",
+      "tagh": "शेरशाह जीता",
+      "fact": "At Chausa (1539) Sher Khan defeated Humayun and took the title Sher Shah.",
+      "facth": "चौसा (1539) में शेर ख़ाँ ने हुमायूँ को हराया और शेरशाह की उपाधि ली।"
+    },
+    {
+      "n": "Battle of Kannauj",
+      "h": "कन्नौज का युद्ध",
+      "s": "Uttar Pradesh",
+      "st": "Kannauj (Bilgram), Uttar Pradesh",
+      "sh": "कन्नौज (बिलग्राम), उत्तर प्रदेश",
+      "c": "medieval",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.05,
+      "lng": 79.92,
+      "yr": "1540",
+      "yrh": "1540",
+      "bw": "Sher Shah Suri vs Humayun",
+      "bwh": "शेरशाह सूरी बनाम हुमायूँ",
+      "tag": "Sher Shah won; Humayun went into exile",
+      "tagh": "शेरशाह जीता; हुमायूँ निर्वासन में गया",
+      "fact": "After losing at Kannauj (Bilgram) in 1540, Humayun lost his throne and spent 15 years in exile.",
+      "facth": "1540 में कन्नौज (बिलग्राम) में हारने के बाद हुमायूँ ने गद्दी खोई और 15 वर्ष निर्वासन में बिताए।"
+    },
+    {
+      "n": "Second Battle of Panipat",
+      "h": "पानीपत का द्वितीय युद्ध",
+      "s": "Haryana",
+      "st": "Panipat, Haryana",
+      "sh": "पानीपत, हरियाणा",
+      "c": "medieval",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.42,
+      "lng": 77,
+      "yr": "1556",
+      "yrh": "1556",
+      "bw": "Akbar (Bairam Khan) vs Hemu",
+      "bwh": "अकबर (बैरम ख़ाँ) बनाम हेमू",
+      "tag": "Akbar won",
+      "tagh": "अकबर जीता",
+      "fact": "At the second battle of Panipat (1556), Akbar's army under Bairam Khan defeated Hemu (Hemchandra Vikramaditya).",
+      "facth": "पानीपत के द्वितीय युद्ध (1556) में बैरम ख़ाँ के नेतृत्व में अकबर की सेना ने हेमू (हेमचंद्र विक्रमादित्य) को हराया।"
+    },
+    {
+      "n": "Battle of Talikota",
+      "h": "तालीकोटा का युद्ध",
+      "s": "Karnataka",
+      "st": "Talikota, Vijayapura, Karnataka",
+      "sh": "तालीकोटा, विजयपुरा, कर्नाटक",
+      "c": "medieval",
+      "rg": "S",
+      "d": 1,
+      "lat": 16.47,
+      "lng": 76.3,
+      "yr": "1565",
+      "yrh": "1565",
+      "bw": "Deccan Sultanates vs Vijayanagara",
+      "bwh": "दक्कन सल्तनतें बनाम विजयनगर",
+      "tag": "Sultanates won; Vijayanagara declined",
+      "tagh": "सल्तनतें जीतीं; विजयनगर का पतन",
+      "fact": "At Talikota (Rakshasa-Tangadi, 1565) the Deccan Sultanates defeated Vijayanagara under Rama Raya, and Hampi was sacked.",
+      "facth": "तालीकोटा (राक्षस-तंगड़ी, 1565) में दक्कन सल्तनतों ने राम राय के नेतृत्व वाले विजयनगर को हराया और हम्पी लूटी गई।"
+    },
+    {
+      "n": "Battle of Haldighati",
+      "h": "हल्दीघाटी का युद्ध",
+      "s": "Rajasthan",
+      "st": "Haldighati, Rajsamand, Rajasthan",
+      "sh": "हल्दीघाटी, राजसमंद, राजस्थान",
+      "c": "medieval",
+      "rg": "W",
+      "d": 1,
+      "lat": 24.89,
+      "lng": 73.7,
+      "yr": "1576",
+      "yrh": "1576",
+      "bw": "Maharana Pratap vs Mughals under Man Singh",
+      "bwh": "महाराणा प्रताप बनाम मान सिंह के नेतृत्व में मुग़ल",
+      "tag": "Indecisive; Pratap kept resisting",
+      "tagh": "अनिर्णीत; प्रताप ने प्रतिरोध जारी रखा",
+      "fact": "At Haldighati (1576) Maharana Pratap fought Akbar's army led by Raja Man Singh; Pratap's horse Chetak is remembered from this battle.",
+      "facth": "हल्दीघाटी (1576) में महाराणा प्रताप ने राजा मान सिंह के नेतृत्व वाली अकबर की सेना से युद्ध किया; प्रताप का घोड़ा चेतक इसी युद्ध से याद किया जाता है।"
+    },
+    {
+      "n": "Battle of Samugarh",
+      "h": "सामूगढ़ का युद्ध",
+      "s": "Uttar Pradesh",
+      "st": "Near Agra, Uttar Pradesh",
+      "sh": "आगरा के पास, उत्तर प्रदेश",
+      "c": "medieval",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.2,
+      "lng": 78.1,
+      "yr": "1658",
+      "yrh": "1658",
+      "bw": "Aurangzeb vs Dara Shikoh",
+      "bwh": "औरंगज़ेब बनाम दारा शिकोह",
+      "tag": "Aurangzeb won the war of succession",
+      "tagh": "औरंगज़ेब ने उत्तराधिकार युद्ध जीता",
+      "fact": "At Samugarh (1658) Aurangzeb defeated his elder brother Dara Shikoh in the war of succession.",
+      "facth": "सामूगढ़ (1658) में औरंगज़ेब ने उत्तराधिकार युद्ध में अपने बड़े भाई दारा शिकोह को हराया।"
+    },
+    {
+      "n": "Battle of Saraighat",
+      "h": "सराईघाट का युद्ध",
+      "s": "Assam",
+      "st": "Brahmaputra at Guwahati, Assam",
+      "sh": "गुवाहाटी में ब्रह्मपुत्र, असम",
+      "c": "medieval",
+      "rg": "NE",
+      "d": 2,
+      "lat": 26.18,
+      "lng": 91.7,
+      "yr": "1671",
+      "yrh": "1671",
+      "bw": "Ahoms under Lachit Borphukan vs Mughals",
+      "bwh": "लचित बड़फुकन के नेतृत्व में अहोम बनाम मुग़ल",
+      "tag": "Ahoms won",
+      "tagh": "अहोम जीते",
+      "fact": "In the naval battle of Saraighat on the Brahmaputra (1671), the Ahom general Lachit Borphukan defeated the Mughals; 24 November is Lachit Divas.",
+      "facth": "ब्रह्मपुत्र पर सराईघाट के नौसैनिक युद्ध (1671) में अहोम सेनापति लचित बड़फुकन ने मुग़लों को हराया; 24 नवंबर लचित दिवस है।"
+    },
+    {
+      "n": "Battle of Pratapgarh",
+      "h": "प्रतापगढ़ का युद्ध",
+      "s": "Maharashtra",
+      "st": "Pratapgad, Satara, Maharashtra",
+      "sh": "प्रतापगढ़, सातारा, महाराष्ट्र",
+      "c": "medieval",
+      "rg": "W",
+      "d": 2,
+      "lat": 17.94,
+      "lng": 73.58,
+      "yr": "1659",
+      "yrh": "1659",
+      "bw": "Shivaji vs Afzal Khan of Bijapur",
+      "bwh": "शिवाजी बनाम बीजापुर का अफ़ज़ल ख़ाँ",
+      "tag": "Shivaji won",
+      "tagh": "शिवाजी जीते",
+      "fact": "At Pratapgad (1659) Shivaji killed the Bijapur general Afzal Khan and routed his army.",
+      "facth": "प्रतापगढ़ (1659) में शिवाजी ने बीजापुर के सेनापति अफ़ज़ल ख़ाँ को मारकर उसकी सेना को हराया।"
+    },
+    {
+      "n": "Battle of Pavan Khind",
+      "h": "पावनखिंड का युद्ध",
+      "s": "Maharashtra",
+      "st": "Ghod Khind, Kolhapur, Maharashtra",
+      "sh": "घोडखिंड, कोल्हापुर, महाराष्ट्र",
+      "c": "medieval",
+      "rg": "W",
+      "d": 3,
+      "lat": 16.93,
+      "lng": 73.85,
+      "yr": "1660",
+      "yrh": "1660",
+      "bw": "Baji Prabhu Deshpande vs Siddi Masud",
+      "bwh": "बाजी प्रभु देशपांडे बनाम सिद्दी मसूद",
+      "tag": "Rearguard held; Shivaji escaped",
+      "tagh": "पीछे का मोर्चा टिका; शिवाजी बच निकले",
+      "fact": "At Ghod Khind (1660) Baji Prabhu Deshpande held the pass so Shivaji could escape from Panhala to Vishalgad; the pass was renamed Pavan Khind.",
+      "facth": "घोडखिंड (1660) में बाजी प्रभु देशपांडे ने दर्रा रोके रखा ताकि शिवाजी पन्हाला से विशालगढ़ निकल सकें; दर्रे का नाम पावनखिंड पड़ा।"
+    },
+    {
+      "n": "Battle of Karnal",
+      "h": "करनाल का युद्ध",
+      "s": "Haryana",
+      "st": "Karnal, Haryana",
+      "sh": "करनाल, हरियाणा",
+      "c": "medieval",
+      "rg": "N",
+      "d": 2,
+      "lat": 29.69,
+      "lng": 76.98,
+      "yr": "1739",
+      "yrh": "1739",
+      "bw": "Nadir Shah vs Muhammad Shah",
+      "bwh": "नादिर शाह बनाम मुहम्मद शाह",
+      "tag": "Nadir Shah won and looted Delhi",
+      "tagh": "नादिर शाह जीता और दिल्ली लूटी",
+      "fact": "After winning at Karnal (1739), Nadir Shah of Persia sacked Delhi and carried off the Peacock Throne and the Koh-i-Noor.",
+      "facth": "करनाल (1739) में जीत के बाद फ़ारस के नादिर शाह ने दिल्ली लूटी और मयूर सिंहासन और कोहिनूर ले गया।"
+    },
+    {
+      "n": "Third Battle of Panipat",
+      "h": "पानीपत का तृतीय युद्ध",
+      "s": "Haryana",
+      "st": "Panipat, Haryana",
+      "sh": "पानीपत, हरियाणा",
+      "c": "medieval",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.36,
+      "lng": 76.94,
+      "yr": "1761",
+      "yrh": "1761",
+      "bw": "Ahmad Shah Abdali vs the Marathas",
+      "bwh": "अहमद शाह अब्दाली बनाम मराठा",
+      "tag": "Abdali won; Maratha power checked",
+      "tagh": "अब्दाली जीता; मराठा शक्ति रुकी",
+      "fact": "In the third battle of Panipat (1761), Ahmad Shah Abdali defeated the Marathas led by Sadashivrao Bhau.",
+      "facth": "पानीपत के तृतीय युद्ध (1761) में अहमद शाह अब्दाली ने सदाशिवराव भाऊ के नेतृत्व वाले मराठों को हराया।"
+    },
+    {
+      "n": "Battle of Plassey",
+      "h": "प्लासी का युद्ध",
+      "s": "West Bengal",
+      "st": "Palashi, Nadia, West Bengal",
+      "sh": "पलाशी, नदिया, पश्चिम बंगाल",
+      "c": "modern",
+      "rg": "E",
+      "d": 1,
+      "lat": 23.8,
+      "lng": 88.25,
+      "yr": "1757",
+      "yrh": "1757",
+      "bw": "Robert Clive vs Siraj-ud-Daulah",
+      "bwh": "रॉबर्ट क्लाइव बनाम सिराजुद्दौला",
+      "tag": "British won; British rule in Bengal began",
+      "tagh": "अंग्रेज़ जीते; बंगाल में ब्रिटिश शासन शुरू",
+      "fact": "At Plassey (23 June 1757) Robert Clive defeated Siraj-ud-Daulah, the Nawab of Bengal, after winning over Mir Jafar.",
+      "facth": "प्लासी (23 जून 1757) में रॉबर्ट क्लाइव ने मीर जाफ़र को अपनी ओर करके बंगाल के नवाब सिराजुद्दौला को हराया।"
+    },
+    {
+      "n": "Battle of Bedara",
+      "h": "बेदारा का युद्ध",
+      "s": "West Bengal",
+      "st": "Near Chinsurah, West Bengal",
+      "sh": "चिनसुरा के पास, पश्चिम बंगाल",
+      "c": "modern",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.9,
+      "lng": 88.39,
+      "yr": "1759",
+      "yrh": "1759",
+      "bw": "British vs Dutch",
+      "bwh": "अंग्रेज़ बनाम डच",
+      "tag": "British won; Dutch power in Bengal ended",
+      "tagh": "अंग्रेज़ जीते; बंगाल में डच शक्ति समाप्त",
+      "fact": "At Bedara (1759) the British defeated the Dutch, ending Dutch ambitions in Bengal.",
+      "facth": "बेदारा (1759) में अंग्रेज़ों ने डचों को हराया, जिससे बंगाल में डच महत्त्वाकांक्षाएँ समाप्त हुईं।"
+    },
+    {
+      "n": "Battle of Wandiwash",
+      "h": "वांडीवाश का युद्ध",
+      "s": "Tamil Nadu",
+      "st": "Vandavasi, Tiruvannamalai, Tamil Nadu",
+      "sh": "वंदावसी, तिरुवन्नामलै, तमिलनाडु",
+      "c": "modern",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.5,
+      "lng": 79.62,
+      "yr": "1760",
+      "yrh": "1760",
+      "bw": "British (Eyre Coote) vs French (Lally)",
+      "bwh": "अंग्रेज़ (आयर कूट) बनाम फ़्रांसीसी (लैली)",
+      "tag": "British won the Third Carnatic War",
+      "tagh": "अंग्रेज़ों ने तीसरा कर्नाटक युद्ध जीता",
+      "fact": "At Wandiwash (1760) Eyre Coote defeated the French under Count de Lally, ending French power in India.",
+      "facth": "वांडीवाश (1760) में आयर कूट ने काउंट डी लैली के नेतृत्व वाले फ़्रांसीसियों को हराया, जिससे भारत में फ़्रांसीसी शक्ति समाप्त हुई।"
+    },
+    {
+      "n": "Battle of Buxar",
+      "h": "बक्सर का युद्ध",
+      "s": "Bihar",
+      "st": "Buxar, Bihar",
+      "sh": "बक्सर, बिहार",
+      "c": "modern",
+      "rg": "E",
+      "d": 1,
+      "lat": 25.56,
+      "lng": 83.98,
+      "yr": "1764",
+      "yrh": "1764",
+      "bw": "British (Hector Munro) vs Mir Qasim, Shuja-ud-Daulah and Shah Alam II",
+      "bwh": "अंग्रेज़ (हेक्टर मुनरो) बनाम मीर क़ासिम, शुजाउद्दौला और शाह आलम द्वितीय",
+      "tag": "British won; led to the Treaty of Allahabad",
+      "tagh": "अंग्रेज़ जीते; इलाहाबाद की संधि हुई",
+      "fact": "At Buxar (1764) Hector Munro defeated the combined forces of Mir Qasim, Shuja-ud-Daulah of Awadh and Mughal emperor Shah Alam II.",
+      "facth": "बक्सर (1764) में हेक्टर मुनरो ने मीर क़ासिम, अवध के शुजाउद्दौला और मुग़ल बादशाह शाह आलम द्वितीय की संयुक्त सेना को हराया।"
+    },
+    {
+      "n": "Battle of Pollilur",
+      "h": "पोल्लिलूर का युद्ध",
+      "s": "Tamil Nadu",
+      "st": "Pollilur, Kanchipuram, Tamil Nadu",
+      "sh": "पोल्लिलूर, कांचीपुरम, तमिलनाडु",
+      "c": "modern",
+      "rg": "S",
+      "d": 3,
+      "lat": 12.98,
+      "lng": 79.73,
+      "yr": "1780",
+      "yrh": "1780",
+      "bw": "Haidar Ali and Tipu vs British",
+      "bwh": "हैदर अली और टीपू बनाम अंग्रेज़",
+      "tag": "Mysore won",
+      "tagh": "मैसूर जीता",
+      "fact": "At Pollilur (1780), in the Second Anglo-Mysore War, Haidar Ali and Tipu Sultan defeated a British force, using rockets.",
+      "facth": "पोल्लिलूर (1780) में, द्वितीय आंग्ल-मैसूर युद्ध में, हैदर अली और टीपू सुल्तान ने रॉकेटों की मदद से अंग्रेज़ सेना को हराया।"
+    },
+    {
+      "n": "Siege of Seringapatam",
+      "h": "श्रीरंगपट्टनम की घेराबंदी",
+      "s": "Karnataka",
+      "st": "Srirangapatna, Mandya, Karnataka",
+      "sh": "श्रीरंगपट्टन, मंड्या, कर्नाटक",
+      "c": "modern",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.42,
+      "lng": 76.68,
+      "yr": "1799",
+      "yrh": "1799",
+      "bw": "British vs Tipu Sultan",
+      "bwh": "अंग्रेज़ बनाम टीपू सुल्तान",
+      "tag": "Tipu Sultan was killed",
+      "tagh": "टीपू सुल्तान मारे गए",
+      "fact": "In the Fourth Anglo-Mysore War (1799), the British stormed Seringapatam and Tipu Sultan died defending it.",
+      "facth": "चतुर्थ आंग्ल-मैसूर युद्ध (1799) में अंग्रेज़ों ने श्रीरंगपट्टनम पर धावा बोला और टीपू सुल्तान उसकी रक्षा करते हुए मारे गए।"
+    },
+    {
+      "n": "Battle of Assaye",
+      "h": "असाई का युद्ध",
+      "s": "Maharashtra",
+      "st": "Assaye, Jalna, Maharashtra",
+      "sh": "असाई, जालना, महाराष्ट्र",
+      "c": "modern",
+      "rg": "W",
+      "d": 2,
+      "lat": 20.25,
+      "lng": 75.88,
+      "yr": "1803",
+      "yrh": "1803",
+      "bw": "Arthur Wellesley vs Scindia and Bhonsle",
+      "bwh": "आर्थर वेलेज़ली बनाम सिंधिया और भोंसले",
+      "tag": "British won",
+      "tagh": "अंग्रेज़ जीते",
+      "fact": "At Assaye (1803), in the Second Anglo-Maratha War, Arthur Wellesley (later Duke of Wellington) defeated the Scindia and Bhonsle armies.",
+      "facth": "असाई (1803) में, द्वितीय आंग्ल-मराठा युद्ध में, आर्थर वेलेज़ली (बाद में ड्यूक ऑफ़ वेलिंगटन) ने सिंधिया और भोंसले सेनाओं को हराया।"
+    },
+    {
+      "n": "Battle of Koregaon",
+      "h": "कोरेगाँव का युद्ध",
+      "s": "Maharashtra",
+      "st": "Bhima Koregaon, Pune, Maharashtra",
+      "sh": "भीमा कोरेगाँव, पुणे, महाराष्ट्र",
+      "c": "modern",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.65,
+      "lng": 74.06,
+      "yr": "1818",
+      "yrh": "1818",
+      "bw": "British (with Mahar soldiers) vs Peshwa Baji Rao II",
+      "bwh": "अंग्रेज़ (महार सैनिकों के साथ) बनाम पेशवा बाजीराव द्वितीय",
+      "tag": "Peshwa forces withdrew",
+      "tagh": "पेशवा की सेना पीछे हटी",
+      "fact": "At Koregaon (1 January 1818), in the Third Anglo-Maratha War, a small Company force with many Mahar soldiers held off the Peshwa's army.",
+      "facth": "कोरेगाँव (1 जनवरी 1818) में, तृतीय आंग्ल-मराठा युद्ध में, अनेक महार सैनिकों वाली कंपनी की छोटी सेना ने पेशवा की सेना को रोके रखा।"
+    },
+    {
+      "n": "Battle of Ferozeshah",
+      "h": "फ़िरोज़शाह का युद्ध",
+      "s": "Punjab",
+      "st": "Ferozeshah, Firozpur, Punjab",
+      "sh": "फ़िरोज़शाह, फ़िरोज़पुर, पंजाब",
+      "c": "modern",
+      "rg": "N",
+      "d": 3,
+      "lat": 30.84,
+      "lng": 74.88,
+      "yr": "1845",
+      "yrh": "1845",
+      "bw": "British vs the Sikh Khalsa army",
+      "bwh": "अंग्रेज़ बनाम सिख ख़ालसा सेना",
+      "tag": "British won",
+      "tagh": "अंग्रेज़ जीते",
+      "fact": "Ferozeshah (1845) was a hard-fought battle of the First Anglo-Sikh War.",
+      "facth": "फ़िरोज़शाह (1845) प्रथम आंग्ल-सिख युद्ध का कड़ा युद्ध था।"
+    },
+    {
+      "n": "Battle of Sobraon",
+      "h": "सोबराँव का युद्ध",
+      "s": "Punjab",
+      "st": "Sobraon, on the Sutlej, Punjab",
+      "sh": "सोबराँव, सतलुज पर, पंजाब",
+      "c": "modern",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.18,
+      "lng": 74.95,
+      "yr": "1846",
+      "yrh": "1846",
+      "bw": "British vs the Sikh Khalsa army",
+      "bwh": "अंग्रेज़ बनाम सिख ख़ालसा सेना",
+      "tag": "British won; Treaty of Lahore followed",
+      "tagh": "अंग्रेज़ जीते; लाहौर की संधि हुई",
+      "fact": "Sobraon (1846) was the decisive battle of the First Anglo-Sikh War and was followed by the Treaty of Lahore.",
+      "facth": "सोबराँव (1846) प्रथम आंग्ल-सिख युद्ध का निर्णायक युद्ध था, जिसके बाद लाहौर की संधि हुई।"
+    },
+    {
+      "n": "Revolt of 1857 at Meerut",
+      "h": "मेरठ में 1857 का विद्रोह",
+      "s": "Uttar Pradesh",
+      "st": "Meerut, Uttar Pradesh",
+      "sh": "मेरठ, उत्तर प्रदेश",
+      "c": "modern",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.98,
+      "lng": 77.71,
+      "yr": "10 May 1857",
+      "yrh": "10 मई 1857",
+      "bw": "Sepoys vs the East India Company",
+      "bwh": "सिपाही बनाम ईस्ट इंडिया कंपनी",
+      "tag": "The revolt spread across north India",
+      "tagh": "विद्रोह उत्तर भारत में फैला",
+      "fact": "The Revolt of 1857 broke out at Meerut on 10 May 1857, after Mangal Pandey's protest at Barrackpore in March; the rebels marched to Delhi.",
+      "facth": "मार्च में बैरकपुर में मंगल पांडे के विरोध के बाद 1857 का विद्रोह 10 मई 1857 को मेरठ में भड़का; विद्रोही दिल्ली की ओर बढ़े।"
+    },
+    {
+      "n": "Battle of Kohima",
+      "h": "कोहिमा का युद्ध",
+      "s": "Nagaland",
+      "st": "Kohima, Nagaland",
+      "sh": "कोहिमा, नागालैंड",
+      "c": "modern",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.67,
+      "lng": 94.1,
+      "yr": "1944",
+      "yrh": "1944",
+      "bw": "British-Indian forces vs Japan",
+      "bwh": "ब्रिटिश-भारतीय सेना बनाम जापान",
+      "tag": "Japanese advance stopped",
+      "tagh": "जापानी बढ़त रुकी",
+      "fact": "The Battle of Kohima (1944), called the 'Stalingrad of the East', stopped the Japanese advance into India in World War II.",
+      "facth": "'पूर्व का स्टालिनग्राद' कहे जाने वाले कोहिमा युद्ध (1944) ने द्वितीय विश्व युद्ध में भारत में जापानी बढ़त रोकी।"
+    },
+    {
+      "n": "Battle of Asal Uttar",
+      "h": "असल उत्तर का युद्ध",
+      "s": "Punjab",
+      "st": "Khem Karan, Tarn Taran, Punjab",
+      "sh": "खेमकरण, तरनतारन, पंजाब",
+      "c": "post",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.15,
+      "lng": 74.55,
+      "yr": "1965",
+      "yrh": "1965",
+      "bw": "India vs Pakistan",
+      "bwh": "भारत बनाम पाकिस्तान",
+      "tag": "India won; Abdul Hamid earned the Param Vir Chakra",
+      "tagh": "भारत जीता; अब्दुल हमीद को परमवीर चक्र",
+      "fact": "At Asal Uttar in 1965 Indian forces destroyed many Pakistani Patton tanks; CQMH Abdul Hamid won the Param Vir Chakra posthumously.",
+      "facth": "1965 में असल उत्तर में भारतीय सेना ने अनेक पाकिस्तानी पैटन टैंक नष्ट किए; CQMH अब्दुल हमीद को मरणोपरांत परमवीर चक्र मिला।"
+    },
+    {
+      "n": "Battle of Rezang La",
+      "h": "रेज़ांग ला का युद्ध",
+      "s": "Ladakh",
+      "st": "Chushul, Ladakh",
+      "sh": "चुशूल, लद्दाख",
+      "c": "post",
+      "rg": "N",
+      "d": 2,
+      "lat": 33.3,
+      "lng": 78.83,
+      "yr": "1962",
+      "yrh": "1962",
+      "bw": "India vs China",
+      "bwh": "भारत बनाम चीन",
+      "tag": "Heroic last stand",
+      "tagh": "वीरतापूर्ण अंतिम मोर्चा",
+      "fact": "At Rezang La (1962) Major Shaitan Singh and his company of 13 Kumaon fought to almost the last man; he won the Param Vir Chakra.",
+      "facth": "रेज़ांग ला (1962) में मेजर शैतान सिंह और 13 कुमाऊँ की उनकी कंपनी लगभग अंतिम सैनिक तक लड़ी; उन्हें परमवीर चक्र मिला।"
+    },
+    {
+      "n": "Battle of Walong",
+      "h": "वालोंग का युद्ध",
+      "s": "Arunachal Pradesh",
+      "st": "Walong, Anjaw, Arunachal Pradesh",
+      "sh": "वालोंग, अंजॉ, अरुणाचल प्रदेश",
+      "c": "post",
+      "rg": "NE",
+      "d": 3,
+      "lat": 28.13,
+      "lng": 97,
+      "yr": "1962",
+      "yrh": "1962",
+      "bw": "India vs China",
+      "bwh": "भारत बनाम चीन",
+      "tag": "Stiff Indian resistance",
+      "tagh": "भारत का कड़ा प्रतिरोध",
+      "fact": "Walong in Arunachal Pradesh saw stiff Indian resistance in the 1962 war with China.",
+      "facth": "अरुणाचल प्रदेश के वालोंग में 1962 के चीन युद्ध में भारत ने कड़ा प्रतिरोध किया।"
+    },
+    {
+      "n": "Battle of Longewala",
+      "h": "लोंगेवाला का युद्ध",
+      "s": "Rajasthan",
+      "st": "Longewala, Jaisalmer, Rajasthan",
+      "sh": "लोंगेवाला, जैसलमेर, राजस्थान",
+      "c": "post",
+      "rg": "W",
+      "d": 1,
+      "lat": 27.53,
+      "lng": 70.17,
+      "yr": "1971",
+      "yrh": "1971",
+      "bw": "India vs Pakistan",
+      "bwh": "भारत बनाम पाकिस्तान",
+      "tag": "India won",
+      "tagh": "भारत जीता",
+      "fact": "At Longewala (December 1971) a small Indian post under Major K. S. Chandpuri held off a Pakistani tank attack until the Air Force struck.",
+      "facth": "लोंगेवाला (दिसंबर 1971) में मेजर के. एस. चांदपुरी के नेतृत्व वाली छोटी भारतीय चौकी ने वायु सेना के हमले तक पाकिस्तानी टैंक हमले को रोके रखा।"
+    },
+    {
+      "n": "Battle of Tiger Hill",
+      "h": "टाइगर हिल का युद्ध",
+      "s": "Ladakh",
+      "st": "Drass–Kargil sector, Ladakh",
+      "sh": "द्रास–कारगिल क्षेत्र, लद्दाख",
+      "c": "post",
+      "rg": "N",
+      "d": 1,
+      "lat": 34.5,
+      "lng": 75.9,
+      "yr": "1999",
+      "yrh": "1999",
+      "bw": "India vs Pakistan",
+      "bwh": "भारत बनाम पाकिस्तान",
+      "tag": "India recaptured the peak",
+      "tagh": "भारत ने चोटी फिर जीती",
+      "fact": "Tiger Hill was recaptured on 4 July 1999 during the Kargil war (Operation Vijay); Captain Vikram Batra won the Param Vir Chakra in the Kargil war.",
+      "facth": "कारगिल युद्ध (ऑपरेशन विजय) में 4 जुलाई 1999 को टाइगर हिल फिर जीती गई; कैप्टन विक्रम बत्रा को कारगिल युद्ध में परमवीर चक्र मिला।"
+    },
+    {
+      "n": "Treaty of Purandar",
+      "h": "पुरंदर की संधि",
+      "s": "Maharashtra",
+      "st": "Purandar, Pune, Maharashtra",
+      "sh": "पुरंदर, पुणे, महाराष्ट्र",
+      "c": "treaty",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.28,
+      "lng": 73.98,
+      "yr": "1665",
+      "yrh": "1665",
+      "bw": "Shivaji and Raja Jai Singh I (for Aurangzeb)",
+      "bwh": "शिवाजी और राजा जय सिंह प्रथम (औरंगज़ेब की ओर से)",
+      "tag": "Shivaji gave up 23 forts",
+      "tagh": "शिवाजी ने 23 क़िले सौंपे",
+      "fact": "By the Treaty of Purandar (1665) Shivaji gave up 23 forts to the Mughals and agreed to visit Aurangzeb at Agra.",
+      "facth": "पुरंदर की संधि (1665) से शिवाजी ने मुग़लों को 23 क़िले सौंपे और आगरा में औरंगज़ेब से मिलने को सहमत हुए।"
+    },
+    {
+      "n": "Treaty of Allahabad",
+      "h": "इलाहाबाद की संधि",
+      "s": "Uttar Pradesh",
+      "st": "Prayagraj, Uttar Pradesh",
+      "sh": "प्रयागराज, उत्तर प्रदेश",
+      "c": "treaty",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.45,
+      "lng": 81.85,
+      "yr": "1765",
+      "yrh": "1765",
+      "bw": "Robert Clive and Shah Alam II",
+      "bwh": "रॉबर्ट क्लाइव और शाह आलम द्वितीय",
+      "tag": "Company got the Diwani of Bengal, Bihar and Odisha",
+      "tagh": "कंपनी को बंगाल, बिहार और ओडिशा की दीवानी",
+      "fact": "After Buxar, the Treaty of Allahabad (1765) gave the East India Company the Diwani (revenue rights) of Bengal, Bihar and Odisha.",
+      "facth": "बक्सर के बाद इलाहाबाद की संधि (1765) से ईस्ट इंडिया कंपनी को बंगाल, बिहार और ओडिशा की दीवानी (राजस्व अधिकार) मिली।"
+    },
+    {
+      "n": "Treaty of Madras",
+      "h": "मद्रास की संधि",
+      "s": "Tamil Nadu",
+      "st": "Chennai, Tamil Nadu",
+      "sh": "चेन्नई, तमिलनाडु",
+      "c": "treaty",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.08,
+      "lng": 80.25,
+      "yr": "1769",
+      "yrh": "1769",
+      "bw": "Haidar Ali and the British",
+      "bwh": "हैदर अली और अंग्रेज़",
+      "tag": "Ended the First Anglo-Mysore War",
+      "tagh": "प्रथम आंग्ल-मैसूर युद्ध समाप्त",
+      "fact": "The Treaty of Madras (1769) ended the First Anglo-Mysore War on terms dictated by Haidar Ali.",
+      "facth": "मद्रास की संधि (1769) ने हैदर अली की शर्तों पर प्रथम आंग्ल-मैसूर युद्ध समाप्त किया।"
+    },
+    {
+      "n": "Treaty of Surat",
+      "h": "सूरत की संधि",
+      "s": "Gujarat",
+      "st": "Surat, Gujarat",
+      "sh": "सूरत, गुजरात",
+      "c": "treaty",
+      "rg": "W",
+      "d": 3,
+      "lat": 21.19,
+      "lng": 72.85,
+      "yr": "1775",
+      "yrh": "1775",
+      "bw": "Raghunath Rao and the British (Bombay)",
+      "bwh": "रघुनाथ राव और अंग्रेज़ (बंबई)",
+      "tag": "Began the First Anglo-Maratha War",
+      "tagh": "प्रथम आंग्ल-मराठा युद्ध शुरू",
+      "fact": "The Treaty of Surat (1775) between Raghunath Rao and the Bombay government drew the British into the First Anglo-Maratha War.",
+      "facth": "रघुनाथ राव और बंबई सरकार के बीच सूरत की संधि (1775) ने अंग्रेज़ों को प्रथम आंग्ल-मराठा युद्ध में खींचा।"
+    },
+    {
+      "n": "Treaty of Salbai",
+      "h": "सालबाई की संधि",
+      "s": "Madhya Pradesh",
+      "st": "Salbai, near Gwalior, Madhya Pradesh",
+      "sh": "सालबाई, ग्वालियर के पास, मध्य प्रदेश",
+      "c": "treaty",
+      "rg": "C",
+      "d": 2,
+      "lat": 26.15,
+      "lng": 78.2,
+      "yr": "1782",
+      "yrh": "1782",
+      "bw": "Marathas (Mahadji Scindia) and the British",
+      "bwh": "मराठा (महादजी सिंधिया) और अंग्रेज़",
+      "tag": "Ended the First Anglo-Maratha War",
+      "tagh": "प्रथम आंग्ल-मराठा युद्ध समाप्त",
+      "fact": "The Treaty of Salbai (1782), negotiated by Mahadji Scindia, ended the First Anglo-Maratha War and kept twenty years of peace.",
+      "facth": "महादजी सिंधिया द्वारा तय सालबाई की संधि (1782) ने प्रथम आंग्ल-मराठा युद्ध समाप्त किया और बीस वर्ष शांति रखी।"
+    },
+    {
+      "n": "Treaty of Mangalore",
+      "h": "मंगलौर की संधि",
+      "s": "Karnataka",
+      "st": "Mangaluru, Karnataka",
+      "sh": "मंगलुरु, कर्नाटक",
+      "c": "treaty",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.87,
+      "lng": 74.88,
+      "yr": "1784",
+      "yrh": "1784",
+      "bw": "Tipu Sultan and the British",
+      "bwh": "टीपू सुल्तान और अंग्रेज़",
+      "tag": "Ended the Second Anglo-Mysore War",
+      "tagh": "द्वितीय आंग्ल-मैसूर युद्ध समाप्त",
+      "fact": "The Treaty of Mangalore (1784) between Tipu Sultan and the British ended the Second Anglo-Mysore War.",
+      "facth": "टीपू सुल्तान और अंग्रेज़ों के बीच मंगलौर की संधि (1784) ने द्वितीय आंग्ल-मैसूर युद्ध समाप्त किया।"
+    },
+    {
+      "n": "Treaty of Seringapatam",
+      "h": "श्रीरंगपट्टनम की संधि",
+      "s": "Karnataka",
+      "st": "Srirangapatna, Karnataka",
+      "sh": "श्रीरंगपट्टन, कर्नाटक",
+      "c": "treaty",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.39,
+      "lng": 76.72,
+      "yr": "1792",
+      "yrh": "1792",
+      "bw": "Tipu Sultan and Cornwallis",
+      "bwh": "टीपू सुल्तान और कॉर्नवालिस",
+      "tag": "Tipu lost half his kingdom",
+      "tagh": "टीपू ने आधा राज्य खोया",
+      "fact": "By the Treaty of Seringapatam (1792), ending the Third Anglo-Mysore War, Tipu gave up half his territory and sent two sons as hostages.",
+      "facth": "तृतीय आंग्ल-मैसूर युद्ध को समाप्त करने वाली श्रीरंगपट्टनम की संधि (1792) से टीपू ने आधा क्षेत्र सौंपा और दो पुत्र बंधक भेजे।"
+    },
+    {
+      "n": "Treaty of Bassein",
+      "h": "बेसिन की संधि",
+      "s": "Maharashtra",
+      "st": "Vasai, Palghar, Maharashtra",
+      "sh": "वसई, पालघर, महाराष्ट्र",
+      "c": "treaty",
+      "rg": "W",
+      "d": 2,
+      "lat": 19.39,
+      "lng": 72.85,
+      "yr": "1802",
+      "yrh": "1802",
+      "bw": "Peshwa Baji Rao II and the British",
+      "bwh": "पेशवा बाजीराव द्वितीय और अंग्रेज़",
+      "tag": "Peshwa accepted the Subsidiary Alliance",
+      "tagh": "पेशवा ने सहायक संधि स्वीकार की",
+      "fact": "By the Treaty of Bassein (1802) Peshwa Baji Rao II accepted Wellesley's Subsidiary Alliance, leading to the Second Anglo-Maratha War.",
+      "facth": "बेसिन की संधि (1802) से पेशवा बाजीराव द्वितीय ने वेलेज़ली की सहायक संधि स्वीकार की, जिससे द्वितीय आंग्ल-मराठा युद्ध हुआ।"
+    },
+    {
+      "n": "Treaty of Amritsar",
+      "h": "अमृतसर की संधि",
+      "s": "Punjab",
+      "st": "Amritsar, Punjab",
+      "sh": "अमृतसर, पंजाब",
+      "c": "treaty",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.63,
+      "lng": 74.87,
+      "yr": "1809",
+      "yrh": "1809",
+      "bw": "Maharaja Ranjit Singh and the British",
+      "bwh": "महाराजा रणजीत सिंह और अंग्रेज़",
+      "tag": "Sutlej fixed as the boundary",
+      "tagh": "सतलुज सीमा तय",
+      "fact": "The Treaty of Amritsar (1809) fixed the Sutlej as the boundary between Ranjit Singh's kingdom and British territory; a second treaty of Amritsar (1846) sold Kashmir to Gulab Singh.",
+      "facth": "अमृतसर की संधि (1809) ने रणजीत सिंह के राज्य और ब्रिटिश क्षेत्र के बीच सतलुज को सीमा तय किया; अमृतसर की दूसरी संधि (1846) से कश्मीर गुलाब सिंह को बेचा गया।"
+    },
+    {
+      "n": "Treaty of Sugauli",
+      "h": "सुगौली की संधि",
+      "s": "Bihar",
+      "st": "Sugauli, East Champaran, Bihar",
+      "sh": "सुगौली, पूर्वी चंपारण, बिहार",
+      "c": "treaty",
+      "rg": "E",
+      "d": 2,
+      "lat": 26.95,
+      "lng": 84.75,
+      "yr": "1816",
+      "yrh": "1816",
+      "bw": "Nepal and the British",
+      "bwh": "नेपाल और अंग्रेज़",
+      "tag": "Ended the Anglo-Nepal War",
+      "tagh": "आंग्ल-नेपाल युद्ध समाप्त",
+      "fact": "The Treaty of Sugauli (1816) ended the Anglo-Nepal War; Nepal gave up Kumaon, Garhwal and Sikkim lands.",
+      "facth": "सुगौली की संधि (1816) ने आंग्ल-नेपाल युद्ध समाप्त किया; नेपाल ने कुमाऊँ, गढ़वाल और सिक्किम की भूमि छोड़ी।"
+    },
+    {
+      "n": "Lucknow Pact",
+      "h": "लखनऊ समझौता",
+      "s": "Uttar Pradesh",
+      "st": "Lucknow, Uttar Pradesh",
+      "sh": "लखनऊ, उत्तर प्रदेश",
+      "c": "treaty",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.85,
+      "lng": 80.95,
+      "yr": "1916",
+      "yrh": "1916",
+      "bw": "Indian National Congress and the Muslim League",
+      "bwh": "भारतीय राष्ट्रीय कांग्रेस और मुस्लिम लीग",
+      "tag": "Joint demands for reforms",
+      "tagh": "सुधारों की संयुक्त माँग",
+      "fact": "In the Lucknow Pact (1916) the Congress and the Muslim League agreed on joint demands and separate electorates; Tilak and Jinnah played key roles.",
+      "facth": "लखनऊ समझौते (1916) में कांग्रेस और मुस्लिम लीग संयुक्त माँगों और पृथक निर्वाचन पर सहमत हुए; तिलक और जिन्ना की प्रमुख भूमिका थी।"
+    },
+    {
+      "n": "Gandhi–Irwin Pact",
+      "h": "गांधी–इरविन समझौता",
+      "s": "Delhi",
+      "st": "New Delhi",
+      "sh": "नई दिल्ली",
+      "c": "treaty",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.61,
+      "lng": 77.21,
+      "yr": "1931",
+      "yrh": "1931",
+      "bw": "Mahatma Gandhi and Lord Irwin",
+      "bwh": "महात्मा गांधी और लॉर्ड इरविन",
+      "tag": "Civil Disobedience paused; Gandhi went to the Second Round Table",
+      "tagh": "सविनय अवज्ञा स्थगित; गांधी द्वितीय गोलमेज़ गए",
+      "fact": "The Gandhi–Irwin Pact (5 March 1931) suspended the Civil Disobedience Movement, and Gandhi attended the Second Round Table Conference.",
+      "facth": "गांधी–इरविन समझौते (5 मार्च 1931) ने सविनय अवज्ञा आंदोलन स्थगित किया और गांधी द्वितीय गोलमेज़ सम्मेलन में गए।"
+    },
+    {
+      "n": "Poona Pact",
+      "h": "पूना समझौता",
+      "s": "Maharashtra",
+      "st": "Yerwada Jail, Pune, Maharashtra",
+      "sh": "यरवदा जेल, पुणे, महाराष्ट्र",
+      "c": "treaty",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.55,
+      "lng": 73.9,
+      "yr": "1932",
+      "yrh": "1932",
+      "bw": "Mahatma Gandhi and B. R. Ambedkar",
+      "bwh": "महात्मा गांधी और बी. आर. आंबेडकर",
+      "tag": "Reserved seats instead of separate electorates",
+      "tagh": "पृथक निर्वाचन के बजाय आरक्षित सीटें",
+      "fact": "The Poona Pact (24 September 1932), signed after Gandhi's fast in Yerwada Jail, gave reserved seats to the Depressed Classes in place of separate electorates.",
+      "facth": "यरवदा जेल में गांधी के अनशन के बाद हस्ताक्षरित पूना समझौते (24 सितंबर 1932) ने पृथक निर्वाचन के बदले दलित वर्गों को आरक्षित सीटें दीं।"
+    },
+    {
+      "n": "Simla Agreement",
+      "h": "शिमला समझौता",
+      "s": "Himachal Pradesh",
+      "st": "Shimla, Himachal Pradesh",
+      "sh": "शिमला, हिमाचल प्रदेश",
+      "c": "treaty",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.1,
+      "lng": 77.17,
+      "yr": "1972",
+      "yrh": "1972",
+      "bw": "Indira Gandhi and Zulfikar Ali Bhutto",
+      "bwh": "इंदिरा गांधी और ज़ुल्फ़िक़ार अली भुट्टो",
+      "tag": "Bilateral settlement after 1971; Line of Control",
+      "tagh": "1971 के बाद द्विपक्षीय समाधान; नियंत्रण रेखा",
+      "fact": "The Simla Agreement (2 July 1972) after the 1971 war committed India and Pakistan to settle disputes bilaterally and turned the ceasefire line into the Line of Control.",
+      "facth": "1971 के युद्ध के बाद शिमला समझौते (2 जुलाई 1972) ने भारत और पाकिस्तान को विवाद द्विपक्षीय रूप से सुलझाने के लिए प्रतिबद्ध किया और युद्धविराम रेखा को नियंत्रण रेखा बनाया।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "panipat",
+      "icon": "⚔️",
+      "t": [
+        "The three battles of Panipat",
+        "पानीपत के तीन युद्ध"
+      ],
+      "cols": [
+        [
+          "Year",
+          "वर्ष"
+        ],
+        [
+          "Who fought and who won",
+          "किसने लड़ा और कौन जीता"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "1526",
+            "1526"
+          ],
+          [
+            "Babur defeated Ibrahim Lodi; Mughal rule began",
+            "बाबर ने इब्राहिम लोदी को हराया; मुग़ल शासन शुरू"
+          ]
+        ],
+        [
+          [
+            "1556",
+            "1556"
+          ],
+          [
+            "Akbar (Bairam Khan) defeated Hemu",
+            "अकबर (बैरम ख़ाँ) ने हेमू को हराया"
+          ]
+        ],
+        [
+          [
+            "1761",
+            "1761"
+          ],
+          [
+            "Ahmad Shah Abdali defeated the Marathas (Sadashivrao Bhau)",
+            "अहमद शाह अब्दाली ने मराठों (सदाशिवराव भाऊ) को हराया"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "mysore",
+      "icon": "🐅",
+      "t": [
+        "Anglo-Mysore wars",
+        "आंग्ल-मैसूर युद्ध"
+      ],
+      "cols": [
+        [
+          "War",
+          "युद्ध"
+        ],
+        [
+          "Rulers and treaty",
+          "शासक और संधि"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First (1767–69)",
+            "प्रथम (1767–69)"
+          ],
+          [
+            "Haidar Ali; Treaty of Madras",
+            "हैदर अली; मद्रास की संधि"
+          ]
+        ],
+        [
+          [
+            "Second (1780–84)",
+            "द्वितीय (1780–84)"
+          ],
+          [
+            "Haidar Ali, then Tipu; Treaty of Mangalore",
+            "हैदर अली, फिर टीपू; मंगलौर की संधि"
+          ]
+        ],
+        [
+          [
+            "Third (1790–92)",
+            "तृतीय (1790–92)"
+          ],
+          [
+            "Tipu vs Cornwallis; Treaty of Seringapatam",
+            "टीपू बनाम कॉर्नवालिस; श्रीरंगपट्टनम की संधि"
+          ]
+        ],
+        [
+          [
+            "Fourth (1799)",
+            "चतुर्थ (1799)"
+          ],
+          [
+            "Tipu killed at Seringapatam; Wellesley was Governor-General",
+            "श्रीरंगपट्टनम में टीपू मारे गए; वेलेज़ली गवर्नर-जनरल थे"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "maratha",
+      "icon": "🚩",
+      "t": [
+        "Anglo-Maratha and Anglo-Sikh wars",
+        "आंग्ल-मराठा और आंग्ल-सिख युद्ध"
+      ],
+      "cols": [
+        [
+          "War",
+          "युद्ध"
+        ],
+        [
+          "Key facts",
+          "मुख्य तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First Anglo-Maratha (1775–82)",
+            "प्रथम आंग्ल-मराठा (1775–82)"
+          ],
+          [
+            "Began with the Treaty of Surat, ended with the Treaty of Salbai",
+            "सूरत की संधि से शुरू, सालबाई की संधि से समाप्त"
+          ]
+        ],
+        [
+          [
+            "Second Anglo-Maratha (1803–05)",
+            "द्वितीय आंग्ल-मराठा (1803–05)"
+          ],
+          [
+            "After the Treaty of Bassein; Battle of Assaye",
+            "बेसिन की संधि के बाद; असाई का युद्ध"
+          ]
+        ],
+        [
+          [
+            "Third Anglo-Maratha (1817–18)",
+            "तृतीय आंग्ल-मराठा (1817–18)"
+          ],
+          [
+            "Battle of Koregaon; Peshwaship abolished",
+            "कोरेगाँव का युद्ध; पेशवा पद समाप्त"
+          ]
+        ],
+        [
+          [
+            "First Anglo-Sikh (1845–46)",
+            "प्रथम आंग्ल-सिख (1845–46)"
+          ],
+          [
+            "Mudki, Ferozeshah, Sobraon; Treaty of Lahore",
+            "मुदकी, फ़िरोज़शाह, सोबराँव; लाहौर की संधि"
+          ]
+        ],
+        [
+          [
+            "Second Anglo-Sikh (1848–49)",
+            "द्वितीय आंग्ल-सिख (1848–49)"
+          ],
+          [
+            "Chillianwala, Gujrat; Punjab annexed by Dalhousie (1849)",
+            "चिलियाँवाला, गुजरात; डलहौज़ी द्वारा पंजाब का विलय (1849)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "carnatic",
+      "icon": "🏴",
+      "t": [
+        "Carnatic wars (British vs French)",
+        "कर्नाटक युद्ध (अंग्रेज़ बनाम फ़्रांसीसी)"
+      ],
+      "cols": [
+        [
+          "War",
+          "युद्ध"
+        ],
+        [
+          "Key facts",
+          "मुख्य तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First (1746–48)",
+            "प्रथम (1746–48)"
+          ],
+          [
+            "Ended by the Treaty of Aix-la-Chapelle; Battle of Adyar (St Thome)",
+            "एक्स-ला-शापेल की संधि से समाप्त; अड्यार (सेंट थोमे) का युद्ध"
+          ]
+        ],
+        [
+          [
+            "Second (1749–54)",
+            "द्वितीय (1749–54)"
+          ],
+          [
+            "Dupleix vs Clive; siege of Arcot (1751)",
+            "डुप्ले बनाम क्लाइव; अर्काट की घेराबंदी (1751)"
+          ]
+        ],
+        [
+          [
+            "Third (1758–63)",
+            "तृतीय (1758–63)"
+          ],
+          [
+            "Battle of Wandiwash (1760); Treaty of Paris (1763)",
+            "वांडीवाश का युद्ध (1760); पेरिस की संधि (1763)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "wars",
+      "icon": "🇮🇳",
+      "t": [
+        "Wars of independent India",
+        "स्वतंत्र भारत के युद्ध"
+      ],
+      "cols": [
+        [
+          "War",
+          "युद्ध"
+        ],
+        [
+          "Outcome and agreement",
+          "परिणाम और समझौता"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "1947–48 (Kashmir)",
+            "1947–48 (कश्मीर)"
+          ],
+          [
+            "Ceasefire on 1 January 1949; Major Somnath Sharma, first Param Vir Chakra",
+            "1 जनवरी 1949 को युद्धविराम; मेजर सोमनाथ शर्मा, पहला परमवीर चक्र"
+          ]
+        ],
+        [
+          [
+            "1962 (China)",
+            "1962 (चीन)"
+          ],
+          [
+            "Rezang La, Walong; China declared a ceasefire",
+            "रेज़ांग ला, वालोंग; चीन ने युद्धविराम घोषित किया"
+          ]
+        ],
+        [
+          [
+            "1965 (Pakistan)",
+            "1965 (पाकिस्तान)"
+          ],
+          [
+            "Asal Uttar; Tashkent Declaration (January 1966)",
+            "असल उत्तर; ताशकंद घोषणा (जनवरी 1966)"
+          ]
+        ],
+        [
+          [
+            "1971 (Bangladesh)",
+            "1971 (बांग्लादेश)"
+          ],
+          [
+            "Longewala; Pakistan surrendered on 16 December 1971 (Vijay Diwas); Simla Agreement 1972",
+            "लोंगेवाला; पाकिस्तान ने 16 दिसंबर 1971 को आत्मसमर्पण किया (विजय दिवस); शिमला समझौता 1972"
+          ]
+        ],
+        [
+          [
+            "1999 (Kargil)",
+            "1999 (कारगिल)"
+          ],
+          [
+            "Operation Vijay; Kargil Vijay Diwas on 26 July",
+            "ऑपरेशन विजय; कारगिल विजय दिवस 26 जुलाई"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "medieval",
+      "q": [
+        "Who won the First Battle of Tarain (1191)?",
+        "तराइन का प्रथम युद्ध (1191) किसने जीता?"
+      ],
+      "o": [
+        [
+          "Prithviraj Chauhan",
+          "पृथ्वीराज चौहान"
+        ],
+        [
+          "Muhammad Ghori",
+          "मुहम्मद ग़ोरी"
+        ],
+        [
+          "Jaichand",
+          "जयचंद"
+        ],
+        [
+          "Qutb-ud-din Aibak",
+          "क़ुतुबुद्दीन ऐबक"
+        ]
+      ],
+      "e": [
+        "Ghori won the second battle in 1192.",
+        "ग़ोरी ने 1192 में दूसरा युद्ध जीता।"
+      ]
+    },
+    {
+      "t": "medieval",
+      "q": [
+        "The Battle of Khanwa (1527) was fought between Babur and",
+        "खानवा का युद्ध (1527) बाबर और किसके बीच हुआ?"
+      ],
+      "o": [
+        [
+          "Rana Sanga",
+          "राणा सांगा"
+        ],
+        [
+          "Ibrahim Lodi",
+          "इब्राहिम लोदी"
+        ],
+        [
+          "Hemu",
+          "हेमू"
+        ],
+        [
+          "Sher Shah Suri",
+          "शेरशाह सूरी"
+        ]
+      ],
+      "e": [
+        "Babur defeated Rana Sanga of Mewar.",
+        "बाबर ने मेवाड़ के राणा सांगा को हराया।"
+      ]
+    },
+    {
+      "t": "medieval",
+      "q": [
+        "Humayun was defeated by Sher Shah at Chausa in",
+        "चौसा में शेरशाह ने हुमायूँ को कब हराया?"
+      ],
+      "o": [
+        [
+          "1539",
+          "1539"
+        ],
+        [
+          "1540",
+          "1540"
+        ],
+        [
+          "1526",
+          "1526"
+        ],
+        [
+          "1555",
+          "1555"
+        ]
+      ],
+      "e": [
+        "He lost again at Kannauj in 1540 and went into exile.",
+        "1540 में वह कन्नौज में फिर हारा और निर्वासन में गया।"
+      ]
+    },
+    {
+      "t": "medieval",
+      "q": [
+        "The Battle of Talikota (1565) led to the decline of",
+        "तालीकोटा के युद्ध (1565) से किसका पतन हुआ?"
+      ],
+      "o": [
+        [
+          "Vijayanagara empire",
+          "विजयनगर साम्राज्य"
+        ],
+        [
+          "Bahmani kingdom",
+          "बहमनी राज्य"
+        ],
+        [
+          "Chola empire",
+          "चोल साम्राज्य"
+        ],
+        [
+          "Maratha empire",
+          "मराठा साम्राज्य"
+        ]
+      ],
+      "e": [
+        "The Deccan Sultanates defeated Rama Raya.",
+        "दक्कन सल्तनतों ने राम राय को हराया।"
+      ]
+    },
+    {
+      "t": "medieval",
+      "q": [
+        "In the Battle of Haldighati, the Mughal army was led by",
+        "हल्दीघाटी के युद्ध में मुग़ल सेना का नेतृत्व किसने किया?"
+      ],
+      "o": [
+        [
+          "Raja Man Singh",
+          "राजा मान सिंह"
+        ],
+        [
+          "Bairam Khan",
+          "बैरम ख़ाँ"
+        ],
+        [
+          "Todar Mal",
+          "टोडरमल"
+        ],
+        [
+          "Abul Fazl",
+          "अबुल फ़ज़ल"
+        ]
+      ],
+      "e": [
+        "Maharana Pratap fought Akbar's army in 1576.",
+        "महाराणा प्रताप ने 1576 में अकबर की सेना से युद्ध किया।"
+      ]
+    },
+    {
+      "t": "medieval",
+      "q": [
+        "Lachit Borphukan is associated with which battle?",
+        "लचित बड़फुकन किस युद्ध से जुड़े हैं?"
+      ],
+      "o": [
+        [
+          "Saraighat",
+          "सराईघाट"
+        ],
+        [
+          "Plassey",
+          "प्लासी"
+        ],
+        [
+          "Haldighati",
+          "हल्दीघाटी"
+        ],
+        [
+          "Kohima",
+          "कोहिमा"
+        ]
+      ],
+      "e": [
+        "The Ahoms defeated the Mughals on the Brahmaputra in 1671.",
+        "अहोमों ने 1671 में ब्रह्मपुत्र पर मुग़लों को हराया।"
+      ]
+    },
+    {
+      "t": "medieval",
+      "q": [
+        "Who led the Marathas at the Third Battle of Panipat (1761)?",
+        "पानीपत के तृतीय युद्ध (1761) में मराठों का नेतृत्व किसने किया?"
+      ],
+      "o": [
+        [
+          "Sadashivrao Bhau",
+          "सदाशिवराव भाऊ"
+        ],
+        [
+          "Baji Rao I",
+          "बाजीराव प्रथम"
+        ],
+        [
+          "Mahadji Scindia",
+          "महादजी सिंधिया"
+        ],
+        [
+          "Nana Phadnavis",
+          "नाना फड़णवीस"
+        ]
+      ],
+      "e": [
+        "Ahmad Shah Abdali won the battle.",
+        "अहमद शाह अब्दाली ने युद्ध जीता।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "The Battle of Plassey was fought in",
+        "प्लासी का युद्ध कब लड़ा गया?"
+      ],
+      "o": [
+        [
+          "1757",
+          "1757"
+        ],
+        [
+          "1764",
+          "1764"
+        ],
+        [
+          "1761",
+          "1761"
+        ],
+        [
+          "1765",
+          "1765"
+        ]
+      ],
+      "e": [
+        "Robert Clive defeated Siraj-ud-Daulah on 23 June 1757.",
+        "रॉबर्ट क्लाइव ने 23 जून 1757 को सिराजुद्दौला को हराया।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "Which battle led to the Treaty of Allahabad (1765)?",
+        "किस युद्ध के बाद इलाहाबाद की संधि (1765) हुई?"
+      ],
+      "o": [
+        [
+          "Battle of Buxar",
+          "बक्सर का युद्ध"
+        ],
+        [
+          "Battle of Plassey",
+          "प्लासी का युद्ध"
+        ],
+        [
+          "Battle of Wandiwash",
+          "वांडीवाश का युद्ध"
+        ],
+        [
+          "Third Battle of Panipat",
+          "पानीपत का तृतीय युद्ध"
+        ]
+      ],
+      "e": [
+        "The Company received the Diwani of Bengal, Bihar and Odisha.",
+        "कंपनी को बंगाल, बिहार और ओडिशा की दीवानी मिली।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "The Battle of Wandiwash (1760) was fought between the British and the",
+        "वांडीवाश का युद्ध (1760) अंग्रेज़ों और किसके बीच हुआ?"
+      ],
+      "o": [
+        [
+          "French",
+          "फ़्रांसीसी"
+        ],
+        [
+          "Dutch",
+          "डच"
+        ],
+        [
+          "Portuguese",
+          "पुर्तगाली"
+        ],
+        [
+          "Marathas",
+          "मराठा"
+        ]
+      ],
+      "e": [
+        "Eyre Coote defeated Count de Lally.",
+        "आयर कूट ने काउंट डी लैली को हराया।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "Tipu Sultan died in which year?",
+        "टीपू सुल्तान की मृत्यु किस वर्ष हुई?"
+      ],
+      "o": [
+        [
+          "1799",
+          "1799"
+        ],
+        [
+          "1792",
+          "1792"
+        ],
+        [
+          "1784",
+          "1784"
+        ],
+        [
+          "1802",
+          "1802"
+        ]
+      ],
+      "e": [
+        "He died defending Seringapatam in the Fourth Anglo-Mysore War.",
+        "चतुर्थ आंग्ल-मैसूर युद्ध में श्रीरंगपट्टनम की रक्षा करते हुए उनकी मृत्यु हुई।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "Which treaty ended the Second Anglo-Mysore War?",
+        "किस संधि ने द्वितीय आंग्ल-मैसूर युद्ध समाप्त किया?"
+      ],
+      "o": [
+        [
+          "Treaty of Mangalore",
+          "मंगलौर की संधि"
+        ],
+        [
+          "Treaty of Madras",
+          "मद्रास की संधि"
+        ],
+        [
+          "Treaty of Seringapatam",
+          "श्रीरंगपट्टनम की संधि"
+        ],
+        [
+          "Treaty of Salbai",
+          "सालबाई की संधि"
+        ]
+      ],
+      "e": [
+        "It was signed with Tipu Sultan in 1784.",
+        "यह 1784 में टीपू सुल्तान के साथ हुई।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "By which treaty did Peshwa Baji Rao II accept the Subsidiary Alliance?",
+        "किस संधि से पेशवा बाजीराव द्वितीय ने सहायक संधि स्वीकार की?"
+      ],
+      "o": [
+        [
+          "Treaty of Bassein (1802)",
+          "बेसिन की संधि (1802)"
+        ],
+        [
+          "Treaty of Salbai (1782)",
+          "सालबाई की संधि (1782)"
+        ],
+        [
+          "Treaty of Surat (1775)",
+          "सूरत की संधि (1775)"
+        ],
+        [
+          "Treaty of Purandar (1665)",
+          "पुरंदर की संधि (1665)"
+        ]
+      ],
+      "e": [
+        "It led to the Second Anglo-Maratha War.",
+        "इससे द्वितीय आंग्ल-मराठा युद्ध हुआ।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "The Treaty of Sugauli (1816) ended the war between the British and",
+        "सुगौली की संधि (1816) ने अंग्रेज़ों और किसके बीच युद्ध समाप्त किया?"
+      ],
+      "o": [
+        [
+          "Nepal",
+          "नेपाल"
+        ],
+        [
+          "Burma",
+          "बर्मा"
+        ],
+        [
+          "Afghanistan",
+          "अफ़ग़ानिस्तान"
+        ],
+        [
+          "Bhutan",
+          "भूटान"
+        ]
+      ],
+      "e": [
+        "Nepal gave up Kumaon, Garhwal and Sikkim lands.",
+        "नेपाल ने कुमाऊँ, गढ़वाल और सिक्किम की भूमि छोड़ी।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "The Poona Pact (1932) was signed between Gandhi and",
+        "पूना समझौता (1932) गांधी और किसके बीच हुआ?"
+      ],
+      "o": [
+        [
+          "B. R. Ambedkar",
+          "बी. आर. आंबेडकर"
+        ],
+        [
+          "Lord Irwin",
+          "लॉर्ड इरविन"
+        ],
+        [
+          "Muhammad Ali Jinnah",
+          "मुहम्मद अली जिन्ना"
+        ],
+        [
+          "Ramsay MacDonald",
+          "रैमसे मैकडोनाल्ड"
+        ]
+      ],
+      "e": [
+        "It replaced separate electorates with reserved seats.",
+        "इसने पृथक निर्वाचन को आरक्षित सीटों से बदला।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "The Battle of Kohima (1944) is called the",
+        "कोहिमा के युद्ध (1944) को क्या कहा जाता है?"
+      ],
+      "o": [
+        [
+          "'Stalingrad of the East'",
+          "'पूर्व का स्टालिनग्राद'"
+        ],
+        [
+          "'Waterloo of India'",
+          "'भारत का वाटरलू'"
+        ],
+        [
+          "'Thermopylae of India'",
+          "'भारत का थर्मोपाइली'"
+        ],
+        [
+          "'Verdun of Asia'",
+          "'एशिया का वर्दुन'"
+        ]
+      ],
+      "e": [
+        "It stopped the Japanese advance into India.",
+        "इसने भारत में जापानी बढ़त रोकी।"
+      ]
+    },
+    {
+      "t": "post",
+      "q": [
+        "The Battle of Longewala (1971) took place in",
+        "लोंगेवाला का युद्ध (1971) कहाँ हुआ?"
+      ],
+      "o": [
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Punjab",
+          "पंजाब"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Jammu and Kashmir",
+          "जम्मू और कश्मीर"
+        ]
+      ],
+      "e": [
+        "It is near Jaisalmer in the Thar desert.",
+        "यह थार मरुस्थल में जैसलमेर के पास है।"
+      ]
+    },
+    {
+      "t": "post",
+      "q": [
+        "Major Shaitan Singh won the Param Vir Chakra at",
+        "मेजर शैतान सिंह को परमवीर चक्र कहाँ मिला?"
+      ],
+      "o": [
+        [
+          "Rezang La (1962)",
+          "रेज़ांग ला (1962)"
+        ],
+        [
+          "Walong (1962)",
+          "वालोंग (1962)"
+        ],
+        [
+          "Asal Uttar (1965)",
+          "असल उत्तर (1965)"
+        ],
+        [
+          "Tiger Hill (1999)",
+          "टाइगर हिल (1999)"
+        ]
+      ],
+      "e": [
+        "His company of 13 Kumaon fought nearly to the last man.",
+        "13 कुमाऊँ की उनकी कंपनी लगभग अंतिम सैनिक तक लड़ी।"
+      ]
+    },
+    {
+      "t": "post",
+      "q": [
+        "Which agreement followed the 1965 India–Pakistan war?",
+        "1965 के भारत–पाकिस्तान युद्ध के बाद कौन-सा समझौता हुआ?"
+      ],
+      "o": [
+        [
+          "Tashkent Declaration",
+          "ताशकंद घोषणा"
+        ],
+        [
+          "Simla Agreement",
+          "शिमला समझौता"
+        ],
+        [
+          "Lahore Declaration",
+          "लाहौर घोषणा"
+        ],
+        [
+          "Karachi Agreement",
+          "कराची समझौता"
+        ]
+      ],
+      "e": [
+        "The Simla Agreement (1972) followed the 1971 war.",
+        "शिमला समझौता (1972) 1971 के युद्ध के बाद हुआ।"
+      ]
+    }
+  ]
+}

@@ -44,3 +44,4 @@ Legacy reference documents and question compilations:
 - `syllabus-extracted.txt`: Clean text extraction of the GS Syllabus.
 - `Recent Paper Patterns.pdf`: Analysis of recent SSC exam question patterns.
 - `100 Best Static GK By Varun Awasthi.pdf`: Reference benchmark guide for static topics.
+

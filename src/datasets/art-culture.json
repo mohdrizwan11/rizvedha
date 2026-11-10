@@ -1,0 +1,3332 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "art-culture",
+  "file": "art_culture_of_india_app.html",
+  "storageKey": "ssc_art_culture_v1",
+  "icon": "🎨",
+  "description": "Bilingual study app on India's art and culture: paintings, puppetry, folk theatre, embroidery and sculpture schools on the map, with exam notes on UNESCO heritage, classical languages and temple styles, and an MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Art & Culture of India",
+      "भारत की कला और संस्कृति"
+    ],
+    "hSub": [
+      "SSC Focus · Art and culture map and notes",
+      "SSC फोकस · कला-संस्कृति मानचित्र व नोट्स"
+    ],
+    "learnTtl": [
+      "Learn art and culture",
+      "कला और संस्कृति सीखें"
+    ],
+    "learnSub": [
+      "Open any painting, puppet form, theatre, embroidery or sculpture school to read its home, what it is and the facts asked in exams.",
+      "किसी भी चित्रकला, कठपुतली, नाट्य, कढ़ाई या मूर्तिकला शैली को खोलकर उसका स्थान, परिचय और परीक्षा तथ्य पढ़ें।"
+    ],
+    "lvlLabel": [
+      "Level · Culture GK rank",
+      "स्तर · संस्कृति GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search art forms",
+      "कला रूप खोजें"
+    ],
+    "searchPh": [
+      "Art form, state or feature",
+      "कला रूप, राज्य या विशेषता"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Art forms",
+      "कला रूप"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on paintings, puppetry, theatre, embroidery, sculpture and heritage. Each answer comes with an explanation.",
+      "चित्रकला, कठपुतली, नाट्य, कढ़ाई, मूर्तिकला और धरोहर पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qLabel": [
+      "Select the state of this art form",
+      "इस कला रूप का राज्य चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "atlasSub": [
+      "Every entry on the map, coloured by kind.",
+      "हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read an entry, or a state to list its entries.",
+      "किसी चिह्न को छूकर प्रविष्टि पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No entry from this state in the deck.",
+      "इस राज्य की कोई प्रविष्टि सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this art form.",
+      "भारत का मानचित्र। इस कला रूप का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its entries.",
+      "भारत का मानचित्र। किसी राज्य की प्रविष्टियाँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "plantMarker": [
+      "entry",
+      "प्रविष्टि"
+    ],
+    "atlasPickerLabel": [
+      "Browse an entry",
+      "प्रविष्टि खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select an entry",
+      "प्रविष्टि चुनें"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ],
+    "howto": [
+      "Play: a painting, puppet form, theatre, embroidery or sculpture school is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Art forms: 75 entries on paintings, puppetry, folk theatre, embroidery and sculpture, with their home and exam facts.\nLearn → Exam notes: India on UNESCO's intangible heritage list, the 11 classical languages, temple styles, sculpture and painting schools, and easily confused pairs.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every entry on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई चित्रकला, कठपुतली, नाट्य, कढ़ाई या मूर्तिकला शैली दिखेगी; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → कला रूप: 75 प्रविष्टियाँ चित्रकला, कठपुतली, लोक नाट्य, कढ़ाई और मूर्तिकला पर, स्थान और परीक्षा तथ्यों सहित।\nसीखें → परीक्षा नोट्स: यूनेस्को अमूर्त धरोहर सूची में भारत, 11 शास्त्रीय भाषाएँ, मंदिर शैलियाँ, मूर्ति और चित्र शैलियाँ, और भ्रमित करने वाली जोड़ियाँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "paint",
+      "icon": "🖌️",
+      "col": "#C2185B",
+      "t": [
+        "Painting",
+        "चित्रकला"
+      ]
+    },
+    {
+      "k": "puppet",
+      "icon": "🎎",
+      "col": "#6A1B9A",
+      "t": [
+        "Puppetry",
+        "कठपुतली"
+      ]
+    },
+    {
+      "k": "theatre",
+      "icon": "🎭",
+      "col": "#E65100",
+      "t": [
+        "Folk theatre",
+        "लोक नाट्य"
+      ]
+    },
+    {
+      "k": "textile",
+      "icon": "🧵",
+      "col": "#00838F",
+      "t": [
+        "Embroidery & textile",
+        "कढ़ाई और वस्त्र"
+      ]
+    },
+    {
+      "k": "sculpt",
+      "icon": "🗿",
+      "col": "#5D4037",
+      "t": [
+        "Sculpture & architecture",
+        "मूर्तिकला और वास्तुकला"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Home",
+        "स्थान"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "What it is",
+        "क्या है"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Known for",
+        "पहचान"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "kd"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Curious Visitor",
+      "hi": "जिज्ञासु दर्शक"
+    },
+    {
+      "min": 60,
+      "en": "Gallery Learner",
+      "hi": "गैलरी विद्यार्थी"
+    },
+    {
+      "min": 150,
+      "en": "Folk Explorer",
+      "hi": "लोक खोजी"
+    },
+    {
+      "min": 320,
+      "en": "Culture Seeker",
+      "hi": "संस्कृति साधक"
+    },
+    {
+      "min": 560,
+      "en": "Heritage Scholar",
+      "hi": "धरोहर विद्वान"
+    },
+    {
+      "min": 900,
+      "en": "Kala Guru",
+      "hi": "कला गुरु"
+    },
+    {
+      "min": 1400,
+      "en": "Culture GK Champion",
+      "hi": "संस्कृति GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🎨",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "puppets",
+      "icon": "🎎",
+      "t": [
+        "Puppet Master",
+        "सूत्रधार"
+      ],
+      "d": [
+        "Study every puppet form",
+        "सभी कठपुतली रूप पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "puppet"
+        ]
+      }
+    },
+    {
+      "id": "theatre",
+      "icon": "🎭",
+      "t": [
+        "Stage Struck",
+        "रंगमंच प्रेमी"
+      ],
+      "d": [
+        "Study 10 theatre forms",
+        "10 नाट्य रूप पढ़ें"
+      ],
+      "need": {
+        "seen": 10,
+        "types": [
+          "theatre"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Culture GK Champion",
+        "संस्कृति GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "kd",
+        "field": "kd",
+        "ask": [
+          "What is this?",
+          "यह क्या है?"
+        ],
+        "reverseId": "wk",
+        "reverseAsk": [
+          "Which of these is a",
+          "इनमें से कौन-सा है:"
+        ],
+        "pairs": [
+          [
+            "Tribal painting",
+            "Tribal wall painting"
+          ],
+          [
+            "Folk painting",
+            "Scroll painting"
+          ],
+          [
+            "Embroidery",
+            "Tribal embroidery"
+          ],
+          [
+            "Folk theatre",
+            "Satirical folk theatre"
+          ],
+          [
+            "Dance-drama",
+            "Ritual dance-drama"
+          ],
+          [
+            "Dance-drama",
+            "Temple dance-drama"
+          ],
+          [
+            "Sculpture school",
+            "Mauryan sculpture"
+          ],
+          [
+            "Mauryan sculpture",
+            "Mauryan-era sculpture"
+          ],
+          [
+            "Scroll painting",
+            "Scroll painting with song"
+          ],
+          [
+            "Folk theatre",
+            "Street theatre"
+          ],
+          [
+            "Ritual dance-drama",
+            "Temple dance-drama"
+          ],
+          [
+            "Pahari miniature",
+            "Rajput miniature"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "paint",
+              "puppet",
+              "theatre",
+              "textile",
+              "sculpt",
+              "heritage"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "kd",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "paint",
+        "t": [
+          "Paintings",
+          "चित्रकला"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "paint"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "stage",
+        "t": [
+          "Puppetry & theatre",
+          "कठपुतली और नाट्य"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "puppet",
+              "theatre"
+            ],
+            "n": 6
+          },
+          {
+            "q": "kd",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "heritage",
+        "t": [
+          "Sculpture & heritage",
+          "मूर्तिकला और धरोहर"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "sculpt",
+              "heritage",
+              "textile"
+            ],
+            "n": 10
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Madhubani painting",
+      "h": "मधुबनी चित्रकला",
+      "s": "Bihar",
+      "st": "Mithila (Madhubani), Bihar",
+      "sh": "मिथिला (मधुबनी), बिहार",
+      "c": "paint",
+      "rg": "E",
+      "d": 1,
+      "lat": 26.35,
+      "lng": 86.07,
+      "kd": "Folk painting",
+      "kdh": "लोक चित्रकला",
+      "tag": "Mithila art by women in natural colours",
+      "tagh": "महिलाओं की प्राकृतिक रंगों वाली मिथिला कला",
+      "fact": "Madhubani or Mithila painting of Bihar was traditionally done by women on walls and floors in natural colours, filling every space with motifs; it has a GI tag.",
+      "facth": "बिहार की मधुबनी या मिथिला चित्रकला पारंपरिक रूप से महिलाएँ दीवारों और फ़र्श पर प्राकृतिक रंगों से बनाती थीं, जिसमें हर खाली जगह आकृतियों से भरी जाती है; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Warli painting",
+      "h": "वारली चित्रकला",
+      "s": "Maharashtra",
+      "st": "Palghar and Thane, Maharashtra",
+      "sh": "पालघर और ठाणे, महाराष्ट्र",
+      "c": "paint",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.95,
+      "lng": 73.1,
+      "kd": "Tribal painting",
+      "kdh": "जनजातीय चित्रकला",
+      "tag": "White stick figures on mud walls",
+      "tagh": "मिट्टी की दीवारों पर सफ़ेद रेखाकृतियाँ",
+      "fact": "Warli painting of the Warli tribe of Maharashtra uses white rice paste on mud walls; circles, triangles and squares form people and animals.",
+      "facth": "महाराष्ट्र की वारली जनजाति की वारली चित्रकला में मिट्टी की दीवारों पर चावल के सफ़ेद लेप से वृत्त, त्रिभुज और वर्ग द्वारा मनुष्य और पशु बनाए जाते हैं।"
+    },
+    {
+      "n": "Pattachitra",
+      "h": "पट्टचित्र",
+      "s": "Odisha",
+      "st": "Raghurajpur, Puri, Odisha",
+      "sh": "रघुराजपुर, पुरी, ओडिशा",
+      "c": "paint",
+      "rg": "E",
+      "d": 1,
+      "lat": 19.95,
+      "lng": 85.8,
+      "kd": "Cloth scroll painting",
+      "kdh": "कपड़े पर पट्ट चित्रकला",
+      "tag": "Cloth paintings on Jagannath themes",
+      "tagh": "जगन्नाथ विषयों पर कपड़े की चित्रकला",
+      "fact": "Pattachitra of Odisha is painted on treated cloth (patta) with natural colours, mostly on Lord Jagannath and Krishna; Raghurajpur is its heritage village.",
+      "facth": "ओडिशा का पट्टचित्र उपचारित कपड़े (पट्ट) पर प्राकृतिक रंगों से बनता है, प्रायः भगवान जगन्नाथ और कृष्ण पर; रघुराजपुर इसका धरोहर गाँव है।"
+    },
+    {
+      "n": "Kalamkari",
+      "h": "कलमकारी",
+      "s": "Andhra Pradesh",
+      "st": "Srikalahasti and Machilipatnam, Andhra Pradesh",
+      "sh": "श्रीकालहस्ती और मछलीपट्टनम, आंध्र प्रदेश",
+      "c": "paint",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.75,
+      "lng": 79.7,
+      "kd": "Hand-painted textile art",
+      "kdh": "हाथ से चित्रित वस्त्र कला",
+      "tag": "Drawn on cloth with a pen (kalam)",
+      "tagh": "कलम से कपड़े पर चित्रण",
+      "fact": "Kalamkari of Andhra Pradesh is drawn on cloth with a bamboo pen (kalam) in vegetable dyes; Srikalahasti is hand-drawn, Machilipatnam block-printed.",
+      "facth": "आंध्र प्रदेश की कलमकारी बाँस की कलम से वनस्पति रंगों में कपड़े पर बनती है; श्रीकालहस्ती शैली हाथ से बनी और मछलीपट्टनम शैली ठप्पे से छपी होती है।"
+    },
+    {
+      "n": "Gond painting",
+      "h": "गोंड चित्रकला",
+      "s": "Madhya Pradesh",
+      "st": "Mandla and Dindori, Madhya Pradesh",
+      "sh": "मंडला और डिंडोरी, मध्य प्रदेश",
+      "c": "paint",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.6,
+      "lng": 80.37,
+      "kd": "Tribal painting",
+      "kdh": "जनजातीय चित्रकला",
+      "tag": "Dots and dashes; Jangarh Singh Shyam",
+      "tagh": "बिंदु और रेखाएँ; जनगढ़ सिंह श्याम",
+      "fact": "Gond painting of the Gond tribe of Madhya Pradesh fills animals and trees with dots and dashes; Jangarh Singh Shyam took it to the world.",
+      "facth": "मध्य प्रदेश की गोंड जनजाति की गोंड चित्रकला में पशुओं और पेड़ों को बिंदुओं और रेखाओं से भरा जाता है; जनगढ़ सिंह श्याम इसे दुनिया तक ले गए।"
+    },
+    {
+      "n": "Pithora painting",
+      "h": "पिथोरा चित्रकला",
+      "s": "Gujarat",
+      "st": "Chhota Udaipur, Gujarat",
+      "sh": "छोटा उदयपुर, गुजरात",
+      "c": "paint",
+      "rg": "W",
+      "d": 2,
+      "lat": 22.3,
+      "lng": 74,
+      "kd": "Ritual wall painting",
+      "kdh": "अनुष्ठानिक भित्ति चित्र",
+      "tag": "Horses painted by the Rathwa and Bhil",
+      "tagh": "राठवा और भील लोगों के घोड़ों के चित्र",
+      "fact": "Pithora is a ritual wall painting of the Rathwa and Bhil tribes of Gujarat and Madhya Pradesh, full of horses, painted to honour the deity Pithora.",
+      "facth": "पिथोरा गुजरात और मध्य प्रदेश की राठवा और भील जनजातियों का अनुष्ठानिक भित्ति चित्र है, जिसमें घोड़े भरे होते हैं और यह देवता पिथोरा के सम्मान में बनता है।"
+    },
+    {
+      "n": "Phad painting",
+      "h": "फड़ चित्रकला",
+      "s": "Rajasthan",
+      "st": "Shahpura, Bhilwara, Rajasthan",
+      "sh": "शाहपुरा, भीलवाड़ा, राजस्थान",
+      "c": "paint",
+      "rg": "W",
+      "d": 2,
+      "lat": 25.35,
+      "lng": 74.63,
+      "kd": "Scroll painting",
+      "kdh": "पट चित्रकला",
+      "tag": "Long scrolls of Pabuji and Devnarayan",
+      "tagh": "पाबूजी और देवनारायण के लंबे पट",
+      "fact": "Phad painting of Rajasthan is a long cloth scroll of the folk deities Pabuji or Devnarayan, unrolled by Bhopa priest-singers as they sing the story.",
+      "facth": "राजस्थान की फड़ चित्रकला लोक देवता पाबूजी या देवनारायण का लंबा कपड़े का पट है, जिसे भोपा पुजारी-गायक कथा गाते हुए खोलते हैं।"
+    },
+    {
+      "n": "Kalighat painting",
+      "h": "कालीघाट चित्रकला",
+      "s": "West Bengal",
+      "st": "Kalighat, Kolkata",
+      "sh": "कालीघाट, कोलकाता",
+      "c": "paint",
+      "rg": "E",
+      "d": 2,
+      "lat": 22.52,
+      "lng": 88.34,
+      "kd": "Bazaar painting",
+      "kdh": "बाज़ार चित्रकला",
+      "tag": "Bold watercolours sold near the Kali temple",
+      "tagh": "काली मंदिर के पास बिकने वाले जलरंग चित्र",
+      "fact": "Kalighat paintings were made by patuas in 19th-century Kolkata near the Kalighat temple, with bold outlines, gods and sharp social satire.",
+      "facth": "कालीघाट चित्र 19वीं सदी के कोलकाता में कालीघाट मंदिर के पास पटुआ बनाते थे, जिनमें मोटी रेखाएँ, देवता और तीखा सामाजिक व्यंग्य होता था।"
+    },
+    {
+      "n": "Tanjore painting",
+      "h": "तंजौर चित्रकला",
+      "s": "Tamil Nadu",
+      "st": "Thanjavur, Tamil Nadu",
+      "sh": "तंजावुर, तमिलनाडु",
+      "c": "paint",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.8,
+      "lng": 79.15,
+      "kd": "Panel painting",
+      "kdh": "पटल चित्रकला",
+      "tag": "Gold foil and stones on wooden panels",
+      "tagh": "लकड़ी के पटल पर सोने का पत्र और रत्न",
+      "fact": "Tanjore painting of Tamil Nadu shows deities on wooden panels with raised gesso, gold foil and glass stones; it flourished under the Maratha rulers of Thanjavur.",
+      "facth": "तमिलनाडु की तंजौर चित्रकला में लकड़ी के पटल पर उभरे लेप, सोने के पत्र और काँच के रत्नों के साथ देवता बनाए जाते हैं; यह तंजावुर के मराठा शासकों के समय फली-फूली।"
+    },
+    {
+      "n": "Mysore painting",
+      "h": "मैसूर चित्रकला",
+      "s": "Karnataka",
+      "st": "Mysuru, Karnataka",
+      "sh": "मैसूरु, कर्नाटक",
+      "c": "paint",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.3,
+      "lng": 76.65,
+      "kd": "Classical painting",
+      "kdh": "शास्त्रीय चित्रकला",
+      "tag": "Subtle colours and gesso work",
+      "tagh": "हल्के रंग और लेप का काम",
+      "fact": "Mysore painting of Karnataka uses gesso and gold leaf like Tanjore painting, but with lighter colours and finer detail; it grew under the Wodeyars.",
+      "facth": "कर्नाटक की मैसूर चित्रकला में तंजौर की तरह लेप और स्वर्ण पत्र होता है, पर रंग हल्के और बारीकी अधिक होती है; यह वाडियार राजाओं के समय विकसित हुई।"
+    },
+    {
+      "n": "Cheriyal scroll painting",
+      "h": "चेरियाल पट चित्रकला",
+      "s": "Telangana",
+      "st": "Cheriyal, Siddipet, Telangana",
+      "sh": "चेरियाल, सिद्दीपेट, तेलंगाना",
+      "c": "paint",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.9,
+      "lng": 78.95,
+      "kd": "Scroll painting",
+      "kdh": "पट चित्रकला",
+      "tag": "Story scrolls on a red background",
+      "tagh": "लाल पृष्ठभूमि पर कथा पट",
+      "fact": "Cheriyal scrolls of Telangana tell epics and folk tales in panels on a bright red background, used by storytellers; they have a GI tag.",
+      "facth": "तेलंगाना के चेरियाल पट चटक लाल पृष्ठभूमि पर खानों में महाकाव्य और लोककथाएँ कहते हैं, जिन्हें कथावाचक उपयोग करते हैं; इन्हें GI टैग मिला है।"
+    },
+    {
+      "n": "Saura painting",
+      "h": "सौरा चित्रकला",
+      "s": "Odisha",
+      "st": "Rayagada and Gajapati, Odisha",
+      "sh": "रायगढ़ा और गजपति, ओडिशा",
+      "c": "paint",
+      "rg": "E",
+      "d": 3,
+      "lat": 19.17,
+      "lng": 83.42,
+      "kd": "Tribal wall painting",
+      "kdh": "जनजातीय भित्ति चित्र",
+      "tag": "Idital wall art of the Saura tribe",
+      "tagh": "सौरा जनजाति की इडिटल भित्ति कला",
+      "fact": "Saura (Idital) painting of the Saura tribe of southern Odisha draws stick figures inside a frame on walls as an offering to the gods.",
+      "facth": "दक्षिणी ओडिशा की सौरा जनजाति की सौरा (इडिटल) चित्रकला में देवताओं को अर्पण के रूप में दीवार पर फ्रेम के भीतर रेखाकृतियाँ बनाई जाती हैं।"
+    },
+    {
+      "n": "Thangka",
+      "h": "थांका",
+      "s": "Sikkim",
+      "st": "Sikkim (also Ladakh and Arunachal Pradesh)",
+      "sh": "सिक्किम (लद्दाख और अरुणाचल प्रदेश में भी)",
+      "c": "paint",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.33,
+      "lng": 88.6,
+      "kd": "Buddhist scroll painting",
+      "kdh": "बौद्ध पट चित्रकला",
+      "tag": "Painted cloth of the Buddha and mandalas",
+      "tagh": "बुद्ध और मंडलों का चित्रित वस्त्र",
+      "fact": "Thangka is a Tibetan Buddhist painting on cotton or silk showing the Buddha, deities or mandalas, made in Sikkim, Ladakh and Arunachal Pradesh.",
+      "facth": "थांका सूती या रेशमी कपड़े पर तिब्बती बौद्ध चित्रकला है जिसमें बुद्ध, देवता या मंडल होते हैं; यह सिक्किम, लद्दाख और अरुणाचल प्रदेश में बनती है।"
+    },
+    {
+      "n": "Kangra painting",
+      "h": "कांगड़ा चित्रकला",
+      "s": "Himachal Pradesh",
+      "st": "Kangra, Himachal Pradesh",
+      "sh": "कांगड़ा, हिमाचल प्रदेश",
+      "c": "paint",
+      "rg": "N",
+      "d": 2,
+      "lat": 32.1,
+      "lng": 76.27,
+      "kd": "Pahari miniature",
+      "kdh": "पहाड़ी लघुचित्र",
+      "tag": "Lyrical Radha-Krishna miniatures",
+      "tagh": "राधा-कृष्ण के भावपूर्ण लघुचित्र",
+      "fact": "Kangra painting is the best-known Pahari miniature school, peaking under Raja Sansar Chand; its theme is the love of Radha and Krishna.",
+      "facth": "कांगड़ा चित्रकला सबसे प्रसिद्ध पहाड़ी लघुचित्र शैली है, जो राजा संसार चंद के समय चरम पर थी; इसका विषय राधा-कृष्ण का प्रेम है।"
+    },
+    {
+      "n": "Basohli painting",
+      "h": "बसोहली चित्रकला",
+      "s": "Jammu and Kashmir",
+      "st": "Basohli, Kathua, Jammu and Kashmir",
+      "sh": "बसोहली, कठुआ, जम्मू और कश्मीर",
+      "c": "paint",
+      "rg": "N",
+      "d": 3,
+      "lat": 32.5,
+      "lng": 75.8,
+      "kd": "Pahari miniature",
+      "kdh": "पहाड़ी लघुचित्र",
+      "tag": "Bold colours; the earliest Pahari school",
+      "tagh": "चटक रंग; सबसे पुरानी पहाड़ी शैली",
+      "fact": "Basohli painting, from Kathua in Jammu, is the earliest Pahari miniature school, known for bold reds and yellows and beetle-wing ornaments.",
+      "facth": "जम्मू के कठुआ की बसोहली चित्रकला सबसे पुरानी पहाड़ी लघुचित्र शैली है, जो चटक लाल-पीले रंगों और भृंग-पंख के अलंकरण के लिए जानी जाती है।"
+    },
+    {
+      "n": "Kishangarh painting",
+      "h": "किशनगढ़ चित्रकला",
+      "s": "Rajasthan",
+      "st": "Kishangarh, Rajasthan",
+      "sh": "किशनगढ़, राजस्थान",
+      "c": "paint",
+      "rg": "W",
+      "d": 2,
+      "lat": 26.58,
+      "lng": 74.86,
+      "kd": "Rajput miniature",
+      "kdh": "राजपूत लघुचित्र",
+      "tag": "Bani Thani by Nihal Chand",
+      "tagh": "निहालचंद की बणी-ठणी",
+      "fact": "Kishangarh painting of Rajasthan is known for elongated eyes and faces; its Bani Thani by Nihal Chand is called 'India's Mona Lisa'.",
+      "facth": "राजस्थान की किशनगढ़ चित्रकला लंबी आँखों और चेहरों के लिए जानी जाती है; निहालचंद की बणी-ठणी को 'भारत की मोनालिसा' कहा जाता है।"
+    },
+    {
+      "n": "Sohrai and Khovar",
+      "h": "सोहराई और खोवर",
+      "s": "Jharkhand",
+      "st": "Hazaribagh, Jharkhand",
+      "sh": "हज़ारीबाग, झारखंड",
+      "c": "paint",
+      "rg": "E",
+      "d": 3,
+      "lat": 24,
+      "lng": 85.36,
+      "kd": "Tribal wall painting",
+      "kdh": "जनजातीय भित्ति चित्र",
+      "tag": "Harvest and wedding mural art",
+      "tagh": "फ़सल और विवाह की भित्ति कला",
+      "fact": "Sohrai (harvest) and Khovar (wedding) are mural arts painted by tribal women of Hazaribagh, Jharkhand, in natural earth colours; they have a GI tag.",
+      "facth": "सोहराई (फ़सल) और खोवर (विवाह) हज़ारीबाग, झारखंड की जनजातीय महिलाओं की प्राकृतिक मिट्टी के रंगों वाली भित्ति कलाएँ हैं; इन्हें GI टैग मिला है।"
+    },
+    {
+      "n": "Manjusha painting",
+      "h": "मंजूषा चित्रकला",
+      "s": "Bihar",
+      "st": "Bhagalpur, Bihar",
+      "sh": "भागलपुर, बिहार",
+      "c": "paint",
+      "rg": "E",
+      "d": 3,
+      "lat": 25.25,
+      "lng": 87,
+      "kd": "Folk painting",
+      "kdh": "लोक चित्रकला",
+      "tag": "Story of Bihula and Vishahari",
+      "tagh": "बिहुला और विषहरी की कथा",
+      "fact": "Manjusha art of Bhagalpur, Bihar, tells the tale of Bihula and the snake goddess Vishahari in panels with snake borders; it has a GI tag.",
+      "facth": "भागलपुर, बिहार की मंजूषा कला साँप की किनारी वाले खानों में बिहुला और नाग देवी विषहरी की कथा कहती है; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Aipan",
+      "h": "ऐपण",
+      "s": "Uttarakhand",
+      "st": "Kumaon, Uttarakhand",
+      "sh": "कुमाऊँ, उत्तराखंड",
+      "c": "paint",
+      "rg": "N",
+      "d": 3,
+      "lat": 29.58,
+      "lng": 79.66,
+      "kd": "Ritual floor art",
+      "kdh": "अनुष्ठानिक भूमि अलंकरण",
+      "tag": "White rice-paste designs on red ochre",
+      "tagh": "गेरू पर चावल के सफ़ेद लेप की आकृतियाँ",
+      "fact": "Aipan is the ritual floor and wall art of Kumaon, drawn in white rice paste on a red ochre (geru) base at festivals and ceremonies.",
+      "facth": "ऐपण कुमाऊँ की अनुष्ठानिक भूमि और भित्ति कला है जो त्योहारों और संस्कारों पर गेरू की लाल सतह पर चावल के सफ़ेद लेप से बनती है।"
+    },
+    {
+      "n": "Kerala mural painting",
+      "h": "केरल भित्ति चित्रकला",
+      "s": "Kerala",
+      "st": "Temples and palaces of Kerala",
+      "sh": "केरल के मंदिर और महल",
+      "c": "paint",
+      "rg": "S",
+      "d": 2,
+      "lat": 9.95,
+      "lng": 76.3,
+      "kd": "Temple wall painting",
+      "kdh": "मंदिर भित्ति चित्रकला",
+      "tag": "Mattancherry Palace and temple walls",
+      "tagh": "मट्टनचेरी महल और मंदिरों की दीवारें",
+      "fact": "Kerala murals show Hindu epics on temple and palace walls in five natural colours; the Mattancherry Palace in Kochi has famous examples.",
+      "facth": "केरल के भित्ति चित्र मंदिरों और महलों की दीवारों पर पाँच प्राकृतिक रंगों में हिंदू महाकाव्य दिखाते हैं; कोच्चि का मट्टनचेरी महल इसके प्रसिद्ध उदाहरणों वाला है।"
+    },
+    {
+      "n": "Rogan art",
+      "h": "रोगन कला",
+      "s": "Gujarat",
+      "st": "Nirona, Kutch, Gujarat",
+      "sh": "निरोना, कच्छ, गुजरात",
+      "c": "paint",
+      "rg": "W",
+      "d": 3,
+      "lat": 23.45,
+      "lng": 69.6,
+      "kd": "Cloth painting with castor-oil paint",
+      "kdh": "अरंडी तेल के रंग से कपड़े पर चित्रण",
+      "tag": "Practised by a family of Nirona village",
+      "tagh": "निरोना गाँव के एक परिवार की कला",
+      "fact": "Rogan art of Kutch is painted on cloth with a thick paste of boiled castor oil and colour, drawn out with a metal stylus; a family in Nirona keeps it alive.",
+      "facth": "कच्छ की रोगन कला में उबले अरंडी तेल और रंग के गाढ़े लेप को धातु की सलाई से खींचकर कपड़े पर चित्र बनाया जाता है; निरोना का एक परिवार इसे जीवित रखे है।"
+    },
+    {
+      "n": "Pichwai painting",
+      "h": "पिछवाई चित्रकला",
+      "s": "Rajasthan",
+      "st": "Nathdwara, Rajasthan",
+      "sh": "नाथद्वारा, राजस्थान",
+      "c": "paint",
+      "rg": "W",
+      "d": 2,
+      "lat": 24.93,
+      "lng": 73.82,
+      "kd": "Temple cloth painting",
+      "kdh": "मंदिर वस्त्र चित्रकला",
+      "tag": "Backdrops for Shrinathji",
+      "tagh": "श्रीनाथजी की पृष्ठभूमि",
+      "fact": "Pichwai paintings of Nathdwara are large cloth paintings hung behind the idol of Shrinathji (Krishna), changed with the seasons and festivals.",
+      "facth": "नाथद्वारा की पिछवाई बड़ी कपड़े की चित्रकारी है जो श्रीनाथजी (कृष्ण) की मूर्ति के पीछे लटकाई जाती है और ऋतु व त्योहार के अनुसार बदली जाती है।"
+    },
+    {
+      "n": "Mandana",
+      "h": "मांडणा",
+      "s": "Rajasthan",
+      "st": "Rajasthan (also Madhya Pradesh)",
+      "sh": "राजस्थान (मध्य प्रदेश में भी)",
+      "c": "paint",
+      "rg": "W",
+      "d": 3,
+      "lat": 25.2,
+      "lng": 75.85,
+      "kd": "Floor and wall art",
+      "kdh": "भूमि और भित्ति अलंकरण",
+      "tag": "White designs on a cow-dung and red-earth base",
+      "tagh": "गोबर और लाल मिट्टी की सतह पर सफ़ेद आकृतियाँ",
+      "fact": "Mandana is drawn by women of Rajasthan and Madhya Pradesh on floors and walls, in white lime or chalk on a base of cow dung and red earth.",
+      "facth": "मांडणा राजस्थान और मध्य प्रदेश की महिलाएँ फ़र्श और दीवारों पर गोबर और लाल मिट्टी की सतह पर चूने या खड़िया से बनाती हैं।"
+    },
+    {
+      "n": "Chittara art",
+      "h": "चित्तारा कला",
+      "s": "Karnataka",
+      "st": "Sagar, Shivamogga, Karnataka",
+      "sh": "सागर, शिवमोग्गा, कर्नाटक",
+      "c": "paint",
+      "rg": "S",
+      "d": 3,
+      "lat": 14.17,
+      "lng": 75.03,
+      "kd": "Wall art of Deewaru women",
+      "kdh": "दीवारू महिलाओं की भित्ति कला",
+      "tag": "Geometric wall art for weddings",
+      "tagh": "विवाहों के लिए ज्यामितीय भित्ति कला",
+      "fact": "Chittara is the geometric wall art of Deewaru women of Shivamogga, Karnataka, painted in rice, red earth and other natural colours for weddings.",
+      "facth": "चित्तारा शिवमोग्गा, कर्नाटक की दीवारू महिलाओं की ज्यामितीय भित्ति कला है जो विवाहों के लिए चावल, लाल मिट्टी और अन्य प्राकृतिक रंगों से बनती है।"
+    },
+    {
+      "n": "Bhil painting",
+      "h": "भील चित्रकला",
+      "s": "Madhya Pradesh",
+      "st": "Jhabua, Madhya Pradesh",
+      "sh": "झाबुआ, मध्य प्रदेश",
+      "c": "paint",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.77,
+      "lng": 74.6,
+      "kd": "Tribal painting",
+      "kdh": "जनजातीय चित्रकला",
+      "tag": "Dotted patterns; Bhuri Bai",
+      "tagh": "बिंदुओं वाले पैटर्न; भूरी बाई",
+      "fact": "Bhil painting of the Bhil tribe of western Madhya Pradesh is built from many coloured dots; Bhuri Bai, its best-known artist, received the Padma Shri.",
+      "facth": "पश्चिमी मध्य प्रदेश की भील जनजाति की भील चित्रकला कई रंगीन बिंदुओं से बनती है; इसकी प्रसिद्ध कलाकार भूरी बाई को पद्मश्री मिला।"
+    },
+    {
+      "n": "Paitkar painting",
+      "h": "पैटकर चित्रकला",
+      "s": "Jharkhand",
+      "st": "Amadubi, East Singhbhum, Jharkhand",
+      "sh": "अमादुबी, पूर्वी सिंहभूम, झारखंड",
+      "c": "paint",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.6,
+      "lng": 86.4,
+      "kd": "Scroll painting",
+      "kdh": "पट चित्रकला",
+      "tag": "One of the oldest tribal scroll arts",
+      "tagh": "सबसे पुरानी जनजातीय पट कलाओं में",
+      "fact": "Paitkar painting of Jharkhand is a scroll art of the Santhal region about life after death, considered one of the oldest tribal painting traditions.",
+      "facth": "झारखंड की पैटकर चित्रकला संथाल क्षेत्र की मृत्यु के बाद के जीवन पर आधारित पट कला है, जिसे सबसे पुरानी जनजातीय चित्र परंपराओं में गिना जाता है।"
+    },
+    {
+      "n": "Lippan art",
+      "h": "लिप्पन कला",
+      "s": "Gujarat",
+      "st": "Kutch, Gujarat",
+      "sh": "कच्छ, गुजरात",
+      "c": "paint",
+      "rg": "W",
+      "d": 3,
+      "lat": 23.3,
+      "lng": 70.2,
+      "kd": "Mud and mirror relief",
+      "kdh": "मिट्टी और शीशे की उभरी कला",
+      "tag": "Mirror-studded mud walls of Kutch",
+      "tagh": "कच्छ की शीशे जड़ी मिट्टी की दीवारें",
+      "fact": "Lippan art of Kutch is relief work in mud and camel dung on the walls of huts (bhungas), studded with small mirrors.",
+      "facth": "कच्छ की लिप्पन कला झोपड़ियों (भूंगा) की दीवारों पर मिट्टी और ऊँट के गोबर का उभरा काम है, जिसमें छोटे शीशे जड़े होते हैं।"
+    },
+    {
+      "n": "Patua scroll painting",
+      "h": "पटुआ पट चित्रकला",
+      "s": "West Bengal",
+      "st": "Pingla, Paschim Medinipur, West Bengal",
+      "sh": "पिंगला, पश्चिम मेदिनीपुर, पश्चिम बंगाल",
+      "c": "paint",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.25,
+      "lng": 87.6,
+      "kd": "Scroll painting with song",
+      "kdh": "गीत सहित पट चित्रकला",
+      "tag": "Scrolls sung as pater gaan",
+      "tagh": "पटेर गान के रूप में गाए जाने वाले पट",
+      "fact": "The patuas (chitrakars) of Pingla, Bengal, paint long scrolls and sing their story as pater gaan while unrolling them.",
+      "facth": "बंगाल के पिंगला के पटुआ (चित्रकार) लंबे पट बनाते हैं और उन्हें खोलते हुए उनकी कथा पटेर गान के रूप में गाते हैं।"
+    },
+    {
+      "n": "Kathputli",
+      "h": "कठपुतली",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "puppet",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.9,
+      "lng": 75.8,
+      "kd": "String puppetry",
+      "kdh": "धागा कठपुतली",
+      "tag": "Rajasthan's string puppets",
+      "tagh": "राजस्थान की धागे वाली कठपुतलियाँ",
+      "fact": "Kathputli is the string puppetry of Rajasthan, performed by the Bhat community with puppets in bright costumes, often on tales of Amar Singh Rathore.",
+      "facth": "कठपुतली राजस्थान की धागा कठपुतली है, जिसे भाट समुदाय चटक वेशभूषा वाली कठपुतलियों से, अक्सर अमर सिंह राठौड़ की कथाओं पर, प्रस्तुत करता है।"
+    },
+    {
+      "n": "Tholu Bommalata",
+      "h": "तोलु बोम्मलाटा",
+      "s": "Andhra Pradesh",
+      "st": "Andhra Pradesh",
+      "sh": "आंध्र प्रदेश",
+      "c": "puppet",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.8,
+      "lng": 78,
+      "kd": "Shadow puppetry",
+      "kdh": "छाया कठपुतली",
+      "tag": "Large coloured leather puppets",
+      "tagh": "रंगीन चमड़े की बड़ी कठपुतलियाँ",
+      "fact": "Tholu Bommalata, 'the dance of leather puppets', is Andhra Pradesh's shadow puppetry with large, translucent coloured leather figures.",
+      "facth": "तोलु बोम्मलाटा, यानी 'चमड़े की कठपुतलियों का नृत्य', आंध्र प्रदेश की छाया कठपुतली है जिसमें बड़ी, पारभासी रंगीन चमड़े की आकृतियाँ होती हैं।"
+    },
+    {
+      "n": "Togalu Gombeyata",
+      "h": "तोगलु गोम्बेयाटा",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "puppet",
+      "rg": "S",
+      "d": 3,
+      "lat": 13,
+      "lng": 76.1,
+      "kd": "Shadow puppetry",
+      "kdh": "छाया कठपुतली",
+      "tag": "Karnataka's leather shadow puppets",
+      "tagh": "कर्नाटक की चमड़े की छाया कठपुतलियाँ",
+      "fact": "Togalu Gombeyata is the shadow puppetry of Karnataka, using leather puppets whose size depends on the character's status.",
+      "facth": "तोगलु गोम्बेयाटा कर्नाटक की छाया कठपुतली है, जिसमें चमड़े की कठपुतलियों का आकार पात्र के पद के अनुसार होता है।"
+    },
+    {
+      "n": "Ravanachhaya",
+      "h": "रावणछाया",
+      "s": "Odisha",
+      "st": "Angul, Odisha",
+      "sh": "अंगुल, ओडिशा",
+      "c": "puppet",
+      "rg": "E",
+      "d": 3,
+      "lat": 20.85,
+      "lng": 85.1,
+      "kd": "Shadow puppetry",
+      "kdh": "छाया कठपुतली",
+      "tag": "Unjointed deer-skin puppets",
+      "tagh": "बिना जोड़ वाली हिरण की खाल की कठपुतलियाँ",
+      "fact": "Ravanachhaya of Odisha is shadow puppetry with unjointed puppets of deer skin, telling the Ramayana.",
+      "facth": "ओडिशा का रावणछाया हिरण की खाल की बिना जोड़ वाली कठपुतलियों से रामायण कहने वाली छाया कठपुतली है।"
+    },
+    {
+      "n": "Tolpavakoothu",
+      "h": "तोलपावकूत्तु",
+      "s": "Kerala",
+      "st": "Palakkad, Kerala",
+      "sh": "पालक्काड, केरल",
+      "c": "puppet",
+      "rg": "S",
+      "d": 3,
+      "lat": 10.78,
+      "lng": 76.65,
+      "kd": "Shadow puppetry",
+      "kdh": "छाया कठपुतली",
+      "tag": "Shadow play of the Kamba Ramayana in temples",
+      "tagh": "मंदिरों में कंब रामायण का छाया नाट्य",
+      "fact": "Tolpavakoothu is the shadow puppetry of Palakkad, Kerala, staged in temples of the goddess Bhadrakali with episodes of the Kamba Ramayana.",
+      "facth": "तोलपावकूत्तु पालक्काड, केरल की छाया कठपुतली है जो भद्रकाली मंदिरों में कंब रामायण के प्रसंगों के साथ होती है।"
+    },
+    {
+      "n": "Pavakathakali",
+      "h": "पावकथकली",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "puppet",
+      "rg": "S",
+      "d": 3,
+      "lat": 9.55,
+      "lng": 76.6,
+      "kd": "Glove puppetry",
+      "kdh": "दस्ताना कठपुतली",
+      "tag": "Glove puppets dressed like Kathakali",
+      "tagh": "कथकली जैसी वेशभूषा वाली दस्ताना कठपुतलियाँ",
+      "fact": "Pavakathakali is the glove puppetry of Kerala, whose puppets are dressed like Kathakali dancers.",
+      "facth": "पावकथकली केरल की दस्ताना कठपुतली है, जिसकी कठपुतलियाँ कथकली नर्तकों जैसी सजी होती हैं।"
+    },
+    {
+      "n": "Putul Nach",
+      "h": "पुतुल नाच",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "पश्चिम बंगाल",
+      "c": "puppet",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.25,
+      "lng": 87.85,
+      "kd": "Rod puppetry",
+      "kdh": "छड़ कठपुतली",
+      "tag": "Large rod puppets of Bengal",
+      "tagh": "बंगाल की बड़ी छड़ कठपुतलियाँ",
+      "fact": "Putul Nach is the rod puppetry of West Bengal, with large puppets fixed to rods held at the puppeteer's waist.",
+      "facth": "पुतुल नाच पश्चिम बंगाल की छड़ कठपुतली है, जिसमें बड़ी कठपुतलियाँ कठपुतली वाले की कमर पर टिकी छड़ों पर लगी होती हैं।"
+    },
+    {
+      "n": "Yampuri",
+      "h": "यमपुरी",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "puppet",
+      "rg": "E",
+      "d": 3,
+      "lat": 25.6,
+      "lng": 85.1,
+      "kd": "Rod puppetry",
+      "kdh": "छड़ कठपुतली",
+      "tag": "Bihar's jointless rod puppets",
+      "tagh": "बिहार की बिना जोड़ वाली छड़ कठपुतलियाँ",
+      "fact": "Yampuri is the rod puppetry of Bihar, using wooden puppets made in one piece without joints.",
+      "facth": "यमपुरी बिहार की छड़ कठपुतली है, जिसमें बिना जोड़ वाली एक ही टुकड़े की लकड़ी की कठपुतलियाँ होती हैं।"
+    },
+    {
+      "n": "Bommalattam",
+      "h": "बोम्मलाट्टम",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "puppet",
+      "rg": "S",
+      "d": 3,
+      "lat": 11.1,
+      "lng": 78.65,
+      "kd": "String and rod puppetry",
+      "kdh": "धागा और छड़ कठपुतली",
+      "tag": "Large, heavy puppets worked by string and rod",
+      "tagh": "धागे और छड़ से चलने वाली बड़ी भारी कठपुतलियाँ",
+      "fact": "Bommalattam of Tamil Nadu combines string and rod puppetry, with some of the largest and heaviest puppets in India.",
+      "facth": "तमिलनाडु का बोम्मलाट्टम धागा और छड़ कठपुतली का मेल है, जिसमें भारत की सबसे बड़ी और भारी कठपुतलियों में से कुछ होती हैं।"
+    },
+    {
+      "n": "Gombeyata",
+      "h": "गोम्बेयाटा",
+      "s": "Karnataka",
+      "st": "Coastal Karnataka",
+      "sh": "तटीय कर्नाटक",
+      "c": "puppet",
+      "rg": "S",
+      "d": 3,
+      "lat": 13.4,
+      "lng": 75,
+      "kd": "String puppetry",
+      "kdh": "धागा कठपुतली",
+      "tag": "String puppets styled on Yakshagana",
+      "tagh": "यक्षगान शैली की धागा कठपुतलियाँ",
+      "fact": "Gombeyata is the string puppetry of Karnataka, its puppets styled and costumed like Yakshagana characters.",
+      "facth": "गोम्बेयाटा कर्नाटक की धागा कठपुतली है, जिसकी कठपुतलियाँ यक्षगान पात्रों जैसी सजी होती हैं।"
+    },
+    {
+      "n": "Kundhei",
+      "h": "कुंढेई",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "puppet",
+      "rg": "E",
+      "d": 3,
+      "lat": 20.3,
+      "lng": 85.75,
+      "kd": "String puppetry",
+      "kdh": "धागा कठपुतली",
+      "tag": "Light wooden string puppets of Odisha",
+      "tagh": "ओडिशा की हल्की लकड़ी की धागा कठपुतलियाँ",
+      "fact": "Kundhei is the string puppetry of Odisha, with light wooden puppets without legs, dressed in long skirts.",
+      "facth": "कुंढेई ओडिशा की धागा कठपुतली है, जिसमें बिना पैरों वाली, लंबे घाघरे पहने हल्की लकड़ी की कठपुतलियाँ होती हैं।"
+    },
+    {
+      "n": "Yakshagana",
+      "h": "यक्षगान",
+      "s": "Karnataka",
+      "st": "Coastal Karnataka",
+      "sh": "तटीय कर्नाटक",
+      "c": "theatre",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.95,
+      "lng": 75.2,
+      "kd": "Dance-drama",
+      "kdh": "नृत्य-नाट्य",
+      "tag": "All-night dance-drama with huge headgear",
+      "tagh": "बड़े मुकुटों वाला रात भर का नृत्य-नाट्य",
+      "fact": "Yakshagana of coastal Karnataka is an all-night dance-drama on epic stories, with elaborate costumes, huge headgear and a bhagavata who sings the story.",
+      "facth": "तटीय कर्नाटक का यक्षगान महाकाव्य कथाओं पर रात भर चलने वाला नृत्य-नाट्य है, जिसमें भव्य वेशभूषा, बड़े मुकुट और कथा गाने वाला भागवत होता है।"
+    },
+    {
+      "n": "Jatra",
+      "h": "जात्रा",
+      "s": "West Bengal",
+      "st": "West Bengal (also Odisha)",
+      "sh": "पश्चिम बंगाल (ओडिशा में भी)",
+      "c": "theatre",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.9,
+      "lng": 88,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Open-air theatre born from Chaitanya's Bhakti",
+      "tagh": "चैतन्य की भक्ति से जन्मा खुला रंगमंच",
+      "fact": "Jatra is the open-air folk theatre of Bengal and Odisha, which grew from the Bhakti movement of Chaitanya and later took up social and political themes.",
+      "facth": "जात्रा बंगाल और ओडिशा का खुला लोक रंगमंच है, जो चैतन्य के भक्ति आंदोलन से विकसित हुआ और बाद में सामाजिक व राजनीतिक विषयों को अपनाया।"
+    },
+    {
+      "n": "Tamasha",
+      "h": "तमाशा",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "theatre",
+      "rg": "W",
+      "d": 1,
+      "lat": 19.1,
+      "lng": 74.75,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Song-and-dance theatre with Lavani",
+      "tagh": "लावणी वाला गीत-नृत्य रंगमंच",
+      "fact": "Tamasha is the folk theatre of Maharashtra, with the Lavani song-dance at its heart and a strong role for women performers.",
+      "facth": "तमाशा महाराष्ट्र का लोक नाट्य है, जिसके केंद्र में लावणी गीत-नृत्य है और महिला कलाकारों की बड़ी भूमिका होती है।"
+    },
+    {
+      "n": "Nautanki",
+      "h": "नौटंकी",
+      "s": "Uttar Pradesh",
+      "st": "Kanpur and Lucknow, Uttar Pradesh",
+      "sh": "कानपुर और लखनऊ, उत्तर प्रदेश",
+      "c": "theatre",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.45,
+      "lng": 80.33,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Operatic theatre with the nagara drum",
+      "tagh": "नगाड़े के साथ गीतमय नाट्य",
+      "fact": "Nautanki is the operatic folk theatre of Uttar Pradesh, sung in verse to the nagara drum; Kanpur and Hathras are its main schools.",
+      "facth": "नौटंकी उत्तर प्रदेश का गीतमय लोक नाट्य है, जो नगाड़े के साथ पद्य में गाया जाता है; कानपुर और हाथरस इसकी प्रमुख शैलियाँ हैं।"
+    },
+    {
+      "n": "Bhavai theatre",
+      "h": "भवई नाट्य",
+      "s": "Gujarat",
+      "st": "North Gujarat",
+      "sh": "उत्तर गुजरात",
+      "c": "theatre",
+      "rg": "W",
+      "d": 2,
+      "lat": 23.6,
+      "lng": 72.38,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Satirical theatre credited to Asait Thakar",
+      "tagh": "असाइत ठाकर से जुड़ा व्यंग्य नाट्य",
+      "fact": "Bhavai is the folk theatre of Gujarat, performed in honour of the goddess Amba, with humour and satire; Asait Thakar is credited with founding it.",
+      "facth": "भवई गुजरात का लोक नाट्य है जो देवी अंबा के सम्मान में हास्य और व्यंग्य के साथ होता है; असाइत ठाकर को इसका प्रवर्तक माना जाता है।"
+    },
+    {
+      "n": "Swang",
+      "h": "स्वांग",
+      "s": "Haryana",
+      "st": "Haryana",
+      "sh": "हरियाणा",
+      "c": "theatre",
+      "rg": "N",
+      "d": 2,
+      "lat": 29.15,
+      "lng": 75.72,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Musical theatre of Haryana (Saang)",
+      "tagh": "हरियाणा का संगीत नाट्य (सांग)",
+      "fact": "Swang (Saang) is the musical folk theatre of Haryana and Punjab; Pandit Lakhmi Chand is its greatest name.",
+      "facth": "स्वांग (सांग) हरियाणा और पंजाब का संगीतमय लोक नाट्य है; पंडित लख्मीचंद इसके सबसे बड़े नाम हैं।"
+    },
+    {
+      "n": "Maach",
+      "h": "माच",
+      "s": "Madhya Pradesh",
+      "st": "Malwa (Ujjain), Madhya Pradesh",
+      "sh": "मालवा (उज्जैन), मध्य प्रदेश",
+      "c": "theatre",
+      "rg": "C",
+      "d": 2,
+      "lat": 23.18,
+      "lng": 75.78,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Malwa theatre on a raised stage",
+      "tagh": "ऊँचे मंच पर मालवा का नाट्य",
+      "fact": "Maach is the folk theatre of Malwa in Madhya Pradesh; the word means the raised stage on which it is performed.",
+      "facth": "माच मध्य प्रदेश के मालवा का लोक नाट्य है; इस शब्द का अर्थ वह ऊँचा मंच है जिस पर यह होता है।"
+    },
+    {
+      "n": "Ankia Naat",
+      "h": "अंकिया नाट",
+      "s": "Assam",
+      "st": "Majuli and the sattras of Assam",
+      "sh": "माजुली और असम के सत्र",
+      "c": "theatre",
+      "rg": "NE",
+      "d": 2,
+      "lat": 26.95,
+      "lng": 94.17,
+      "kd": "One-act devotional play",
+      "kdh": "एकांकी भक्ति नाटक",
+      "tag": "Plays by Sankardev staged as Bhaona",
+      "tagh": "शंकरदेव के नाटक, भावना के रूप में मंचित",
+      "fact": "Ankia Naat are one-act devotional plays written by Srimanta Sankardev in Brajavali; their staging is called Bhaona.",
+      "facth": "अंकिया नाट श्रीमंत शंकरदेव द्वारा ब्रजावली में लिखे एकांकी भक्ति नाटक हैं; इनके मंचन को भावना कहते हैं।"
+    },
+    {
+      "n": "Bhand Pather",
+      "h": "भांड पथेर",
+      "s": "Jammu and Kashmir",
+      "st": "Kashmir valley",
+      "sh": "कश्मीर घाटी",
+      "c": "theatre",
+      "rg": "N",
+      "d": 2,
+      "lat": 33.73,
+      "lng": 75.15,
+      "kd": "Satirical folk theatre",
+      "kdh": "व्यंग्यात्मक लोक नाट्य",
+      "tag": "Satire of Kashmir's Bhand performers",
+      "tagh": "कश्मीर के भांड कलाकारों का व्यंग्य",
+      "fact": "Bhand Pather is the traditional satirical theatre of Kashmir, mixing play, music and dance, performed by the Bhand community.",
+      "facth": "भांड पथेर कश्मीर का पारंपरिक व्यंग्य नाट्य है, जिसमें नाटक, संगीत और नृत्य का मेल होता है और इसे भांड समुदाय प्रस्तुत करता है।"
+    },
+    {
+      "n": "Theyyam",
+      "h": "तेय्यम",
+      "s": "Kerala",
+      "st": "Kannur and Kasaragod, Kerala",
+      "sh": "कन्नूर और कासरगोड, केरल",
+      "c": "theatre",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.9,
+      "lng": 75.5,
+      "kd": "Ritual dance-worship",
+      "kdh": "अनुष्ठानिक नृत्य-पूजा",
+      "tag": "Performers become living gods",
+      "tagh": "कलाकार जीवित देवता बन जाते हैं",
+      "fact": "Theyyam of North Kerala is a ritual form in which performers in towering costumes and face paint are believed to become the deity.",
+      "facth": "उत्तर केरल का तेय्यम एक अनुष्ठान है जिसमें ऊँची वेशभूषा और चेहरे के रंग में सजे कलाकार को देवता का रूप माना जाता है।"
+    },
+    {
+      "n": "Kutiyattam",
+      "h": "कूडियाट्टम",
+      "s": "Kerala",
+      "st": "Temple theatres (koothambalam) of Kerala",
+      "sh": "केरल के मंदिर रंगमंच (कूत्तम्बलम)",
+      "c": "theatre",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.52,
+      "lng": 76.21,
+      "kd": "Sanskrit theatre",
+      "kdh": "संस्कृत रंगमंच",
+      "tag": "UNESCO intangible heritage (2008)",
+      "tagh": "यूनेस्को अमूर्त धरोहर (2008)",
+      "fact": "Kutiyattam is Sanskrit theatre of Kerala, about 2,000 years old, staged in temple theatres; UNESCO proclaimed it in 2001 and inscribed it in 2008.",
+      "facth": "कूडियाट्टम केरल का लगभग 2,000 वर्ष पुराना संस्कृत रंगमंच है जो मंदिर रंगमंचों में होता है; यूनेस्को ने इसे 2001 में घोषित और 2008 में सूचीबद्ध किया।"
+    },
+    {
+      "n": "Mudiyettu",
+      "h": "मुडियेट्टु",
+      "s": "Kerala",
+      "st": "Central Kerala",
+      "sh": "मध्य केरल",
+      "c": "theatre",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.05,
+      "lng": 76.4,
+      "kd": "Ritual dance-drama",
+      "kdh": "अनुष्ठानिक नृत्य-नाट्य",
+      "tag": "Kali's fight with Darika; UNESCO 2010",
+      "tagh": "काली और दारिका का युद्ध; यूनेस्को 2010",
+      "fact": "Mudiyettu of Kerala enacts the battle of the goddess Kali and the demon Darika; UNESCO listed it in 2010.",
+      "facth": "केरल का मुडियेट्टु देवी काली और दानव दारिका के युद्ध का मंचन है; यूनेस्को ने इसे 2010 में सूचीबद्ध किया।"
+    },
+    {
+      "n": "Ramman",
+      "h": "राम्मन",
+      "s": "Uttarakhand",
+      "st": "Saloor-Dungra, Chamoli, Uttarakhand",
+      "sh": "सलूड़-डुंग्रा, चमोली, उत्तराखंड",
+      "c": "theatre",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.4,
+      "lng": 79.32,
+      "kd": "Religious festival and ritual theatre",
+      "kdh": "धार्मिक उत्सव और अनुष्ठानिक नाट्य",
+      "tag": "Masked ritual theatre; UNESCO 2009",
+      "tagh": "मुखौटा अनुष्ठान नाट्य; यूनेस्को 2009",
+      "fact": "Ramman is a festival and masked ritual theatre of the villages of Saloor-Dungra in Garhwal, honouring the deity Bhumiyal; UNESCO listed it in 2009.",
+      "facth": "राम्मन गढ़वाल के सलूड़-डुंग्रा गाँवों का देवता भूमियाल को समर्पित उत्सव और मुखौटा अनुष्ठान नाट्य है; यूनेस्को ने इसे 2009 में सूचीबद्ध किया।"
+    },
+    {
+      "n": "Therukoothu",
+      "h": "तेरुकूत्तु",
+      "s": "Tamil Nadu",
+      "st": "Northern Tamil Nadu",
+      "sh": "उत्तरी तमिलनाडु",
+      "c": "theatre",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.5,
+      "lng": 79.3,
+      "kd": "Street theatre",
+      "kdh": "नुक्कड़ नाट्य",
+      "tag": "Street theatre on the Mahabharata",
+      "tagh": "महाभारत पर नुक्कड़ नाट्य",
+      "fact": "Therukoothu, literally street play, is the folk theatre of Tamil Nadu, mostly on Mahabharata stories and linked to Draupadi Amman festivals.",
+      "facth": "तेरुकूत्तु, यानी गली का नाटक, तमिलनाडु का लोक नाट्य है जो प्रायः महाभारत की कथाओं पर और द्रौपदी अम्मन उत्सवों से जुड़ा होता है।"
+    },
+    {
+      "n": "Dashavatar",
+      "h": "दशावतार",
+      "s": "Maharashtra",
+      "st": "Sindhudurg (Konkan) and Goa",
+      "sh": "सिंधुदुर्ग (कोंकण) और गोवा",
+      "c": "theatre",
+      "rg": "W",
+      "d": 3,
+      "lat": 16.15,
+      "lng": 73.85,
+      "kd": "Folk theatre",
+      "kdh": "लोक नाट्य",
+      "tag": "Plays of Vishnu's ten avatars",
+      "tagh": "विष्णु के दस अवतारों के नाटक",
+      "fact": "Dashavatar is the folk theatre of the Konkan and Goa, enacting the ten avatars of Vishnu in all-night shows by male actors.",
+      "facth": "दशावतार कोंकण और गोवा का लोक नाट्य है, जिसमें पुरुष कलाकार रात भर विष्णु के दस अवतारों का मंचन करते हैं।"
+    },
+    {
+      "n": "Ramlila",
+      "h": "रामलीला",
+      "s": "Uttar Pradesh",
+      "st": "Ramnagar (Varanasi), Ayodhya and north India",
+      "sh": "रामनगर (वाराणसी), अयोध्या और उत्तर भारत",
+      "c": "theatre",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.28,
+      "lng": 83.03,
+      "kd": "Folk performance of the Ramayana",
+      "kdh": "रामायण का लोक मंचन",
+      "tag": "Staged before Dussehra; UNESCO 2008",
+      "tagh": "दशहरे से पहले मंचन; यूनेस्को 2008",
+      "fact": "Ramlila enacts the Ramayana, mostly from the Ramcharitmanas, in the days before Dussehra; the Ramnagar Ramlila lasts a month. UNESCO listed it in 2008.",
+      "facth": "रामलीला दशहरे से पहले के दिनों में प्रायः रामचरितमानस पर आधारित रामायण का मंचन है; रामनगर की रामलीला एक महीना चलती है। यूनेस्को ने इसे 2008 में सूचीबद्ध किया।"
+    },
+    {
+      "n": "Krishnattam",
+      "h": "कृष्णनाट्टम",
+      "s": "Kerala",
+      "st": "Guruvayur, Kerala",
+      "sh": "गुरुवायूर, केरल",
+      "c": "theatre",
+      "rg": "S",
+      "d": 3,
+      "lat": 10.59,
+      "lng": 76.04,
+      "kd": "Temple dance-drama",
+      "kdh": "मंदिर नृत्य-नाट्य",
+      "tag": "Eight-night cycle on Krishna's life",
+      "tagh": "कृष्ण के जीवन पर आठ रातों का चक्र",
+      "fact": "Krishnattam is a temple dance-drama of Guruvayur on the life of Krishna in eight plays, composed by the Zamorin Manaveda; it is a forerunner of Kathakali.",
+      "facth": "कृष्णनाट्टम गुरुवायूर का मंदिर नृत्य-नाट्य है जो ज़मोरिन मानवेद द्वारा रचित आठ नाटकों में कृष्ण का जीवन दिखाता है; यह कथकली का पूर्ववर्ती है।"
+    },
+    {
+      "n": "Bhagavata Mela",
+      "h": "भागवत मेला",
+      "s": "Tamil Nadu",
+      "st": "Melattur, Thanjavur, Tamil Nadu",
+      "sh": "मेलत्तूर, तंजावुर, तमिलनाडु",
+      "c": "theatre",
+      "rg": "S",
+      "d": 3,
+      "lat": 10.93,
+      "lng": 79.25,
+      "kd": "Dance-drama",
+      "kdh": "नृत्य-नाट्य",
+      "tag": "Telugu dance-dramas staged at Narasimha Jayanti",
+      "tagh": "नरसिंह जयंती पर मंचित तेलुगु नृत्य-नाट्य",
+      "fact": "Bhagavata Mela of Melattur is a Telugu devotional dance-drama by male performers, staged every year at Narasimha Jayanti.",
+      "facth": "मेलत्तूर का भागवत मेला पुरुष कलाकारों का तेलुगु भक्ति नृत्य-नाट्य है जो हर वर्ष नरसिंह जयंती पर होता है।"
+    },
+    {
+      "n": "Daskathia",
+      "h": "दसकठिया",
+      "s": "Odisha",
+      "st": "Ganjam, Odisha",
+      "sh": "गंजाम, ओडिशा",
+      "c": "theatre",
+      "rg": "E",
+      "d": 3,
+      "lat": 19.4,
+      "lng": 84.8,
+      "kd": "Ballad performance",
+      "kdh": "गाथा गायन",
+      "tag": "Two singers with wooden clappers (kathia)",
+      "tagh": "लकड़ी के करताल (कठिया) वाले दो गायक",
+      "fact": "Daskathia of Odisha is a ballad performance by two singers who keep time with wooden clappers called kathia.",
+      "facth": "ओडिशा का दसकठिया दो गायकों का गाथा गायन है, जो कठिया नामक लकड़ी के करताल से ताल रखते हैं।"
+    },
+    {
+      "n": "Phulkari",
+      "h": "फुलकारी",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "textile",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.9,
+      "lng": 75.85,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "Floss-silk flowers on shawls and dupattas",
+      "tagh": "शॉल और दुपट्टों पर रेशमी फूल",
+      "fact": "Phulkari, 'flower work', is the embroidery of Punjab in bright floss silk on shawls and dupattas; a fully covered piece is called a bagh.",
+      "facth": "फुलकारी, यानी 'फूलों का काम', पंजाब की चटक रेशमी धागे वाली शॉल और दुपट्टों की कढ़ाई है; पूरी तरह भरे टुकड़े को बाग कहते हैं।"
+    },
+    {
+      "n": "Chikankari",
+      "h": "चिकनकारी",
+      "s": "Uttar Pradesh",
+      "st": "Lucknow, Uttar Pradesh",
+      "sh": "लखनऊ, उत्तर प्रदेश",
+      "c": "textile",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.85,
+      "lng": 80.95,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "White-on-white embroidery of Lucknow",
+      "tagh": "लखनऊ की सफ़ेद पर सफ़ेद कढ़ाई",
+      "fact": "Chikankari of Lucknow is delicate white thread embroidery on fine muslin, linked by tradition to the Mughal empress Nur Jahan; it has a GI tag.",
+      "facth": "लखनऊ की चिकनकारी महीन मलमल पर सफ़ेद धागे की नाज़ुक कढ़ाई है, जिसे परंपरा मुग़ल बेगम नूरजहाँ से जोड़ती है; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Kantha",
+      "h": "कांथा",
+      "s": "West Bengal",
+      "st": "West Bengal (Bolpur and Murshidabad)",
+      "sh": "पश्चिम बंगाल (बोलपुर और मुर्शिदाबाद)",
+      "c": "textile",
+      "rg": "E",
+      "d": 2,
+      "lat": 24.1,
+      "lng": 88.25,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "Running-stitch quilts from old saris",
+      "tagh": "पुरानी साड़ियों से रनिंग स्टिच वाली रज़ाइयाँ",
+      "fact": "Kantha of Bengal is running-stitch embroidery, first used to layer old saris into quilts; Nakshi Kantha carries pictures and motifs.",
+      "facth": "बंगाल का कांथा रनिंग स्टिच कढ़ाई है, जो पहले पुरानी साड़ियों की परतें जोड़कर रज़ाई बनाने में होती थी; नक्शी कांथा में चित्र और आकृतियाँ होती हैं।"
+    },
+    {
+      "n": "Kasuti",
+      "h": "कसूती",
+      "s": "Karnataka",
+      "st": "Dharwad and Belagavi, Karnataka",
+      "sh": "धारवाड़ और बेलगावी, कर्नाटक",
+      "c": "textile",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.85,
+      "lng": 74.5,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "Counted-thread temple motifs on Ilkal saris",
+      "tagh": "इलकल साड़ियों पर गिनती वाले धागे के मंदिर रूपांकन",
+      "fact": "Kasuti of Karnataka is counted-thread embroidery with temple, chariot and lamp motifs, done on Ilkal saris; it has a GI tag.",
+      "facth": "कर्नाटक की कसूती गिनती वाले धागे की कढ़ाई है जिसमें मंदिर, रथ और दीपक के रूपांकन इलकल साड़ियों पर बनते हैं; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Kashida",
+      "h": "कशीदा",
+      "s": "Jammu and Kashmir",
+      "st": "Kashmir valley",
+      "sh": "कश्मीर घाटी",
+      "c": "textile",
+      "rg": "N",
+      "d": 2,
+      "lat": 34.1,
+      "lng": 74.85,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "Kashmiri embroidery on shawls",
+      "tagh": "शॉलों पर कश्मीरी कढ़ाई",
+      "fact": "Kashida is the embroidery of Kashmir on shawls and phirans, with chinar leaves, birds and flowers; its forms include sozni and aari work.",
+      "facth": "कशीदा कश्मीर की शॉलों और फिरनों पर कढ़ाई है जिसमें चिनार के पत्ते, पक्षी और फूल होते हैं; इसके रूपों में सोज़नी और आरी का काम है।"
+    },
+    {
+      "n": "Toda embroidery",
+      "h": "टोडा कढ़ाई",
+      "s": "Tamil Nadu",
+      "st": "Nilgiris, Tamil Nadu",
+      "sh": "नीलगिरि, तमिलनाडु",
+      "c": "textile",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.4,
+      "lng": 76.7,
+      "kd": "Tribal embroidery",
+      "kdh": "जनजातीय कढ़ाई",
+      "tag": "Red and black on white, by Toda women",
+      "tagh": "सफ़ेद पर लाल-काला, टोडा महिलाओं द्वारा",
+      "fact": "Toda embroidery (pukhoor) of the Toda tribe of the Nilgiris uses red and black thread on white cloth; it has a GI tag.",
+      "facth": "नीलगिरि की टोडा जनजाति की टोडा कढ़ाई (पुखूर) सफ़ेद कपड़े पर लाल और काले धागे से होती है; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Pipli appliqué",
+      "h": "पिपली एप्लिक",
+      "s": "Odisha",
+      "st": "Pipili, Puri, Odisha",
+      "sh": "पिपिली, पुरी, ओडिशा",
+      "c": "textile",
+      "rg": "E",
+      "d": 2,
+      "lat": 20.11,
+      "lng": 85.83,
+      "kd": "Appliqué work",
+      "kdh": "एप्लिक कार्य",
+      "tag": "Coloured cloth cut-outs for Jagannath's chariots",
+      "tagh": "जगन्नाथ के रथों के लिए रंगीन कपड़े की कटाई",
+      "fact": "Pipli appliqué of Odisha stitches coloured cloth shapes onto a base, first made for the canopies of the Jagannath Rath Yatra; it has a GI tag.",
+      "facth": "ओडिशा का पिपली एप्लिक आधार कपड़े पर रंगीन कपड़े की आकृतियाँ सिलता है, जो पहले जगन्नाथ रथ यात्रा के छत्रों के लिए बनता था; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Sujani",
+      "h": "सुजनी",
+      "s": "Bihar",
+      "st": "Muzaffarpur, Bihar",
+      "sh": "मुज़फ़्फ़रपुर, बिहार",
+      "c": "textile",
+      "rg": "E",
+      "d": 3,
+      "lat": 26.12,
+      "lng": 85.39,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "Story quilts of Bihar",
+      "tagh": "बिहार की कथा रज़ाइयाँ",
+      "fact": "Sujani of Bihar is a running-stitch quilt embroidery that tells stories of women's lives; it has a GI tag.",
+      "facth": "बिहार की सुजनी रनिंग स्टिच वाली रज़ाई कढ़ाई है जो महिलाओं के जीवन की कथाएँ कहती है; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Chamba Rumal",
+      "h": "चंबा रूमाल",
+      "s": "Himachal Pradesh",
+      "st": "Chamba, Himachal Pradesh",
+      "sh": "चंबा, हिमाचल प्रदेश",
+      "c": "textile",
+      "rg": "N",
+      "d": 3,
+      "lat": 32.55,
+      "lng": 76.13,
+      "kd": "Embroidery",
+      "kdh": "कढ़ाई",
+      "tag": "Double-sided embroidery like Pahari painting",
+      "tagh": "पहाड़ी चित्रकला जैसी दोनों ओर की कढ़ाई",
+      "fact": "Chamba Rumal of Himachal Pradesh is double-sided embroidery (do-rukha) with scenes drawn in the Pahari painting style; it has a GI tag.",
+      "facth": "हिमाचल प्रदेश का चंबा रूमाल दोनों ओर से एक जैसी (दो-रुखा) कढ़ाई है, जिसके दृश्य पहाड़ी चित्र शैली में बनते हैं; इसे GI टैग मिला है।"
+    },
+    {
+      "n": "Mathura school of art",
+      "h": "मथुरा कला शैली",
+      "s": "Uttar Pradesh",
+      "st": "Mathura, Uttar Pradesh",
+      "sh": "मथुरा, उत्तर प्रदेश",
+      "c": "sculpt",
+      "rg": "N",
+      "d": 1,
+      "lat": 27.5,
+      "lng": 77.69,
+      "kd": "Sculpture school",
+      "kdh": "मूर्तिकला शैली",
+      "tag": "Indigenous style in spotted red sandstone",
+      "tagh": "चित्तीदार लाल बलुआ पत्थर में स्वदेशी शैली",
+      "fact": "The Mathura school, which flourished under the Kushans, carved Buddhist, Jain and Hindu images in spotted red sandstone in an indigenous style.",
+      "facth": "कुषाणों के समय फली-फूली मथुरा शैली ने चित्तीदार लाल बलुआ पत्थर में स्वदेशी शैली में बौद्ध, जैन और हिंदू मूर्तियाँ गढ़ीं।"
+    },
+    {
+      "n": "Amaravati school of art",
+      "h": "अमरावती कला शैली",
+      "s": "Andhra Pradesh",
+      "st": "Amaravati, Guntur, Andhra Pradesh",
+      "sh": "अमरावती, गुंटूर, आंध्र प्रदेश",
+      "c": "sculpt",
+      "rg": "S",
+      "d": 2,
+      "lat": 16.57,
+      "lng": 80.36,
+      "kd": "Sculpture school",
+      "kdh": "मूर्तिकला शैली",
+      "tag": "Narrative reliefs in white marble",
+      "tagh": "सफ़ेद संगमरमर में कथात्मक उभरी मूर्तियाँ",
+      "fact": "The Amaravati school, patronised by the Satavahanas, carved lively narrative scenes of the Buddha's life in white marble around the Amaravati stupa.",
+      "facth": "सातवाहनों द्वारा संरक्षित अमरावती शैली ने अमरावती स्तूप के आसपास सफ़ेद संगमरमर में बुद्ध के जीवन के जीवंत कथात्मक दृश्य गढ़े।"
+    },
+    {
+      "n": "Sarnath Lion Capital",
+      "h": "सारनाथ सिंह शीर्ष",
+      "s": "Uttar Pradesh",
+      "st": "Sarnath, Varanasi, Uttar Pradesh",
+      "sh": "सारनाथ, वाराणसी, उत्तर प्रदेश",
+      "c": "sculpt",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.38,
+      "lng": 83.02,
+      "kd": "Mauryan sculpture",
+      "kdh": "मौर्य मूर्तिकला",
+      "tag": "Ashoka's capital; the national emblem",
+      "tagh": "अशोक का स्तंभ शीर्ष; राष्ट्रीय प्रतीक",
+      "fact": "The Lion Capital of Ashoka at Sarnath, of polished Chunar sandstone, shows four lions back to back; it was adopted as India's national emblem on 26 January 1950.",
+      "facth": "सारनाथ में अशोक का सिंह शीर्ष, चमकाए गए चुनार बलुआ पत्थर का, पीठ से पीठ सटाए चार सिंह दिखाता है; इसे 26 जनवरी 1950 को भारत का राष्ट्रीय प्रतीक अपनाया गया।"
+    },
+    {
+      "n": "Didarganj Yakshi",
+      "h": "दीदारगंज यक्षी",
+      "s": "Bihar",
+      "st": "Patna, Bihar",
+      "sh": "पटना, बिहार",
+      "c": "sculpt",
+      "rg": "E",
+      "d": 2,
+      "lat": 25.6,
+      "lng": 85.2,
+      "kd": "Mauryan-era sculpture",
+      "kdh": "मौर्यकालीन मूर्तिकला",
+      "tag": "Polished sandstone chauri bearer",
+      "tagh": "चमकाए बलुआ पत्थर की चँवरधारिणी",
+      "fact": "The Didarganj Yakshi, a polished sandstone figure of a woman holding a chauri, was found near Patna in 1917 and is kept in the Bihar Museum.",
+      "facth": "चँवर लिए स्त्री की चमकाए बलुआ पत्थर की मूर्ति दीदारगंज यक्षी 1917 में पटना के पास मिली और बिहार संग्रहालय में रखी है।"
+    },
+    {
+      "n": "Hoysala architecture",
+      "h": "होयसल वास्तुकला",
+      "s": "Karnataka",
+      "st": "Belur and Halebidu, Karnataka",
+      "sh": "बेलूर और हलेबीडु, कर्नाटक",
+      "c": "sculpt",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.16,
+      "lng": 75.86,
+      "kd": "Temple architecture style",
+      "kdh": "मंदिर वास्तुकला शैली",
+      "tag": "Star-shaped temples in soapstone; UNESCO 2023",
+      "tagh": "सोपस्टोन में तारे जैसे मंदिर; यूनेस्को 2023",
+      "fact": "Hoysala temples of Karnataka are star-shaped (stellate) and carved in soapstone in fine detail; the Sacred Ensembles of the Hoysalas became a World Heritage Site in 2023.",
+      "facth": "कर्नाटक के होयसल मंदिर तारे के आकार (तारकीय) के हैं और सोपस्टोन में बारीकी से गढ़े गए हैं; होयसलों के पवित्र समूह 2023 में विश्व धरोहर बने।"
+    },
+    {
+      "n": "Chola bronzes",
+      "h": "चोल कांस्य मूर्तियाँ",
+      "s": "Tamil Nadu",
+      "st": "Swamimalai, Thanjavur, Tamil Nadu",
+      "sh": "स्वामीमलै, तंजावुर, तमिलनाडु",
+      "c": "sculpt",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.96,
+      "lng": 79.33,
+      "kd": "Bronze casting",
+      "kdh": "कांस्य ढलाई",
+      "tag": "Lost-wax Nataraja images",
+      "tagh": "मोम विधि से बनी नटराज मूर्तियाँ",
+      "fact": "Chola bronzes such as the dancing Nataraja were cast by the lost-wax method; Swamimalai still makes them and the Swamimalai bronze icons have a GI tag.",
+      "facth": "नृत्य करते नटराज जैसी चोल कांस्य मूर्तियाँ मोम (लुप्त मोम) विधि से ढाली गईं; स्वामीमलै आज भी इन्हें बनाता है और स्वामीमलै कांस्य मूर्तियों को GI टैग मिला है।"
+    },
+    {
+      "n": "Dhokra",
+      "h": "ढोकरा",
+      "s": "Chhattisgarh",
+      "st": "Bastar, Chhattisgarh (also West Bengal and Odisha)",
+      "sh": "बस्तर, छत्तीसगढ़ (पश्चिम बंगाल और ओडिशा में भी)",
+      "c": "sculpt",
+      "rg": "C",
+      "d": 2,
+      "lat": 19.1,
+      "lng": 81.95,
+      "kd": "Lost-wax metal craft",
+      "kdh": "लुप्त मोम धातु शिल्प",
+      "tag": "Tribal brass casting",
+      "tagh": "जनजातीय पीतल ढलाई",
+      "fact": "Dhokra is tribal metal casting by the lost-wax method, over 4,000 years old (the Mohenjo-daro dancing girl uses it); Bastar, Bankura and Odisha are centres.",
+      "facth": "ढोकरा लुप्त मोम विधि से जनजातीय धातु ढलाई है, जो 4,000 वर्ष से अधिक पुरानी है (मोहनजोदड़ो की नर्तकी इसी विधि से बनी); बस्तर, बांकुड़ा और ओडिशा इसके केंद्र हैं।"
+    },
+    {
+      "n": "Bidriware",
+      "h": "बिदरी शिल्प",
+      "s": "Karnataka",
+      "st": "Bidar, Karnataka",
+      "sh": "बीदर, कर्नाटक",
+      "c": "sculpt",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.91,
+      "lng": 77.52,
+      "kd": "Metal inlay craft",
+      "kdh": "धातु जड़ाई शिल्प",
+      "tag": "Silver inlay on blackened zinc alloy",
+      "tagh": "काले किए जस्ता मिश्रधातु पर चाँदी की जड़ाई",
+      "fact": "Bidriware of Bidar inlays silver into a blackened zinc-copper alloy, a craft that came with the Bahmani sultans; it has a GI tag.",
+      "facth": "बीदर का बिदरी शिल्प काले किए जस्ता-ताँबा मिश्रधातु में चाँदी जड़ता है, यह शिल्प बहमनी सुल्तानों के साथ आया; इसे GI टैग मिला है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "ich",
+      "icon": "🌐",
+      "t": [
+        "India on UNESCO's intangible heritage list",
+        "यूनेस्को अमूर्त धरोहर सूची में भारत"
+      ],
+      "cols": [
+        [
+          "Element",
+          "तत्व"
+        ],
+        [
+          "Year",
+          "वर्ष"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Kutiyattam (Kerala), Vedic chanting, Ramlila",
+            "कूडियाट्टम (केरल), वैदिक मंत्रोच्चार, रामलीला"
+          ],
+          [
+            "2008 (first proclaimed 2001 and 2003)",
+            "2008 (पहले 2001 और 2003 में घोषित)"
+          ]
+        ],
+        [
+          [
+            "Ramman (Uttarakhand)",
+            "राम्मन (उत्तराखंड)"
+          ],
+          [
+            "2009",
+            "2009"
+          ]
+        ],
+        [
+          [
+            "Mudiyettu (Kerala), Kalbelia (Rajasthan), Chhau",
+            "मुडियेट्टु (केरल), कालबेलिया (राजस्थान), छऊ"
+          ],
+          [
+            "2010",
+            "2010"
+          ]
+        ],
+        [
+          [
+            "Buddhist chanting of Ladakh",
+            "लद्दाख का बौद्ध मंत्रोच्चार"
+          ],
+          [
+            "2012",
+            "2012"
+          ]
+        ],
+        [
+          [
+            "Sankirtana of Manipur",
+            "मणिपुर का संकीर्तन"
+          ],
+          [
+            "2013",
+            "2013"
+          ]
+        ],
+        [
+          [
+            "Brass and copper craft of the Thatheras of Jandiala Guru (Punjab)",
+            "जंडियाला गुरु (पंजाब) के ठठेरों का पीतल-ताँबा शिल्प"
+          ],
+          [
+            "2014",
+            "2014"
+          ]
+        ],
+        [
+          [
+            "Yoga; Nawrouz (with other countries)",
+            "योग; नवरोज़ (अन्य देशों के साथ)"
+          ],
+          [
+            "2016",
+            "2016"
+          ]
+        ],
+        [
+          [
+            "Kumbh Mela",
+            "कुंभ मेला"
+          ],
+          [
+            "2017",
+            "2017"
+          ]
+        ],
+        [
+          [
+            "Durga Puja in Kolkata",
+            "कोलकाता की दुर्गा पूजा"
+          ],
+          [
+            "2021",
+            "2021"
+          ]
+        ],
+        [
+          [
+            "Garba of Gujarat",
+            "गुजरात का गरबा"
+          ],
+          [
+            "2023",
+            "2023"
+          ]
+        ],
+        [
+          [
+            "Deepavali",
+            "दीपावली"
+          ],
+          [
+            "2025 (session held at the Red Fort, Delhi)",
+            "2025 (सत्र लाल क़िले, दिल्ली में हुआ)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "lang",
+      "icon": "🗣️",
+      "t": [
+        "Classical languages of India (11)",
+        "भारत की शास्त्रीय भाषाएँ (11)"
+      ],
+      "cols": [
+        [
+          "Language",
+          "भाषा"
+        ],
+        [
+          "Declared",
+          "घोषित"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Tamil (first)",
+            "तमिल (पहली)"
+          ],
+          [
+            "2004",
+            "2004"
+          ]
+        ],
+        [
+          [
+            "Sanskrit",
+            "संस्कृत"
+          ],
+          [
+            "2005",
+            "2005"
+          ]
+        ],
+        [
+          [
+            "Kannada and Telugu",
+            "कन्नड़ और तेलुगु"
+          ],
+          [
+            "2008",
+            "2008"
+          ]
+        ],
+        [
+          [
+            "Malayalam",
+            "मलयालम"
+          ],
+          [
+            "2013",
+            "2013"
+          ]
+        ],
+        [
+          [
+            "Odia",
+            "ओड़िया"
+          ],
+          [
+            "2014",
+            "2014"
+          ]
+        ],
+        [
+          [
+            "Marathi, Pali, Prakrit, Assamese and Bengali",
+            "मराठी, पाली, प्राकृत, असमिया और बांग्ला"
+          ],
+          [
+            "3 October 2024",
+            "3 अक्टूबर 2024"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "temple",
+      "icon": "🛕",
+      "t": [
+        "Temple architecture styles",
+        "मंदिर वास्तुकला शैलियाँ"
+      ],
+      "cols": [
+        [
+          "Style",
+          "शैली"
+        ],
+        [
+          "Features and examples",
+          "विशेषताएँ और उदाहरण"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Nagara (north)",
+            "नागर (उत्तर)"
+          ],
+          [
+            "Curved shikhara over the sanctum, no boundary wall as a rule; Khajuraho (Chandelas), Odisha temples (deul), Modhera",
+            "गर्भगृह पर वक्र शिखर, सामान्यतः चारदीवारी नहीं; खजुराहो (चंदेल), ओडिशा के मंदिर (देउल), मोढेरा"
+          ]
+        ],
+        [
+          [
+            "Dravida (south)",
+            "द्रविड़ (दक्षिण)"
+          ],
+          [
+            "Pyramid-like vimana, tall gopuram gateways, walled compound; Pallavas, Cholas (Brihadeeswara), Vijayanagara, Nayakas",
+            "पिरामिड जैसा विमान, ऊँचे गोपुरम द्वार, चारदीवारी; पल्लव, चोल (बृहदेश्वर), विजयनगर, नायक"
+          ]
+        ],
+        [
+          [
+            "Vesara (Deccan)",
+            "वेसर (दक्कन)"
+          ],
+          [
+            "Mix of Nagara and Dravida; Chalukyas of Badami and Kalyani, Hoysalas",
+            "नागर और द्रविड़ का मिश्रण; बादामी और कल्याणी के चालुक्य, होयसल"
+          ]
+        ],
+        [
+          [
+            "Parts of a temple",
+            "मंदिर के भाग"
+          ],
+          [
+            "Garbhagriha (sanctum), mandapa (pillared hall), shikhara or vimana (tower), antarala (vestibule), amalaka (ribbed stone atop a Nagara tower)",
+            "गर्भगृह, मंडप (स्तंभ वाला कक्ष), शिखर या विमान (मीनार), अंतराल (ड्योढ़ी), आमलक (नागर शिखर पर धारीदार पत्थर)"
+          ]
+        ],
+        [
+          [
+            "Indo-Islamic features",
+            "इंडो-इस्लामिक विशेषताएँ"
+          ],
+          [
+            "True arch and dome, minarets, calligraphy, jaali screens; Mughal additions: charbagh gardens, double dome, pietra dura inlay",
+            "असली मेहराब और गुंबद, मीनारें, सुलेख, जाली; मुग़ल जोड़: चारबाग़, दोहरा गुंबद, पीट्रा ड्यूरा जड़ाई"
+          ]
+        ],
+        [
+          [
+            "Rajput features",
+            "राजपूत विशेषताएँ"
+          ],
+          [
+            "Jharokha (overhanging balcony), chhatri (domed pavilion)",
+            "झरोखा (बाहर निकली बालकनी), छतरी (गुंबददार मंडप)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "sculpt",
+      "icon": "🗿",
+      "t": [
+        "Schools of sculpture",
+        "मूर्तिकला की शैलियाँ"
+      ],
+      "cols": [
+        [
+          "School",
+          "शैली"
+        ],
+        [
+          "Features",
+          "विशेषताएँ"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Mauryan",
+            "मौर्य"
+          ],
+          [
+            "Mirror-polished Chunar sandstone; Ashokan pillars, Sarnath Lion Capital, Didarganj Yakshi",
+            "दर्पण जैसी चमक वाला चुनार बलुआ पत्थर; अशोक स्तंभ, सारनाथ सिंह शीर्ष, दीदारगंज यक्षी"
+          ]
+        ],
+        [
+          [
+            "Gandhara",
+            "गांधार"
+          ],
+          [
+            "Greco-Roman (Hellenistic) influence, grey-blue schist, wavy hair; Kushan period, around Taxila and Peshawar",
+            "यूनानी-रोमन (हेलेनिस्टिक) प्रभाव, धूसर-नीला शिस्ट पत्थर, लहराते बाल; कुषाण काल, तक्षशिला और पेशावर के आसपास"
+          ]
+        ],
+        [
+          [
+            "Mathura",
+            "मथुरा"
+          ],
+          [
+            "Indigenous, spotted red sandstone, Buddhist, Jain and Hindu images; Kushan period",
+            "स्वदेशी, चित्तीदार लाल बलुआ पत्थर, बौद्ध, जैन और हिंदू मूर्तियाँ; कुषाण काल"
+          ]
+        ],
+        [
+          [
+            "Amaravati",
+            "अमरावती"
+          ],
+          [
+            "White marble, narrative reliefs; Satavahanas",
+            "सफ़ेद संगमरमर, कथात्मक उभरी मूर्तियाँ; सातवाहन"
+          ]
+        ],
+        [
+          [
+            "Chola bronzes",
+            "चोल कांस्य"
+          ],
+          [
+            "Lost-wax casting; Nataraja",
+            "लुप्त मोम ढलाई; नटराज"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "paint",
+      "icon": "🖌️",
+      "t": [
+        "Painting schools and painters",
+        "चित्र शैलियाँ और चित्रकार"
+      ],
+      "cols": [
+        [
+          "School or painter",
+          "शैली या चित्रकार"
+        ],
+        [
+          "Know this",
+          "यह जानें"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Mughal painting",
+            "मुग़ल चित्रकला"
+          ],
+          [
+            "Began under Humayun with Mir Sayyid Ali and Abd al-Samad; Akbar's Hamzanama; peak under Jahangir (Ustad Mansur, painter of birds)",
+            "हुमायूँ के समय मीर सैयद अली और अब्दुस समद से आरंभ; अकबर का हम्ज़ानामा; जहाँगीर के समय चरम (पक्षी चित्रकार उस्ताद मंसूर)"
+          ]
+        ],
+        [
+          [
+            "Rajput schools",
+            "राजपूत शैलियाँ"
+          ],
+          [
+            "Mewar, Bundi, Kota, Kishangarh (Bani Thani by Nihal Chand), Marwar",
+            "मेवाड़, बूँदी, कोटा, किशनगढ़ (निहालचंद की बणी-ठणी), मारवाड़"
+          ]
+        ],
+        [
+          [
+            "Pahari schools",
+            "पहाड़ी शैलियाँ"
+          ],
+          [
+            "Basohli (earliest), Guler, Kangra",
+            "बसोहली (सबसे पुरानी), गुलेर, कांगड़ा"
+          ]
+        ],
+        [
+          [
+            "Raja Ravi Varma",
+            "राजा रवि वर्मा"
+          ],
+          [
+            "Oil paintings of Hindu epics in a European academic style (Travancore)",
+            "यूरोपीय शैली में हिंदू महाकाव्यों के तैल चित्र (त्रावणकोर)"
+          ]
+        ],
+        [
+          [
+            "Abanindranath Tagore",
+            "अबनींद्रनाथ टैगोर"
+          ],
+          [
+            "Founder of the Bengal School; painted Bharat Mata",
+            "बंगाल स्कूल के संस्थापक; भारत माता का चित्र बनाया"
+          ]
+        ],
+        [
+          [
+            "Nandalal Bose",
+            "नंदलाल बोस"
+          ],
+          [
+            "Illustrated the original Constitution of India",
+            "भारत के मूल संविधान का चित्रांकन किया"
+          ]
+        ],
+        [
+          [
+            "Amrita Sher-Gil, Jamini Roy, M. F. Husain",
+            "अमृता शेरगिल, जामिनी रॉय, एम. एफ़. हुसैन"
+          ],
+          [
+            "Modern Indian painters: Sher-Gil blended Western and Indian styles; Roy drew on Kalighat and folk art",
+            "आधुनिक भारतीय चित्रकार: शेरगिल ने पश्चिमी और भारतीय शैली मिलाई; रॉय ने कालीघाट और लोक कला से प्रेरणा ली"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "confuse",
+      "icon": "⚖️",
+      "t": [
+        "Easily confused",
+        "आसानी से भ्रमित"
+      ],
+      "cols": [
+        [
+          "Pair",
+          "जोड़ी"
+        ],
+        [
+          "Tell them apart",
+          "अंतर"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Shadow puppets by state",
+            "राज्यवार छाया कठपुतली"
+          ],
+          [
+            "Tholu Bommalata (Andhra Pradesh), Togalu Gombeyata (Karnataka), Ravanachhaya (Odisha), Tolpavakoothu (Kerala)",
+            "तोलु बोम्मलाटा (आंध्र प्रदेश), तोगलु गोम्बेयाटा (कर्नाटक), रावणछाया (ओडिशा), तोलपावकूत्तु (केरल)"
+          ]
+        ],
+        [
+          [
+            "Pattachitra and Kalamkari",
+            "पट्टचित्र और कलमकारी"
+          ],
+          [
+            "Pattachitra is painted cloth of Odisha (Jagannath); Kalamkari is pen-drawn or block-printed textile of Andhra Pradesh",
+            "पट्टचित्र ओडिशा का चित्रित कपड़ा (जगन्नाथ); कलमकारी आंध्र प्रदेश का कलम से बना या छपा वस्त्र"
+          ]
+        ],
+        [
+          [
+            "Kantha and Kasuti",
+            "कांथा और कसूती"
+          ],
+          [
+            "Kantha is running-stitch quilting of Bengal; Kasuti is counted-thread embroidery of Karnataka",
+            "कांथा बंगाल की रनिंग स्टिच रज़ाई; कसूती कर्नाटक की गिनती धागा कढ़ाई"
+          ]
+        ],
+        [
+          [
+            "Warli and Saura",
+            "वारली और सौरा"
+          ],
+          [
+            "Both are tribal stick-figure wall art: Warli in Maharashtra, Saura in Odisha",
+            "दोनों जनजातीय रेखाकृति भित्ति कला: वारली महाराष्ट्र में, सौरा ओडिशा में"
+          ]
+        ],
+        [
+          [
+            "Gandhara and Mathura",
+            "गांधार और मथुरा"
+          ],
+          [
+            "Gandhara: Greek influence, grey schist. Mathura: indigenous, red sandstone",
+            "गांधार: यूनानी प्रभाव, धूसर शिस्ट। मथुरा: स्वदेशी, लाल बलुआ पत्थर"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "paint",
+      "q": [
+        "Warli painting belongs to which state?",
+        "वारली चित्रकला किस राज्य की है?"
+      ],
+      "o": [
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ]
+      ],
+      "e": [
+        "Warli painting is made by the Warli tribe of Palghar and Thane, Maharashtra.",
+        "वारली चित्रकला पालघर और ठाणे, महाराष्ट्र की वारली जनजाति बनाती है।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Madhubani painting is also known as",
+        "मधुबनी चित्रकला को और किस नाम से जाना जाता है?"
+      ],
+      "o": [
+        [
+          "Mithila painting",
+          "मिथिला चित्रकला"
+        ],
+        [
+          "Manjusha painting",
+          "मंजूषा चित्रकला"
+        ],
+        [
+          "Patua painting",
+          "पटुआ चित्रकला"
+        ],
+        [
+          "Phad painting",
+          "फड़ चित्रकला"
+        ]
+      ],
+      "e": [
+        "Madhubani painting comes from the Mithila region of Bihar.",
+        "मधुबनी चित्रकला बिहार के मिथिला क्षेत्र की है।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Phad paintings are scrolls about which folk deities?",
+        "फड़ चित्र किन लोक देवताओं के पट हैं?"
+      ],
+      "o": [
+        [
+          "Pabuji and Devnarayan",
+          "पाबूजी और देवनारायण"
+        ],
+        [
+          "Jagannath and Balabhadra",
+          "जगन्नाथ और बलभद्र"
+        ],
+        [
+          "Bihula and Vishahari",
+          "बिहुला और विषहरी"
+        ],
+        [
+          "Murugan and Ayyappa",
+          "मुरुगन और अय्यप्पा"
+        ]
+      ],
+      "e": [
+        "Phad scrolls of Rajasthan are sung by Bhopa priests about Pabuji or Devnarayan.",
+        "राजस्थान के फड़ पट भोपा पुजारी पाबूजी या देवनारायण पर गाते हैं।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Bani Thani belongs to which school of painting?",
+        "बणी-ठणी किस चित्र शैली से है?"
+      ],
+      "o": [
+        [
+          "Kishangarh",
+          "किशनगढ़"
+        ],
+        [
+          "Kangra",
+          "कांगड़ा"
+        ],
+        [
+          "Basohli",
+          "बसोहली"
+        ],
+        [
+          "Mughal",
+          "मुग़ल"
+        ]
+      ],
+      "e": [
+        "Nihal Chand's Bani Thani of Kishangarh is called India's Mona Lisa.",
+        "किशनगढ़ की निहालचंद द्वारा बनी बणी-ठणी को भारत की मोनालिसा कहा जाता है।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Which painting style uses gold foil and glass stones on wooden panels?",
+        "किस चित्र शैली में लकड़ी के पटल पर सोने का पत्र और काँच के रत्न लगते हैं?"
+      ],
+      "o": [
+        [
+          "Tanjore painting",
+          "तंजौर चित्रकला"
+        ],
+        [
+          "Kalighat painting",
+          "कालीघाट चित्रकला"
+        ],
+        [
+          "Warli painting",
+          "वारली चित्रकला"
+        ],
+        [
+          "Gond painting",
+          "गोंड चित्रकला"
+        ]
+      ],
+      "e": [
+        "Tanjore paintings of Tamil Nadu are known for gold foil and stones.",
+        "तमिलनाडु की तंजौर चित्रकला सोने के पत्र और रत्नों के लिए जानी जाती है।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Which painter founded the Bengal School of Art?",
+        "बंगाल कला शैली के संस्थापक कौन थे?"
+      ],
+      "o": [
+        [
+          "Abanindranath Tagore",
+          "अबनींद्रनाथ टैगोर"
+        ],
+        [
+          "Raja Ravi Varma",
+          "राजा रवि वर्मा"
+        ],
+        [
+          "Jamini Roy",
+          "जामिनी रॉय"
+        ],
+        [
+          "M. F. Husain",
+          "एम. एफ़. हुसैन"
+        ]
+      ],
+      "e": [
+        "Abanindranath Tagore founded the Bengal School; his Bharat Mata is famous.",
+        "अबनींद्रनाथ टैगोर ने बंगाल स्कूल की स्थापना की; उनकी भारत माता प्रसिद्ध है।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Who illustrated the original manuscript of the Constitution of India?",
+        "भारत के मूल संविधान की पांडुलिपि का चित्रांकन किसने किया?"
+      ],
+      "o": [
+        [
+          "Nandalal Bose",
+          "नंदलाल बोस"
+        ],
+        [
+          "Abanindranath Tagore",
+          "अबनींद्रनाथ टैगोर"
+        ],
+        [
+          "Amrita Sher-Gil",
+          "अमृता शेरगिल"
+        ],
+        [
+          "Raja Ravi Varma",
+          "राजा रवि वर्मा"
+        ]
+      ],
+      "e": [
+        "Nandalal Bose and his students at Santiniketan illustrated the Constitution.",
+        "नंदलाल बोस और शांतिनिकेतन के उनके छात्रों ने संविधान का चित्रांकन किया।"
+      ]
+    },
+    {
+      "t": "paint",
+      "q": [
+        "Ustad Mansur, famous for painting birds and animals, worked in the court of",
+        "पक्षियों और पशुओं के चित्रों के लिए प्रसिद्ध उस्ताद मंसूर किसके दरबार में थे?"
+      ],
+      "o": [
+        [
+          "Jahangir",
+          "जहाँगीर"
+        ],
+        [
+          "Akbar",
+          "अकबर"
+        ],
+        [
+          "Shah Jahan",
+          "शाहजहाँ"
+        ],
+        [
+          "Aurangzeb",
+          "औरंगज़ेब"
+        ]
+      ],
+      "e": [
+        "Mughal painting peaked under Jahangir; Ustad Mansur painted birds and animals.",
+        "मुग़ल चित्रकला जहाँगीर के समय चरम पर थी; उस्ताद मंसूर ने पक्षी और पशु बनाए।"
+      ]
+    },
+    {
+      "t": "puppet",
+      "q": [
+        "Kathputli is the string puppetry of",
+        "कठपुतली किस राज्य की धागा कठपुतली है?"
+      ],
+      "o": [
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Bihar",
+          "बिहार"
+        ]
+      ],
+      "e": [
+        "Kathputli is performed by the Bhat community of Rajasthan.",
+        "कठपुतली राजस्थान का भाट समुदाय प्रस्तुत करता है।"
+      ]
+    },
+    {
+      "t": "puppet",
+      "q": [
+        "Tholu Bommalata is a form of",
+        "तोलु बोम्मलाटा किसका रूप है?"
+      ],
+      "o": [
+        [
+          "Shadow puppetry of Andhra Pradesh",
+          "आंध्र प्रदेश की छाया कठपुतली"
+        ],
+        [
+          "String puppetry of Odisha",
+          "ओडिशा की धागा कठपुतली"
+        ],
+        [
+          "Glove puppetry of Kerala",
+          "केरल की दस्ताना कठपुतली"
+        ],
+        [
+          "Rod puppetry of Bengal",
+          "बंगाल की छड़ कठपुतली"
+        ]
+      ],
+      "e": [
+        "Tholu Bommalata means the dance of leather puppets.",
+        "तोलु बोम्मलाटा का अर्थ चमड़े की कठपुतलियों का नृत्य है।"
+      ]
+    },
+    {
+      "t": "puppet",
+      "q": [
+        "Putul Nach of West Bengal is which kind of puppetry?",
+        "पश्चिम बंगाल का पुतुल नाच किस प्रकार की कठपुतली है?"
+      ],
+      "o": [
+        [
+          "Rod puppetry",
+          "छड़ कठपुतली"
+        ],
+        [
+          "String puppetry",
+          "धागा कठपुतली"
+        ],
+        [
+          "Shadow puppetry",
+          "छाया कठपुतली"
+        ],
+        [
+          "Glove puppetry",
+          "दस्ताना कठपुतली"
+        ]
+      ],
+      "e": [
+        "Putul Nach uses large puppets on rods.",
+        "पुतुल नाच में छड़ों पर बड़ी कठपुतलियाँ होती हैं।"
+      ]
+    },
+    {
+      "t": "theatre",
+      "q": [
+        "Yakshagana is a dance-drama of",
+        "यक्षगान किस राज्य का नृत्य-नाट्य है?"
+      ],
+      "o": [
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Goa",
+          "गोवा"
+        ]
+      ],
+      "e": [
+        "Yakshagana belongs to coastal Karnataka.",
+        "यक्षगान तटीय कर्नाटक का है।"
+      ]
+    },
+    {
+      "t": "theatre",
+      "q": [
+        "Tamasha is a folk theatre form mainly found in",
+        "तमाशा लोक नाट्य मुख्य रूप से कहाँ मिलता है?"
+      ],
+      "o": [
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ]
+      ],
+      "e": [
+        "Tamasha of Maharashtra centres on the Lavani.",
+        "महाराष्ट्र का तमाशा लावणी पर केंद्रित है।"
+      ]
+    },
+    {
+      "t": "theatre",
+      "q": [
+        "Ankia Naat plays were written by",
+        "अंकिया नाट किसने लिखे?"
+      ],
+      "o": [
+        [
+          "Srimanta Sankardev",
+          "श्रीमंत शंकरदेव"
+        ],
+        [
+          "Chaitanya Mahaprabhu",
+          "चैतन्य महाप्रभु"
+        ],
+        [
+          "Jayadeva",
+          "जयदेव"
+        ],
+        [
+          "Kunchan Nambiar",
+          "कुंचन नांबियार"
+        ]
+      ],
+      "e": [
+        "Sankardev wrote these one-act plays in Brajavali; their staging is Bhaona.",
+        "शंकरदेव ने ये एकांकी नाटक ब्रजावली में लिखे; इनका मंचन भावना कहलाता है।"
+      ]
+    },
+    {
+      "t": "theatre",
+      "q": [
+        "Jatra folk theatre is mainly associated with",
+        "जात्रा लोक नाट्य मुख्य रूप से किससे जुड़ा है?"
+      ],
+      "o": [
+        [
+          "West Bengal and Odisha",
+          "पश्चिम बंगाल और ओडिशा"
+        ],
+        [
+          "Punjab and Haryana",
+          "पंजाब और हरियाणा"
+        ],
+        [
+          "Kerala and Tamil Nadu",
+          "केरल और तमिलनाडु"
+        ],
+        [
+          "Gujarat and Rajasthan",
+          "गुजरात और राजस्थान"
+        ]
+      ],
+      "e": [
+        "Jatra grew from the Bhakti movement of Chaitanya in Bengal.",
+        "जात्रा बंगाल में चैतन्य के भक्ति आंदोलन से विकसित हुई।"
+      ]
+    },
+    {
+      "t": "theatre",
+      "q": [
+        "Which Kerala form is about 2,000 years old Sanskrit theatre?",
+        "केरल का कौन-सा रूप लगभग 2,000 वर्ष पुराना संस्कृत रंगमंच है?"
+      ],
+      "o": [
+        [
+          "Kutiyattam",
+          "कूडियाट्टम"
+        ],
+        [
+          "Theyyam",
+          "तेय्यम"
+        ],
+        [
+          "Ottamthullal",
+          "ओट्टमतुल्लल"
+        ],
+        [
+          "Mohiniyattam",
+          "मोहिनीअट्टम"
+        ]
+      ],
+      "e": [
+        "Kutiyattam is staged in temple theatres and is on the UNESCO list.",
+        "कूडियाट्टम मंदिर रंगमंचों में होता है और यूनेस्को सूची में है।"
+      ]
+    },
+    {
+      "t": "theatre",
+      "q": [
+        "Nautanki is the folk theatre of",
+        "नौटंकी किस राज्य का लोक नाट्य है?"
+      ],
+      "o": [
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Assam",
+          "असम"
+        ]
+      ],
+      "e": [
+        "Nautanki is sung to the nagara drum; Kanpur and Hathras are its schools.",
+        "नौटंकी नगाड़े के साथ गाई जाती है; कानपुर और हाथरस इसकी शैलियाँ हैं।"
+      ]
+    },
+    {
+      "t": "textile",
+      "q": [
+        "Phulkari embroidery belongs to",
+        "फुलकारी कढ़ाई किस राज्य की है?"
+      ],
+      "o": [
+        [
+          "Punjab",
+          "पंजाब"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Himachal Pradesh",
+          "हिमाचल प्रदेश"
+        ]
+      ],
+      "e": [
+        "Phulkari means 'flower work'; a fully covered piece is a bagh.",
+        "फुलकारी का अर्थ 'फूलों का काम' है; पूरी तरह भरा टुकड़ा बाग कहलाता है।"
+      ]
+    },
+    {
+      "t": "textile",
+      "q": [
+        "Chikankari embroidery is associated with",
+        "चिकनकारी कढ़ाई किस शहर से जुड़ी है?"
+      ],
+      "o": [
+        [
+          "Lucknow",
+          "लखनऊ"
+        ],
+        [
+          "Varanasi",
+          "वाराणसी"
+        ],
+        [
+          "Jaipur",
+          "जयपुर"
+        ],
+        [
+          "Hyderabad",
+          "हैदराबाद"
+        ]
+      ],
+      "e": [
+        "Chikankari is white thread work on muslin from Lucknow.",
+        "चिकनकारी लखनऊ की मलमल पर सफ़ेद धागे की कढ़ाई है।"
+      ]
+    },
+    {
+      "t": "textile",
+      "q": [
+        "Kasuti embroidery belongs to",
+        "कसूती कढ़ाई किस राज्य की है?"
+      ],
+      "o": [
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ],
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ]
+      ],
+      "e": [
+        "Kasuti is counted-thread embroidery on Ilkal saris of Karnataka.",
+        "कसूती कर्नाटक की इलकल साड़ियों पर गिनती धागा कढ़ाई है।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "Which school of art shows strong Greek (Hellenistic) influence?",
+        "किस कला शैली पर यूनानी (हेलेनिस्टिक) प्रभाव अधिक है?"
+      ],
+      "o": [
+        [
+          "Gandhara",
+          "गांधार"
+        ],
+        [
+          "Mathura",
+          "मथुरा"
+        ],
+        [
+          "Amaravati",
+          "अमरावती"
+        ],
+        [
+          "Pala",
+          "पाल"
+        ]
+      ],
+      "e": [
+        "Gandhara sculpture of the Kushan period shows Greco-Roman influence in grey schist.",
+        "कुषाण काल की गांधार मूर्तिकला धूसर शिस्ट में यूनानी-रोमन प्रभाव दिखाती है।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "Which material is typical of the Mathura school of sculpture?",
+        "मथुरा मूर्तिकला शैली की विशिष्ट सामग्री कौन-सी है?"
+      ],
+      "o": [
+        [
+          "Spotted red sandstone",
+          "चित्तीदार लाल बलुआ पत्थर"
+        ],
+        [
+          "White marble",
+          "सफ़ेद संगमरमर"
+        ],
+        [
+          "Grey schist",
+          "धूसर शिस्ट"
+        ],
+        [
+          "Bronze",
+          "कांस्य"
+        ]
+      ],
+      "e": [
+        "Mathura artists carved spotted red sandstone in an indigenous style.",
+        "मथुरा के कलाकारों ने स्वदेशी शैली में चित्तीदार लाल बलुआ पत्थर तराशा।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "The Amaravati school of art flourished under the",
+        "अमरावती कला शैली किनके समय फली-फूली?"
+      ],
+      "o": [
+        [
+          "Satavahanas",
+          "सातवाहन"
+        ],
+        [
+          "Kushans",
+          "कुषाण"
+        ],
+        [
+          "Guptas",
+          "गुप्त"
+        ],
+        [
+          "Mauryas",
+          "मौर्य"
+        ]
+      ],
+      "e": [
+        "The Satavahanas patronised the white-marble reliefs of Amaravati.",
+        "सातवाहनों ने अमरावती की सफ़ेद संगमरमर की उभरी मूर्तियों को संरक्षण दिया।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "The national emblem of India is adapted from",
+        "भारत का राष्ट्रीय प्रतीक किससे लिया गया है?"
+      ],
+      "o": [
+        [
+          "The Lion Capital of Ashoka at Sarnath",
+          "सारनाथ में अशोक का सिंह शीर्ष"
+        ],
+        [
+          "The Sanchi stupa gateway",
+          "साँची स्तूप का तोरण"
+        ],
+        [
+          "The Rampurva bull capital",
+          "रामपुरवा का वृषभ शीर्ष"
+        ],
+        [
+          "The Didarganj Yakshi",
+          "दीदारगंज यक्षी"
+        ]
+      ],
+      "e": [
+        "It was adopted on 26 January 1950; the motto Satyameva Jayate comes from the Mundaka Upanishad.",
+        "इसे 26 जनवरी 1950 को अपनाया गया; आदर्श वाक्य सत्यमेव जयते मुंडक उपनिषद से है।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "Which temple style is a mix of Nagara and Dravida?",
+        "कौन-सी मंदिर शैली नागर और द्रविड़ का मिश्रण है?"
+      ],
+      "o": [
+        [
+          "Vesara",
+          "वेसर"
+        ],
+        [
+          "Kalinga",
+          "कलिंग"
+        ],
+        [
+          "Hemadpanthi",
+          "हेमाडपंथी"
+        ],
+        [
+          "Maru-Gurjara",
+          "मारू-गुर्जर"
+        ]
+      ],
+      "e": [
+        "Vesara grew in the Deccan under the Chalukyas and Hoysalas.",
+        "वेसर दक्कन में चालुक्यों और होयसलों के समय विकसित हुई।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "What is a 'mandapa' in a Hindu temple?",
+        "हिंदू मंदिर में ‘मंडप’ क्या है?"
+      ],
+      "o": [
+        [
+          "A pillared hall for worshippers",
+          "उपासकों के लिए स्तंभों वाला कक्ष"
+        ],
+        [
+          "The sanctum",
+          "गर्भगृह"
+        ],
+        [
+          "The gateway tower",
+          "द्वार की मीनार"
+        ],
+        [
+          "The water tank",
+          "जलकुंड"
+        ]
+      ],
+      "e": [
+        "The garbhagriha is the sanctum; the mandapa is the hall in front of it.",
+        "गर्भगृह मुख्य कक्ष है; मंडप उसके सामने का कक्ष है।"
+      ]
+    },
+    {
+      "t": "sculpt",
+      "q": [
+        "A 'jharokha' in Rajput architecture is a",
+        "राजपूत वास्तुकला में ‘झरोखा’ क्या है?"
+      ],
+      "o": [
+        [
+          "Overhanging balcony",
+          "बाहर निकली बालकनी"
+        ],
+        [
+          "Domed pavilion",
+          "गुंबददार मंडप"
+        ],
+        [
+          "Stepwell",
+          "बावड़ी"
+        ],
+        [
+          "Gateway",
+          "प्रवेश द्वार"
+        ]
+      ],
+      "e": [
+        "A domed pavilion is a chhatri; a stepwell is a baoli.",
+        "गुंबददार मंडप छतरी है; सीढ़ीदार कुआँ बावड़ी है।"
+      ]
+    },
+    {
+      "t": "heritage",
+      "q": [
+        "Which was the first language declared classical in India?",
+        "भारत में शास्त्रीय घोषित पहली भाषा कौन-सी थी?"
+      ],
+      "o": [
+        [
+          "Tamil (2004)",
+          "तमिल (2004)"
+        ],
+        [
+          "Sanskrit (2005)",
+          "संस्कृत (2005)"
+        ],
+        [
+          "Kannada (2008)",
+          "कन्नड़ (2008)"
+        ],
+        [
+          "Odia (2014)",
+          "ओड़िया (2014)"
+        ]
+      ],
+      "e": [
+        "Tamil was declared classical in 2004; India now has 11 classical languages.",
+        "तमिल 2004 में शास्त्रीय घोषित हुई; भारत में अब 11 शास्त्रीय भाषाएँ हैं।"
+      ]
+    },
+    {
+      "t": "heritage",
+      "q": [
+        "Which five languages were declared classical on 3 October 2024?",
+        "3 अक्टूबर 2024 को कौन-सी पाँच भाषाएँ शास्त्रीय घोषित हुईं?"
+      ],
+      "o": [
+        [
+          "Marathi, Pali, Prakrit, Assamese and Bengali",
+          "मराठी, पाली, प्राकृत, असमिया और बांग्ला"
+        ],
+        [
+          "Hindi, Urdu, Punjabi, Gujarati and Konkani",
+          "हिंदी, उर्दू, पंजाबी, गुजराती और कोंकणी"
+        ],
+        [
+          "Malayalam, Odia, Telugu, Kannada and Tamil",
+          "मलयालम, ओड़िया, तेलुगु, कन्नड़ और तमिल"
+        ],
+        [
+          "Maithili, Bodo, Santali, Dogri and Kashmiri",
+          "मैथिली, बोडो, संथाली, डोगरी और कश्मीरी"
+        ]
+      ],
+      "e": [
+        "This raised the number of classical languages from six to eleven.",
+        "इससे शास्त्रीय भाषाओं की संख्या छह से ग्यारह हो गई।"
+      ]
+    },
+    {
+      "t": "heritage",
+      "q": [
+        "Garba of Gujarat was added to the UNESCO intangible heritage list in",
+        "गुजरात का गरबा यूनेस्को अमूर्त धरोहर सूची में कब जुड़ा?"
+      ],
+      "o": [
+        [
+          "2023",
+          "2023"
+        ],
+        [
+          "2021",
+          "2021"
+        ],
+        [
+          "2017",
+          "2017"
+        ],
+        [
+          "2010",
+          "2010"
+        ]
+      ],
+      "e": [
+        "Garba was inscribed in December 2023; Durga Puja in Kolkata in 2021.",
+        "गरबा दिसंबर 2023 में सूचीबद्ध हुआ; कोलकाता की दुर्गा पूजा 2021 में।"
+      ]
+    },
+    {
+      "t": "heritage",
+      "q": [
+        "Which of these from Uttarakhand is on the UNESCO intangible heritage list?",
+        "उत्तराखंड का इनमें से कौन-सा यूनेस्को अमूर्त धरोहर सूची में है?"
+      ],
+      "o": [
+        [
+          "Ramman",
+          "राम्मन"
+        ],
+        [
+          "Jagar",
+          "जागर"
+        ],
+        [
+          "Aipan",
+          "ऐपण"
+        ],
+        [
+          "Chholiya",
+          "छोलिया"
+        ]
+      ],
+      "e": [
+        "Ramman of Chamoli district was listed in 2009.",
+        "चमोली ज़िले का राम्मन 2009 में सूचीबद्ध हुआ।"
+      ]
+    },
+    {
+      "t": "heritage",
+      "q": [
+        "Mudiyettu, on the UNESCO list, enacts the battle between",
+        "यूनेस्को सूची का मुडियेट्टु किनके युद्ध का मंचन है?"
+      ],
+      "o": [
+        [
+          "Kali and Darika",
+          "काली और दारिका"
+        ],
+        [
+          "Rama and Ravana",
+          "राम और रावण"
+        ],
+        [
+          "Durga and Mahishasura",
+          "दुर्गा और महिषासुर"
+        ],
+        [
+          "Krishna and Kamsa",
+          "कृष्ण और कंस"
+        ]
+      ],
+      "e": [
+        "Mudiyettu is a ritual dance-drama of Kerala, listed in 2010.",
+        "मुडियेट्टु केरल का अनुष्ठानिक नृत्य-नाट्य है, 2010 में सूचीबद्ध।"
+      ]
+    }
+  ]
+}
