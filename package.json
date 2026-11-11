@@ -1,6 +1,7 @@
 {
-  "name": "kosha-gk",
+  "name": "rizvedha",
   "version": "1.0.0",
+  "description": "RizVedha — High-Yield Visual Static GK Learning & Practice Platform for Competitive Exams (SSC, RRB, State PSC)",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
