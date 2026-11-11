@@ -4347,3 +4347,624 @@ kbd { font-size: 10px; font-weight: 700; white-space: nowrap; border: 1px solid 
   color: #d97706;
   margin-bottom: 20px;
 }
+
+
+/* ============================================================
+   QUICK ATLAS CARDS (HOME SECTION)
+   ============================================================ */
+.quick-atlas-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.quick-atlas-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quick-atlas-card:hover {
+  transform: translateY(-2px);
+  border-color: #0284c7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.qa-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.quick-atlas-card h4 {
+  margin: 0 0 2px;
+  font-size: 14px;
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+.quick-atlas-card small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.qa-arr {
+  margin-left: auto;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.quick-atlas-card:hover .qa-arr {
+  transform: translateX(3px);
+  color: #0284c7;
+}
+
+/* ============================================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS (<= 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Prevent any horizontal wobble */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .app {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .content {
+    padding: 14px 14px 90px !important;
+  }
+
+  /* 1. Mobile Topbar */
+  .topbar {
+    height: 56px !important;
+    padding: 0 14px !important;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .crumb span,
+  .crumb svg {
+    display: none !important;
+  }
+
+  .crumb b {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    color: var(--text);
+  }
+
+  /* Hide the desktop topbar search input on mobile */
+  .search-wrap {
+    display: none !important;
+  }
+
+  .header-right {
+    gap: 8px !important;
+  }
+
+  .header-right .lang-pill {
+    padding: 4px 9px !important;
+    font-size: 11px !important;
+  }
+
+  .header-right button[title*="Fullscreen"] {
+    display: none !important;
+  }
+
+  .header-avatar {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+  }
+
+  /* 2. Premium Mobile Bottom Navigation Bar */
+  .mobile-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 60px !important;
+    background: var(--card) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 1px solid var(--border) !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08) !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 0 4px calc(env(safe-area-inset-bottom, 0px)) !important;
+    z-index: 9999 !important;
+  }
+
+  .mobile-nav button {
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--muted) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    padding: 4px 8px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    flex: 1;
+    max-width: 62px;
+  }
+
+  .mobile-nav button svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .mobile-nav button span {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+
+  .mobile-nav button.active {
+    color: #0284c7 !important;
+    background: rgba(2, 132, 199, 0.1) !important;
+  }
+
+  [data-theme=dark] .mobile-nav {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* 3. Home View Responsive Fixes */
+  .hero-recall-banner {
+    padding: 20px 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hrb-left h2 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+  }
+
+  .hrb-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .hrb-actions .primary,
+  .hrb-actions .outline {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hrb-stats-hud {
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+  }
+
+  .hud-card {
+    padding: 10px !important;
+  }
+
+  .resume-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .resume-card {
+    padding: 16px !important;
+  }
+
+  .quick-atlas-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* 4. Learn & Atlas Syllabus Accordions Responsive Fixes */
+  .syllabus-subjects-container {
+    gap: 14px !important;
+  }
+
+  .syllabus-subject-block {
+    border-radius: 14px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .syllabus-subject-header {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+
+  .ssh-left {
+    gap: 10px !important;
+    align-items: flex-start !important;
+    min-width: 0 !important;
+  }
+
+  .ssh-number-tag {
+    font-size: 13px !important;
+    padding: 2px 7px !important;
+    border-radius: 6px !important;
+  }
+
+  .ssh-icon-badge {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 9px !important;
+  }
+
+  .ssh-icon-badge svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .ssh-title-row {
+    gap: 6px !important;
+  }
+
+  .ssh-title-row h2 {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+  }
+
+  .ssh-count-pill {
+    font-size: 9.5px !important;
+    padding: 1px 6px !important;
+  }
+
+  .ssh-desc {
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    margin-top: 4px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .ssh-right {
+    gap: 8px !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+  }
+
+  .ssh-weight-badge {
+    font-size: 10px !important;
+    padding: 2px 7px !important;
+    white-space: nowrap !important;
+  }
+
+  .ssh-progress-pill {
+    display: none !important;
+  }
+
+  .accordion-arrow-btn {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Subtopics List & Lesson Rows on Mobile */
+  .syllabus-subtopics-list {
+    padding: 4px 10px 10px !important;
+  }
+
+  .syllabus-lesson-row {
+    padding: 12px 12px !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    border-radius: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .slr-left {
+    align-self: flex-start !important;
+  }
+
+  .slr-number {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 11px !important;
+  }
+
+  .slr-main {
+    flex: 1 !important;
+    min-width: calc(100% - 40px) !important;
+  }
+
+  .slr-title {
+    font-size: 14.5px !important;
+  }
+
+  .slr-sub-en {
+    font-size: 11px !important;
+  }
+
+  .slr-meta-tags {
+    gap: 4px !important;
+    margin-top: 4px !important;
+  }
+
+  .slr-tag {
+    font-size: 9.5px !important;
+    padding: 2px 6px !important;
+  }
+
+  .slr-hook {
+    display: none !important;
+  }
+
+  .slr-right {
+    width: 100% !important;
+    margin-top: 4px !important;
+  }
+
+  .btn-take-forward {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 8px 14px !important;
+    font-size: 12.5px !important;
+    border-radius: 8px !important;
+  }
+
+  /* 6. Quick Jump Bar in Learn */
+  .subjects-quick-jump-bar {
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .jump-label {
+    display: none !important;
+  }
+
+  .jump-pills-row {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .jump-pills-row::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .jump-pill {
+    padding: 4px 9px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 7. Atlas Hero Header & Filter Bar */
+  .atlas-hub-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .atlas-hub-title-wrap h1 {
+    font-size: 21px !important;
+  }
+
+  .atlas-hub-title-wrap p {
+    font-size: 12px !important;
+  }
+
+  .atlas-hub-actions {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .syllabus-toggle-all-btn {
+    flex: 1 !important;
+    justify-content: center !important;
+  }
+
+  .atlas-filter-bar {
+    margin-bottom: 18px !important;
+  }
+
+  .atlas-search-box {
+    padding: 8px 12px !important;
+  }
+
+  .atlas-category-pills {
+    padding-bottom: 4px !important;
+    gap: 6px !important;
+  }
+
+  .cat-pill {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+
+  /* 8. Atlas Map Workspace on Mobile */
+  .atlas-topic-detail {
+    padding-bottom: 30px !important;
+  }
+
+  .topic-header-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 14px !important;
+  }
+
+  .topic-right-tools {
+    width: 100% !important;
+    justify-content: space-between !important;
+    overflow-x: auto !important;
+  }
+
+  .mode-tabs {
+    flex: 1 !important;
+  }
+
+  .mode-tabs button {
+    padding: 6px 10px !important;
+    font-size: 11.5px !important;
+  }
+
+  .atlas-map-workspace {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .map-canvas-col {
+    position: relative !important;
+    height: 360px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+
+  .map-inspector-col {
+    padding-bottom: 30px !important;
+  }
+
+  .inspector-card {
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .inspector-main-title {
+    font-size: 20px !important;
+  }
+
+  .inspector-metrics-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .metric-box {
+    padding: 8px 10px !important;
+  }
+
+  .metric-val {
+    font-size: 13px !important;
+  }
+
+  .inspector-ssc-flashcard {
+    padding: 14px !important;
+  }
+
+  .flashcard-question-wrap .q-text {
+    font-size: 12.5px !important;
+  }
+
+  /* 9. Play Arena on Mobile */
+  .play-arena-tabs,
+  .play-mode-tabs-bar {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 6px !important;
+    gap: 8px !important;
+  }
+
+  .play-arena-tabs::-webkit-scrollbar,
+  .play-mode-tabs-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .play-tab,
+  .play-mode-tab {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    padding: 7px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .drills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .drill-card {
+    padding: 16px !important;
+  }
+
+  .drills-search-wrap {
+    padding: 7px 10px 7px 12px !important;
+  }
+
+  .drills-search-wrap input {
+    font-size: 13px !important;
+  }
+
+  .drills-search-btn {
+    padding: 5px 9px !important;
+    font-size: 11px !important;
+  }
+
+  /* 10. Focused Visual Study Room on Mobile */
+  .study-room-container {
+    padding: 12px 10px 90px !important;
+  }
+
+  .study-room-top-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .study-back-btn {
+    font-size: 12px !important;
+  }
+
+  .study-breadcrumbs {
+    font-size: 12px !important;
+  }
+
+  .infographic-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 6px !important;
+    border-radius: 12px !important;
+  }
+
+  .infographic-svg {
+    min-width: 580px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .retrieval-table-card {
+    overflow-x: auto !important;
+    padding: 14px !important;
+  }
+}

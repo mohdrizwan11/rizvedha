@@ -127,7 +127,7 @@ export default function HomeView({
             <h3>{lang === 'te' ? 'మౌర్య సామ్రాజ్యం' : 'Mauryan Empire'}</h3>
             <p>{lang === 'te' ? 'చంద్రగుప్తుడు నుండి అశోకుడు, శిలాశాసనాలు మరియు పరిపాలన.' : 'From Chandragupta to Ashoka, rock edicts, and imperial statecraft.'}</p>
             <div className="resume-footer">
-              <span>{lang === 'te' ? 'ఇన్ఫోగ్రాఫిక్స్ & బాస్ క్విజ్' : 'Infographics & 2-HP Boss'}</span>
+              <span>{lang === 'te' ? 'ఇన్ఫోగ్రాఫిక్స్ & సాధన' : 'Infographics & Practice'}</span>
               <span className="go-btn">{lang === 'te' ? 'చదవండి →' : 'Resume Chapter →'}</span>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function HomeView({
                   <IconComp size={22} />
                 </span>
                 <div>
-                  <h4>{lang === 'te' ? t.titleHi : t.title}</h4>
+                  <h4>{lang === 'te' && t.titleTe ? t.titleTe : t.title}</h4>
                   <small>{t.count} {lang === 'te' ? 'నమోదులు' : 'entities'} · 2D-3D Map</small>
                 </div>
                 <ArrowRight size={16} className="qa-arr" />
