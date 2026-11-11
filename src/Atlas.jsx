@@ -4,7 +4,8 @@ import {
   Landmark, Sparkles, Music, Crown, Castle, Flag, Building2, Palette, BookOpen,
   TrainFront, Route, MapPin, Users, UsersRound, PartyPopper, Trophy, Medal,
   Rocket, Atom, Globe2, Swords, Lightbulb, Search, ArrowLeft, ArrowRight,
-  Compass, CheckCircle2, XCircle, RotateCcw, Filter, Eye, ListFilter, Flame
+  Compass, CheckCircle2, XCircle, RotateCcw, Filter, Eye, ListFilter, Flame,
+  ChevronDown, FolderOpen, Folder
 } from 'lucide-react';
 import AtlasMap from './AtlasMap';
 import { translateState, translateRiver, getTelugu } from './telugu';
@@ -61,6 +62,130 @@ export const ATLAS_TOPICS = [
   { slug: 'quick-facts', title: 'Quick Facts', titleTe: 'శీఘ్ర వాస్తవాలు', category: 'Miscellaneous', categoryTe: 'ఇతర ముఖ్యమైనవి', icon: Lightbulb, color: '#f59e0b', count: 134, hasMap: false }
 ];
 
+// 8 Organized Atlas Chapters matching the Learn section syllabus accordion pattern
+export const ATLAS_CHAPTERS = [
+  {
+    id: 'geography-nature',
+    num: '01',
+    category: 'Geography & Nature',
+    title: 'Geography & Nature',
+    titleTe: 'భూగోళశాస్త్రం & ప్రకృతి',
+    desc: 'Rivers, National Waterways, Power Plants, National Parks, Lakes, Soils, Peaks, and Physical India.',
+    descTe: 'భారతదేశ నదులు, జాతీయ జలమార్గాలు, విద్యుత్ కేంద్రాలు, ఉద్యానవనాలు, సరస్సులు, నేలలు, పర్వతాలు మరియు భౌతిక భూగోళం.',
+    icon: Compass,
+    accent: '#0284c7',
+    bgLight: 'rgba(2, 132, 199, 0.1)',
+    borderGlow: 'rgba(2, 132, 199, 0.25)',
+    weight: '11 Maps & Topics',
+    weightTe: '11 మ్యాప్‌లు & అంశాలు'
+  },
+  {
+    id: 'history-culture',
+    num: '02',
+    category: 'History & Culture',
+    title: 'History & Culture',
+    titleTe: 'చరిత్ర & సంస్కృతి',
+    desc: 'Temples, Classical & Folk Dances, Music, Ancient & Medieval Dynasties, Freedom Movement, Monuments, and Books.',
+    descTe: 'దేవాలయాలు, నృత్యాలు, సంగీతం, ప్రాచీన-మధ్యయుగ సామ్రాజ్యాలు, స్వాతంత్ర్య సమరం, చారిత్రక కట్టడాలు మరియు ప్రసిద్ధ గ్రంథాలు.',
+    icon: Landmark,
+    accent: '#b45309',
+    bgLight: 'rgba(180, 83, 9, 0.1)',
+    borderGlow: 'rgba(180, 83, 9, 0.25)',
+    weight: '9 Maps & Topics',
+    weightTe: '9 మ్యాప్‌లు & అంశాలు'
+  },
+  {
+    id: 'india-infrastructure',
+    num: '03',
+    category: 'India & Infrastructure / Polity',
+    title: 'India & Infrastructure / Polity',
+    titleTe: 'మౌలిక వసతులు & పాలన',
+    desc: 'Railway Zones, National Highways, India Geographic Basics, States & Governors, and Tribal Demographics.',
+    descTe: 'రైల్వే జోన్లు, జాతీయ రహదారులు, భారతదేశ భౌగోళిక విస్తీర్ణం, రాష్ట్రాలు-గవర్నర్లు మరియు తెగల వివరాలు.',
+    icon: Route,
+    accent: '#4f46e5',
+    bgLight: 'rgba(79, 70, 229, 0.1)',
+    borderGlow: 'rgba(79, 70, 229, 0.25)',
+    weight: '5 Maps & Topics',
+    weightTe: '5 మ్యాప్‌లు & అంశాలు'
+  },
+  {
+    id: 'festivals-society',
+    num: '04',
+    category: 'Festivals & Society',
+    title: 'Festivals & Society',
+    titleTe: 'పండుగలు & సమాజం',
+    desc: 'Harvest, religious, and state cultural festivals celebrated across Indian states and union territories.',
+    descTe: 'భారతదేశంలోని వివిధ రాష్ట్రాలు మరియు కేంద్రపాలిత ప్రాంతాలలో జరుపుకునే ముఖ్యమైన పండుగలు & సంస్కృతి.',
+    icon: PartyPopper,
+    accent: '#e11d48',
+    bgLight: 'rgba(225, 29, 72, 0.1)',
+    borderGlow: 'rgba(225, 29, 72, 0.25)',
+    weight: '1 Major Map / 108 Entries',
+    weightTe: '108 పండుగల సమగ్ర జాబితా'
+  },
+  {
+    id: 'sports',
+    num: '05',
+    category: 'Sports',
+    title: 'Sports & Honours',
+    titleTe: 'క్రీడలు & అవార్డులు',
+    desc: 'Olympic medals, national sports trophies, terminology, venues, and national awards.',
+    descTe: 'క్రీడారంగం, ట్రోఫీలు, స్టేడియంలు, క్రీడా పరిభాష మరియు జాతీయ పౌర/క్రీడా పురస్కారాలు.',
+    icon: Trophy,
+    accent: '#16a34a',
+    bgLight: 'rgba(22, 163, 74, 0.1)',
+    borderGlow: 'rgba(22, 163, 74, 0.25)',
+    weight: '2 Topics / 77 Entries',
+    weightTe: '77 క్రీడా రికార్డులు'
+  },
+  {
+    id: 'science-defense',
+    num: '06',
+    category: 'Science & Technology / Defense',
+    title: 'Science & Technology / Defense',
+    titleTe: 'సైన్స్ & రక్షణ రంగం',
+    desc: 'ISRO launch vehicles & missions, DRDO missile defense systems, research institutes, and core science facts.',
+    descTe: 'ఇస్రో రాకెట్లు, ఉపగ్రహాలు, డిఫెన్స్ రీసెర్చ్ క్షిపణులు, అణు కేంద్రాలు మరియు శాస్త్రీయ సూత్రాలు.',
+    icon: Rocket,
+    accent: '#7c3aed',
+    bgLight: 'rgba(124, 58, 237, 0.1)',
+    borderGlow: 'rgba(124, 58, 237, 0.25)',
+    weight: '2 Topics / 179 Entries',
+    weightTe: '179 సైన్స్ అంశాలు'
+  },
+  {
+    id: 'international-orgs',
+    num: '07',
+    category: 'International / Organizations',
+    title: 'International / Organizations',
+    titleTe: 'అంతర్జాతీయ సంస్థలు & ప్రపంచ జీకే',
+    desc: 'United Nations bodies, world headquarters, international summits, and global geographic facts.',
+    descTe: 'ఐక్యరాజ్యసమితి అనుబంధ సంస్థలు, ప్రధాన కార్యాలయాలు, అంతర్జాతీయ కూటములు మరియు ప్రపంచ భౌగోళిక రికార్డులు.',
+    icon: Globe2,
+    accent: '#0284c7',
+    bgLight: 'rgba(2, 132, 199, 0.1)',
+    borderGlow: 'rgba(2, 132, 199, 0.25)',
+    weight: '1 Map / 124 Entries',
+    weightTe: '124 అంతర్జాతీయ రికార్డులు'
+  },
+  {
+    id: 'miscellaneous',
+    num: '08',
+    category: 'Miscellaneous',
+    title: 'Miscellaneous & Battles',
+    titleTe: 'యుద్ధాలు, ఒప్పందాలు & శీఘ్ర వాస్తవాలు',
+    desc: 'Historic Indian battles, peace treaties, high-yield static GK one-liners and rapid exam review cards.',
+    descTe: 'భారతదేశ ప్రధాన యుద్ధాలు, శాంతి ఒప్పందాలు, పునరావృత స్టాటిక్ జీకే వన్-లైనర్స్.',
+    icon: Swords,
+    accent: '#991b1b',
+    bgLight: 'rgba(153, 27, 27, 0.1)',
+    borderGlow: 'rgba(153, 27, 27, 0.25)',
+    weight: '2 Topics / 184 Entries',
+    weightTe: '184 శీఘ్ర వాస్తవాలు'
+  }
+];
+
 const CATEGORIES = [
   'All',
   'Geography & Nature',
@@ -77,16 +202,62 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  // All 8 chapters closed/collapsed by default per user request
+  const [openChapters, setOpenChapters] = useState({});
 
   const currentLang = lang || data.atlasLang || 'en';
 
-  const filteredTopics = useMemo(() => {
-    return ATLAS_TOPICS.filter(t => {
-      const matchCat = activeCategory === 'All' || t.category === activeCategory;
-      const matchQ = !searchQuery.trim() ||
-        t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (t.titleTe && t.titleTe.includes(searchQuery));
-      return matchCat && matchQ;
+  const toggleChapter = (chapterId) => {
+    setOpenChapters(prev => ({
+      ...prev,
+      [chapterId]: !prev[chapterId]
+    }));
+  };
+
+  const allExpanded = ATLAS_CHAPTERS.every(ch => openChapters[ch.id]);
+
+  const toggleAllChapters = () => {
+    if (allExpanded) {
+      setOpenChapters({});
+    } else {
+      const allOpen = {};
+      ATLAS_CHAPTERS.forEach(ch => { allOpen[ch.id] = true; });
+      setOpenChapters(allOpen);
+    }
+  };
+
+  // If user enters search query, auto-expand matching chapters
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const matchingChapters = {};
+      ATLAS_CHAPTERS.forEach(ch => {
+        const hasMatch = ATLAS_TOPICS.filter(t => t.category === ch.category).some(t => {
+          const q = searchQuery.toLowerCase();
+          return t.title.toLowerCase().includes(q) ||
+            (t.titleTe && t.titleTe.includes(searchQuery)) ||
+            ch.title.toLowerCase().includes(q) ||
+            (ch.titleTe && ch.titleTe.includes(searchQuery));
+        });
+        if (hasMatch) {
+          matchingChapters[ch.id] = true;
+        }
+      });
+      setOpenChapters(prev => ({ ...prev, ...matchingChapters }));
+    }
+  }, [searchQuery]);
+
+  const displayedChapters = useMemo(() => {
+    return ATLAS_CHAPTERS.filter(ch => {
+      if (activeCategory !== 'All' && ch.category !== activeCategory) return false;
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase();
+        const chapterMatches = ch.title.toLowerCase().includes(q) || (ch.titleTe && ch.titleTe.includes(searchQuery));
+        const subtopicMatches = ATLAS_TOPICS.filter(t => t.category === ch.category).some(t =>
+          t.title.toLowerCase().includes(q) || (t.titleTe && t.titleTe.includes(searchQuery))
+        );
+        return chapterMatches || subtopicMatches;
+      }
+      return true;
     });
   }, [activeCategory, searchQuery]);
 
@@ -97,16 +268,29 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
           {/* Hero Header */}
           <div className="atlas-hub-header">
             <div className="atlas-hub-title-wrap">
-              <div className="eyebrow"><Compass size={15} /> {currentLang === 'te' ? 'విజువల్ అట్లాస్ & 33 జీకే మ్యాప్స్' : 'VISUAL ATLAS & 33 GK GAMES'}</div>
-              <h1>{currentLang === 'te' ? 'ఇంటరాక్టివ్ అట్లాస్ & టాపిక్ ఎక్స్‌ప్లోరర్' : 'Interactive Atlas & Topic Explorer'}</h1>
+              <div className="eyebrow"><Compass size={15} /> {currentLang === 'te' ? 'విజువల్ అట్లాస్ · 8 ప్రధాన అధ్యాయాలు' : 'VISUAL ATLAS · 8 CORE CHAPTERS'}</div>
+              <h1>{currentLang === 'te' ? 'ఇంటరాక్టివ్ అట్లాస్ సిలబస్' : 'Interactive Atlas Syllabus'}</h1>
               <p>
                 {currentLang === 'te'
-                  ? 'ఖచ్చితమైన 2D/3D మ్యాప్‌లు, వాస్తవాల కార్డులు మరియు రీకాల్ డ్రిల్స్ ద్వారా 33 కీలక స్టాటిక్-జీకే అంశాలను నేర్చుకోండి.'
-                  : 'Explore 33 essential static-GK topics via high-precision 2D/3D maps, interactive fact cards, and recall drills.'}
+                  ? 'ప్రతి అధ్యాయాన్ని తెరవడానికి క్రింది బాణాన్ని (Arrow Down) క్లిక్ చేయండి. ఉప-అంశాలను 2D/3D మ్యాప్‌లు మరియు పరీక్ష వాస్తవాలతో అన్వేషించండి.'
+                  : 'Click the Arrow Down on any chapter to reveal its subtopics. Launch 2D/3D maps and high-yield fact cards with Take You Forward buttons.'}
               </p>
             </div>
 
-            <div className="atlas-hub-actions">
+            <div className="atlas-hub-actions" style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
+              <button
+                className="syllabus-toggle-all-btn"
+                onClick={toggleAllChapters}
+                title={allExpanded ? 'Collapse All Chapters' : 'Expand All Chapters'}
+              >
+                {allExpanded ? <Folder size={15} /> : <FolderOpen size={15} />}
+                <span>
+                  {allExpanded
+                    ? (currentLang === 'te' ? 'అన్నీ కుదించు' : 'Collapse All')
+                    : (currentLang === 'te' ? 'అన్నీ విస్తరించు' : 'Expand All')}
+                </span>
+              </button>
+
               {onToggleLang && (
                 <button className="lang-pill" onClick={onToggleLang} title="Toggle English / Telugu">
                   {currentLang === 'en' ? '🇮🇳 English' : '🇮🇳 తెలుగు'}
@@ -140,32 +324,131 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
             </div>
           </div>
 
-          {/* 33 Topics Grid */}
-          <div className="atlas-topic-grid">
-            {filteredTopics.map(topic => {
-              const IconComp = topic.icon;
+          {/* 8 Chapters Accordion Container */}
+          <div className="syllabus-subjects-container">
+            {displayedChapters.map(ch => {
+              const IconComp = ch.icon;
+              const subtopics = ATLAS_TOPICS.filter(t => {
+                if (t.category !== ch.category) return false;
+                if (!searchQuery.trim()) return true;
+                const q = searchQuery.toLowerCase();
+                return t.title.toLowerCase().includes(q) ||
+                  (t.titleTe && t.titleTe.includes(searchQuery));
+              });
+              const isOpen = !!openChapters[ch.id];
+
               return (
                 <div
-                  key={topic.slug}
-                  className="atlas-topic-card"
-                  onClick={() => setSelectedTopic(topic)}
+                  key={ch.id}
+                  id={`atlas-chapter-${ch.id}`}
+                  className={`syllabus-subject-block ${isOpen ? 'is-open' : 'is-collapsed'}`}
+                  style={{ borderColor: ch.borderGlow }}
                 >
-                  <div className="topic-card-top">
-                    <span className="topic-icon-badge" style={{ backgroundColor: topic.color + '22', color: topic.color }}>
-                      <IconComp size={24} />
-                    </span>
-                    <span className="topic-entity-tag">{topic.count} {currentLang === 'te' ? 'అంశాలు' : 'entries'}</span>
+                  {/* Chapter Header Row (Clickable Accordion with Arrow Down) */}
+                  <div
+                    className="syllabus-subject-header"
+                    onClick={() => toggleChapter(ch.id)}
+                  >
+                    <div className="ssh-left">
+                      <div className="ssh-number-tag">{ch.num}</div>
+                      <div className="ssh-icon-badge" style={{ background: ch.bgLight, color: ch.accent }}>
+                        <IconComp size={22} />
+                      </div>
+                      <div className="ssh-titles">
+                        <div className="ssh-title-row">
+                          <h2>{currentLang === 'te' ? ch.titleTe : ch.title}</h2>
+                          <span className="ssh-count-pill">{subtopics.length} {currentLang === 'te' ? 'ఉప-టాపిక్స్' : 'Subtopics'}</span>
+                        </div>
+                        {currentLang === 'te' && <div className="ssh-english-sub">{ch.title}</div>}
+                        <p className="ssh-desc">{currentLang === 'te' ? ch.descTe : ch.desc}</p>
+                      </div>
+                    </div>
+
+                    <div className="ssh-right">
+                      <span className="ssh-weight-badge">{currentLang === 'te' ? ch.weightTe : ch.weight}</span>
+                      <button
+                        className="accordion-arrow-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleChapter(ch.id);
+                        }}
+                        aria-label="Toggle Chapter Subtopics"
+                      >
+                        <ChevronDown
+                          size={20}
+                          className={`accordion-arrow ${isOpen ? 'rotated' : ''}`}
+                        />
+                      </button>
+                    </div>
                   </div>
 
-                  <h3>{currentLang === 'te' && topic.titleTe ? topic.titleTe : topic.title}</h3>
-                  <div className="topic-sub">{currentLang === 'te' && topic.categoryTe ? topic.categoryTe : topic.category}</div>
+                  {/* Subtopics List (Rendered when expanded) */}
+                  {isOpen && (
+                    <div className="syllabus-subtopics-list">
+                      {subtopics.length > 0 ? (
+                        subtopics.map((topic, idx) => {
+                          return (
+                            <div
+                              key={topic.slug}
+                              className="syllabus-lesson-row"
+                              onClick={() => setSelectedTopic(topic)}
+                            >
+                              <div className="slr-left">
+                                <span
+                                  className="slr-number"
+                                  style={{
+                                    background: topic.color + '18',
+                                    color: topic.color,
+                                    borderColor: topic.color + '44'
+                                  }}
+                                >
+                                  {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
+                                </span>
+                              </div>
 
-                  <div className="topic-card-footer">
-                    <span className="topic-feature-pill">
-                      {topic.hasMap ? '🗺️ 2D-3D Map & Quiz' : '⚡ Fact Cards & Quiz'}
-                    </span>
-                    <span className="launch-btn">{currentLang === 'te' ? 'అన్వేషించండి →' : 'Explore →'}</span>
-                  </div>
+                              <div className="slr-main">
+                                <div className="slr-header-line">
+                                  <h3 className="slr-title">
+                                    {currentLang === 'te' && topic.titleTe ? topic.titleTe : topic.title}
+                                  </h3>
+                                  {currentLang === 'te' && <span className="slr-sub-en">{topic.title}</span>}
+                                </div>
+
+                                <div className="slr-meta-tags">
+                                  <span className="slr-tag visual" style={{ borderColor: topic.color + '44', color: topic.color }}>
+                                    {topic.hasMap ? '🗺️ 2D/3D Map & Fact Cards' : '⚡ High-Yield Fact Cards'}
+                                  </span>
+                                  <span className="slr-tag yield">
+                                    <Flame size={11} color={topic.color} /> {topic.count} {currentLang === 'te' ? 'రికార్డులు' : 'Entries'}
+                                  </span>
+                                  <span className="slr-tag era">
+                                    {topic.category}
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="slr-right">
+                                <button
+                                  className="btn-take-forward"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setSelectedTopic(topic);
+                                  }}
+                                >
+                                  <span>{currentLang === 'te' ? 'మ్యాప్ తెరవండి' : 'Open Map & Facts'}</span>
+                                  <ArrowRight size={16} className="take-forward-arrow" />
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })
+                      ) : (
+                        <div className="no-subtopics-found">
+                          <p>{currentLang === 'te' ? 'ఈ శోధనకు సంబంధించిన అంశాలు లేవు.' : 'No subtopics match your search in this chapter.'}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -554,7 +837,7 @@ function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenCh
       {/* Top Navigation Strip */}
       <div className="topic-header-bar">
         <button className="back-link" onClick={onBack}>
-          <ArrowLeft size={17} /> {lang === 'te' ? 'అన్ని 33 అంశాలు' : 'All 33 Topics'}
+          <ArrowLeft size={17} /> {lang === 'te' ? '← అట్లాస్ అధ్యాయాల సిలబస్' : '← Back to Atlas Chapters'}
         </button>
 
         <div className="topic-title-area">
