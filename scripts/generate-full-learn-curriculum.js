@@ -666,3 +666,4 @@ export const LEARN_TOPICS = ${JSON.stringify(allTopics, null, 2)};
 
 fs.writeFileSync(path.resolve('src/learnCurriculum.js'), fileContent, 'utf-8');
 console.log('Successfully written', allTopics.length, 'topics across 7 subjects into src/learnCurriculum.js');
+

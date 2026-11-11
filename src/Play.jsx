@@ -203,7 +203,7 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
   };
 
   // -------------------------------------------------------------
-  // START BOSS BATTLE SESSION (2-HP BOSS BAR)
+  // START CHAPTER MASTERY CHALLENGE (FULL-RUN SINGLE PERSON LEARNING)
   // -------------------------------------------------------------
   const startBossBattle = (boss) => {
     const bossPool = (playBank.questions || []).filter(q => boss.topics.includes(q.topicSlug));
@@ -215,12 +215,10 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
       questions: shuffled,
       currentIdx: 0,
       selectedOpt: null,
-      playerHP: 2,
-      bossHP: 8,
-      isVictory: false,
-      isDefeat: false,
       score: 0,
-      timeLeft: boss.timerMins * 60
+      streak: 0,
+      isDone: false,
+      answersHistory: []
     });
   };
 
@@ -229,34 +227,40 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
     const currentQ = activeBoss.questions[activeBoss.currentIdx];
     const isCorrect = opt === currentQ.correct;
 
-    const newBossHP = isCorrect ? Math.max(0, activeBoss.bossHP - 1) : activeBoss.bossHP;
-    const newPlayerHP = !isCorrect ? Math.max(0, activeBoss.playerHP - 1) : activeBoss.playerHP;
-
     if (isCorrect) {
       update(d => ({ ...d, xp: (d.xp || 0) + 15 }));
     }
 
-    const isVictory = newBossHP <= 0 || (activeBoss.currentIdx + 1 >= activeBoss.questions.length && newPlayerHP > 0);
-    const isDefeat = newPlayerHP <= 0;
-
     setActiveBoss(prev => ({
       ...prev,
       selectedOpt: opt,
-      bossHP: newBossHP,
-      playerHP: newPlayerHP,
       score: isCorrect ? prev.score + 1 : prev.score,
-      isVictory,
-      isDefeat
+      streak: isCorrect ? prev.streak + 1 : 0,
+      answersHistory: [
+        ...prev.answersHistory,
+        {
+          question: currentQ.question,
+          selected: opt,
+          correct: currentQ.correct,
+          isCorrect,
+          explain: currentQ.explain
+        }
+      ]
     }));
   };
 
   const handleNextBossQuestion = () => {
     if (!activeBoss) return;
-    if (activeBoss.currentIdx + 1 < activeBoss.questions.length && activeBoss.playerHP > 0 && activeBoss.bossHP > 0) {
+    if (activeBoss.currentIdx + 1 < activeBoss.questions.length) {
       setActiveBoss(prev => ({
         ...prev,
         currentIdx: prev.currentIdx + 1,
         selectedOpt: null
+      }));
+    } else {
+      setActiveBoss(prev => ({
+        ...prev,
+        isDone: true
       }));
     }
   };
@@ -604,7 +608,7 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
       )}
 
       {/* =========================================================
-          TAB 2: CHAPTER BOSS BATTLES (8 EPIC BOSSES)
+          TAB 2: CHAPTER CHALLENGES (8 COMPREHENSIVE CHAPTERS)
          ========================================================= */}
       {activeTab === 'boss' && (
         <div className="tab-pane-content">
@@ -614,37 +618,33 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
                 <div key={boss.id} className="boss-card">
                   <div className="boss-head">
                     <span className="boss-avatar">{boss.avatar}</span>
-                    <span className="boss-badge">2-HP BOSS CHALLENGE</span>
+                    <span className="boss-badge">CHAPTER MASTERY</span>
                     <span className="boss-subj">{boss.subject}</span>
                   </div>
                   <h3>{lang === 'te' && boss.titleTe ? boss.titleTe : boss.title}</h3>
                   <p className="boss-hook">"{boss.hook}"</p>
                   <div className="boss-meta">
                     <span>⚡ {boss.factsCount} High-Yield Pool</span>
-                    <span>⏱️ {boss.timerMins}-Minute Timer</span>
-                    <span>❤️ 2 Player HP</span>
+                    <span>🎯 10 Targeted Questions</span>
+                    <span>⭐ +15 XP / Question</span>
                   </div>
                   <button className="primary" onClick={() => startBossBattle(boss)}>
-                    Fight Chapter Boss →
+                    {lang === 'te' ? 'ఛాప్టర్ సాధన ప్రారంభించండి →' : 'Start Chapter Challenge →'}
                   </button>
                 </div>
               ))}
             </div>
           ) : (
-            /* ACTIVE BOSS BATTLE ARENA */
+            /* ACTIVE CHAPTER MASTERY SESSION */
             <div className="boss-arena-card">
               <div className="boss-arena-hud">
                 <div className="hud-player">
-                  <span className="hud-label">YOUR HEALTH</span>
-                  <div className="hp-hearts">
-                    {Array.from({ length: 2 }).map((_, i) => (
-                      <Heart
-                        key={i}
-                        size={20}
-                        color={i < activeBoss.playerHP ? '#ef4444' : '#64748b'}
-                        fill={i < activeBoss.playerHP ? '#ef4444' : 'none'}
-                      />
-                    ))}
+                  <span className="hud-label">PROGRESS & SCORE</span>
+                  <div className="session-score-pill">
+                    <strong>Score: {activeBoss.score} / {activeBoss.questions.length}</strong>
+                    {activeBoss.streak > 1 && (
+                      <span className="streak-tag">🔥 {activeBoss.streak} Streak!</span>
+                    )}
                   </div>
                 </div>
 
@@ -653,68 +653,96 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
                   <div className="boss-hp-bar">
                     <div
                       className="boss-hp-fill"
-                      style={{ width: `${(activeBoss.bossHP / 8) * 100}%` }}
+                      style={{ width: `${((activeBoss.currentIdx + 1) / activeBoss.questions.length) * 100}%` }}
                     />
                   </div>
-                  <small>Boss HP: {activeBoss.bossHP} / 8</small>
+                  <small>Question {activeBoss.currentIdx + 1} of {activeBoss.questions.length}</small>
                 </div>
 
                 <button className="outline mini" onClick={() => setActiveBoss(null)}>
-                  Forfeit Battle
+                  {lang === 'te' ? 'నిష్క్రమించు' : 'Exit Challenge'}
                 </button>
               </div>
 
-              {!activeBoss.isVictory && !activeBoss.isDefeat ? (
+              {!activeBoss.isDone ? (
                 <div className="boss-q-stage">
                   <div className="boss-q-num">
-                    Battle Turn {activeBoss.currentIdx + 1} of {activeBoss.questions.length}
+                    Question {activeBoss.currentIdx + 1} of {activeBoss.questions.length}
                   </div>
                   <h2>{activeBoss.questions[activeBoss.currentIdx].question}</h2>
 
                   <div className="dca-options-grid">
-                    {activeBoss.questions[activeBoss.currentIdx].options.map((opt, oIdx) => (
-                      <button
-                        key={oIdx}
-                        className="dca-opt-btn"
-                        onClick={() => handleBossAnswer(opt)}
-                        disabled={activeBoss.selectedOpt !== null}
-                      >
-                        <span className="opt-marker">{String.fromCharCode(65 + oIdx)}</span>
-                        <span className="opt-val">{opt}</span>
-                      </button>
-                    ))}
+                    {activeBoss.questions[activeBoss.currentIdx].options.map((opt, oIdx) => {
+                      let btnCls = 'dca-opt-btn';
+                      if (activeBoss.selectedOpt !== null) {
+                        if (opt === activeBoss.questions[activeBoss.currentIdx].correct) btnCls += ' correct';
+                        else if (activeBoss.selectedOpt === opt) btnCls += ' wrong';
+                      }
+                      return (
+                        <button
+                          key={oIdx}
+                          className={btnCls}
+                          onClick={() => handleBossAnswer(opt)}
+                          disabled={activeBoss.selectedOpt !== null}
+                        >
+                          <span className="opt-marker">{String.fromCharCode(65 + oIdx)}</span>
+                          <span className="opt-val">{opt}</span>
+                        </button>
+                      );
+                    })}
                   </div>
 
                   {activeBoss.selectedOpt !== null && (
-                    <div className="boss-feedback-row">
-                      <span>
-                        {activeBoss.selectedOpt === activeBoss.questions[activeBoss.currentIdx].correct
-                          ? '💥 Critical Hit! Boss lost 1 HP (-10 Boss HP)'
-                          : '💔 You took damage! Lost 1 Heart.'}
-                      </span>
+                    <div className={`boss-feedback-row ${activeBoss.selectedOpt === activeBoss.questions[activeBoss.currentIdx].correct ? 'correct' : 'wrong'}`}>
+                      <div>
+                        <strong>
+                          {activeBoss.selectedOpt === activeBoss.questions[activeBoss.currentIdx].correct
+                            ? '✓ Correct! +15 XP'
+                            : `✗ Incorrect · Correct: ${activeBoss.questions[activeBoss.currentIdx].correct}`}
+                        </strong>
+                        <p>{activeBoss.questions[activeBoss.currentIdx].explain}</p>
+                      </div>
                       <button className="primary" onClick={handleNextBossQuestion}>
-                        Continue Fight →
+                        {activeBoss.currentIdx + 1 < activeBoss.questions.length
+                          ? (lang === 'te' ? 'తదుపరి ప్రశ్న →' : 'Next Question →')
+                          : (lang === 'te' ? 'ఫలితాలను చూడండి →' : 'View Results →')}
                       </button>
                     </div>
                   )}
                 </div>
-              ) : activeBoss.isVictory ? (
+              ) : (
                 <div className="battle-outcome victory">
                   <Trophy size={54} color="#f59e0b" />
-                  <h2>BOSS DEFEATED! VICTORY!</h2>
-                  <p>You conquered {activeBoss.boss.title}! +100 XP Bonus Awarded.</p>
-                  <button className="primary" onClick={() => setActiveBoss(null)}>
-                    Return to Boss Arena
-                  </button>
-                </div>
-              ) : (
-                <div className="battle-outcome defeat">
-                  <XCircle size={54} color="#ef4444" />
-                  <h2>YOU FELL IN BATTLE!</h2>
-                  <p>The boss overpowered you. Review your mistakes and challenge again.</p>
-                  <button className="outline" onClick={() => startBossBattle(activeBoss.boss)}>
-                    Try Again
-                  </button>
+                  <h2>{lang === 'te' ? 'ఛాప్టర్ సాధన పూర్తయింది!' : 'Chapter Challenge Completed!'}</h2>
+                  <p>
+                    {lang === 'te'
+                      ? `మీరు ${activeBoss.questions.length} ప్రశ్నలలో ${activeBoss.score} సరైన సమాధానాలు చెప్పారు (${Math.round((activeBoss.score / activeBoss.questions.length) * 100)}% ఖచ్చితత్వం). +${activeBoss.score * 15} XP సాధించారు!`
+                      : `You answered ${activeBoss.score} out of ${activeBoss.questions.length} questions correctly (${Math.round((activeBoss.score / activeBoss.questions.length) * 100)}% accuracy). Earned +${activeBoss.score * 15} XP!`}
+                  </p>
+
+                  <div className="battle-review-list">
+                    <h4>{lang === 'te' ? 'సమీక్ష & వివరణలు' : 'Review & Key Explanations'}</h4>
+                    {activeBoss.answersHistory.map((item, hIdx) => (
+                      <div key={hIdx} className={`review-item ${item.isCorrect ? 'correct' : 'wrong'}`}>
+                        <div className="ri-q"><strong>Q{hIdx + 1}:</strong> {item.question}</div>
+                        <div className="ri-ans">
+                          <span className={item.isCorrect ? 'tag-correct' : 'tag-wrong'}>
+                            {item.isCorrect ? '✓ Correct' : `✗ You chose: ${item.selected} | Answer: ${item.correct}`}
+                          </span>
+                        </div>
+                        {item.explain && <div className="ri-exp">{item.explain}</div>}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="battle-outcome-actions">
+                    <button className="primary" onClick={() => startBossBattle(activeBoss.boss)}>
+                      {lang === 'te' ? 'మళ్లీ ప్రయత్నించండి' : 'Practice Again'}
+                    </button>
+                    <button className="outline" onClick={() => setActiveBoss(null)}>
+                      {lang === 'te' ? 'అన్ని ఛాప్టర్లు' : 'All Chapter Challenges'}
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

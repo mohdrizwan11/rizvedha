@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   Sparkles,
   ChevronRight,
+  ChevronDown,
   ArrowLeft,
   ArrowRight,
   Eye,
@@ -35,14 +36,24 @@ const ICON_MAP = {
 };
 
 export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
-  // activeTopic: null = Master 7 Subjects Directory, non-null = Focused Visual Study Room
+  // activeTopic: null = Master Syllabus Directory, non-null = Focused Visual Study Room
   const [activeTopic, setActiveTopic] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [tableRevealed, setTableRevealed] = useState(false);
   const [quizIdx, setQuizIdx] = useState(0);
   const [selectedOpt, setSelectedOpt] = useState(null);
   const [completedList, setCompletedList] = useState([]);
-  const subjectRefs = useRef({});
+
+  // Accordion state: all 7 subjects open by default, can be toggled by user
+  const [openSubjects, setOpenSubjects] = useState({
+    'history': true,
+    'geography': true,
+    'polity': true,
+    'economics': true,
+    'science': true,
+    'culture': true,
+    'static-gk': true
+  });
 
   // Load completed topics from local storage
   useEffect(() => {
@@ -72,6 +83,24 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
     }
   };
 
+  // Toggle individual subject accordion
+  const toggleSubject = (subjId) => {
+    setOpenSubjects(prev => ({
+      ...prev,
+      [subjId]: !prev[subjId]
+    }));
+  };
+
+  // Toggle all subjects open/closed
+  const toggleAllSubjects = () => {
+    const allOpen = Object.values(openSubjects).every(Boolean);
+    const updated = {};
+    SEVEN_SUBJECTS.forEach(s => {
+      updated[s.id] = !allOpen;
+    });
+    setOpenSubjects(updated);
+  };
+
   // Filter topics based on search
   const filteredTopics = useMemo(() => {
     if (!searchQuery.trim()) return LEARN_TOPICS;
@@ -95,10 +124,14 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
 
   // Smooth scroll to a subject section
   const scrollToSubject = (subjectId) => {
-    const el = document.getElementById(`subject-section-${subjectId}`);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // If collapsed, expand it first
+    setOpenSubjects(prev => ({ ...prev, [subjectId]: true }));
+    setTimeout(() => {
+      const el = document.getElementById(`subject-section-${subjectId}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 50);
   };
 
   // Handle open topic
@@ -251,7 +284,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
               <text x="90" y="135" textAnchor="middle" fill="#1e1b4b" fontWeight="600" fontSize="11">• Reverse Repo (Borrowing)</text>
               <text x="90" y="155" textAnchor="middle" fill="#64748b" fontSize="9">Hilton Young Comm. (1935)</text>
 
-              <path d="M 180 100 L 260 100" stroke="#6366f1" strokeWidth="3" markerEnd="url(#arrow)" />
+              <path d="M 180 100 L 260 100" stroke="#6366f1" strokeWidth="3" />
               <text x="220" y="85" textAnchor="middle" fill="#6366f1" fontSize="10" fontWeight="bold">Liquidity</text>
 
               <rect x="260" y="30" width="180" height="140" fill="#ffffff" stroke="#cbd5e1" strokeWidth="2" rx="10" />
@@ -435,9 +468,11 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
   };
 
   // -------------------------------------------------------------
-  // VIEW MODE 1: MASTER 7 MAIN SUBJECTS DIRECTORY (SWIPE UP/DOWN)
+  // VIEW MODE 1: MASTER SYLLABUS (ACCORDION WITH ARROWS DOWN & FORWARD)
   // -------------------------------------------------------------
   if (!activeTopic) {
+    const allOpen = Object.values(openSubjects).every(Boolean);
+
     return (
       <div className="learn-master-directory">
         {/* Top Header Banner */}
@@ -445,23 +480,30 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
           <div className="ctb-header">
             <div>
               <div className="eyebrow">
-                <BookOpen size={15} /> {lang === 'te' ? 'సమగ్ర విజువల్ పాఠ్యాంశాలు · 7 విభాగాలు' : 'COMPREHENSIVE VISUAL CURRICULUM · 7 CORE SUBJECTS'}
+                <BookOpen size={15} /> {lang === 'te' ? 'సమగ్ర విజువల్ పాఠ్యాంశాలు · 7 విభాగాలు' : 'GENERAL AWARENESS SYLLABUS · 7 CORE SUBJECTS'}
               </div>
-              <h1>{lang === 'te' ? '7 ప్రధాన జనరల్ అవేర్‌నెస్ విభాగాలు' : '7 Core General Awareness Subjects'}</h1>
+              <h1>{lang === 'te' ? 'విజువల్ లెర్నింగ్ పాఠ్యాంశాలు' : 'Visual Learning Curriculum'}</h1>
               <p className="ctb-sub">
                 {lang === 'te'
-                  ? 'క్రింది 7 ప్రధాన సబ్జెక్టులను స్క్రోల్ (swipe up/down) చేసి అన్వేషించండి. ప్రతి విభాగంలో ఉన్న ఉప-పాఠాలు, హై-డెఫినిషన్ విజువల్ స్కీమాటిక్స్, యాక్టివ్ రీకాల్ టేబుల్స్ మరియు మునుపటి ప్రశ్నలను (PYQs) అధ్యయనం చేయండి.'
-                  : 'Swipe up and down through the 7 core subjects below to explore all subtopics. Tap any module to study high-definition visual schematics, active retrieval tables, and high-yield SSC PYQs.'}
+                  ? 'క్రింది బాణం (arrow down) నొక్కి సబ్జెక్టులోని ఉప-పాఠాలను చూడండి. పాఠం ప్రారంభించడానికి "ముందుకు సాగండి" (take you forward) బాణాన్ని అనుసరించండి.'
+                  : 'Tap the arrow down to reveal subtopics inside each subject. Use the "Take You Forward" arrow to start any visual lesson.'}
               </p>
             </div>
-            <button className="outline mini" onClick={() => onNavigate('Atlas')}>
-              <Compass size={15} /> {lang === 'te' ? '33 అట్లాస్ మ్యాప్స్' : 'Explore 33 Atlas Maps →'}
-            </button>
+            <div className="ctb-top-actions">
+              <button className="outline mini" onClick={toggleAllSubjects}>
+                {allOpen
+                  ? (lang === 'te' ? 'అన్నీ కుదించు' : 'Collapse All')
+                  : (lang === 'te' ? 'అన్నీ విస్తరించు' : 'Expand All')}
+              </button>
+              <button className="outline mini" onClick={() => onNavigate('Atlas')}>
+                <Compass size={15} /> {lang === 'te' ? '33 అట్లాస్ మ్యాప్స్' : 'Explore 33 Atlas Maps →'}
+              </button>
+            </div>
           </div>
 
           {/* Quick Jump Bar across the 7 Subjects */}
           <div className="subjects-quick-jump-bar">
-            <span className="jump-label">{lang === 'te' ? 'త్వరిత విభాగం:' : 'Quick Jump:'}</span>
+            <span className="jump-label">{lang === 'te' ? 'విభాగాలు:' : 'Subjects:'}</span>
             <div className="jump-pills-row">
               {SEVEN_SUBJECTS.map(subj => {
                 const IconComp = ICON_MAP[subj.iconName] || BookOpen;
@@ -473,6 +515,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
                   >
                     <IconComp size={13} color={subj.accent} />
                     <span>{subj.num}. {lang === 'te' ? subj.titleTe.split(' ')[0] : subj.title.split(' ')[0]}</span>
+                    <ChevronDown size={11} className={openSubjects[subj.id] ? 'arrow-open' : 'arrow-closed'} />
                   </button>
                 );
               })}
@@ -494,29 +537,36 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
           </div>
         </div>
 
-        {/* SWIPE UP / DOWN STREAM OF 7 MAIN SUBJECTS */}
+        {/* SYLLABUS ACCORDION STREAM OF 7 MAIN SUBJECTS */}
         <div className="seven-subjects-vertical-stream">
           {SEVEN_SUBJECTS.map(subj => {
             const IconComp = ICON_MAP[subj.iconName] || BookOpen;
             const subtopics = topicsBySubject[subj.subjectKey] || [];
             const completedInSubj = subtopics.filter(t => completedList.includes(t.id)).length;
+            const isOpen = !!openSubjects[subj.id];
 
             return (
               <div
                 key={subj.id}
                 id={`subject-section-${subj.id}`}
-                className="subject-section-block"
+                className={`syllabus-subject-block ${isOpen ? 'is-open' : 'is-collapsed'}`}
                 style={{ borderColor: subj.borderGlow }}
               >
-                {/* Subject Header Card */}
-                <div className="subject-section-header">
+                {/* Subject Header Row (Clickable Accordion with Arrow Down) */}
+                <div
+                  className="syllabus-subject-header"
+                  onClick={() => toggleSubject(subj.id)}
+                >
                   <div className="ssh-left">
                     <div className="ssh-number-tag">{subj.num}</div>
                     <div className="ssh-icon-badge" style={{ background: subj.bgLight, color: subj.accent }}>
-                      <IconComp size={24} />
+                      <IconComp size={22} />
                     </div>
                     <div className="ssh-titles">
-                      <h2>{lang === 'te' ? subj.titleTe : subj.title}</h2>
+                      <div className="ssh-title-row">
+                        <h2>{lang === 'te' ? subj.titleTe : subj.title}</h2>
+                        <span className="ssh-count-pill">{subtopics.length} {lang === 'te' ? 'ఉప-పాఠాలు' : 'Subtopics'}</span>
+                      </div>
                       {lang === 'te' && <div className="ssh-english-sub">{subj.title}</div>}
                       <p className="ssh-desc">{lang === 'te' ? subj.descTe : subj.desc}</p>
                     </div>
@@ -524,7 +574,6 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
 
                   <div className="ssh-right">
                     <span className="ssh-weight-badge">{subj.weight}</span>
-                    <span className="ssh-modules-count">{subtopics.length} {lang === 'te' ? 'పాఠాలు' : 'Modules'}</span>
                     <div className="ssh-progress-pill">
                       <span className="spp-text">{completedInSubj} / {subtopics.length} {lang === 'te' ? 'పూర్తయ్యాయి' : 'Mastered'}</span>
                       <div className="spp-bar">
@@ -537,59 +586,84 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
                         />
                       </div>
                     </div>
+                    <button
+                      className="accordion-arrow-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleSubject(subj.id);
+                      }}
+                      aria-label="Toggle Subtopics"
+                    >
+                      <ChevronDown
+                        size={20}
+                        className={`accordion-arrow ${isOpen ? 'rotated' : ''}`}
+                      />
+                    </button>
                   </div>
                 </div>
 
-                {/* Subtopics Grid inside this Subject */}
-                {subtopics.length > 0 ? (
-                  <div className="subtopics-grid">
-                    {subtopics.map((topic, idx) => {
-                      const isDone = completedList.includes(topic.id);
-                      return (
-                        <div
-                          key={topic.id}
-                          className={`subtopic-card ${isDone ? 'completed' : ''}`}
-                          onClick={() => openTopic(topic)}
-                        >
-                          <div className="stc-top-bar">
-                            <span className="stc-mod-tag">MOD {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</span>
-                            <span className="stc-yield-badge">
-                              <Flame size={12} /> {topic.badge.split('·')[0].trim()}
-                            </span>
-                            {isDone && (
-                              <span className="stc-done-badge">
-                                <CheckCircle2 size={13} /> {lang === 'te' ? 'పూర్తయింది' : 'Mastered (+10 XP)'}
+                {/* SUBTOPICS LIST (WHEN EXPANDED - WITH 'TAKE YOU FORWARD' ARROWS) */}
+                {isOpen && (
+                  <div className="syllabus-subtopics-list">
+                    {subtopics.length > 0 ? (
+                      subtopics.map((topic, idx) => {
+                        const isDone = completedList.includes(topic.id);
+                        return (
+                          <div
+                            key={topic.id}
+                            className={`syllabus-lesson-row ${isDone ? 'completed' : ''}`}
+                            onClick={() => openTopic(topic)}
+                          >
+                            <div className="slr-left">
+                              <span className={`slr-number ${isDone ? 'done' : ''}`}>
+                                {isDone ? <CheckCircle2 size={16} /> : (idx + 1 < 10 ? `0${idx + 1}` : idx + 1)}
                               </span>
-                            )}
+                            </div>
+
+                            <div className="slr-main">
+                              <div className="slr-header-line">
+                                <h3 className="slr-title">
+                                  {lang === 'te' ? topic.titleTe : topic.title}
+                                </h3>
+                                {lang === 'te' && <span className="slr-sub-en">{topic.title}</span>}
+                              </div>
+
+                              <div className="slr-meta-tags">
+                                <span className="slr-tag era">{topic.era}</span>
+                                <span className="slr-tag visual">🎨 {topic.infographicCaption.split('&')[0]}</span>
+                                <span className="slr-tag yield">
+                                  <Flame size={11} /> {topic.badge.split('·')[0].trim()}
+                                </span>
+                                {isDone && (
+                                  <span className="slr-tag done">
+                                    <CheckCircle2 size={11} /> {lang === 'te' ? 'పూర్తయింది (+10 XP)' : 'Mastered (+10 XP)'}
+                                  </span>
+                                )}
+                              </div>
+
+                              <p className="slr-hook">"{lang === 'te' ? topic.heroHookTe : topic.heroHook}"</p>
+                            </div>
+
+                            <div className="slr-right">
+                              <button
+                                className="btn-take-forward"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  openTopic(topic);
+                                }}
+                              >
+                                <span>{lang === 'te' ? 'పాఠం ప్రారంభించండి' : 'Start Lesson'}</span>
+                                <ArrowRight size={16} className="take-forward-arrow" />
+                              </button>
+                            </div>
                           </div>
-
-                          <h3 className="stc-title">{lang === 'te' ? topic.titleTe : topic.title}</h3>
-                          {lang === 'te' && <div className="stc-sub-en">{topic.title}</div>}
-
-                          <div className="stc-era-tag">
-                            <span>{topic.era}</span>
-                          </div>
-
-                          <div className="stc-visual-tag">
-                            <span>🎨 {topic.infographicCaption.split('&')[0]}</span>
-                          </div>
-
-                          <p className="stc-hook">
-                            "{lang === 'te' ? topic.heroHookTe : topic.heroHook}"
-                          </p>
-
-                          <div className="stc-footer">
-                            <span className="stc-cta-btn">
-                              {lang === 'te' ? 'విజువల్ పాఠం తెరవండి →' : 'Study Visual Module →'}
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div className="no-subtopics-found">
-                    <p>{lang === 'te' ? 'ఈ శోధనకు సంబంధించిన అంశాలు లేవు.' : 'No modules match your search in this subject.'}</p>
+                        );
+                      })
+                    ) : (
+                      <div className="no-subtopics-found">
+                        <p>{lang === 'te' ? 'ఈ శోధనకు సంబంధించిన అంశాలు లేవు.' : 'No subtopics match your search in this subject.'}</p>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
@@ -612,7 +686,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
       {/* Sticky Top Navigation Bar */}
       <div className="study-room-top-bar">
         <button className="study-back-btn" onClick={() => setActiveTopic(null)}>
-          <ArrowLeft size={16} /> {lang === 'te' ? '← 7 ప్రధాన విభాగాలకు తిరిగి వెళ్లండి' : '← Back to 7 Subjects'}
+          <ArrowLeft size={16} /> {lang === 'te' ? '← సిలబస్ జాబితాకు తిరిగి వెళ్లండి' : '← Back to Syllabus'}
         </button>
 
         <div className="study-breadcrumbs">
@@ -860,7 +934,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            ↑ {lang === 'te' ? '7 ప్రధాన విభాగాల జాబితాకు తిరిగి వెళ్లండి' : 'Return to 7 Core Subjects'}
+            ↑ {lang === 'te' ? 'సిలబస్ జాబితాకు తిరిగి వెళ్లండి' : 'Return to Syllabus Directory'}
           </button>
 
           <button
