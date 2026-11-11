@@ -342,7 +342,11 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
                   key={ch.id}
                   id={`atlas-chapter-${ch.id}`}
                   className={`syllabus-subject-block ${isOpen ? 'is-open' : 'is-collapsed'}`}
-                  style={{ borderColor: ch.borderGlow }}
+                  style={{
+                    borderLeft: `5px solid ${ch.accent}`,
+                    borderColor: isOpen ? ch.accent : ch.borderGlow,
+                    background: `linear-gradient(to right, ${ch.bgLight}22, var(--card) 45%)`
+                  }}
                 >
                   {/* Chapter Header Row (Clickable Accordion with Arrow Down) */}
                   <div
@@ -350,14 +354,33 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
                     onClick={() => toggleChapter(ch.id)}
                   >
                     <div className="ssh-left">
-                      <div className="ssh-number-tag">{ch.num}</div>
-                      <div className="ssh-icon-badge" style={{ background: ch.bgLight, color: ch.accent }}>
+                      <div
+                        className="ssh-number-tag"
+                        style={{
+                          color: ch.accent,
+                          background: ch.bgLight,
+                          border: `1.5px solid ${ch.accent}44`,
+                          borderRadius: '8px',
+                          padding: '3px 9px',
+                          fontSize: '17px',
+                          fontWeight: 900,
+                          opacity: 1
+                        }}
+                      >
+                        {ch.num}
+                      </div>
+                      <div className="ssh-icon-badge" style={{ background: ch.bgLight, color: ch.accent, border: `1px solid ${ch.accent}33` }}>
                         <IconComp size={22} />
                       </div>
                       <div className="ssh-titles">
                         <div className="ssh-title-row">
                           <h2>{currentLang === 'te' ? ch.titleTe : ch.title}</h2>
-                          <span className="ssh-count-pill">{subtopics.length} {currentLang === 'te' ? 'ఉప-టాపిక్స్' : 'Subtopics'}</span>
+                          <span
+                            className="ssh-count-pill"
+                            style={{ background: ch.bgLight, color: ch.accent, borderColor: ch.accent + '44' }}
+                          >
+                            {subtopics.length} {currentLang === 'te' ? 'ఉప-టాపిక్స్' : 'Subtopics'}
+                          </span>
                         </div>
                         {currentLang === 'te' && <div className="ssh-english-sub">{ch.title}</div>}
                         <p className="ssh-desc">{currentLang === 'te' ? ch.descTe : ch.desc}</p>
@@ -365,9 +388,15 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
                     </div>
 
                     <div className="ssh-right">
-                      <span className="ssh-weight-badge">{currentLang === 'te' ? ch.weightTe : ch.weight}</span>
+                      <span
+                        className="ssh-weight-badge"
+                        style={{ background: ch.bgLight, color: ch.accent, border: `1px solid ${ch.accent}44` }}
+                      >
+                        {currentLang === 'te' ? ch.weightTe : ch.weight}
+                      </span>
                       <button
                         className="accordion-arrow-btn"
+                        style={{ color: ch.accent, background: ch.bgLight }}
                         onClick={(e) => {
                           e.stopPropagation();
                           toggleChapter(ch.id);

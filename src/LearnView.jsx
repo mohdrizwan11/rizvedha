@@ -555,7 +555,11 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
                 key={subj.id}
                 id={`subject-section-${subj.id}`}
                 className={`syllabus-subject-block ${isOpen ? 'is-open' : 'is-collapsed'}`}
-                style={{ borderColor: subj.borderGlow }}
+                style={{
+                  borderLeft: `5px solid ${subj.accent}`,
+                  borderColor: isOpen ? subj.accent : subj.borderGlow,
+                  background: `linear-gradient(to right, ${subj.bgLight}22, var(--card) 45%)`
+                }}
               >
                 {/* Subject Header Row (Clickable Accordion with Arrow Down) */}
                 <div
@@ -563,14 +567,33 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
                   onClick={() => toggleSubject(subj.id)}
                 >
                   <div className="ssh-left">
-                    <div className="ssh-number-tag">{subj.num}</div>
-                    <div className="ssh-icon-badge" style={{ background: subj.bgLight, color: subj.accent }}>
+                    <div
+                      className="ssh-number-tag"
+                      style={{
+                        color: subj.accent,
+                        background: subj.bgLight,
+                        border: `1.5px solid ${subj.accent}44`,
+                        borderRadius: '8px',
+                        padding: '3px 9px',
+                        fontSize: '17px',
+                        fontWeight: 900,
+                        opacity: 1
+                      }}
+                    >
+                      {subj.num}
+                    </div>
+                    <div className="ssh-icon-badge" style={{ background: subj.bgLight, color: subj.accent, border: `1px solid ${subj.accent}33` }}>
                       <IconComp size={22} />
                     </div>
                     <div className="ssh-titles">
                       <div className="ssh-title-row">
                         <h2>{lang === 'te' ? subj.titleTe : subj.title}</h2>
-                        <span className="ssh-count-pill">{subtopics.length} {lang === 'te' ? 'ఉప-పాఠాలు' : 'Subtopics'}</span>
+                        <span
+                          className="ssh-count-pill"
+                          style={{ background: subj.bgLight, color: subj.accent, borderColor: subj.accent + '44' }}
+                        >
+                          {subtopics.length} {lang === 'te' ? 'ఉప-పాఠాలు' : 'Subtopics'}
+                        </span>
                       </div>
                       {lang === 'te' && <div className="ssh-english-sub">{subj.title}</div>}
                       <p className="ssh-desc">{lang === 'te' ? subj.descTe : subj.desc}</p>
@@ -578,7 +601,12 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
                   </div>
 
                   <div className="ssh-right">
-                    <span className="ssh-weight-badge">{subj.weight}</span>
+                    <span
+                      className="ssh-weight-badge"
+                      style={{ background: subj.bgLight, color: subj.accent, border: `1px solid ${subj.accent}44` }}
+                    >
+                      {subj.weight}
+                    </span>
                     <div className="ssh-progress-pill">
                       <span className="spp-text">{completedInSubj} / {subtopics.length} {lang === 'te' ? 'పూర్తయ్యాయి' : 'Mastered'}</span>
                       <div className="spp-bar">
@@ -593,6 +621,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
                     </div>
                     <button
                       className="accordion-arrow-btn"
+                      style={{ color: subj.accent, background: subj.bgLight }}
                       onClick={(e) => {
                         e.stopPropagation();
                         toggleSubject(subj.id);

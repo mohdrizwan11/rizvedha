@@ -450,14 +450,32 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
             <div>
               {/* Category Filter Pills & Search */}
               <div className="drills-filter-bar">
-                <div className="curriculum-search-box">
-                  <Search size={16} />
+                <div className="drills-search-wrap">
+                  <Search size={18} className="search-icon" />
                   <input
                     type="text"
-                    placeholder={lang === 'te' ? '33 అంశాలలో వెతకండి (నదులు, నేలలు, దేవాలయాలు…)' : 'Search any topic (Rivers, Soils, Peaks, Temples)...'}
+                    placeholder={lang === 'te' ? '33 అంశాలలో వెతకండి (నదులు, నేలలు, దేవాలయాలు, ఉద్యానవనాలు)…' : 'Search any topic (Rivers, Soils, Peaks, Temples, Dynasties)...'}
                     value={drillSearch}
                     onChange={e => setDrillSearch(e.target.value)}
                   />
+                  {drillSearch && (
+                    <button
+                      className="drills-search-clear"
+                      onClick={() => setDrillSearch('')}
+                      title="Clear search"
+                      aria-label="Clear search"
+                    >
+                      ×
+                    </button>
+                  )}
+                  <button
+                    className="drills-search-btn"
+                    onClick={() => {}}
+                    title={lang === 'te' ? 'శోధన' : 'Search'}
+                  >
+                    <Search size={13} />
+                    <span>{lang === 'te' ? 'వెతకండి' : 'Search'}</span>
+                  </button>
                 </div>
 
                 <div className="category-pills-row">
@@ -473,7 +491,7 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
                 </div>
               </div>
 
-              {/* 33 Topic Cards Grid */}
+              {/* 33 Topic Cards Grid with Visual Differentiation */}
               <div className="drills-grid">
                 {filteredDrills.map(topic => {
                   const IconC = topic.icon;
@@ -482,22 +500,89 @@ export default function Play({ data, update, onOpenLesson, onOpenChapter, lang =
                       key={topic.slug}
                       className="drill-card"
                       onClick={() => startTopicDrill(topic)}
+                      style={{
+                        borderTop: `4px solid ${topic.color}`,
+                        borderColor: `${topic.color}35`,
+                        background: `linear-gradient(to bottom, ${topic.color}0a, var(--card) 45%)`
+                      }}
                     >
                       <div className="drill-top">
-                        <span
-                          className="drill-subj-tag"
-                          style={{ backgroundColor: topic.color + '22', color: topic.color }}
-                        >
-                          <IconC size={15} style={{ display: 'inline', marginRight: 4 }} />
-                          {topic.category.split(' ')[0]}
-                        </span>
-                        <span className="drill-q-count">{topic.qCount} Questions</span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <span
+                            className="drill-icon-box"
+                            style={{
+                              backgroundColor: topic.color + '18',
+                              color: topic.color,
+                              border: `1px solid ${topic.color}35`,
+                              borderRadius: '8px',
+                              padding: '5px',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center'
+                            }}
+                          >
+                            <IconC size={16} />
+                          </span>
+                          <span
+                            className="drill-subj-tag"
+                            style={{
+                              backgroundColor: topic.color + '18',
+                              color: topic.color,
+                              border: `1px solid ${topic.color}35`,
+                              fontWeight: 700
+                            }}
+                          >
+                            {topic.category}
+                          </span>
+                        </div>
+                        <span className="drill-q-count">{topic.qCount} {lang === 'te' ? 'ప్రశ్నలు' : 'Questions'}</span>
                       </div>
-                      <h3>{lang === 'te' && topic.titleTe ? topic.titleTe : topic.title}</h3>
-                      <p>{topic.category}</p>
-                      <div className="drill-footer">
-                        <span className="drill-btn">
-                          {lang === 'te' ? '10-ప్రశ్నల డ్రిల్ ప్రారంభించండి →' : 'Start 10-Q Drill →'}
+
+                      <h3 style={{ color: 'var(--text)', marginTop: '8px', marginBottom: '4px' }}>
+                        {lang === 'te' && topic.titleTe ? topic.titleTe : topic.title}
+                      </h3>
+                      {lang === 'te' && (
+                        <div style={{ fontSize: '12px', color: 'var(--muted)', marginBottom: '8px', fontWeight: 500 }}>
+                          {topic.title}
+                        </div>
+                      )}
+                      <p style={{ color: 'var(--muted)', fontSize: '12px', marginBottom: '16px' }}>
+                        {topic.hasMap ? (lang === 'te' ? '🗺️ మ్యాప్ ఆధారిత క్విజ్' : '🗺️ 2D/3D Map Drill') : (lang === 'te' ? '⚡ కాన్సెప్ట్ రీకాల్ డ్రిల్' : '⚡ Concept Recall Drill')}
+                      </p>
+
+                      <div
+                        className="drill-footer"
+                        style={{
+                          borderTopColor: 'var(--border)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          paddingTop: '12px'
+                        }}
+                      >
+                        <span
+                          className="drill-btn"
+                          style={{
+                            color: topic.color,
+                            fontWeight: 700,
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px'
+                          }}
+                        >
+                          {lang === 'te' ? '10-ప్రశ్నల సాధన ప్రారంభించండి' : 'Start 10-Q Drill'} →
+                        </span>
+                        <span
+                          style={{
+                            fontSize: '11px',
+                            fontWeight: 800,
+                            color: topic.color,
+                            background: topic.color + '14',
+                            padding: '3px 8px',
+                            borderRadius: '6px'
+                          }}
+                        >
+                          10 Qs
                         </span>
                       </div>
                     </div>

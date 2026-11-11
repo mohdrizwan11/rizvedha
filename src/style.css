@@ -3819,6 +3819,93 @@ kbd { font-size: 10px; font-weight: 700; white-space: nowrap; border: 1px solid 
   flex-direction: column;
   gap: 12px;
 }
+
+/* Play Arena Search Bar & Filter Upgrades */
+.drills-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px 8px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.drills-search-wrap:focus-within {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15), 0 4px 14px rgba(0, 0, 0, 0.05);
+  background: var(--card);
+}
+
+.drills-search-wrap .search-icon {
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.drills-search-wrap input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text);
+  width: 100%;
+}
+
+.drills-search-wrap input::placeholder {
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.drills-search-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.drills-search-clear {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.drills-search-clear:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.drills-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0284c7;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+
+.drills-search-btn:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
 .category-pills-row {
   display: flex;
   gap: 8px;
