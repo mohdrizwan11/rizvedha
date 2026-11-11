@@ -4,7 +4,7 @@ import {
   Landmark, Sparkles, Music, Crown, Castle, Flag, Building2, Palette, BookOpen,
   TrainFront, Route, MapPin, Users, UsersRound, PartyPopper, Trophy, Medal,
   Rocket, Atom, Globe2, Swords, Lightbulb, Search, ArrowLeft, ArrowRight,
-  Compass, CheckCircle2, XCircle, RotateCcw, Filter, Eye, ListFilter
+  Compass, CheckCircle2, XCircle, RotateCcw, Filter, Eye, ListFilter, Flame
 } from 'lucide-react';
 import AtlasMap from './AtlasMap';
 import { translateState, translateRiver, getTelugu } from './telugu';
@@ -21,7 +21,7 @@ export const ATLAS_TOPICS = [
   { slug: 'soils', title: 'Soil Types', titleTe: 'నేలల రకాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Layers, color: '#d97706', count: 52, hasMap: true },
   { slug: 'lakes', title: 'Lakes of India', titleTe: 'భారతదేశ సరస్సులు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Droplets, color: '#06b6d4', count: 40, hasMap: true },
   { slug: 'biosphere-reserves', title: 'Biosphere Reserves', titleTe: 'బయోస్పియర్ రిజర్వ్‌లు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Trees, color: '#059669', count: 18, hasMap: true },
-  { slug: 'mountain-peaks', title: 'Mountain Peaks', titleTe: 'పర్వత శిఖరాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Mountain, color: '#64748b', count: 62, hasMap: true },
+  { slug: 'mountain-peaks', title: 'Mountain Peaks', titleTe: 'పర్వత శిఖరాలు', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Mountain, color: '#64748b', count: 30, hasMap: true },
   { slug: 'physical-india', title: 'Physical India', titleTe: 'భౌతిక భారతదేశం', category: 'Geography & Nature', categoryTe: 'భూగోళశాస్త్రం & ప్రకృతి', icon: Map, color: '#0d9488', count: 107, hasMap: true },
 
   // 2. History & Culture
@@ -187,6 +187,206 @@ export default function Atlas({ data, update, onOpenChapter, lang = 'en', onTogg
 }
 
 // ==============================================================
+// UNIVERSAL DYNAMIC METRICS EXTRACTOR ACROSS ALL 33 TOPICS
+// ==============================================================
+function getItemMetrics(item, topic, lang) {
+  if (!item) return [];
+  const metrics = [];
+
+  // Rivers
+  if (item.org) {
+    metrics.push({
+      label: lang === 'te' ? 'ఉద్భవం / మూలం' : 'Origin / Source',
+      val: item.org
+    });
+  }
+  if (item.drain) {
+    metrics.push({
+      label: lang === 'te' ? 'సంగమం' : 'Drainage',
+      val: item.drain
+    });
+  }
+  if (item.L) {
+    metrics.push({
+      label: lang === 'te' ? 'పొడవు' : 'Length',
+      val: `${item.L} km`
+    });
+  }
+
+  // Mountain Peaks
+  if (item.elev) {
+    metrics.push({
+      label: lang === 'te' ? 'శిఖర ఎత్తు' : 'Elevation',
+      val: `${item.elev} m`
+    });
+  }
+  if (item.range) {
+    metrics.push({
+      label: lang === 'te' ? 'పర్వత శ్రేణి' : 'Mountain Range',
+      val: item.range
+    });
+  }
+
+  // Power Plants
+  if (item.cap) {
+    metrics.push({
+      label: lang === 'te' ? 'సామర్థ్యం' : 'Capacity',
+      val: item.cap
+    });
+  }
+  if (item.fuelType) {
+    metrics.push({
+      label: lang === 'te' ? 'ఇంధన రకం' : 'Fuel Type',
+      val: item.fuelType
+    });
+  }
+  if (item.op) {
+    metrics.push({
+      label: lang === 'te' ? 'నిర్వాహక సంస్థ' : 'Operator',
+      val: item.op
+    });
+  }
+
+  // Classification & Features (Lakes, Soils, Temples, Monuments, Physical India)
+  if (item.cat && !item.org && !item.elev) {
+    metrics.push({
+      label: lang === 'te' ? 'వర్గీకరణ' : 'Classification',
+      val: item.cat
+    });
+  }
+  if (item.arch) {
+    metrics.push({
+      label: (topic.slug === 'temples' || topic.slug === 'monuments')
+        ? (lang === 'te' ? 'శిల్పశైలి' : 'Architecture')
+        : (lang === 'te' ? 'ప్రధాన విశిష్టత' : 'Key Feature'),
+      val: item.arch
+    });
+  }
+  if (item.deity && topic.slug === 'temples') {
+    metrics.push({
+      label: lang === 'te' ? 'ప్రధాన దైవం' : 'Presiding Deity',
+      val: item.deity
+    });
+  }
+  if (item.kd) {
+    metrics.push({
+      label: lang === 'te' ? 'భౌగోళిక రూపం' : 'Feature Type',
+      val: item.kd
+    });
+  }
+  if (item.tag && !item.elev) {
+    metrics.push({
+      label: topic.slug === 'national-parks'
+        ? (lang === 'te' ? 'వన్యప్రాణి' : 'Key Wildlife')
+        : (lang === 'te' ? 'ముఖ్యాంశం' : 'Key Highlight'),
+      val: item.tag
+    });
+  }
+  if (item.riv) {
+    metrics.push({
+      label: lang === 'te' ? 'ప్రవహించే నది' : 'River Basin',
+      val: item.riv
+    });
+  }
+  if (item.yr && item.yr !== '—') {
+    metrics.push({
+      label: lang === 'te' ? 'కాలం / సంవత్సరం' : 'Period / Year',
+      val: String(item.yr)
+    });
+  }
+
+  return metrics.slice(0, 4);
+}
+
+// ==============================================================
+// HIGH-YIELD SSC PYQ FLASHCARD GENERATOR ACROSS 33 TOPICS
+// ==============================================================
+function getSSCFlashcard(item, topic, lang) {
+  if (!item) return null;
+
+  if (item.pyq && item.pyqAns) {
+    return {
+      question: item.pyq,
+      answer: item.pyqAns,
+      freq: lang === 'te' ? 'SSC CGL & RRB పరీక్షలలో పునరావృతం' : 'Asked 4+ times in SSC CGL / CHSL / RRB NTPC'
+    };
+  }
+
+  const name = item.n;
+  const slug = topic.slug;
+
+  if (slug === 'rivers') {
+    return {
+      question: `Where does River ${name} originate and what is its primary basin?`,
+      answer: `Origin: ${item.org || 'Himalayan glaciers / Peninsular plateaus'} | Confluence: ${item.drain || 'Bay of Bengal / Arabian Sea'} (Length: ${item.L ? item.L + ' km' : 'Major river'}).`,
+      freq: 'Core SSC Geography PYQ'
+    };
+  }
+
+  if (slug === 'lakes') {
+    return {
+      question: `Which state is ${name} located in and what is its key geographic distinction?`,
+      answer: `${name} is located in ${item.st || 'India'}. ${item.arch ? `Distinction: ${item.arch}.` : ''} Classification: ${item.cat || 'Waterbody'}.`,
+      freq: 'Repeated in SSC CGL & CPO Exams'
+    };
+  }
+
+  if (slug === 'soils') {
+    return {
+      question: `What are the agricultural and formation characteristics of ${name}?`,
+      answer: `Soil Group: ${item.cat || 'Major Indian Soil'} in ${item.st || 'India'}. Characteristics: ${item.arch || item.fact || 'High agricultural value'}.`,
+      freq: 'High-Yield SSC Soil & Agriculture Question'
+    };
+  }
+
+  if (slug === 'mountain-peaks') {
+    return {
+      question: `Which mountain range is ${name} part of and what is its geographical importance?`,
+      answer: `Range: ${item.range || 'Indian Mountains'} (${item.elev ? item.elev + ' m' : 'Prominent summit'}) in ${item.st || item.country || 'India'}. ${item.tag || ''}`,
+      freq: 'Frequent SSC Physical Geography PYQ'
+    };
+  }
+
+  if (slug === 'physical-india') {
+    return {
+      question: `What strategic feature or mountain pass connection does ${name} represent?`,
+      answer: `Type: ${item.kd || 'Geographic Feature'} in ${item.s || item.st || 'India'}. Route / Significance: ${item.tag || item.fact || 'Key geographic landmark'}.`,
+      freq: 'High-Frequency SSC CGL / CDS Question'
+    };
+  }
+
+  if (slug === 'power-plants') {
+    return {
+      question: `In which state is ${name} situated and what is its capacity/fuel type?`,
+      answer: `State: ${item.st || item.s || 'India'} | Fuel: ${item.fuelType || item.cat || 'Energy'} | Capacity: ${item.cap || 'Major plant'}.`,
+      freq: 'SSC Infrastructure & Energy GK'
+    };
+  }
+
+  if (slug === 'national-parks') {
+    return {
+      question: `Which state is ${name} in and which wildlife species is it famous for?`,
+      answer: `State: ${item.st || item.s || 'India'} | Fauna: ${item.tag || 'Endangered fauna'}${item.riv ? ` | River: ${item.riv}` : ''}.`,
+      freq: 'Repeated 5+ times in SSC & State PSC'
+    };
+  }
+
+  if (slug === 'temples' || slug === 'monuments') {
+    return {
+      question: `In which state is ${name} located and what architectural style or deity is it known for?`,
+      answer: `Location: ${item.st || 'India'} | Style/Deity: ${item.arch || item.deity || 'Historic landmark'} | Period: ${item.yr || 'Historical dynasty'}.`,
+      freq: 'SSC Art & Culture Core Question'
+    };
+  }
+
+  return {
+    question: `What is the most frequently tested fact about ${name} in competitive exams?`,
+    answer: item.fact || `${name} is located in ${item.st || item.s || 'India'}.`,
+    freq: 'SSC Static GK Repeat Fact'
+  };
+}
+
+// ==============================================================
 // TOPIC DETAIL COMPONENT: ENLARGED BOLD LEFT INSPECTOR + MAP
 // ==============================================================
 function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenChapter }) {
@@ -196,12 +396,18 @@ function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenCh
   const [activeItem, setActiveItem] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
   const [cardSearch, setCardSearch] = useState('');
+  const [flashcardOpen, setFlashcardOpen] = useState(false);
 
   // Quiz state
   const [quizIdx, setQuizIdx] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState(null);
   const [score, setScore] = useState(0);
   const [quizStarted, setQuizStarted] = useState(false);
+
+  // Reset flashcard whenever activeItem changes
+  useEffect(() => {
+    setFlashcardOpen(false);
+  }, [activeItem]);
 
   useEffect(() => {
     let isLive = true;
@@ -418,52 +624,57 @@ function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenCh
                 <h3 className="inspector-main-title">{displayItemName(activeItem)}</h3>
                 {lang === 'te' && <div className="inspector-english-sub">{activeItem.n}</div>}
 
-                {/* Fast Selector Chips (Quickly switch between items in this topic) */}
-                <div className="inspector-quick-strip">
-                  <span className="strip-label">{lang === 'te' ? 'త్వరిత ఎంపిక:' : 'Quick Select:'}</span>
-                  <div className="strip-scroll">
-                    {items.slice(0, 8).map((it, idx) => (
-                      <button
-                        key={idx}
-                        className={`strip-btn ${activeItem.n === it.n ? 'active' : ''}`}
-                        onClick={() => setActiveItem(it)}
-                      >
-                        {it.n}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Core Metric Highlights */}
-                <div className="inspector-metrics-grid">
-                  {activeItem.org && (
-                    <div className="metric-box">
-                      <span className="metric-lbl">{lang === 'te' ? 'ఉద్భవం / మూలం' : 'Origin / Source'}</span>
-                      <strong className="metric-val">{activeItem.org}</strong>
+                {/* Universal Metrics Grid (Lakes, Soils, Peaks, Rivers, Parks, Plants, Temples, etc.) */}
+                {(() => {
+                  const metrics = getItemMetrics(activeItem, topic, lang);
+                  if (!metrics.length) return null;
+                  return (
+                    <div className="inspector-metrics-grid">
+                      {metrics.map((m, mIdx) => (
+                        <div key={mIdx} className="metric-box">
+                          <span className="metric-lbl">{m.label}</span>
+                          <strong className="metric-val">{m.val}</strong>
+                        </div>
+                      ))}
                     </div>
-                  )}
+                  );
+                })()}
 
-                  {activeItem.drain && (
-                    <div className="metric-box">
-                      <span className="metric-lbl">{lang === 'te' ? 'సంగమం' : 'Drainage'}</span>
-                      <strong className="metric-val">{activeItem.drain}</strong>
+                {/* High-Yield SSC Repeat PYQ Flashcard */}
+                {(() => {
+                  const flashcard = getSSCFlashcard(activeItem, topic, lang);
+                  if (!flashcard) return null;
+                  return (
+                    <div className="inspector-ssc-flashcard">
+                      <div className="flashcard-badge-row">
+                        <span className="flashcard-tag">
+                          <Flame size={14} color="#f59e0b" />
+                          {lang === 'te' ? 'SSC పునరావృత ప్రశ్న' : 'SSC REPEAT QUESTION'}
+                        </span>
+                        <span className="flashcard-freq">{flashcard.freq}</span>
+                      </div>
+                      <div className="flashcard-question-wrap">
+                        <span className="q-label">Q:</span>
+                        <p className="q-text">{flashcard.question}</p>
+                      </div>
+                      {flashcardOpen ? (
+                        <div className="flashcard-answer-revealed">
+                          <div className="ans-header">
+                            <span>✅ {lang === 'te' ? 'SSC పరీక్ష సమాధానం' : 'EXACT SSC ANSWER'}</span>
+                          </div>
+                          <p className="ans-text">{flashcard.answer}</p>
+                        </div>
+                      ) : (
+                        <button
+                          className="flashcard-reveal-btn"
+                          onClick={() => setFlashcardOpen(true)}
+                        >
+                          👁️ {lang === 'te' ? 'సమాధానం చూడండి (SSC Answer)' : 'Tap to Reveal SSC Exam Answer'}
+                        </button>
+                      )}
                     </div>
-                  )}
-
-                  {activeItem.L && (
-                    <div className="metric-box">
-                      <span className="metric-lbl">{lang === 'te' ? 'పొడవు' : 'Length'}</span>
-                      <strong className="metric-val">{activeItem.L} km</strong>
-                    </div>
-                  )}
-
-                  {activeItem.cap && (
-                    <div className="metric-box">
-                      <span className="metric-lbl">{lang === 'te' ? 'సామర్థ్యం' : 'Capacity'}</span>
-                      <strong className="metric-val">{activeItem.cap}</strong>
-                    </div>
-                  )}
-                </div>
+                  );
+                })()}
 
                 {/* Highlighted Key Exam Fact (Eye-Catching Glow Card) */}
                 {activeItem.fact && (
@@ -487,10 +698,10 @@ function TopicDetail({ topic, lang, onToggleLang, onBack, data, update, onOpenCh
                 {/* Action Button */}
                 <button
                   className="primary big glow-btn"
-                  style={{ marginTop: '1.2rem', width: '100%' }}
+                  style={{ marginTop: '1rem', width: '100%' }}
                   onClick={() => setActiveTab('quiz')}
                 >
-                  🎯 {lang === 'te' ? `${activeItem.n} పై క్విజ్ సాధన చేయండి` : `Test Recall on ${activeItem.n} →`}
+                  🎯 {lang === 'te' ? `${displayItemName(activeItem)} పై క్విజ్ సాధన చేయండి` : `Test Recall on ${activeItem.n} →`}
                 </button>
               </div>
             ) : (

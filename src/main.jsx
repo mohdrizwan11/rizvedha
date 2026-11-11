@@ -189,6 +189,18 @@ function App() {
     <div className="app">
       {/* Sleek Collapsible Sidebar (ChatGPT Style) */}
       <aside className={`sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
+        {/* Top utility row: Open/Close toggle button at the top slight above */}
+        <div className="sidebar-top-bar">
+          <button
+            className="sidebar-toggle-btn"
+            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+            title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+            aria-label="Toggle sidebar"
+          >
+            {sidebarCollapsed ? <PanelLeft size={16} /> : <PanelLeftClose size={16} />}
+          </button>
+        </div>
+
         <div className="sidebar-header">
           <button className="brand" onClick={() => go('Home')} title="RizVedha GK">
             <span className="brandmark">RV<span>•</span></span>
@@ -198,15 +210,6 @@ function App() {
                 <small>{lang === 'te' ? 'విజువల్ జీకే ప్లాట్‌ఫారమ్' : 'VISUAL GK PLATFORM'}</small>
               </span>
             )}
-          </button>
-
-          <button
-            className="sidebar-toggle-btn"
-            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            title={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-            aria-label="Toggle sidebar"
-          >
-            {sidebarCollapsed ? <PanelLeft size={16} /> : <PanelLeftClose size={16} />}
           </button>
         </div>
 

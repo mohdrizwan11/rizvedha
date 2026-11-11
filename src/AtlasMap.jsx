@@ -1,13 +1,12 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { select } from 'd3-selection';
-import { zoom, zoomIdentity } from 'd3-zoom';
 import topo from './v22/india-states.topo.json';
 import { translateRiver, translateState } from './telugu';
 
 const shapes = feature(topo, topo.objects.states);
-const projection = geoMercator().fitExtent([[20, 20], [480, 520]], shapes);
+// Centered, full-bleed fitted projection inside 500x540 viewBox
+const projection = geoMercator().fitExtent([[16, 16], [484, 524]], shapes);
 const geo = geoPath(projection);
 
 const disputed = shapes.features.filter(f => !f.properties.State_LGD);
@@ -21,6 +20,27 @@ const states = shapes.features.filter(f => f.properties.State_LGD).map(f => {
   };
 });
 
+// Light, pleasing pastel palette for Indian States (clear political contrast)
+const STATE_LIGHT_COLORS = [
+  '#e0f2fe', // pastel sky blue
+  '#fef3c7', // pastel warm amber
+  '#dcfce7', // pastel mint green
+  '#fae8ff', // pastel lavender
+  '#ffedd5', // pastel soft peach
+  '#fce7f3', // pastel soft rose
+  '#ede9fe', // pastel violet
+  '#ccfbf1', // pastel soft teal
+  '#ecfccb', // pastel soft lime
+  '#e0e7ff', // pastel soft periwinkle
+  '#fef9c3', // pastel sunshine cream
+  '#f1f5f9', // pastel cool grey
+];
+
+function getStateColor(code, index) {
+  const hash = typeof code === 'number' ? code : (index || 0);
+  return STATE_LIGHT_COLORS[Math.abs(hash) % STATE_LIGHT_COLORS.length];
+}
+
 export default function AtlasMap({
   lang = 'en',
   selectedState = null,
@@ -28,32 +48,10 @@ export default function AtlasMap({
   items = [],
   activeItem = null,
   onSelectItem = () => {},
-  themeColor = '#3b82f6',
-  markerKind = 'circle'
+  themeColor = '#3b82f6'
 }) {
-  const svgRef = useRef(null);
-  const zoomRef = useRef(null);
-  const [transform, setTransform] = useState(zoomIdentity);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [is3D, setIs3D] = useState(false);
-
-  useEffect(() => {
-    const behavior = zoom()
-      .scaleExtent([1, 8])
-      .wheelDelta(event => {
-        // Significantly reduced zoom speed for smooth, controlled scrolling
-        return -event.deltaY * 0.00065;
-      })
-      .on('zoom', e => setTransform(e.transform));
-    zoomRef.current = behavior;
-    const svg = select(svgRef.current);
-    svg.call(behavior).on('dblclick.zoom', null);
-    return () => svg.on('.zoom', null);
-  }, []);
-
-  const zoomIn = () => select(svgRef.current).transition().duration(200).call(zoomRef.current.scaleBy, 1.4);
-  const zoomOut = () => select(svgRef.current).transition().duration(200).call(zoomRef.current.scaleBy, 1 / 1.4);
-  const resetZoom = () => select(svgRef.current).transition().duration(200).call(zoomRef.current.transform, zoomIdentity);
 
   // Separate line features (rivers, waterways, highways) from point features
   const lineItems = useMemo(() => items.filter(it => it.wp && it.wp.length > 1), [items]);
@@ -61,6 +59,7 @@ export default function AtlasMap({
 
   return (
     <div className={`atlas-map-container ${is3D ? 'view-3d' : ''}`}>
+      {/* 2D / 3D Isometric View Switcher */}
       <div className="atlas-map-controls">
         <button
           onClick={() => setIs3D(!is3D)}
@@ -69,31 +68,23 @@ export default function AtlasMap({
         >
           {is3D ? '3D' : '2D'}
         </button>
-        <button onClick={zoomIn} title="Zoom in" aria-label="Zoom in">+</button>
-        <button onClick={zoomOut} title="Zoom out" aria-label="Zoom out">−</button>
-        <button onClick={resetZoom} title="Reset zoom" aria-label="Reset zoom">↺</button>
       </div>
 
       <svg
-        ref={svgRef}
         viewBox="0 0 500 540"
         className="atlas-svg-canvas"
-        aria-label="Interactive 2D-3D Atlas Map of India"
+        aria-label="Interactive Fixed Atlas Map of India"
       >
         <defs>
           <filter id="atlas-depth-shadow" x="-10%" y="-10%" width="130%" height="130%">
             <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#0f172a" floodOpacity="0.14" />
           </filter>
-          <linearGradient id="atlas-state-gradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="var(--atlas-state-top, #e2e8f0)" />
-            <stop offset="100%" stopColor="var(--atlas-state-bot, #cbd5e1)" />
-          </linearGradient>
         </defs>
 
         {/* Map Background with subtle ocean tone */}
         <rect width="500" height="540" className="atlas-ocean" />
 
-        <g transform={transform.toString()}>
+        <g>
           {/* Base 3D Layer Outline Shadow */}
           <g filter="url(#atlas-depth-shadow)">
             {disputed.map((f, i) => (
@@ -104,23 +95,30 @@ export default function AtlasMap({
             ))}
           </g>
 
-          {/* Actual States Layer */}
+          {/* Actual States Layer with Pleasing Light Pastel Colors */}
           <g className="atlas-states-group">
             {disputed.map((f, i) => (
               <path
                 key={'disp-top-' + i}
                 d={geo(f) || ''}
                 className="atlas-disputed"
+                fill="#f1f5f9"
+                stroke="#cbd5e1"
+                strokeWidth="0.8"
                 vectorEffect="non-scaling-stroke"
               />
             ))}
-            {states.map(s => {
+            {states.map((s, sIdx) => {
               const isSelected = selectedState === s.code;
+              const lightColor = getStateColor(s.code, sIdx);
               return (
                 <path
                   key={'state-' + s.code}
                   d={geo(s.feature) || ''}
                   className={`atlas-state ${isSelected ? 'state-selected' : ''}`}
+                  fill={isSelected ? '#38bdf8' : lightColor}
+                  stroke="#ffffff"
+                  strokeWidth="0.9"
                   onClick={() => onSelectState(isSelected ? null : s.code)}
                   vectorEffect="non-scaling-stroke"
                 >
@@ -152,7 +150,7 @@ export default function AtlasMap({
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       fill="none"
-                      opacity="0.9"
+                      opacity="0.95"
                       vectorEffect="non-scaling-stroke"
                     />
                   )}
@@ -160,7 +158,7 @@ export default function AtlasMap({
                   <path
                     d={dStr}
                     stroke={isLineActive ? '#ef4444' : themeColor}
-                    strokeWidth={isLineActive ? 3.5 : 2}
+                    strokeWidth={isLineActive ? 3.5 : 2.2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
@@ -173,7 +171,7 @@ export default function AtlasMap({
             })}
           </g>
 
-          {/* Point Features (Power Plants, Temples, National Parks, Peaks, Cities) */}
+          {/* Point Features (Power Plants, Lakes, Peaks, Physical Passes, Parks, Temples) */}
           <g className="atlas-points-group">
             {pointItems.map((pt, idx) => {
               const lng = pt.lng != null ? pt.lng : pt.olng;
@@ -201,23 +199,23 @@ export default function AtlasMap({
                   cursor="pointer"
                 >
                   {isPointActive && (
-                    <circle r="12" fill={themeColor} opacity="0.3" className="marker-pulse" />
+                    <circle r="12" fill={themeColor} opacity="0.32" className="marker-pulse" />
                   )}
                   <circle
                     r={isPointActive ? 7 : (pointItems.length > 50 ? 3.5 : 4.5)}
                     fill={isPointActive ? '#ffffff' : themeColor}
                     stroke={isPointActive ? themeColor : '#ffffff'}
                     strokeWidth={isPointActive ? 2.5 : 1.2}
-                    opacity={isPointActive ? 1 : 0.88}
+                    opacity={isPointActive ? 1 : 0.9}
                   />
                   {/* Show clean tag ONLY for single hovered item */}
                   {isPointHovered && (
                     <g transform="translate(0, -12)" pointerEvents="none">
                       <rect
-                        x="-60"
-                        y="-16"
-                        width="120"
-                        height="20"
+                        x="-65"
+                        y="-17"
+                        width="130"
+                        height="21"
                         rx="4"
                         fill="rgba(15, 23, 42, 0.94)"
                         stroke="rgba(255, 255, 255, 0.25)"
@@ -231,7 +229,7 @@ export default function AtlasMap({
                         fontSize="9.5"
                         fontWeight="700"
                       >
-                        {((lang === 'te' ? translateRiver(pt.n) : pt.n) || '').slice(0, 20)}
+                        {((lang === 'te' ? translateRiver(pt.n) : pt.n) || '').slice(0, 22)}
                       </text>
                     </g>
                   )}
@@ -249,11 +247,10 @@ export default function AtlasMap({
           <small>
             {lang === 'te'
               ? translateState((hoveredItem || activeItem).st || (hoveredItem || activeItem).s)
-              : ((hoveredItem || activeItem).st || (hoveredItem || activeItem).s || (hoveredItem || activeItem).org || (hoveredItem || activeItem).cat || '')}
+              : ((hoveredItem || activeItem).st || (hoveredItem || activeItem).s || (hoveredItem || activeItem).range || (hoveredItem || activeItem).cat || '')}
           </small>
         </div>
       )}
     </div>
   );
 }
-
