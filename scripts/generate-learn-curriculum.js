@@ -1428,3 +1428,4 @@ export const LEARN_TOPICS = [
 
 fs.writeFileSync('./src/learnCurriculum.js', curriculumCode, 'utf8');
 console.log('Successfully generated src/learnCurriculum.js with 16 massive visual modules!');
+

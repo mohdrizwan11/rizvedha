@@ -129,3 +129,4 @@ const output = {
 
 fs.writeFileSync('./src/datasets/play-questions.json', JSON.stringify(output, null, 2), 'utf8');
 console.log(`Successfully generated play-questions.json with ${allQuestions.length} verified MCQs across ${files.length} topics!`);
+
