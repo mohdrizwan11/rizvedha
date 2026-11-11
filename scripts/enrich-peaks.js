@@ -561,3 +561,4 @@ const fileData = {
 
 fs.writeFileSync('./src/datasets/mountain-peaks.json', JSON.stringify(fileData, null, 2), 'utf8');
 console.log('Successfully wrote ' + allIndianPeaks.length + ' comprehensive Indian peaks to mountain-peaks.json!');
+
