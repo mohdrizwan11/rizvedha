@@ -44,16 +44,8 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
   const [selectedOpt, setSelectedOpt] = useState(null);
   const [completedList, setCompletedList] = useState([]);
 
-  // Accordion state: all 7 subjects open by default, can be toggled by user
-  const [openSubjects, setOpenSubjects] = useState({
-    'history': true,
-    'geography': true,
-    'polity': true,
-    'economics': true,
-    'science': true,
-    'culture': true,
-    'static-gk': true
-  });
+  // Accordion state: all 7 subjects closed by default, user opens and explores each topic
+  const [openSubjects, setOpenSubjects] = useState({});
 
   // Load completed topics from local storage
   useEffect(() => {
@@ -93,10 +85,10 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
 
   // Toggle all subjects open/closed
   const toggleAllSubjects = () => {
-    const allOpen = Object.values(openSubjects).every(Boolean);
+    const anyOpen = SEVEN_SUBJECTS.some(s => !!openSubjects[s.id]);
     const updated = {};
     SEVEN_SUBJECTS.forEach(s => {
-      updated[s.id] = !allOpen;
+      updated[s.id] = !anyOpen;
     });
     setOpenSubjects(updated);
   };
@@ -121,6 +113,19 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
     });
     return map;
   }, [filteredTopics]);
+
+  // When searching, automatically expand subjects with matching results
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const updated = {};
+      SEVEN_SUBJECTS.forEach(s => {
+        if ((topicsBySubject[s.subjectKey] || []).length > 0) {
+          updated[s.id] = true;
+        }
+      });
+      setOpenSubjects(updated);
+    }
+  }, [searchQuery, topicsBySubject]);
 
   // Smooth scroll to a subject section
   const scrollToSubject = (subjectId) => {
@@ -471,7 +476,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
   // VIEW MODE 1: MASTER SYLLABUS (ACCORDION WITH ARROWS DOWN & FORWARD)
   // -------------------------------------------------------------
   if (!activeTopic) {
-    const allOpen = Object.values(openSubjects).every(Boolean);
+    const anyOpen = SEVEN_SUBJECTS.some(s => !!openSubjects[s.id]);
 
     return (
       <div className="learn-master-directory">
@@ -491,7 +496,7 @@ export default function LearnView({ lang = 'en', onNavigate = () => {} }) {
             </div>
             <div className="ctb-top-actions">
               <button className="outline mini" onClick={toggleAllSubjects}>
-                {allOpen
+                {anyOpen
                   ? (lang === 'te' ? 'అన్నీ కుదించు' : 'Collapse All')
                   : (lang === 'te' ? 'అన్నీ విస్తరించు' : 'Expand All')}
               </button>
