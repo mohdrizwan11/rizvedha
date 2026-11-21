@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Icon } from "./Icon";
 import { SiteFooter } from "./SiteFooter";
-import { ProfileMenu } from "./ProfileMenu";
 import { CommandPalette } from "./CommandPalette";
 import { ScrollProgress, BackToTop } from "./Chrome";
-import { SignInNudge } from "./SignInNudge";
 import { BRAND } from "../config";
 import { useStore, streakOf, levelOf } from "../lib/store";
 import { useTheme } from "../lib/theme";
@@ -112,7 +110,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <button className="iconbtn topbar__search" onClick={() => setCmdk(true)} aria-label="Search" aria-keyshortcuts="Control+K Meta+K" title="Search — Ctrl K">
               <Icon name="Search" />
             </button>
-            <ProfileMenu />
           </div>
         </header>
 
@@ -135,7 +132,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <BackToTop />
       <CommandPalette open={cmdk} onClose={() => setCmdk(false)} />
-      <SignInNudge />
     </div>
   );
 }

@@ -29,9 +29,8 @@ source of every chapter, fact and page reference here.
 
 Open the site and start. Nothing to install, no account required.
 
-Your progress saves on the device automatically. If you want the same record on
-another phone or laptop, sign in once with Google and it follows you — the first
-sign-in merges both records, never replaces them.
+Your progress, streaks, bookmarks and game bests are saved in your browser
+automatically. Nothing leaves your device.
 
 This is static GS only. There is no Current Affairs section, by design.
 

@@ -15,7 +15,6 @@ import Bluff from "./pages/games/Bluff";
 import Match from "./pages/games/Match";
 import Sprint from "./pages/games/Sprint";
 import Progress from "./pages/Progress";
-import Account from "./pages/Account";
 import About from "./pages/About";
 import SearchPage from "./pages/SearchPage";
 import Bookmarks from "./pages/Bookmarks";
@@ -57,7 +56,7 @@ export default function App() {
         <Route path="/games/match" element={<Match />} />
         <Route path="/games/sprint" element={<Sprint />} />
         <Route path="/progress" element={<Progress />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/about" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/bookmarks" element={<Bookmarks />} />

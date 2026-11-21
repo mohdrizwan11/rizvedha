@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Icon } from "./Icon";
 import { BRAND, LINKS, FACTS } from "../config";
-import { authEnabled } from "../lib/supabase";
 
 export function SiteFooter() {
   return (
@@ -66,7 +65,7 @@ export function SiteFooter() {
           with the Staff Selection Commission.
         </span>
         <span className="tiny muted">
-          {authEnabled ? "Sign in once and your progress follows every device." : "Progress is saved on this device only."}
+          Progress is saved on this device only.
         </span>
       </div>
     </footer>

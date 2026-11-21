@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 import { ALL_CHAPTERS, SUBJECTS, MODULES, chapterById } from "../data/curriculum";
 import { useStore, streakOf, levelOf, dayKey } from "../lib/store";
-import { useAuth } from "../lib/auth";
 import { Icon } from "../components/Icon";
 import { PageHead } from "../components/Layout";
 import { Ring, Bar } from "../components/ui";
@@ -14,7 +13,6 @@ const WD = ["", "Mon", "", "Wed", "", "Fri", ""];
 
 export default function Progress() {
   const { state, reset } = useStore();
-  const auth = useAuth();
   const lvl = levelOf(state.xp);
   const streak = streakOf(state.days);
   const done = Object.values(state.chapters).filter((c) => c.done).length;
@@ -77,26 +75,8 @@ export default function Progress() {
       <PageHead
         eyebrow="Progress"
         title="Your record, in one screen"
-        sub={
-          auth.enabled
-            ? "A contribution grid for consistency, counters for output. Sign in with Google and the same record follows you to another device."
-            : "A contribution grid for consistency, counters for output. Everything is kept on this device."
-        }
+        sub="A contribution grid for consistency, counters for output. Everything is kept on this device."
       />
-
-      {auth.enabled && auth.status !== "in" && (
-        <div className="signin-bar">
-          <div className="signin-bar__copy">
-            <b>Carry this record to every device</b>
-            <span className="tiny muted">
-              Sign in with Google to sync XP, streaks, chapters and saves. Your local progress is merged, never replaced.
-            </span>
-          </div>
-          <button className="btn btn--accent btn--sm" onClick={() => void auth.signIn()}>
-            <Icon name="LogIn" size={15} /> Sign in
-          </button>
-        </div>
-      )}
 
       <div className="rank-row">
         <div className="card card--pad rank-card">

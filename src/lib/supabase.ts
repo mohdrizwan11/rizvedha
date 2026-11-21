@@ -1,7 +1,8 @@
 /* ------------------------------------------------------------------
    Supabase client, created only when the project keys exist.
-   The whole app works without this file doing anything: the client is
-   imported lazily, so an unconfigured build never ships the SDK.
+   The whole app works without this: the client is imported lazily, so
+   an unconfigured build never ships the SDK. It exists only to record
+   anonymous usage counts and (optionally) nothing else.
 ------------------------------------------------------------------- */
 
 import type { SupabaseClient } from "@supabase/supabase-js";
@@ -15,7 +16,7 @@ const KEY = (
 )?.trim();
 
 /** true once both the project URL and a public key are present in .env */
-export const authEnabled = Boolean(URL && KEY);
+export const backendEnabled = Boolean(URL && KEY);
 
 let client: SupabaseClient | null = null;
 let clientPromise: Promise<SupabaseClient> | null = null;
@@ -27,11 +28,7 @@ export async function getSupabase(): Promise<SupabaseClient | null> {
   if (!clientPromise) {
     clientPromise = import("@supabase/supabase-js").then(({ createClient }) => {
       client = createClient(URL, KEY, {
-        auth: {
-          persistSession: true,
-          autoRefreshToken: true,
-          detectSessionInUrl: true,
-        },
+        auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
       });
       return client;
     });

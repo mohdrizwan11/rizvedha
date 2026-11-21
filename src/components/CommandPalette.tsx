@@ -17,7 +17,6 @@ const PAGES: Item[] = [
   { key: "p-games", group: "Pages", title: "Games", to: "/games", icon: "Gamepad2" },
   { key: "p-progress", group: "Pages", title: "Progress", to: "/progress", icon: "Activity" },
   { key: "p-saved", group: "Pages", title: "Saved", to: "/bookmarks", icon: "Bookmark" },
-  { key: "p-account", group: "Pages", title: "Account", to: "/account", icon: "UserCog" },
   { key: "p-about", group: "Pages", title: "About", to: "/about", icon: "Info" },
 ];
 

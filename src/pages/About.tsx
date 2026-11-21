@@ -1,12 +1,25 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Icon } from "../components/Icon";
 import { PageHead } from "../components/Layout";
 import { ABOUT, BRAND, FACTS, LINKS } from "../config";
 import { useStore, levelOf } from "../lib/store";
+import { fetchStats, type SiteStats } from "../lib/analytics";
 
 export default function About() {
   const { state } = useStore();
   const lvl = levelOf(state.xp);
+  const [stats, setStats] = useState<SiteStats | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    void fetchStats().then((s) => {
+      if (alive) setStats(s);
+    });
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   return (
     <div className="page page--narrow">
@@ -56,8 +69,8 @@ export default function About() {
           <div className="about-step__n">03</div>
           <h3>Yours to keep</h3>
           <p className="tiny muted">
-            Progress, streaks and saves live in your browser. Sign in with Google and the same record
-            follows you to another device.
+            Progress, streaks and saves live in your browser. Nothing leaves this device unless you choose to
+            share it.
           </p>
         </div>
       </div>
@@ -77,6 +90,26 @@ export default function About() {
           <b style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem" }}>{state.bookmarks.length}</b>
         </div>
       </div>
+
+      {stats && (
+        <>
+          <div className="section-head">
+            <h2>Site usage</h2>
+            <button className="btn btn--ghost btn--sm" onClick={() => void fetchStats().then(setStats)}>
+              <Icon name="RotateCcw" size={14} /> Refresh
+            </button>
+          </div>
+          <div className="stats">
+            <div className="stat"><b>{stats.visitors.toLocaleString()}</b><span>Learners so far</span></div>
+            <div className="stat"><b>{stats.today.toLocaleString()}</b><span>Today</span></div>
+            <div className="stat"><b>{stats.views.toLocaleString()}</b><span>Page views</span></div>
+            <div className="stat"><b>{stats.recent.toLocaleString()}</b><span>Views · 28 days</span></div>
+          </div>
+          <p className="tiny muted" style={{ marginTop: 8 }}>
+            Counts are anonymous — one random device id per day, no names or emails.
+          </p>
+        </>
+      )}
 
       <div className="section-head"><h2>Support the project</h2></div>
       <div className="about-links">

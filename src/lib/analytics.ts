@@ -4,7 +4,7 @@
    is a no-op until Supabase keys exist.
 ------------------------------------------------------------------- */
 
-import { authEnabled, getSupabase } from "./supabase";
+import { backendEnabled, getSupabase } from "./supabase";
 
 const VID_KEY = "rv:vid";
 
@@ -36,7 +36,7 @@ let hitDisabled = false;
 
 /** Count one visit per device per day, plus one page view per route change. */
 export async function recordHit(path: string): Promise<void> {
-  if (!authEnabled || hitDisabled) return;
+  if (!backendEnabled || hitDisabled) return;
   const sb = await getSupabase();
   if (!sb) return;
   try {
@@ -47,9 +47,9 @@ export async function recordHit(path: string): Promise<void> {
   }
 }
 
-/** Aggregate, non-identifying totals for the owner's Account page. */
+/** Aggregate, non-identifying totals shown on the About page. */
 export async function fetchStats(): Promise<SiteStats | null> {
-  if (!authEnabled) return null;
+  if (!backendEnabled) return null;
   const sb = await getSupabase();
   if (!sb) return null;
   const { data, error } = await sb.rpc("rv_stats");

@@ -1,5 +1,5 @@
-/* ============================================================
-   VEDHA 2.0 — design system
+﻿/* ============================================================
+   VEDHA 2.0 â€” design system
    ============================================================ */
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..900;1,9..144,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap");
 
@@ -143,7 +143,7 @@ p { margin: 0; }
 .topbar__brand, .topbar__search { display: none; }
 .tabbar { display: none; }
 
-/* desktop search pill — opens the command palette */
+/* desktop search pill â€” opens the command palette */
 .searchpill {
   display: inline-flex; align-items: center; gap: 8px;
   height: 36px; padding: 0 7px 0 12px;
@@ -388,7 +388,7 @@ button.chip[aria-pressed="true"] { background: var(--accent); color: #fff; }
 .crumbs { display: flex; align-items: center; gap: 7px; font-size: 0.72rem; color: var(--muted); font-weight: 700; flex-wrap: wrap; }
 .crumbs a:hover { color: var(--accent-ink); }
 
-/* sticky Explore controls — always reachable, however far down you scroll */
+/* sticky Explore controls â€” always reachable, however far down you scroll */
 .explore-toolbar {
   position: sticky; top: var(--topbar-h); z-index: 36;
   margin-top: 14px; padding: 8px 10px;
@@ -1042,7 +1042,7 @@ table.data tr:nth-child(even) td { background: rgba(27, 35, 48, 0.012); }
 .exspot__num { overflow-wrap: anywhere; }
 
 /* ============================================================
-   RIZ VEDHA — shell: theme, collapsible rail, footer
+   RIZ VEDHA â€” shell: theme, collapsible rail, footer
    ============================================================ */
 
 /* ---------- dark theme ---------- */
@@ -1356,18 +1356,6 @@ html[data-theme="dark"] .heat-legend i[data-l="3"], html[data-theme="dark"] .hea
 .account__out { width: 26px; height: 26px; flex: none; }
 .app.is-rail-collapsed .account__meta { display: none; }
 
-/* ---------- sign-in banner (progress page) ---------- */
-.signin-bar {
-  display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; justify-content: space-between;
-  margin-bottom: 14px; padding: 14px 16px;
-  border: 1px dashed color-mix(in srgb, var(--accent) 40%, var(--line));
-  border-radius: var(--radius-lg);
-  background: linear-gradient(100deg, var(--accent-soft), var(--card));
-}
-.signin-bar__copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.signin-bar__copy b { font-size: 0.9rem; }
-.signin-bar__copy span { max-width: 62ch; }
-
 /* ============================================================
    Command palette, scroll progress, back-to-top (premium shell)
    ============================================================ */
@@ -1470,71 +1458,3 @@ kbd {
   .to-top { right: 14px; bottom: calc(78px + env(safe-area-inset-bottom)); }
 }
 
-/* ---------- one-time sign-in reminder ---------- */
-.nudge {
-  position: fixed; inset: 0; z-index: 95;
-  display: flex; align-items: center; justify-content: center;
-  padding: 20px;
-}
-.nudge__scrim {
-  position: absolute; inset: 0; border: 0; padding: 0; cursor: pointer;
-  background: rgba(11, 17, 26, 0.46); backdrop-filter: blur(7px);
-  animation: fade-in 0.2s var(--ease) both;
-}
-.nudge__card {
-  position: relative; width: min(432px, 100%);
-  padding: 26px 26px 22px;
-  border: 1px solid var(--line); border-radius: 24px;
-  background: var(--card); box-shadow: var(--shadow-lg);
-  animation: pop-in 0.22s var(--ease) both;
-}
-.nudge__card::before {
-  content: ""; position: absolute; inset: 0 0 auto 0; height: 130px; pointer-events: none;
-  background: radial-gradient(320px 130px at 16% 0%, var(--accent-soft), transparent 72%);
-  border-radius: 24px 24px 0 0;
-}
-.nudge__x {
-  position: absolute; top: 12px; right: 12px; z-index: 1;
-  width: 32px; height: 32px; border-radius: 50%;
-  display: grid; place-items: center; cursor: pointer;
-  border: 1px solid transparent; background: transparent; color: var(--muted);
-  transition: background 0.15s, color 0.15s;
-}
-.nudge__x:hover { background: var(--paper-2); color: var(--ink); }
-.nudge__mark {
-  position: relative; width: 46px; height: 46px; border-radius: 14px;
-  display: grid; place-items: center; margin-bottom: 14px;
-  background: linear-gradient(145deg, #0e7490, #155e75 60%, #1b2330);
-  color: #f8fafc; font-family: var(--font-display); font-weight: 800; font-size: 17px;
-  letter-spacing: -0.02em; box-shadow: 0 16px 30px -18px rgba(14, 116, 144, 0.9);
-}
-.nudge__title { position: relative; font-size: clamp(1.35rem, 3vw, 1.55rem); margin: 6px 0 8px; }
-.nudge__body { position: relative; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.55; }
-.nudge__points {
-  list-style: none; margin: 15px 0 18px; padding: 0;
-  display: grid; gap: 7px;
-}
-.nudge__points li {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 0.8rem; color: var(--ink-soft);
-}
-.nudge__points svg { color: var(--accent-ink); flex: none; }
-.nudge__actions { display: flex; gap: 8px; align-items: center; }
-.nudge__go { flex: 1; }
-.nudge__fine { margin-top: 12px; font-size: 0.7rem; color: var(--muted); }
-
-@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-@keyframes sheet-up { from { transform: translateY(26px); opacity: 0.5; } to { transform: none; opacity: 1; } }
-
-@media (max-width: 560px) {
-  .nudge { align-items: flex-end; padding: 0; }
-  .nudge__card {
-    width: 100%; max-width: none;
-    border-radius: 24px 24px 0 0;
-    padding: 24px 20px calc(22px + env(safe-area-inset-bottom));
-    animation: sheet-up 0.28s var(--ease) both;
-  }
-  .nudge__card::before { border-radius: 24px 24px 0 0; }
-  .nudge__actions { flex-direction: column; }
-  .nudge__actions .btn { width: 100%; }
-}
