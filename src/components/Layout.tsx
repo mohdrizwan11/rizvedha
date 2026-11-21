@@ -76,43 +76,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
           streak={streak}
           level={lvl}
           xp={state.xp}
+          full={full}
+          theme={theme}
           onCollapse={() => setCollapsed((c) => !c)}
           onSearch={() => setCmdk(true)}
+          onFull={toggleFull}
+          onTheme={toggleTheme}
         />
       </aside>
 
       <main className="main">
-        <header className="topbar">
-          <div className="topbar__left">
-            <Link to="/" className="topbar__brand">
-              <span className="topbar__logo">{BRAND.mark}</span>
-              <span className="topbar__title">{BRAND.name}</span>
-            </Link>
-            <button
-              className="searchpill"
-              onClick={() => setCmdk(true)}
-              aria-label="Search the whole library"
-              aria-keyshortcuts="Control+K Meta+K"
-              title="Search chapters, libraries and facts"
-            >
-              <Icon name="Search" />
-              <span>Search</span>
-              <kbd>Ctrl K</kbd>
-            </button>
-          </div>
-          <div className="topbar__right">
-            <button className="iconbtn" onClick={toggleFull} aria-label="Toggle full screen" title={full ? "Exit full screen" : "Full screen"}>
-              <Icon name={full ? "Minimize2" : "Maximize2"} />
-            </button>
-            <button className="iconbtn" onClick={toggleTheme} aria-label="Toggle theme" title={theme === "dark" ? "Light mode" : "Dark mode"}>
-              <Icon name={theme === "dark" ? "Sun" : "Moon"} />
-            </button>
-            <button className="iconbtn topbar__search" onClick={() => setCmdk(true)} aria-label="Search" aria-keyshortcuts="Control+K Meta+K" title="Search — Ctrl K">
-              <Icon name="Search" />
-            </button>
-          </div>
-        </header>
-
         {children}
 
         <SiteFooter />
@@ -141,15 +114,23 @@ function RailBody({
   streak,
   level,
   xp,
+  full,
+  theme,
   onCollapse,
   onSearch,
+  onFull,
+  onTheme,
 }: {
   collapsed: boolean;
   streak: number;
   level: { level: number; title: string };
   xp: number;
+  full: boolean;
+  theme: "light" | "dark";
   onCollapse: () => void;
   onSearch: () => void;
+  onFull: () => void;
+  onTheme: () => void;
 }) {
   return (
     <>
@@ -161,14 +142,32 @@ function RailBody({
             <div className="brand__tag">{BRAND.tagline}</div>
           </div>
         </Link>
-        <button
-          className="iconbtn iconbtn--quiet rail__collapse"
-          onClick={onCollapse}
-          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-          title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-        >
-          <Icon name={collapsed ? "PanelLeftOpen" : "PanelLeftClose"} />
-        </button>
+        <div className="rail__top-actions">
+          <button
+            className="iconbtn iconbtn--quiet rail__collapse"
+            onClick={onTheme}
+            aria-label="Toggle theme"
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
+            <Icon name={theme === "dark" ? "Sun" : "Moon"} />
+          </button>
+          <button
+            className="iconbtn iconbtn--quiet rail__collapse"
+            onClick={onFull}
+            aria-label="Toggle full screen"
+            title={full ? "Exit full screen" : "Full screen"}
+          >
+            <Icon name={full ? "Minimize2" : "Maximize2"} />
+          </button>
+          <button
+            className="iconbtn iconbtn--quiet rail__collapse"
+            onClick={onCollapse}
+            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          >
+            <Icon name={collapsed ? "PanelLeftOpen" : "PanelLeftClose"} />
+          </button>
+        </div>
       </div>
 
       <button className="searchbar" onClick={onSearch} style={{ cursor: "pointer" }}>
