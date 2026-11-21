@@ -117,6 +117,8 @@ p { margin: 0; }
 .navlink.active svg { opacity: 1; }
 
 .rail__foot { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+.rail__controls { display: flex; gap: 6px; flex-wrap: wrap; }
+.rail__controls .iconbtn { width: 36px; height: 36px; }
 .rail__streak {
   display: flex; align-items: center; gap: 10px;
   padding: 11px 12px; border-radius: 15px;

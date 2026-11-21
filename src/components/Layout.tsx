@@ -142,32 +142,14 @@ function RailBody({
             <div className="brand__tag">{BRAND.tagline}</div>
           </div>
         </Link>
-        <div className="rail__top-actions">
-          <button
-            className="iconbtn iconbtn--quiet rail__collapse"
-            onClick={onTheme}
-            aria-label="Toggle theme"
-            title={theme === "dark" ? "Light mode" : "Dark mode"}
-          >
-            <Icon name={theme === "dark" ? "Sun" : "Moon"} />
-          </button>
-          <button
-            className="iconbtn iconbtn--quiet rail__collapse"
-            onClick={onFull}
-            aria-label="Toggle full screen"
-            title={full ? "Exit full screen" : "Full screen"}
-          >
-            <Icon name={full ? "Minimize2" : "Maximize2"} />
-          </button>
-          <button
-            className="iconbtn iconbtn--quiet rail__collapse"
-            onClick={onCollapse}
-            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-            title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-          >
-            <Icon name={collapsed ? "PanelLeftOpen" : "PanelLeftClose"} />
-          </button>
-        </div>
+        <button
+          className="iconbtn iconbtn--quiet rail__collapse"
+          onClick={onCollapse}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          <Icon name={collapsed ? "PanelLeftOpen" : "PanelLeftClose"} />
+        </button>
       </div>
 
       <button className="searchbar" onClick={onSearch} style={{ cursor: "pointer" }}>
@@ -192,6 +174,32 @@ function RailBody({
       </div>
 
       <div className="rail__foot">
+        <div className="rail__controls">
+          <button
+            className="iconbtn iconbtn--quiet"
+            onClick={onTheme}
+            aria-label="Toggle theme"
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
+            <Icon name={theme === "dark" ? "Sun" : "Moon"} />
+          </button>
+          <button
+            className="iconbtn iconbtn--quiet"
+            onClick={onFull}
+            aria-label="Toggle full screen"
+            title={full ? "Exit full screen" : "Full screen"}
+          >
+            <Icon name={full ? "Minimize2" : "Maximize2"} />
+          </button>
+          <button
+            className="iconbtn iconbtn--quiet"
+            onClick={onCollapse}
+            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          >
+            <Icon name={collapsed ? "PanelLeftOpen" : "PanelLeftClose"} />
+          </button>
+        </div>
         <div className="rail__streak" title={`${streak} day streak · level ${level.level}`}>
           <Icon name="Flame" size={20} color="#d97706" />
           <div className="rail__only-text">
