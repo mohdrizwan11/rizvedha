@@ -18,6 +18,10 @@ _work/
 # source scans are never published
 *.pdf
 
+# owner-only notes and local env template (kept on disk, not published)
+OWNER-SETUP.md
+.env.example
+
 # local secrets (use .env.local; this only catches a stray .env)
 .env
 

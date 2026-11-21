@@ -5,6 +5,7 @@ import { SiteFooter } from "./SiteFooter";
 import { ProfileMenu } from "./ProfileMenu";
 import { CommandPalette } from "./CommandPalette";
 import { ScrollProgress, BackToTop } from "./Chrome";
+import { SignInNudge } from "./SignInNudge";
 import { BRAND } from "../config";
 import { useStore, streakOf, levelOf } from "../lib/store";
 import { useTheme } from "../lib/theme";
@@ -134,6 +135,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <BackToTop />
       <CommandPalette open={cmdk} onClose={() => setCmdk(false)} />
+      <SignInNudge />
     </div>
   );
 }
