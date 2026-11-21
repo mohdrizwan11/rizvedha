@@ -1,0 +1,3262 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "books-authors",
+  "file": "books_authors_app.html",
+  "mode": "deck",
+  "storageKey": "ssc_books_authors_v1",
+  "icon": "📚",
+  "description": "Bilingual study app on books and authors for SSC: ancient texts, freedom-era writing, Indian and world literature, autobiographies and literary awards, with quick quizzes and exam notes.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Books & Authors",
+      "पुस्तकें और लेखक"
+    ],
+    "hSub": [
+      "SSC Focus · Books and authors",
+      "SSC फोकस · पुस्तकें और लेखक"
+    ],
+    "learnTtl": [
+      "Learn books and authors",
+      "पुस्तकें और लेखक सीखें"
+    ],
+    "learnSub": [
+      "Open any book to read who wrote it and the facts asked in exams. Search by title or author.",
+      "किसी भी पुस्तक को खोलकर उसके लेखक और परीक्षा तथ्य पढ़ें। शीर्षक या लेखक से खोजें।"
+    ],
+    "lvlLabel": [
+      "Level · Books GK rank",
+      "स्तर · पुस्तक GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search books",
+      "पुस्तकें खोजें"
+    ],
+    "searchPh": [
+      "Title or author",
+      "शीर्षक या लेखक"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Books",
+      "पुस्तकें"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten quick questions: who wrote which book, plus exam-style questions on literature and literary awards. Each answer comes with an explanation.",
+      "दस छोटे प्रश्न: किसने कौन-सी पुस्तक लिखी, साथ में साहित्य और साहित्यिक पुरस्कारों पर परीक्षा जैसे प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "howto": [
+      "Play: ten quick questions with four options and an explanation for each. Choose a topic, or \"My mistakes\" to revise the questions you got wrong (also saved in the app's Mistake Diary).\nLearn → Books: 121 entries from ancient texts to Booker winners, with the author and exam facts.\nLearn → Exam notes: Indian Booker winners, Jnanpith landmarks, pen names and the sources of national songs.\nStats: your accuracy, best streak, level and badges.\nFacts were checked in October 2026.",
+      "खेलें: चार विकल्पों वाले दस छोटे प्रश्न, हर एक की व्याख्या के साथ। कोई विषय चुनें, या गलत हुए प्रश्न दोहराने के लिए \"मेरी गलतियाँ\" (ये ऐप की गलती डायरी में भी सुरक्षित होते हैं)।\nसीखें → पुस्तकें: 121 प्रविष्टियाँ प्राचीन ग्रंथों से बुकर विजेताओं तक, लेखक और परीक्षा तथ्यों सहित।\nसीखें → परीक्षा नोट्स: भारतीय बुकर विजेता, ज्ञानपीठ की प्रमुख बातें, उपनाम और राष्ट्रीय गीतों के स्रोत।\nआँकड़े: आपकी सटीकता, सबसे लंबी स्ट्रीक, स्तर और बैज।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "classic",
+      "icon": "📜",
+      "col": "#795548",
+      "t": [
+        "Ancient & medieval",
+        "प्राचीन और मध्यकालीन"
+      ]
+    },
+    {
+      "k": "nonfic",
+      "icon": "🏛️",
+      "col": "#1565C0",
+      "t": [
+        "History, politics & ideas",
+        "इतिहास, राजनीति और विचार"
+      ]
+    },
+    {
+      "k": "lit",
+      "icon": "🪶",
+      "col": "#AD1457",
+      "t": [
+        "Indian-language literature",
+        "भारतीय भाषाओं का साहित्य"
+      ]
+    },
+    {
+      "k": "novel",
+      "icon": "📖",
+      "col": "#2E7D32",
+      "t": [
+        "Indian writing in English",
+        "भारतीय अंग्रेज़ी लेखन"
+      ]
+    },
+    {
+      "k": "auto",
+      "icon": "🙋",
+      "col": "#E65100",
+      "t": [
+        "Autobiography & memoir",
+        "आत्मकथा और संस्मरण"
+      ]
+    },
+    {
+      "k": "world",
+      "icon": "🌍",
+      "col": "#455A64",
+      "t": [
+        "World classics",
+        "विश्व क्लासिक"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "au",
+      "t": [
+        "Author",
+        "लेखक"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "What it is",
+        "क्या है"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "au"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Bookworm",
+      "hi": "किताबी कीड़ा"
+    },
+    {
+      "min": 60,
+      "en": "Reader",
+      "hi": "पाठक"
+    },
+    {
+      "min": 150,
+      "en": "Library Regular",
+      "hi": "पुस्तकालय का नियमित"
+    },
+    {
+      "min": 320,
+      "en": "Literature Buff",
+      "hi": "साहित्य प्रेमी"
+    },
+    {
+      "min": 560,
+      "en": "Literary Scholar",
+      "hi": "साहित्य विद्वान"
+    },
+    {
+      "min": 900,
+      "en": "Pandit of Books",
+      "hi": "पुस्तक पंडित"
+    },
+    {
+      "min": 1400,
+      "en": "Books GK Champion",
+      "hi": "पुस्तक GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "📚",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🎯",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "classics",
+      "icon": "📜",
+      "t": [
+        "Ancient Wisdom",
+        "प्राचीन ज्ञान"
+      ],
+      "d": [
+        "Study 15 ancient and medieval works",
+        "15 प्राचीन और मध्यकालीन कृतियाँ पढ़ें"
+      ],
+      "need": {
+        "seen": 15,
+        "types": [
+          "classic"
+        ]
+      }
+    },
+    {
+      "id": "memoirs",
+      "icon": "🙋",
+      "t": [
+        "Life Stories",
+        "जीवन कथाएँ"
+      ],
+      "d": [
+        "Study every autobiography",
+        "सभी आत्मकथाएँ पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "auto"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Books GK Champion",
+        "पुस्तक GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "au",
+        "field": "au",
+        "ask": [
+          "Who wrote it?",
+          "इसे किसने लिखा?"
+        ],
+        "reverseId": "wb",
+        "reverseAsk": [
+          "Which of these was written by",
+          "इनमें से किसे लिखा है:"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "q": "au",
+            "n": 4
+          },
+          {
+            "q": "wb",
+            "n": 3
+          },
+          {
+            "fixed": [
+              "modern",
+              "history",
+              "freedom",
+              "memoir",
+              "world",
+              "awards"
+            ],
+            "n": 3
+          }
+        ]
+      },
+      {
+        "id": "who",
+        "t": [
+          "Who wrote it?",
+          "किसने लिखा?"
+        ],
+        "mix": [
+          {
+            "q": "au",
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "which",
+        "t": [
+          "Which book?",
+          "कौन-सी पुस्तक?"
+        ],
+        "mix": [
+          {
+            "q": "wb",
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "exam",
+        "t": [
+          "Exam-style",
+          "परीक्षा शैली"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "modern",
+              "history",
+              "freedom",
+              "memoir",
+              "world",
+              "awards"
+            ],
+            "n": 10
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Arthashastra",
+      "h": "अर्थशास्त्र",
+      "st": "Kautilya (Chanakya)",
+      "sh": "कौटिल्य (चाणक्य)",
+      "au": "Kautilya (Chanakya)",
+      "auh": "कौटिल्य (चाणक्य)",
+      "c": "classic",
+      "d": 1,
+      "tag": "Treatise on statecraft (Mauryan age)",
+      "tagh": "राज्य-शासन पर ग्रंथ (मौर्य काल)",
+      "fact": "The Arthashastra, a Sanskrit treatise on statecraft, economy and war, is ascribed to Kautilya, adviser to Chandragupta Maurya.",
+      "facth": "राज्य-शासन, अर्थव्यवस्था और युद्ध पर संस्कृत ग्रंथ अर्थशास्त्र चंद्रगुप्त मौर्य के सलाहकार कौटिल्य का माना जाता है।"
+    },
+    {
+      "n": "Indica",
+      "h": "इंडिका",
+      "st": "Megasthenes",
+      "sh": "मेगस्थनीज़",
+      "au": "Megasthenes",
+      "auh": "मेगस्थनीज़",
+      "c": "classic",
+      "d": 1,
+      "tag": "Greek account of Mauryan India",
+      "tagh": "मौर्य भारत का यूनानी वृत्तांत",
+      "fact": "Megasthenes, the Greek envoy of Seleucus to the court of Chandragupta Maurya, described India in the Indica.",
+      "facth": "चंद्रगुप्त मौर्य के दरबार में सेल्यूकस के यूनानी राजदूत मेगस्थनीज़ ने इंडिका में भारत का वर्णन किया।"
+    },
+    {
+      "n": "Abhijnanashakuntalam",
+      "h": "अभिज्ञानशाकुंतलम्",
+      "st": "Kalidasa",
+      "sh": "कालिदास",
+      "au": "Kalidasa",
+      "auh": "कालिदास",
+      "c": "classic",
+      "d": 1,
+      "tag": "Sanskrit play",
+      "tagh": "संस्कृत नाटक",
+      "fact": "Kalidasa, the great Sanskrit poet of the Gupta age, wrote the play Abhijnanashakuntalam about Shakuntala and Dushyanta.",
+      "facth": "गुप्त काल के महान संस्कृत कवि कालिदास ने शकुंतला और दुष्यंत पर नाटक अभिज्ञानशाकुंतलम् लिखा।"
+    },
+    {
+      "n": "Meghaduta",
+      "h": "मेघदूत",
+      "st": "Kalidasa",
+      "sh": "कालिदास",
+      "au": "Kalidasa",
+      "auh": "कालिदास",
+      "c": "classic",
+      "d": 2,
+      "tag": "Sanskrit lyric poem",
+      "tagh": "संस्कृत गीतिकाव्य",
+      "fact": "Kalidasa's Meghaduta is a poem in which an exiled yaksha sends a message to his wife through a cloud.",
+      "facth": "कालिदास के मेघदूत में निर्वासित यक्ष बादल के द्वारा अपनी पत्नी को संदेश भेजता है।"
+    },
+    {
+      "n": "Mudrarakshasa",
+      "h": "मुद्राराक्षस",
+      "st": "Vishakhadatta",
+      "sh": "विशाखदत्त",
+      "au": "Vishakhadatta",
+      "auh": "विशाखदत्त",
+      "c": "classic",
+      "d": 2,
+      "tag": "Political drama",
+      "tagh": "राजनीतिक नाटक",
+      "fact": "Vishakhadatta's play Mudrarakshasa tells how Chanakya won over Rakshasa, minister of the Nandas, for Chandragupta Maurya.",
+      "facth": "विशाखदत्त का नाटक मुद्राराक्षस बताता है कि चाणक्य ने नंदों के मंत्री राक्षस को चंद्रगुप्त मौर्य के पक्ष में कैसे किया।"
+    },
+    {
+      "n": "Harshacharita",
+      "h": "हर्षचरित",
+      "st": "Banabhatta",
+      "sh": "बाणभट्ट",
+      "au": "Banabhatta",
+      "auh": "बाणभट्ट",
+      "c": "classic",
+      "d": 1,
+      "tag": "Biography of King Harsha",
+      "tagh": "राजा हर्ष की जीवनी",
+      "fact": "Banabhatta, court poet of Harshavardhana, wrote the Harshacharita, a biography of the king; he also wrote Kadambari.",
+      "facth": "हर्षवर्धन के दरबारी कवि बाणभट्ट ने राजा की जीवनी हर्षचरित लिखी; उन्होंने कादंबरी भी लिखी।"
+    },
+    {
+      "n": "Rajatarangini",
+      "h": "राजतरंगिणी",
+      "st": "Kalhana",
+      "sh": "कल्हण",
+      "au": "Kalhana",
+      "auh": "कल्हण",
+      "c": "classic",
+      "d": 1,
+      "tag": "History of the kings of Kashmir",
+      "tagh": "कश्मीर के राजाओं का इतिहास",
+      "fact": "Kalhana's Rajatarangini (12th century) is a verse history of the kings of Kashmir, often called India's first true history.",
+      "facth": "कल्हण की राजतरंगिणी (12वीं सदी) कश्मीर के राजाओं का पद्य इतिहास है, जिसे अक्सर भारत का पहला सच्चा इतिहास कहा जाता है।"
+    },
+    {
+      "n": "Gita Govinda",
+      "h": "गीत गोविंद",
+      "st": "Jayadeva",
+      "sh": "जयदेव",
+      "au": "Jayadeva",
+      "auh": "जयदेव",
+      "c": "classic",
+      "d": 2,
+      "tag": "Songs of Radha and Krishna",
+      "tagh": "राधा-कृष्ण के गीत",
+      "fact": "Jayadeva's 12th-century Gita Govinda on the love of Radha and Krishna is sung at the Jagannath temple and in Odissi.",
+      "facth": "राधा-कृष्ण के प्रेम पर जयदेव का 12वीं सदी का गीत गोविंद जगन्नाथ मंदिर और ओडिसी में गाया जाता है।"
+    },
+    {
+      "n": "Panchatantra",
+      "h": "पंचतंत्र",
+      "st": "Vishnu Sharma",
+      "sh": "विष्णु शर्मा",
+      "au": "Vishnu Sharma",
+      "auh": "विष्णु शर्मा",
+      "c": "classic",
+      "d": 1,
+      "tag": "Animal fables",
+      "tagh": "पशु कथाएँ",
+      "fact": "The Panchatantra, a collection of animal fables teaching practical wisdom, is ascribed to Vishnu Sharma.",
+      "facth": "व्यावहारिक ज्ञान सिखाने वाली पशु कथाओं का संग्रह पंचतंत्र विष्णु शर्मा का माना जाता है।"
+    },
+    {
+      "n": "Mrichchhakatika",
+      "h": "मृच्छकटिकम्",
+      "st": "Shudraka",
+      "sh": "शूद्रक",
+      "au": "Shudraka",
+      "auh": "शूद्रक",
+      "c": "classic",
+      "d": 2,
+      "tag": "Sanskrit play, The Little Clay Cart",
+      "tagh": "संस्कृत नाटक, मिट्टी की गाड़ी",
+      "fact": "Shudraka's Mrichchhakatika (The Little Clay Cart) is a Sanskrit play about the merchant Charudatta and Vasantasena.",
+      "facth": "शूद्रक का मृच्छकटिकम् (मिट्टी की गाड़ी) व्यापारी चारुदत्त और वसंतसेना पर संस्कृत नाटक है।"
+    },
+    {
+      "n": "Buddhacharita",
+      "h": "बुद्धचरित",
+      "st": "Ashvaghosha",
+      "sh": "अश्वघोष",
+      "au": "Ashvaghosha",
+      "auh": "अश्वघोष",
+      "c": "classic",
+      "d": 2,
+      "tag": "Life of the Buddha in verse",
+      "tagh": "पद्य में बुद्ध का जीवन",
+      "fact": "Ashvaghosha, a Buddhist poet in the court of Kanishka, wrote the Buddhacharita, a verse life of the Buddha.",
+      "facth": "कनिष्क के दरबार के बौद्ध कवि अश्वघोष ने बुद्ध का पद्य जीवन बुद्धचरित लिखा।"
+    },
+    {
+      "n": "Ashtadhyayi",
+      "h": "अष्टाध्यायी",
+      "st": "Panini",
+      "sh": "पाणिनि",
+      "au": "Panini",
+      "auh": "पाणिनि",
+      "c": "classic",
+      "d": 1,
+      "tag": "Sanskrit grammar",
+      "tagh": "संस्कृत व्याकरण",
+      "fact": "Panini's Ashtadhyayi sets out the grammar of Sanskrit in about 4,000 rules in eight chapters.",
+      "facth": "पाणिनि की अष्टाध्यायी आठ अध्यायों में लगभग 4,000 सूत्रों में संस्कृत व्याकरण बताती है।"
+    },
+    {
+      "n": "Tirukkural",
+      "h": "तिरुक्कुरल",
+      "st": "Thiruvalluvar",
+      "sh": "तिरुवल्लुवर",
+      "au": "Thiruvalluvar",
+      "auh": "तिरुवल्लुवर",
+      "c": "classic",
+      "d": 1,
+      "tag": "Tamil couplets on ethics",
+      "tagh": "नीति पर तमिल दोहे",
+      "fact": "Thiruvalluvar's Tirukkural has 1,330 Tamil couplets on virtue, wealth and love.",
+      "facth": "तिरुवल्लुवर के तिरुक्कुरल में धर्म, अर्थ और प्रेम पर 1,330 तमिल दोहे हैं।"
+    },
+    {
+      "n": "Silappatikaram",
+      "h": "शिलप्पदिकारम",
+      "st": "Ilango Adigal",
+      "sh": "इलांगो अडिगल",
+      "au": "Ilango Adigal",
+      "auh": "इलांगो अडिगल",
+      "c": "classic",
+      "d": 2,
+      "tag": "Tamil epic of Kannagi",
+      "tagh": "कण्णगी का तमिल महाकाव्य",
+      "fact": "Ilango Adigal's Silappatikaram, one of the five great Tamil epics, tells the story of Kannagi and her anklet.",
+      "facth": "इलांगो अडिगल का शिलप्पदिकारम, पाँच महान तमिल महाकाव्यों में से एक, कण्णगी और उसके नूपुर की कथा कहता है।"
+    },
+    {
+      "n": "Manimekalai",
+      "h": "मणिमेकलै",
+      "st": "Sittalai Sattanar",
+      "sh": "सित्तलै सात्तनार",
+      "au": "Sittalai Sattanar",
+      "auh": "सित्तलै सात्तनार",
+      "c": "classic",
+      "d": 3,
+      "tag": "Tamil Buddhist epic",
+      "tagh": "तमिल बौद्ध महाकाव्य",
+      "fact": "Manimekalai by Sittalai Sattanar continues the story of Silappatikaram through Manimekalai, who becomes a Buddhist nun.",
+      "facth": "सित्तलै सात्तनार का मणिमेकलै शिलप्पदिकारम की कथा को मणिमेकलै के माध्यम से आगे बढ़ाता है, जो बौद्ध भिक्षुणी बनती है।"
+    },
+    {
+      "n": "Kavirajamarga",
+      "h": "कविराजमार्ग",
+      "st": "Amoghavarsha I",
+      "sh": "अमोघवर्ष प्रथम",
+      "au": "Amoghavarsha I",
+      "auh": "अमोघवर्ष प्रथम",
+      "c": "classic",
+      "d": 3,
+      "tag": "Earliest Kannada work on poetics",
+      "tagh": "काव्यशास्त्र पर सबसे पुरानी कन्नड़ कृति",
+      "fact": "Kavirajamarga, the earliest known Kannada work on poetics, is credited to the Rashtrakuta king Amoghavarsha I (with his court poet Sri Vijaya).",
+      "facth": "काव्यशास्त्र पर सबसे पुरानी ज्ञात कन्नड़ कृति कविराजमार्ग राष्ट्रकूट राजा अमोघवर्ष प्रथम (और उनके दरबारी कवि श्रीविजय) की मानी जाती है।"
+    },
+    {
+      "n": "Prithviraj Raso",
+      "h": "पृथ्वीराज रासो",
+      "st": "Chand Bardai",
+      "sh": "चंद बरदाई",
+      "au": "Chand Bardai",
+      "auh": "चंद बरदाई",
+      "c": "classic",
+      "d": 1,
+      "tag": "Epic of Prithviraj Chauhan",
+      "tagh": "पृथ्वीराज चौहान का महाकाव्य",
+      "fact": "Chand Bardai, court poet of Prithviraj Chauhan, is credited with the Prithviraj Raso, an epic on the king's life.",
+      "facth": "पृथ्वीराज चौहान के दरबारी कवि चंद बरदाई को राजा के जीवन पर महाकाव्य पृथ्वीराज रासो का श्रेय है।"
+    },
+    {
+      "n": "Ramcharitmanas",
+      "h": "रामचरितमानस",
+      "st": "Tulsidas",
+      "sh": "तुलसीदास",
+      "au": "Tulsidas",
+      "auh": "तुलसीदास",
+      "c": "classic",
+      "d": 1,
+      "tag": "Ramayana in Awadhi",
+      "tagh": "अवधी में रामायण",
+      "fact": "Tulsidas wrote the Ramcharitmanas, the story of Rama in Awadhi, in the 16th century.",
+      "facth": "तुलसीदास ने 16वीं सदी में अवधी में राम की कथा रामचरितमानस लिखी।"
+    },
+    {
+      "n": "Padmavat",
+      "h": "पद्मावत",
+      "st": "Malik Muhammad Jayasi",
+      "sh": "मलिक मुहम्मद जायसी",
+      "au": "Malik Muhammad Jayasi",
+      "auh": "मलिक मुहम्मद जायसी",
+      "c": "classic",
+      "d": 2,
+      "tag": "Epic poem on Padmavati",
+      "tagh": "पद्मावती पर महाकाव्य",
+      "fact": "Malik Muhammad Jayasi's Padmavat (1540) is an Awadhi epic poem on Queen Padmavati of Chittor.",
+      "facth": "मलिक मुहम्मद जायसी का पद्मावत (1540) चित्तौड़ की रानी पद्मावती पर अवधी महाकाव्य है।"
+    },
+    {
+      "n": "Baburnama",
+      "h": "बाबरनामा",
+      "st": "Babur",
+      "sh": "बाबर",
+      "au": "Babur",
+      "auh": "बाबर",
+      "c": "classic",
+      "d": 1,
+      "tag": "Memoirs in Chagatai Turkish",
+      "tagh": "चग़ताई तुर्की में संस्मरण",
+      "fact": "The Baburnama (Tuzuk-i-Baburi) is the autobiography of Babur, founder of the Mughal empire, written in Chagatai Turkish.",
+      "facth": "बाबरनामा (तुज़ुक-ए-बाबरी) मुग़ल साम्राज्य के संस्थापक बाबर की चग़ताई तुर्की में लिखी आत्मकथा है।"
+    },
+    {
+      "n": "Akbarnama",
+      "h": "अकबरनामा",
+      "st": "Abul Fazl",
+      "sh": "अबुल फ़ज़ल",
+      "au": "Abul Fazl",
+      "auh": "अबुल फ़ज़ल",
+      "c": "classic",
+      "d": 1,
+      "tag": "History of Akbar's reign",
+      "tagh": "अकबर के शासन का इतिहास",
+      "fact": "Abul Fazl, one of Akbar's navaratnas, wrote the Akbarnama; its third volume is the Ain-i-Akbari.",
+      "facth": "अकबर के नवरत्नों में से एक अबुल फ़ज़ल ने अकबरनामा लिखा; इसका तीसरा खंड आइन-ए-अकबरी है।"
+    },
+    {
+      "n": "Humayun-nama",
+      "h": "हुमायूँनामा",
+      "st": "Gulbadan Begum",
+      "sh": "गुलबदन बेगम",
+      "au": "Gulbadan Begum",
+      "auh": "गुलबदन बेगम",
+      "c": "classic",
+      "d": 2,
+      "tag": "Account of Humayun's life",
+      "tagh": "हुमायूँ के जीवन का वृत्तांत",
+      "fact": "Gulbadan Begum, Babur's daughter, wrote the Humayun-nama about the life of her brother Humayun.",
+      "facth": "बाबर की बेटी गुलबदन बेगम ने अपने भाई हुमायूँ के जीवन पर हुमायूँनामा लिखा।"
+    },
+    {
+      "n": "Tuzuk-i-Jahangiri",
+      "h": "तुज़ुक-ए-जहाँगीरी",
+      "st": "Jahangir",
+      "sh": "जहाँगीर",
+      "au": "Jahangir",
+      "auh": "जहाँगीर",
+      "c": "classic",
+      "d": 2,
+      "tag": "Memoirs of Jahangir",
+      "tagh": "जहाँगीर के संस्मरण",
+      "fact": "The Tuzuk-i-Jahangiri (Jahangirnama) is the autobiography of the Mughal emperor Jahangir.",
+      "facth": "तुज़ुक-ए-जहाँगीरी (जहाँगीरनामा) मुग़ल बादशाह जहाँगीर की आत्मकथा है।"
+    },
+    {
+      "n": "Kitab-ul-Hind",
+      "h": "किताब-उल-हिंद",
+      "st": "Al-Biruni",
+      "sh": "अल-बिरूनी",
+      "au": "Al-Biruni",
+      "auh": "अल-बिरूनी",
+      "c": "classic",
+      "d": 1,
+      "tag": "11th-century study of India",
+      "tagh": "11वीं सदी का भारत अध्ययन",
+      "fact": "Al-Biruni, who came with Mahmud of Ghazni, wrote Kitab-ul-Hind (Tahqiq-i-Hind) in Arabic about Indian science, religion and society.",
+      "facth": "महमूद ग़ज़नवी के साथ आए अल-बिरूनी ने भारतीय विज्ञान, धर्म और समाज पर अरबी में किताब-उल-हिंद (तहक़ीक़-ए-हिंद) लिखी।"
+    },
+    {
+      "n": "Rihla",
+      "h": "रेहला",
+      "st": "Ibn Battuta",
+      "sh": "इब्न बतूता",
+      "au": "Ibn Battuta",
+      "auh": "इब्न बतूता",
+      "c": "classic",
+      "d": 1,
+      "tag": "Travels in the age of Muhammad bin Tughlaq",
+      "tagh": "मुहम्मद बिन तुग़लक़ के समय की यात्राएँ",
+      "fact": "The Moroccan traveller Ibn Battuta described the court of Muhammad bin Tughlaq in his travel book, the Rihla.",
+      "facth": "मोरक्को के यात्री इब्न बतूता ने अपनी यात्रा-पुस्तक रेहला में मुहम्मद बिन तुग़लक़ के दरबार का वर्णन किया।"
+    },
+    {
+      "n": "Tarikh-i-Firoz Shahi",
+      "h": "तारीख़-ए-फ़िरोज़शाही",
+      "st": "Ziauddin Barani",
+      "sh": "ज़ियाउद्दीन बरनी",
+      "au": "Ziauddin Barani",
+      "auh": "ज़ियाउद्दीन बरनी",
+      "c": "classic",
+      "d": 2,
+      "tag": "History of the Delhi Sultanate",
+      "tagh": "दिल्ली सल्तनत का इतिहास",
+      "fact": "Ziauddin Barani wrote the Tarikh-i-Firoz Shahi, a history of the Delhi Sultanate up to Firoz Shah Tughlaq.",
+      "facth": "ज़ियाउद्दीन बरनी ने फ़िरोज़ शाह तुग़लक़ तक के दिल्ली सल्तनत के इतिहास तारीख़-ए-फ़िरोज़शाही को लिखा।"
+    },
+    {
+      "n": "Amuktamalyada",
+      "h": "आमुक्तमाल्यदा",
+      "st": "Krishnadevaraya",
+      "sh": "कृष्णदेवराय",
+      "au": "Krishnadevaraya",
+      "auh": "कृष्णदेवराय",
+      "c": "classic",
+      "d": 2,
+      "tag": "Telugu poem by a Vijayanagara king",
+      "tagh": "विजयनगर राजा की तेलुगु कविता",
+      "fact": "Krishnadevaraya, the Vijayanagara emperor, wrote the Telugu poem Amuktamalyada about the Vaishnava saint Andal.",
+      "facth": "विजयनगर सम्राट कृष्णदेवराय ने वैष्णव संत आंडाल पर तेलुगु काव्य आमुक्तमाल्यदा लिखा।"
+    },
+    {
+      "n": "Gitanjali",
+      "h": "गीतांजलि",
+      "st": "Rabindranath Tagore",
+      "sh": "रवींद्रनाथ टैगोर",
+      "au": "Rabindranath Tagore",
+      "auh": "रवींद्रनाथ टैगोर",
+      "c": "lit",
+      "d": 1,
+      "tag": "Poems; Nobel Prize 1913",
+      "tagh": "कविताएँ; नोबेल पुरस्कार 1913",
+      "fact": "Rabindranath Tagore won the Nobel Prize in Literature in 1913 for Gitanjali, the first Nobel for an Asian.",
+      "facth": "रवींद्रनाथ टैगोर को 1913 में गीतांजलि के लिए साहित्य का नोबेल मिला, जो किसी एशियाई को पहला नोबेल था।"
+    },
+    {
+      "n": "Anandamath",
+      "h": "आनंदमठ",
+      "st": "Bankim Chandra Chattopadhyay",
+      "sh": "बंकिमचंद्र चट्टोपाध्याय",
+      "au": "Bankim Chandra Chattopadhyay",
+      "auh": "बंकिमचंद्र चट्टोपाध्याय",
+      "c": "lit",
+      "d": 1,
+      "tag": "Novel containing Vande Mataram",
+      "tagh": "वंदे मातरम् वाला उपन्यास",
+      "fact": "Bankim Chandra Chattopadhyay's Bengali novel Anandamath (1882) contains the song Vande Mataram, India's national song.",
+      "facth": "बंकिमचंद्र चट्टोपाध्याय के बांग्ला उपन्यास आनंदमठ (1882) में राष्ट्रगीत वंदे मातरम् है।"
+    },
+    {
+      "n": "The Discovery of India",
+      "h": "द डिस्कवरी ऑफ़ इंडिया",
+      "st": "Jawaharlal Nehru",
+      "sh": "जवाहरलाल नेहरू",
+      "au": "Jawaharlal Nehru",
+      "auh": "जवाहरलाल नेहरू",
+      "c": "nonfic",
+      "d": 1,
+      "tag": "Written in Ahmednagar Fort jail",
+      "tagh": "अहमदनगर क़िले की जेल में लिखी",
+      "fact": "Jawaharlal Nehru wrote The Discovery of India in Ahmednagar Fort prison during 1942-46; he also wrote Glimpses of World History.",
+      "facth": "जवाहरलाल नेहरू ने 1942-46 में अहमदनगर क़िले की जेल में द डिस्कवरी ऑफ़ इंडिया लिखी; उन्होंने ग्लिम्पसेज़ ऑफ़ वर्ल्ड हिस्ट्री भी लिखी।"
+    },
+    {
+      "n": "Glimpses of World History",
+      "h": "ग्लिम्पसेज़ ऑफ़ वर्ल्ड हिस्ट्री",
+      "st": "Jawaharlal Nehru",
+      "sh": "जवाहरलाल नेहरू",
+      "au": "Jawaharlal Nehru",
+      "auh": "जवाहरलाल नेहरू",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Letters to Indira from prison",
+      "tagh": "जेल से इंदिरा को पत्र",
+      "fact": "Glimpses of World History is a collection of letters Jawaharlal Nehru wrote from prison to his daughter Indira.",
+      "facth": "ग्लिम्पसेज़ ऑफ़ वर्ल्ड हिस्ट्री जवाहरलाल नेहरू द्वारा जेल से अपनी बेटी इंदिरा को लिखे पत्रों का संग्रह है।"
+    },
+    {
+      "n": "My Experiments with Truth",
+      "h": "सत्य के प्रयोग",
+      "st": "Mahatma Gandhi",
+      "sh": "महात्मा गांधी",
+      "au": "Mahatma Gandhi",
+      "auh": "महात्मा गांधी",
+      "c": "auto",
+      "d": 1,
+      "tag": "Autobiography, first written in Gujarati",
+      "tagh": "आत्मकथा, पहले गुजराती में लिखी",
+      "fact": "The Story of My Experiments with Truth is the autobiography of Mahatma Gandhi, written in Gujarati and serialised in Navajivan from 1925.",
+      "facth": "सत्य के प्रयोग महात्मा गांधी की आत्मकथा है, जो गुजराती में लिखी गई और 1925 से नवजीवन में धारावाहिक छपी।"
+    },
+    {
+      "n": "Hind Swaraj",
+      "h": "हिंद स्वराज",
+      "st": "Mahatma Gandhi",
+      "sh": "महात्मा गांधी",
+      "au": "Mahatma Gandhi",
+      "auh": "महात्मा गांधी",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Written on a ship in 1909",
+      "tagh": "1909 में जहाज़ पर लिखी",
+      "fact": "Gandhi wrote Hind Swaraj in 1909 on a ship from London to South Africa, setting out his idea of self-rule.",
+      "facth": "गांधी ने 1909 में लंदन से दक्षिण अफ़्रीका जाते जहाज़ पर स्वराज के अपने विचार बताते हुए हिंद स्वराज लिखी।"
+    },
+    {
+      "n": "Poverty and Un-British Rule in India",
+      "h": "पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया",
+      "st": "Dadabhai Naoroji",
+      "sh": "दादाभाई नौरोजी",
+      "au": "Dadabhai Naoroji",
+      "auh": "दादाभाई नौरोजी",
+      "c": "nonfic",
+      "d": 1,
+      "tag": "The drain of wealth theory",
+      "tagh": "धन निकासी का सिद्धांत",
+      "fact": "Dadabhai Naoroji explained the drain of wealth from India to Britain in Poverty and Un-British Rule in India (1901).",
+      "facth": "दादाभाई नौरोजी ने पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया (1901) में भारत से ब्रिटेन की ओर धन निकासी समझाई।"
+    },
+    {
+      "n": "Annihilation of Caste",
+      "h": "जाति का विनाश",
+      "st": "B. R. Ambedkar",
+      "sh": "बी. आर. आंबेडकर",
+      "au": "B. R. Ambedkar",
+      "auh": "बी. आर. आंबेडकर",
+      "c": "nonfic",
+      "d": 1,
+      "tag": "Undelivered speech of 1936",
+      "tagh": "1936 का न दिया गया भाषण",
+      "fact": "B. R. Ambedkar published Annihilation of Caste in 1936 after the organisers cancelled the speech; he also wrote The Buddha and His Dhamma.",
+      "facth": "बी. आर. आंबेडकर ने 1936 में आयोजकों द्वारा भाषण रद्द करने के बाद जाति का विनाश प्रकाशित किया; उन्होंने द बुद्धा एंड हिज़ धम्म भी लिखी।"
+    },
+    {
+      "n": "Gita Rahasya",
+      "h": "गीता रहस्य",
+      "st": "Bal Gangadhar Tilak",
+      "sh": "बाल गंगाधर तिलक",
+      "au": "Bal Gangadhar Tilak",
+      "auh": "बाल गंगाधर तिलक",
+      "c": "nonfic",
+      "d": 1,
+      "tag": "Written in Mandalay jail",
+      "tagh": "मांडले जेल में लिखी",
+      "fact": "Bal Gangadhar Tilak wrote Gita Rahasya, a commentary on the Bhagavad Gita, in Mandalay jail in Burma.",
+      "facth": "बाल गंगाधर तिलक ने बर्मा की मांडले जेल में भगवद्गीता पर भाष्य गीता रहस्य लिखा।"
+    },
+    {
+      "n": "India Wins Freedom",
+      "h": "इंडिया विंस फ़्रीडम",
+      "st": "Maulana Abul Kalam Azad",
+      "sh": "मौलाना अबुल कलाम आज़ाद",
+      "au": "Maulana Abul Kalam Azad",
+      "auh": "मौलाना अबुल कलाम आज़ाद",
+      "c": "auto",
+      "d": 2,
+      "tag": "Memoir of the freedom struggle",
+      "tagh": "स्वतंत्रता संग्राम के संस्मरण",
+      "fact": "India Wins Freedom is the autobiographical account of Maulana Abul Kalam Azad, India's first Education Minister.",
+      "facth": "इंडिया विंस फ़्रीडम भारत के पहले शिक्षा मंत्री मौलाना अबुल कलाम आज़ाद का आत्मकथात्मक वृत्तांत है।"
+    },
+    {
+      "n": "The Indian Struggle",
+      "h": "द इंडियन स्ट्रगल",
+      "st": "Subhas Chandra Bose",
+      "sh": "सुभाष चंद्र बोस",
+      "au": "Subhas Chandra Bose",
+      "auh": "सुभाष चंद्र बोस",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "History of the national movement, 1920-42",
+      "tagh": "राष्ट्रीय आंदोलन का इतिहास, 1920-42",
+      "fact": "Subhas Chandra Bose wrote The Indian Struggle about the national movement from 1920 to 1942.",
+      "facth": "सुभाष चंद्र बोस ने 1920 से 1942 तक के राष्ट्रीय आंदोलन पर द इंडियन स्ट्रगल लिखी।"
+    },
+    {
+      "n": "Satyarth Prakash",
+      "h": "सत्यार्थ प्रकाश",
+      "st": "Swami Dayanand Saraswati",
+      "sh": "स्वामी दयानंद सरस्वती",
+      "au": "Swami Dayanand Saraswati",
+      "auh": "स्वामी दयानंद सरस्वती",
+      "c": "nonfic",
+      "d": 1,
+      "tag": "Founding text of the Arya Samaj",
+      "tagh": "आर्य समाज का मूल ग्रंथ",
+      "fact": "Swami Dayanand Saraswati, founder of the Arya Samaj (1875), wrote Satyarth Prakash in Hindi.",
+      "facth": "आर्य समाज (1875) के संस्थापक स्वामी दयानंद सरस्वती ने हिंदी में सत्यार्थ प्रकाश लिखा।"
+    },
+    {
+      "n": "Ghulamgiri",
+      "h": "गुलामगिरी",
+      "st": "Jyotirao Phule",
+      "sh": "ज्योतिराव फुले",
+      "au": "Jyotirao Phule",
+      "auh": "ज्योतिराव फुले",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Book against caste slavery (1873)",
+      "tagh": "जातिगत दासता के विरुद्ध पुस्तक (1873)",
+      "fact": "Jyotirao Phule wrote Ghulamgiri (Slavery) in 1873 against caste oppression; he founded the Satyashodhak Samaj the same year.",
+      "facth": "ज्योतिराव फुले ने 1873 में जातिगत शोषण के विरुद्ध गुलामगिरी लिखी; उसी वर्ष उन्होंने सत्यशोधक समाज की स्थापना की।"
+    },
+    {
+      "n": "Neel Darpan",
+      "h": "नील दर्पण",
+      "st": "Dinabandhu Mitra",
+      "sh": "दीनबंधु मित्र",
+      "au": "Dinabandhu Mitra",
+      "auh": "दीनबंधु मित्र",
+      "c": "lit",
+      "d": 2,
+      "tag": "Play on the indigo revolt",
+      "tagh": "नील विद्रोह पर नाटक",
+      "fact": "Dinabandhu Mitra's Bengali play Neel Darpan (1860) showed the oppression of indigo farmers by British planters.",
+      "facth": "दीनबंधु मित्र के बांग्ला नाटक नील दर्पण (1860) ने अंग्रेज़ बागान मालिकों द्वारा नील किसानों का शोषण दिखाया।"
+    },
+    {
+      "n": "Unhappy India",
+      "h": "अनहैप्पी इंडिया",
+      "st": "Lala Lajpat Rai",
+      "sh": "लाला लाजपत राय",
+      "au": "Lala Lajpat Rai",
+      "auh": "लाला लाजपत राय",
+      "c": "nonfic",
+      "d": 3,
+      "tag": "Reply to Katherine Mayo's Mother India",
+      "tagh": "कैथरीन मेयो की 'मदर इंडिया' का उत्तर",
+      "fact": "Lala Lajpat Rai wrote Unhappy India (1928) as a reply to Katherine Mayo's book Mother India.",
+      "facth": "लाला लाजपत राय ने कैथरीन मेयो की पुस्तक 'मदर इंडिया' के उत्तर में अनहैप्पी इंडिया (1928) लिखी।"
+    },
+    {
+      "n": "Why I Am an Atheist",
+      "h": "मैं नास्तिक क्यों हूँ",
+      "st": "Bhagat Singh",
+      "sh": "भगत सिंह",
+      "au": "Bhagat Singh",
+      "auh": "भगत सिंह",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Essay written in Lahore jail",
+      "tagh": "लाहौर जेल में लिखा निबंध",
+      "fact": "Bhagat Singh wrote the essay Why I Am an Atheist in Lahore Central Jail in 1930.",
+      "facth": "भगत सिंह ने 1930 में लाहौर सेंट्रल जेल में निबंध मैं नास्तिक क्यों हूँ लिखा।"
+    },
+    {
+      "n": "Midnight's Children",
+      "h": "मिडनाइट्स चिल्ड्रन",
+      "st": "Salman Rushdie",
+      "sh": "सलमान रुश्दी",
+      "au": "Salman Rushdie",
+      "auh": "सलमान रुश्दी",
+      "c": "novel",
+      "d": 1,
+      "tag": "Booker Prize 1981",
+      "tagh": "बुकर पुरस्कार 1981",
+      "fact": "Salman Rushdie's Midnight's Children won the Booker Prize in 1981 and later the Booker of Bookers (1993) and the Best of the Booker (2008).",
+      "facth": "सलमान रुश्दी के मिडनाइट्स चिल्ड्रन को 1981 में बुकर पुरस्कार मिला और बाद में बुकर ऑफ़ बुकर्स (1993) व बेस्ट ऑफ़ द बुकर (2008) भी।"
+    },
+    {
+      "n": "The God of Small Things",
+      "h": "द गॉड ऑफ़ स्मॉल थिंग्स",
+      "st": "Arundhati Roy",
+      "sh": "अरुंधति रॉय",
+      "au": "Arundhati Roy",
+      "auh": "अरुंधति रॉय",
+      "c": "novel",
+      "d": 1,
+      "tag": "Booker Prize 1997",
+      "tagh": "बुकर पुरस्कार 1997",
+      "fact": "Arundhati Roy's first novel The God of Small Things, set in Kerala, won the Booker Prize in 1997.",
+      "facth": "केरल की पृष्ठभूमि वाले अरुंधति रॉय के पहले उपन्यास द गॉड ऑफ़ स्मॉल थिंग्स को 1997 में बुकर पुरस्कार मिला।"
+    },
+    {
+      "n": "The Inheritance of Loss",
+      "h": "द इनहेरिटेंस ऑफ़ लॉस",
+      "st": "Kiran Desai",
+      "sh": "किरण देसाई",
+      "au": "Kiran Desai",
+      "auh": "किरण देसाई",
+      "c": "novel",
+      "d": 2,
+      "tag": "Booker Prize 2006",
+      "tagh": "बुकर पुरस्कार 2006",
+      "fact": "Kiran Desai's The Inheritance of Loss won the Booker Prize in 2006; her mother Anita Desai was shortlisted three times.",
+      "facth": "किरण देसाई के द इनहेरिटेंस ऑफ़ लॉस को 2006 में बुकर मिला; उनकी माँ अनीता देसाई तीन बार अंतिम सूची में रहीं।"
+    },
+    {
+      "n": "The White Tiger",
+      "h": "द व्हाइट टाइगर",
+      "st": "Aravind Adiga",
+      "sh": "अरविंद अडिगा",
+      "au": "Aravind Adiga",
+      "auh": "अरविंद अडिगा",
+      "c": "novel",
+      "d": 1,
+      "tag": "Booker Prize 2008",
+      "tagh": "बुकर पुरस्कार 2008",
+      "fact": "Aravind Adiga's debut novel The White Tiger won the Booker Prize in 2008.",
+      "facth": "अरविंद अडिगा के पहले उपन्यास द व्हाइट टाइगर को 2008 में बुकर पुरस्कार मिला।"
+    },
+    {
+      "n": "Tomb of Sand",
+      "h": "रेत समाधि",
+      "st": "Geetanjali Shree",
+      "sh": "गीतांजलि श्री",
+      "au": "Geetanjali Shree",
+      "auh": "गीतांजलि श्री",
+      "c": "novel",
+      "d": 1,
+      "tag": "International Booker 2022",
+      "tagh": "अंतरराष्ट्रीय बुकर 2022",
+      "fact": "Geetanjali Shree's Hindi novel Ret Samadhi, translated by Daisy Rockwell as Tomb of Sand, won the International Booker Prize in 2022, a first for an Indian language.",
+      "facth": "गीतांजलि श्री के हिंदी उपन्यास रेत समाधि ने, डेज़ी रॉकवेल के अनुवाद टॉम्ब ऑफ़ सैंड के रूप में, 2022 का अंतरराष्ट्रीय बुकर जीता; किसी भारतीय भाषा के लिए यह पहला था।"
+    },
+    {
+      "n": "Heart Lamp",
+      "h": "हार्ट लैंप",
+      "st": "Banu Mushtaq",
+      "sh": "बानू मुश्ताक",
+      "au": "Banu Mushtaq",
+      "auh": "बानू मुश्ताक",
+      "c": "novel",
+      "d": 1,
+      "tag": "International Booker 2025",
+      "tagh": "अंतरराष्ट्रीय बुकर 2025",
+      "fact": "Banu Mushtaq's Kannada short stories Heart Lamp, translated by Deepa Bhasthi, won the International Booker Prize in 2025.",
+      "facth": "बानू मुश्ताक की कन्नड़ कहानियों हार्ट लैंप ने, दीपा भस्थी के अनुवाद में, 2025 का अंतरराष्ट्रीय बुकर जीता।"
+    },
+    {
+      "n": "A Suitable Boy",
+      "h": "अ सूटेबल बॉय",
+      "st": "Vikram Seth",
+      "sh": "विक्रम सेठ",
+      "au": "Vikram Seth",
+      "auh": "विक्रम सेठ",
+      "c": "novel",
+      "d": 1,
+      "tag": "One of the longest novels in English",
+      "tagh": "अंग्रेज़ी के सबसे लंबे उपन्यासों में",
+      "fact": "Vikram Seth's A Suitable Boy (1993), set in newly independent India, is one of the longest novels published in English.",
+      "facth": "नए स्वतंत्र भारत की पृष्ठभूमि वाला विक्रम सेठ का अ सूटेबल बॉय (1993) अंग्रेज़ी में छपे सबसे लंबे उपन्यासों में है।"
+    },
+    {
+      "n": "Train to Pakistan",
+      "h": "ट्रेन टू पाकिस्तान",
+      "st": "Khushwant Singh",
+      "sh": "खुशवंत सिंह",
+      "au": "Khushwant Singh",
+      "auh": "खुशवंत सिंह",
+      "c": "novel",
+      "d": 1,
+      "tag": "Novel on the Partition",
+      "tagh": "विभाजन पर उपन्यास",
+      "fact": "Khushwant Singh's Train to Pakistan (1956) is set in a Punjab border village during the Partition.",
+      "facth": "खुशवंत सिंह का ट्रेन टू पाकिस्तान (1956) विभाजन के समय पंजाब के एक सीमावर्ती गाँव की कहानी है।"
+    },
+    {
+      "n": "The Guide",
+      "h": "द गाइड",
+      "st": "R. K. Narayan",
+      "sh": "आर. के. नारायण",
+      "au": "R. K. Narayan",
+      "auh": "आर. के. नारायण",
+      "c": "novel",
+      "d": 1,
+      "tag": "Sahitya Akademi Award 1960",
+      "tagh": "साहित्य अकादमी पुरस्कार 1960",
+      "fact": "R. K. Narayan's The Guide, set in the fictional town of Malgudi, won the Sahitya Akademi Award (1960).",
+      "facth": "काल्पनिक क़स्बे मालगुडी पर आधारित आर. के. नारायण के द गाइड को साहित्य अकादमी पुरस्कार (1960) मिला।"
+    },
+    {
+      "n": "Malgudi Days",
+      "h": "मालगुडी डेज़",
+      "st": "R. K. Narayan",
+      "sh": "आर. के. नारायण",
+      "au": "R. K. Narayan",
+      "auh": "आर. के. नारायण",
+      "c": "novel",
+      "d": 1,
+      "tag": "Stories of the town of Malgudi",
+      "tagh": "मालगुडी क़स्बे की कहानियाँ",
+      "fact": "Malgudi Days is a collection of short stories by R. K. Narayan set in the fictional town of Malgudi.",
+      "facth": "मालगुडी डेज़ आर. के. नारायण की काल्पनिक क़स्बे मालगुडी पर आधारित कहानियों का संग्रह है।"
+    },
+    {
+      "n": "Untouchable",
+      "h": "अनटचेबल",
+      "st": "Mulk Raj Anand",
+      "sh": "मुल्क राज आनंद",
+      "au": "Mulk Raj Anand",
+      "auh": "मुल्क राज आनंद",
+      "c": "novel",
+      "d": 2,
+      "tag": "A day in the life of Bakha",
+      "tagh": "बाखा के जीवन का एक दिन",
+      "fact": "Mulk Raj Anand's first novel Untouchable (1935) follows a day in the life of Bakha, a sweeper; he also wrote Coolie.",
+      "facth": "मुल्क राज आनंद का पहला उपन्यास अनटचेबल (1935) सफ़ाईकर्मी बाखा के जीवन का एक दिन दिखाता है; उन्होंने कुली भी लिखा।"
+    },
+    {
+      "n": "Kanthapura",
+      "h": "कंथापुरा",
+      "st": "Raja Rao",
+      "sh": "राजा राव",
+      "au": "Raja Rao",
+      "auh": "राजा राव",
+      "c": "novel",
+      "d": 2,
+      "tag": "A village in Gandhi's movement",
+      "tagh": "गांधी के आंदोलन में एक गाँव",
+      "fact": "Raja Rao's Kanthapura (1938) shows a South Indian village joining Gandhi's freedom movement.",
+      "facth": "राजा राव का कंथापुरा (1938) एक दक्षिण भारतीय गाँव को गांधी के स्वतंत्रता आंदोलन से जुड़ता दिखाता है।"
+    },
+    {
+      "n": "Interpreter of Maladies",
+      "h": "इंटरप्रेटर ऑफ़ मैलेडीज़",
+      "st": "Jhumpa Lahiri",
+      "sh": "झुंपा लाहिड़ी",
+      "au": "Jhumpa Lahiri",
+      "auh": "झुंपा लाहिड़ी",
+      "c": "novel",
+      "d": 2,
+      "tag": "Pulitzer Prize for Fiction 2000",
+      "tagh": "कथा साहित्य का पुलित्ज़र 2000",
+      "fact": "Jhumpa Lahiri's short-story collection Interpreter of Maladies won the Pulitzer Prize for Fiction in 2000; she also wrote The Namesake.",
+      "facth": "झुंपा लाहिड़ी के कहानी संग्रह इंटरप्रेटर ऑफ़ मैलेडीज़ को 2000 में कथा का पुलित्ज़र मिला; उन्होंने द नेमसेक भी लिखी।"
+    },
+    {
+      "n": "The Shadow Lines",
+      "h": "द शैडो लाइंस",
+      "st": "Amitav Ghosh",
+      "sh": "अमिताव घोष",
+      "au": "Amitav Ghosh",
+      "auh": "अमिताव घोष",
+      "c": "novel",
+      "d": 2,
+      "tag": "Sahitya Akademi Award 1989",
+      "tagh": "साहित्य अकादमी पुरस्कार 1989",
+      "fact": "Amitav Ghosh's The Shadow Lines won the Sahitya Akademi Award; he later received the Jnanpith Award (2018), the first for an English writer.",
+      "facth": "अमिताव घोष के द शैडो लाइंस को साहित्य अकादमी पुरस्कार मिला; बाद में उन्हें ज्ञानपीठ (2018) मिला, जो किसी अंग्रेज़ी लेखक को पहला था।"
+    },
+    {
+      "n": "Sea of Poppies",
+      "h": "सी ऑफ़ पॉपीज़",
+      "st": "Amitav Ghosh",
+      "sh": "अमिताव घोष",
+      "au": "Amitav Ghosh",
+      "auh": "अमिताव घोष",
+      "c": "novel",
+      "d": 3,
+      "tag": "First novel of the Ibis trilogy",
+      "tagh": "आइबिस त्रयी का पहला उपन्यास",
+      "fact": "Sea of Poppies (2008), about the opium trade, is the first novel of Amitav Ghosh's Ibis trilogy.",
+      "facth": "अफ़ीम व्यापार पर सी ऑफ़ पॉपीज़ (2008) अमिताव घोष की आइबिस त्रयी का पहला उपन्यास है।"
+    },
+    {
+      "n": "A Fine Balance",
+      "h": "अ फ़ाइन बैलेंस",
+      "st": "Rohinton Mistry",
+      "sh": "रोहिंटन मिस्त्री",
+      "au": "Rohinton Mistry",
+      "auh": "रोहिंटन मिस्त्री",
+      "c": "novel",
+      "d": 3,
+      "tag": "Novel set during the Emergency",
+      "tagh": "आपातकाल पर आधारित उपन्यास",
+      "fact": "Rohinton Mistry's A Fine Balance (1995) is set in Bombay during the Emergency.",
+      "facth": "रोहिंटन मिस्त्री का अ फ़ाइन बैलेंस (1995) आपातकाल के दौरान बंबई में घटित है।"
+    },
+    {
+      "n": "The Room on the Roof",
+      "h": "द रूम ऑन द रूफ़",
+      "st": "Ruskin Bond",
+      "sh": "रस्किन बॉन्ड",
+      "au": "Ruskin Bond",
+      "auh": "रस्किन बॉन्ड",
+      "c": "novel",
+      "d": 2,
+      "tag": "Ruskin Bond's first novel",
+      "tagh": "रस्किन बॉन्ड का पहला उपन्यास",
+      "fact": "The Room on the Roof, Ruskin Bond's first novel, won the John Llewellyn Rhys Prize; Bond lives in Mussoorie.",
+      "facth": "रस्किन बॉन्ड के पहले उपन्यास द रूम ऑन द रूफ़ को जॉन लेवेलिन राइस पुरस्कार मिला; बॉन्ड मसूरी में रहते हैं।"
+    },
+    {
+      "n": "Five Point Someone",
+      "h": "फ़ाइव पॉइंट समवन",
+      "st": "Chetan Bhagat",
+      "sh": "चेतन भगत",
+      "au": "Chetan Bhagat",
+      "auh": "चेतन भगत",
+      "c": "novel",
+      "d": 1,
+      "tag": "Basis of the film 3 Idiots",
+      "tagh": "फ़िल्म 3 इडियट्स का आधार",
+      "fact": "Chetan Bhagat's Five Point Someone (2004), about three IIT students, inspired the film 3 Idiots.",
+      "facth": "तीन IIT छात्रों पर चेतन भगत का फ़ाइव पॉइंट समवन (2004) फ़िल्म 3 इडियट्स का आधार बना।"
+    },
+    {
+      "n": "Clear Light of Day",
+      "h": "क्लियर लाइट ऑफ़ डे",
+      "st": "Anita Desai",
+      "sh": "अनीता देसाई",
+      "au": "Anita Desai",
+      "auh": "अनीता देसाई",
+      "c": "novel",
+      "d": 3,
+      "tag": "Booker-shortlisted novel set in Delhi",
+      "tagh": "दिल्ली पर आधारित बुकर सूची का उपन्यास",
+      "fact": "Anita Desai's Clear Light of Day (1980), set in Old Delhi, was shortlisted for the Booker Prize.",
+      "facth": "पुरानी दिल्ली पर आधारित अनीता देसाई का क्लियर लाइट ऑफ़ डे (1980) बुकर की अंतिम सूची में था।"
+    },
+    {
+      "n": "Godaan",
+      "h": "गोदान",
+      "st": "Munshi Premchand",
+      "sh": "मुंशी प्रेमचंद",
+      "au": "Munshi Premchand",
+      "auh": "मुंशी प्रेमचंद",
+      "c": "lit",
+      "d": 1,
+      "tag": "Hindi novel of the farmer Hori",
+      "tagh": "किसान होरी का हिंदी उपन्यास",
+      "fact": "Munshi Premchand's last complete novel Godaan (1936) tells of the poor farmer Hori's wish to own a cow.",
+      "facth": "मुंशी प्रेमचंद का अंतिम पूर्ण उपन्यास गोदान (1936) ग़रीब किसान होरी की गाय रखने की इच्छा की कहानी है।"
+    },
+    {
+      "n": "Gaban",
+      "h": "ग़बन",
+      "st": "Munshi Premchand",
+      "sh": "मुंशी प्रेमचंद",
+      "au": "Munshi Premchand",
+      "auh": "मुंशी प्रेमचंद",
+      "c": "lit",
+      "d": 2,
+      "tag": "Hindi novel on greed and debt",
+      "tagh": "लालच और कर्ज़ पर हिंदी उपन्यास",
+      "fact": "Premchand's Gaban (1931) is about Ramanath, who embezzles money to satisfy his wife's love of jewellery.",
+      "facth": "प्रेमचंद का ग़बन (1931) रमानाथ की कहानी है जो पत्नी के गहनों के शौक़ के लिए पैसे का ग़बन करता है।"
+    },
+    {
+      "n": "Madhushala",
+      "h": "मधुशाला",
+      "st": "Harivansh Rai Bachchan",
+      "sh": "हरिवंश राय बच्चन",
+      "au": "Harivansh Rai Bachchan",
+      "auh": "हरिवंश राय बच्चन",
+      "c": "lit",
+      "d": 1,
+      "tag": "Hindi poem of 135 quatrains",
+      "tagh": "135 रुबाइयों की हिंदी कविता",
+      "fact": "Harivansh Rai Bachchan's Madhushala (1935) is a Hindi poem of rubaiyat using the tavern as a metaphor for life.",
+      "facth": "हरिवंश राय बच्चन की मधुशाला (1935) रुबाइयों की हिंदी कविता है जो मधुशाला को जीवन का रूपक बनाती है।"
+    },
+    {
+      "n": "Kamayani",
+      "h": "कामायनी",
+      "st": "Jaishankar Prasad",
+      "sh": "जयशंकर प्रसाद",
+      "au": "Jaishankar Prasad",
+      "auh": "जयशंकर प्रसाद",
+      "c": "lit",
+      "d": 1,
+      "tag": "Hindi epic of the Chhayavad age",
+      "tagh": "छायावाद युग का हिंदी महाकाव्य",
+      "fact": "Jaishankar Prasad's Kamayani (1936), about Manu and Shraddha, is a landmark epic of Hindi Chhayavad poetry.",
+      "facth": "मनु और श्रद्धा पर जयशंकर प्रसाद की कामायनी (1936) हिंदी छायावाद का महत्त्वपूर्ण महाकाव्य है।"
+    },
+    {
+      "n": "Rashmirathi",
+      "h": "रश्मिरथी",
+      "st": "Ramdhari Singh Dinkar",
+      "sh": "रामधारी सिंह दिनकर",
+      "au": "Ramdhari Singh Dinkar",
+      "auh": "रामधारी सिंह दिनकर",
+      "c": "lit",
+      "d": 1,
+      "tag": "Epic poem on Karna's life",
+      "tagh": "कर्ण के जीवन पर खंडकाव्य",
+      "fact": "Ramdhari Singh Dinkar's Rashmirathi tells the story of Karna; Dinkar won the Jnanpith Award in 1972 for Urvashi.",
+      "facth": "रामधारी सिंह दिनकर की रश्मिरथी कर्ण की कथा कहती है; दिनकर को उर्वशी के लिए 1972 में ज्ञानपीठ मिला।"
+    },
+    {
+      "n": "Raag Darbari",
+      "h": "राग दरबारी",
+      "st": "Shrilal Shukla",
+      "sh": "श्रीलाल शुक्ल",
+      "au": "Shrilal Shukla",
+      "auh": "श्रीलाल शुक्ल",
+      "c": "lit",
+      "d": 2,
+      "tag": "Satire on village politics",
+      "tagh": "ग्रामीण राजनीति पर व्यंग्य",
+      "fact": "Shrilal Shukla's Raag Darbari, a satire on the village of Shivpalganj, won the Sahitya Akademi Award in 1970.",
+      "facth": "शिवपालगंज गाँव पर श्रीलाल शुक्ल के व्यंग्य राग दरबारी को 1970 में साहित्य अकादमी पुरस्कार मिला।"
+    },
+    {
+      "n": "Tamas",
+      "h": "तमस",
+      "st": "Bhisham Sahni",
+      "sh": "भीष्म साहनी",
+      "au": "Bhisham Sahni",
+      "auh": "भीष्म साहनी",
+      "c": "lit",
+      "d": 2,
+      "tag": "Hindi novel on Partition riots",
+      "tagh": "विभाजन के दंगों पर हिंदी उपन्यास",
+      "fact": "Bhisham Sahni's Tamas, on the riots before Partition, won the Sahitya Akademi Award in 1975.",
+      "facth": "विभाजन से पहले के दंगों पर भीष्म साहनी के तमस को 1975 में साहित्य अकादमी पुरस्कार मिला।"
+    },
+    {
+      "n": "Chitralekha",
+      "h": "चित्रलेखा",
+      "st": "Bhagwati Charan Verma",
+      "sh": "भगवतीचरण वर्मा",
+      "au": "Bhagwati Charan Verma",
+      "auh": "भगवतीचरण वर्मा",
+      "c": "lit",
+      "d": 3,
+      "tag": "Hindi novel on sin and virtue",
+      "tagh": "पाप और पुण्य पर हिंदी उपन्यास",
+      "fact": "Bhagwati Charan Verma's Chitralekha (1934) explores the meaning of sin and virtue through a dancer of that name.",
+      "facth": "भगवतीचरण वर्मा का चित्रलेखा (1934) इसी नाम की नर्तकी के माध्यम से पाप और पुण्य का अर्थ खोजता है।"
+    },
+    {
+      "n": "Devdas",
+      "h": "देवदास",
+      "st": "Sarat Chandra Chattopadhyay",
+      "sh": "शरतचंद्र चट्टोपाध्याय",
+      "au": "Sarat Chandra Chattopadhyay",
+      "auh": "शरतचंद्र चट्टोपाध्याय",
+      "c": "lit",
+      "d": 1,
+      "tag": "Bengali novel of lost love",
+      "tagh": "खोए प्रेम का बांग्ला उपन्यास",
+      "fact": "Sarat Chandra Chattopadhyay's Bengali novel Devdas (1917) has been made into many films.",
+      "facth": "शरतचंद्र चट्टोपाध्याय के बांग्ला उपन्यास देवदास (1917) पर कई फ़िल्में बनी हैं।"
+    },
+    {
+      "n": "Pather Panchali",
+      "h": "पथेर पांचाली",
+      "st": "Bibhutibhushan Bandyopadhyay",
+      "sh": "बिभूतिभूषण बंद्योपाध्याय",
+      "au": "Bibhutibhushan Bandyopadhyay",
+      "auh": "बिभूतिभूषण बंद्योपाध्याय",
+      "c": "lit",
+      "d": 2,
+      "tag": "Basis of Satyajit Ray's first film",
+      "tagh": "सत्यजित राय की पहली फ़िल्म का आधार",
+      "fact": "Bibhutibhushan Bandyopadhyay's Bengali novel Pather Panchali became Satyajit Ray's first film (1955).",
+      "facth": "बिभूतिभूषण बंद्योपाध्याय का बांग्ला उपन्यास पथेर पांचाली सत्यजित राय की पहली फ़िल्म (1955) बना।"
+    },
+    {
+      "n": "Gora",
+      "h": "गोरा",
+      "st": "Rabindranath Tagore",
+      "sh": "रवींद्रनाथ टैगोर",
+      "au": "Rabindranath Tagore",
+      "auh": "रवींद्रनाथ टैगोर",
+      "c": "lit",
+      "d": 2,
+      "tag": "Bengali novel on identity",
+      "tagh": "पहचान पर बांग्ला उपन्यास",
+      "fact": "Tagore's novel Gora (1910) is about an Irish-born orphan raised as a Hindu in Bengal.",
+      "facth": "टैगोर का उपन्यास गोरा (1910) बंगाल में हिंदू के रूप में पले एक आयरिश मूल के अनाथ की कहानी है।"
+    },
+    {
+      "n": "Yayati",
+      "h": "ययाति",
+      "st": "V. S. Khandekar",
+      "sh": "वि. स. खांडेकर",
+      "au": "V. S. Khandekar",
+      "auh": "वि. स. खांडेकर",
+      "c": "lit",
+      "d": 3,
+      "tag": "Marathi novel; Jnanpith 1974",
+      "tagh": "मराठी उपन्यास; ज्ञानपीठ 1974",
+      "fact": "V. S. Khandekar won the Jnanpith Award in 1974 for his Marathi novel Yayati, the first Jnanpith for Marathi.",
+      "facth": "वि. स. खांडेकर को मराठी उपन्यास ययाति के लिए 1974 में ज्ञानपीठ मिला, जो मराठी को पहला ज्ञानपीठ था।"
+    },
+    {
+      "n": "Odakkuzhal",
+      "h": "ओडक्कुझल",
+      "st": "G. Sankara Kurup",
+      "sh": "जी. शंकर कुरुप",
+      "au": "G. Sankara Kurup",
+      "auh": "जी. शंकर कुरुप",
+      "c": "lit",
+      "d": 2,
+      "tag": "Malayalam poems; the first Jnanpith (1965)",
+      "tagh": "मलयालम कविताएँ; पहला ज्ञानपीठ (1965)",
+      "fact": "G. Sankara Kurup received the first Jnanpith Award in 1965 for his Malayalam poetry collection Odakkuzhal (The Bamboo Flute).",
+      "facth": "जी. शंकर कुरुप को 1965 में मलयालम कविता संग्रह ओडक्कुझल (बाँसुरी) के लिए पहला ज्ञानपीठ मिला।"
+    },
+    {
+      "n": "Chemmeen",
+      "h": "चेम्मीन",
+      "st": "Thakazhi Sivasankara Pillai",
+      "sh": "तकषी शिवशंकर पिल्लै",
+      "au": "Thakazhi Sivasankara Pillai",
+      "auh": "तकषी शिवशंकर पिल्लै",
+      "c": "lit",
+      "d": 3,
+      "tag": "Malayalam novel of fishing folk",
+      "tagh": "मछुआरों का मलयालम उपन्यास",
+      "fact": "Thakazhi Sivasankara Pillai's Malayalam novel Chemmeen (1956) is set among the fishing community of Kerala.",
+      "facth": "तकषी शिवशंकर पिल्लै का मलयालम उपन्यास चेम्मीन (1956) केरल के मछुआरा समुदाय पर आधारित है।"
+    },
+    {
+      "n": "Aadhe Adhure",
+      "h": "आधे अधूरे",
+      "st": "Mohan Rakesh",
+      "sh": "मोहन राकेश",
+      "au": "Mohan Rakesh",
+      "auh": "मोहन राकेश",
+      "c": "lit",
+      "d": 3,
+      "tag": "Hindi play on a middle-class family",
+      "tagh": "मध्यवर्गीय परिवार पर हिंदी नाटक",
+      "fact": "Mohan Rakesh's Hindi play Aadhe Adhure (1969) shows a broken middle-class family; he also wrote Ashadh Ka Ek Din.",
+      "facth": "मोहन राकेश का हिंदी नाटक आधे अधूरे (1969) टूटते मध्यवर्गीय परिवार को दिखाता है; उन्होंने आषाढ़ का एक दिन भी लिखा।"
+    },
+    {
+      "n": "Wings of Fire",
+      "h": "विंग्स ऑफ़ फ़ायर",
+      "st": "A. P. J. Abdul Kalam",
+      "sh": "ए. पी. जे. अब्दुल कलाम",
+      "au": "A. P. J. Abdul Kalam",
+      "auh": "ए. पी. जे. अब्दुल कलाम",
+      "c": "auto",
+      "d": 1,
+      "tag": "Autobiography, with Arun Tiwari",
+      "tagh": "आत्मकथा, अरुण तिवारी के साथ",
+      "fact": "Wings of Fire (1999) is the autobiography of A. P. J. Abdul Kalam, written with Arun Tiwari; Kalam also wrote Ignited Minds and India 2020.",
+      "facth": "विंग्स ऑफ़ फ़ायर (1999) ए. पी. जे. अब्दुल कलाम की अरुण तिवारी के साथ लिखी आत्मकथा है; कलाम ने इग्नाइटेड माइंड्स और इंडिया 2020 भी लिखीं।"
+    },
+    {
+      "n": "Ignited Minds",
+      "h": "इग्नाइटेड माइंड्स",
+      "st": "A. P. J. Abdul Kalam",
+      "sh": "ए. पी. जे. अब्दुल कलाम",
+      "au": "A. P. J. Abdul Kalam",
+      "auh": "ए. पी. जे. अब्दुल कलाम",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Book for young Indians",
+      "tagh": "युवा भारतीयों के लिए पुस्तक",
+      "fact": "A. P. J. Abdul Kalam's Ignited Minds (2002) urges young Indians to dream of a developed India.",
+      "facth": "ए. पी. जे. अब्दुल कलाम की इग्नाइटेड माइंड्स (2002) युवा भारतीयों को विकसित भारत का सपना देखने को प्रेरित करती है।"
+    },
+    {
+      "n": "Playing It My Way",
+      "h": "प्लेइंग इट माय वे",
+      "st": "Sachin Tendulkar",
+      "sh": "सचिन तेंदुलकर",
+      "au": "Sachin Tendulkar",
+      "auh": "सचिन तेंदुलकर",
+      "c": "auto",
+      "d": 1,
+      "tag": "Cricketer's autobiography (2014)",
+      "tagh": "क्रिकेटर की आत्मकथा (2014)",
+      "fact": "Playing It My Way (2014) is the autobiography of Sachin Tendulkar, written with Boria Majumdar.",
+      "facth": "प्लेइंग इट माय वे (2014) सचिन तेंदुलकर की बोरिया मजूमदार के साथ लिखी आत्मकथा है।"
+    },
+    {
+      "n": "The Test of My Life",
+      "h": "द टेस्ट ऑफ़ माय लाइफ़",
+      "st": "Yuvraj Singh",
+      "sh": "युवराज सिंह",
+      "au": "Yuvraj Singh",
+      "auh": "युवराज सिंह",
+      "c": "auto",
+      "d": 2,
+      "tag": "Memoir of beating cancer",
+      "tagh": "कैंसर से जीत का संस्मरण",
+      "fact": "In The Test of My Life, cricketer Yuvraj Singh writes about his fight against cancer after the 2011 World Cup.",
+      "facth": "द टेस्ट ऑफ़ माय लाइफ़ में क्रिकेटर युवराज सिंह 2011 विश्व कप के बाद कैंसर से अपने संघर्ष के बारे में लिखते हैं।"
+    },
+    {
+      "n": "Unbreakable",
+      "h": "अनब्रेकेबल",
+      "st": "Mary Kom",
+      "sh": "मैरी कॉम",
+      "au": "Mary Kom",
+      "auh": "मैरी कॉम",
+      "c": "auto",
+      "d": 2,
+      "tag": "Boxer's autobiography",
+      "tagh": "मुक्केबाज़ की आत्मकथा",
+      "fact": "Unbreakable is the autobiography of the boxer M. C. Mary Kom, six-time world champion from Manipur.",
+      "facth": "अनब्रेकेबल मणिपुर की छह बार की विश्व चैंपियन मुक्केबाज़ एम. सी. मैरी कॉम की आत्मकथा है।"
+    },
+    {
+      "n": "The Race of My Life",
+      "h": "द रेस ऑफ़ माय लाइफ़",
+      "st": "Milkha Singh",
+      "sh": "मिल्खा सिंह",
+      "au": "Milkha Singh",
+      "auh": "मिल्खा सिंह",
+      "c": "auto",
+      "d": 2,
+      "tag": "The Flying Sikh's autobiography",
+      "tagh": "'फ़्लाइंग सिख' की आत्मकथा",
+      "fact": "The Race of My Life is the autobiography of Milkha Singh, the 'Flying Sikh'; it inspired the film Bhaag Milkha Bhaag.",
+      "facth": "द रेस ऑफ़ माय लाइफ़ 'फ़्लाइंग सिख' मिल्खा सिंह की आत्मकथा है; इस पर फ़िल्म भाग मिल्खा भाग बनी।"
+    },
+    {
+      "n": "Ace Against Odds",
+      "h": "ऐस अगेंस्ट ऑड्स",
+      "st": "Sania Mirza",
+      "sh": "सानिया मिर्ज़ा",
+      "au": "Sania Mirza",
+      "auh": "सानिया मिर्ज़ा",
+      "c": "auto",
+      "d": 2,
+      "tag": "Tennis player's autobiography",
+      "tagh": "टेनिस खिलाड़ी की आत्मकथा",
+      "fact": "Ace Against Odds (2016) is the autobiography of tennis player Sania Mirza.",
+      "facth": "ऐस अगेंस्ट ऑड्स (2016) टेनिस खिलाड़ी सानिया मिर्ज़ा की आत्मकथा है।"
+    },
+    {
+      "n": "281 and Beyond",
+      "h": "281 एंड बियॉन्ड",
+      "st": "V. V. S. Laxman",
+      "sh": "वी. वी. एस. लक्ष्मण",
+      "au": "V. V. S. Laxman",
+      "auh": "वी. वी. एस. लक्ष्मण",
+      "c": "auto",
+      "d": 2,
+      "tag": "Named after his 281 at Kolkata, 2001",
+      "tagh": "कोलकाता 2001 की 281 रन की पारी पर नाम",
+      "fact": "V. V. S. Laxman's autobiography 281 and Beyond is named after his innings of 281 against Australia at Kolkata in 2001.",
+      "facth": "वी. वी. एस. लक्ष्मण की आत्मकथा 281 एंड बियॉन्ड का नाम 2001 में कोलकाता में ऑस्ट्रेलिया के विरुद्ध 281 रन की पारी पर है।"
+    },
+    {
+      "n": "Straight from the Heart",
+      "h": "स्ट्रेट फ़्रॉम द हार्ट",
+      "st": "Kapil Dev",
+      "sh": "कपिल देव",
+      "au": "Kapil Dev",
+      "auh": "कपिल देव",
+      "c": "auto",
+      "d": 2,
+      "tag": "1983 World Cup captain's autobiography",
+      "tagh": "1983 विश्व कप कप्तान की आत्मकथा",
+      "fact": "Straight from the Heart is the autobiography of Kapil Dev, captain of India's 1983 World Cup-winning team.",
+      "facth": "स्ट्रेट फ़्रॉम द हार्ट भारत की 1983 विश्व कप विजेता टीम के कप्तान कपिल देव की आत्मकथा है।"
+    },
+    {
+      "n": "Sunny Days",
+      "h": "सनी डेज़",
+      "st": "Sunil Gavaskar",
+      "sh": "सुनील गावस्कर",
+      "au": "Sunil Gavaskar",
+      "auh": "सुनील गावस्कर",
+      "c": "auto",
+      "d": 2,
+      "tag": "Batsman's autobiography",
+      "tagh": "बल्लेबाज़ की आत्मकथा",
+      "fact": "Sunny Days (1976) is the autobiography of Sunil Gavaskar, the first batsman to score 10,000 Test runs.",
+      "facth": "सनी डेज़ (1976) टेस्ट में 10,000 रन बनाने वाले पहले बल्लेबाज़ सुनील गावस्कर की आत्मकथा है।"
+    },
+    {
+      "n": "A Shot at History",
+      "h": "अ शॉट एट हिस्ट्री",
+      "st": "Abhinav Bindra",
+      "sh": "अभिनव बिंद्रा",
+      "au": "Abhinav Bindra",
+      "auh": "अभिनव बिंद्रा",
+      "c": "auto",
+      "d": 2,
+      "tag": "First individual Olympic gold medallist's memoir",
+      "tagh": "पहले व्यक्तिगत ओलंपिक स्वर्ण विजेता का संस्मरण",
+      "fact": "A Shot at History is shooter Abhinav Bindra's account of winning India's first individual Olympic gold at Beijing 2008.",
+      "facth": "अ शॉट एट हिस्ट्री निशानेबाज़ अभिनव बिंद्रा का बीजिंग 2008 में भारत का पहला व्यक्तिगत ओलंपिक स्वर्ण जीतने का वृत्तांत है।"
+    },
+    {
+      "n": "Playing to Win",
+      "h": "प्लेइंग टू विन",
+      "st": "Saina Nehwal",
+      "sh": "साइना नेहवाल",
+      "au": "Saina Nehwal",
+      "auh": "साइना नेहवाल",
+      "c": "auto",
+      "d": 3,
+      "tag": "Badminton player's autobiography",
+      "tagh": "बैडमिंटन खिलाड़ी की आत्मकथा",
+      "fact": "Playing to Win is the autobiography of badminton player Saina Nehwal, bronze medallist at London 2012.",
+      "facth": "प्लेइंग टू विन लंदन 2012 की कांस्य पदक विजेता बैडमिंटन खिलाड़ी साइना नेहवाल की आत्मकथा है।"
+    },
+    {
+      "n": "The Accidental Prime Minister",
+      "h": "द एक्सीडेंटल प्राइम मिनिस्टर",
+      "st": "Sanjaya Baru",
+      "sh": "संजय बारू",
+      "au": "Sanjaya Baru",
+      "auh": "संजय बारू",
+      "c": "nonfic",
+      "d": 1,
+      "tag": "Book on Manmohan Singh",
+      "tagh": "मनमोहन सिंह पर पुस्तक",
+      "fact": "Sanjaya Baru, Manmohan Singh's former media adviser, wrote The Accidental Prime Minister (2014) about him.",
+      "facth": "मनमोहन सिंह के पूर्व मीडिया सलाहकार संजय बारू ने उन पर द एक्सीडेंटल प्राइम मिनिस्टर (2014) लिखी।"
+    },
+    {
+      "n": "My Country My Life",
+      "h": "माय कंट्री माय लाइफ़",
+      "st": "L. K. Advani",
+      "sh": "एल. के. आडवाणी",
+      "au": "L. K. Advani",
+      "auh": "एल. के. आडवाणी",
+      "c": "auto",
+      "d": 2,
+      "tag": "Autobiography of a former Deputy PM",
+      "tagh": "पूर्व उप-प्रधानमंत्री की आत्मकथा",
+      "fact": "My Country My Life (2008) is the autobiography of L. K. Advani, former Deputy Prime Minister, who received the Bharat Ratna in 2024.",
+      "facth": "माय कंट्री माय लाइफ़ (2008) पूर्व उप-प्रधानमंत्री एल. के. आडवाणी की आत्मकथा है, जिन्हें 2024 में भारत रत्न मिला।"
+    },
+    {
+      "n": "Exam Warriors",
+      "h": "एग्ज़ाम वॉरियर्स",
+      "st": "Narendra Modi",
+      "sh": "नरेंद्र मोदी",
+      "au": "Narendra Modi",
+      "auh": "नरेंद्र मोदी",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Book for students on exam stress",
+      "tagh": "परीक्षा तनाव पर छात्रों के लिए पुस्तक",
+      "fact": "Exam Warriors (2018) by Prime Minister Narendra Modi offers students tips on handling exam stress.",
+      "facth": "प्रधानमंत्री नरेंद्र मोदी की एग्ज़ाम वॉरियर्स (2018) छात्रों को परीक्षा का तनाव सँभालने के उपाय देती है।"
+    },
+    {
+      "n": "India After Gandhi",
+      "h": "इंडिया आफ़्टर गांधी",
+      "st": "Ramachandra Guha",
+      "sh": "रामचंद्र गुहा",
+      "au": "Ramachandra Guha",
+      "auh": "रामचंद्र गुहा",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "History of independent India",
+      "tagh": "स्वतंत्र भारत का इतिहास",
+      "fact": "Ramachandra Guha wrote India After Gandhi, a history of independent India; he also wrote Makers of Modern India.",
+      "facth": "रामचंद्र गुहा ने स्वतंत्र भारत का इतिहास इंडिया आफ़्टर गांधी लिखा; उन्होंने मेकर्स ऑफ़ मॉडर्न इंडिया भी लिखी।"
+    },
+    {
+      "n": "Freedom at Midnight",
+      "h": "फ़्रीडम एट मिडनाइट",
+      "st": "Larry Collins and Dominique Lapierre",
+      "sh": "लैरी कॉलिन्स और डोमिनिक लापियर",
+      "au": "Larry Collins and Dominique Lapierre",
+      "auh": "लैरी कॉलिन्स और डोमिनिक लापियर",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Account of 1947",
+      "tagh": "1947 का वृत्तांत",
+      "fact": "Freedom at Midnight (1975) by Larry Collins and Dominique Lapierre tells the story of India's independence and Partition in 1947.",
+      "facth": "लैरी कॉलिन्स और डोमिनिक लापियर की फ़्रीडम एट मिडनाइट (1975) 1947 में भारत की स्वतंत्रता और विभाजन की कहानी कहती है।"
+    },
+    {
+      "n": "The Argumentative Indian",
+      "h": "द आर्ग्युमेंटेटिव इंडियन",
+      "st": "Amartya Sen",
+      "sh": "अमर्त्य सेन",
+      "au": "Amartya Sen",
+      "auh": "अमर्त्य सेन",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "Essays by the 1998 economics Nobel laureate",
+      "tagh": "1998 के अर्थशास्त्र नोबेल विजेता के निबंध",
+      "fact": "The Argumentative Indian (2005) is a book of essays by Amartya Sen on India's tradition of public debate.",
+      "facth": "द आर्ग्युमेंटेटिव इंडियन (2005) भारत की सार्वजनिक बहस की परंपरा पर अमर्त्य सेन के निबंधों की पुस्तक है।"
+    },
+    {
+      "n": "An Era of Darkness",
+      "h": "अंधकार काल",
+      "st": "Shashi Tharoor",
+      "sh": "शशि थरूर",
+      "au": "Shashi Tharoor",
+      "auh": "शशि थरूर",
+      "c": "nonfic",
+      "d": 2,
+      "tag": "On British rule in India",
+      "tagh": "भारत में ब्रिटिश शासन पर",
+      "fact": "Shashi Tharoor's An Era of Darkness (2016) argues against British rule in India; it won the Sahitya Akademi Award.",
+      "facth": "शशि थरूर की एन एरा ऑफ़ डार्कनेस (2016) भारत में ब्रिटिश शासन के विरुद्ध तर्क देती है; इसे साहित्य अकादमी पुरस्कार मिला।"
+    },
+    {
+      "n": "Das Kapital",
+      "h": "दास कैपिटल",
+      "st": "Karl Marx",
+      "sh": "कार्ल मार्क्स",
+      "au": "Karl Marx",
+      "auh": "कार्ल मार्क्स",
+      "c": "world",
+      "d": 1,
+      "tag": "Critique of capitalism",
+      "tagh": "पूँजीवाद की आलोचना",
+      "fact": "Karl Marx wrote Das Kapital (1867), a critique of capitalism; with Friedrich Engels he wrote The Communist Manifesto (1848).",
+      "facth": "कार्ल मार्क्स ने पूँजीवाद की आलोचना दास कैपिटल (1867) लिखी; फ़्रेडरिक एंगेल्स के साथ उन्होंने कम्युनिस्ट घोषणापत्र (1848) लिखा।"
+    },
+    {
+      "n": "The Republic",
+      "h": "द रिपब्लिक",
+      "st": "Plato",
+      "sh": "प्लेटो",
+      "au": "Plato",
+      "auh": "प्लेटो",
+      "c": "world",
+      "d": 1,
+      "tag": "Dialogue on justice and the ideal state",
+      "tagh": "न्याय और आदर्श राज्य पर संवाद",
+      "fact": "Plato's The Republic is a dialogue on justice and the ideal state ruled by philosopher-kings.",
+      "facth": "प्लेटो का द रिपब्लिक न्याय और दार्शनिक-राजाओं द्वारा शासित आदर्श राज्य पर संवाद है।"
+    },
+    {
+      "n": "Politics",
+      "h": "पॉलिटिक्स",
+      "st": "Aristotle",
+      "sh": "अरस्तू",
+      "au": "Aristotle",
+      "auh": "अरस्तू",
+      "c": "world",
+      "d": 2,
+      "tag": "Treatise on the state",
+      "tagh": "राज्य पर ग्रंथ",
+      "fact": "Aristotle, Plato's student and Alexander's teacher, wrote Politics, often called the father of political science.",
+      "facth": "प्लेटो के शिष्य और सिकंदर के गुरु अरस्तू ने पॉलिटिक्स लिखी; उन्हें अक्सर राजनीति विज्ञान का जनक कहा जाता है।"
+    },
+    {
+      "n": "The Prince",
+      "h": "द प्रिंस",
+      "st": "Niccolò Machiavelli",
+      "sh": "निकोलो मैकियावेली",
+      "au": "Niccolò Machiavelli",
+      "auh": "निकोलो मैकियावेली",
+      "c": "world",
+      "d": 1,
+      "tag": "Guide to holding power",
+      "tagh": "सत्ता बनाए रखने की पुस्तिका",
+      "fact": "Niccolò Machiavelli's The Prince (1532) is a blunt guide for rulers on gaining and keeping power.",
+      "facth": "निकोलो मैकियावेली की द प्रिंस (1532) शासकों के लिए सत्ता पाने और बनाए रखने की स्पष्ट पुस्तिका है।"
+    },
+    {
+      "n": "The Wealth of Nations",
+      "h": "द वेल्थ ऑफ़ नेशंस",
+      "st": "Adam Smith",
+      "sh": "एडम स्मिथ",
+      "au": "Adam Smith",
+      "auh": "एडम स्मिथ",
+      "c": "world",
+      "d": 1,
+      "tag": "Founding text of economics (1776)",
+      "tagh": "अर्थशास्त्र का मूल ग्रंथ (1776)",
+      "fact": "Adam Smith, called the father of economics, wrote The Wealth of Nations (1776), describing the market's 'invisible hand'.",
+      "facth": "अर्थशास्त्र के जनक कहे जाने वाले एडम स्मिथ ने द वेल्थ ऑफ़ नेशंस (1776) लिखी, जिसमें बाज़ार के 'अदृश्य हाथ' का वर्णन है।"
+    },
+    {
+      "n": "On the Origin of Species",
+      "h": "ऑन द ओरिजिन ऑफ़ स्पीशीज़",
+      "st": "Charles Darwin",
+      "sh": "चार्ल्स डार्विन",
+      "au": "Charles Darwin",
+      "auh": "चार्ल्स डार्विन",
+      "c": "world",
+      "d": 1,
+      "tag": "Theory of natural selection (1859)",
+      "tagh": "प्राकृतिक वरण का सिद्धांत (1859)",
+      "fact": "Charles Darwin set out evolution by natural selection in On the Origin of Species (1859).",
+      "facth": "चार्ल्स डार्विन ने ऑन द ओरिजिन ऑफ़ स्पीशीज़ (1859) में प्राकृतिक वरण द्वारा विकास का सिद्धांत रखा।"
+    },
+    {
+      "n": "War and Peace",
+      "h": "युद्ध और शांति",
+      "st": "Leo Tolstoy",
+      "sh": "लियो टॉलस्टॉय",
+      "au": "Leo Tolstoy",
+      "auh": "लियो टॉलस्टॉय",
+      "c": "world",
+      "d": 1,
+      "tag": "Russian novel of the Napoleonic wars",
+      "tagh": "नेपोलियन युद्धों पर रूसी उपन्यास",
+      "fact": "Leo Tolstoy's War and Peace is set in Russia during Napoleon's invasion; Tolstoy influenced Gandhi.",
+      "facth": "लियो टॉलस्टॉय का युद्ध और शांति नेपोलियन के आक्रमण के समय रूस पर आधारित है; टॉलस्टॉय ने गांधी को प्रभावित किया।"
+    },
+    {
+      "n": "Hamlet",
+      "h": "हैमलेट",
+      "st": "William Shakespeare",
+      "sh": "विलियम शेक्सपियर",
+      "au": "William Shakespeare",
+      "auh": "विलियम शेक्सपियर",
+      "c": "world",
+      "d": 1,
+      "tag": "Tragedy of the Prince of Denmark",
+      "tagh": "डेनमार्क के राजकुमार की त्रासदी",
+      "fact": "William Shakespeare's tragedy Hamlet is about the Prince of Denmark avenging his father's murder.",
+      "facth": "विलियम शेक्सपियर की त्रासदी हैमलेट डेनमार्क के राजकुमार द्वारा पिता की हत्या का बदला लेने की कहानी है।"
+    },
+    {
+      "n": "Paradise Lost",
+      "h": "पैराडाइज़ लॉस्ट",
+      "st": "John Milton",
+      "sh": "जॉन मिल्टन",
+      "au": "John Milton",
+      "auh": "जॉन मिल्टन",
+      "c": "world",
+      "d": 2,
+      "tag": "Epic poem on the fall of man",
+      "tagh": "मनुष्य के पतन पर महाकाव्य",
+      "fact": "John Milton's epic poem Paradise Lost (1667) tells of the fall of Adam and Eve.",
+      "facth": "जॉन मिल्टन का महाकाव्य पैराडाइज़ लॉस्ट (1667) आदम और हव्वा के पतन की कथा कहता है।"
+    },
+    {
+      "n": "Don Quixote",
+      "h": "डॉन क्विक्ज़ोट",
+      "st": "Miguel de Cervantes",
+      "sh": "मिगेल दे सर्वांतेस",
+      "au": "Miguel de Cervantes",
+      "auh": "मिगेल दे सर्वांतेस",
+      "c": "world",
+      "d": 2,
+      "tag": "Spanish novel of a would-be knight",
+      "tagh": "शूरवीर बनना चाहने वाले का स्पेनी उपन्यास",
+      "fact": "Miguel de Cervantes' Don Quixote, about a man who imagines himself a knight, is often called the first modern novel.",
+      "facth": "मिगेल दे सर्वांतेस का डॉन क्विक्ज़ोट, ख़ुद को शूरवीर समझने वाले व्यक्ति की कहानी, अक्सर पहला आधुनिक उपन्यास कहा जाता है।"
+    },
+    {
+      "n": "Utopia",
+      "h": "यूटोपिया",
+      "st": "Thomas More",
+      "sh": "थॉमस मोर",
+      "au": "Thomas More",
+      "auh": "थॉमस मोर",
+      "c": "world",
+      "d": 2,
+      "tag": "Imaginary ideal island society",
+      "tagh": "काल्पनिक आदर्श द्वीप समाज",
+      "fact": "Thomas More coined the word utopia in his 1516 book about an imaginary ideal society on an island.",
+      "facth": "थॉमस मोर ने 1516 में एक द्वीप पर काल्पनिक आदर्श समाज पर अपनी पुस्तक में यूटोपिया शब्द गढ़ा।"
+    },
+    {
+      "n": "The Social Contract",
+      "h": "द सोशल कॉन्ट्रैक्ट",
+      "st": "Jean-Jacques Rousseau",
+      "sh": "ज्यां-जाक रूसो",
+      "au": "Jean-Jacques Rousseau",
+      "auh": "ज्यां-जाक रूसो",
+      "c": "world",
+      "d": 2,
+      "tag": "\"Man is born free...\"",
+      "tagh": "\"मनुष्य स्वतंत्र पैदा होता है...\"",
+      "fact": "Jean-Jacques Rousseau's The Social Contract (1762) opens with 'Man is born free, and everywhere he is in chains'.",
+      "facth": "ज्यां-जाक रूसो की द सोशल कॉन्ट्रैक्ट (1762) 'मनुष्य स्वतंत्र पैदा होता है, पर हर जगह ज़ंजीरों में है' से शुरू होती है।"
+    },
+    {
+      "n": "Gulliver's Travels",
+      "h": "गुलिवर की यात्राएँ",
+      "st": "Jonathan Swift",
+      "sh": "जोनाथन स्विफ़्ट",
+      "au": "Jonathan Swift",
+      "auh": "जोनाथन स्विफ़्ट",
+      "c": "world",
+      "d": 1,
+      "tag": "Satire with Lilliput",
+      "tagh": "लिलिपुट वाला व्यंग्य",
+      "fact": "Jonathan Swift's satire Gulliver's Travels (1726) takes Gulliver to Lilliput and other strange lands.",
+      "facth": "जोनाथन स्विफ़्ट का व्यंग्य गुलिवर की यात्राएँ (1726) गुलिवर को लिलिपुट और अन्य विचित्र देशों में ले जाता है।"
+    },
+    {
+      "n": "Animal Farm",
+      "h": "एनिमल फ़ार्म",
+      "st": "George Orwell",
+      "sh": "जॉर्ज ऑरवेल",
+      "au": "George Orwell",
+      "auh": "जॉर्ज ऑरवेल",
+      "c": "world",
+      "d": 1,
+      "tag": "Political fable",
+      "tagh": "राजनीतिक दृष्टांत कथा",
+      "fact": "George Orwell, born in Motihari, Bihar, wrote the fable Animal Farm (1945) and the novel Nineteen Eighty-Four (1949).",
+      "facth": "बिहार के मोतिहारी में जन्मे जॉर्ज ऑरवेल ने दृष्टांत कथा एनिमल फ़ार्म (1945) और उपन्यास नाइनटीन एटी-फ़ोर (1949) लिखे।"
+    },
+    {
+      "n": "Nineteen Eighty-Four",
+      "h": "नाइनटीन एटी-फ़ोर",
+      "st": "George Orwell",
+      "sh": "जॉर्ज ऑरवेल",
+      "au": "George Orwell",
+      "auh": "जॉर्ज ऑरवेल",
+      "c": "world",
+      "d": 2,
+      "tag": "'Big Brother is watching you'",
+      "tagh": "'बिग ब्रदर तुम्हें देख रहा है'",
+      "fact": "George Orwell's Nineteen Eighty-Four (1949) shows a totalitarian state where 'Big Brother is watching you'.",
+      "facth": "जॉर्ज ऑरवेल का नाइनटीन एटी-फ़ोर (1949) एक सर्वसत्तावादी राज्य दिखाता है जहाँ 'बिग ब्रदर तुम्हें देख रहा है'।"
+    },
+    {
+      "n": "Pride and Prejudice",
+      "h": "प्राइड एंड प्रेजुडिस",
+      "st": "Jane Austen",
+      "sh": "जेन ऑस्टिन",
+      "au": "Jane Austen",
+      "auh": "जेन ऑस्टिन",
+      "c": "world",
+      "d": 2,
+      "tag": "Elizabeth Bennet and Mr Darcy",
+      "tagh": "एलिज़ाबेथ बेनेट और मिस्टर डार्सी",
+      "fact": "Jane Austen's Pride and Prejudice (1813) follows Elizabeth Bennet and Mr Darcy.",
+      "facth": "जेन ऑस्टिन का प्राइड एंड प्रेजुडिस (1813) एलिज़ाबेथ बेनेट और मिस्टर डार्सी की कहानी है।"
+    },
+    {
+      "n": "The Old Man and the Sea",
+      "h": "द ओल्ड मैन एंड द सी",
+      "st": "Ernest Hemingway",
+      "sh": "अर्नेस्ट हेमिंग्वे",
+      "au": "Ernest Hemingway",
+      "auh": "अर्नेस्ट हेमिंग्वे",
+      "c": "world",
+      "d": 1,
+      "tag": "Pulitzer Prize 1953",
+      "tagh": "पुलित्ज़र पुरस्कार 1953",
+      "fact": "Ernest Hemingway's The Old Man and the Sea won the Pulitzer Prize in 1953; he won the Nobel in 1954.",
+      "facth": "अर्नेस्ट हेमिंग्वे के द ओल्ड मैन एंड द सी को 1953 में पुलित्ज़र मिला; उन्हें 1954 में नोबेल मिला।"
+    },
+    {
+      "n": "A Brief History of Time",
+      "h": "अ ब्रीफ़ हिस्ट्री ऑफ़ टाइम",
+      "st": "Stephen Hawking",
+      "sh": "स्टीफ़न हॉकिंग",
+      "au": "Stephen Hawking",
+      "auh": "स्टीफ़न हॉकिंग",
+      "c": "world",
+      "d": 1,
+      "tag": "Popular science of the universe",
+      "tagh": "ब्रह्मांड पर लोकप्रिय विज्ञान",
+      "fact": "Stephen Hawking's A Brief History of Time (1988) explains black holes and the Big Bang for general readers.",
+      "facth": "स्टीफ़न हॉकिंग की अ ब्रीफ़ हिस्ट्री ऑफ़ टाइम (1988) आम पाठकों के लिए ब्लैक होल और बिग बैंग समझाती है।"
+    },
+    {
+      "n": "The Jungle Book",
+      "h": "द जंगल बुक",
+      "st": "Rudyard Kipling",
+      "sh": "रुडयार्ड किपलिंग",
+      "au": "Rudyard Kipling",
+      "auh": "रुडयार्ड किपलिंग",
+      "c": "world",
+      "d": 1,
+      "tag": "Stories of Mowgli",
+      "tagh": "मोगली की कहानियाँ",
+      "fact": "Rudyard Kipling, born in Bombay, wrote The Jungle Book (Mowgli) and Kim; he won the Nobel Prize in Literature in 1907.",
+      "facth": "बंबई में जन्मे रुडयार्ड किपलिंग ने द जंगल बुक (मोगली) और किम लिखीं; उन्हें 1907 में साहित्य का नोबेल मिला।"
+    },
+    {
+      "n": "A Passage to India",
+      "h": "अ पैसेज टू इंडिया",
+      "st": "E. M. Forster",
+      "sh": "ई. एम. फ़ॉर्स्टर",
+      "au": "E. M. Forster",
+      "auh": "ई. एम. फ़ॉर्स्टर",
+      "c": "world",
+      "d": 2,
+      "tag": "Novel of British India",
+      "tagh": "ब्रिटिश भारत का उपन्यास",
+      "fact": "E. M. Forster's A Passage to India (1924) centres on the Marabar Caves incident in British India.",
+      "facth": "ई. एम. फ़ॉर्स्टर का अ पैसेज टू इंडिया (1924) ब्रिटिश भारत में मराबार गुफाओं की घटना पर केंद्रित है।"
+    },
+    {
+      "n": "Long Walk to Freedom",
+      "h": "लॉन्ग वॉक टू फ़्रीडम",
+      "st": "Nelson Mandela",
+      "sh": "नेल्सन मंडेला",
+      "au": "Nelson Mandela",
+      "auh": "नेल्सन मंडेला",
+      "c": "auto",
+      "d": 1,
+      "tag": "Autobiography of South Africa's first Black President",
+      "tagh": "दक्षिण अफ़्रीका के पहले अश्वेत राष्ट्रपति की आत्मकथा",
+      "fact": "Long Walk to Freedom is the autobiography of Nelson Mandela, who received the Bharat Ratna in 1990.",
+      "facth": "लॉन्ग वॉक टू फ़्रीडम नेल्सन मंडेला की आत्मकथा है, जिन्हें 1990 में भारत रत्न मिला।"
+    },
+    {
+      "n": "Mein Kampf",
+      "h": "माइन काम्फ़",
+      "st": "Adolf Hitler",
+      "sh": "एडॉल्फ़ हिटलर",
+      "au": "Adolf Hitler",
+      "auh": "एडॉल्फ़ हिटलर",
+      "c": "auto",
+      "d": 1,
+      "tag": "Written in prison in 1924",
+      "tagh": "1924 में जेल में लिखी",
+      "fact": "Mein Kampf (My Struggle) is the autobiography and political manifesto of Adolf Hitler, written in prison.",
+      "facth": "माइन काम्फ़ (मेरा संघर्ष) एडॉल्फ़ हिटलर की जेल में लिखी आत्मकथा और राजनीतिक घोषणापत्र है।"
+    },
+    {
+      "n": "I Am Malala",
+      "h": "आई एम मलाला",
+      "st": "Malala Yousafzai",
+      "sh": "मलाला यूसुफ़ज़ई",
+      "au": "Malala Yousafzai",
+      "auh": "मलाला यूसुफ़ज़ई",
+      "c": "auto",
+      "d": 1,
+      "tag": "Memoir of the youngest Nobel laureate",
+      "tagh": "सबसे कम उम्र की नोबेल विजेता का संस्मरण",
+      "fact": "I Am Malala is the memoir of Malala Yousafzai, who shared the 2014 Nobel Peace Prize with Kailash Satyarthi.",
+      "facth": "आई एम मलाला मलाला यूसुफ़ज़ई का संस्मरण है, जिन्होंने 2014 का नोबेल शांति पुरस्कार कैलाश सत्यार्थी के साथ साझा किया।"
+    },
+    {
+      "n": "The Story of My Life",
+      "h": "द स्टोरी ऑफ़ माय लाइफ़",
+      "st": "Helen Keller",
+      "sh": "हेलेन केलर",
+      "au": "Helen Keller",
+      "auh": "हेलेन केलर",
+      "c": "auto",
+      "d": 2,
+      "tag": "Autobiography of a deaf-blind author",
+      "tagh": "दृष्टि और श्रवण बाधित लेखिका की आत्मकथा",
+      "fact": "The Story of My Life (1903) is the autobiography of Helen Keller, who was deaf and blind.",
+      "facth": "द स्टोरी ऑफ़ माय लाइफ़ (1903) दृष्टि और श्रवण बाधित हेलेन केलर की आत्मकथा है।"
+    },
+    {
+      "n": "A Promised Land",
+      "h": "अ प्रॉमिस्ड लैंड",
+      "st": "Barack Obama",
+      "sh": "बराक ओबामा",
+      "au": "Barack Obama",
+      "auh": "बराक ओबामा",
+      "c": "auto",
+      "d": 2,
+      "tag": "Presidential memoir (2020)",
+      "tagh": "राष्ट्रपति काल का संस्मरण (2020)",
+      "fact": "A Promised Land (2020) is the first volume of the presidential memoirs of Barack Obama; he also wrote The Audacity of Hope.",
+      "facth": "अ प्रॉमिस्ड लैंड (2020) बराक ओबामा के राष्ट्रपति काल के संस्मरणों का पहला खंड है; उन्होंने द ऑडेसिटी ऑफ़ होप भी लिखी।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "booker",
+      "icon": "🏆",
+      "t": [
+        "Booker and International Booker: Indian winners",
+        "बुकर और अंतरराष्ट्रीय बुकर: भारतीय विजेता"
+      ],
+      "cols": [
+        [
+          "Year",
+          "वर्ष"
+        ],
+        [
+          "Winner and book",
+          "विजेता और पुस्तक"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "1971",
+            "1971"
+          ],
+          [
+            "V. S. Naipaul, In a Free State (Trinidad-born, of Indian descent)",
+            "वी. एस. नायपॉल, इन अ फ़्री स्टेट (त्रिनिदाद में जन्मे, भारतीय मूल)"
+          ]
+        ],
+        [
+          [
+            "1981",
+            "1981"
+          ],
+          [
+            "Salman Rushdie, Midnight's Children",
+            "सलमान रुश्दी, मिडनाइट्स चिल्ड्रन"
+          ]
+        ],
+        [
+          [
+            "1997",
+            "1997"
+          ],
+          [
+            "Arundhati Roy, The God of Small Things",
+            "अरुंधति रॉय, द गॉड ऑफ़ स्मॉल थिंग्स"
+          ]
+        ],
+        [
+          [
+            "2006",
+            "2006"
+          ],
+          [
+            "Kiran Desai, The Inheritance of Loss",
+            "किरण देसाई, द इनहेरिटेंस ऑफ़ लॉस"
+          ]
+        ],
+        [
+          [
+            "2008",
+            "2008"
+          ],
+          [
+            "Aravind Adiga, The White Tiger",
+            "अरविंद अडिगा, द व्हाइट टाइगर"
+          ]
+        ],
+        [
+          [
+            "2022 (International Booker)",
+            "2022 (अंतरराष्ट्रीय बुकर)"
+          ],
+          [
+            "Geetanjali Shree, Tomb of Sand (Hindi; tr. Daisy Rockwell)",
+            "गीतांजलि श्री, टॉम्ब ऑफ़ सैंड (हिंदी; अनु. डेज़ी रॉकवेल)"
+          ]
+        ],
+        [
+          [
+            "2025 (International Booker)",
+            "2025 (अंतरराष्ट्रीय बुकर)"
+          ],
+          [
+            "Banu Mushtaq, Heart Lamp (Kannada; tr. Deepa Bhasthi)",
+            "बानू मुश्ताक, हार्ट लैंप (कन्नड़; अनु. दीपा भस्थी)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "jnan",
+      "icon": "📜",
+      "t": [
+        "Jnanpith Award landmarks",
+        "ज्ञानपीठ पुरस्कार की प्रमुख बातें"
+      ],
+      "cols": [
+        [
+          "Fact",
+          "तथ्य"
+        ],
+        [
+          "Detail",
+          "विवरण"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "First award (1965)",
+            "पहला पुरस्कार (1965)"
+          ],
+          [
+            "G. Sankara Kurup, Malayalam, for Odakkuzhal",
+            "जी. शंकर कुरुप, मलयालम, ओडक्कुझल के लिए"
+          ]
+        ],
+        [
+          [
+            "First woman (1976)",
+            "पहली महिला (1976)"
+          ],
+          [
+            "Ashapoorna Devi, Bengali",
+            "आशापूर्णा देवी, बांग्ला"
+          ]
+        ],
+        [
+          [
+            "First Hindi winner (1968)",
+            "पहले हिंदी विजेता (1968)"
+          ],
+          [
+            "Sumitranandan Pant, for Chidambara",
+            "सुमित्रानंदन पंत, चिदंबरा के लिए"
+          ]
+        ],
+        [
+          [
+            "First English-language writer (2018)",
+            "पहले अंग्रेज़ी लेखक (2018)"
+          ],
+          [
+            "Amitav Ghosh",
+            "अमिताव घोष"
+          ]
+        ],
+        [
+          [
+            "2023 award",
+            "2023 पुरस्कार"
+          ],
+          [
+            "Gulzar (Urdu) and Jagadguru Rambhadracharya (Sanskrit)",
+            "गुलज़ार (उर्दू) और जगद्गुरु रामभद्राचार्य (संस्कृत)"
+          ]
+        ],
+        [
+          [
+            "2024 award (59th)",
+            "2024 पुरस्कार (59वाँ)"
+          ],
+          [
+            "Vinod Kumar Shukla (Hindi), the first from Chhattisgarh",
+            "विनोद कुमार शुक्ल (हिंदी), छत्तीसगढ़ के पहले"
+          ]
+        ],
+        [
+          [
+            "Given by",
+            "प्रदाता"
+          ],
+          [
+            "Bharatiya Jnanpith, a trust founded by the Sahu Jain family",
+            "भारतीय ज्ञानपीठ, साहू जैन परिवार द्वारा स्थापित न्यास"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pen",
+      "icon": "🖋️",
+      "t": [
+        "Pen names and titles",
+        "उपनाम और उपाधियाँ"
+      ],
+      "cols": [
+        [
+          "Pen name or title",
+          "उपनाम या उपाधि"
+        ],
+        [
+          "Writer",
+          "लेखक"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Premchand",
+            "प्रेमचंद"
+          ],
+          [
+            "Dhanpat Rai Srivastava",
+            "धनपत राय श्रीवास्तव"
+          ]
+        ],
+        [
+          [
+            "Nirala",
+            "निराला"
+          ],
+          [
+            "Suryakant Tripathi",
+            "सूर्यकांत त्रिपाठी"
+          ]
+        ],
+        [
+          [
+            "Dinkar (Rashtrakavi)",
+            "दिनकर (राष्ट्रकवि)"
+          ],
+          [
+            "Ramdhari Singh",
+            "रामधारी सिंह"
+          ]
+        ],
+        [
+          [
+            "Bachchan",
+            "बच्चन"
+          ],
+          [
+            "Harivansh Rai Srivastava",
+            "हरिवंश राय श्रीवास्तव"
+          ]
+        ],
+        [
+          [
+            "Agyeya",
+            "अज्ञेय"
+          ],
+          [
+            "Sachchidananda Hirananda Vatsyayan",
+            "सच्चिदानंद हीरानंद वात्स्यायन"
+          ]
+        ],
+        [
+          [
+            "Gulzar",
+            "गुलज़ार"
+          ],
+          [
+            "Sampooran Singh Kalra",
+            "संपूर्ण सिंह कालरा"
+          ]
+        ],
+        [
+          [
+            "Nightingale of India",
+            "भारत कोकिला"
+          ],
+          [
+            "Sarojini Naidu (The Golden Threshold, The Bird of Time)",
+            "सरोजिनी नायडू (द गोल्डन थ्रेशोल्ड, द बर्ड ऑफ़ टाइम)"
+          ]
+        ],
+        [
+          [
+            "Adikavi (first poet)",
+            "आदिकवि"
+          ],
+          [
+            "Valmiki, author of the Ramayana",
+            "वाल्मीकि, रामायण के रचयिता"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "anthem",
+      "icon": "🇮🇳",
+      "t": [
+        "National songs and their sources",
+        "राष्ट्रीय गीत और उनके स्रोत"
+      ],
+      "cols": [
+        [
+          "Song",
+          "गीत"
+        ],
+        [
+          "Source",
+          "स्रोत"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Jana Gana Mana (national anthem)",
+            "जन गण मन (राष्ट्रगान)"
+          ],
+          [
+            "Rabindranath Tagore; first sung at the Calcutta Congress, 1911",
+            "रवींद्रनाथ टैगोर; पहली बार कलकत्ता कांग्रेस 1911 में गाया"
+          ]
+        ],
+        [
+          [
+            "Vande Mataram (national song)",
+            "वंदे मातरम् (राष्ट्रगीत)"
+          ],
+          [
+            "Bankim Chandra Chattopadhyay's Anandamath",
+            "बंकिमचंद्र चट्टोपाध्याय का आनंदमठ"
+          ]
+        ],
+        [
+          [
+            "Sare Jahan Se Achha",
+            "सारे जहाँ से अच्छा"
+          ],
+          [
+            "Muhammad Iqbal (Tarana-e-Hind, 1904)",
+            "मुहम्मद इक़बाल (तराना-ए-हिंद, 1904)"
+          ]
+        ],
+        [
+          [
+            "Amar Shonar Bangla (Bangladesh's anthem)",
+            "आमार सोनार बांग्ला (बांग्लादेश का राष्ट्रगान)"
+          ],
+          [
+            "Rabindranath Tagore",
+            "रवींद्रनाथ टैगोर"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "modern",
+      "q": [
+        "Which book won Salman Rushdie the Booker Prize in 1981?",
+        "1981 में सलमान रुश्दी को किस पुस्तक के लिए बुकर मिला?"
+      ],
+      "o": [
+        [
+          "Midnight's Children",
+          "मिडनाइट्स चिल्ड्रन"
+        ],
+        [
+          "The Satanic Verses",
+          "द सैटेनिक वर्सेज़"
+        ],
+        [
+          "Shame",
+          "शेम"
+        ],
+        [
+          "The Moor's Last Sigh",
+          "द मूर्स लास्ट साई"
+        ]
+      ],
+      "e": [
+        "Midnight's Children also won the Booker of Bookers and the Best of the Booker.",
+        "मिडनाइट्स चिल्ड्रन ने बुकर ऑफ़ बुकर्स और बेस्ट ऑफ़ द बुकर भी जीता।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "Which of these books was NOT written by Khushwant Singh?",
+        "इनमें से कौन-सी पुस्तक खुशवंत सिंह ने नहीं लिखी?"
+      ],
+      "o": [
+        [
+          "A Suitable Boy",
+          "अ सूटेबल बॉय"
+        ],
+        [
+          "Train to Pakistan",
+          "ट्रेन टू पाकिस्तान"
+        ],
+        [
+          "Delhi: A Novel",
+          "दिल्ली: अ नॉवेल"
+        ],
+        [
+          "I Shall Not Hear the Nightingale",
+          "आई शैल नॉट हियर द नाइटिंगेल"
+        ]
+      ],
+      "e": [
+        "A Suitable Boy is by Vikram Seth.",
+        "अ सूटेबल बॉय विक्रम सेठ की है।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "The first book in an Indian language to win the International Booker Prize was",
+        "अंतरराष्ट्रीय बुकर जीतने वाली किसी भारतीय भाषा की पहली पुस्तक कौन-सी थी?"
+      ],
+      "o": [
+        [
+          "Ret Samadhi (Tomb of Sand)",
+          "रेत समाधि (टॉम्ब ऑफ़ सैंड)"
+        ],
+        [
+          "Heart Lamp",
+          "हार्ट लैंप"
+        ],
+        [
+          "Godaan",
+          "गोदान"
+        ],
+        [
+          "Raag Darbari",
+          "राग दरबारी"
+        ]
+      ],
+      "e": [
+        "Geetanjali Shree's Hindi novel won in 2022; Banu Mushtaq's Kannada Heart Lamp won in 2025.",
+        "गीतांजलि श्री के हिंदी उपन्यास ने 2022 में जीता; बानू मुश्ताक की कन्नड़ हार्ट लैंप ने 2025 में।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "Jhumpa Lahiri won the Pulitzer Prize for Fiction in 2000 for",
+        "झुंपा लाहिड़ी को 2000 में कथा का पुलित्ज़र किस पुस्तक के लिए मिला?"
+      ],
+      "o": [
+        [
+          "Interpreter of Maladies",
+          "इंटरप्रेटर ऑफ़ मैलेडीज़"
+        ],
+        [
+          "The Namesake",
+          "द नेमसेक"
+        ],
+        [
+          "The Lowland",
+          "द लोलैंड"
+        ],
+        [
+          "Unaccustomed Earth",
+          "अनएकस्टम्ड अर्थ"
+        ]
+      ],
+      "e": [
+        "Interpreter of Maladies is a collection of short stories.",
+        "इंटरप्रेटर ऑफ़ मैलेडीज़ कहानियों का संग्रह है।"
+      ]
+    },
+    {
+      "t": "modern",
+      "q": [
+        "Malgudi is the fictional town in the works of",
+        "मालगुडी किसकी रचनाओं का काल्पनिक क़स्बा है?"
+      ],
+      "o": [
+        [
+          "R. K. Narayan",
+          "आर. के. नारायण"
+        ],
+        [
+          "Mulk Raj Anand",
+          "मुल्क राज आनंद"
+        ],
+        [
+          "Raja Rao",
+          "राजा राव"
+        ],
+        [
+          "Ruskin Bond",
+          "रस्किन बॉन्ड"
+        ]
+      ],
+      "e": [
+        "Narayan set The Guide, Swami and Friends and Malgudi Days in Malgudi.",
+        "नारायण ने द गाइड, स्वामी एंड फ़्रेंड्स और मालगुडी डेज़ मालगुडी में रचे।"
+      ]
+    },
+    {
+      "t": "history",
+      "q": [
+        "Who wrote the Indica?",
+        "इंडिका किसने लिखी?"
+      ],
+      "o": [
+        [
+          "Megasthenes",
+          "मेगस्थनीज़"
+        ],
+        [
+          "Fa-Hien",
+          "फ़ाह्यान"
+        ],
+        [
+          "Hiuen Tsang",
+          "ह्वेनसांग"
+        ],
+        [
+          "Al-Biruni",
+          "अल-बिरूनी"
+        ]
+      ],
+      "e": [
+        "Megasthenes was Seleucus' envoy to Chandragupta Maurya.",
+        "मेगस्थनीज़ चंद्रगुप्त मौर्य के दरबार में सेल्यूकस का राजदूत था।"
+      ]
+    },
+    {
+      "t": "history",
+      "q": [
+        "Who wrote Harshacharita?",
+        "हर्षचरित किसने लिखा?"
+      ],
+      "o": [
+        [
+          "Banabhatta",
+          "बाणभट्ट"
+        ],
+        [
+          "Kalhana",
+          "कल्हण"
+        ],
+        [
+          "Kalidasa",
+          "कालिदास"
+        ],
+        [
+          "Bilhana",
+          "बिल्हण"
+        ]
+      ],
+      "e": [
+        "Banabhatta was Harsha's court poet; he also wrote Kadambari.",
+        "बाणभट्ट हर्ष के दरबारी कवि थे; उन्होंने कादंबरी भी लिखी।"
+      ]
+    },
+    {
+      "t": "history",
+      "q": [
+        "Rajatarangini is a history of",
+        "राजतरंगिणी किसका इतिहास है?"
+      ],
+      "o": [
+        [
+          "The kings of Kashmir",
+          "कश्मीर के राजा"
+        ],
+        [
+          "The Mauryas",
+          "मौर्य"
+        ],
+        [
+          "The Cholas",
+          "चोल"
+        ],
+        [
+          "The Delhi Sultans",
+          "दिल्ली सुल्तान"
+        ]
+      ],
+      "e": [
+        "Kalhana wrote it in the 12th century.",
+        "कल्हण ने इसे 12वीं सदी में लिखा।"
+      ]
+    },
+    {
+      "t": "history",
+      "q": [
+        "Who wrote the Ain-i-Akbari?",
+        "आइन-ए-अकबरी किसने लिखी?"
+      ],
+      "o": [
+        [
+          "Abul Fazl",
+          "अबुल फ़ज़ल"
+        ],
+        [
+          "Badauni",
+          "बदायूँनी"
+        ],
+        [
+          "Faizi",
+          "फ़ैज़ी"
+        ],
+        [
+          "Birbal",
+          "बीरबल"
+        ]
+      ],
+      "e": [
+        "The Ain-i-Akbari is the third volume of the Akbarnama.",
+        "आइन-ए-अकबरी अकबरनामा का तीसरा खंड है।"
+      ]
+    },
+    {
+      "t": "history",
+      "q": [
+        "Humayun-nama was written by",
+        "हुमायूँनामा किसने लिखा?"
+      ],
+      "o": [
+        [
+          "Gulbadan Begum",
+          "गुलबदन बेगम"
+        ],
+        [
+          "Jahanara Begum",
+          "जहाँआरा बेगम"
+        ],
+        [
+          "Nur Jahan",
+          "नूरजहाँ"
+        ],
+        [
+          "Zeb-un-Nissa",
+          "ज़ेबुन्निसा"
+        ]
+      ],
+      "e": [
+        "Gulbadan Begum was Babur's daughter and Humayun's sister.",
+        "गुलबदन बेगम बाबर की बेटी और हुमायूँ की बहन थीं।"
+      ]
+    },
+    {
+      "t": "history",
+      "q": [
+        "Amuktamalyada was written by which Vijayanagara ruler?",
+        "आमुक्तमाल्यदा किस विजयनगर शासक ने लिखा?"
+      ],
+      "o": [
+        [
+          "Krishnadevaraya",
+          "कृष्णदेवराय"
+        ],
+        [
+          "Harihara I",
+          "हरिहर प्रथम"
+        ],
+        [
+          "Deva Raya II",
+          "देवराय द्वितीय"
+        ],
+        [
+          "Aliya Rama Raya",
+          "अलिया राम राय"
+        ]
+      ],
+      "e": [
+        "It is a Telugu poem on the saint Andal.",
+        "यह संत आंडाल पर तेलुगु काव्य है।"
+      ]
+    },
+    {
+      "t": "freedom",
+      "q": [
+        "The Discovery of India was written in which prison?",
+        "द डिस्कवरी ऑफ़ इंडिया किस जेल में लिखी गई?"
+      ],
+      "o": [
+        [
+          "Ahmednagar Fort",
+          "अहमदनगर क़िला"
+        ],
+        [
+          "Mandalay jail",
+          "मांडले जेल"
+        ],
+        [
+          "Yerwada jail",
+          "यरवदा जेल"
+        ],
+        [
+          "Cellular Jail",
+          "सेल्युलर जेल"
+        ]
+      ],
+      "e": [
+        "Nehru wrote it in 1942-46; Tilak wrote Gita Rahasya in Mandalay.",
+        "नेहरू ने इसे 1942-46 में लिखा; तिलक ने गीता रहस्य मांडले में लिखी।"
+      ]
+    },
+    {
+      "t": "freedom",
+      "q": [
+        "The drain of wealth theory was put forward in",
+        "धन निकासी का सिद्धांत किस पुस्तक में रखा गया?"
+      ],
+      "o": [
+        [
+          "Poverty and Un-British Rule in India",
+          "पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया"
+        ],
+        [
+          "Hind Swaraj",
+          "हिंद स्वराज"
+        ],
+        [
+          "Gita Rahasya",
+          "गीता रहस्य"
+        ],
+        [
+          "Unhappy India",
+          "अनहैप्पी इंडिया"
+        ]
+      ],
+      "e": [
+        "Dadabhai Naoroji wrote it in 1901.",
+        "दादाभाई नौरोजी ने इसे 1901 में लिखा।"
+      ]
+    },
+    {
+      "t": "freedom",
+      "q": [
+        "Vande Mataram is taken from which novel?",
+        "वंदे मातरम् किस उपन्यास से लिया गया है?"
+      ],
+      "o": [
+        [
+          "Anandamath",
+          "आनंदमठ"
+        ],
+        [
+          "Durgeshnandini",
+          "दुर्गेशनंदिनी"
+        ],
+        [
+          "Gora",
+          "गोरा"
+        ],
+        [
+          "Devdas",
+          "देवदास"
+        ]
+      ],
+      "e": [
+        "Anandamath (1882) is by Bankim Chandra Chattopadhyay.",
+        "आनंदमठ (1882) बंकिमचंद्र चट्टोपाध्याय का है।"
+      ]
+    },
+    {
+      "t": "freedom",
+      "q": [
+        "Who wrote Ghulamgiri?",
+        "गुलामगिरी किसने लिखी?"
+      ],
+      "o": [
+        [
+          "Jyotirao Phule",
+          "ज्योतिराव फुले"
+        ],
+        [
+          "B. R. Ambedkar",
+          "बी. आर. आंबेडकर"
+        ],
+        [
+          "Periyar",
+          "पेरियार"
+        ],
+        [
+          "Narayana Guru",
+          "नारायण गुरु"
+        ]
+      ],
+      "e": [
+        "Phule wrote it in 1873 and founded the Satyashodhak Samaj.",
+        "फुले ने इसे 1873 में लिखा और सत्यशोधक समाज बनाया।"
+      ]
+    },
+    {
+      "t": "freedom",
+      "q": [
+        "Neel Darpan, about the oppression of indigo farmers, was written by",
+        "नील किसानों के शोषण पर नील दर्पण किसने लिखा?"
+      ],
+      "o": [
+        [
+          "Dinabandhu Mitra",
+          "दीनबंधु मित्र"
+        ],
+        [
+          "Bankim Chandra Chattopadhyay",
+          "बंकिमचंद्र चट्टोपाध्याय"
+        ],
+        [
+          "Michael Madhusudan Dutt",
+          "माइकल मधुसूदन दत्त"
+        ],
+        [
+          "Ishwar Chandra Vidyasagar",
+          "ईश्वरचंद्र विद्यासागर"
+        ]
+      ],
+      "e": [
+        "Michael Madhusudan Dutt is credited with translating it into English.",
+        "माइकल मधुसूदन दत्त को इसके अंग्रेज़ी अनुवाद का श्रेय दिया जाता है।"
+      ]
+    },
+    {
+      "t": "memoir",
+      "q": [
+        "Playing It My Way is the autobiography of",
+        "प्लेइंग इट माय वे किसकी आत्मकथा है?"
+      ],
+      "o": [
+        [
+          "Sachin Tendulkar",
+          "सचिन तेंदुलकर"
+        ],
+        [
+          "Sourav Ganguly",
+          "सौरव गांगुली"
+        ],
+        [
+          "Rahul Dravid",
+          "राहुल द्रविड़"
+        ],
+        [
+          "M. S. Dhoni",
+          "एम. एस. धोनी"
+        ]
+      ],
+      "e": [
+        "It was written with Boria Majumdar (2014).",
+        "यह बोरिया मजूमदार के साथ लिखी गई (2014)।"
+      ]
+    },
+    {
+      "t": "memoir",
+      "q": [
+        "Wings of Fire is the autobiography of",
+        "विंग्स ऑफ़ फ़ायर किसकी आत्मकथा है?"
+      ],
+      "o": [
+        [
+          "A. P. J. Abdul Kalam",
+          "ए. पी. जे. अब्दुल कलाम"
+        ],
+        [
+          "Vikram Sarabhai",
+          "विक्रम साराभाई"
+        ],
+        [
+          "Homi Bhabha",
+          "होमी भाभा"
+        ],
+        [
+          "C. V. Raman",
+          "सी. वी. रमन"
+        ]
+      ],
+      "e": [
+        "Kalam wrote it with Arun Tiwari in 1999.",
+        "कलाम ने इसे 1999 में अरुण तिवारी के साथ लिखा।"
+      ]
+    },
+    {
+      "t": "memoir",
+      "q": [
+        "The Accidental Prime Minister by Sanjaya Baru is about",
+        "संजय बारू की द एक्सीडेंटल प्राइम मिनिस्टर किस पर है?"
+      ],
+      "o": [
+        [
+          "Manmohan Singh",
+          "मनमोहन सिंह"
+        ],
+        [
+          "P. V. Narasimha Rao",
+          "पी. वी. नरसिम्हा राव"
+        ],
+        [
+          "H. D. Deve Gowda",
+          "एच. डी. देवेगौड़ा"
+        ],
+        [
+          "I. K. Gujral",
+          "आई. के. गुजराल"
+        ]
+      ],
+      "e": [
+        "Baru was Manmohan Singh's media adviser.",
+        "बारू मनमोहन सिंह के मीडिया सलाहकार थे।"
+      ]
+    },
+    {
+      "t": "memoir",
+      "q": [
+        "Unbreakable is the autobiography of which boxer?",
+        "अनब्रेकेबल किस मुक्केबाज़ की आत्मकथा है?"
+      ],
+      "o": [
+        [
+          "Mary Kom",
+          "मैरी कॉम"
+        ],
+        [
+          "Vijender Singh",
+          "विजेंदर सिंह"
+        ],
+        [
+          "Nikhat Zareen",
+          "निख़त ज़रीन"
+        ],
+        [
+          "Lovlina Borgohain",
+          "लवलीना बोरगोहेन"
+        ]
+      ],
+      "e": [
+        "Mary Kom is a six-time world champion from Manipur.",
+        "मैरी कॉम मणिपुर की छह बार की विश्व चैंपियन हैं।"
+      ]
+    },
+    {
+      "t": "world",
+      "q": [
+        "Who wrote Mein Kampf?",
+        "माइन काम्फ़ किसने लिखी?"
+      ],
+      "o": [
+        [
+          "Adolf Hitler",
+          "एडॉल्फ़ हिटलर"
+        ],
+        [
+          "Benito Mussolini",
+          "बेनिटो मुसोलिनी"
+        ],
+        [
+          "Joseph Stalin",
+          "जोसेफ़ स्टालिन"
+        ],
+        [
+          "Karl Marx",
+          "कार्ल मार्क्स"
+        ]
+      ],
+      "e": [
+        "Hitler wrote it in prison in 1924.",
+        "हिटलर ने इसे 1924 में जेल में लिखा।"
+      ]
+    },
+    {
+      "t": "world",
+      "q": [
+        "Which author of Animal Farm was born in India?",
+        "एनिमल फ़ार्म के कौन-से लेखक भारत में जन्मे थे?"
+      ],
+      "o": [
+        [
+          "George Orwell",
+          "जॉर्ज ऑरवेल"
+        ],
+        [
+          "Aldous Huxley",
+          "एल्डस हक्सले"
+        ],
+        [
+          "H. G. Wells",
+          "एच. जी. वेल्स"
+        ],
+        [
+          "Charles Dickens",
+          "चार्ल्स डिकेंस"
+        ]
+      ],
+      "e": [
+        "Orwell was born in Motihari, Bihar, in 1903.",
+        "ऑरवेल का जन्म 1903 में मोतिहारी, बिहार में हुआ।"
+      ]
+    },
+    {
+      "t": "world",
+      "q": [
+        "The Wealth of Nations was written by",
+        "द वेल्थ ऑफ़ नेशंस किसने लिखी?"
+      ],
+      "o": [
+        [
+          "Adam Smith",
+          "एडम स्मिथ"
+        ],
+        [
+          "John Maynard Keynes",
+          "जॉन मेनार्ड कीन्स"
+        ],
+        [
+          "David Ricardo",
+          "डेविड रिकार्डो"
+        ],
+        [
+          "Alfred Marshall",
+          "अल्फ़्रेड मार्शल"
+        ]
+      ],
+      "e": [
+        "Adam Smith is called the father of economics.",
+        "एडम स्मिथ को अर्थशास्त्र का जनक कहा जाता है।"
+      ]
+    },
+    {
+      "t": "world",
+      "q": [
+        "Long Walk to Freedom is the autobiography of",
+        "लॉन्ग वॉक टू फ़्रीडम किसकी आत्मकथा है?"
+      ],
+      "o": [
+        [
+          "Nelson Mandela",
+          "नेल्सन मंडेला"
+        ],
+        [
+          "Martin Luther King Jr",
+          "मार्टिन लूथर किंग जूनियर"
+        ],
+        [
+          "Desmond Tutu",
+          "डेसमंड टूटू"
+        ],
+        [
+          "Kofi Annan",
+          "कोफ़ी अन्नान"
+        ]
+      ],
+      "e": [
+        "Mandela received the Bharat Ratna in 1990.",
+        "मंडेला को 1990 में भारत रत्न मिला।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "Who received the first Jnanpith Award (1965)?",
+        "पहला ज्ञानपीठ पुरस्कार (1965) किसे मिला?"
+      ],
+      "o": [
+        [
+          "G. Sankara Kurup",
+          "जी. शंकर कुरुप"
+        ],
+        [
+          "Sumitranandan Pant",
+          "सुमित्रानंदन पंत"
+        ],
+        [
+          "Tarashankar Bandyopadhyay",
+          "ताराशंकर बंद्योपाध्याय"
+        ],
+        [
+          "Ashapoorna Devi",
+          "आशापूर्णा देवी"
+        ]
+      ],
+      "e": [
+        "Kurup won for the Malayalam collection Odakkuzhal.",
+        "कुरुप को मलयालम संग्रह ओडक्कुझल के लिए मिला।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "Who was the first woman to receive the Jnanpith Award?",
+        "ज्ञानपीठ पाने वाली पहली महिला कौन थीं?"
+      ],
+      "o": [
+        [
+          "Ashapoorna Devi",
+          "आशापूर्णा देवी"
+        ],
+        [
+          "Mahadevi Verma",
+          "महादेवी वर्मा"
+        ],
+        [
+          "Amrita Pritam",
+          "अमृता प्रीतम"
+        ],
+        [
+          "Mahasweta Devi",
+          "महाश्वेता देवी"
+        ]
+      ],
+      "e": [
+        "Ashapoorna Devi (Bengali) received it in 1976.",
+        "आशापूर्णा देवी (बांग्ला) को यह 1976 में मिला।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "Which writer received the 59th Jnanpith Award (for 2024)?",
+        "59वाँ ज्ञानपीठ पुरस्कार (2024 के लिए) किसे मिला?"
+      ],
+      "o": [
+        [
+          "Vinod Kumar Shukla",
+          "विनोद कुमार शुक्ल"
+        ],
+        [
+          "Gulzar",
+          "गुलज़ार"
+        ],
+        [
+          "Damodar Mauzo",
+          "दामोदर मावज़ो"
+        ],
+        [
+          "Nilmani Phookan",
+          "नीलमणि फूकन"
+        ]
+      ],
+      "e": [
+        "Vinod Kumar Shukla, a Hindi writer, is the first Jnanpith laureate from Chhattisgarh.",
+        "हिंदी लेखक विनोद कुमार शुक्ल छत्तीसगढ़ से पहले ज्ञानपीठ विजेता हैं।"
+      ]
+    },
+    {
+      "t": "awards",
+      "q": [
+        "What is Premchand's real name?",
+        "प्रेमचंद का असली नाम क्या था?"
+      ],
+      "o": [
+        [
+          "Dhanpat Rai Srivastava",
+          "धनपत राय श्रीवास्तव"
+        ],
+        [
+          "Suryakant Tripathi",
+          "सूर्यकांत त्रिपाठी"
+        ],
+        [
+          "Sampooran Singh Kalra",
+          "संपूर्ण सिंह कालरा"
+        ],
+        [
+          "Harivansh Rai Srivastava",
+          "हरिवंश राय श्रीवास्तव"
+        ]
+      ],
+      "e": [
+        "Premchand also wrote in Urdu as 'Nawab Rai'.",
+        "प्रेमचंद ने उर्दू में 'नवाब राय' नाम से भी लिखा।"
+      ]
+    }
+  ]
+}

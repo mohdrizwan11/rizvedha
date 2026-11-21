@@ -1,0 +1,299 @@
+[
+  {
+    "slug": "rivers",
+    "title": "Rivers of India",
+    "subject": "Geography",
+    "format": "map-array",
+    "entityCount": 27,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "waterways",
+    "title": "National Waterways",
+    "subject": "Geography",
+    "format": "map-array",
+    "entityCount": 12,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "power-plants",
+    "title": "Power Plants",
+    "subject": "Geography",
+    "format": "study-edition",
+    "entityCount": 130,
+    "mcqCount": 50,
+    "notesCount": 10
+  },
+  {
+    "slug": "railway-zones",
+    "title": "Railway Zones",
+    "subject": "Infrastructure",
+    "format": "map-array",
+    "entityCount": 18,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "temples",
+    "title": "Temples of India",
+    "subject": "Static GK & Culture",
+    "format": "map-array",
+    "entityCount": 38,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "cm-governors",
+    "title": "CMs & Governors",
+    "subject": "Polity",
+    "format": "map-array",
+    "entityCount": 36,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "festivals",
+    "title": "Festivals of India",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 108,
+    "mcqCount": 27,
+    "notesCount": 5
+  },
+  {
+    "slug": "highways",
+    "title": "Highways",
+    "subject": "Infrastructure",
+    "format": "map-array",
+    "entityCount": 12,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "dances",
+    "title": "Dances of India",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 86,
+    "mcqCount": 31,
+    "notesCount": 4
+  },
+  {
+    "slug": "music",
+    "title": "Music of India",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 60,
+    "mcqCount": 34,
+    "notesCount": 5
+  },
+  {
+    "slug": "national-parks",
+    "title": "National Parks",
+    "subject": "Environment",
+    "format": "study-edition",
+    "entityCount": 104,
+    "mcqCount": 44,
+    "notesCount": 10
+  },
+  {
+    "slug": "tribes",
+    "title": "Tribes of India",
+    "subject": "Static GK & Culture",
+    "format": "map-array",
+    "entityCount": 52,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "gi-tags",
+    "title": "GI Tags",
+    "subject": "Static GK & Culture",
+    "format": "map-array",
+    "entityCount": 44,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "ancient-dynasties",
+    "title": "Ancient Dynasties",
+    "subject": "History",
+    "format": "map-array",
+    "entityCount": 63,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "medieval-empires",
+    "title": "Medieval Empires",
+    "subject": "History",
+    "format": "map-array",
+    "entityCount": 44,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "freedom-movement",
+    "title": "Freedom Movement",
+    "subject": "History",
+    "format": "map-array",
+    "entityCount": 49,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "monuments",
+    "title": "Historical Monuments",
+    "subject": "History",
+    "format": "map-array",
+    "entityCount": 45,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "crops",
+    "title": "Crops & Agriculture",
+    "subject": "Geography",
+    "format": "map-array",
+    "entityCount": 61,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "soils",
+    "title": "Soil Types",
+    "subject": "Geography",
+    "format": "map-array",
+    "entityCount": 52,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "lakes",
+    "title": "Lakes of India",
+    "subject": "Geography",
+    "format": "map-array",
+    "entityCount": 40,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "biosphere-reserves",
+    "title": "Biosphere Reserves",
+    "subject": "Environment",
+    "format": "map-array",
+    "entityCount": 18,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "mountain-peaks",
+    "title": "Mountain Peaks",
+    "subject": "Geography",
+    "format": "map-array",
+    "entityCount": 62,
+    "mcqCount": 0,
+    "notesCount": 0
+  },
+  {
+    "slug": "sports",
+    "title": "Sports",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 36,
+    "mcqCount": 61,
+    "notesCount": 10
+  },
+  {
+    "slug": "art-culture",
+    "title": "Art & Culture",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 75,
+    "mcqCount": 32,
+    "notesCount": 6
+  },
+  {
+    "slug": "books-authors",
+    "title": "Books & Authors",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 121,
+    "mcqCount": 28,
+    "notesCount": 4
+  },
+  {
+    "slug": "awards-honours",
+    "title": "Awards & Honours",
+    "subject": "Static GK & Culture",
+    "format": "study-edition",
+    "entityCount": 41,
+    "mcqCount": 25,
+    "notesCount": 4
+  },
+  {
+    "slug": "space-defence",
+    "title": "Space & Defence",
+    "subject": "Science & Defence",
+    "format": "study-edition",
+    "entityCount": 62,
+    "mcqCount": 20,
+    "notesCount": 5
+  },
+  {
+    "slug": "world-gk",
+    "title": "World GK",
+    "subject": "World GK",
+    "format": "study-edition",
+    "entityCount": 124,
+    "mcqCount": 20,
+    "notesCount": 4
+  },
+  {
+    "slug": "physical-india",
+    "title": "Physical India",
+    "subject": "Geography",
+    "format": "study-edition",
+    "entityCount": 107,
+    "mcqCount": 25,
+    "notesCount": 5
+  },
+  {
+    "slug": "india-basics",
+    "title": "India Basics",
+    "subject": "Polity",
+    "format": "study-edition",
+    "entityCount": 64,
+    "mcqCount": 19,
+    "notesCount": 4
+  },
+  {
+    "slug": "battles-treaties",
+    "title": "Battles & Treaties",
+    "subject": "History",
+    "format": "study-edition",
+    "entityCount": 50,
+    "mcqCount": 19,
+    "notesCount": 5
+  },
+  {
+    "slug": "science-facts",
+    "title": "Science Facts",
+    "subject": "General Science",
+    "format": "study-edition",
+    "entityCount": 117,
+    "mcqCount": 19,
+    "notesCount": 4
+  },
+  {
+    "slug": "quick-facts",
+    "title": "Quick Facts",
+    "subject": "Static GK",
+    "format": "study-edition",
+    "entityCount": 134,
+    "mcqCount": 19,
+    "notesCount": 2
+  }
+]

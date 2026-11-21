@@ -1,0 +1,2924 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "india-basics",
+  "file": "india_basics_app.html",
+  "storageKey": "ssc_india_basics_v1",
+  "icon": "🇮🇳",
+  "description": "Bilingual study app on India basics for SSC: capitals of states and UTs with formation dates and languages, and the High Courts on the map, with exam notes on national symbols, Census 2011, state formation and languages.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "India Basics",
+      "भारत की मूल बातें"
+    ],
+    "hSub": [
+      "SSC Focus · States, capitals and High Courts",
+      "SSC फोकस · राज्य, राजधानियाँ और उच्च न्यायालय"
+    ],
+    "learnTtl": [
+      "Learn India basics",
+      "भारत की मूल बातें सीखें"
+    ],
+    "learnSub": [
+      "Open any capital or High Court to read its state, when the state was formed, its languages and the exam facts.",
+      "किसी भी राजधानी या उच्च न्यायालय को खोलकर उसका राज्य, राज्य का गठन, भाषाएँ और परीक्षा तथ्य पढ़ें।"
+    ],
+    "lvlLabel": [
+      "Level · India GK rank",
+      "स्तर · भारत GK रैंक"
+    ],
+    "filterGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "searchLabel": [
+      "Search capitals and courts",
+      "राजधानियाँ और न्यायालय खोजें"
+    ],
+    "searchPh": [
+      "City, state or language",
+      "शहर, राज्य या भाषा"
+    ],
+    "resultsN": [
+      "entries listed",
+      "प्रविष्टियाँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "ltPlants": [
+      "Capitals & courts",
+      "राजधानियाँ और न्यायालय"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on states and capitals, High Courts, national symbols and Census 2011. Each answer comes with an explanation.",
+      "राज्य और राजधानियाँ, उच्च न्यायालय, राष्ट्रीय प्रतीक और जनगणना 2011 पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Entries studied",
+      "पढ़ी गई प्रविष्टियाँ"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qLabel": [
+      "Select the state or UT of this place",
+      "इस स्थान का राज्य या केंद्रशासित प्रदेश चुनें"
+    ],
+    "next": [
+      "Next",
+      "अगला"
+    ],
+    "atlasSub": [
+      "Every entry on the map, coloured by kind.",
+      "हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read an entry, or a state to list its entries.",
+      "किसी चिह्न को छूकर प्रविष्टि पढ़ें, या राज्य को छूकर उसकी सूची देखें।"
+    ],
+    "noPlants": [
+      "No entry from this state in the deck.",
+      "इस राज्य की कोई प्रविष्टि सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "entries",
+      "प्रविष्टियाँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state or UT of this place.",
+      "भारत का मानचित्र। इस स्थान का राज्य या केंद्रशासित प्रदेश चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its entries.",
+      "भारत का मानचित्र। किसी राज्य की प्रविष्टियाँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's entries.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की प्रविष्टियाँ देखें।"
+    ],
+    "plantMarker": [
+      "entry",
+      "प्रविष्टि"
+    ],
+    "atlasPickerLabel": [
+      "Browse an entry",
+      "प्रविष्टि खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select an entry",
+      "प्रविष्टि चुनें"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of entry.",
+      "चिह्नों के रंग प्रविष्टि का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "entries on the map",
+      "प्रविष्टियाँ मानचित्र पर"
+    ],
+    "qInState": [
+      "Which of these is in",
+      "इनमें से कौन-सा इस राज्य में है:"
+    ],
+    "howto": [
+      "Play: a capital city or High Court is shown; select its state on the map of India. A tap close to it earns full XP.\nLearn → Capitals & courts: 64 entries on capitals of states and UTs, second capitals and High Courts.\nLearn → Exam notes: national symbols, Census 2011, how the states were formed and languages in the Constitution.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every entry on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई राजधानी या उच्च न्यायालय दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उसके पास टैप करने पर पूरा XP मिलता है।\nसीखें → राजधानियाँ और न्यायालय: 64 प्रविष्टियाँ राज्यों और केंद्रशासित प्रदेशों की राजधानियों, दूसरी राजधानियों और उच्च न्यायालयों पर।\nसीखें → परीक्षा नोट्स: राष्ट्रीय प्रतीक, जनगणना 2011, राज्यों का गठन और संविधान में भाषाएँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर प्रविष्टि मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ]
+  },
+  "types": [
+    {
+      "k": "capital",
+      "icon": "🏛️",
+      "col": "#1565C0",
+      "t": [
+        "State capital",
+        "राज्य की राजधानी"
+      ]
+    },
+    {
+      "k": "utcap",
+      "icon": "🏙️",
+      "col": "#6A1B9A",
+      "t": [
+        "UT capital",
+        "केंद्रशासित प्रदेश की राजधानी"
+      ]
+    },
+    {
+      "k": "cap2",
+      "icon": "🏔️",
+      "col": "#00838F",
+      "t": [
+        "Second capital",
+        "दूसरी राजधानी"
+      ]
+    },
+    {
+      "k": "court",
+      "icon": "⚖️",
+      "col": "#5D4037",
+      "t": [
+        "High Court",
+        "उच्च न्यायालय"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "State or UT",
+        "राज्य या केंद्रशासित प्रदेश"
+      ]
+    },
+    {
+      "k": "fm",
+      "t": [
+        "Formed / set up",
+        "गठन / स्थापना"
+      ]
+    },
+    {
+      "k": "lg",
+      "t": [
+        "Official language(s)",
+        "राजभाषा"
+      ]
+    },
+    {
+      "k": "jr",
+      "t": [
+        "Jurisdiction",
+        "अधिकार क्षेत्र"
+      ]
+    },
+    {
+      "k": "tag",
+      "t": [
+        "Know this",
+        "यह जानें"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "tag"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "Citizen",
+      "hi": "नागरिक"
+    },
+    {
+      "min": 60,
+      "en": "Voter",
+      "hi": "मतदाता"
+    },
+    {
+      "min": 150,
+      "en": "Panch",
+      "hi": "पंच"
+    },
+    {
+      "min": 320,
+      "en": "Legislator",
+      "hi": "विधायक"
+    },
+    {
+      "min": 560,
+      "en": "Governor",
+      "hi": "राज्यपाल"
+    },
+    {
+      "min": 900,
+      "en": "Chief Justice",
+      "hi": "मुख्य न्यायाधीश"
+    },
+    {
+      "min": 1400,
+      "en": "India GK Champion",
+      "hi": "भारत GK चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🇮🇳",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "Getting There",
+        "आगे बढ़ते हुए"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Half Century",
+        "अर्धशतक"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "capitals",
+      "icon": "🏛️",
+      "t": [
+        "Capital Tour",
+        "राजधानी यात्रा"
+      ],
+      "d": [
+        "Study every state capital",
+        "सभी राज्य राजधानियाँ पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "capital"
+        ]
+      }
+    },
+    {
+      "id": "courts",
+      "icon": "⚖️",
+      "t": [
+        "Order in Court",
+        "न्यायालय व्यवस्था"
+      ],
+      "d": [
+        "Study every High Court",
+        "सभी उच्च न्यायालय पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "court"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "India GK Champion",
+        "भारत GK चैंपियन"
+      ],
+      "d": [
+        "Study every entry",
+        "सभी प्रविष्टियाँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "fm",
+        "field": "fm",
+        "ask": [
+          "When was it formed or set up?",
+          "इसका गठन या स्थापना कब हुई?"
+        ],
+        "pairs": [
+          [
+            "1 November 1956",
+            "1 November 1956 (renamed 1973)"
+          ],
+          [
+            "1 November 1956",
+            "1 November 1956 (renamed 1969)"
+          ],
+          [
+            "1 November 1956 (renamed 1973)",
+            "1 November 1956 (renamed 1969)"
+          ],
+          [
+            "1 November 1956",
+            "1 November 1956 (UT)"
+          ],
+          [
+            "1 November 1956",
+            "1 November 1956 (UT; named 1973)"
+          ],
+          [
+            "1 November 1956 (UT)",
+            "1 November 1956 (UT; named 1973)"
+          ],
+          [
+            "1 November 1956 (renamed 1969)",
+            "1 November 1956 (UT)"
+          ],
+          [
+            "1 November 1956 (renamed 1973)",
+            "1 November 1956 (UT)"
+          ],
+          [
+            "1 November 1956 (renamed 1969)",
+            "1 November 1956 (UT; named 1973)"
+          ],
+          [
+            "1 November 1956 (renamed 1973)",
+            "1 November 1956 (UT; named 1973)"
+          ],
+          [
+            "31 October 2019 (UT)",
+            "31 October 2019 (UT)"
+          ],
+          [
+            "21 January 1972",
+            "21 January 1972"
+          ],
+          [
+            "20 February 1987",
+            "20 February 1987"
+          ],
+          [
+            "1 May 1960",
+            "1 May 1960"
+          ],
+          [
+            "1862",
+            "1862 (oldest)"
+          ],
+          [
+            "2019 (separate court)",
+            "2019 (separate court)"
+          ],
+          [
+            "2013",
+            "2013"
+          ],
+          [
+            "Winter capital",
+            "Winter capital"
+          ]
+        ]
+      },
+      {
+        "id": "lg",
+        "field": "lg",
+        "ask": [
+          "What is its official language?",
+          "इसकी राजभाषा क्या है?"
+        ],
+        "pairs": [
+          [
+            "Hindi",
+            "Hindi (Urdu second)"
+          ],
+          [
+            "Hindi",
+            "Hindi (Sanskrit second)"
+          ],
+          [
+            "Hindi",
+            "Hindi (Chhattisgarhi)"
+          ],
+          [
+            "Hindi",
+            "Hindi (Punjabi and Urdu second)"
+          ],
+          [
+            "Hindi (Urdu second)",
+            "Hindi (Sanskrit second)"
+          ],
+          [
+            "Hindi (Urdu second)",
+            "Hindi (Chhattisgarhi)"
+          ],
+          [
+            "Hindi (Sanskrit second)",
+            "Hindi (Chhattisgarhi)"
+          ],
+          [
+            "Hindi (Urdu second)",
+            "Hindi (Punjabi and Urdu second)"
+          ],
+          [
+            "Hindi (Sanskrit second)",
+            "Hindi (Punjabi and Urdu second)"
+          ],
+          [
+            "Hindi (Chhattisgarhi)",
+            "Hindi (Punjabi and Urdu second)"
+          ],
+          [
+            "English",
+            "Hindi and English"
+          ],
+          [
+            "English",
+            "Mizo and English"
+          ],
+          [
+            "English",
+            "Malayalam and English"
+          ],
+          [
+            "Hindi",
+            "Hindi and English"
+          ],
+          [
+            "Hindi",
+            "Dogri, Hindi"
+          ],
+          [
+            "Telugu",
+            "Telugu (Urdu second)"
+          ],
+          [
+            "Marathi",
+            "Konkani (also Marathi)"
+          ],
+          [
+            "Hindi",
+            "Gujarati, Hindi, English"
+          ],
+          [
+            "English",
+            "Gujarati, Hindi, English"
+          ],
+          [
+            "English",
+            "Kashmiri, Dogri, Urdu, Hindi, English"
+          ],
+          [
+            "Hindi",
+            "Kashmiri, Dogri, Urdu, Hindi, English"
+          ],
+          [
+            "Dogri, Hindi",
+            "Kashmiri, Dogri, Urdu, Hindi, English"
+          ],
+          [
+            "Malayalam",
+            "Malayalam and English"
+          ],
+          [
+            "Malayalam",
+            "Tamil, French, English, Malayalam, Telugu"
+          ],
+          [
+            "Tamil",
+            "Tamil, French, English, Malayalam, Telugu"
+          ],
+          [
+            "Telugu",
+            "Tamil, French, English, Malayalam, Telugu"
+          ],
+          [
+            "English",
+            "Tamil, French, English, Malayalam, Telugu"
+          ],
+          [
+            "Bengali",
+            "Bengali and Kokborok"
+          ],
+          [
+            "Bengali",
+            "Assamese (also Bodo and Bengali)"
+          ],
+          [
+            "Bengali and Kokborok",
+            "Assamese (also Bodo and Bengali)"
+          ]
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "state",
+              "court",
+              "symbol",
+              "census"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "lg",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "capitals",
+        "t": [
+          "States & capitals",
+          "राज्य और राजधानियाँ"
+        ],
+        "mix": [
+          {
+            "q": "st",
+            "n": 4
+          },
+          {
+            "q": "is",
+            "n": 2
+          },
+          {
+            "fixed": [
+              "state"
+            ],
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "courts",
+        "t": [
+          "High Courts",
+          "उच्च न्यायालय"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "court"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 5
+          }
+        ]
+      },
+      {
+        "id": "facts",
+        "t": [
+          "Symbols & Census",
+          "प्रतीक और जनगणना"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "symbol",
+              "census"
+            ],
+            "n": 10
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Amaravati",
+      "h": "अमरावती",
+      "s": "Andhra Pradesh",
+      "st": "Andhra Pradesh",
+      "sh": "आंध्र प्रदेश",
+      "c": "capital",
+      "rg": "S",
+      "d": 1,
+      "lat": 16.51,
+      "lng": 80.52,
+      "fm": "1 November 1956",
+      "fmh": "1 नवंबर 1956",
+      "lg": "Telugu",
+      "lgh": "तेलुगु",
+      "tag": "Capital on the Krishna",
+      "tagh": "कृष्णा तट की राजधानी",
+      "fact": "Amaravati is the capital of Andhra Pradesh; Andhra State (1953) was the first state formed on the basis of language.",
+      "facth": "अमरावती आंध्र प्रदेश की राजधानी है; आंध्र राज्य (1953) भाषा के आधार पर बना पहला राज्य था।"
+    },
+    {
+      "n": "Itanagar",
+      "h": "ईटानगर",
+      "s": "Arunachal Pradesh",
+      "st": "Arunachal Pradesh",
+      "sh": "अरुणाचल प्रदेश",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.08,
+      "lng": 93.6,
+      "fm": "20 February 1987",
+      "fmh": "20 फ़रवरी 1987",
+      "lg": "English",
+      "lgh": "अंग्रेज़ी",
+      "tag": "'Land of the Rising Sun'",
+      "tagh": "'उगते सूरज की भूमि'",
+      "fact": "Itanagar is the capital of Arunachal Pradesh, which became a state on 20 February 1987.",
+      "facth": "ईटानगर अरुणाचल प्रदेश की राजधानी है, जो 20 फ़रवरी 1987 को राज्य बना।"
+    },
+    {
+      "n": "Dispur",
+      "h": "दिसपुर",
+      "s": "Assam",
+      "st": "Assam",
+      "sh": "असम",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.14,
+      "lng": 91.79,
+      "fm": "26 January 1950 (state)",
+      "fmh": "26 जनवरी 1950 (राज्य)",
+      "lg": "Assamese (also Bodo and Bengali)",
+      "lgh": "असमिया (बोडो और बांग्ला भी)",
+      "tag": "Within Guwahati",
+      "tagh": "गुवाहाटी के भीतर",
+      "fact": "Dispur, a locality of Guwahati, has been the capital of Assam since 1973, when the capital moved from Shillong.",
+      "facth": "गुवाहाटी का एक भाग दिसपुर 1973 से असम की राजधानी है, जब राजधानी शिलॉन्ग से स्थानांतरित हुई।"
+    },
+    {
+      "n": "Patna",
+      "h": "पटना",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "capital",
+      "rg": "E",
+      "d": 1,
+      "lat": 25.6,
+      "lng": 85.14,
+      "fm": "22 March 1912 (Bihar Diwas)",
+      "fmh": "22 मार्च 1912 (बिहार दिवस)",
+      "lg": "Hindi (Urdu second)",
+      "lgh": "हिंदी (उर्दू द्वितीय)",
+      "tag": "Ancient Pataliputra",
+      "tagh": "प्राचीन पाटलिपुत्र",
+      "fact": "Patna, ancient Pataliputra and capital of the Mauryas, is the capital of Bihar; Bihar Diwas on 22 March marks its separation from Bengal in 1912.",
+      "facth": "प्राचीन पाटलिपुत्र और मौर्यों की राजधानी पटना बिहार की राजधानी है; 22 मार्च का बिहार दिवस 1912 में बंगाल से अलग होने का दिन है।"
+    },
+    {
+      "n": "Raipur",
+      "h": "रायपुर",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh",
+      "sh": "छत्तीसगढ़",
+      "c": "capital",
+      "rg": "C",
+      "d": 1,
+      "lat": 21.25,
+      "lng": 81.63,
+      "fm": "1 November 2000",
+      "fmh": "1 नवंबर 2000",
+      "lg": "Hindi (Chhattisgarhi)",
+      "lgh": "हिंदी (छत्तीसगढ़ी)",
+      "tag": "Nava Raipur is the planned capital",
+      "tagh": "नवा रायपुर नियोजित राजधानी है",
+      "fact": "Raipur is the capital of Chhattisgarh, carved out of Madhya Pradesh on 1 November 2000; Nava Raipur Atal Nagar is its planned new capital.",
+      "facth": "रायपुर छत्तीसगढ़ की राजधानी है, जो 1 नवंबर 2000 को मध्य प्रदेश से बना; नवा रायपुर अटल नगर इसकी नियोजित नई राजधानी है।"
+    },
+    {
+      "n": "Panaji",
+      "h": "पणजी",
+      "s": "Goa",
+      "st": "Goa",
+      "sh": "गोवा",
+      "c": "capital",
+      "rg": "W",
+      "d": 1,
+      "lat": 15.49,
+      "lng": 73.85,
+      "fm": "30 May 1987",
+      "fmh": "30 मई 1987",
+      "lg": "Konkani (also Marathi)",
+      "lgh": "कोंकणी (मराठी भी)",
+      "tag": "Smallest state by area",
+      "tagh": "क्षेत्रफल में सबसे छोटा राज्य",
+      "fact": "Panaji is the capital of Goa, the smallest state by area; Goa was freed from Portugal in 1961 and became a state on 30 May 1987.",
+      "facth": "पणजी क्षेत्रफल में सबसे छोटे राज्य गोवा की राजधानी है; गोवा 1961 में पुर्तगाल से मुक्त हुआ और 30 मई 1987 को राज्य बना।"
+    },
+    {
+      "n": "Gandhinagar",
+      "h": "गांधीनगर",
+      "s": "Gujarat",
+      "st": "Gujarat",
+      "sh": "गुजरात",
+      "c": "capital",
+      "rg": "W",
+      "d": 1,
+      "lat": 23.22,
+      "lng": 72.65,
+      "fm": "1 May 1960",
+      "fmh": "1 मई 1960",
+      "lg": "Gujarati",
+      "lgh": "गुजराती",
+      "tag": "Planned capital named after Gandhi",
+      "tagh": "गांधी के नाम पर नियोजित राजधानी",
+      "fact": "Gandhinagar, a planned city, is the capital of Gujarat, formed with Maharashtra from Bombay State on 1 May 1960.",
+      "facth": "नियोजित शहर गांधीनगर गुजरात की राजधानी है, जो महाराष्ट्र के साथ 1 मई 1960 को बंबई राज्य से बना।"
+    },
+    {
+      "n": "Chandigarh",
+      "h": "चंडीगढ़",
+      "s": "Chandigarh",
+      "st": "Chandigarh (capital of Punjab and Haryana)",
+      "sh": "चंडीगढ़ (पंजाब और हरियाणा की राजधानी)",
+      "c": "utcap",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.73,
+      "lng": 76.78,
+      "fm": "1 November 1966 (UT)",
+      "fmh": "1 नवंबर 1966 (केंद्रशासित प्रदेश)",
+      "lg": "English",
+      "lgh": "अंग्रेज़ी",
+      "tag": "Planned by Le Corbusier",
+      "tagh": "ले कोर्बुज़िए द्वारा नियोजित",
+      "fact": "Chandigarh, planned by Le Corbusier, is a union territory and the shared capital of Punjab and Haryana, which were reorganised on 1 November 1966.",
+      "facth": "ले कोर्बुज़िए द्वारा नियोजित चंडीगढ़ केंद्रशासित प्रदेश और पंजाब व हरियाणा की साझा राजधानी है, जो 1 नवंबर 1966 को पुनर्गठित हुए।",
+      "s2": [
+        "Punjab",
+        "Haryana"
+      ]
+    },
+    {
+      "n": "Shimla",
+      "h": "शिमला",
+      "s": "Himachal Pradesh",
+      "st": "Himachal Pradesh",
+      "sh": "हिमाचल प्रदेश",
+      "c": "capital",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.1,
+      "lng": 77.17,
+      "fm": "25 January 1971",
+      "fmh": "25 जनवरी 1971",
+      "lg": "Hindi (Sanskrit second)",
+      "lgh": "हिंदी (संस्कृत द्वितीय)",
+      "tag": "Former summer capital of British India",
+      "tagh": "ब्रिटिश भारत की पूर्व ग्रीष्मकालीन राजधानी",
+      "fact": "Shimla, once the summer capital of British India, is the capital of Himachal Pradesh, which became a state on 25 January 1971.",
+      "facth": "कभी ब्रिटिश भारत की ग्रीष्मकालीन राजधानी रहा शिमला हिमाचल प्रदेश की राजधानी है, जो 25 जनवरी 1971 को राज्य बना।"
+    },
+    {
+      "n": "Ranchi",
+      "h": "राँची",
+      "s": "Jharkhand",
+      "st": "Jharkhand",
+      "sh": "झारखंड",
+      "c": "capital",
+      "rg": "E",
+      "d": 1,
+      "lat": 23.35,
+      "lng": 85.33,
+      "fm": "15 November 2000",
+      "fmh": "15 नवंबर 2000",
+      "lg": "Hindi",
+      "lgh": "हिंदी",
+      "tag": "Formed on Birsa Munda's birth anniversary",
+      "tagh": "बिरसा मुंडा की जयंती पर गठित",
+      "fact": "Ranchi is the capital of Jharkhand, carved out of Bihar on 15 November 2000, the birth anniversary of Birsa Munda.",
+      "facth": "राँची झारखंड की राजधानी है, जो 15 नवंबर 2000 को, बिरसा मुंडा की जयंती पर, बिहार से बना।"
+    },
+    {
+      "n": "Bengaluru",
+      "h": "बेंगलुरु",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "capital",
+      "rg": "S",
+      "d": 1,
+      "lat": 12.97,
+      "lng": 77.59,
+      "fm": "1 November 1956 (renamed 1973)",
+      "fmh": "1 नवंबर 1956 (1973 में नामकरण)",
+      "lg": "Kannada",
+      "lgh": "कन्नड़",
+      "tag": "India's Silicon Valley",
+      "tagh": "भारत की सिलिकॉन वैली",
+      "fact": "Bengaluru is the capital of Karnataka, formed as Mysore State in 1956 and renamed Karnataka in 1973.",
+      "facth": "बेंगलुरु कर्नाटक की राजधानी है, जो 1956 में मैसूर राज्य के रूप में बना और 1973 में कर्नाटक नाम पड़ा।"
+    },
+    {
+      "n": "Thiruvananthapuram",
+      "h": "तिरुवनंतपुरम",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "capital",
+      "rg": "S",
+      "d": 1,
+      "lat": 8.52,
+      "lng": 76.94,
+      "fm": "1 November 1956",
+      "fmh": "1 नवंबर 1956",
+      "lg": "Malayalam",
+      "lgh": "मलयालम",
+      "tag": "Kerala Piravi, 1 November",
+      "tagh": "केरल पिरवी, 1 नवंबर",
+      "fact": "Thiruvananthapuram is the capital of Kerala, which was formed on 1 November 1956 (Kerala Piravi).",
+      "facth": "तिरुवनंतपुरम केरल की राजधानी है, जो 1 नवंबर 1956 (केरल पिरवी) को बना।"
+    },
+    {
+      "n": "Bhopal",
+      "h": "भोपाल",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "capital",
+      "rg": "C",
+      "d": 1,
+      "lat": 23.26,
+      "lng": 77.41,
+      "fm": "1 November 1956",
+      "fmh": "1 नवंबर 1956",
+      "lg": "Hindi",
+      "lgh": "हिंदी",
+      "tag": "'City of Lakes'",
+      "tagh": "'झीलों का शहर'",
+      "fact": "Bhopal, the City of Lakes, is the capital of Madhya Pradesh, formed on 1 November 1956.",
+      "facth": "'झीलों का शहर' भोपाल मध्य प्रदेश की राजधानी है, जो 1 नवंबर 1956 को बना।"
+    },
+    {
+      "n": "Mumbai",
+      "h": "मुंबई",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "capital",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.96,
+      "lng": 72.84,
+      "fm": "1 May 1960",
+      "fmh": "1 मई 1960",
+      "lg": "Marathi",
+      "lgh": "मराठी",
+      "tag": "Financial capital of India",
+      "tagh": "भारत की वित्तीय राजधानी",
+      "fact": "Mumbai, the financial capital of India, is the capital of Maharashtra (1 May 1960); Nagpur is its winter capital.",
+      "facth": "भारत की वित्तीय राजधानी मुंबई महाराष्ट्र (1 मई 1960) की राजधानी है; नागपुर इसकी शीतकालीन राजधानी है।"
+    },
+    {
+      "n": "Imphal",
+      "h": "इंफ़ाल",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.81,
+      "lng": 93.94,
+      "fm": "21 January 1972",
+      "fmh": "21 जनवरी 1972",
+      "lg": "Manipuri (Meitei)",
+      "lgh": "मणिपुरी (मैतेई)",
+      "tag": "Loktak Lake nearby",
+      "tagh": "पास में लोकटक झील",
+      "fact": "Imphal is the capital of Manipur, which became a state on 21 January 1972 with Meghalaya and Tripura.",
+      "facth": "इंफ़ाल मणिपुर की राजधानी है, जो मेघालय और त्रिपुरा के साथ 21 जनवरी 1972 को राज्य बना।"
+    },
+    {
+      "n": "Shillong",
+      "h": "शिलॉन्ग",
+      "s": "Meghalaya",
+      "st": "Meghalaya",
+      "sh": "मेघालय",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 25.57,
+      "lng": 91.88,
+      "fm": "21 January 1972",
+      "fmh": "21 जनवरी 1972",
+      "lg": "English",
+      "lgh": "अंग्रेज़ी",
+      "tag": "'Scotland of the East'",
+      "tagh": "'पूर्व का स्कॉटलैंड'",
+      "fact": "Shillong, called the Scotland of the East, is the capital of Meghalaya ('abode of clouds').",
+      "facth": "'पूर्व का स्कॉटलैंड' कहलाने वाला शिलॉन्ग मेघालय ('बादलों का घर') की राजधानी है।"
+    },
+    {
+      "n": "Aizawl",
+      "h": "आइज़ोल",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 23.73,
+      "lng": 92.72,
+      "fm": "20 February 1987",
+      "fmh": "20 फ़रवरी 1987",
+      "lg": "Mizo and English",
+      "lgh": "मिज़ो और अंग्रेज़ी",
+      "tag": "Hilltop capital",
+      "tagh": "पहाड़ी पर बसी राजधानी",
+      "fact": "Aizawl is the capital of Mizoram, which became a state on 20 February 1987, the same day as Arunachal Pradesh.",
+      "facth": "आइज़ोल मिज़ोरम की राजधानी है, जो अरुणाचल प्रदेश के साथ उसी दिन 20 फ़रवरी 1987 को राज्य बना।"
+    },
+    {
+      "n": "Kohima",
+      "h": "कोहिमा",
+      "s": "Nagaland",
+      "st": "Nagaland",
+      "sh": "नागालैंड",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 25.67,
+      "lng": 94.11,
+      "fm": "1 December 1963",
+      "fmh": "1 दिसंबर 1963",
+      "lg": "English",
+      "lgh": "अंग्रेज़ी",
+      "tag": "Battle of Kohima, 1944",
+      "tagh": "कोहिमा की लड़ाई, 1944",
+      "fact": "Kohima is the capital of Nagaland, which became the 16th state on 1 December 1963; the Hornbill Festival is held nearby.",
+      "facth": "कोहिमा नागालैंड की राजधानी है, जो 1 दिसंबर 1963 को 16वाँ राज्य बना; पास में हॉर्नबिल महोत्सव होता है।"
+    },
+    {
+      "n": "Bhubaneswar",
+      "h": "भुवनेश्वर",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "capital",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.3,
+      "lng": 85.82,
+      "fm": "1 April 1936 (Utkal Divas)",
+      "fmh": "1 अप्रैल 1936 (उत्कल दिवस)",
+      "lg": "Odia",
+      "lgh": "ओड़िया",
+      "tag": "'Temple City of India'",
+      "tagh": "'भारत का मंदिर नगर'",
+      "fact": "Bhubaneswar, the Temple City, is the capital of Odisha; Odisha became a separate province on 1 April 1936, the first on a linguistic basis.",
+      "facth": "'मंदिर नगर' भुवनेश्वर ओडिशा की राजधानी है; ओडिशा 1 अप्रैल 1936 को अलग प्रांत बना, जो भाषाई आधार पर पहला था।"
+    },
+    {
+      "n": "Jaipur",
+      "h": "जयपुर",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "capital",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.91,
+      "lng": 75.79,
+      "fm": "30 March 1949 (Rajasthan Diwas)",
+      "fmh": "30 मार्च 1949 (राजस्थान दिवस)",
+      "lg": "Hindi",
+      "lgh": "हिंदी",
+      "tag": "'Pink City'; largest state by area",
+      "tagh": "'गुलाबी नगरी'; क्षेत्रफल में सबसे बड़ा राज्य",
+      "fact": "Jaipur, the Pink City, is the capital of Rajasthan, the largest state by area.",
+      "facth": "'गुलाबी नगरी' जयपुर क्षेत्रफल में सबसे बड़े राज्य राजस्थान की राजधानी है।"
+    },
+    {
+      "n": "Gangtok",
+      "h": "गंगटोक",
+      "s": "Sikkim",
+      "st": "Sikkim",
+      "sh": "सिक्किम",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 27.33,
+      "lng": 88.61,
+      "fm": "16 May 1975",
+      "fmh": "16 मई 1975",
+      "lg": "Nepali, Sikkimese, Lepcha and others",
+      "lgh": "नेपाली, सिक्किमी, लेप्चा और अन्य",
+      "tag": "India's first fully organic state",
+      "tagh": "भारत का पहला पूर्णतः जैविक राज्य",
+      "fact": "Gangtok is the capital of Sikkim, which joined India as the 22nd state on 16 May 1975 (36th Amendment) and became India's first fully organic state in 2016.",
+      "facth": "गंगटोक सिक्किम की राजधानी है, जो 16 मई 1975 को (36वें संशोधन से) 22वें राज्य के रूप में भारत में शामिल हुआ और 2016 में भारत का पहला पूर्णतः जैविक राज्य बना।"
+    },
+    {
+      "n": "Chennai",
+      "h": "चेन्नई",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "capital",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.08,
+      "lng": 80.25,
+      "fm": "1 November 1956 (renamed 1969)",
+      "fmh": "1 नवंबर 1956 (1969 में नामकरण)",
+      "lg": "Tamil",
+      "lgh": "तमिल",
+      "tag": "'Gateway to South India'",
+      "tagh": "'दक्षिण भारत का प्रवेश द्वार'",
+      "fact": "Chennai is the capital of Tamil Nadu; Madras State was renamed Tamil Nadu on 14 January 1969.",
+      "facth": "चेन्नई तमिलनाडु की राजधानी है; मद्रास राज्य का नाम 14 जनवरी 1969 को तमिलनाडु रखा गया।"
+    },
+    {
+      "n": "Hyderabad",
+      "h": "हैदराबाद",
+      "s": "Telangana",
+      "st": "Telangana",
+      "sh": "तेलंगाना",
+      "c": "capital",
+      "rg": "S",
+      "d": 1,
+      "lat": 17.39,
+      "lng": 78.49,
+      "fm": "2 June 2014",
+      "fmh": "2 जून 2014",
+      "lg": "Telugu (Urdu second)",
+      "lgh": "तेलुगु (उर्दू द्वितीय)",
+      "tag": "Youngest state",
+      "tagh": "सबसे नया राज्य",
+      "fact": "Hyderabad is the capital of Telangana, the 29th state, formed on 2 June 2014; it was also the shared capital with Andhra Pradesh until 2024.",
+      "facth": "हैदराबाद 2 जून 2014 को बने 29वें राज्य तेलंगाना की राजधानी है; 2024 तक यह आंध्र प्रदेश के साथ साझा राजधानी भी थी।"
+    },
+    {
+      "n": "Agartala",
+      "h": "अगरतला",
+      "s": "Tripura",
+      "st": "Tripura",
+      "sh": "त्रिपुरा",
+      "c": "capital",
+      "rg": "NE",
+      "d": 1,
+      "lat": 23.83,
+      "lng": 91.28,
+      "fm": "21 January 1972",
+      "fmh": "21 जनवरी 1972",
+      "lg": "Bengali and Kokborok",
+      "lgh": "बांग्ला और कोकबोरोक",
+      "tag": "Ujjayanta Palace",
+      "tagh": "उज्जयंत महल",
+      "fact": "Agartala is the capital of Tripura, which became a state on 21 January 1972.",
+      "facth": "अगरतला त्रिपुरा की राजधानी है, जो 21 जनवरी 1972 को राज्य बना।"
+    },
+    {
+      "n": "Lucknow",
+      "h": "लखनऊ",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "capital",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.85,
+      "lng": 80.95,
+      "fm": "24 January 1950 (named UP)",
+      "fmh": "24 जनवरी 1950 (उत्तर प्रदेश नाम)",
+      "lg": "Hindi (Urdu second)",
+      "lgh": "हिंदी (उर्दू द्वितीय)",
+      "tag": "Most populous state",
+      "tagh": "सबसे अधिक जनसंख्या वाला राज्य",
+      "fact": "Lucknow is the capital of Uttar Pradesh, India's most populous state; the United Provinces were renamed Uttar Pradesh on 24 January 1950.",
+      "facth": "लखनऊ भारत के सबसे अधिक जनसंख्या वाले राज्य उत्तर प्रदेश की राजधानी है; संयुक्त प्रांत का नाम 24 जनवरी 1950 को उत्तर प्रदेश रखा गया।"
+    },
+    {
+      "n": "Dehradun",
+      "h": "देहरादून",
+      "s": "Uttarakhand",
+      "st": "Uttarakhand",
+      "sh": "उत्तराखंड",
+      "c": "capital",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.32,
+      "lng": 78.03,
+      "fm": "9 November 2000",
+      "fmh": "9 नवंबर 2000",
+      "lg": "Hindi (Sanskrit second)",
+      "lgh": "हिंदी (संस्कृत द्वितीय)",
+      "tag": "Winter capital; Gairsain is the summer capital",
+      "tagh": "शीतकालीन राजधानी; गैरसैंण ग्रीष्मकालीन राजधानी",
+      "fact": "Dehradun is the (winter) capital of Uttarakhand, carved out of Uttar Pradesh on 9 November 2000; Gairsain is the summer capital.",
+      "facth": "देहरादून उत्तराखंड की (शीतकालीन) राजधानी है, जो 9 नवंबर 2000 को उत्तर प्रदेश से बना; गैरसैंण ग्रीष्मकालीन राजधानी है।"
+    },
+    {
+      "n": "Kolkata",
+      "h": "कोलकाता",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "पश्चिम बंगाल",
+      "c": "capital",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.57,
+      "lng": 88.36,
+      "fm": "1947 (Partition of Bengal)",
+      "fmh": "1947 (बंगाल विभाजन)",
+      "lg": "Bengali",
+      "lgh": "बांग्ला",
+      "tag": "Capital of British India till 1911",
+      "tagh": "1911 तक ब्रिटिश भारत की राजधानी",
+      "fact": "Kolkata, capital of British India until 1911, is the capital of West Bengal.",
+      "facth": "1911 तक ब्रिटिश भारत की राजधानी रहा कोलकाता पश्चिम बंगाल की राजधानी है।"
+    },
+    {
+      "n": "Sri Vijaya Puram",
+      "h": "श्री विजयपुरम",
+      "s": "Andaman and Nicobar Islands",
+      "st": "Andaman and Nicobar Islands",
+      "sh": "अंडमान और निकोबार द्वीपसमूह",
+      "c": "utcap",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.62,
+      "lng": 92.72,
+      "fm": "1 November 1956 (UT)",
+      "fmh": "1 नवंबर 1956 (केंद्रशासित प्रदेश)",
+      "lg": "Hindi and English",
+      "lgh": "हिंदी और अंग्रेज़ी",
+      "tag": "Formerly Port Blair (renamed 2024)",
+      "tagh": "पहले पोर्ट ब्लेयर (2024 में नामकरण)",
+      "fact": "Port Blair, capital of the Andaman and Nicobar Islands, was renamed Sri Vijaya Puram in 2024; the Cellular Jail is here.",
+      "facth": "अंडमान और निकोबार द्वीपसमूह की राजधानी पोर्ट ब्लेयर का नाम 2024 में श्री विजयपुरम रखा गया; सेल्युलर जेल यहीं है।"
+    },
+    {
+      "n": "Daman",
+      "h": "दमन",
+      "s": "Dadra and Nagar Haveli and Daman and Diu",
+      "st": "Dadra and Nagar Haveli and Daman and Diu",
+      "sh": "दादरा और नगर हवेली तथा दमन और दीव",
+      "c": "utcap",
+      "rg": "W",
+      "d": 2,
+      "lat": 20.42,
+      "lng": 72.87,
+      "fm": "26 January 2020 (merged UT)",
+      "fmh": "26 जनवरी 2020 (विलय केंद्रशासित प्रदेश)",
+      "lg": "Gujarati, Hindi, English",
+      "lgh": "गुजराती, हिंदी, अंग्रेज़ी",
+      "tag": "Two UTs merged in 2020",
+      "tagh": "2020 में दो केंद्रशासित प्रदेशों का विलय",
+      "fact": "Daman is the capital of the union territory formed by merging Dadra and Nagar Haveli with Daman and Diu on 26 January 2020.",
+      "facth": "दमन उस केंद्रशासित प्रदेश की राजधानी है जो 26 जनवरी 2020 को दादरा और नगर हवेली तथा दमन और दीव के विलय से बना।",
+      "sea": true
+    },
+    {
+      "n": "New Delhi",
+      "h": "नई दिल्ली",
+      "s": "Delhi",
+      "st": "Delhi (NCT)",
+      "sh": "दिल्ली (राष्ट्रीय राजधानी क्षेत्र)",
+      "c": "utcap",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.61,
+      "lng": 77.21,
+      "fm": "1956 (UT); NCT from 1991",
+      "fmh": "1956 (केंद्रशासित प्रदेश); 1991 से राष्ट्रीय राजधानी क्षेत्र",
+      "lg": "Hindi (Punjabi and Urdu second)",
+      "lgh": "हिंदी (पंजाबी और उर्दू द्वितीय)",
+      "tag": "Capital of India since 1911",
+      "tagh": "1911 से भारत की राजधानी",
+      "fact": "New Delhi, planned by Lutyens and Baker, became the capital of India (announced 1911, inaugurated 1931); Delhi has been the National Capital Territory since the 69th Amendment (1991).",
+      "facth": "लुटियंस और बेकर द्वारा नियोजित नई दिल्ली भारत की राजधानी बनी (1911 में घोषणा, 1931 में उद्घाटन); 69वें संशोधन (1991) से दिल्ली राष्ट्रीय राजधानी क्षेत्र है।"
+    },
+    {
+      "n": "Srinagar",
+      "h": "श्रीनगर",
+      "s": "Jammu and Kashmir",
+      "st": "Jammu and Kashmir",
+      "sh": "जम्मू और कश्मीर",
+      "c": "utcap",
+      "rg": "N",
+      "d": 1,
+      "lat": 34.08,
+      "lng": 74.8,
+      "fm": "31 October 2019 (UT)",
+      "fmh": "31 अक्टूबर 2019 (केंद्रशासित प्रदेश)",
+      "lg": "Kashmiri, Dogri, Urdu, Hindi, English",
+      "lgh": "कश्मीरी, डोगरी, उर्दू, हिंदी, अंग्रेज़ी",
+      "tag": "Summer capital; Jammu is the winter capital",
+      "tagh": "ग्रीष्मकालीन राजधानी; जम्मू शीतकालीन राजधानी",
+      "fact": "Srinagar is the summer capital of the union territory of Jammu and Kashmir, created on 31 October 2019; Jammu is the winter capital.",
+      "facth": "श्रीनगर 31 अक्टूबर 2019 को बने केंद्रशासित प्रदेश जम्मू और कश्मीर की ग्रीष्मकालीन राजधानी है; जम्मू शीतकालीन राजधानी है।"
+    },
+    {
+      "n": "Leh",
+      "h": "लेह",
+      "s": "Ladakh",
+      "st": "Ladakh",
+      "sh": "लद्दाख",
+      "c": "utcap",
+      "rg": "N",
+      "d": 1,
+      "lat": 34.16,
+      "lng": 77.58,
+      "fm": "31 October 2019 (UT)",
+      "fmh": "31 अक्टूबर 2019 (केंद्रशासित प्रदेश)",
+      "lg": "Hindi and English",
+      "lgh": "हिंदी और अंग्रेज़ी",
+      "tag": "Largest UT by area",
+      "tagh": "क्षेत्रफल में सबसे बड़ा केंद्रशासित प्रदेश",
+      "fact": "Leh is the capital of Ladakh, a union territory without a legislature created on 31 October 2019 and the largest UT by area.",
+      "facth": "लेह लद्दाख की राजधानी है, जो 31 अक्टूबर 2019 को बना विधानसभा रहित केंद्रशासित प्रदेश और क्षेत्रफल में सबसे बड़ा केंद्रशासित प्रदेश है।"
+    },
+    {
+      "n": "Kavaratti",
+      "h": "कवरत्ती",
+      "s": "Lakshadweep",
+      "st": "Lakshadweep",
+      "sh": "लक्षद्वीप",
+      "c": "utcap",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.57,
+      "lng": 72.64,
+      "fm": "1 November 1956 (UT; named 1973)",
+      "fmh": "1 नवंबर 1956 (केंद्रशासित प्रदेश; 1973 में नाम)",
+      "lg": "Malayalam and English",
+      "lgh": "मलयालम और अंग्रेज़ी",
+      "tag": "Smallest UT",
+      "tagh": "सबसे छोटा केंद्रशासित प्रदेश",
+      "fact": "Kavaratti is the capital of Lakshadweep, the smallest union territory by area and population.",
+      "facth": "कवरत्ती क्षेत्रफल और जनसंख्या में सबसे छोटे केंद्रशासित प्रदेश लक्षद्वीप की राजधानी है।",
+      "sea": true
+    },
+    {
+      "n": "Puducherry (city)",
+      "h": "पुडुचेरी (शहर)",
+      "s": "Puducherry",
+      "st": "Puducherry",
+      "sh": "पुडुचेरी",
+      "c": "utcap",
+      "rg": "S",
+      "d": 1,
+      "lat": 11.93,
+      "lng": 79.8,
+      "fm": "1954 (de facto); 1962 (de jure)",
+      "fmh": "1954 (वास्तविक); 1962 (विधिवत)",
+      "lg": "Tamil, French, English, Malayalam, Telugu",
+      "lgh": "तमिल, फ़्रेंच, अंग्रेज़ी, मलयालम, तेलुगु",
+      "tag": "Former French territory",
+      "tagh": "पूर्व फ़्रांसीसी क्षेत्र",
+      "fact": "Puducherry, a former French territory, was transferred to India in 1954 (de jure 1962); the UT includes Karaikal, Mahe and Yanam.",
+      "facth": "पूर्व फ़्रांसीसी क्षेत्र पुडुचेरी 1954 में भारत को सौंपा गया (विधिवत 1962); इस केंद्रशासित प्रदेश में कराईकल, माहे और यनम शामिल हैं।"
+    },
+    {
+      "n": "Gairsain",
+      "h": "गैरसैंण",
+      "s": "Uttarakhand",
+      "st": "Uttarakhand",
+      "sh": "उत्तराखंड",
+      "c": "cap2",
+      "rg": "N",
+      "d": 3,
+      "lat": 30.05,
+      "lng": 79.29,
+      "fm": "2020 (declared summer capital)",
+      "fmh": "2020 (ग्रीष्मकालीन राजधानी घोषित)",
+      "lg": "Hindi",
+      "lgh": "हिंदी",
+      "tag": "Summer capital of Uttarakhand",
+      "tagh": "उत्तराखंड की ग्रीष्मकालीन राजधानी",
+      "fact": "Gairsain (Bhararisain) in Chamoli was declared the summer capital of Uttarakhand in 2020.",
+      "facth": "चमोली के गैरसैंण (भराड़ीसैंण) को 2020 में उत्तराखंड की ग्रीष्मकालीन राजधानी घोषित किया गया।"
+    },
+    {
+      "n": "Dharamshala",
+      "h": "धर्मशाला",
+      "s": "Himachal Pradesh",
+      "st": "Himachal Pradesh",
+      "sh": "हिमाचल प्रदेश",
+      "c": "cap2",
+      "rg": "N",
+      "d": 2,
+      "lat": 32.22,
+      "lng": 76.32,
+      "fm": "2017 (declared second capital)",
+      "fmh": "2017 (दूसरी राजधानी घोषित)",
+      "lg": "Hindi",
+      "lgh": "हिंदी",
+      "tag": "Winter capital of Himachal Pradesh",
+      "tagh": "हिमाचल प्रदेश की शीतकालीन राजधानी",
+      "fact": "Dharamshala, home of the Dalai Lama at McLeod Ganj, was declared the second (winter) capital of Himachal Pradesh in 2017.",
+      "facth": "मैक्लोडगंज में दलाई लामा का निवास धर्मशाला 2017 में हिमाचल प्रदेश की दूसरी (शीतकालीन) राजधानी घोषित हुआ।"
+    },
+    {
+      "n": "Jammu",
+      "h": "जम्मू",
+      "s": "Jammu and Kashmir",
+      "st": "Jammu and Kashmir",
+      "sh": "जम्मू और कश्मीर",
+      "c": "cap2",
+      "rg": "N",
+      "d": 2,
+      "lat": 32.73,
+      "lng": 74.86,
+      "fm": "Winter capital",
+      "fmh": "शीतकालीन राजधानी",
+      "lg": "Dogri, Hindi",
+      "lgh": "डोगरी, हिंदी",
+      "tag": "'City of Temples'",
+      "tagh": "'मंदिरों का शहर'",
+      "fact": "Jammu, the City of Temples, is the winter capital of Jammu and Kashmir.",
+      "facth": "'मंदिरों का शहर' जम्मू जम्मू और कश्मीर की शीतकालीन राजधानी है।"
+    },
+    {
+      "n": "Nagpur",
+      "h": "नागपुर",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "cap2",
+      "rg": "W",
+      "d": 2,
+      "lat": 21.15,
+      "lng": 79.09,
+      "fm": "Winter capital",
+      "fmh": "शीतकालीन राजधानी",
+      "lg": "Marathi",
+      "lgh": "मराठी",
+      "tag": "Zero Mile Stone; 'Orange City'",
+      "tagh": "ज़ीरो माइल स्टोन; 'संतरों का शहर'",
+      "fact": "Nagpur, the 'Orange City' with India's Zero Mile Stone, is the winter capital of Maharashtra, where the winter session of the legislature is held.",
+      "facth": "भारत के ज़ीरो माइल स्टोन वाला 'संतरों का शहर' नागपुर महाराष्ट्र की शीतकालीन राजधानी है, जहाँ विधानमंडल का शीतकालीन सत्र होता है।"
+    },
+    {
+      "n": "Allahabad High Court",
+      "h": "इलाहाबाद उच्च न्यायालय",
+      "s": "Uttar Pradesh",
+      "st": "Prayagraj, Uttar Pradesh",
+      "sh": "प्रयागराज, उत्तर प्रदेश",
+      "c": "court",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.45,
+      "lng": 81.84,
+      "fm": "1866",
+      "fmh": "1866",
+      "jr": "Uttar Pradesh",
+      "jrh": "उत्तर प्रदेश",
+      "tag": "Covers: Uttar Pradesh",
+      "tagh": "अधिकार क्षेत्र: उत्तर प्रदेश",
+      "fact": "The Allahabad High Court at Prayagraj (1866), with a bench at Lucknow, has the largest sanctioned strength of judges.",
+      "facth": "प्रयागराज का इलाहाबाद उच्च न्यायालय (1866), लखनऊ पीठ सहित, न्यायाधीशों की सबसे बड़ी स्वीकृत संख्या वाला है।"
+    },
+    {
+      "n": "Bombay High Court",
+      "h": "बॉम्बे उच्च न्यायालय",
+      "s": "Maharashtra",
+      "st": "Mumbai, Maharashtra",
+      "sh": "मुंबई, महाराष्ट्र",
+      "c": "court",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.93,
+      "lng": 72.83,
+      "fm": "1862",
+      "fmh": "1862",
+      "jr": "Maharashtra, Goa, Dadra and Nagar Haveli and Daman and Diu",
+      "jrh": "महाराष्ट्र, गोवा, दादरा और नगर हवेली तथा दमन और दीव",
+      "tag": "Covers: Maharashtra, Goa, Dadra and Nagar Haveli and Daman and Diu",
+      "tagh": "अधिकार क्षेत्र: महाराष्ट्र, गोवा, दादरा और नगर हवेली तथा दमन और दीव",
+      "fact": "The Bombay High Court (1862) covers Maharashtra, Goa and Dadra and Nagar Haveli and Daman and Diu.",
+      "facth": "बॉम्बे उच्च न्यायालय (1862) महाराष्ट्र, गोवा और दादरा और नगर हवेली तथा दमन और दीव पर अधिकार रखता है।"
+    },
+    {
+      "n": "Calcutta High Court",
+      "h": "कलकत्ता उच्च न्यायालय",
+      "s": "West Bengal",
+      "st": "Kolkata, West Bengal",
+      "sh": "कोलकाता, पश्चिम बंगाल",
+      "c": "court",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.57,
+      "lng": 88.35,
+      "fm": "1862 (oldest)",
+      "fmh": "1862 (सबसे पुराना)",
+      "jr": "West Bengal, Andaman and Nicobar Islands",
+      "jrh": "पश्चिम बंगाल, अंडमान और निकोबार द्वीपसमूह",
+      "tag": "Covers: West Bengal, Andaman and Nicobar Islands",
+      "tagh": "अधिकार क्षेत्र: पश्चिम बंगाल, अंडमान और निकोबार द्वीपसमूह",
+      "fact": "The Calcutta High Court, set up on 1 July 1862, is the oldest High Court in India; it also covers the Andaman and Nicobar Islands.",
+      "facth": "1 जुलाई 1862 को स्थापित कलकत्ता उच्च न्यायालय भारत का सबसे पुराना उच्च न्यायालय है; यह अंडमान और निकोबार द्वीपसमूह पर भी अधिकार रखता है।"
+    },
+    {
+      "n": "Madras High Court",
+      "h": "मद्रास उच्च न्यायालय",
+      "s": "Tamil Nadu",
+      "st": "Chennai, Tamil Nadu",
+      "sh": "चेन्नई, तमिलनाडु",
+      "c": "court",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.09,
+      "lng": 80.26,
+      "fm": "1862",
+      "fmh": "1862",
+      "jr": "Tamil Nadu, Puducherry",
+      "jrh": "तमिलनाडु, पुडुचेरी",
+      "tag": "Covers: Tamil Nadu, Puducherry",
+      "tagh": "अधिकार क्षेत्र: तमिलनाडु, पुडुचेरी",
+      "fact": "The Madras High Court (1862) covers Tamil Nadu and Puducherry and has a bench at Madurai.",
+      "facth": "मद्रास उच्च न्यायालय (1862) तमिलनाडु और पुडुचेरी पर अधिकार रखता है और इसकी पीठ मदुरै में है।"
+    },
+    {
+      "n": "Delhi High Court",
+      "h": "दिल्ली उच्च न्यायालय",
+      "s": "Delhi",
+      "st": "New Delhi",
+      "sh": "नई दिल्ली",
+      "c": "court",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.6,
+      "lng": 77.24,
+      "fm": "1966",
+      "fmh": "1966",
+      "jr": "Delhi",
+      "jrh": "दिल्ली",
+      "tag": "Covers: Delhi",
+      "tagh": "अधिकार क्षेत्र: दिल्ली",
+      "fact": "The Delhi High Court was set up in 1966.",
+      "facth": "दिल्ली उच्च न्यायालय 1966 में स्थापित हुआ।"
+    },
+    {
+      "n": "Karnataka High Court",
+      "h": "कर्नाटक उच्च न्यायालय",
+      "s": "Karnataka",
+      "st": "Bengaluru, Karnataka",
+      "sh": "बेंगलुरु, कर्नाटक",
+      "c": "court",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.98,
+      "lng": 77.59,
+      "fm": "1884 (as Mysore)",
+      "fmh": "1884 (मैसूर के रूप में)",
+      "jr": "Karnataka",
+      "jrh": "कर्नाटक",
+      "tag": "Covers: Karnataka",
+      "tagh": "अधिकार क्षेत्र: कर्नाटक",
+      "fact": "The Karnataka High Court sits in the Attara Kacheri building in Bengaluru, with benches at Dharwad and Kalaburagi.",
+      "facth": "कर्नाटक उच्च न्यायालय बेंगलुरु के अत्तारा कचेरी भवन में है, जिसकी पीठें धारवाड़ और कलबुर्गी में हैं।"
+    },
+    {
+      "n": "Kerala High Court",
+      "h": "केरल उच्च न्यायालय",
+      "s": "Kerala",
+      "st": "Kochi, Kerala",
+      "sh": "कोच्चि, केरल",
+      "c": "court",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.98,
+      "lng": 76.28,
+      "fm": "1956",
+      "fmh": "1956",
+      "jr": "Kerala, Lakshadweep",
+      "jrh": "केरल, लक्षद्वीप",
+      "tag": "Covers: Kerala, Lakshadweep",
+      "tagh": "अधिकार क्षेत्र: केरल, लक्षद्वीप",
+      "fact": "The Kerala High Court sits at Kochi, not the capital, and also covers Lakshadweep.",
+      "facth": "केरल उच्च न्यायालय राजधानी नहीं, कोच्चि में है और लक्षद्वीप पर भी अधिकार रखता है।"
+    },
+    {
+      "n": "Gauhati High Court",
+      "h": "गुवाहाटी उच्च न्यायालय",
+      "s": "Assam",
+      "st": "Guwahati, Assam",
+      "sh": "गुवाहाटी, असम",
+      "c": "court",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.18,
+      "lng": 91.75,
+      "fm": "1948",
+      "fmh": "1948",
+      "jr": "Assam, Nagaland, Mizoram, Arunachal Pradesh",
+      "jrh": "असम, नागालैंड, मिज़ोरम, अरुणाचल प्रदेश",
+      "tag": "Covers: Assam, Nagaland, Mizoram, Arunachal Pradesh",
+      "tagh": "अधिकार क्षेत्र: असम, नागालैंड, मिज़ोरम, अरुणाचल प्रदेश",
+      "fact": "The Gauhati High Court covers Assam, Nagaland, Mizoram and Arunachal Pradesh, with benches at Kohima, Aizawl and Itanagar.",
+      "facth": "गुवाहाटी उच्च न्यायालय असम, नागालैंड, मिज़ोरम और अरुणाचल प्रदेश पर अधिकार रखता है, जिसकी पीठें कोहिमा, आइज़ोल और ईटानगर में हैं।"
+    },
+    {
+      "n": "Punjab and Haryana High Court",
+      "h": "पंजाब और हरियाणा उच्च न्यायालय",
+      "s": "Chandigarh",
+      "st": "Chandigarh",
+      "sh": "चंडीगढ़",
+      "c": "court",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.75,
+      "lng": 76.8,
+      "fm": "1947 (at Shimla); Chandigarh from 1955",
+      "fmh": "1947 (शिमला में); चंडीगढ़ 1955",
+      "jr": "1947 (शिमला में); 1955 से चंडीगढ़",
+      "jrh": "Punjab, Haryana, Chandigarh",
+      "tag": "Covers: 1947 (शिमला में); 1955 से चंडीगढ़",
+      "tagh": "अधिकार क्षेत्र: Punjab, Haryana, Chandigarh",
+      "fact": "पंजाब, हरियाणा, चंडीगढ़",
+      "facth": "The Punjab and Haryana High Court in Chandigarh, in a building by Le Corbusier, is a common High Court for two states and a UT."
+    },
+    {
+      "n": "Rajasthan High Court",
+      "h": "राजस्थान उच्च न्यायालय",
+      "s": "Rajasthan",
+      "st": "Jodhpur, Rajasthan",
+      "sh": "जोधपुर, राजस्थान",
+      "c": "court",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.28,
+      "lng": 73.02,
+      "fm": "1949",
+      "fmh": "1949",
+      "jr": "Rajasthan",
+      "jrh": "राजस्थान",
+      "tag": "Covers: Rajasthan",
+      "tagh": "अधिकार क्षेत्र: राजस्थान",
+      "fact": "The Rajasthan High Court sits at Jodhpur, not the capital Jaipur, which has a bench.",
+      "facth": "राजस्थान उच्च न्यायालय राजधानी जयपुर नहीं, जोधपुर में है; जयपुर में इसकी पीठ है।"
+    },
+    {
+      "n": "Madhya Pradesh High Court",
+      "h": "मध्य प्रदेश उच्च न्यायालय",
+      "s": "Madhya Pradesh",
+      "st": "Jabalpur, Madhya Pradesh",
+      "sh": "जबलपुर, मध्य प्रदेश",
+      "c": "court",
+      "rg": "C",
+      "d": 1,
+      "lat": 23.17,
+      "lng": 79.93,
+      "fm": "1956",
+      "fmh": "1956",
+      "jr": "Madhya Pradesh",
+      "jrh": "मध्य प्रदेश",
+      "tag": "Covers: Madhya Pradesh",
+      "tagh": "अधिकार क्षेत्र: मध्य प्रदेश",
+      "fact": "The Madhya Pradesh High Court sits at Jabalpur, with benches at Indore and Gwalior.",
+      "facth": "मध्य प्रदेश उच्च न्यायालय जबलपुर में है, जिसकी पीठें इंदौर और ग्वालियर में हैं।"
+    },
+    {
+      "n": "Chhattisgarh High Court",
+      "h": "छत्तीसगढ़ उच्च न्यायालय",
+      "s": "Chhattisgarh",
+      "st": "Bilaspur, Chhattisgarh",
+      "sh": "बिलासपुर, छत्तीसगढ़",
+      "c": "court",
+      "rg": "C",
+      "d": 1,
+      "lat": 22.08,
+      "lng": 82.15,
+      "fm": "2000",
+      "fmh": "2000",
+      "jr": "Chhattisgarh",
+      "jrh": "छत्तीसगढ़",
+      "tag": "Covers: Chhattisgarh",
+      "tagh": "अधिकार क्षेत्र: छत्तीसगढ़",
+      "fact": "The Chhattisgarh High Court sits at Bilaspur, not the capital Raipur.",
+      "facth": "छत्तीसगढ़ उच्च न्यायालय राजधानी रायपुर नहीं, बिलासपुर में है।"
+    },
+    {
+      "n": "Uttarakhand High Court",
+      "h": "उत्तराखंड उच्च न्यायालय",
+      "s": "Uttarakhand",
+      "st": "Nainital, Uttarakhand",
+      "sh": "नैनीताल, उत्तराखंड",
+      "c": "court",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.39,
+      "lng": 79.46,
+      "fm": "2000",
+      "fmh": "2000",
+      "jr": "Uttarakhand",
+      "jrh": "उत्तराखंड",
+      "tag": "Covers: Uttarakhand",
+      "tagh": "अधिकार क्षेत्र: उत्तराखंड",
+      "fact": "The Uttarakhand High Court sits at Nainital, not the capital Dehradun.",
+      "facth": "उत्तराखंड उच्च न्यायालय राजधानी देहरादून नहीं, नैनीताल में है।"
+    },
+    {
+      "n": "Orissa High Court",
+      "h": "उड़ीसा उच्च न्यायालय",
+      "s": "Odisha",
+      "st": "Cuttack, Odisha",
+      "sh": "कटक, ओडिशा",
+      "c": "court",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.47,
+      "lng": 85.88,
+      "fm": "1948",
+      "fmh": "1948",
+      "jr": "Odisha",
+      "jrh": "ओडिशा",
+      "tag": "Covers: Odisha",
+      "tagh": "अधिकार क्षेत्र: ओडिशा",
+      "fact": "The Orissa High Court sits at Cuttack, the old capital, not Bhubaneswar.",
+      "facth": "उड़ीसा उच्च न्यायालय भुवनेश्वर नहीं, पुरानी राजधानी कटक में है।"
+    },
+    {
+      "n": "Patna High Court",
+      "h": "पटना उच्च न्यायालय",
+      "s": "Bihar",
+      "st": "Patna, Bihar",
+      "sh": "पटना, बिहार",
+      "c": "court",
+      "rg": "E",
+      "d": 2,
+      "lat": 25.61,
+      "lng": 85.12,
+      "fm": "1916",
+      "fmh": "1916",
+      "jr": "Bihar",
+      "jrh": "बिहार",
+      "tag": "Covers: Bihar",
+      "tagh": "अधिकार क्षेत्र: बिहार",
+      "fact": "The Patna High Court was set up in 1916.",
+      "facth": "पटना उच्च न्यायालय 1916 में स्थापित हुआ।"
+    },
+    {
+      "n": "Jharkhand High Court",
+      "h": "झारखंड उच्च न्यायालय",
+      "s": "Jharkhand",
+      "st": "Ranchi, Jharkhand",
+      "sh": "राँची, झारखंड",
+      "c": "court",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.38,
+      "lng": 85.32,
+      "fm": "2000",
+      "fmh": "2000",
+      "jr": "Jharkhand",
+      "jrh": "झारखंड",
+      "tag": "Covers: Jharkhand",
+      "tagh": "अधिकार क्षेत्र: झारखंड",
+      "fact": "The Jharkhand High Court at Ranchi was set up in 2000 with the new state.",
+      "facth": "राँची का झारखंड उच्च न्यायालय नए राज्य के साथ 2000 में स्थापित हुआ।"
+    },
+    {
+      "n": "Gujarat High Court",
+      "h": "गुजरात उच्च न्यायालय",
+      "s": "Gujarat",
+      "st": "Ahmedabad, Gujarat",
+      "sh": "अहमदाबाद, गुजरात",
+      "c": "court",
+      "rg": "W",
+      "d": 1,
+      "lat": 23.07,
+      "lng": 72.53,
+      "fm": "1960",
+      "fmh": "1960",
+      "jr": "Gujarat",
+      "jrh": "गुजरात",
+      "tag": "Covers: Gujarat",
+      "tagh": "अधिकार क्षेत्र: गुजरात",
+      "fact": "The Gujarat High Court sits at Ahmedabad, not the capital Gandhinagar.",
+      "facth": "गुजरात उच्च न्यायालय राजधानी गांधीनगर नहीं, अहमदाबाद में है।"
+    },
+    {
+      "n": "Andhra Pradesh High Court",
+      "h": "आंध्र प्रदेश उच्च न्यायालय",
+      "s": "Andhra Pradesh",
+      "st": "Amaravati, Andhra Pradesh",
+      "sh": "अमरावती, आंध्र प्रदेश",
+      "c": "court",
+      "rg": "S",
+      "d": 2,
+      "lat": 16.5,
+      "lng": 80.5,
+      "fm": "2019 (separate court)",
+      "fmh": "2019 (अलग न्यायालय)",
+      "jr": "Andhra Pradesh",
+      "jrh": "आंध्र प्रदेश",
+      "tag": "Covers: Andhra Pradesh",
+      "tagh": "अधिकार क्षेत्र: आंध्र प्रदेश",
+      "fact": "A separate High Court for Andhra Pradesh at Amaravati began on 1 January 2019, when the common court with Telangana was split.",
+      "facth": "अमरावती में आंध्र प्रदेश का अलग उच्च न्यायालय 1 जनवरी 2019 को शुरू हुआ, जब तेलंगाना के साथ साझा न्यायालय विभाजित हुआ।"
+    },
+    {
+      "n": "Telangana High Court",
+      "h": "तेलंगाना उच्च न्यायालय",
+      "s": "Telangana",
+      "st": "Hyderabad, Telangana",
+      "sh": "हैदराबाद, तेलंगाना",
+      "c": "court",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.37,
+      "lng": 78.47,
+      "fm": "2019 (separate court)",
+      "fmh": "2019 (अलग न्यायालय)",
+      "jr": "Telangana",
+      "jrh": "तेलंगाना",
+      "tag": "Covers: Telangana",
+      "tagh": "अधिकार क्षेत्र: तेलंगाना",
+      "fact": "The Telangana High Court at Hyderabad became a separate court on 1 January 2019.",
+      "facth": "हैदराबाद का तेलंगाना उच्च न्यायालय 1 जनवरी 2019 को अलग न्यायालय बना।"
+    },
+    {
+      "n": "Himachal Pradesh High Court",
+      "h": "हिमाचल प्रदेश उच्च न्यायालय",
+      "s": "Himachal Pradesh",
+      "st": "Shimla, Himachal Pradesh",
+      "sh": "शिमला, हिमाचल प्रदेश",
+      "c": "court",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.1,
+      "lng": 77.18,
+      "fm": "1971",
+      "fmh": "1971",
+      "jr": "Himachal Pradesh",
+      "jrh": "हिमाचल प्रदेश",
+      "tag": "Covers: Himachal Pradesh",
+      "tagh": "अधिकार क्षेत्र: हिमाचल प्रदेश",
+      "fact": "The Himachal Pradesh High Court sits at Shimla.",
+      "facth": "हिमाचल प्रदेश उच्च न्यायालय शिमला में है।"
+    },
+    {
+      "n": "High Court of Jammu and Kashmir and Ladakh",
+      "h": "जम्मू-कश्मीर और लद्दाख उच्च न्यायालय",
+      "s": "Jammu and Kashmir",
+      "st": "Srinagar and Jammu",
+      "sh": "श्रीनगर और जम्मू",
+      "c": "court",
+      "rg": "N",
+      "d": 2,
+      "lat": 34.07,
+      "lng": 74.82,
+      "fm": "1928",
+      "fmh": "1928",
+      "jr": "Jammu and Kashmir, Ladakh",
+      "jrh": "जम्मू और कश्मीर, लद्दाख",
+      "tag": "Covers: Jammu and Kashmir, Ladakh",
+      "tagh": "अधिकार क्षेत्र: जम्मू और कश्मीर, लद्दाख",
+      "fact": "The common High Court of Jammu and Kashmir and Ladakh sits at Srinagar in summer and Jammu in winter.",
+      "facth": "जम्मू-कश्मीर और लद्दाख का साझा उच्च न्यायालय गर्मियों में श्रीनगर और सर्दियों में जम्मू में बैठता है।"
+    },
+    {
+      "n": "Sikkim High Court",
+      "h": "सिक्किम उच्च न्यायालय",
+      "s": "Sikkim",
+      "st": "Gangtok, Sikkim",
+      "sh": "गंगटोक, सिक्किम",
+      "c": "court",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.32,
+      "lng": 88.6,
+      "fm": "1975",
+      "fmh": "1975",
+      "jr": "Sikkim",
+      "jrh": "सिक्किम",
+      "tag": "Covers: Sikkim",
+      "tagh": "अधिकार क्षेत्र: सिक्किम",
+      "fact": "The Sikkim High Court at Gangtok is the smallest High Court by number of judges.",
+      "facth": "गंगटोक का सिक्किम उच्च न्यायालय न्यायाधीशों की संख्या में सबसे छोटा उच्च न्यायालय है।"
+    },
+    {
+      "n": "Manipur High Court",
+      "h": "मणिपुर उच्च न्यायालय",
+      "s": "Manipur",
+      "st": "Imphal, Manipur",
+      "sh": "इंफ़ाल, मणिपुर",
+      "c": "court",
+      "rg": "NE",
+      "d": 3,
+      "lat": 24.8,
+      "lng": 93.95,
+      "fm": "2013",
+      "fmh": "2013",
+      "jr": "Manipur",
+      "jrh": "मणिपुर",
+      "tag": "Covers: Manipur",
+      "tagh": "अधिकार क्षेत्र: मणिपुर",
+      "fact": "The Manipur High Court was set up in 2013, along with those of Meghalaya and Tripura.",
+      "facth": "मणिपुर उच्च न्यायालय 2013 में मेघालय और त्रिपुरा के उच्च न्यायालयों के साथ स्थापित हुआ।"
+    },
+    {
+      "n": "Meghalaya High Court",
+      "h": "मेघालय उच्च न्यायालय",
+      "s": "Meghalaya",
+      "st": "Shillong, Meghalaya",
+      "sh": "शिलॉन्ग, मेघालय",
+      "c": "court",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.57,
+      "lng": 91.89,
+      "fm": "2013",
+      "fmh": "2013",
+      "jr": "Meghalaya",
+      "jrh": "मेघालय",
+      "tag": "Covers: Meghalaya",
+      "tagh": "अधिकार क्षेत्र: मेघालय",
+      "fact": "The Meghalaya High Court at Shillong was set up in 2013.",
+      "facth": "शिलॉन्ग का मेघालय उच्च न्यायालय 2013 में स्थापित हुआ।"
+    },
+    {
+      "n": "Tripura High Court",
+      "h": "त्रिपुरा उच्च न्यायालय",
+      "s": "Tripura",
+      "st": "Agartala, Tripura",
+      "sh": "अगरतला, त्रिपुरा",
+      "c": "court",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.84,
+      "lng": 91.28,
+      "fm": "2013",
+      "fmh": "2013",
+      "jr": "Tripura",
+      "jrh": "त्रिपुरा",
+      "tag": "Covers: Tripura",
+      "tagh": "अधिकार क्षेत्र: त्रिपुरा",
+      "fact": "The Tripura High Court at Agartala was set up in 2013.",
+      "facth": "अगरतला का त्रिपुरा उच्च न्यायालय 2013 में स्थापित हुआ।"
+    },
+    {
+      "n": "Supreme Court of India",
+      "h": "भारत का सर्वोच्च न्यायालय",
+      "s": "Delhi",
+      "st": "Tilak Marg, New Delhi",
+      "sh": "तिलक मार्ग, नई दिल्ली",
+      "c": "court",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.62,
+      "lng": 77.24,
+      "fm": "28 January 1950",
+      "fmh": "28 जनवरी 1950",
+      "jr": "Whole of India",
+      "jrh": "पूरा भारत",
+      "tag": "Covers: Whole of India",
+      "tagh": "अधिकार क्षेत्र: पूरा भारत",
+      "fact": "The Supreme Court of India was inaugurated on 28 January 1950; H. J. Kania was the first Chief Justice and Fathima Beevi (1989) the first woman judge.",
+      "facth": "भारत का सर्वोच्च न्यायालय 28 जनवरी 1950 को शुरू हुआ; एच. जे. कानिया पहले मुख्य न्यायाधीश और फ़ातिमा बीवी (1989) पहली महिला न्यायाधीश थीं।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "symbols",
+      "icon": "🇮🇳",
+      "t": [
+        "National symbols",
+        "राष्ट्रीय प्रतीक"
+      ],
+      "cols": [
+        [
+          "Symbol",
+          "प्रतीक"
+        ],
+        [
+          "Facts",
+          "तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "National Flag",
+            "राष्ट्रीय ध्वज"
+          ],
+          [
+            "Adopted 22 July 1947; ratio 3:2; navy-blue Ashoka Chakra with 24 spokes; designed by Pingali Venkayya",
+            "22 जुलाई 1947 को अपनाया; अनुपात 3:2; 24 तीलियों वाला नीला अशोक चक्र; पिंगली वेंकैया द्वारा रूपांकित"
+          ]
+        ],
+        [
+          [
+            "National Emblem",
+            "राष्ट्रीय प्रतीक चिह्न"
+          ],
+          [
+            "From the Sarnath Lion Capital, adopted 26 January 1950; motto Satyameva Jayate from the Mundaka Upanishad",
+            "सारनाथ सिंह शीर्ष से, 26 जनवरी 1950 को अपनाया; आदर्श वाक्य सत्यमेव जयते मुंडक उपनिषद से"
+          ]
+        ],
+        [
+          [
+            "National Anthem",
+            "राष्ट्रगान"
+          ],
+          [
+            "Jana Gana Mana by Tagore; adopted 24 January 1950; about 52 seconds; first sung 27 December 1911 at the Calcutta Congress",
+            "टैगोर का जन गण मन; 24 जनवरी 1950 को अपनाया; लगभग 52 सेकंड; पहली बार 27 दिसंबर 1911 को कलकत्ता कांग्रेस में गाया"
+          ]
+        ],
+        [
+          [
+            "National Song",
+            "राष्ट्रगीत"
+          ],
+          [
+            "Vande Mataram from Bankim Chandra's Anandamath; adopted 24 January 1950",
+            "बंकिमचंद्र के आनंदमठ से वंदे मातरम्; 24 जनवरी 1950 को अपनाया"
+          ]
+        ],
+        [
+          [
+            "National Calendar",
+            "राष्ट्रीय पंचांग"
+          ],
+          [
+            "Saka calendar, adopted 22 March 1957",
+            "शक संवत, 22 मार्च 1957 को अपनाया"
+          ]
+        ],
+        [
+          [
+            "Animal, bird, flower, tree, fruit",
+            "पशु, पक्षी, फूल, वृक्ष, फल"
+          ],
+          [
+            "Tiger, Indian peacock, lotus, banyan, mango",
+            "बाघ, भारतीय मोर, कमल, बरगद, आम"
+          ]
+        ],
+        [
+          [
+            "River, aquatic animal, heritage animal",
+            "नदी, जलीय जीव, धरोहर पशु"
+          ],
+          [
+            "Ganga (2008), Ganges river dolphin (2009), elephant (2010)",
+            "गंगा (2008), गंगा नदी डॉल्फ़िन (2009), हाथी (2010)"
+          ]
+        ],
+        [
+          [
+            "Rupee symbol ₹",
+            "रुपये का प्रतीक ₹"
+          ],
+          [
+            "Adopted 2010; designed by D. Udaya Kumar",
+            "2010 में अपनाया; डी. उदय कुमार द्वारा रूपांकित"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "census",
+      "icon": "📊",
+      "t": [
+        "Census 2011 at a glance",
+        "जनगणना 2011 एक नज़र में"
+      ],
+      "cols": [
+        [
+          "Measure",
+          "मानक"
+        ],
+        [
+          "Figure",
+          "आँकड़ा"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Population",
+            "जनसंख्या"
+          ],
+          [
+            "121.09 crore (1,210.9 million); decadal growth 17.7%",
+            "121.09 करोड़; दशकीय वृद्धि 17.7%"
+          ]
+        ],
+        [
+          [
+            "Sex ratio",
+            "लिंगानुपात"
+          ],
+          [
+            "943 females per 1,000 males; child (0–6) sex ratio 918",
+            "प्रति 1,000 पुरुषों पर 943 महिलाएँ; बाल (0–6) लिंगानुपात 918"
+          ]
+        ],
+        [
+          [
+            "Literacy",
+            "साक्षरता"
+          ],
+          [
+            "74.04% (male 82.14%, female 65.46%)",
+            "74.04% (पुरुष 82.14%, महिला 65.46%)"
+          ]
+        ],
+        [
+          [
+            "Density",
+            "घनत्व"
+          ],
+          [
+            "382 per sq km",
+            "382 प्रति वर्ग किमी"
+          ]
+        ],
+        [
+          [
+            "Highest and lowest literacy",
+            "सबसे अधिक और कम साक्षरता"
+          ],
+          [
+            "Kerala (94.0%); Bihar (61.8%)",
+            "केरल (94.0%); बिहार (61.8%)"
+          ]
+        ],
+        [
+          [
+            "Highest and lowest sex ratio (states)",
+            "सबसे अधिक और कम लिंगानुपात (राज्य)"
+          ],
+          [
+            "Kerala (1,084); Haryana (879)",
+            "केरल (1,084); हरियाणा (879)"
+          ]
+        ],
+        [
+          [
+            "Highest and lowest density (states)",
+            "सबसे अधिक और कम घनत्व (राज्य)"
+          ],
+          [
+            "Bihar (1,106); Arunachal Pradesh (17)",
+            "बिहार (1,106); अरुणाचल प्रदेश (17)"
+          ]
+        ],
+        [
+          [
+            "Most and least populous states",
+            "सबसे अधिक और कम जनसंख्या वाले राज्य"
+          ],
+          [
+            "Uttar Pradesh; Sikkim",
+            "उत्तर प्रदेश; सिक्किम"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "states",
+      "icon": "🗺️",
+      "t": [
+        "How the states were formed",
+        "राज्यों का गठन"
+      ],
+      "cols": [
+        [
+          "Year",
+          "वर्ष"
+        ],
+        [
+          "Event",
+          "घटना"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "1953",
+            "1953"
+          ],
+          [
+            "Andhra State, the first state on a linguistic basis, after Potti Sriramulu's fast",
+            "पोट्टि श्रीरामुलु के अनशन के बाद आंध्र राज्य, भाषाई आधार पर पहला राज्य"
+          ]
+        ],
+        [
+          [
+            "1956",
+            "1956"
+          ],
+          [
+            "States Reorganisation Act on the Fazl Ali Commission's report: 14 states and 6 UTs",
+            "फ़ज़ल अली आयोग की रिपोर्ट पर राज्य पुनर्गठन अधिनियम: 14 राज्य और 6 केंद्रशासित प्रदेश"
+          ]
+        ],
+        [
+          [
+            "1960",
+            "1960"
+          ],
+          [
+            "Bombay State split into Maharashtra and Gujarat",
+            "बंबई राज्य का महाराष्ट्र और गुजरात में विभाजन"
+          ]
+        ],
+        [
+          [
+            "1963",
+            "1963"
+          ],
+          [
+            "Nagaland",
+            "नागालैंड"
+          ]
+        ],
+        [
+          [
+            "1966",
+            "1966"
+          ],
+          [
+            "Haryana carved out of Punjab",
+            "पंजाब से हरियाणा बना"
+          ]
+        ],
+        [
+          [
+            "1971 / 1972",
+            "1971 / 1972"
+          ],
+          [
+            "Himachal Pradesh / Manipur, Meghalaya, Tripura",
+            "हिमाचल प्रदेश / मणिपुर, मेघालय, त्रिपुरा"
+          ]
+        ],
+        [
+          [
+            "1975",
+            "1975"
+          ],
+          [
+            "Sikkim (36th Amendment)",
+            "सिक्किम (36वाँ संशोधन)"
+          ]
+        ],
+        [
+          [
+            "1987",
+            "1987"
+          ],
+          [
+            "Mizoram, Arunachal Pradesh and Goa",
+            "मिज़ोरम, अरुणाचल प्रदेश और गोवा"
+          ]
+        ],
+        [
+          [
+            "2000",
+            "2000"
+          ],
+          [
+            "Chhattisgarh (1 Nov), Uttarakhand (9 Nov), Jharkhand (15 Nov)",
+            "छत्तीसगढ़ (1 नवंबर), उत्तराखंड (9 नवंबर), झारखंड (15 नवंबर)"
+          ]
+        ],
+        [
+          [
+            "2014",
+            "2014"
+          ],
+          [
+            "Telangana, the 29th state (now 28 states after 2019)",
+            "तेलंगाना, 29वाँ राज्य (2019 के बाद अब 28 राज्य)"
+          ]
+        ],
+        [
+          [
+            "2019 / 2020",
+            "2019 / 2020"
+          ],
+          [
+            "Jammu and Kashmir and Ladakh become UTs / Dadra and Nagar Haveli and Daman and Diu merged",
+            "जम्मू-कश्मीर और लद्दाख केंद्रशासित प्रदेश / दादरा और नगर हवेली तथा दमन और दीव का विलय"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "lang",
+      "icon": "🗣️",
+      "t": [
+        "Languages in the Constitution",
+        "संविधान में भाषाएँ"
+      ],
+      "cols": [
+        [
+          "Fact",
+          "तथ्य"
+        ],
+        [
+          "Detail",
+          "विवरण"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Eighth Schedule",
+            "आठवीं अनुसूची"
+          ],
+          [
+            "22 languages (14 at the start)",
+            "22 भाषाएँ (आरंभ में 14)"
+          ]
+        ],
+        [
+          [
+            "21st Amendment (1967)",
+            "21वाँ संशोधन (1967)"
+          ],
+          [
+            "Sindhi",
+            "सिंधी"
+          ]
+        ],
+        [
+          [
+            "71st Amendment (1992)",
+            "71वाँ संशोधन (1992)"
+          ],
+          [
+            "Konkani, Manipuri, Nepali",
+            "कोंकणी, मणिपुरी, नेपाली"
+          ]
+        ],
+        [
+          [
+            "92nd Amendment (2003)",
+            "92वाँ संशोधन (2003)"
+          ],
+          [
+            "Bodo, Dogri, Maithili, Santali",
+            "बोडो, डोगरी, मैथिली, संथाली"
+          ]
+        ],
+        [
+          [
+            "Official language of the Union",
+            "संघ की राजभाषा"
+          ],
+          [
+            "Hindi in Devanagari (Article 343); Hindi Diwas on 14 September",
+            "देवनागरी में हिंदी (अनुच्छेद 343); हिंदी दिवस 14 सितंबर"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "state",
+      "q": [
+        "Which was the first state formed on a linguistic basis (1953)?",
+        "भाषाई आधार पर बना पहला राज्य (1953) कौन-सा था?"
+      ],
+      "o": [
+        [
+          "Andhra State",
+          "आंध्र राज्य"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ]
+      ],
+      "e": [
+        "It was formed after the death of Potti Sriramulu during his fast.",
+        "यह पोट्टि श्रीरामुलु की अनशन के दौरान मृत्यु के बाद बना।"
+      ]
+    },
+    {
+      "t": "state",
+      "q": [
+        "Sikkim became a state of India in",
+        "सिक्किम भारत का राज्य कब बना?"
+      ],
+      "o": [
+        [
+          "1975",
+          "1975"
+        ],
+        [
+          "1947",
+          "1947"
+        ],
+        [
+          "1962",
+          "1962"
+        ],
+        [
+          "1987",
+          "1987"
+        ]
+      ],
+      "e": [
+        "The 36th Amendment made Sikkim the 22nd state on 16 May 1975.",
+        "36वें संशोधन से सिक्किम 16 मई 1975 को 22वाँ राज्य बना।"
+      ]
+    },
+    {
+      "t": "state",
+      "q": [
+        "Which of these states was NOT formed in 2000?",
+        "इनमें से कौन-सा राज्य 2000 में नहीं बना?"
+      ],
+      "o": [
+        [
+          "Telangana",
+          "तेलंगाना"
+        ],
+        [
+          "Chhattisgarh",
+          "छत्तीसगढ़"
+        ],
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ]
+      ],
+      "e": [
+        "Telangana was formed on 2 June 2014.",
+        "तेलंगाना 2 जून 2014 को बना।"
+      ]
+    },
+    {
+      "t": "state",
+      "q": [
+        "Which is the largest state of India by area?",
+        "क्षेत्रफल में भारत का सबसे बड़ा राज्य कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ]
+      ],
+      "e": [
+        "Goa is the smallest state; Ladakh is the largest UT.",
+        "गोवा सबसे छोटा राज्य है; लद्दाख सबसे बड़ा केंद्रशासित प्रदेश।"
+      ]
+    },
+    {
+      "t": "state",
+      "q": [
+        "Which city is the shared capital of Punjab and Haryana?",
+        "कौन-सा शहर पंजाब और हरियाणा की साझा राजधानी है?"
+      ],
+      "o": [
+        [
+          "Chandigarh",
+          "चंडीगढ़"
+        ],
+        [
+          "Amritsar",
+          "अमृतसर"
+        ],
+        [
+          "Ambala",
+          "अंबाला"
+        ],
+        [
+          "Ludhiana",
+          "लुधियाना"
+        ]
+      ],
+      "e": [
+        "Chandigarh is itself a union territory.",
+        "चंडीगढ़ स्वयं केंद्रशासित प्रदेश है।"
+      ]
+    },
+    {
+      "t": "state",
+      "q": [
+        "Gairsain is the summer capital of",
+        "गैरसैंण किसकी ग्रीष्मकालीन राजधानी है?"
+      ],
+      "o": [
+        [
+          "Uttarakhand",
+          "उत्तराखंड"
+        ],
+        [
+          "Himachal Pradesh",
+          "हिमाचल प्रदेश"
+        ],
+        [
+          "Jammu and Kashmir",
+          "जम्मू और कश्मीर"
+        ],
+        [
+          "Sikkim",
+          "सिक्किम"
+        ]
+      ],
+      "e": [
+        "Dehradun is the winter capital.",
+        "देहरादून शीतकालीन राजधानी है।"
+      ]
+    },
+    {
+      "t": "court",
+      "q": [
+        "Which is the oldest High Court of India?",
+        "भारत का सबसे पुराना उच्च न्यायालय कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Calcutta High Court",
+          "कलकत्ता उच्च न्यायालय"
+        ],
+        [
+          "Bombay High Court",
+          "बॉम्बे उच्च न्यायालय"
+        ],
+        [
+          "Madras High Court",
+          "मद्रास उच्च न्यायालय"
+        ],
+        [
+          "Allahabad High Court",
+          "इलाहाबाद उच्च न्यायालय"
+        ]
+      ],
+      "e": [
+        "It was set up on 1 July 1862.",
+        "यह 1 जुलाई 1862 को स्थापित हुआ।"
+      ]
+    },
+    {
+      "t": "court",
+      "q": [
+        "The Rajasthan High Court sits at",
+        "राजस्थान उच्च न्यायालय कहाँ है?"
+      ],
+      "o": [
+        [
+          "Jodhpur",
+          "जोधपुर"
+        ],
+        [
+          "Jaipur",
+          "जयपुर"
+        ],
+        [
+          "Udaipur",
+          "उदयपुर"
+        ],
+        [
+          "Ajmer",
+          "अजमेर"
+        ]
+      ],
+      "e": [
+        "Jaipur has a bench of the High Court.",
+        "जयपुर में उच्च न्यायालय की पीठ है।"
+      ]
+    },
+    {
+      "t": "court",
+      "q": [
+        "Which High Court covers Lakshadweep?",
+        "लक्षद्वीप किस उच्च न्यायालय के अधिकार क्षेत्र में है?"
+      ],
+      "o": [
+        [
+          "Kerala High Court",
+          "केरल उच्च न्यायालय"
+        ],
+        [
+          "Madras High Court",
+          "मद्रास उच्च न्यायालय"
+        ],
+        [
+          "Karnataka High Court",
+          "कर्नाटक उच्च न्यायालय"
+        ],
+        [
+          "Bombay High Court",
+          "बॉम्बे उच्च न्यायालय"
+        ]
+      ],
+      "e": [
+        "The Calcutta High Court covers the Andaman and Nicobar Islands.",
+        "कलकत्ता उच्च न्यायालय अंडमान और निकोबार द्वीपसमूह पर अधिकार रखता है।"
+      ]
+    },
+    {
+      "t": "court",
+      "q": [
+        "The Chhattisgarh High Court is located at",
+        "छत्तीसगढ़ उच्च न्यायालय कहाँ स्थित है?"
+      ],
+      "o": [
+        [
+          "Bilaspur",
+          "बिलासपुर"
+        ],
+        [
+          "Raipur",
+          "रायपुर"
+        ],
+        [
+          "Durg",
+          "दुर्ग"
+        ],
+        [
+          "Jagdalpur",
+          "जगदलपुर"
+        ]
+      ],
+      "e": [
+        "Several High Courts sit outside the capital: Jodhpur, Bilaspur, Nainital, Cuttack, Kochi, Jabalpur, Prayagraj.",
+        "कई उच्च न्यायालय राजधानी से बाहर हैं: जोधपुर, बिलासपुर, नैनीताल, कटक, कोच्चि, जबलपुर, प्रयागराज।"
+      ]
+    },
+    {
+      "t": "court",
+      "q": [
+        "Which three High Courts were set up in 2013?",
+        "2013 में कौन-से तीन उच्च न्यायालय स्थापित हुए?"
+      ],
+      "o": [
+        [
+          "Manipur, Meghalaya and Tripura",
+          "मणिपुर, मेघालय और त्रिपुरा"
+        ],
+        [
+          "Telangana, Andhra Pradesh and Sikkim",
+          "तेलंगाना, आंध्र प्रदेश और सिक्किम"
+        ],
+        [
+          "Jharkhand, Chhattisgarh and Uttarakhand",
+          "झारखंड, छत्तीसगढ़ और उत्तराखंड"
+        ],
+        [
+          "Delhi, Himachal Pradesh and Goa",
+          "दिल्ली, हिमाचल प्रदेश और गोवा"
+        ]
+      ],
+      "e": [
+        "Before 2013 these states were under the Gauhati High Court.",
+        "2013 से पहले ये राज्य गुवाहाटी उच्च न्यायालय के अंतर्गत थे।"
+      ]
+    },
+    {
+      "t": "symbol",
+      "q": [
+        "The national motto Satyameva Jayate is taken from",
+        "राष्ट्रीय आदर्श वाक्य सत्यमेव जयते कहाँ से लिया गया है?"
+      ],
+      "o": [
+        [
+          "Mundaka Upanishad",
+          "मुंडक उपनिषद"
+        ],
+        [
+          "Rigveda",
+          "ऋग्वेद"
+        ],
+        [
+          "Bhagavad Gita",
+          "भगवद्गीता"
+        ],
+        [
+          "Katha Upanishad",
+          "कठ उपनिषद"
+        ]
+      ],
+      "e": [
+        "It appears below the national emblem in Devanagari.",
+        "यह राष्ट्रीय प्रतीक के नीचे देवनागरी में लिखा है।"
+      ]
+    },
+    {
+      "t": "symbol",
+      "q": [
+        "How many spokes does the Ashoka Chakra on the national flag have?",
+        "राष्ट्रीय ध्वज के अशोक चक्र में कितनी तीलियाँ हैं?"
+      ],
+      "o": [
+        [
+          "24",
+          "24"
+        ],
+        [
+          "22",
+          "22"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "32",
+          "32"
+        ]
+      ],
+      "e": [
+        "The flag ratio is 3:2 and it was adopted on 22 July 1947.",
+        "ध्वज का अनुपात 3:2 है और इसे 22 जुलाई 1947 को अपनाया गया।"
+      ]
+    },
+    {
+      "t": "symbol",
+      "q": [
+        "The national calendar of India is based on the",
+        "भारत का राष्ट्रीय पंचांग किस पर आधारित है?"
+      ],
+      "o": [
+        [
+          "Saka era",
+          "शक संवत"
+        ],
+        [
+          "Vikram Samvat",
+          "विक्रम संवत"
+        ],
+        [
+          "Hijri era",
+          "हिजरी संवत"
+        ],
+        [
+          "Kali era",
+          "कलि संवत"
+        ]
+      ],
+      "e": [
+        "It was adopted on 22 March 1957.",
+        "इसे 22 मार्च 1957 को अपनाया गया।"
+      ]
+    },
+    {
+      "t": "symbol",
+      "q": [
+        "What is the national aquatic animal of India?",
+        "भारत का राष्ट्रीय जलीय जीव कौन-सा है?"
+      ],
+      "o": [
+        [
+          "Ganges river dolphin",
+          "गंगा नदी डॉल्फ़िन"
+        ],
+        [
+          "Blue whale",
+          "नीली व्हेल"
+        ],
+        [
+          "Olive ridley turtle",
+          "ओलिव रिडले कछुआ"
+        ],
+        [
+          "Gharial",
+          "घड़ियाल"
+        ]
+      ],
+      "e": [
+        "It was declared in 2009; the elephant is the national heritage animal (2010).",
+        "इसे 2009 में घोषित किया गया; हाथी राष्ट्रीय धरोहर पशु (2010) है।"
+      ]
+    },
+    {
+      "t": "census",
+      "q": [
+        "According to Census 2011, which state has the lowest sex ratio?",
+        "जनगणना 2011 के अनुसार किस राज्य का लिंगानुपात सबसे कम है?"
+      ],
+      "o": [
+        [
+          "Haryana",
+          "हरियाणा"
+        ],
+        [
+          "Punjab",
+          "पंजाब"
+        ],
+        [
+          "Bihar",
+          "बिहार"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ]
+      ],
+      "e": [
+        "Haryana had 879; Kerala had the highest at 1,084.",
+        "हरियाणा का 879 था; केरल का सबसे अधिक 1,084।"
+      ]
+    },
+    {
+      "t": "census",
+      "q": [
+        "What was the literacy rate of India in Census 2011?",
+        "जनगणना 2011 में भारत की साक्षरता दर क्या थी?"
+      ],
+      "o": [
+        [
+          "74.04%",
+          "74.04%"
+        ],
+        [
+          "64.84%",
+          "64.84%"
+        ],
+        [
+          "82.14%",
+          "82.14%"
+        ],
+        [
+          "69.30%",
+          "69.30%"
+        ]
+      ],
+      "e": [
+        "Male literacy was 82.14% and female 65.46%.",
+        "पुरुष साक्षरता 82.14% और महिला 65.46% थी।"
+      ]
+    },
+    {
+      "t": "census",
+      "q": [
+        "Which state had the highest population density in Census 2011?",
+        "जनगणना 2011 में किस राज्य का जनसंख्या घनत्व सबसे अधिक था?"
+      ],
+      "o": [
+        [
+          "Bihar",
+          "बिहार"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ]
+      ],
+      "e": [
+        "Bihar had 1,106 people per sq km; Arunachal Pradesh had the lowest, 17.",
+        "बिहार में 1,106 व्यक्ति प्रति वर्ग किमी थे; अरुणाचल प्रदेश में सबसे कम 17।"
+      ]
+    },
+    {
+      "t": "census",
+      "q": [
+        "Which amendment added Bodo, Dogri, Maithili and Santali to the Eighth Schedule?",
+        "किस संशोधन ने बोडो, डोगरी, मैथिली और संथाली को आठवीं अनुसूची में जोड़ा?"
+      ],
+      "o": [
+        [
+          "92nd Amendment (2003)",
+          "92वाँ संशोधन (2003)"
+        ],
+        [
+          "71st Amendment (1992)",
+          "71वाँ संशोधन (1992)"
+        ],
+        [
+          "21st Amendment (1967)",
+          "21वाँ संशोधन (1967)"
+        ],
+        [
+          "86th Amendment (2002)",
+          "86वाँ संशोधन (2002)"
+        ]
+      ],
+      "e": [
+        "The 71st added Konkani, Manipuri and Nepali; the 21st added Sindhi.",
+        "71वें ने कोंकणी, मणिपुरी और नेपाली जोड़ीं; 21वें ने सिंधी।"
+      ]
+    }
+  ]
+}

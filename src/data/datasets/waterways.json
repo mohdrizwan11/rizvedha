@@ -1,0 +1,533 @@
+{
+  "items": [
+    {
+      "n": "NW 1",
+      "h": "एनडब्ल्यू 1",
+      "sub": "Prayagraj – Haldia (Ganga)",
+      "subh": "प्रयागराज – हल्दिया (गंगा)",
+      "alt": "Ganga–Bhagirathi–Hooghly",
+      "alth": "गंगा–भागीरथी–हुगली",
+      "L": 1620,
+      "st": "UP, Bihar, Jharkhand, WB",
+      "sh": "यूपी, बिहार, झारखंड, प.बंगाल",
+      "fact": "Longest National Waterway; on the Ganga river system.",
+      "facth": "सबसे लंबा राष्ट्रीय जलमार्ग; गंगा नदी तंत्र पर।",
+      "rg": "N",
+      "d": 1,
+      "eps": [
+        {
+          "n": "Prayagraj",
+          "h": "Prayagraj",
+          "lng": 81.85,
+          "lat": 25.44
+        },
+        {
+          "n": "Haldia",
+          "h": "Haldia",
+          "lng": 88.06,
+          "lat": 22.06
+        }
+      ],
+      "wp": [
+        [
+          81.85,
+          25.44
+        ],
+        [
+          82.97,
+          25.32
+        ],
+        [
+          85.14,
+          25.59
+        ],
+        [
+          87,
+          25.25
+        ],
+        [
+          87.93,
+          24.8
+        ],
+        [
+          88.36,
+          22.57
+        ],
+        [
+          88.06,
+          22.06
+        ]
+      ]
+    },
+    {
+      "n": "NW 2",
+      "h": "एनडब्ल्यू 2",
+      "sub": "Sadiya – Dhubri (Brahmaputra)",
+      "subh": "सादिया – धुबरी (ब्रह्मपुत्र)",
+      "alt": "Brahmaputra",
+      "alth": "ब्रह्मपुत्र",
+      "L": 891,
+      "st": "Assam",
+      "sh": "असम",
+      "fact": "Second-longest NW; runs along the Brahmaputra in Assam.",
+      "facth": "दूसरा सबसे लंबा जलमार्ग; असम में ब्रह्मपुत्र पर।",
+      "rg": "NE",
+      "d": 1,
+      "eps": [
+        {
+          "n": "Sadiya",
+          "h": "Sadiya",
+          "lng": 95.65,
+          "lat": 27.83
+        },
+        {
+          "n": "Dhubri",
+          "h": "Dhubri",
+          "lng": 89.98,
+          "lat": 26.02
+        }
+      ],
+      "wp": [
+        [
+          95.65,
+          27.83
+        ],
+        [
+          94.91,
+          27.48
+        ],
+        [
+          91.74,
+          26.14
+        ],
+        [
+          89.98,
+          26.02
+        ]
+      ]
+    },
+    {
+      "n": "NW 3",
+      "h": "एनडब्ल्यू 3",
+      "sub": "Kottapuram – Kollam (West Coast Canal)",
+      "subh": "कोट्टापुरम – कोल्लम (पश्चिमी तट नहर)",
+      "alt": "West Coast Canal + Champakara & Udyogmandal",
+      "alth": "पश्चिमी तट नहर + चंपाकारा व उद्योगमंडल",
+      "L": 205,
+      "st": "Kerala",
+      "sh": "केरल",
+      "fact": "India's first NW with round-the-clock (all-weather) navigation.",
+      "facth": "चौबीसों घंटे (हर मौसम) नौवहन सुविधा वाला भारत का पहला जलमार्ग।",
+      "rg": "S",
+      "d": 1,
+      "eps": [
+        {
+          "n": "Kottapuram",
+          "h": "Kottapuram",
+          "lng": 76.2,
+          "lat": 10.18
+        },
+        {
+          "n": "Kollam",
+          "h": "Kollam",
+          "lng": 76.6,
+          "lat": 8.89
+        }
+      ],
+      "wp": [
+        [
+          76.2,
+          10.18
+        ],
+        [
+          76.27,
+          9.93
+        ],
+        [
+          76.34,
+          9.5
+        ],
+        [
+          76.6,
+          8.89
+        ]
+      ]
+    },
+    {
+      "n": "NW 4",
+      "h": "एनडब्ल्यू 4",
+      "sub": "Kakinada – Puducherry (Godavari–Krishna)",
+      "subh": "काकीनाडा – पुदुचेरी (गोदावरी–कृष्णा)",
+      "alt": "Godavari & Krishna + Canals",
+      "alth": "गोदावरी व कृष्णा + नहरें",
+      "L": 2890,
+      "st": "AP, Telangana, TN, Puducherry",
+      "sh": "आं.प्र., तेलंगाना, तमिलनाडु, पुदुचेरी",
+      "fact": "Uses the Godavari & Krishna rivers plus the Kakinada–Puducherry canal network.",
+      "facth": "गोदावरी व कृष्णा नदियों तथा काकीनाडा–पुदुचेरी नहर तंत्र का उपयोग।",
+      "rg": "S",
+      "d": 2,
+      "eps": [
+        {
+          "n": "Kakinada",
+          "h": "Kakinada",
+          "lng": 82.24,
+          "lat": 16.99
+        },
+        {
+          "n": "Puducherry",
+          "h": "Puducherry",
+          "lng": 79.81,
+          "lat": 11.93
+        }
+      ],
+      "wp": [
+        [
+          82.24,
+          16.99
+        ],
+        [
+          81.78,
+          17
+        ],
+        [
+          80.62,
+          16.51
+        ],
+        [
+          80.27,
+          13.08
+        ],
+        [
+          79.81,
+          11.93
+        ]
+      ]
+    },
+    {
+      "n": "NW 5",
+      "h": "एनडब्ल्यू 5",
+      "sub": "Talcher – Dhamra (Brahmani–Mahanadi)",
+      "subh": "तालचेर – धामरा (ब्राह्मणी–महानदी)",
+      "alt": "Brahmani–Mahanadi Delta + East Coast Canal",
+      "alth": "ब्राह्मणी–महानदी डेल्टा + पूर्वी तट नहर",
+      "L": 588,
+      "st": "Odisha, WB",
+      "sh": "ओडिशा, प.बंगाल",
+      "fact": "Links the Mahanadi & Brahmani deltas via the East Coast Canal.",
+      "facth": "पूर्वी तट नहर से महानदी व ब्राह्मणी डेल्टा को जोड़ता है।",
+      "rg": "E",
+      "d": 2,
+      "eps": [
+        {
+          "n": "Talcher",
+          "h": "Talcher",
+          "lng": 85.13,
+          "lat": 20.95
+        },
+        {
+          "n": "Dhamra",
+          "h": "Dhamra",
+          "lng": 86.96,
+          "lat": 20.78
+        }
+      ],
+      "wp": [
+        [
+          85.13,
+          20.95
+        ],
+        [
+          86.61,
+          20.32
+        ],
+        [
+          86.96,
+          20.78
+        ]
+      ]
+    },
+    {
+      "n": "NW 16",
+      "h": "एनडब्ल्यू 16",
+      "sub": "Lakhipur – Bhanga (Barak)",
+      "subh": "लखीपुर – भंगा (बराक)",
+      "alt": "Barak River (earlier NW 6)",
+      "alth": "बराक नदी (पूर्व एनडब्ल्यू 6)",
+      "L": 121,
+      "st": "Assam",
+      "sh": "असम",
+      "fact": "On the Barak river of Assam; was originally declared National Waterway 6.",
+      "facth": "असम की बराक नदी पर; मूलतः राष्ट्रीय जलमार्ग 6 घोषित था।",
+      "rg": "NE",
+      "d": 2,
+      "eps": [
+        {
+          "n": "Lakhipur",
+          "h": "Lakhipur",
+          "lng": 92.96,
+          "lat": 24.8
+        },
+        {
+          "n": "Bhanga",
+          "h": "Bhanga",
+          "lng": 92.45,
+          "lat": 24.6
+        }
+      ],
+      "wp": [
+        [
+          92.96,
+          24.8
+        ],
+        [
+          92.78,
+          24.83
+        ],
+        [
+          92.45,
+          24.6
+        ]
+      ]
+    },
+    {
+      "n": "NW 73",
+      "h": "एनडब्ल्यू 73",
+      "sub": "Narmada",
+      "subh": "नर्मदा",
+      "alt": "Narmada River",
+      "alth": "नर्मदा नदी",
+      "L": 226,
+      "st": "MP, Gujarat",
+      "sh": "म.प्र., गुजरात",
+      "fact": "On the west-flowing Narmada, navigable in its lower reaches.",
+      "facth": "पश्चिम-वाहिनी नर्मदा पर, निचले भाग में नौगम्य।",
+      "rg": "C",
+      "d": 3,
+      "eps": [
+        {
+          "n": "Hoshangabad",
+          "h": "Hoshangabad",
+          "lng": 77.73,
+          "lat": 22.75
+        },
+        {
+          "n": "Bharuch",
+          "h": "Bharuch",
+          "lng": 72.98,
+          "lat": 21.7
+        }
+      ],
+      "wp": [
+        [
+          77.73,
+          22.75
+        ],
+        [
+          72.98,
+          21.7
+        ]
+      ]
+    },
+    {
+      "n": "NW 100",
+      "h": "एनडब्ल्यू 100",
+      "sub": "Tapi",
+      "subh": "ताप्ती",
+      "alt": "Tapi River",
+      "alth": "ताप्ती नदी",
+      "L": 436,
+      "st": "MP, Maharashtra, Gujarat",
+      "sh": "म.प्र., महा., गुजरात",
+      "fact": "On the Tapi, the other major west-flowing peninsular river.",
+      "facth": "ताप्ती (दूसरी प्रमुख पश्चिम-वाहिनी प्रायद्वीपीय नदी) पर।",
+      "rg": "W",
+      "d": 3,
+      "eps": [
+        {
+          "n": "Multai",
+          "h": "Multai",
+          "lng": 78.23,
+          "lat": 21.77
+        },
+        {
+          "n": "Ukai",
+          "h": "Ukai",
+          "lng": 73.59,
+          "lat": 21.25
+        }
+      ],
+      "wp": [
+        [
+          78.23,
+          21.77
+        ],
+        [
+          73.59,
+          21.25
+        ],
+        [
+          72.98,
+          21.7
+        ]
+      ]
+    },
+    {
+      "n": "NW 97",
+      "h": "एनडब्ल्यू 97",
+      "sub": "Sundarbans Waterway",
+      "subh": "सुंदरबन जलमार्ग",
+      "alt": "Sundarbans",
+      "alth": "सुंदरबन",
+      "L": 172,
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "fact": "Threads the Sundarbans delta, the world's largest mangrove forest.",
+      "facth": "विश्व के सबसे बड़े मैंग्रोव वन सुंदरबन डेल्टा से होकर।",
+      "rg": "E",
+      "d": 3,
+      "eps": [
+        {
+          "n": "Canning",
+          "h": "Canning",
+          "lng": 88.67,
+          "lat": 22.31
+        },
+        {
+          "n": "Namkhana",
+          "h": "Namkhana",
+          "lng": 88.23,
+          "lat": 21.76
+        }
+      ],
+      "wp": [
+        [
+          88.67,
+          22.31
+        ],
+        [
+          88.23,
+          21.76
+        ]
+      ]
+    },
+    {
+      "n": "NW 68",
+      "h": "एनडब्ल्यू 68",
+      "sub": "Mandovi (Goa)",
+      "subh": "मांडोवी (गोवा)",
+      "alt": "Mandovi River",
+      "alth": "मांडोवी नदी",
+      "L": 41,
+      "st": "Goa",
+      "sh": "गोवा",
+      "fact": "Short but busy NW on Goa's Mandovi river, used for ore & tourism traffic.",
+      "facth": "गोवा की मांडोवी नदी पर छोटा किंतु व्यस्त जलमार्ग।",
+      "rg": "W",
+      "d": 3,
+      "eps": [
+        {
+          "n": "Usgaon",
+          "h": "Usgaon",
+          "lng": 74.1,
+          "lat": 15.45
+        },
+        {
+          "n": "Panaji",
+          "h": "Panaji",
+          "lng": 73.83,
+          "lat": 15.49
+        }
+      ],
+      "wp": [
+        [
+          74.1,
+          15.45
+        ],
+        [
+          73.83,
+          15.49
+        ]
+      ]
+    },
+    {
+      "n": "NW 40",
+      "h": "एनडब्ल्यू 40",
+      "sub": "Ghaghara",
+      "subh": "घाघरा",
+      "alt": "Ghaghara River",
+      "alth": "घाघरा नदी",
+      "L": 354,
+      "st": "UP, Bihar",
+      "sh": "यूपी, बिहार",
+      "fact": "On the Ghaghara, a major north-bank tributary of the Ganga.",
+      "facth": "घाघरा (गंगा की प्रमुख उत्तरी सहायक) पर।",
+      "rg": "N",
+      "d": 3,
+      "eps": [
+        {
+          "n": "Ayodhya",
+          "h": "Ayodhya",
+          "lng": 82.2,
+          "lat": 26.8
+        },
+        {
+          "n": "Ghagharamouth",
+          "h": "Ghagharamouth",
+          "lng": 84.75,
+          "lat": 25.78
+        }
+      ],
+      "wp": [
+        [
+          82.2,
+          26.8
+        ],
+        [
+          84.75,
+          25.78
+        ]
+      ]
+    },
+    {
+      "n": "NW 37",
+      "h": "एनडब्ल्यू 37",
+      "sub": "Gandak",
+      "subh": "गंडक",
+      "alt": "Gandak River",
+      "alth": "गंडक नदी",
+      "L": 296,
+      "st": "Bihar, UP",
+      "sh": "बिहार, यूपी",
+      "fact": "On the Gandak river, running down from Nepal to meet the Ganga at Hajipur.",
+      "facth": "गंडक नदी पर, नेपाल से उतरकर हाजीपुर में गंगा से मिलती।",
+      "rg": "N",
+      "d": 3,
+      "eps": [
+        {
+          "n": "Bagaha",
+          "h": "Bagaha",
+          "lng": 84.09,
+          "lat": 27.1
+        },
+        {
+          "n": "Hajipur",
+          "h": "Hajipur",
+          "lng": 85.21,
+          "lat": 25.69
+        }
+      ],
+      "wp": [
+        [
+          84.09,
+          27.1
+        ],
+        [
+          85.21,
+          25.69
+        ]
+      ]
+    }
+  ],
+  "arrayName": "DATA"
+}

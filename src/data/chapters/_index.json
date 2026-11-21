@@ -1,0 +1,1454 @@
+[
+ {
+  "id": "geo-01",
+  "module": "geo",
+  "num": 1,
+  "title": "Solar System",
+  "pages": [
+   1,
+   5
+  ],
+  "sections": 9,
+  "factCount": 197
+ },
+ {
+  "id": "geo-02",
+  "module": "geo",
+  "num": 2,
+  "title": "Longitude and Latitude",
+  "pages": [
+   6,
+   9
+  ],
+  "sections": 2,
+  "factCount": 119
+ },
+ {
+  "id": "geo-03",
+  "module": "geo",
+  "num": 3,
+  "title": "Earth's Interior and Plate Tectonics",
+  "pages": [
+   10,
+   12
+  ],
+  "sections": 3,
+  "factCount": 79
+ },
+ {
+  "id": "geo-04",
+  "module": "geo",
+  "num": 4,
+  "title": "Rocks, Continents and Oceans",
+  "pages": [
+   13,
+   16
+  ],
+  "sections": 5,
+  "factCount": 71
+ },
+ {
+  "id": "geo-05",
+  "module": "geo",
+  "num": 5,
+  "title": "Geomorphology",
+  "pages": [
+   17,
+   18
+  ],
+  "sections": 1,
+  "factCount": 40
+ },
+ {
+  "id": "geo-06",
+  "module": "geo",
+  "num": 6,
+  "title": "Landforms",
+  "pages": [
+   19,
+   24
+  ],
+  "sections": 1,
+  "factCount": 51
+ },
+ {
+  "id": "geo-07",
+  "module": "geo",
+  "num": 7,
+  "title": "Atmosphere",
+  "pages": [
+   25,
+   28
+  ],
+  "sections": 4,
+  "factCount": 116
+ },
+ {
+  "id": "geo-08",
+  "module": "geo",
+  "num": 8,
+  "title": "Wind, Ocean Current and Cyclone",
+  "pages": [
+   29,
+   32
+  ],
+  "sections": 9,
+  "factCount": 105
+ },
+ {
+  "id": "geo-09",
+  "module": "geo",
+  "num": 9,
+  "title": "India and its Location",
+  "pages": [
+   33,
+   36
+  ],
+  "sections": 9,
+  "factCount": 119
+ },
+ {
+  "id": "geo-10",
+  "module": "geo",
+  "num": 10,
+  "title": "Himalayas",
+  "pages": [
+   37,
+   40
+  ],
+  "sections": 3,
+  "factCount": 137
+ },
+ {
+  "id": "geo-11",
+  "module": "geo",
+  "num": 11,
+  "title": "Peninsular Plateau",
+  "pages": [
+   41,
+   43
+  ],
+  "sections": 5,
+  "factCount": 93
+ },
+ {
+  "id": "geo-12",
+  "module": "geo",
+  "num": 12,
+  "title": "Northern Plains and Islands",
+  "pages": [
+   44,
+   47
+  ],
+  "sections": 7,
+  "factCount": 125
+ },
+ {
+  "id": "geo-13",
+  "module": "geo",
+  "num": 13,
+  "title": "Himalayan River System",
+  "pages": [
+   48,
+   51
+  ],
+  "sections": 5,
+  "factCount": 151
+ },
+ {
+  "id": "geo-14",
+  "module": "geo",
+  "num": 14,
+  "title": "Peninsular Rivers",
+  "pages": [
+   52,
+   53
+  ],
+  "sections": 4,
+  "factCount": 77
+ },
+ {
+  "id": "geo-15",
+  "module": "geo",
+  "num": 15,
+  "title": "Dams, Lakes and Waterfall",
+  "pages": [
+   54,
+   57
+  ],
+  "sections": 5,
+  "factCount": 106
+ },
+ {
+  "id": "geo-16",
+  "module": "geo",
+  "num": 16,
+  "title": "Monsoon",
+  "pages": [
+   58,
+   60
+  ],
+  "sections": 2,
+  "factCount": 77
+ },
+ {
+  "id": "geo-17",
+  "module": "geo",
+  "num": 17,
+  "title": "Forest and Grassland",
+  "pages": [
+   61,
+   63
+  ],
+  "sections": 2,
+  "factCount": 106
+ },
+ {
+  "id": "geo-18",
+  "module": "geo",
+  "num": 18,
+  "title": "Soil",
+  "pages": [
+   64,
+   66
+  ],
+  "sections": 2,
+  "factCount": 96
+ },
+ {
+  "id": "geo-19",
+  "module": "geo",
+  "num": 19,
+  "title": "Agriculture",
+  "pages": [
+   67,
+   70
+  ],
+  "sections": 2,
+  "factCount": 126
+ },
+ {
+  "id": "geo-20",
+  "module": "geo",
+  "num": 20,
+  "title": "Minerals",
+  "pages": [
+   71,
+   75
+  ],
+  "sections": 4,
+  "factCount": 151
+ },
+ {
+  "id": "geo-21",
+  "module": "geo",
+  "num": 21,
+  "title": "World Map",
+  "pages": [
+   76,
+   83
+  ],
+  "sections": 11,
+  "factCount": 184
+ },
+ {
+  "id": "geo-22",
+  "module": "geo",
+  "num": 22,
+  "title": "Human Geography",
+  "pages": [
+   84,
+   86
+  ],
+  "sections": 3,
+  "factCount": 72
+ },
+ {
+  "id": "geo-23",
+  "module": "geo",
+  "num": 23,
+  "title": "Transport",
+  "pages": [
+   87,
+   89
+  ],
+  "sections": 7,
+  "factCount": 79
+ },
+ {
+  "id": "ancient-01",
+  "module": "ancient",
+  "num": 1,
+  "title": "Stone Age",
+  "pages": [
+   90,
+   91
+  ],
+  "sections": 5,
+  "factCount": 87
+ },
+ {
+  "id": "ancient-02",
+  "module": "ancient",
+  "num": 2,
+  "title": "Indus Valley Civilization",
+  "pages": [
+   92,
+   95
+  ],
+  "sections": 1,
+  "factCount": 125
+ },
+ {
+  "id": "ancient-03",
+  "module": "ancient",
+  "num": 3,
+  "title": "Vedic Age",
+  "pages": [
+   96,
+   99
+  ],
+  "sections": 4,
+  "factCount": 117
+ },
+ {
+  "id": "ancient-04",
+  "module": "ancient",
+  "num": 4,
+  "title": "Sangam Age",
+  "pages": [
+   100,
+   101
+  ],
+  "sections": 2,
+  "factCount": 56
+ },
+ {
+  "id": "ancient-05",
+  "module": "ancient",
+  "num": 5,
+  "title": "Jainism and Buddhism",
+  "pages": [
+   102,
+   106
+  ],
+  "sections": 1,
+  "factCount": 174
+ },
+ {
+  "id": "ancient-06",
+  "module": "ancient",
+  "num": 6,
+  "title": "Mahajanapadas",
+  "pages": [
+   107,
+   108
+  ],
+  "sections": 2,
+  "factCount": 64
+ },
+ {
+  "id": "ancient-07",
+  "module": "ancient",
+  "num": 7,
+  "title": "Maurya Dynasty",
+  "pages": [
+   109,
+   112
+  ],
+  "sections": 1,
+  "factCount": 119
+ },
+ {
+  "id": "medieval-01",
+  "module": "medieval",
+  "num": 1,
+  "title": "Post-Maurya Dynasties",
+  "pages": [
+   113,
+   115
+  ],
+  "sections": 2,
+  "factCount": 87
+ },
+ {
+  "id": "medieval-02",
+  "module": "medieval",
+  "num": 2,
+  "title": "Gupta Dynasty",
+  "pages": [
+   116,
+   118
+  ],
+  "sections": 4,
+  "factCount": 95
+ },
+ {
+  "id": "medieval-03",
+  "module": "medieval",
+  "num": 3,
+  "title": "Post-Gupta Dynasties",
+  "pages": [
+   119,
+   124
+  ],
+  "sections": 7,
+  "factCount": 238
+ },
+ {
+  "id": "medieval-04",
+  "module": "medieval",
+  "num": 4,
+  "title": "Tripartite Struggle and Cholas",
+  "pages": [
+   125,
+   130
+  ],
+  "sections": 1,
+  "factCount": 136
+ },
+ {
+  "id": "medieval-05",
+  "module": "medieval",
+  "num": 5,
+  "title": "Delhi Sultanate",
+  "pages": [
+   131,
+   137
+  ],
+  "sections": 4,
+  "factCount": 298
+ },
+ {
+  "id": "medieval-06",
+  "module": "medieval",
+  "num": 6,
+  "title": "Vijayanagara and Bahmani Kingdom",
+  "pages": [
+   138,
+   141
+  ],
+  "sections": 2,
+  "factCount": 146
+ },
+ {
+  "id": "medieval-07",
+  "module": "medieval",
+  "num": 7,
+  "title": "The Mughal Empire",
+  "pages": [
+   142,
+   148
+  ],
+  "sections": 4,
+  "factCount": 297
+ },
+ {
+  "id": "medieval-08",
+  "module": "medieval",
+  "num": 8,
+  "title": "Marathas",
+  "pages": [
+   149,
+   151
+  ],
+  "sections": 1,
+  "factCount": 88
+ },
+ {
+  "id": "medieval-09",
+  "module": "medieval",
+  "num": 9,
+  "title": "Bhakti and Sufi Movements",
+  "pages": [
+   152,
+   154
+  ],
+  "sections": 3,
+  "factCount": 136
+ },
+ {
+  "id": "modern-01",
+  "module": "modern",
+  "num": 1,
+  "title": "Advent of Europeans",
+  "pages": [
+   155,
+   158
+  ],
+  "sections": 11,
+  "factCount": 169
+ },
+ {
+  "id": "modern-02",
+  "module": "modern",
+  "num": 2,
+  "title": "Socio Religious Reforms",
+  "pages": [
+   159,
+   161
+  ],
+  "sections": 2,
+  "factCount": 163
+ },
+ {
+  "id": "modern-03",
+  "module": "modern",
+  "num": 3,
+  "title": "Revolt of 1857",
+  "pages": [
+   162,
+   166
+  ],
+  "sections": 3,
+  "factCount": 111
+ },
+ {
+  "id": "modern-04",
+  "module": "modern",
+  "num": 4,
+  "title": "Indian National Congress",
+  "pages": [
+   167,
+   168
+  ],
+  "sections": 5,
+  "factCount": 61
+ },
+ {
+  "id": "modern-05",
+  "module": "modern",
+  "num": 5,
+  "title": "Bengal Partition",
+  "pages": [
+   169,
+   172
+  ],
+  "sections": 4,
+  "factCount": 153
+ },
+ {
+  "id": "modern-06",
+  "module": "modern",
+  "num": 6,
+  "title": "Gandhian Era",
+  "pages": [
+   173,
+   175
+  ],
+  "sections": 1,
+  "factCount": 111
+ },
+ {
+  "id": "modern-07",
+  "module": "modern",
+  "num": 7,
+  "title": "CDM and Simon Commission",
+  "pages": [
+   176,
+   179
+  ],
+  "sections": 3,
+  "factCount": 146
+ },
+ {
+  "id": "modern-08",
+  "module": "modern",
+  "num": 8,
+  "title": "Quit India Movement",
+  "pages": [
+   180,
+   184
+  ],
+  "sections": 5,
+  "factCount": 144
+ },
+ {
+  "id": "modern-09",
+  "module": "modern",
+  "num": 9,
+  "title": "Governor-General and Viceroy",
+  "pages": [
+   185,
+   186
+  ],
+  "sections": 2,
+  "factCount": 94
+ },
+ {
+  "id": "polity-01",
+  "module": "polity",
+  "num": 1,
+  "title": "Making of Constitution",
+  "pages": [
+   187,
+   189
+  ],
+  "sections": 4,
+  "factCount": 119
+ },
+ {
+  "id": "polity-02",
+  "module": "polity",
+  "num": 2,
+  "title": "Salient Features of the Constitution",
+  "pages": [
+   190,
+   191
+  ],
+  "sections": 4,
+  "factCount": 62
+ },
+ {
+  "id": "polity-03",
+  "module": "polity",
+  "num": 3,
+  "title": "Preamble",
+  "pages": [
+   192,
+   193
+  ],
+  "sections": 7,
+  "factCount": 60
+ },
+ {
+  "id": "polity-04",
+  "module": "polity",
+  "num": 4,
+  "title": "Part 1 and Part 2 of the Constitution",
+  "pages": [
+   194,
+   197
+  ],
+  "sections": 7,
+  "factCount": 150
+ },
+ {
+  "id": "polity-05",
+  "module": "polity",
+  "num": 5,
+  "title": "Fundamental Rights",
+  "pages": [
+   198,
+   202
+  ],
+  "sections": 2,
+  "factCount": 207
+ },
+ {
+  "id": "polity-06",
+  "module": "polity",
+  "num": 6,
+  "title": "DPSP and Fundamental Duties",
+  "pages": [
+   203,
+   205
+  ],
+  "sections": 3,
+  "factCount": 115
+ },
+ {
+  "id": "polity-07",
+  "module": "polity",
+  "num": 7,
+  "title": "President and Vice President of India",
+  "pages": [
+   206,
+   209
+  ],
+  "sections": 2,
+  "factCount": 147
+ },
+ {
+  "id": "polity-08",
+  "module": "polity",
+  "num": 8,
+  "title": "Prime Minister and Council of Ministers",
+  "pages": [
+   210,
+   211
+  ],
+  "sections": 3,
+  "factCount": 69
+ },
+ {
+  "id": "polity-09",
+  "module": "polity",
+  "num": 9,
+  "title": "Parliament",
+  "pages": [
+   212,
+   219
+  ],
+  "sections": 6,
+  "factCount": 371
+ },
+ {
+  "id": "polity-10",
+  "module": "polity",
+  "num": 10,
+  "title": "State Legislature",
+  "pages": [
+   220,
+   223
+  ],
+  "sections": 2,
+  "factCount": 174
+ },
+ {
+  "id": "polity-11",
+  "module": "polity",
+  "num": 11,
+  "title": "Centre-State Relations",
+  "pages": [
+   224,
+   225
+  ],
+  "sections": 1,
+  "factCount": 59
+ },
+ {
+  "id": "polity-12",
+  "module": "polity",
+  "num": 12,
+  "title": "Emergency and Constitutional Amendment",
+  "pages": [
+   226,
+   228
+  ],
+  "sections": 4,
+  "factCount": 109
+ },
+ {
+  "id": "polity-13",
+  "module": "polity",
+  "num": 13,
+  "title": "Supreme Court and High Court",
+  "pages": [
+   229,
+   233
+  ],
+  "sections": 1,
+  "factCount": 205
+ },
+ {
+  "id": "polity-14",
+  "module": "polity",
+  "num": 14,
+  "title": "Local Government",
+  "pages": [
+   234,
+   236
+  ],
+  "sections": 1,
+  "factCount": 131
+ },
+ {
+  "id": "polity-15",
+  "module": "polity",
+  "num": 15,
+  "title": "Constitutional and Non-Constitutional Bodies",
+  "pages": [
+   237,
+   240
+  ],
+  "sections": 3,
+  "factCount": 206
+ },
+ {
+  "id": "polity-16",
+  "module": "polity",
+  "num": 16,
+  "title": "New Criminal Laws 2023",
+  "pages": [
+   241,
+   242
+  ],
+  "sections": 1,
+  "factCount": 78
+ },
+ {
+  "id": "polity-17",
+  "module": "polity",
+  "num": 17,
+  "title": "Important Acts",
+  "pages": [
+   243,
+   245
+  ],
+  "sections": 1,
+  "factCount": 117
+ },
+ {
+  "id": "polity-18",
+  "module": "polity",
+  "num": 18,
+  "title": "Sources of the Indian Constitution",
+  "pages": [
+   246,
+   246
+  ],
+  "sections": 4,
+  "factCount": 37
+ },
+ {
+  "id": "polity-19",
+  "module": "polity",
+  "num": 19,
+  "title": "Noteworthy Points",
+  "pages": [
+   247,
+   247
+  ],
+  "sections": 1,
+  "factCount": 11
+ },
+ {
+  "id": "economy-01",
+  "module": "economy",
+  "num": 1,
+  "title": "Basics of Economy",
+  "pages": [
+   248,
+   250
+  ],
+  "sections": 4,
+  "factCount": 87
+ },
+ {
+  "id": "economy-02",
+  "module": "economy",
+  "num": 2,
+  "title": "Microeconomics",
+  "pages": [
+   251,
+   256
+  ],
+  "sections": 7,
+  "factCount": 163
+ },
+ {
+  "id": "economy-03",
+  "module": "economy",
+  "num": 3,
+  "title": "National Income",
+  "pages": [
+   257,
+   260
+  ],
+  "sections": 1,
+  "factCount": 110
+ },
+ {
+  "id": "economy-04",
+  "module": "economy",
+  "num": 4,
+  "title": "Budget and Taxation",
+  "pages": [
+   261,
+   265
+  ],
+  "sections": 2,
+  "factCount": 108
+ },
+ {
+  "id": "economy-05",
+  "module": "economy",
+  "num": 5,
+  "title": "Inflation and Unemployment",
+  "pages": [
+   266,
+   269
+  ],
+  "sections": 3,
+  "factCount": 112
+ },
+ {
+  "id": "economy-06",
+  "module": "economy",
+  "num": 6,
+  "title": "Banking: Part 1",
+  "pages": [
+   270,
+   273
+  ],
+  "sections": 2,
+  "factCount": 121
+ },
+ {
+  "id": "economy-07",
+  "module": "economy",
+  "num": 7,
+  "title": "Monetary Policy",
+  "pages": [
+   274,
+   275
+  ],
+  "sections": 3,
+  "factCount": 57
+ },
+ {
+  "id": "economy-08",
+  "module": "economy",
+  "num": 8,
+  "title": "Banking: Part 2",
+  "pages": [
+   276,
+   279
+  ],
+  "sections": 3,
+  "factCount": 100
+ },
+ {
+  "id": "economy-09",
+  "module": "economy",
+  "num": 9,
+  "title": "Poverty and Balance of Payment",
+  "pages": [
+   280,
+   285
+  ],
+  "sections": 2,
+  "factCount": 161
+ },
+ {
+  "id": "economy-10",
+  "module": "economy",
+  "num": 10,
+  "title": "Five Year Plan and Industrial Policy Resolution",
+  "pages": [
+   286,
+   291
+  ],
+  "sections": 3,
+  "factCount": 225
+ },
+ {
+  "id": "economy-11",
+  "module": "economy",
+  "num": 11,
+  "title": "Indices, Reports, International Institutions & Key Concepts",
+  "pages": [
+   292,
+   294
+  ],
+  "sections": 5,
+  "factCount": 94
+ },
+ {
+  "id": "physics-01",
+  "module": "physics",
+  "num": 1,
+  "title": "Motion",
+  "pages": [
+   295,
+   297
+  ],
+  "sections": 1,
+  "factCount": 73
+ },
+ {
+  "id": "physics-02",
+  "module": "physics",
+  "num": 2,
+  "title": "Force and Laws of Motion",
+  "pages": [
+   298,
+   300
+  ],
+  "sections": 2,
+  "factCount": 41
+ },
+ {
+  "id": "physics-03",
+  "module": "physics",
+  "num": 3,
+  "title": "Gravitation and Work Done",
+  "pages": [
+   301,
+   304
+  ],
+  "sections": 1,
+  "factCount": 94
+ },
+ {
+  "id": "physics-04",
+  "module": "physics",
+  "num": 4,
+  "title": "Sound",
+  "pages": [
+   305,
+   307
+  ],
+  "sections": 2,
+  "factCount": 56
+ },
+ {
+  "id": "physics-05",
+  "module": "physics",
+  "num": 5,
+  "title": "Reflection and Refraction",
+  "pages": [
+   308,
+   313
+  ],
+  "sections": 2,
+  "factCount": 141
+ },
+ {
+  "id": "physics-06",
+  "module": "physics",
+  "num": 6,
+  "title": "Human Eye and Vision",
+  "pages": [
+   314,
+   317
+  ],
+  "sections": 3,
+  "factCount": 117
+ },
+ {
+  "id": "physics-07",
+  "module": "physics",
+  "num": 7,
+  "title": "Electricity",
+  "pages": [
+   318,
+   321
+  ],
+  "sections": 2,
+  "factCount": 130
+ },
+ {
+  "id": "physics-08",
+  "module": "physics",
+  "num": 8,
+  "title": "Magnetic Effect of Electric Current",
+  "pages": [
+   322,
+   324
+  ],
+  "sections": 1,
+  "factCount": 65
+ },
+ {
+  "id": "chemistry-01",
+  "module": "chemistry",
+  "num": 1,
+  "title": "Matter",
+  "pages": [
+   325,
+   330
+  ],
+  "sections": 3,
+  "factCount": 155
+ },
+ {
+  "id": "chemistry-02",
+  "module": "chemistry",
+  "num": 2,
+  "title": "Atom and its Structure",
+  "pages": [
+   331,
+   335
+  ],
+  "sections": 6,
+  "factCount": 154
+ },
+ {
+  "id": "chemistry-03",
+  "module": "chemistry",
+  "num": 3,
+  "title": "Periodic Table",
+  "pages": [
+   336,
+   340
+  ],
+  "sections": 3,
+  "factCount": 127
+ },
+ {
+  "id": "chemistry-04",
+  "module": "chemistry",
+  "num": 4,
+  "title": "Chemical Reactions",
+  "pages": [
+   341,
+   343
+  ],
+  "sections": 1,
+  "factCount": 77
+ },
+ {
+  "id": "chemistry-05",
+  "module": "chemistry",
+  "num": 5,
+  "title": "Metals and Non-Metals",
+  "pages": [
+   344,
+   348
+  ],
+  "sections": 2,
+  "factCount": 150
+ },
+ {
+  "id": "chemistry-06",
+  "module": "chemistry",
+  "num": 6,
+  "title": "Acid, Base and Salt",
+  "pages": [
+   349,
+   352
+  ],
+  "sections": 2,
+  "factCount": 137
+ },
+ {
+  "id": "chemistry-07",
+  "module": "chemistry",
+  "num": 7,
+  "title": "Carbon and its Compounds",
+  "pages": [
+   353,
+   358
+  ],
+  "sections": 4,
+  "factCount": 155
+ },
+ {
+  "id": "biology-01",
+  "module": "biology",
+  "num": 1,
+  "title": "Cell",
+  "pages": [
+   359,
+   366
+  ],
+  "sections": 7,
+  "factCount": 260
+ },
+ {
+  "id": "biology-02",
+  "module": "biology",
+  "num": 2,
+  "title": "Plant Tissue and Animal Tissue",
+  "pages": [
+   367,
+   373
+  ],
+  "sections": 3,
+  "factCount": 277
+ },
+ {
+  "id": "biology-03",
+  "module": "biology",
+  "num": 3,
+  "title": "Plant and Animal Kingdom",
+  "pages": [
+   374,
+   382
+  ],
+  "sections": 4,
+  "factCount": 321
+ },
+ {
+  "id": "biology-04",
+  "module": "biology",
+  "num": 4,
+  "title": "Nervous System",
+  "pages": [
+   383,
+   385
+  ],
+  "sections": 2,
+  "factCount": 105
+ },
+ {
+  "id": "biology-05",
+  "module": "biology",
+  "num": 5,
+  "title": "Hormones and Plant Movement",
+  "pages": [
+   386,
+   388
+  ],
+  "sections": 2,
+  "factCount": 98
+ },
+ {
+  "id": "biology-06",
+  "module": "biology",
+  "num": 6,
+  "title": "Reproduction",
+  "pages": [
+   389,
+   393
+  ],
+  "sections": 3,
+  "factCount": 155
+ },
+ {
+  "id": "biology-07",
+  "module": "biology",
+  "num": 7,
+  "title": "Digestion and Respiration",
+  "pages": [
+   394,
+   397
+  ],
+  "sections": 4,
+  "factCount": 141
+ },
+ {
+  "id": "biology-08",
+  "module": "biology",
+  "num": 8,
+  "title": "Circulatory and Excretory System",
+  "pages": [
+   398,
+   401
+  ],
+  "sections": 3,
+  "factCount": 142
+ },
+ {
+  "id": "biology-09",
+  "module": "biology",
+  "num": 9,
+  "title": "Diseases",
+  "pages": [
+   402,
+   407
+  ],
+  "sections": 5,
+  "factCount": 162
+ },
+ {
+  "id": "biology-10",
+  "module": "biology",
+  "num": 10,
+  "title": "Nutrients",
+  "pages": [
+   408,
+   411
+  ],
+  "sections": 3,
+  "factCount": 92
+ },
+ {
+  "id": "biology-11",
+  "module": "biology",
+  "num": 11,
+  "title": "Heredity and Evolution",
+  "pages": [
+   412,
+   415
+  ],
+  "sections": 3,
+  "factCount": 123
+ },
+ {
+  "id": "environment-01",
+  "module": "environment",
+  "num": 1,
+  "title": "Basics of Environmental Sciences",
+  "pages": [
+   416,
+   417
+  ],
+  "sections": 9,
+  "factCount": 81
+ },
+ {
+  "id": "environment-02",
+  "module": "environment",
+  "num": 2,
+  "title": "Ecosystem",
+  "pages": [
+   418,
+   420
+  ],
+  "sections": 6,
+  "factCount": 86
+ },
+ {
+  "id": "environment-03",
+  "module": "environment",
+  "num": 3,
+  "title": "Trophic Dynamics and Energy Transfer",
+  "pages": [
+   421,
+   422
+  ],
+  "sections": 8,
+  "factCount": 59
+ },
+ {
+  "id": "environment-04",
+  "module": "environment",
+  "num": 4,
+  "title": "Biogeochemical Cycles",
+  "pages": [
+   423,
+   423
+  ],
+  "sections": 3,
+  "factCount": 9
+ },
+ {
+  "id": "environment-05",
+  "module": "environment",
+  "num": 5,
+  "title": "Environmental Conventions",
+  "pages": [
+   424,
+   424
+  ],
+  "sections": 1,
+  "factCount": 46
+ },
+ {
+  "id": "environment-06",
+  "module": "environment",
+  "num": 6,
+  "title": "National Parks",
+  "pages": [
+   425,
+   428
+  ],
+  "sections": 2,
+  "factCount": 103
+ },
+ {
+  "id": "staticgk-01",
+  "module": "staticgk",
+  "num": 1,
+  "title": "Music and Paintings",
+  "pages": [
+   429,
+   439
+  ],
+  "sections": 7,
+  "factCount": 372
+ },
+ {
+  "id": "staticgk-02",
+  "module": "staticgk",
+  "num": 2,
+  "title": "Classical Dance",
+  "pages": [
+   440,
+   443
+  ],
+  "sections": 5,
+  "factCount": 118
+ },
+ {
+  "id": "staticgk-03",
+  "module": "staticgk",
+  "num": 3,
+  "title": "Folk Dances of India",
+  "pages": [
+   444,
+   458
+  ],
+  "sections": 15,
+  "factCount": 325
+ },
+ {
+  "id": "staticgk-04",
+  "module": "staticgk",
+  "num": 4,
+  "title": "Festivals of India",
+  "pages": [
+   459,
+   473
+  ],
+  "sections": 7,
+  "factCount": 268
+ },
+ {
+  "id": "staticgk-05",
+  "module": "staticgk",
+  "num": 5,
+  "title": "Census",
+  "pages": [
+   474,
+   476
+  ],
+  "sections": 1,
+  "factCount": 132
+ },
+ {
+  "id": "staticgk-06",
+  "module": "staticgk",
+  "num": 6,
+  "title": "Important Days",
+  "pages": [
+   477,
+   479
+  ],
+  "sections": 12,
+  "factCount": 165
+ },
+ {
+  "id": "staticgk-07",
+  "module": "staticgk",
+  "num": 7,
+  "title": "Books and Authors",
+  "pages": [
+   480,
+   487
+  ],
+  "sections": 4,
+  "factCount": 175
+ },
+ {
+  "id": "staticgk-08",
+  "module": "staticgk",
+  "num": 8,
+  "title": "Sports",
+  "pages": [
+   488,
+   497
+  ],
+  "sections": 16,
+  "factCount": 444
+ },
+ {
+  "id": "staticgk-09",
+  "module": "staticgk",
+  "num": 9,
+  "title": "International Organisations",
+  "pages": [
+   498,
+   502
+  ],
+  "sections": 11,
+  "factCount": 210
+ },
+ {
+  "id": "staticgk-10",
+  "module": "staticgk",
+  "num": 10,
+  "title": "National Organisations",
+  "pages": [
+   503,
+   504
+  ],
+  "sections": 5,
+  "factCount": 52
+ },
+ {
+  "id": "staticgk-11",
+  "module": "staticgk",
+  "num": 11,
+  "title": "Awards and Honours",
+  "pages": [
+   505,
+   509
+  ],
+  "sections": 3,
+  "factCount": 141
+ }
+]

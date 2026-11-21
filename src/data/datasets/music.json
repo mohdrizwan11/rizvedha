@@ -1,0 +1,3316 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "music",
+  "file": "music_of_india.html",
+  "libraryCopy": "static-gk/music-gharanas/concept/music_of_india.html",
+  "storageKey": "ssc_music_game_v1",
+  "icon": "🎵",
+  "description": "Bilingual study app on India's gharanas, folk and semi-classical music: map quiz, learn cards, exam notes on instruments and maestros, and an MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Music of India",
+      "भारत का संगीत"
+    ],
+    "hSub": [
+      "SSC Focus · Music map and notes",
+      "SSC फोकस · संगीत मानचित्र व नोट्स"
+    ],
+    "qLabel": [
+      "Select the state of this tradition",
+      "इस परंपरा का राज्य चुनें"
+    ],
+    "next": [
+      "Next tradition",
+      "अगली परंपरा"
+    ],
+    "learnTtl": [
+      "Learn music",
+      "संगीत सीखें"
+    ],
+    "learnSub": [
+      "Open any gharana or tradition to read its home, form, famous names and exam facts.",
+      "किसी भी घराने या परंपरा को खोलकर उसका स्थान, शैली, प्रसिद्ध नाम और परीक्षा तथ्य पढ़ें।"
+    ],
+    "atlasSub": [
+      "Every gharana and tradition on the map, coloured by kind.",
+      "हर घराना और परंपरा मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "lvlLabel": [
+      "Level · Music GK rank",
+      "स्तर · संगीत GK रैंक"
+    ],
+    "howto": [
+      "Play: a gharana or music tradition is shown; select its state on the map of India. A tap close to its home earns full XP.\nLearn → Music: 60 gharanas, music centres, folk and semi-classical traditions with their form and famous names.\nLearn → Exam notes: the four families of instruments, instruments and maestros, basics such as thaats and the Carnatic Trinity, honours and festivals, and easily confused pairs.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every tradition on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: कोई घराना या संगीत परंपरा दिखेगी; भारत के मानचित्र पर उसका राज्य चुनें। उसके मूल स्थान के पास टैप करने पर पूरा XP मिलता है।\nसीखें → संगीत: 60 घराने, संगीत केंद्र, लोक और उपशास्त्रीय परंपराएँ – शैली और प्रसिद्ध नामों के साथ।\nसीखें → परीक्षा नोट्स: वाद्यों के चार वर्ग, वाद्य और कलाकार, थाट और कर्नाटक त्रिमूर्ति जैसी मूल बातें, सम्मान और महोत्सव, और भ्रमित करने वाली जोड़ियाँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर परंपरा मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read a tradition, or a state to list its traditions.",
+      "किसी चिह्न को छूकर परंपरा पढ़ें, या राज्य को छूकर उसकी परंपराएँ देखें।"
+    ],
+    "noPlants": [
+      "No tradition from this state in the deck.",
+      "इस राज्य की कोई परंपरा सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "traditions",
+      "परंपराएँ"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this tradition.",
+      "भारत का मानचित्र। इस परंपरा का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its traditions.",
+      "भारत का मानचित्र। किसी राज्य की परंपराएँ देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's traditions.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य की परंपराएँ देखें।"
+    ],
+    "filterGroup": [
+      "Filter by kind or region",
+      "प्रकार या क्षेत्र से छाँटें"
+    ],
+    "searchLabel": [
+      "Search music",
+      "संगीत खोजें"
+    ],
+    "searchPh": [
+      "Gharana, song, state or name",
+      "घराना, गीत, राज्य या नाम"
+    ],
+    "resultsN": [
+      "traditions listed",
+      "परंपराएँ सूची में"
+    ],
+    "noResults": [
+      "Nothing matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कुछ नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "plantMarker": [
+      "tradition",
+      "परंपरा"
+    ],
+    "atlasPickerLabel": [
+      "Browse a tradition",
+      "परंपरा खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select a tradition",
+      "परंपरा चुनें"
+    ],
+    "ltPlants": [
+      "Music",
+      "संगीत"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on instruments and maestros, basics, gharanas, folk music and honours. Each answer comes with an explanation.",
+      "वाद्य और कलाकार, मूल बातें, घराने, लोक संगीत और सम्मान पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Traditions studied",
+      "पढ़ी गई परंपराएँ"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of tradition.",
+      "चिह्नों के रंग परंपरा का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "traditions on the map",
+      "परंपराएँ मानचित्र पर"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qInState": [
+      "Which of these is from",
+      "इनमें से कौन-सा इस राज्य का है:"
+    ]
+  },
+  "types": [
+    {
+      "k": "vocal",
+      "icon": "🎤",
+      "col": "#6A1B9A",
+      "t": [
+        "Khayal gharana",
+        "ख्याल घराना"
+      ]
+    },
+    {
+      "k": "dhrupad",
+      "icon": "🕉️",
+      "col": "#4E342E",
+      "t": [
+        "Dhrupad",
+        "ध्रुपद"
+      ]
+    },
+    {
+      "k": "tabla",
+      "icon": "🥁",
+      "col": "#BF360C",
+      "t": [
+        "Tabla gharana",
+        "तबला घराना"
+      ]
+    },
+    {
+      "k": "instr",
+      "icon": "🎻",
+      "col": "#1565C0",
+      "t": [
+        "Instrumental",
+        "वाद्य"
+      ]
+    },
+    {
+      "k": "kathak",
+      "icon": "💃",
+      "col": "#AD1457",
+      "t": [
+        "Kathak gharana",
+        "कथक घराना"
+      ]
+    },
+    {
+      "k": "hub",
+      "icon": "🏛️",
+      "col": "#00695C",
+      "t": [
+        "Music centre",
+        "संगीत केंद्र"
+      ]
+    },
+    {
+      "k": "carnatic",
+      "icon": "🪕",
+      "col": "#9E7700",
+      "t": [
+        "Carnatic tradition",
+        "कर्नाटक परंपरा"
+      ]
+    },
+    {
+      "k": "semi",
+      "icon": "🎶",
+      "col": "#5D4037",
+      "t": [
+        "Semi-classical",
+        "उपशास्त्रीय"
+      ]
+    },
+    {
+      "k": "folk",
+      "icon": "🪘",
+      "col": "#2E7D32",
+      "t": [
+        "Folk music",
+        "लोक संगीत"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Home",
+        "मूल स्थान"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "Kind",
+        "प्रकार"
+      ]
+    },
+    {
+      "k": "ft",
+      "t": [
+        "Form",
+        "शैली"
+      ]
+    },
+    {
+      "k": "ex",
+      "t": [
+        "Famous names",
+        "प्रसिद्ध नाम"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "ex"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "First Note",
+      "hi": "पहला सुर"
+    },
+    {
+      "min": 60,
+      "en": "Riyaz Learner",
+      "hi": "रियाज़ विद्यार्थी"
+    },
+    {
+      "min": 150,
+      "en": "Folk Explorer",
+      "hi": "लोक खोजी"
+    },
+    {
+      "min": 320,
+      "en": "Raga Seeker",
+      "hi": "राग साधक"
+    },
+    {
+      "min": 560,
+      "en": "Gharana Scholar",
+      "hi": "घराना विद्वान"
+    },
+    {
+      "min": 900,
+      "en": "Sangeet Guru",
+      "hi": "संगीत गुरु"
+    },
+    {
+      "min": 1400,
+      "en": "Ustad of Music GK",
+      "hi": "संगीत GK उस्ताद"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "🎵",
+      "t": [
+        "First Note",
+        "पहला सुर"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "In Tune",
+        "सुर में"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Music Mapper",
+        "संगीत मैपर"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "tabla",
+      "icon": "🥁",
+      "t": [
+        "Taal Master",
+        "ताल मास्टर"
+      ],
+      "d": [
+        "Study every tabla gharana",
+        "सभी तबला घराने पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "tabla"
+        ]
+      }
+    },
+    {
+      "id": "folk",
+      "icon": "🪘",
+      "t": [
+        "Folk Trails",
+        "लोक राहें"
+      ],
+      "d": [
+        "Study 10 folk traditions",
+        "10 लोक परंपराएँ पढ़ें"
+      ],
+      "need": {
+        "seen": 10,
+        "types": [
+          "folk"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Ustad",
+        "उस्ताद"
+      ],
+      "d": [
+        "Study every tradition",
+        "सभी परंपराएँ पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "kd",
+        "field": "kd",
+        "ask": [
+          "What kind of tradition is this?",
+          "यह किस प्रकार की परंपरा है?"
+        ],
+        "reverseId": "wk",
+        "reverseAsk": [
+          "Which of these is a",
+          "इनमें से कौन-सा है:"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "instr",
+              "basics",
+              "gharana",
+              "folk",
+              "honours"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "is",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "instr",
+        "t": [
+          "Instruments & basics",
+          "वाद्य और मूल बातें"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "instr",
+              "basics"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "gharana",
+        "t": [
+          "Gharanas & honours",
+          "घराने और सम्मान"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "gharana",
+              "honours"
+            ],
+            "n": 6
+          },
+          {
+            "q": "st",
+            "n": 4
+          }
+        ]
+      },
+      {
+        "id": "folk",
+        "t": [
+          "Folk & states",
+          "लोक और राज्य"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "folk"
+            ],
+            "n": 4
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "is",
+            "n": 3
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Gwalior Gharana",
+      "h": "ग्वालियर घराना",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "vocal",
+      "rg": "C",
+      "d": 1,
+      "lat": 26.22,
+      "lng": 78.18,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Hassu–Haddu Khan, V.D. Paluskar",
+      "exh": "हस्सू–हद्दू खान, वि.दि. पलुस्कर",
+      "fact": "The oldest and 'mother' khayal gharana, from which most others branched out.",
+      "facth": "सबसे पुराना व 'जननी' ख्याल घराना, जिससे अधिकांश घराने निकले।"
+    },
+    {
+      "n": "Agra Gharana",
+      "h": "आगरा घराना",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "vocal",
+      "rg": "N",
+      "d": 1,
+      "lat": 27.18,
+      "lng": 78.02,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal & Dhrupad",
+      "fth": "ख्याल व ध्रुपद",
+      "tag": "Khayal & Dhrupad",
+      "tagh": "ख्याल व ध्रुपद",
+      "ex": "Ustad Faiyaz Khan",
+      "exh": "उस्ताद फैयाज खान",
+      "fact": "Powerful dhrupad-rooted vocal style; Faiyaz Khan was its towering 20th-c. voice.",
+      "facth": "ध्रुपद-मूल का प्रभावशाली गायन; फैयाज खान 20वीं सदी के शिखर गायक।"
+    },
+    {
+      "n": "Jaipur-Atrauli",
+      "h": "जयपुर-अतरौली",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "vocal",
+      "rg": "W",
+      "d": 1,
+      "lat": 26.91,
+      "lng": 75.79,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Alladiya Khan, Kishori Amonkar",
+      "exh": "अल्लादिया खान, किशोरी अमोनकर",
+      "fact": "Founded by Alladiya Khan; complex ragas & breath control. (Jaipur also has a Kathak gharana.)",
+      "facth": "अल्लादिया खान द्वारा; जटिल राग व श्वास नियंत्रण। (जयपुर में कथक घराना भी।)"
+    },
+    {
+      "n": "Kirana Gharana",
+      "h": "किराना घराना",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "vocal",
+      "rg": "N",
+      "d": 1,
+      "lat": 29.39,
+      "lng": 77.2,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Abdul Karim Khan, Bhimsen Joshi",
+      "exh": "अब्दुल करीम खान, भीमसेन जोशी",
+      "fact": "From Kairana; known for slow, note-by-note elaboration. Bhimsen Joshi & Gangubai Hangal.",
+      "facth": "कैराना से; धीमा, स्वर-दर-स्वर विस्तार। भीमसेन जोशी व गंगुबाई हंगल।"
+    },
+    {
+      "n": "Patiala Gharana",
+      "h": "पटियाला घराना",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "vocal",
+      "rg": "N",
+      "d": 1,
+      "lat": 30.34,
+      "lng": 76.39,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal & Thumri",
+      "fth": "ख्याल व ठुमरी",
+      "tag": "Khayal & Thumri",
+      "tagh": "ख्याल व ठुमरी",
+      "ex": "Bade Ghulam Ali Khan",
+      "exh": "बड़े गुलाम अली खान",
+      "fact": "Ornate, fast taans & thumri; Bade Ghulam Ali Khan is its most famous exponent.",
+      "facth": "अलंकृत, तेज तानें व ठुमरी; बड़े गुलाम अली खान सबसे प्रसिद्ध।"
+    },
+    {
+      "n": "Rampur-Sahaswan",
+      "h": "रामपुर-सहसवान",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "vocal",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.79,
+      "lng": 79.02,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Inayat Hussain Khan, Rashid Khan",
+      "exh": "इनायत हुसैन खान, राशिद खान",
+      "fact": "Blends Gwalior's grandeur with melodic ease; Rashid Khan was a modern star.",
+      "facth": "ग्वालियर की भव्यता व मधुरता का मेल; राशिद खान आधुनिक सितारा।"
+    },
+    {
+      "n": "Mewati Gharana",
+      "h": "मेवाती घराना",
+      "s": "Haryana",
+      "st": "Haryana",
+      "sh": "हरियाणा",
+      "c": "vocal",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.1,
+      "lng": 77,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Pandit Jasraj",
+      "exh": "पंडित जसराज",
+      "fact": "From the Mewat region; Pandit Jasraj made it world-renowned.",
+      "facth": "मेवात क्षेत्र से; पंडित जसराज ने विश्वप्रसिद्ध किया।"
+    },
+    {
+      "n": "Bhendi Bazaar",
+      "h": "भेंडी बाजार",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "vocal",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.96,
+      "lng": 72.83,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Anjanibai Malpekar",
+      "exh": "अंजनीबाई मालपेकर",
+      "fact": "A Mumbai gharana noted for long single-breath passages (one-breath singing).",
+      "facth": "एक-सांस गायन के लिए प्रसिद्ध मुंबई घराना।"
+    },
+    {
+      "n": "Indore Gharana",
+      "h": "इंदौर घराना",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "vocal",
+      "rg": "C",
+      "d": 1,
+      "lat": 22.72,
+      "lng": 75.86,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal (vocal)",
+      "fth": "ख्याल (गायन)",
+      "tag": "Khayal (vocal)",
+      "tagh": "ख्याल (गायन)",
+      "ex": "Ustad Amir Khan",
+      "exh": "उस्ताद अमीर खान",
+      "fact": "Founded by Amir Khan; serene, slow vilambit khayal with merukhand patterns.",
+      "facth": "अमीर खान द्वारा; शांत, धीमा विलंबित ख्याल व मेरुखंड।"
+    },
+    {
+      "n": "Sham Chaurasi",
+      "h": "शाम चौरासी",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "vocal",
+      "rg": "N",
+      "d": 3,
+      "lat": 31.53,
+      "lng": 75.91,
+      "kd": "Khayal gharana",
+      "kdh": "ख्याल घराना",
+      "ft": "Khayal & Dhrupad",
+      "fth": "ख्याल व ध्रुपद",
+      "tag": "Khayal & Dhrupad",
+      "tagh": "ख्याल व ध्रुपद",
+      "ex": "Salamat–Nazakat Ali Khan",
+      "exh": "सलामत–नजाकत अली खान",
+      "fact": "An old Punjab gharana; famed for the jugalbandi of Salamat & Nazakat Ali Khan.",
+      "facth": "पुराना पंजाब घराना; सलामत व नजाकत अली खान की जुगलबंदी प्रसिद्ध।"
+    },
+    {
+      "n": "Dharwad",
+      "h": "धारवाड़",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "hub",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.46,
+      "lng": 75.01,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Hindustani cradle",
+      "fth": "हिंदुस्तानी उद्गम",
+      "tag": "Hindustani cradle",
+      "tagh": "हिंदुस्तानी उद्गम",
+      "ex": "Bhimsen Joshi, Gangubai Hangal",
+      "exh": "भीमसेन जोशी, गंगुबाई हंगल",
+      "fact": "The 'cradle' of Hindustani music in the South; home of Joshi, Hangal & Mansur.",
+      "facth": "दक्षिण में हिंदुस्तानी संगीत का 'उद्गम'; जोशी, हंगल व मंसूर का घर।"
+    },
+    {
+      "n": "Pune",
+      "h": "पुणे",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "hub",
+      "rg": "W",
+      "d": 2,
+      "lat": 18.52,
+      "lng": 73.86,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Hindustani hub",
+      "fth": "हिंदुस्तानी केंद्र",
+      "tag": "Hindustani hub",
+      "tagh": "हिंदुस्तानी केंद्र",
+      "ex": "Sawai Gandharva festival",
+      "exh": "सवाई गंधर्व महोत्सव",
+      "fact": "A great Hindustani centre; hosts the famous Sawai Gandharva Bhimsen Mahotsav.",
+      "facth": "प्रमुख हिंदुस्तानी केंद्र; प्रसिद्ध सवाई गंधर्व भीमसेन महोत्सव।"
+    },
+    {
+      "n": "Kolkata",
+      "h": "कोलकाता",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "c": "hub",
+      "rg": "E",
+      "d": 3,
+      "lat": 22.57,
+      "lng": 88.36,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Hindustani hub",
+      "fth": "हिंदुस्तानी केंद्र",
+      "tag": "Hindustani hub",
+      "tagh": "हिंदुस्तानी केंद्र",
+      "ex": "ITC Sangeet Research Academy",
+      "exh": "आईटीसी संगीत रिसर्च अकादमी",
+      "fact": "A leading centre of Hindustani classical, home to the ITC-SRA gurukul.",
+      "facth": "हिंदुस्तानी शास्त्रीय का प्रमुख केंद्र, आईटीसी-एसआरए गुरुकुल।"
+    },
+    {
+      "n": "Delhi Tabla Gharana",
+      "h": "दिल्ली तबला घराना",
+      "s": "Delhi",
+      "st": "Delhi",
+      "sh": "दिल्ली",
+      "c": "tabla",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.61,
+      "lng": 77.21,
+      "kd": "Tabla gharana",
+      "kdh": "तबला घराना",
+      "ft": "Tabla",
+      "fth": "तबला",
+      "tag": "Tabla",
+      "tagh": "तबला",
+      "ex": "Sidhar Khan (founder)",
+      "exh": "सिधार खान (संस्थापक)",
+      "fact": "The OLDEST tabla gharana; known for its delicate 'do-ungli' (two-finger) baaj.",
+      "facth": "सबसे पुराना तबला घराना; नाजुक 'दो-उंगली' बाज के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Ajrara Tabla",
+      "h": "अजराड़ा तबला",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "tabla",
+      "rg": "N",
+      "d": 3,
+      "lat": 28.93,
+      "lng": 77.78,
+      "kd": "Tabla gharana",
+      "kdh": "तबला घराना",
+      "ft": "Tabla",
+      "fth": "तबला",
+      "tag": "Tabla",
+      "tagh": "तबला",
+      "ex": "Kallu & Miru Khan",
+      "exh": "कल्लू व मीरू खान",
+      "fact": "Near Meerut; an offshoot of Delhi known for complex bols and rhythmic play.",
+      "facth": "मेरठ के पास; दिल्ली की शाखा, जटिल बोल व लय के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Farrukhabad Tabla",
+      "h": "फर्रुखाबाद तबला",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "tabla",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.39,
+      "lng": 79.58,
+      "kd": "Tabla gharana",
+      "kdh": "तबला घराना",
+      "ft": "Tabla",
+      "fth": "तबला",
+      "tag": "Tabla",
+      "tagh": "तबला",
+      "ex": "Haji Vilayat Ali Khan",
+      "exh": "हाजी विलायत अली खान",
+      "fact": "Famed for rich gat compositions; Ahmedjan Thirakwa was a legendary exponent.",
+      "facth": "समृद्ध गत रचनाओं के लिए प्रसिद्ध; अहमदजान थिरकवा महान वादक।"
+    },
+    {
+      "n": "Banaras Tabla",
+      "h": "बनारस तबला",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "tabla",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.32,
+      "lng": 83.01,
+      "kd": "Tabla gharana",
+      "kdh": "तबला घराना",
+      "ft": "Tabla",
+      "fth": "तबला",
+      "tag": "Tabla",
+      "tagh": "तबला",
+      "ex": "Pt. Ram Sahai; Kishan Maharaj",
+      "exh": "पं. राम सहाय; किशन महाराज",
+      "fact": "Bold, resonant solo style of Varanasi. (Banaras also has Kathak & vocal gharanas.)",
+      "facth": "वाराणसी की दमदार, गूँजदार एकल शैली। (बनारस में कथक व गायन घराने भी।)"
+    },
+    {
+      "n": "Punjab Tabla",
+      "h": "पंजाब तबला",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "tabla",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.63,
+      "lng": 74.87,
+      "kd": "Tabla gharana",
+      "kdh": "तबला घराना",
+      "ft": "Tabla",
+      "fth": "तबला",
+      "tag": "Tabla",
+      "tagh": "तबला",
+      "ex": "Allah Rakha, Zakir Hussain",
+      "exh": "अल्ला रक्खा, जाकिर हुसैन",
+      "fact": "Pakhawaj-influenced powerful baaj; lineage of Allah Rakha & Zakir Hussain.",
+      "facth": "पखावज-प्रभावित दमदार बाज; अल्ला रक्खा व जाकिर हुसैन की परंपरा।"
+    },
+    {
+      "n": "Maihar Gharana",
+      "h": "मैहर घराना",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "instr",
+      "rg": "C",
+      "d": 1,
+      "lat": 24.27,
+      "lng": 80.76,
+      "kd": "Instrumental gharana",
+      "kdh": "वाद्य घराना",
+      "ft": "Instrumental",
+      "fth": "वाद्य",
+      "tag": "Instrumental",
+      "tagh": "वाद्य",
+      "ex": "Baba Allauddin Khan; Ravi Shankar",
+      "exh": "बाबा अलाउद्दीन खान; रवि शंकर",
+      "fact": "Founded by Allauddin Khan; produced Ravi Shankar, Ali Akbar Khan & Nikhil Banerjee.",
+      "facth": "अलाउद्दीन खान द्वारा; रवि शंकर, अली अकबर खान व निखिल बनर्जी।"
+    },
+    {
+      "n": "Imdadkhani (Etawah)",
+      "h": "इमदादखानी (इटावा)",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "instr",
+      "rg": "N",
+      "d": 2,
+      "lat": 26.78,
+      "lng": 79.02,
+      "kd": "Instrumental gharana",
+      "kdh": "वाद्य घराना",
+      "ft": "Sitar / Surbahar",
+      "fth": "सितार / सुरबहार",
+      "tag": "Sitar / Surbahar",
+      "tagh": "सितार / सुरबहार",
+      "ex": "Imdad Khan; Vilayat Khan",
+      "exh": "इमदाद खान; विलायत खान",
+      "fact": "The Etawah sitar gharana; Vilayat Khan developed its lyrical 'gayaki ang'.",
+      "facth": "इटावा सितार घराना; विलायत खान ने गायकी अंग विकसित किया।"
+    },
+    {
+      "n": "Miraj",
+      "h": "मिरज",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "hub",
+      "rg": "W",
+      "d": 3,
+      "lat": 16.83,
+      "lng": 74.64,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Instrument-making",
+      "fth": "वाद्य-निर्माण",
+      "tag": "Instrument-making",
+      "tagh": "वाद्य-निर्माण",
+      "ex": "Sitar & tanpura makers",
+      "exh": "सितार व तानपुरा निर्माता",
+      "fact": "Famous for crafting sitars & tanpuras; also a Kirana gharana centre.",
+      "facth": "सितार व तानपुरा निर्माण के लिए प्रसिद्ध; किराना घराना केंद्र भी।"
+    },
+    {
+      "n": "Darbhanga Dhrupad",
+      "h": "दरभंगा ध्रुपद",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "dhrupad",
+      "rg": "E",
+      "d": 3,
+      "lat": 26.15,
+      "lng": 85.9,
+      "kd": "Dhrupad gharana",
+      "kdh": "ध्रुपद घराना",
+      "ft": "Dhrupad",
+      "fth": "ध्रुपद",
+      "tag": "Dhrupad",
+      "tagh": "ध्रुपद",
+      "ex": "Mallik family",
+      "exh": "मल्लिक परिवार",
+      "fact": "A leading dhrupad gharana of the Mallik lineage, known for the Khandar vani.",
+      "facth": "मल्लिक वंश का प्रमुख ध्रुपद घराना, खंडार वाणी के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Bettiah Dhrupad",
+      "h": "बेतिया ध्रुपद",
+      "s": "Bihar",
+      "st": "Bihar",
+      "sh": "बिहार",
+      "c": "dhrupad",
+      "rg": "E",
+      "d": 3,
+      "lat": 26.8,
+      "lng": 84.5,
+      "kd": "Dhrupad gharana",
+      "kdh": "ध्रुपद घराना",
+      "ft": "Dhrupad",
+      "fth": "ध्रुपद",
+      "tag": "Dhrupad",
+      "tagh": "ध्रुपद",
+      "ex": "Mishra & Malik families",
+      "exh": "मिश्र व मलिक परिवार",
+      "fact": "One of the oldest dhrupad gharanas, patronised by the Bettiah Raj.",
+      "facth": "सबसे पुराने ध्रुपद घरानों में से एक, बेतिया राज द्वारा संरक्षित।"
+    },
+    {
+      "n": "Bishnupur",
+      "h": "विष्णुपुर",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "c": "dhrupad",
+      "rg": "E",
+      "d": 3,
+      "lat": 23.07,
+      "lng": 87.32,
+      "kd": "Dhrupad gharana",
+      "kdh": "ध्रुपद घराना",
+      "ft": "Dhrupad (vocal)",
+      "fth": "ध्रुपद (गायन)",
+      "tag": "Dhrupad (vocal)",
+      "tagh": "ध्रुपद (गायन)",
+      "ex": "Ramshankar Bhattacharya",
+      "exh": "रामशंकर भट्टाचार्य",
+      "fact": "The only major Hindustani gharana of Bengal, rooted in dhrupad.",
+      "facth": "बंगाल का एकमात्र प्रमुख हिंदुस्तानी घराना, ध्रुपद-मूल।"
+    },
+    {
+      "n": "Dagarvani (Udaipur)",
+      "h": "डागरवाणी (उदयपुर)",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "dhrupad",
+      "rg": "W",
+      "d": 3,
+      "lat": 24.58,
+      "lng": 73.68,
+      "kd": "Dhrupad gharana",
+      "kdh": "ध्रुपद घराना",
+      "ft": "Dhrupad",
+      "fth": "ध्रुपद",
+      "tag": "Dhrupad",
+      "tagh": "ध्रुपद",
+      "ex": "The Dagar brothers",
+      "exh": "डागर बंधु",
+      "fact": "The Dagar family's dhrupad tradition, the most prominent dhrupad lineage today.",
+      "facth": "डागर परिवार की ध्रुपद परंपरा, आज सबसे प्रमुख ध्रुपद वंश।"
+    },
+    {
+      "n": "Lucknow Gharana",
+      "h": "लखनऊ घराना",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "kathak",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.85,
+      "lng": 80.95,
+      "kd": "Kathak gharana",
+      "kdh": "कथक घराना",
+      "ft": "Kathak (dance)",
+      "fth": "कथक (नृत्य)",
+      "tag": "Kathak (dance)",
+      "tagh": "कथक (नृत्य)",
+      "ex": "Birju Maharaj; Kalka–Bindadin",
+      "exh": "बिरजू महाराज; कालका–बिंदादीन",
+      "fact": "Foremost Kathak gharana — graceful 'bhava' & abhinaya. (Lucknow has a tabla gharana too.)",
+      "facth": "प्रमुख कथक घराना — भाव व अभिनय प्रधान। (लखनऊ में तबला घराना भी।)"
+    },
+    {
+      "n": "Raigarh Kathak",
+      "h": "रायगढ़ कथक",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh",
+      "sh": "छत्तीसगढ़",
+      "c": "kathak",
+      "rg": "C",
+      "d": 3,
+      "lat": 21.9,
+      "lng": 83.4,
+      "kd": "Kathak gharana",
+      "kdh": "कथक घराना",
+      "ft": "Kathak (dance)",
+      "fth": "कथक (नृत्य)",
+      "tag": "Kathak (dance)",
+      "tagh": "कथक (नृत्य)",
+      "ex": "Raja Chakradhar Singh",
+      "exh": "राजा चक्रधर सिंह",
+      "fact": "A 20th-c. Kathak gharana fostered by the music-loving Raja Chakradhar Singh.",
+      "facth": "20वीं सदी का कथक घराना, संगीतप्रेमी राजा चक्रधर सिंह द्वारा पोषित।"
+    },
+    {
+      "n": "Tiruvarur",
+      "h": "तिरुवरूर",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "hub",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.77,
+      "lng": 79.64,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Carnatic (Trinity)",
+      "fth": "कर्नाटक (त्रिमूर्ति)",
+      "tag": "Carnatic (Trinity)",
+      "tagh": "कर्नाटक (त्रिमूर्ति)",
+      "ex": "Thyagaraja, Dikshitar, Syama Sastri",
+      "exh": "त्यागराज, दीक्षितार, श्यामा शास्त्री",
+      "fact": "Birthplace of the Carnatic Music Trinity — Thyagaraja, Dikshitar & Syama Sastri.",
+      "facth": "कर्नाटक संगीत त्रिमूर्ति — त्यागराज, दीक्षितार व श्यामा शास्त्री का जन्मस्थान।"
+    },
+    {
+      "n": "Thanjavur",
+      "h": "तंजावुर",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "hub",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.79,
+      "lng": 79.13,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Carnatic & dance",
+      "fth": "कर्नाटक व नृत्य",
+      "tag": "Carnatic & dance",
+      "tagh": "कर्नाटक व नृत्य",
+      "ex": "Thanjavur Quartet",
+      "exh": "तंजावुर चौकड़ी",
+      "fact": "Cradle of Carnatic music & Bharatanatyam under the Maratha & Nayak courts.",
+      "facth": "मराठा व नायक दरबारों में कर्नाटक संगीत व भरतनाट्यम का उद्गम।"
+    },
+    {
+      "n": "Chennai",
+      "h": "चेन्नई",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "hub",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.08,
+      "lng": 80.27,
+      "kd": "Centre of classical music",
+      "kdh": "शास्त्रीय संगीत का केंद्र",
+      "ft": "Carnatic hub",
+      "fth": "कर्नाटक केंद्र",
+      "tag": "Carnatic hub",
+      "tagh": "कर्नाटक केंद्र",
+      "ex": "Madras Music Season",
+      "exh": "मद्रास संगीत मौसम",
+      "fact": "The modern capital of Carnatic music; the December Margazhi Music Season & Music Academy.",
+      "facth": "कर्नाटक संगीत की आधुनिक राजधानी; दिसंबर मार्गழி संगीत मौसम व म्यूजिक अकादमी।"
+    },
+    {
+      "n": "Baul",
+      "h": "बाउल",
+      "s": "West Bengal",
+      "st": "Birbhum (Kenduli), West Bengal",
+      "sh": "बीरभूम (केंदुली), पश्चिम बंगाल",
+      "c": "folk",
+      "rg": "E",
+      "d": 1,
+      "lat": 23.63,
+      "lng": 87.45,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Songs of wandering mystic minstrels",
+      "fth": "घुमंतू रहस्यवादी गायकों के गीत",
+      "tag": "Songs of wandering mystic minstrels",
+      "tagh": "घुमंतू रहस्यवादी गायकों के गीत",
+      "ex": "Lalon Fakir; the ektara",
+      "exh": "लालन फ़कीर; एकतारा",
+      "fact": "Baul songs of Bengal are sung by wandering mystics with the one-stringed ektara; UNESCO lists them as intangible heritage (2008).",
+      "facth": "बंगाल के बाउल गीत घुमंतू रहस्यवादी एकतारा के साथ गाते हैं; यूनेस्को ने इन्हें अमूर्त धरोहर में शामिल किया (2008)।"
+    },
+    {
+      "n": "Bhatiali",
+      "h": "भटियाली",
+      "s": "West Bengal",
+      "st": "Riverine Bengal",
+      "sh": "बंगाल का नदी क्षेत्र",
+      "c": "folk",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.1,
+      "lng": 88.55,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Songs of boatmen",
+      "fth": "नाविकों के गीत",
+      "tag": "Songs of boatmen",
+      "tagh": "नाविकों के गीत",
+      "ex": "Sung on the rivers of Bengal",
+      "exh": "बंगाल की नदियों पर गाए जाते",
+      "fact": "Bhatiali is the slow, flowing song of the boatmen of Bengal, sung while drifting downstream.",
+      "facth": "भटियाली बंगाल के नाविकों का धीमा, बहता गीत है जो धारा के साथ बहते हुए गाया जाता है।"
+    },
+    {
+      "n": "Bhawaiya",
+      "h": "भावैया",
+      "s": "West Bengal",
+      "st": "Cooch Behar, North Bengal",
+      "sh": "कूचबिहार, उत्तर बंगाल",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 26.32,
+      "lng": 89.45,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Songs of cart drivers and herders",
+      "fth": "गाड़ीवानों और चरवाहों के गीत",
+      "tag": "Songs of cart drivers and herders",
+      "tagh": "गाड़ीवानों और चरवाहों के गीत",
+      "ex": "Abbasuddin Ahmed",
+      "exh": "अब्बासुद्दीन अहमद",
+      "fact": "Bhawaiya is the folk song of North Bengal (Cooch Behar), often about bullock-cart drivers and longing.",
+      "facth": "भावैया उत्तर बंगाल (कूचबिहार) का लोकगीत है, जो अक्सर बैलगाड़ी चालकों और विरह के बारे में होता है।"
+    },
+    {
+      "n": "Rabindra Sangeet",
+      "h": "रवींद्र संगीत",
+      "s": "West Bengal",
+      "st": "Santiniketan, West Bengal",
+      "sh": "शांतिनिकेतन, पश्चिम बंगाल",
+      "c": "semi",
+      "rg": "E",
+      "d": 1,
+      "lat": 23.68,
+      "lng": 87.68,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Songs written and composed by Rabindranath Tagore",
+      "fth": "रवींद्रनाथ टैगोर द्वारा रचित गीत",
+      "tag": "Songs written and composed by Rabindranath Tagore",
+      "tagh": "रवींद्रनाथ टैगोर द्वारा रचित गीत",
+      "ex": "Rabindranath Tagore",
+      "exh": "रवींद्रनाथ टैगोर",
+      "fact": "Rabindra Sangeet is the body of over 2,000 songs by Rabindranath Tagore; it includes the national anthems of India and Bangladesh.",
+      "facth": "रवींद्र संगीत रवींद्रनाथ टैगोर के 2,000 से अधिक गीतों का संग्रह है; इसमें भारत और बांग्लादेश के राष्ट्रगान शामिल हैं।"
+    },
+    {
+      "n": "Powada",
+      "h": "पोवाड़ा",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 17.7,
+      "lng": 74,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Heroic ballads",
+      "fth": "वीर गाथा गीत",
+      "tag": "Heroic ballads",
+      "tagh": "वीर गाथा गीत",
+      "ex": "Sung by shahirs; ballads of Shivaji",
+      "exh": "शाहीरों द्वारा; शिवाजी की गाथाएँ",
+      "fact": "Powada is the heroic ballad of Maharashtra, sung by shahirs, often about Shivaji Maharaj.",
+      "facth": "पोवाड़ा महाराष्ट्र का वीर गाथा गीत है जिसे शाहीर गाते हैं, अक्सर शिवाजी महाराज के बारे में।"
+    },
+    {
+      "n": "Maand",
+      "h": "मांड",
+      "s": "Rajasthan",
+      "st": "Bikaner and Jaisalmer, Rajasthan",
+      "sh": "बीकानेर और जैसलमेर, राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 28,
+      "lng": 73.3,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Courtly folk song of Rajasthan",
+      "fth": "राजस्थान का दरबारी लोकगीत",
+      "tag": "Courtly folk song of Rajasthan",
+      "tagh": "राजस्थान का दरबारी लोकगीत",
+      "ex": "Allah Jilai Bai (\"Kesariya Balam\")",
+      "exh": "अल्लाह जिलाई बाई (\"केसरिया बालम\")",
+      "fact": "Maand is a refined folk style of Rajasthan once sung in royal courts; Allah Jilai Bai of Bikaner made \"Kesariya Balam\" famous.",
+      "facth": "मांड राजस्थान की परिष्कृत लोक शैली है जो कभी राजदरबारों में गाई जाती थी; बीकानेर की अल्लाह जिलाई बाई ने \"केसरिया बालम\" को प्रसिद्ध किया।"
+    },
+    {
+      "n": "Panihari",
+      "h": "पणिहारी",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 26.3,
+      "lng": 73,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Songs of women fetching water",
+      "fth": "पानी भरने जाती महिलाओं के गीत",
+      "tag": "Songs of women fetching water",
+      "tagh": "पानी भरने जाती महिलाओं के गीत",
+      "ex": "Women of the desert villages",
+      "exh": "मरुस्थल के गाँवों की महिलाएँ",
+      "fact": "Panihari songs of Rajasthan are sung by women about the long walk to fetch water.",
+      "facth": "राजस्थान के पणिहारी गीत पानी भरने की लंबी राह के बारे में महिलाएँ गाती हैं।"
+    },
+    {
+      "n": "Kajari",
+      "h": "कजरी",
+      "s": "Uttar Pradesh",
+      "st": "Mirzapur and Varanasi, Uttar Pradesh",
+      "sh": "मिर्ज़ापुर और वाराणसी, उत्तर प्रदेश",
+      "c": "semi",
+      "rg": "N",
+      "d": 1,
+      "lat": 25.15,
+      "lng": 82.57,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Monsoon songs of the Sawan month",
+      "fth": "सावन मास के वर्षा गीत",
+      "tag": "Monsoon songs of the Sawan month",
+      "tagh": "सावन मास के वर्षा गीत",
+      "ex": "Girija Devi, Shobha Gurtu",
+      "exh": "गिरिजा देवी, शोभा गुर्टू",
+      "fact": "Kajari is the monsoon song of eastern Uttar Pradesh, sung in Sawan about longing for an absent beloved; Mirzapur is famous for it.",
+      "facth": "कजरी पूर्वी उत्तर प्रदेश का वर्षा गीत है जो सावन में प्रिय के विरह में गाया जाता है; मिर्ज़ापुर इसके लिए प्रसिद्ध है।"
+    },
+    {
+      "n": "Chaiti",
+      "h": "चैती",
+      "s": "Uttar Pradesh",
+      "st": "Eastern Uttar Pradesh and Bihar",
+      "sh": "पूर्वी उत्तर प्रदेश और बिहार",
+      "c": "semi",
+      "rg": "N",
+      "d": 2,
+      "lat": 25.6,
+      "lng": 83.6,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Songs of the Chaitra month",
+      "fth": "चैत्र मास के गीत",
+      "tag": "Songs of the Chaitra month",
+      "tagh": "चैत्र मास के गीत",
+      "ex": "Girija Devi",
+      "exh": "गिरिजा देवी",
+      "fact": "Chaiti is sung in the Hindu month of Chaitra (March–April) in eastern Uttar Pradesh and Bihar, often with the refrain \"Rama\".",
+      "facth": "चैती पूर्वी उत्तर प्रदेश और बिहार में चैत्र मास (मार्च–अप्रैल) में गाई जाती है, अक्सर \"रामा\" टेक के साथ।"
+    },
+    {
+      "n": "Alha",
+      "h": "आल्हा",
+      "s": "Uttar Pradesh",
+      "st": "Mahoba, Bundelkhand",
+      "sh": "महोबा, बुंदेलखंड",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 25.3,
+      "lng": 79.87,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Heroic ballad of Alha and Udal",
+      "fth": "आल्हा और ऊदल की वीर गाथा",
+      "tag": "Heroic ballad of Alha and Udal",
+      "tagh": "आल्हा और ऊदल की वीर गाथा",
+      "ex": "Based on the Alha-Khand of Jagnik",
+      "exh": "जगनिक के आल्हा-खंड पर आधारित",
+      "fact": "Alha is the heroic ballad of Bundelkhand about the brothers Alha and Udal of Mahoba, sung in the rainy season.",
+      "facth": "आल्हा बुंदेलखंड की वीर गाथा है जो महोबा के भाइयों आल्हा और ऊदल के बारे में है और वर्षा ऋतु में गाई जाती है।"
+    },
+    {
+      "n": "Rasiya",
+      "h": "रसिया",
+      "s": "Uttar Pradesh",
+      "st": "Braj (Mathura), Uttar Pradesh",
+      "sh": "ब्रज (मथुरा), उत्तर प्रदेश",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.49,
+      "lng": 77.67,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Songs of Radha and Krishna, sung at Holi",
+      "fth": "होली पर राधा-कृष्ण के गीत",
+      "tag": "Songs of Radha and Krishna, sung at Holi",
+      "tagh": "होली पर राधा-कृष्ण के गीत",
+      "ex": "Braj Holi",
+      "exh": "ब्रज की होली",
+      "fact": "Rasiya is the folk song of Braj about the love of Radha and Krishna, sung especially at Holi.",
+      "facth": "रसिया ब्रज का लोकगीत है जो राधा-कृष्ण के प्रेम के बारे में है और विशेषकर होली पर गाया जाता है।"
+    },
+    {
+      "n": "Thumri",
+      "h": "ठुमरी",
+      "s": "Uttar Pradesh",
+      "st": "Lucknow and Varanasi, Uttar Pradesh",
+      "sh": "लखनऊ और वाराणसी, उत्तर प्रदेश",
+      "c": "semi",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.75,
+      "lng": 81.15,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Romantic semi-classical song",
+      "fth": "शृंगार प्रधान उपशास्त्रीय गीत",
+      "tag": "Romantic semi-classical song",
+      "tagh": "शृंगार प्रधान उपशास्त्रीय गीत",
+      "ex": "Wajid Ali Shah's court; Girija Devi, Begum Akhtar",
+      "exh": "वाजिद अली शाह का दरबार; गिरिजा देवी, बेगम अख़्तर",
+      "fact": "Thumri, a romantic semi-classical form in Braj Bhasha, flourished at the Lucknow court of Wajid Ali Shah; Girija Devi was the \"Queen of Thumri\".",
+      "facth": "ठुमरी ब्रजभाषा की शृंगार प्रधान उपशास्त्रीय शैली है जो लखनऊ में वाजिद अली शाह के दरबार में फली-फूली; गिरिजा देवी \"ठुमरी की रानी\" थीं।"
+    },
+    {
+      "n": "Tappa",
+      "h": "टप्पा",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "semi",
+      "rg": "N",
+      "d": 3,
+      "lat": 30.4,
+      "lng": 75,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Fast semi-classical song from camel riders' songs",
+      "fth": "ऊँट सवारों के गीतों से बनी तेज़ उपशास्त्रीय शैली",
+      "tag": "Fast semi-classical song from camel riders' songs",
+      "tagh": "ऊँट सवारों के गीतों से बनी तेज़ उपशास्त्रीय शैली",
+      "ex": "Shori Mian (Ghulam Nabi)",
+      "exh": "शोरी मियाँ (ग़ुलाम नबी)",
+      "fact": "Tappa grew from the songs of camel riders of Punjab and was refined into a quick, ornate semi-classical form by Shori Mian.",
+      "facth": "टप्पा पंजाब के ऊँट सवारों के गीतों से निकला और शोरी मियाँ ने इसे तेज़, अलंकृत उपशास्त्रीय शैली बनाया।"
+    },
+    {
+      "n": "Heer",
+      "h": "हीर",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.2,
+      "lng": 75.5,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Sung story of Heer and Ranjha",
+      "fth": "हीर-राँझा की गाई जाने वाली कथा",
+      "tag": "Sung story of Heer and Ranjha",
+      "tagh": "हीर-राँझा की गाई जाने वाली कथा",
+      "ex": "Waris Shah's Heer",
+      "exh": "वारिस शाह की हीर",
+      "fact": "Heer is the Punjabi folk singing of the tragic love story of Heer and Ranjha, based on the poem by Waris Shah.",
+      "facth": "हीर पंजाबी लोक गायन है जो वारिस शाह की कविता पर आधारित हीर-राँझा की दुखद प्रेम कथा कहता है।"
+    },
+    {
+      "n": "Ragini",
+      "h": "रागिनी",
+      "s": "Haryana",
+      "st": "Haryana",
+      "sh": "हरियाणा",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 28.9,
+      "lng": 76.6,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Haryanvi folk song and folk-theatre music",
+      "fth": "हरियाणवी लोकगीत और सांग का संगीत",
+      "tag": "Haryanvi folk song and folk-theatre music",
+      "tagh": "हरियाणवी लोकगीत और सांग का संगीत",
+      "ex": "Pt. Lakhmi Chand",
+      "exh": "पं. लख्मीचंद",
+      "fact": "Ragini is the folk song of Haryana, closely tied to the Saang folk theatre of Pandit Lakhmi Chand.",
+      "facth": "रागिनी हरियाणा का लोकगीत है जो पंडित लख्मीचंद के सांग लोक नाट्य से जुड़ा है।"
+    },
+    {
+      "n": "Qawwali",
+      "h": "क़व्वाली",
+      "s": "Delhi",
+      "st": "Hazrat Nizamuddin, Delhi",
+      "sh": "हज़रत निज़ामुद्दीन, दिल्ली",
+      "c": "semi",
+      "rg": "N",
+      "d": 1,
+      "lat": 28.59,
+      "lng": 77.24,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Sufi devotional song",
+      "fth": "सूफ़ी भक्ति गीत",
+      "tag": "Sufi devotional song",
+      "tagh": "सूफ़ी भक्ति गीत",
+      "ex": "Amir Khusrau; Nusrat Fateh Ali Khan",
+      "exh": "अमीर ख़ुसरो; नुसरत फ़तेह अली ख़ान",
+      "fact": "Qawwali, the Sufi devotional song sung at dargahs, is credited to Amir Khusrau, disciple of Nizamuddin Auliya.",
+      "facth": "दरगाहों पर गाई जाने वाली सूफ़ी भक्ति क़व्वाली का श्रेय निज़ामुद्दीन औलिया के शिष्य अमीर ख़ुसरो को दिया जाता है।"
+    },
+    {
+      "n": "Sufiana Kalam",
+      "h": "सूफ़ियाना कलाम",
+      "s": "Jammu and Kashmir",
+      "st": "Kashmir valley",
+      "sh": "कश्मीर घाटी",
+      "c": "folk",
+      "rg": "N",
+      "d": 3,
+      "lat": 34.08,
+      "lng": 74.8,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Sufi music of Kashmir",
+      "fth": "कश्मीर का सूफ़ी संगीत",
+      "tag": "Sufi music of Kashmir",
+      "tagh": "कश्मीर का सूफ़ी संगीत",
+      "ex": "The santoor; Kashmiri maqams",
+      "exh": "संतूर; कश्मीरी मक़ाम",
+      "fact": "Sufiana Kalam is the Sufi music of Kashmir, sung in maqams to the santoor, which began as its accompanying instrument.",
+      "facth": "सूफ़ियाना कलाम कश्मीर का सूफ़ी संगीत है जो मक़ामों में संतूर के साथ गाया जाता है; संतूर इसी के साथ बजने वाला वाद्य था।"
+    },
+    {
+      "n": "Jagar",
+      "h": "जागर",
+      "s": "Uttarakhand",
+      "st": "Kumaon and Garhwal, Uttarakhand",
+      "sh": "कुमाऊँ और गढ़वाल, उत्तराखंड",
+      "c": "folk",
+      "rg": "N",
+      "d": 3,
+      "lat": 29.6,
+      "lng": 79.65,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Ritual singing that invokes local deities",
+      "fth": "स्थानीय देवताओं का आह्वान करने वाला अनुष्ठानिक गायन",
+      "tag": "Ritual singing that invokes local deities",
+      "tagh": "स्थानीय देवताओं का आह्वान करने वाला अनुष्ठानिक गायन",
+      "ex": "Pritam Bhartwan",
+      "exh": "प्रीतम भरतवाण",
+      "fact": "Jagar is ritual singing of Uttarakhand, with the hurka and dhol, sung to awaken local gods and spirits.",
+      "facth": "जागर उत्तराखंड का अनुष्ठानिक गायन है जो हुड़का और ढोल के साथ स्थानीय देवताओं को जगाने के लिए होता है।"
+    },
+    {
+      "n": "Pandavani",
+      "h": "पंडवानी",
+      "s": "Chhattisgarh",
+      "st": "Bhilai and Durg, Chhattisgarh",
+      "sh": "भिलाई और दुर्ग, छत्तीसगढ़",
+      "c": "folk",
+      "rg": "C",
+      "d": 1,
+      "lat": 21.19,
+      "lng": 81.35,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Sung narration of the Mahabharata",
+      "fth": "महाभारत की गायन-कथा",
+      "tag": "Sung narration of the Mahabharata",
+      "tagh": "महाभारत की गायन-कथा",
+      "ex": "Teejan Bai, Jhaduram Dewangan",
+      "exh": "तीजन बाई, झाड़ूराम देवांगन",
+      "fact": "Pandavani is the Chhattisgarhi ballad of the Pandavas, narrated with a tambura; Teejan Bai is its most famous performer.",
+      "facth": "पंडवानी पांडवों की छत्तीसगढ़ी गाथा है जो तंबूरे के साथ कही जाती है; तीजन बाई इसकी सबसे प्रसिद्ध कलाकार हैं।"
+    },
+    {
+      "n": "Odissi music",
+      "h": "ओडिसी संगीत",
+      "s": "Odisha",
+      "st": "Puri, Odisha",
+      "sh": "पुरी, ओडिशा",
+      "c": "semi",
+      "rg": "E",
+      "d": 3,
+      "lat": 19.85,
+      "lng": 85.75,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Classical music of Odisha",
+      "fth": "ओडिशा का शास्त्रीय संगीत",
+      "tag": "Classical music of Odisha",
+      "tagh": "ओडिशा का शास्त्रीय संगीत",
+      "ex": "Jayadeva's Gita Govinda",
+      "exh": "जयदेव का गीत गोविंद",
+      "fact": "Odissi music, the music of the Odissi dance, has its roots in Jayadeva's 12th-century Gita Govinda sung at the Jagannath temple.",
+      "facth": "ओडिसी संगीत ओडिसी नृत्य का संगीत है, जिसकी जड़ें जगन्नाथ मंदिर में गाए जाने वाले जयदेव के 12वीं सदी के गीत गोविंद में हैं।"
+    },
+    {
+      "n": "Borgeet",
+      "h": "बरगीत",
+      "s": "Assam",
+      "st": "Assam (the sattras)",
+      "sh": "असम (सत्र)",
+      "c": "semi",
+      "rg": "NE",
+      "d": 2,
+      "lat": 26.4,
+      "lng": 92.68,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Devotional songs of the Vaishnava sattras",
+      "fth": "वैष्णव सत्रों के भक्ति गीत",
+      "tag": "Devotional songs of the Vaishnava sattras",
+      "tagh": "वैष्णव सत्रों के भक्ति गीत",
+      "ex": "Srimanta Sankardev, Madhavdev",
+      "exh": "श्रीमंत शंकरदेव, माधवदेव",
+      "fact": "Borgeet are the devotional songs written by Srimanta Sankardev and Madhavdev, sung in the sattras of Assam.",
+      "facth": "बरगीत श्रीमंत शंकरदेव और माधवदेव द्वारा रचित भक्ति गीत हैं जो असम के सत्रों में गाए जाते हैं।"
+    },
+    {
+      "n": "Manipuri Sankirtana",
+      "h": "मणिपुरी संकीर्तन",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "folk",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.8,
+      "lng": 93.94,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Ritual singing, drumming and dancing",
+      "fth": "अनुष्ठानिक गायन, ढोलवादन और नृत्य",
+      "tag": "Ritual singing, drumming and dancing",
+      "tagh": "अनुष्ठानिक गायन, ढोलवादन और नृत्य",
+      "ex": "Pung (drum) and kartal",
+      "exh": "पुंग (ढोल) और करताल",
+      "fact": "Manipuri Sankirtana, the ritual singing, drumming and dancing of the Vaishnavas of Manipur, was listed by UNESCO in 2013.",
+      "facth": "मणिपुर के वैष्णवों का अनुष्ठानिक गायन, ढोलवादन और नृत्य, मणिपुरी संकीर्तन, 2013 में यूनेस्को सूची में शामिल हुआ।"
+    },
+    {
+      "n": "Mando",
+      "h": "मांडो",
+      "s": "Goa",
+      "st": "Goa",
+      "sh": "गोवा",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 15.3,
+      "lng": 74.05,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Konkani love song with Western touches",
+      "fth": "पश्चिमी प्रभाव वाला कोंकणी प्रेम गीत",
+      "tag": "Konkani love song with Western touches",
+      "tagh": "पश्चिमी प्रभाव वाला कोंकणी प्रेम गीत",
+      "ex": "Goan Catholic tradition",
+      "exh": "गोवा की कैथोलिक परंपरा",
+      "fact": "Mando is the slow Konkani love song of Goa, blending Indian and Western music, sung at weddings and festivals.",
+      "facth": "मांडो गोवा का धीमा कोंकणी प्रेम गीत है, जिसमें भारतीय और पश्चिमी संगीत का मेल है।"
+    },
+    {
+      "n": "Haridasa tradition",
+      "h": "हरिदास परंपरा",
+      "s": "Karnataka",
+      "st": "Hampi, Karnataka",
+      "sh": "हम्पी, कर्नाटक",
+      "c": "carnatic",
+      "rg": "S",
+      "d": 2,
+      "lat": 15.33,
+      "lng": 76.46,
+      "kd": "Carnatic tradition",
+      "kdh": "कर्नाटक संगीत परंपरा",
+      "ft": "Kannada devotional songs that shaped Carnatic teaching",
+      "fth": "कर्नाटक संगीत की शिक्षा को आकार देने वाले कन्नड़ भक्ति गीत",
+      "tag": "Kannada devotional songs that shaped Carnatic teaching",
+      "tagh": "कर्नाटक संगीत की शिक्षा को आकार देने वाले कन्नड़ भक्ति गीत",
+      "ex": "Purandara Dasa, Kanaka Dasa",
+      "exh": "पुरंदर दास, कनक दास",
+      "fact": "Purandara Dasa of the Haridasa movement framed the basic lessons of Carnatic music and is called its \"Pitamaha\" (grandfather).",
+      "facth": "हरिदास आंदोलन के पुरंदर दास ने कर्नाटक संगीत के प्रारंभिक पाठ बनाए; उन्हें इसका \"पितामह\" कहा जाता है।"
+    },
+    {
+      "n": "Annamacharya",
+      "h": "अन्नमाचार्य",
+      "s": "Andhra Pradesh",
+      "st": "Tirupati, Andhra Pradesh",
+      "sh": "तिरुपति, आंध्र प्रदेश",
+      "c": "carnatic",
+      "rg": "S",
+      "d": 2,
+      "lat": 13.63,
+      "lng": 79.42,
+      "kd": "Carnatic tradition",
+      "kdh": "कर्नाटक संगीत परंपरा",
+      "ft": "Telugu devotional songs (sankirtanas)",
+      "fth": "तेलुगु भक्ति गीत (संकीर्तन)",
+      "tag": "Telugu devotional songs (sankirtanas)",
+      "tagh": "तेलुगु भक्ति गीत (संकीर्तन)",
+      "ex": "Songs to Lord Venkateswara",
+      "exh": "भगवान वेंकटेश्वर के गीत",
+      "fact": "Annamacharya (15th century) composed thousands of Telugu songs to Lord Venkateswara of Tirupati and is the earliest known Telugu composer.",
+      "facth": "अन्नमाचार्य (15वीं सदी) ने तिरुपति के भगवान वेंकटेश्वर पर हज़ारों तेलुगु गीत रचे; वे सबसे पुराने ज्ञात तेलुगु रचनाकार हैं।"
+    },
+    {
+      "n": "Burrakatha",
+      "h": "बुर्रकथा",
+      "s": "Andhra Pradesh",
+      "st": "Andhra Pradesh",
+      "sh": "आंध्र प्रदेश",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 16.5,
+      "lng": 80.6,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Story-telling with song",
+      "fth": "गीतों के साथ कथा कहना",
+      "tag": "Story-telling with song",
+      "tagh": "गीतों के साथ कथा कहना",
+      "ex": "Tambura and burra (drum)",
+      "exh": "तंबूरा और बुर्रा (ढोल)",
+      "fact": "Burrakatha is a Telugu story-telling form in which a narrator with a tambura sings a story with two companions on drums.",
+      "facth": "बुर्रकथा तेलुगु कथा-शैली है जिसमें तंबूरा लिए कथावाचक दो ढोल बजाने वाले साथियों के साथ कथा गाता है।"
+    },
+    {
+      "n": "Swathi Thirunal",
+      "h": "स्वाति तिरुनाल",
+      "s": "Kerala",
+      "st": "Thiruvananthapuram, Kerala",
+      "sh": "तिरुवनंतपुरम, केरल",
+      "c": "carnatic",
+      "rg": "S",
+      "d": 2,
+      "lat": 8.52,
+      "lng": 76.95,
+      "kd": "Carnatic tradition",
+      "kdh": "कर्नाटक संगीत परंपरा",
+      "ft": "Composer-king of Travancore",
+      "fth": "त्रावणकोर के रचनाकार राजा",
+      "tag": "Composer-king of Travancore",
+      "tagh": "त्रावणकोर के रचनाकार राजा",
+      "ex": "Swathi Sangeethotsavam",
+      "exh": "स्वाति संगीतोत्सवम",
+      "fact": "Swathi Thirunal, the 19th-century Maharaja of Travancore, composed in both Carnatic and Hindustani styles in several languages.",
+      "facth": "19वीं सदी के त्रावणकोर महाराजा स्वाति तिरुनाल ने कर्नाटक और हिंदुस्तानी दोनों शैलियों में कई भाषाओं में रचनाएँ कीं।"
+    },
+    {
+      "n": "Sopana Sangeetham",
+      "h": "सोपान संगीतम",
+      "s": "Kerala",
+      "st": "Temples of Kerala",
+      "sh": "केरल के मंदिर",
+      "c": "semi",
+      "rg": "S",
+      "d": 3,
+      "lat": 10.59,
+      "lng": 76.04,
+      "kd": "Semi-classical form",
+      "kdh": "उपशास्त्रीय शैली",
+      "ft": "Temple music sung at the sanctum steps",
+      "fth": "गर्भगृह की सीढ़ियों पर गाया जाने वाला मंदिर संगीत",
+      "tag": "Temple music sung at the sanctum steps",
+      "tagh": "गर्भगृह की सीढ़ियों पर गाया जाने वाला मंदिर संगीत",
+      "ex": "Edakka drum; Jayadeva's Ashtapadi",
+      "exh": "इडक्का ढोल; जयदेव की अष्टपदी",
+      "fact": "Sopana Sangeetham is Kerala temple music sung on the steps (sopanam) to the sanctum, to the edakka drum.",
+      "facth": "सोपान संगीतम केरल का मंदिर संगीत है जो गर्भगृह की सीढ़ियों (सोपानम) पर इडक्का ढोल के साथ गाया जाता है।"
+    },
+    {
+      "n": "Mappila Pattu",
+      "h": "मप्पिला पाट्टु",
+      "s": "Kerala",
+      "st": "Malabar, Kerala",
+      "sh": "मालाबार, केरल",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.05,
+      "lng": 76.07,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Songs of the Mappila Muslims",
+      "fth": "मप्पिला मुसलमानों के गीत",
+      "tag": "Songs of the Mappila Muslims",
+      "tagh": "मप्पिला मुसलमानों के गीत",
+      "ex": "Moyinkutty Vaidyar",
+      "exh": "मोयिनकुट्टी वैद्यर",
+      "fact": "Mappila Pattu are the songs of the Mappila Muslims of Malabar, in Malayalam mixed with Arabic; Moyinkutty Vaidyar is their great poet.",
+      "facth": "मप्पिला पाट्टु मालाबार के मप्पिला मुसलमानों के अरबी मिश्रित मलयालम गीत हैं; मोयिनकुट्टी वैद्यर इसके महान कवि हैं।"
+    },
+    {
+      "n": "Villu Paatu",
+      "h": "विल्लु पाट्टु",
+      "s": "Tamil Nadu",
+      "st": "Southern Tamil Nadu",
+      "sh": "दक्षिणी तमिलनाडु",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 8.4,
+      "lng": 77.6,
+      "kd": "Folk music",
+      "kdh": "लोक संगीत",
+      "ft": "Bow song: story-telling with a musical bow",
+      "fth": "धनुष गीत: वाद्य धनुष के साथ कथा",
+      "tag": "Bow song: story-telling with a musical bow",
+      "tagh": "धनुष गीत: वाद्य धनुष के साथ कथा",
+      "ex": "A large bow strung with bells",
+      "exh": "घंटियों से बंधा बड़ा धनुष",
+      "fact": "Villu Paatu, the bow song, is a Tamil story-telling form in which the lead singer strikes a large bow strung with bells.",
+      "facth": "विल्लु पाट्टु (धनुष गीत) तमिल कथा-शैली है जिसमें मुख्य गायक घंटियों वाले बड़े धनुष को बजाता है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "families",
+      "icon": "🎻",
+      "t": [
+        "Four families of instruments (Natya Shastra)",
+        "वाद्यों के चार वर्ग (नाट्यशास्त्र)"
+      ],
+      "cols": [
+        [
+          "Family",
+          "वर्ग"
+        ],
+        [
+          "Examples",
+          "उदाहरण"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Tata vadya – string",
+            "तत वाद्य – तार"
+          ],
+          [
+            "Sitar, veena, sarod, santoor, sarangi, violin",
+            "सितार, वीणा, सरोद, संतूर, सारंगी, वायलिन"
+          ]
+        ],
+        [
+          [
+            "Sushira vadya – wind",
+            "सुषिर वाद्य – फूँक"
+          ],
+          [
+            "Bansuri (flute), shehnai, nadaswaram",
+            "बाँसुरी, शहनाई, नादस्वरम"
+          ]
+        ],
+        [
+          [
+            "Avanaddha vadya – skin-covered drums",
+            "अवनद्ध वाद्य – चमड़े से मढ़े"
+          ],
+          [
+            "Tabla, mridangam, pakhawaj, dhol, edakka",
+            "तबला, मृदंगम, पखावज, ढोल, इडक्का"
+          ]
+        ],
+        [
+          [
+            "Ghana vadya – solid",
+            "घन वाद्य – ठोस"
+          ],
+          [
+            "Manjira (cymbals), ghatam, jaltarang, kartal",
+            "मंजीरा, घटम, जलतरंग, करताल"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "maestros",
+      "icon": "🎼",
+      "t": [
+        "Instruments and their maestros",
+        "वाद्य और उनके महान कलाकार"
+      ],
+      "cols": [
+        [
+          "Instrument",
+          "वाद्य"
+        ],
+        [
+          "Maestros",
+          "कलाकार"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Sitar",
+            "सितार"
+          ],
+          [
+            "Ravi Shankar, Vilayat Khan, Nikhil Banerjee, Anoushka Shankar",
+            "रवि शंकर, विलायत ख़ान, निखिल बनर्जी, अनुष्का शंकर"
+          ]
+        ],
+        [
+          [
+            "Sarod",
+            "सरोद"
+          ],
+          [
+            "Ali Akbar Khan, Amjad Ali Khan",
+            "अली अकबर ख़ान, अमजद अली ख़ान"
+          ]
+        ],
+        [
+          [
+            "Shehnai",
+            "शहनाई"
+          ],
+          [
+            "Bismillah Khan",
+            "बिस्मिल्लाह ख़ान"
+          ]
+        ],
+        [
+          [
+            "Santoor",
+            "संतूर"
+          ],
+          [
+            "Shivkumar Sharma, Bhajan Sopori",
+            "शिवकुमार शर्मा, भजन सोपोरी"
+          ]
+        ],
+        [
+          [
+            "Bansuri (flute)",
+            "बाँसुरी"
+          ],
+          [
+            "Hariprasad Chaurasia, Pannalal Ghosh",
+            "हरिप्रसाद चौरसिया, पन्नालाल घोष"
+          ]
+        ],
+        [
+          [
+            "Tabla",
+            "तबला"
+          ],
+          [
+            "Zakir Hussain, Alla Rakha, Kishan Maharaj",
+            "ज़ाकिर हुसैन, अल्ला रक्खा, किशन महाराज"
+          ]
+        ],
+        [
+          [
+            "Sarangi",
+            "सारंगी"
+          ],
+          [
+            "Ram Narayan, Sultan Khan",
+            "राम नारायण, सुल्तान ख़ान"
+          ]
+        ],
+        [
+          [
+            "Mohan veena",
+            "मोहन वीणा"
+          ],
+          [
+            "Vishwa Mohan Bhatt",
+            "विश्व मोहन भट्ट"
+          ]
+        ],
+        [
+          [
+            "Rudra veena",
+            "रुद्र वीणा"
+          ],
+          [
+            "Asad Ali Khan",
+            "असद अली ख़ान"
+          ]
+        ],
+        [
+          [
+            "Violin",
+            "वायलिन"
+          ],
+          [
+            "L. Subramaniam, Lalgudi Jayaraman, N. Rajam (Hindustani)",
+            "एल. सुब्रमण्यम, लालगुडी जयरामन, एन. राजम (हिंदुस्तानी)"
+          ]
+        ],
+        [
+          [
+            "Mridangam",
+            "मृदंगम"
+          ],
+          [
+            "Palghat Mani Iyer, Umayalpuram Sivaraman",
+            "पालघाट मणि अय्यर, उमयालपुरम शिवरामन"
+          ]
+        ],
+        [
+          [
+            "Ghatam",
+            "घटम"
+          ],
+          [
+            "Vikku Vinayakram",
+            "विक्कु विनायकराम"
+          ]
+        ],
+        [
+          [
+            "Mandolin / saxophone (Carnatic)",
+            "मैंडोलिन / सैक्सोफ़ोन (कर्नाटक)"
+          ],
+          [
+            "U. Srinivas / Kadri Gopalnath",
+            "यू. श्रीनिवास / कादरी गोपालनाथ"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "basics",
+      "icon": "📖",
+      "t": [
+        "Basics asked in exams",
+        "परीक्षा में पूछी जाने वाली मूल बातें"
+      ],
+      "cols": [
+        [
+          "Topic",
+          "विषय"
+        ],
+        [
+          "Fact",
+          "तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Swaras",
+            "स्वर"
+          ],
+          [
+            "Seven: Sa, Re, Ga, Ma, Pa, Dha, Ni",
+            "सात: सा, रे, ग, म, प, ध, नि"
+          ]
+        ],
+        [
+          [
+            "Roots",
+            "मूल"
+          ],
+          [
+            "Indian music is traced to the Samaveda",
+            "भारतीय संगीत की जड़ें सामवेद में मानी जाती हैं"
+          ]
+        ],
+        [
+          [
+            "Thaats",
+            "थाट"
+          ],
+          [
+            "Hindustani ragas grouped into 10 thaats by V. N. Bhatkhande",
+            "वि. ना. भातखंडे ने हिंदुस्तानी रागों को 10 थाटों में बाँटा"
+          ]
+        ],
+        [
+          [
+            "Melakartas",
+            "मेलकर्ता"
+          ],
+          [
+            "Carnatic system of 72 parent ragas (Venkatamakhin)",
+            "72 जनक रागों की कर्नाटक पद्धति (वेंकटमखी)"
+          ]
+        ],
+        [
+          [
+            "Carnatic Trinity",
+            "कर्नाटक त्रिमूर्ति"
+          ],
+          [
+            "Tyagaraja, Muthuswami Dikshitar, Syama Sastri",
+            "त्यागराज, मुत्तुस्वामी दीक्षितर, श्यामा शास्त्री"
+          ]
+        ],
+        [
+          [
+            "Tansen",
+            "तानसेन"
+          ],
+          [
+            "Singer in Akbar's court; pupil of Swami Haridas; tomb at Gwalior",
+            "अकबर के दरबार के गायक; स्वामी हरिदास के शिष्य; समाधि ग्वालियर में"
+          ]
+        ],
+        [
+          [
+            "Amir Khusrau",
+            "अमीर ख़ुसरो"
+          ],
+          [
+            "Credited with Qawwali; called Tuti-e-Hind (parrot of India)",
+            "क़व्वाली का श्रेय; तूती-ए-हिंद कहलाए"
+          ]
+        ],
+        [
+          [
+            "Dhrupad and khayal",
+            "ध्रुपद और ख्याल"
+          ],
+          [
+            "Dhrupad is the older, austere form (patron Raja Man Singh Tomar of Gwalior); khayal is freer and more ornate",
+            "ध्रुपद पुरानी, गंभीर शैली (संरक्षक ग्वालियर के राजा मानसिंह तोमर); ख्याल अधिक स्वतंत्र और अलंकृत"
+          ]
+        ],
+        [
+          [
+            "Texts",
+            "ग्रंथ"
+          ],
+          [
+            "Natya Shastra (Bharata), Sangita Ratnakara (Sarangadeva), Gita Govinda (Jayadeva)",
+            "नाट्यशास्त्र (भरत), संगीत रत्नाकर (शार्ङ्गदेव), गीत गोविंद (जयदेव)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "honours",
+      "icon": "🏅",
+      "t": [
+        "Honours and festivals",
+        "सम्मान और महोत्सव"
+      ],
+      "cols": [
+        [
+          "Item",
+          "विषय"
+        ],
+        [
+          "Fact",
+          "तथ्य"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Bharat Ratna musicians",
+            "भारत रत्न संगीतकार"
+          ],
+          [
+            "M. S. Subbulakshmi (1998, first musician), Ravi Shankar (1999), Lata Mangeshkar and Bismillah Khan (2001), Bhimsen Joshi (2009), Bhupen Hazarika (2019)",
+            "एम. एस. सुब्बुलक्ष्मी (1998, पहली संगीतकार), रवि शंकर (1999), लता मंगेशकर और बिस्मिल्लाह ख़ान (2001), भीमसेन जोशी (2009), भूपेन हज़ारिका (2019)"
+          ]
+        ],
+        [
+          [
+            "Grammy winners",
+            "ग्रैमी विजेता"
+          ],
+          [
+            "Ravi Shankar (first Indian, 1968), Zakir Hussain, Vishwa Mohan Bhatt (1994), A. R. Rahman (two in 2010), Ricky Kej (three)",
+            "रवि शंकर (पहले भारतीय, 1968), ज़ाकिर हुसैन, विश्व मोहन भट्ट (1994), ए. आर. रहमान (2010 में दो), रिकी केज (तीन)"
+          ]
+        ],
+        [
+          [
+            "Tansen Samaroh",
+            "तानसेन समारोह"
+          ],
+          [
+            "Gwalior, Madhya Pradesh",
+            "ग्वालियर, मध्य प्रदेश"
+          ]
+        ],
+        [
+          [
+            "Sawai Gandharva Bhimsen Mahotsav",
+            "सवाई गंधर्व भीमसेन महोत्सव"
+          ],
+          [
+            "Pune, Maharashtra",
+            "पुणे, महाराष्ट्र"
+          ]
+        ],
+        [
+          [
+            "Tyagaraja Aradhana",
+            "त्यागराज आराधना"
+          ],
+          [
+            "Thiruvaiyaru, Tamil Nadu",
+            "तिरुवैयारु, तमिलनाडु"
+          ]
+        ],
+        [
+          [
+            "Harivallabh Sangeet Sammelan",
+            "हरिवल्लभ संगीत सम्मेलन"
+          ],
+          [
+            "Jalandhar, Punjab (held since 1875)",
+            "जालंधर, पंजाब (1875 से)"
+          ]
+        ],
+        [
+          [
+            "Dover Lane Music Conference",
+            "डोवर लेन संगीत सम्मेलन"
+          ],
+          [
+            "Kolkata, West Bengal",
+            "कोलकाता, पश्चिम बंगाल"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "confuse",
+      "icon": "⚖️",
+      "t": [
+        "Easily confused",
+        "आसानी से भ्रमित"
+      ],
+      "cols": [
+        [
+          "Pair",
+          "जोड़ी"
+        ],
+        [
+          "Tell them apart",
+          "अंतर"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Sitar and sarod",
+            "सितार और सरोद"
+          ],
+          [
+            "Sitar has frets and a gourd; sarod is fretless with a metal fingerboard and a skin belly",
+            "सितार में पर्दे और तुंबा; सरोद बिना पर्दे का, धातु की पट्टी और चमड़े के पेट वाला"
+          ]
+        ],
+        [
+          [
+            "Shehnai and nadaswaram",
+            "शहनाई और नादस्वरम"
+          ],
+          [
+            "Both double-reed wind: shehnai is North Indian (Bismillah Khan); nadaswaram is the larger South Indian temple instrument",
+            "दोनों दोहरी रीड वाले: शहनाई उत्तर भारतीय (बिस्मिल्लाह ख़ान); नादस्वरम बड़ा दक्षिण भारतीय मंदिर वाद्य"
+          ]
+        ],
+        [
+          [
+            "Pakhawaj and mridangam",
+            "पखावज और मृदंगम"
+          ],
+          [
+            "Both barrel drums: pakhawaj accompanies dhrupad; mridangam is the main Carnatic drum",
+            "दोनों ढोलक जैसे: पखावज ध्रुपद के साथ; मृदंगम कर्नाटक संगीत का मुख्य ढोल"
+          ]
+        ],
+        [
+          [
+            "Thumri and tappa",
+            "ठुमरी और टप्पा"
+          ],
+          [
+            "Thumri is slow and romantic (Lucknow); tappa is quick and ornate (Punjab, Shori Mian)",
+            "ठुमरी धीमी और शृंगारिक (लखनऊ); टप्पा तेज़ और अलंकृत (पंजाब, शोरी मियाँ)"
+          ]
+        ],
+        [
+          [
+            "Kajari and Chaiti",
+            "कजरी और चैती"
+          ],
+          [
+            "Kajari is sung in Sawan (monsoon); Chaiti in Chaitra (spring)",
+            "कजरी सावन (वर्षा) में; चैती चैत्र (वसंत) में"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "instr",
+      "q": [
+        "Bismillah Khan is associated with which instrument?",
+        "बिस्मिल्लाह ख़ान किस वाद्य से जुड़े हैं?"
+      ],
+      "o": [
+        [
+          "Shehnai",
+          "शहनाई"
+        ],
+        [
+          "Sarod",
+          "सरोद"
+        ],
+        [
+          "Sitar",
+          "सितार"
+        ],
+        [
+          "Santoor",
+          "संतूर"
+        ]
+      ],
+      "e": [
+        "Ustad Bismillah Khan of Varanasi made the shehnai a concert instrument; he received the Bharat Ratna in 2001.",
+        "वाराणसी के उस्ताद बिस्मिल्लाह ख़ान ने शहनाई को मंच का वाद्य बनाया; उन्हें 2001 में भारत रत्न मिला।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Shivkumar Sharma is famous for playing the",
+        "शिवकुमार शर्मा किस वाद्य के लिए प्रसिद्ध हैं?"
+      ],
+      "o": [
+        [
+          "Santoor",
+          "संतूर"
+        ],
+        [
+          "Sarangi",
+          "सारंगी"
+        ],
+        [
+          "Flute",
+          "बाँसुरी"
+        ],
+        [
+          "Veena",
+          "वीणा"
+        ]
+      ],
+      "e": [
+        "Shivkumar Sharma brought the Kashmiri santoor into Hindustani classical music.",
+        "शिवकुमार शर्मा कश्मीरी संतूर को हिंदुस्तानी शास्त्रीय संगीत में लाए।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Hariprasad Chaurasia plays the",
+        "हरिप्रसाद चौरसिया कौन-सा वाद्य बजाते हैं?"
+      ],
+      "o": [
+        [
+          "Bansuri (flute)",
+          "बाँसुरी"
+        ],
+        [
+          "Shehnai",
+          "शहनाई"
+        ],
+        [
+          "Sarod",
+          "सरोद"
+        ],
+        [
+          "Tabla",
+          "तबला"
+        ]
+      ],
+      "e": [
+        "Hariprasad Chaurasia is the best-known bansuri player.",
+        "हरिप्रसाद चौरसिया सबसे प्रसिद्ध बाँसुरी वादक हैं।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Amjad Ali Khan is a maestro of the",
+        "अमजद अली ख़ान किस वाद्य के उस्ताद हैं?"
+      ],
+      "o": [
+        [
+          "Sarod",
+          "सरोद"
+        ],
+        [
+          "Sitar",
+          "सितार"
+        ],
+        [
+          "Sarangi",
+          "सारंगी"
+        ],
+        [
+          "Rudra veena",
+          "रुद्र वीणा"
+        ]
+      ],
+      "e": [
+        "Amjad Ali Khan is a sarod player of the Senia Bangash gharana.",
+        "अमजद अली ख़ान सेनिया बंगश घराने के सरोद वादक हैं।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Ram Narayan is associated with the",
+        "राम नारायण किस वाद्य से जुड़े हैं?"
+      ],
+      "o": [
+        [
+          "Sarangi",
+          "सारंगी"
+        ],
+        [
+          "Sitar",
+          "सितार"
+        ],
+        [
+          "Santoor",
+          "संतूर"
+        ],
+        [
+          "Shehnai",
+          "शहनाई"
+        ]
+      ],
+      "e": [
+        "Pandit Ram Narayan made the sarangi a solo concert instrument.",
+        "पंडित राम नारायण ने सारंगी को एकल मंच वाद्य बनाया।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Vishwa Mohan Bhatt plays the",
+        "विश्व मोहन भट्ट कौन-सा वाद्य बजाते हैं?"
+      ],
+      "o": [
+        [
+          "Mohan veena",
+          "मोहन वीणा"
+        ],
+        [
+          "Rudra veena",
+          "रुद्र वीणा"
+        ],
+        [
+          "Saraswati veena",
+          "सरस्वती वीणा"
+        ],
+        [
+          "Sarod",
+          "सरोद"
+        ]
+      ],
+      "e": [
+        "He created the mohan veena, a modified slide guitar, and won a Grammy in 1994.",
+        "उन्होंने मोहन वीणा (संशोधित स्लाइड गिटार) बनाई और 1994 में ग्रैमी जीता।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "Vikku Vinayakram is famous for the",
+        "विक्कु विनायकराम किस वाद्य के लिए प्रसिद्ध हैं?"
+      ],
+      "o": [
+        [
+          "Ghatam",
+          "घटम"
+        ],
+        [
+          "Mridangam",
+          "मृदंगम"
+        ],
+        [
+          "Tabla",
+          "तबला"
+        ],
+        [
+          "Kanjira",
+          "कंजीरा"
+        ]
+      ],
+      "e": [
+        "The ghatam is a clay pot played as a percussion instrument in Carnatic music.",
+        "घटम मिट्टी का घड़ा है जिसे कर्नाटक संगीत में ताल वाद्य के रूप में बजाया जाता है।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "The tabla belongs to which family of instruments?",
+        "तबला किस वाद्य वर्ग में आता है?"
+      ],
+      "o": [
+        [
+          "Avanaddha (skin-covered)",
+          "अवनद्ध (चमड़े से मढ़े)"
+        ],
+        [
+          "Tata (string)",
+          "तत (तार)"
+        ],
+        [
+          "Sushira (wind)",
+          "सुषिर (फूँक)"
+        ],
+        [
+          "Ghana (solid)",
+          "घन (ठोस)"
+        ]
+      ],
+      "e": [
+        "Drums covered with skin are avanaddha vadya.",
+        "चमड़े से मढ़े ढोल अवनद्ध वाद्य हैं।"
+      ]
+    },
+    {
+      "t": "instr",
+      "q": [
+        "The jaltarang belongs to which family?",
+        "जलतरंग किस वर्ग का वाद्य है?"
+      ],
+      "o": [
+        [
+          "Ghana (solid)",
+          "घन (ठोस)"
+        ],
+        [
+          "Tata (string)",
+          "तत (तार)"
+        ],
+        [
+          "Sushira (wind)",
+          "सुषिर (फूँक)"
+        ],
+        [
+          "Avanaddha (skin-covered)",
+          "अवनद्ध (चमड़े से मढ़े)"
+        ]
+      ],
+      "e": [
+        "Jaltarang is a set of bowls of water struck with sticks, a ghana (solid) instrument.",
+        "जलतरंग पानी भरे कटोरों का समूह है जिन्हें डंडियों से बजाया जाता है; यह घन वाद्य है।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "How many thaats did V. N. Bhatkhande use to classify Hindustani ragas?",
+        "वि. ना. भातखंडे ने हिंदुस्तानी रागों को कितने थाटों में बाँटा?"
+      ],
+      "o": [
+        [
+          "10",
+          "10"
+        ],
+        [
+          "7",
+          "7"
+        ],
+        [
+          "12",
+          "12"
+        ],
+        [
+          "72",
+          "72"
+        ]
+      ],
+      "e": [
+        "Bhatkhande grouped Hindustani ragas into ten thaats; Carnatic music uses 72 melakartas.",
+        "भातखंडे ने हिंदुस्तानी रागों को दस थाटों में बाँटा; कर्नाटक संगीत में 72 मेलकर्ता हैं।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "How many melakarta (parent) ragas are there in Carnatic music?",
+        "कर्नाटक संगीत में कितने मेलकर्ता (जनक) राग हैं?"
+      ],
+      "o": [
+        [
+          "72",
+          "72"
+        ],
+        [
+          "10",
+          "10"
+        ],
+        [
+          "32",
+          "32"
+        ],
+        [
+          "108",
+          "108"
+        ]
+      ],
+      "e": [
+        "The Carnatic melakarta system has 72 parent ragas.",
+        "कर्नाटक की मेलकर्ता पद्धति में 72 जनक राग हैं।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "Which of these is NOT part of the Carnatic Trinity?",
+        "इनमें से कौन कर्नाटक त्रिमूर्ति में नहीं है?"
+      ],
+      "o": [
+        [
+          "Purandara Dasa",
+          "पुरंदर दास"
+        ],
+        [
+          "Tyagaraja",
+          "त्यागराज"
+        ],
+        [
+          "Muthuswami Dikshitar",
+          "मुत्तुस्वामी दीक्षितर"
+        ],
+        [
+          "Syama Sastri",
+          "श्यामा शास्त्री"
+        ]
+      ],
+      "e": [
+        "The Trinity is Tyagaraja, Dikshitar and Syama Sastri; Purandara Dasa is the \"Pitamaha\" of Carnatic music.",
+        "त्रिमूर्ति में त्यागराज, दीक्षितर और श्यामा शास्त्री हैं; पुरंदर दास कर्नाटक संगीत के \"पितामह\" हैं।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "Who is called the \"Pitamaha\" of Carnatic music?",
+        "कर्नाटक संगीत के \"पितामह\" किसे कहा जाता है?"
+      ],
+      "o": [
+        [
+          "Purandara Dasa",
+          "पुरंदर दास"
+        ],
+        [
+          "Tyagaraja",
+          "त्यागराज"
+        ],
+        [
+          "Swathi Thirunal",
+          "स्वाति तिरुनाल"
+        ],
+        [
+          "Annamacharya",
+          "अन्नमाचार्य"
+        ]
+      ],
+      "e": [
+        "Purandara Dasa framed the graded lessons still used to teach Carnatic music.",
+        "पुरंदर दास ने वे क्रमिक पाठ बनाए जिनसे आज भी कर्नाटक संगीत सिखाया जाता है।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "Tansen was a court musician of",
+        "तानसेन किसके दरबारी संगीतकार थे?"
+      ],
+      "o": [
+        [
+          "Akbar",
+          "अकबर"
+        ],
+        [
+          "Jahangir",
+          "जहाँगीर"
+        ],
+        [
+          "Shah Jahan",
+          "शाहजहाँ"
+        ],
+        [
+          "Babur",
+          "बाबर"
+        ]
+      ],
+      "e": [
+        "Tansen was one of the nine gems (navaratnas) of Akbar's court; his tomb is in Gwalior.",
+        "तानसेन अकबर के दरबार के नवरत्नों में से एक थे; उनकी समाधि ग्वालियर में है।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "Qawwali is traditionally credited to",
+        "क़व्वाली का श्रेय परंपरा से किसे दिया जाता है?"
+      ],
+      "o": [
+        [
+          "Amir Khusrau",
+          "अमीर ख़ुसरो"
+        ],
+        [
+          "Tansen",
+          "तानसेन"
+        ],
+        [
+          "Kabir",
+          "कबीर"
+        ],
+        [
+          "Baiju Bawra",
+          "बैजू बावरा"
+        ]
+      ],
+      "e": [
+        "Amir Khusrau, disciple of Nizamuddin Auliya, is credited with shaping Qawwali.",
+        "निज़ामुद्दीन औलिया के शिष्य अमीर ख़ुसरो को क़व्वाली को आकार देने का श्रेय दिया जाता है।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "Indian music is traditionally traced to which Veda?",
+        "भारतीय संगीत की जड़ें परंपरा से किस वेद में मानी जाती हैं?"
+      ],
+      "o": [
+        [
+          "Samaveda",
+          "सामवेद"
+        ],
+        [
+          "Rigveda",
+          "ऋग्वेद"
+        ],
+        [
+          "Yajurveda",
+          "यजुर्वेद"
+        ],
+        [
+          "Atharvaveda",
+          "अथर्ववेद"
+        ]
+      ],
+      "e": [
+        "The Samaveda sets the hymns of the Rigveda to melody.",
+        "सामवेद ऋग्वेद की ऋचाओं को संगीतबद्ध करता है।"
+      ]
+    },
+    {
+      "t": "basics",
+      "q": [
+        "Sangita Ratnakara was written by",
+        "संगीत रत्नाकर किसने लिखा?"
+      ],
+      "o": [
+        [
+          "Sarangadeva",
+          "शार्ङ्गदेव"
+        ],
+        [
+          "Bharata Muni",
+          "भरतमुनि"
+        ],
+        [
+          "Jayadeva",
+          "जयदेव"
+        ],
+        [
+          "Matanga",
+          "मतंग"
+        ]
+      ],
+      "e": [
+        "Sarangadeva wrote the Sangita Ratnakara in the 13th century.",
+        "शार्ङ्गदेव ने 13वीं सदी में संगीत रत्नाकर लिखा।"
+      ]
+    },
+    {
+      "t": "gharana",
+      "q": [
+        "Which gharana is known as the oldest khayal gharana?",
+        "किस घराने को सबसे पुराना ख्याल घराना माना जाता है?"
+      ],
+      "o": [
+        [
+          "Gwalior",
+          "ग्वालियर"
+        ],
+        [
+          "Kirana",
+          "किराना"
+        ],
+        [
+          "Patiala",
+          "पटियाला"
+        ],
+        [
+          "Agra",
+          "आगरा"
+        ]
+      ],
+      "e": [
+        "Gwalior is the oldest khayal gharana, from which most others branched out.",
+        "ग्वालियर सबसे पुराना ख्याल घराना है, जिससे अधिकांश घराने निकले।"
+      ]
+    },
+    {
+      "t": "gharana",
+      "q": [
+        "Bhimsen Joshi belonged to which gharana?",
+        "भीमसेन जोशी किस घराने से थे?"
+      ],
+      "o": [
+        [
+          "Kirana",
+          "किराना"
+        ],
+        [
+          "Gwalior",
+          "ग्वालियर"
+        ],
+        [
+          "Patiala",
+          "पटियाला"
+        ],
+        [
+          "Mewati",
+          "मेवाती"
+        ]
+      ],
+      "e": [
+        "Bhimsen Joshi was the most famous voice of the Kirana gharana.",
+        "भीमसेन जोशी किराना घराने की सबसे प्रसिद्ध आवाज़ थे।"
+      ]
+    },
+    {
+      "t": "gharana",
+      "q": [
+        "Pandit Jasraj belonged to which gharana?",
+        "पंडित जसराज किस घराने से थे?"
+      ],
+      "o": [
+        [
+          "Mewati",
+          "मेवाती"
+        ],
+        [
+          "Kirana",
+          "किराना"
+        ],
+        [
+          "Agra",
+          "आगरा"
+        ],
+        [
+          "Jaipur-Atrauli",
+          "जयपुर-अतरौली"
+        ]
+      ],
+      "e": [
+        "Pandit Jasraj made the Mewati gharana world-famous.",
+        "पंडित जसराज ने मेवाती घराने को विश्व प्रसिद्ध बनाया।"
+      ]
+    },
+    {
+      "t": "gharana",
+      "q": [
+        "Bade Ghulam Ali Khan is the best-known singer of the",
+        "बड़े ग़ुलाम अली ख़ान किस घराने के सबसे प्रसिद्ध गायक हैं?"
+      ],
+      "o": [
+        [
+          "Patiala gharana",
+          "पटियाला घराना"
+        ],
+        [
+          "Agra gharana",
+          "आगरा घराना"
+        ],
+        [
+          "Indore gharana",
+          "इंदौर घराना"
+        ],
+        [
+          "Rampur-Sahaswan gharana",
+          "रामपुर-सहसवान घराना"
+        ]
+      ],
+      "e": [
+        "Bade Ghulam Ali Khan of Patiala was famed for khayal and thumri.",
+        "पटियाला के बड़े ग़ुलाम अली ख़ान ख्याल और ठुमरी के लिए प्रसिद्ध थे।"
+      ]
+    },
+    {
+      "t": "gharana",
+      "q": [
+        "Ravi Shankar and Ali Akbar Khan were pupils of",
+        "रवि शंकर और अली अकबर ख़ान किसके शिष्य थे?"
+      ],
+      "o": [
+        [
+          "Baba Allauddin Khan (Maihar)",
+          "बाबा अलाउद्दीन ख़ान (मैहर)"
+        ],
+        [
+          "Vilayat Khan",
+          "विलायत ख़ान"
+        ],
+        [
+          "Alla Rakha",
+          "अल्ला रक्खा"
+        ],
+        [
+          "Amir Khan",
+          "अमीर ख़ान"
+        ]
+      ],
+      "e": [
+        "Baba Allauddin Khan founded the Maihar gharana in Madhya Pradesh.",
+        "बाबा अलाउद्दीन ख़ान ने मध्य प्रदेश में मैहर घराने की स्थापना की।"
+      ]
+    },
+    {
+      "t": "gharana",
+      "q": [
+        "The Dagar family is famous for",
+        "डागर परिवार किसके लिए प्रसिद्ध है?"
+      ],
+      "o": [
+        [
+          "Dhrupad",
+          "ध्रुपद"
+        ],
+        [
+          "Thumri",
+          "ठुमरी"
+        ],
+        [
+          "Tabla",
+          "तबला"
+        ],
+        [
+          "Kathak",
+          "कथक"
+        ]
+      ],
+      "e": [
+        "The Dagar family is the best-known dhrupad lineage.",
+        "डागर परिवार ध्रुपद की सबसे प्रसिद्ध परंपरा है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Pandavani, the sung story of the Pandavas, is from",
+        "पांडवों की गायन-कथा पंडवानी कहाँ की है?"
+      ],
+      "o": [
+        [
+          "Chhattisgarh",
+          "छत्तीसगढ़"
+        ],
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ]
+      ],
+      "e": [
+        "Pandavani is from Chhattisgarh; Teejan Bai is its best-known performer.",
+        "पंडवानी छत्तीसगढ़ की है; तीजन बाई इसकी सबसे प्रसिद्ध कलाकार हैं।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Baul songs belong to",
+        "बाउल गीत किस राज्य के हैं?"
+      ],
+      "o": [
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ],
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "Bihar",
+          "बिहार"
+        ]
+      ],
+      "e": [
+        "Baul is the music of the mystic minstrels of Bengal.",
+        "बाउल बंगाल के रहस्यवादी गायकों का संगीत है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Kajari is a song of which season?",
+        "कजरी किस ऋतु का गीत है?"
+      ],
+      "o": [
+        [
+          "Monsoon (Sawan)",
+          "वर्षा (सावन)"
+        ],
+        [
+          "Spring (Chaitra)",
+          "वसंत (चैत्र)"
+        ],
+        [
+          "Winter",
+          "शीत"
+        ],
+        [
+          "Harvest (Kartik)",
+          "फ़सल (कार्तिक)"
+        ]
+      ],
+      "e": [
+        "Kajari is sung in Sawan, the monsoon month, in eastern Uttar Pradesh.",
+        "कजरी पूर्वी उत्तर प्रदेश में सावन (वर्षा) मास में गाई जाती है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Powada, the heroic ballad, belongs to",
+        "वीर गाथा पोवाड़ा किस राज्य का है?"
+      ],
+      "o": [
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Punjab",
+          "पंजाब"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ]
+      ],
+      "e": [
+        "Powada is sung by the shahirs of Maharashtra.",
+        "पोवाड़ा महाराष्ट्र के शाहीर गाते हैं।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Mando is a folk song of",
+        "मांडो किस राज्य का लोकगीत है?"
+      ],
+      "o": [
+        [
+          "Goa",
+          "गोवा"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ]
+      ],
+      "e": [
+        "Mando is the Konkani love song of Goa.",
+        "मांडो गोवा का कोंकणी प्रेम गीत है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Villu Paatu (bow song) is a tradition of",
+        "विल्लु पाट्टु (धनुष गीत) किस राज्य की परंपरा है?"
+      ],
+      "o": [
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Andhra Pradesh",
+          "आंध्र प्रदेश"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ]
+      ],
+      "e": [
+        "Villu Paatu is a Tamil story-telling form with a musical bow.",
+        "विल्लु पाट्टु वाद्य धनुष के साथ तमिल कथा-शैली है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Borgeet were composed by",
+        "बरगीत किसने रचे?"
+      ],
+      "o": [
+        [
+          "Srimanta Sankardev and Madhavdev",
+          "श्रीमंत शंकरदेव और माधवदेव"
+        ],
+        [
+          "Jayadeva",
+          "जयदेव"
+        ],
+        [
+          "Bhupen Hazarika",
+          "भूपेन हज़ारिका"
+        ],
+        [
+          "Chaitanya Mahaprabhu",
+          "चैतन्य महाप्रभु"
+        ]
+      ],
+      "e": [
+        "Borgeet are the Vaishnava songs of Assam by Sankardev and Madhavdev.",
+        "बरगीत शंकरदेव और माधवदेव के असम के वैष्णव गीत हैं।"
+      ]
+    },
+    {
+      "t": "honours",
+      "q": [
+        "Who was the first musician to receive the Bharat Ratna?",
+        "भारत रत्न पाने वाली पहली संगीतकार कौन थीं?"
+      ],
+      "o": [
+        [
+          "M. S. Subbulakshmi",
+          "एम. एस. सुब्बुलक्ष्मी"
+        ],
+        [
+          "Lata Mangeshkar",
+          "लता मंगेशकर"
+        ],
+        [
+          "Ravi Shankar",
+          "रवि शंकर"
+        ],
+        [
+          "Bismillah Khan",
+          "बिस्मिल्लाह ख़ान"
+        ]
+      ],
+      "e": [
+        "M. S. Subbulakshmi received the Bharat Ratna in 1998.",
+        "एम. एस. सुब्बुलक्ष्मी को 1998 में भारत रत्न मिला।"
+      ]
+    },
+    {
+      "t": "honours",
+      "q": [
+        "The Tansen Samaroh is held every year in",
+        "तानसेन समारोह हर साल कहाँ होता है?"
+      ],
+      "o": [
+        [
+          "Gwalior",
+          "ग्वालियर"
+        ],
+        [
+          "Agra",
+          "आगरा"
+        ],
+        [
+          "Pune",
+          "पुणे"
+        ],
+        [
+          "Varanasi",
+          "वाराणसी"
+        ]
+      ],
+      "e": [
+        "The Tansen Samaroh is held near Tansen's tomb in Gwalior.",
+        "तानसेन समारोह ग्वालियर में तानसेन की समाधि के पास होता है।"
+      ]
+    },
+    {
+      "t": "honours",
+      "q": [
+        "The Sawai Gandharva Bhimsen Mahotsav is held in",
+        "सवाई गंधर्व भीमसेन महोत्सव कहाँ होता है?"
+      ],
+      "o": [
+        [
+          "Pune",
+          "पुणे"
+        ],
+        [
+          "Dharwad",
+          "धारवाड़"
+        ],
+        [
+          "Mumbai",
+          "मुंबई"
+        ],
+        [
+          "Kolkata",
+          "कोलकाता"
+        ]
+      ],
+      "e": [
+        "It is held every December in Pune, Maharashtra.",
+        "यह हर दिसंबर में पुणे, महाराष्ट्र में होता है।"
+      ]
+    },
+    {
+      "t": "honours",
+      "q": [
+        "Who was the first Indian to win a Grammy?",
+        "ग्रैमी जीतने वाले पहले भारतीय कौन थे?"
+      ],
+      "o": [
+        [
+          "Ravi Shankar",
+          "रवि शंकर"
+        ],
+        [
+          "Zakir Hussain",
+          "ज़ाकिर हुसैन"
+        ],
+        [
+          "A. R. Rahman",
+          "ए. आर. रहमान"
+        ],
+        [
+          "Vishwa Mohan Bhatt",
+          "विश्व मोहन भट्ट"
+        ]
+      ],
+      "e": [
+        "Ravi Shankar won in 1968 for West Meets East with Yehudi Menuhin.",
+        "रवि शंकर ने 1968 में येहुदी मेनुहिन के साथ \"वेस्ट मीट्स ईस्ट\" के लिए जीता।"
+      ]
+    }
+  ]
+}

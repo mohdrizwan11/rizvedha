@@ -1,0 +1,3466 @@
+{
+  "format": "ssc-study-edition/1",
+  "slug": "dances",
+  "file": "dance_of_india.html",
+  "libraryCopy": "static-gk/dance-forms-classical-folk/concept/dance_of_india.html",
+  "storageKey": "ssc_dance_game_v1",
+  "icon": "💃",
+  "description": "Bilingual study app on India's classical, folk and tribal dances: map quiz, learn cards, exam notes and an MCQ drill.",
+  "checked": "2026-10",
+  "strings": {
+    "title": [
+      "Dances of India",
+      "भारत के नृत्य"
+    ],
+    "hSub": [
+      "SSC Focus · Dance map and notes",
+      "SSC फोकस · नृत्य मानचित्र व नोट्स"
+    ],
+    "qLabel": [
+      "Select the state of this dance",
+      "इस नृत्य का राज्य चुनें"
+    ],
+    "next": [
+      "Next dance",
+      "अगला नृत्य"
+    ],
+    "learnTtl": [
+      "Learn dances",
+      "नृत्य सीखें"
+    ],
+    "learnSub": [
+      "Open any dance to read its state, what marks it out and the facts asked in exams.",
+      "किसी भी नृत्य को खोलकर उसका राज्य, विशेषता और परीक्षा में पूछे जाने वाले तथ्य पढ़ें।"
+    ],
+    "atlasSub": [
+      "Every dance on the map, coloured by kind.",
+      "हर नृत्य मानचित्र पर, प्रकार के रंग में।"
+    ],
+    "lvlLabel": [
+      "Level · Dance GK rank",
+      "स्तर · नृत्य GK रैंक"
+    ],
+    "howto": [
+      "Play: a dance is shown; select its state on the map of India. A tap close to its home earns full XP.\nLearn → Dances: 86 classical, folk and tribal dances with their state, features and exam facts.\nLearn → Exam notes: the eight classical dances and their exponents, terms, dance festivals and easily confused pairs.\nLearn → MCQ drill: ten questions with explanations; wrong answers are saved under My mistakes.\nAtlas: every dance on the map, coloured by kind.\nFacts were checked in October 2026.",
+      "खेलें: नृत्य का नाम दिखेगा; भारत के मानचित्र पर उसका राज्य चुनें। उसके मूल स्थान के पास टैप करने पर पूरा XP मिलता है।\nसीखें → नृत्य: 86 शास्त्रीय, लोक और जनजातीय नृत्य – राज्य, विशेषताएँ और परीक्षा तथ्य।\nसीखें → परीक्षा नोट्स: आठ शास्त्रीय नृत्य और उनके कलाकार, शब्दावली, नृत्य महोत्सव और भ्रमित करने वाली जोड़ियाँ।\nसीखें → MCQ अभ्यास: व्याख्या सहित दस प्रश्न; गलत उत्तर ‘मेरी गलतियाँ’ में सुरक्षित होते हैं।\nएटलस: हर नृत्य मानचित्र पर, प्रकार के रंग में।\nतथ्य अक्टूबर 2026 में जाँचे गए।"
+    ],
+    "tapStateHint": [
+      "Select a marker to read a dance, or a state to list its dances.",
+      "किसी चिह्न को छूकर नृत्य पढ़ें, या राज्य को छूकर उसके नृत्य देखें।"
+    ],
+    "noPlants": [
+      "No dance from this state in the deck.",
+      "इस राज्य का कोई नृत्य सूची में नहीं है।"
+    ],
+    "plantsIn": [
+      "dances",
+      "नृत्य"
+    ],
+    "mapLabel": [
+      "Map of India. Select the state of this dance.",
+      "भारत का मानचित्र। इस नृत्य का राज्य चुनें।"
+    ],
+    "atlasMapLabel": [
+      "Map of India. Select a state to list its dances.",
+      "भारत का मानचित्र। किसी राज्य के नृत्य देखने के लिए उसे चुनें।"
+    ],
+    "atlasHelp": [
+      "Use arrow keys to move between states and Enter to list that state's dances.",
+      "तीर कुंजियों से राज्य बदलें और Enter दबाकर उस राज्य के नृत्य देखें।"
+    ],
+    "filterGroup": [
+      "Filter by kind or region",
+      "प्रकार या क्षेत्र से छाँटें"
+    ],
+    "searchLabel": [
+      "Search dances",
+      "नृत्य खोजें"
+    ],
+    "searchPh": [
+      "Dance, state or feature",
+      "नृत्य, राज्य या विशेषता"
+    ],
+    "resultsN": [
+      "dances listed",
+      "नृत्य सूची में"
+    ],
+    "noResults": [
+      "No dance matches this search or filter. Clear the search box or choose another filter.",
+      "इस खोज या फ़िल्टर से कोई नृत्य नहीं मिला। खोज हटाएँ या दूसरा फ़िल्टर चुनें।"
+    ],
+    "plantMarker": [
+      "dance",
+      "नृत्य"
+    ],
+    "atlasPickerLabel": [
+      "Browse a dance",
+      "नृत्य खोजें"
+    ],
+    "atlasPickerPlaceholder": [
+      "Select a dance",
+      "नृत्य चुनें"
+    ],
+    "ltPlants": [
+      "Dances",
+      "नृत्य"
+    ],
+    "typeGroup": [
+      "Filter by kind",
+      "प्रकार से छाँटें"
+    ],
+    "drillSub": [
+      "Ten questions on classical dances and their exponents, terms, folk and tribal dances and festivals. Each answer comes with an explanation.",
+      "शास्त्रीय नृत्य और कलाकार, शब्दावली, लोक व जनजातीय नृत्य और महोत्सवों पर दस प्रश्न। हर उत्तर के साथ व्याख्या मिलती है।"
+    ],
+    "stStudied": [
+      "Dances studied",
+      "पढ़े गए नृत्य"
+    ],
+    "atlasLegendNote": [
+      "Marker colours show the kind of dance.",
+      "चिह्नों के रंग नृत्य का प्रकार बताते हैं।"
+    ],
+    "atlasShown": [
+      "dances on the map",
+      "नृत्य मानचित्र पर"
+    ],
+    "appFoot": [
+      "SSC Focus · Study edition · facts checked to October 2026",
+      "SSC फोकस · अध्ययन संस्करण · तथ्य अक्टूबर 2026 तक जाँचे गए"
+    ],
+    "qInState": [
+      "Which of these dances is from",
+      "इनमें से कौन-सा नृत्य इस राज्य का है:"
+    ]
+  },
+  "types": [
+    {
+      "k": "classical",
+      "icon": "🪷",
+      "col": "#7B1FA2",
+      "t": [
+        "Classical",
+        "शास्त्रीय"
+      ]
+    },
+    {
+      "k": "folk",
+      "icon": "💃",
+      "col": "#C2185B",
+      "t": [
+        "Folk",
+        "लोक"
+      ]
+    },
+    {
+      "k": "tribal",
+      "icon": "🪶",
+      "col": "#2E7D32",
+      "t": [
+        "Tribal",
+        "जनजातीय"
+      ]
+    },
+    {
+      "k": "theatre",
+      "icon": "🎭",
+      "col": "#E65100",
+      "t": [
+        "Folk theatre",
+        "लोक नाट्य"
+      ]
+    }
+  ],
+  "card": [
+    {
+      "k": "st",
+      "t": [
+        "Home",
+        "मूल स्थान"
+      ]
+    },
+    {
+      "k": "kd",
+      "t": [
+        "Kind",
+        "प्रकार"
+      ]
+    },
+    {
+      "k": "ft",
+      "t": [
+        "What marks it out",
+        "पहचान"
+      ]
+    }
+  ],
+  "extras": {},
+  "feedback": [
+    "st",
+    "ft"
+  ],
+  "ranks": [
+    {
+      "min": 0,
+      "en": "First Steps",
+      "hi": "पहले कदम"
+    },
+    {
+      "min": 60,
+      "en": "Rhythm Learner",
+      "hi": "लय विद्यार्थी"
+    },
+    {
+      "min": 150,
+      "en": "Folk Explorer",
+      "hi": "लोक खोजी"
+    },
+    {
+      "min": 320,
+      "en": "Stage Performer",
+      "hi": "मंच कलाकार"
+    },
+    {
+      "min": 560,
+      "en": "Dance Scholar",
+      "hi": "नृत्य विद्वान"
+    },
+    {
+      "min": 900,
+      "en": "Guru of Dance GK",
+      "hi": "नृत्य GK गुरु"
+    },
+    {
+      "min": 1400,
+      "en": "Natya Champion",
+      "hi": "नाट्य चैंपियन"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "icon": "💃",
+      "t": [
+        "First Step",
+        "पहला कदम"
+      ],
+      "d": [
+        "1 correct",
+        "1 सही"
+      ],
+      "need": {
+        "correct": 1
+      }
+    },
+    {
+      "id": "ten",
+      "icon": "🧭",
+      "t": [
+        "In Rhythm",
+        "लय में"
+      ],
+      "d": [
+        "10 correct",
+        "10 सही"
+      ],
+      "need": {
+        "correct": 10
+      }
+    },
+    {
+      "id": "fifty",
+      "icon": "🗺️",
+      "t": [
+        "Dance Mapper",
+        "नृत्य मैपर"
+      ],
+      "d": [
+        "50 correct",
+        "50 सही"
+      ],
+      "need": {
+        "correct": 50
+      }
+    },
+    {
+      "id": "streak5",
+      "icon": "🔥",
+      "t": [
+        "Hot Streak",
+        "हॉट स्ट्रीक"
+      ],
+      "d": [
+        "5 streak",
+        "5 स्ट्रीक"
+      ],
+      "need": {
+        "streak": 5
+      }
+    },
+    {
+      "id": "classical",
+      "icon": "🪷",
+      "t": [
+        "Classical Scholar",
+        "शास्त्रीय विद्वान"
+      ],
+      "d": [
+        "Study all eight classical dances",
+        "आठों शास्त्रीय नृत्य पढ़ें"
+      ],
+      "need": {
+        "seenAll": [
+          "classical"
+        ]
+      }
+    },
+    {
+      "id": "tribal",
+      "icon": "🪶",
+      "t": [
+        "Tribal Trails",
+        "जनजातीय राहें"
+      ],
+      "d": [
+        "Study 10 tribal dances",
+        "10 जनजातीय नृत्य पढ़ें"
+      ],
+      "need": {
+        "seen": 10,
+        "types": [
+          "tribal"
+        ]
+      }
+    },
+    {
+      "id": "drill",
+      "icon": "📝",
+      "t": [
+        "Quiz Ace",
+        "क्विज़ ऐस"
+      ],
+      "d": [
+        "25 MCQs correct",
+        "25 MCQ सही"
+      ],
+      "need": {
+        "mcq": 25
+      }
+    },
+    {
+      "id": "allseen",
+      "icon": "👑",
+      "t": [
+        "Natya Champion",
+        "नाट्य चैंपियन"
+      ],
+      "d": [
+        "Study every dance",
+        "सभी नृत्य पढ़ें"
+      ],
+      "need": {
+        "studyAll": true
+      }
+    }
+  ],
+  "lookups": {},
+  "drill": {
+    "attrs": [
+      {
+        "id": "kd",
+        "field": "kd",
+        "ask": [
+          "What kind of dance is this?",
+          "यह किस प्रकार का नृत्य है?"
+        ],
+        "reverseId": "wk",
+        "reverseAsk": [
+          "Which of these is a",
+          "इनमें से कौन-सा है:"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "mixed",
+        "t": [
+          "Mixed",
+          "मिश्रित"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "classical",
+              "terms",
+              "folk",
+              "tribal",
+              "fest"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "is",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "classical",
+        "t": [
+          "Classical & terms",
+          "शास्त्रीय और शब्दावली"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "classical",
+              "terms"
+            ],
+            "n": 10
+          }
+        ]
+      },
+      {
+        "id": "folk",
+        "t": [
+          "Folk & tribal",
+          "लोक और जनजातीय"
+        ],
+        "mix": [
+          {
+            "fixed": [
+              "folk",
+              "tribal",
+              "fest"
+            ],
+            "n": 5
+          },
+          {
+            "q": "st",
+            "n": 3
+          },
+          {
+            "q": "is",
+            "n": 2
+          }
+        ]
+      },
+      {
+        "id": "states",
+        "t": [
+          "States",
+          "राज्य"
+        ],
+        "mix": [
+          {
+            "q": "st",
+            "n": 6
+          },
+          {
+            "q": "is",
+            "n": 4
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "n": "Bharatanatyam",
+      "h": "भरतनाट्यम",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "classical",
+      "rg": "S",
+      "d": 1,
+      "lat": 10.79,
+      "lng": 79.13,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Temple origin, fire element",
+      "fth": "मंदिर मूल, अग्नि तत्व",
+      "tag": "Temple origin, fire element",
+      "tagh": "मंदिर मूल, अग्नि तत्व",
+      "fact": "The oldest classical dance, born in Tamil temples (Devadasi tradition); codified from the Natya Shastra.",
+      "facth": "सबसे पुराना शास्त्रीय नृत्य, तमिल मंदिरों (देवदासी) में जन्मा; नाट्यशास्त्र पर आधारित।"
+    },
+    {
+      "n": "Kathak",
+      "h": "कथक",
+      "s": "Uttar Pradesh",
+      "st": "Uttar Pradesh",
+      "sh": "उत्तर प्रदेश",
+      "c": "classical",
+      "rg": "N",
+      "d": 1,
+      "lat": 26.85,
+      "lng": 80.95,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Spins, footwork, storytelling",
+      "fth": "चक्कर, तत्कार, कथा",
+      "tag": "Spins, footwork, storytelling",
+      "tagh": "चक्कर, तत्कार, कथा",
+      "fact": "North India's storytelling dance of the 'Kathakars'; blends Hindu & Mughal courtly styles.",
+      "facth": "उत्तर भारत का 'कथाकारों' का नृत्य; हिंदू-मुगल दरबारी शैली का मेल।"
+    },
+    {
+      "n": "Kathakali",
+      "h": "कथकली",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "classical",
+      "rg": "S",
+      "d": 1,
+      "lat": 9.59,
+      "lng": 76.52,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Elaborate makeup & masks",
+      "fth": "विस्तृत श्रृंगार व मुखौटे",
+      "tag": "Elaborate makeup & masks",
+      "tagh": "विस्तृत श्रृंगार व मुखौटे",
+      "fact": "Kerala's dance-drama of epics, famed for towering costumes and green 'chutti' makeup.",
+      "facth": "केरल का महाकाव्य नृत्य-नाटक, भव्य वेशभूषा व हरे 'चुट्टी' श्रृंगार के लिए प्रसिद्ध।"
+    },
+    {
+      "n": "Kuchipudi",
+      "h": "कुचिपुड़ी",
+      "s": "Andhra Pradesh",
+      "st": "Andhra Pradesh",
+      "sh": "आं.प्र.",
+      "c": "classical",
+      "rg": "S",
+      "d": 1,
+      "lat": 16.51,
+      "lng": 80.62,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Dance-drama; tarangam on a plate",
+      "fth": "नृत्य-नाटक; थाली पर तरंगम",
+      "tag": "Dance-drama; tarangam on a plate",
+      "tagh": "नृत्य-नाटक; थाली पर तरंगम",
+      "fact": "From Kuchipudi village; a dance-drama refined by Siddhendra Yogi, with dancing on a brass plate.",
+      "facth": "कुचिपुड़ी गाँव से; सिद्धेंद्र योगी द्वारा संवारा, पीतल थाली पर नृत्य।"
+    },
+    {
+      "n": "Odissi",
+      "h": "ओडिसी",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "classical",
+      "rg": "E",
+      "d": 1,
+      "lat": 20.3,
+      "lng": 85.82,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Tribhanga pose, temple sculpture",
+      "fth": "त्रिभंग मुद्रा, मंदिर मूर्तिकला",
+      "tag": "Tribhanga pose, temple sculpture",
+      "tagh": "त्रिभंग मुद्रा, मंदिर मूर्तिकला",
+      "fact": "Among the oldest surviving dances; its poses mirror Odisha's temple sculptures.",
+      "facth": "सबसे पुराने जीवित नृत्यों में; मुद्राएँ ओडिशा की मंदिर मूर्तियों जैसी।"
+    },
+    {
+      "n": "Manipuri",
+      "h": "मणिपुरी",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "classical",
+      "rg": "NE",
+      "d": 1,
+      "lat": 24.82,
+      "lng": 93.94,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Ras Leela; gentle, flowing",
+      "fth": "रास लीला; कोमल, प्रवाहमय",
+      "tag": "Ras Leela; gentle, flowing",
+      "tagh": "रास लीला; कोमल, प्रवाहमय",
+      "fact": "Manipur's devotional dance centred on Radha-Krishna's Ras Leela; soft and rounded.",
+      "facth": "मणिपुर का राधा-कृष्ण रास लीला केंद्रित भक्ति नृत्य; कोमल व गोलाकार।"
+    },
+    {
+      "n": "Mohiniyattam",
+      "h": "मोहिनीअट्टम",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "classical",
+      "rg": "S",
+      "d": 1,
+      "lat": 8.52,
+      "lng": 76.94,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Graceful Lasya, the enchantress",
+      "fth": "मनोहर लास्य, मोहिनी",
+      "tag": "Graceful Lasya, the enchantress",
+      "tagh": "मनोहर लास्य, मोहिनी",
+      "fact": "Kerala's solo feminine 'dance of the enchantress (Mohini)', all graceful swaying.",
+      "facth": "केरल का एकल स्त्रैण 'मोहिनी का नृत्य', कोमल लहराव से भरा।"
+    },
+    {
+      "n": "Sattriya",
+      "h": "सत्त्रीय",
+      "s": "Assam",
+      "st": "Assam",
+      "sh": "असम",
+      "c": "classical",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.95,
+      "lng": 94.17,
+      "kd": "Classical dance",
+      "kdh": "शास्त्रीय नृत्य",
+      "ft": "Vaishnav monastery dance",
+      "fth": "वैष्णव सत्र नृत्य",
+      "tag": "Vaishnav monastery dance",
+      "tagh": "वैष्णव सत्र नृत्य",
+      "fact": "Created by saint Srimanta Sankardeva in Assam's sattras; recognised as classical in 2000.",
+      "facth": "संत श्रीमंत शंकरदेव द्वारा असम के सत्रों में; 2000 में शास्त्रीय मान्यता।"
+    },
+    {
+      "n": "Bhangra",
+      "h": "भांगड़ा",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "folk",
+      "rg": "N",
+      "d": 1,
+      "lat": 31.63,
+      "lng": 74.87,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Harvest joy, dhol beats",
+      "fth": "फसल हर्ष, ढोल",
+      "tag": "Harvest joy, dhol beats",
+      "tagh": "फसल हर्ष, ढोल",
+      "fact": "Punjab's vigorous male harvest dance, performed to the dhol at Baisakhi.",
+      "facth": "पंजाब का जोशीला पुरुष फसल नृत्य, बैसाखी पर ढोल के साथ।"
+    },
+    {
+      "n": "Giddha",
+      "h": "गिद्धा",
+      "s": "Punjab",
+      "st": "Punjab",
+      "sh": "पंजाब",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 30.9,
+      "lng": 75.86,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Boliyan & clapping",
+      "fth": "बोलियाँ व ताली",
+      "tag": "Boliyan & clapping",
+      "tagh": "बोलियाँ व ताली",
+      "fact": "The women's counterpart to Bhangra, full of witty 'boliyan' couplets.",
+      "facth": "भांगड़ा का स्त्री रूप, चुटीली 'बोलियों' से भरा।"
+    },
+    {
+      "n": "Rouf",
+      "h": "रौफ़",
+      "s": "Jammu and Kashmir",
+      "st": "Jammu and Kashmir",
+      "sh": "ज&क",
+      "c": "folk",
+      "rg": "N",
+      "d": 3,
+      "lat": 34.08,
+      "lng": 74.8,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Spring & Eid dance",
+      "fth": "वसंत व ईद नृत्य",
+      "tag": "Spring & Eid dance",
+      "tagh": "वसंत व ईद नृत्य",
+      "fact": "Kashmiri women's dance performed in rows during spring and festivals like Eid.",
+      "facth": "कश्मीरी स्त्रियों का पंक्तिबद्ध नृत्य, वसंत व ईद पर।"
+    },
+    {
+      "n": "Nati",
+      "h": "नाटी",
+      "s": "Himachal Pradesh",
+      "st": "Himachal Pradesh",
+      "sh": "हिमाचल",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 31.96,
+      "lng": 77.11,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "World's largest folk dance",
+      "fth": "विश्व का सबसे बड़ा लोकनृत्य",
+      "tag": "World's largest folk dance",
+      "tagh": "विश्व का सबसे बड़ा लोकनृत्य",
+      "fact": "Kullu's folk dance; the Guinness-record holder for the largest folk dance gathering.",
+      "facth": "कुल्लू का लोकनृत्य; सबसे बड़े लोकनृत्य समूह का गिनीज रिकॉर्ड।"
+    },
+    {
+      "n": "Chholiya",
+      "h": "छोलिया",
+      "s": "Uttarakhand",
+      "st": "Uttarakhand",
+      "sh": "उत्तराखंड",
+      "c": "folk",
+      "rg": "N",
+      "d": 3,
+      "lat": 29.6,
+      "lng": 79.66,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Sword-and-shield wedding dance",
+      "fth": "तलवार-ढाल विवाह नृत्य",
+      "tag": "Sword-and-shield wedding dance",
+      "tagh": "तलवार-ढाल विवाह नृत्य",
+      "fact": "Kumaon's martial sword-and-shield dance, performed in wedding processions.",
+      "facth": "कुमाऊँ का तलवार-ढाल युद्ध नृत्य, विवाह बारात में।"
+    },
+    {
+      "n": "Ghoomar",
+      "h": "घूमर",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 1,
+      "lat": 24.58,
+      "lng": 73.68,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Twirling ghagra, Rajput women",
+      "fth": "घूमते घाघरे, राजपूत स्त्रियाँ",
+      "tag": "Twirling ghagra, Rajput women",
+      "tagh": "घूमते घाघरे, राजपूत स्त्रियाँ",
+      "fact": "Rajasthan's graceful pirouetting dance of Rajput women, of Bhil origin.",
+      "facth": "राजस्थान का राजपूत स्त्रियों का घूमता नृत्य, भील मूल का।"
+    },
+    {
+      "n": "Kalbelia",
+      "h": "कालबेलिया",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 26.92,
+      "lng": 70.92,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Sinuous snake-charmer dance",
+      "fth": "सर्पीला, सपेरा नृत्य",
+      "tag": "Sinuous snake-charmer dance",
+      "tagh": "सर्पीला, सपेरा नृत्य",
+      "fact": "Dance of the Kalbelia (snake-charmer) community; a UNESCO intangible heritage.",
+      "facth": "कालबेलिया (सपेरा) समुदाय का नृत्य; यूनेस्को अमूर्त धरोहर।"
+    },
+    {
+      "n": "Garba",
+      "h": "गरबा",
+      "s": "Gujarat",
+      "st": "Gujarat",
+      "sh": "गुजरात",
+      "c": "folk",
+      "rg": "W",
+      "d": 1,
+      "lat": 22.31,
+      "lng": 73.18,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Circular dance around the lamp",
+      "fth": "दीप के चारों ओर वृत्त नृत्य",
+      "tag": "Circular dance around the lamp",
+      "tagh": "दीप के चारों ओर वृत्त नृत्य",
+      "fact": "Gujarat's circular Navratri dance around an earthen lamp (garbo) honouring the Goddess.",
+      "facth": "गुजरात का नवरात्रि वृत्त नृत्य, मिट्टी के दीप (गरबो) के चारों ओर देवी पूजन।"
+    },
+    {
+      "n": "Tippani",
+      "h": "टिप्पणी",
+      "s": "Gujarat",
+      "st": "Gujarat",
+      "sh": "गुजरात",
+      "c": "folk",
+      "rg": "W",
+      "d": 3,
+      "lat": 21.76,
+      "lng": 72.15,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Beating ground with sticks",
+      "fth": "लकड़ियों से भूमि कूटना",
+      "tag": "Beating ground with sticks",
+      "tagh": "लकड़ियों से भूमि कूटना",
+      "fact": "Saurashtra women's dance evolved from the labour of beating floors with long 'tippani' sticks.",
+      "facth": "सौराष्ट्र की स्त्रियों का नृत्य, लंबी 'टिप्पणी' लकड़ियों से फर्श कूटने से विकसित।"
+    },
+    {
+      "n": "Lavani",
+      "h": "लावणी",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "folk",
+      "rg": "W",
+      "d": 1,
+      "lat": 18.52,
+      "lng": 73.86,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Powerful rhythm, dholki",
+      "fth": "दमदार लय, ढोलकी",
+      "tag": "Powerful rhythm, dholki",
+      "tagh": "दमदार लय, ढोलकी",
+      "fact": "Maharashtra's spirited women's dance set to the dholki, central to Tamasha theatre.",
+      "facth": "महाराष्ट्र का जोशीला स्त्री नृत्य, ढोलकी पर, तमाशा रंगमंच का केंद्र।"
+    },
+    {
+      "n": "Koli",
+      "h": "कोली",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "folk",
+      "rg": "W",
+      "d": 3,
+      "lat": 19.08,
+      "lng": 72.88,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Fisherfolk rowing movements",
+      "fth": "मछुआरों की नाव-गति",
+      "tag": "Fisherfolk rowing movements",
+      "tagh": "मछुआरों की नाव-गति",
+      "fact": "The lively dance of Maharashtra's Koli fishing community, miming rowing and waves.",
+      "facth": "महाराष्ट्र के कोली मछुआरा समुदाय का नृत्य, नाव खेना व लहरें दर्शाता।"
+    },
+    {
+      "n": "Tamasha",
+      "h": "तमाशा",
+      "s": "Maharashtra",
+      "st": "Maharashtra",
+      "sh": "महाराष्ट्र",
+      "c": "folk",
+      "rg": "W",
+      "d": 3,
+      "lat": 16.7,
+      "lng": 74.24,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Song-dance-drama",
+      "fth": "गीत-नृत्य-नाटक",
+      "tag": "Song-dance-drama",
+      "tagh": "गीत-नृत्य-नाटक",
+      "fact": "Maharashtra's traditional folk theatre combining song, dance (Lavani) and comedy.",
+      "facth": "महाराष्ट्र का पारंपरिक लोक रंगमंच, गीत, नृत्य (लावणी) व हास्य का मेल।"
+    },
+    {
+      "n": "Matki",
+      "h": "मटकी",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "folk",
+      "rg": "C",
+      "d": 3,
+      "lat": 22.72,
+      "lng": 75.86,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Balancing earthen pots",
+      "fth": "मिट्टी के घड़े संतुलन",
+      "tag": "Balancing earthen pots",
+      "tagh": "मिट्टी के घड़े संतुलन",
+      "fact": "Malwa region women's solo dance balancing one or more matkis (pots) on the head.",
+      "facth": "मालवा की स्त्रियों का एकल नृत्य, सिर पर मटकियाँ संतुलित करते हुए।"
+    },
+    {
+      "n": "Tertali",
+      "h": "तेरहताली",
+      "s": "Madhya Pradesh",
+      "st": "Madhya Pradesh",
+      "sh": "मध्य प्रदेश",
+      "c": "tribal",
+      "rg": "C",
+      "d": 3,
+      "lat": 23.18,
+      "lng": 75.78,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Manjiras tied to the body",
+      "fth": "शरीर पर बँधे मंजीरे",
+      "tag": "Manjiras tied to the body",
+      "tagh": "शरीर पर बँधे मंजीरे",
+      "fact": "Kamar tribe women dance seated, striking 13 manjiras (cymbals) tied across the body.",
+      "facth": "कमर जनजाति की स्त्रियाँ बैठकर शरीर पर बँधे 13 मंजीरे बजाती हैं।"
+    },
+    {
+      "n": "Gaur Maria",
+      "h": "गौर मारिया",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh",
+      "sh": "छत्तीसगढ़",
+      "c": "tribal",
+      "rg": "C",
+      "d": 2,
+      "lat": 19.08,
+      "lng": 82.03,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Bison-horn headgear",
+      "fth": "बाइसन-सींग शिरोवस्त्र",
+      "tag": "Bison-horn headgear",
+      "tagh": "बाइसन-सींग शिरोवस्त्र",
+      "fact": "Bastar's Maria Gond tribe dance, performers wearing bison-horn headdresses.",
+      "facth": "बस्तर की मारिया गोंड जनजाति का नृत्य, बाइसन-सींग पहनकर।"
+    },
+    {
+      "n": "Panthi",
+      "h": "पंथी",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh",
+      "sh": "छत्तीसगढ़",
+      "c": "folk",
+      "rg": "C",
+      "d": 3,
+      "lat": 21.25,
+      "lng": 81.63,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Satnami community, Guru Ghasidas",
+      "fth": "सतनामी समुदाय, गुरु घासीदास",
+      "tag": "Satnami community, Guru Ghasidas",
+      "tagh": "सतनामी समुदाय, गुरु घासीदास",
+      "fact": "Devotional dance of the Satnami community honouring Guru Ghasidas.",
+      "facth": "सतनामी समुदाय का भक्ति नृत्य, गुरु घासीदास को समर्पित।"
+    },
+    {
+      "n": "Chhau",
+      "h": "छऊ",
+      "s": "Jharkhand",
+      "st": "Jharkhand",
+      "sh": "झारखंड",
+      "c": "folk",
+      "rg": "E",
+      "d": 1,
+      "lat": 22.7,
+      "lng": 85.93,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Masked martial dance, UNESCO",
+      "fth": "मुखौटा युद्ध नृत्य, यूनेस्को",
+      "tag": "Masked martial dance, UNESCO",
+      "tagh": "मुखौटा युद्ध नृत्य, यूनेस्को",
+      "fact": "Semi-classical masked martial dance (Seraikela, Mayurbhanj, Purulia styles); a UNESCO heritage.",
+      "facth": "अर्ध-शास्त्रीय मुखौटा युद्ध नृत्य (सरायकेला, मयूरभंज, पुरुलिया शैली); यूनेस्को धरोहर।"
+    },
+    {
+      "n": "Paika",
+      "h": "पाइका",
+      "s": "Jharkhand",
+      "st": "Jharkhand",
+      "sh": "झारखंड",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 23.34,
+      "lng": 85.31,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Warriors with swords & shields",
+      "fth": "तलवार-ढाल योद्धा",
+      "tag": "Warriors with swords & shields",
+      "tagh": "तलवार-ढाल योद्धा",
+      "fact": "A martial dance ('Paika' = foot-soldier) with mock combat using swords and shields.",
+      "facth": "युद्ध नृत्य ('पाइक' = पैदल सैनिक), तलवार-ढाल से छद्म युद्ध।"
+    },
+    {
+      "n": "Santhali",
+      "h": "संथाली",
+      "s": "Jharkhand",
+      "st": "Jharkhand",
+      "sh": "झारखंड",
+      "c": "tribal",
+      "rg": "E",
+      "d": 3,
+      "lat": 24.27,
+      "lng": 87.25,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Santhal tribe community dance",
+      "fth": "संथाल जनजाति सामूहिक नृत्य",
+      "tag": "Santhal tribe community dance",
+      "tagh": "संथाल जनजाति सामूहिक नृत्य",
+      "fact": "Community dance of the Santhal tribe, performed in a line to drums and flutes.",
+      "facth": "संथाल जनजाति का सामूहिक पंक्ति नृत्य, ढोल व बाँसुरी पर।"
+    },
+    {
+      "n": "Sambalpuri",
+      "h": "संबलपुरी",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "folk",
+      "rg": "E",
+      "d": 2,
+      "lat": 21.47,
+      "lng": 83.97,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dalkhai harvest dance",
+      "fth": "दलखाई फसल नृत्य",
+      "tag": "Dalkhai harvest dance",
+      "tagh": "दलखाई फसल नृत्य",
+      "fact": "Western Odisha's Dalkhai folk dance by women during Dussehra and harvest.",
+      "facth": "पश्चिमी ओडिशा का दलखाई लोकनृत्य, दशहरा व फसल पर स्त्रियों द्वारा।"
+    },
+    {
+      "n": "Ghumura",
+      "h": "घुमुरा",
+      "s": "Odisha",
+      "st": "Odisha",
+      "sh": "ओडिशा",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 19.91,
+      "lng": 83.16,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Ghumura drum war dance",
+      "fth": "घुमुरा ढोल युद्ध नृत्य",
+      "tag": "Ghumura drum war dance",
+      "tagh": "घुमुरा ढोल युद्ध नृत्य",
+      "fact": "Kalahandi's heroic war dance set to the unique pot-shaped ghumura drum.",
+      "facth": "कालाहांडी का वीर युद्ध नृत्य, अनोखे घड़ा-आकार घुमुरा ढोल पर।"
+    },
+    {
+      "n": "Gambhira",
+      "h": "गंभीरा",
+      "s": "West Bengal",
+      "st": "West Bengal",
+      "sh": "प.बंगाल",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 25,
+      "lng": 88.14,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Devotee–Shiva dialogue",
+      "fth": "भक्त–शिव संवाद",
+      "tag": "Devotee–Shiva dialogue",
+      "tagh": "भक्त–शिव संवाद",
+      "fact": "Malda's masked dance staged as a witty dialogue between a devotee and Lord Shiva.",
+      "facth": "मालदा का मुखौटा नृत्य, भक्त व शिव के बीच चुटीला संवाद।"
+    },
+    {
+      "n": "Bihu Dance",
+      "h": "बिहू नृत्य",
+      "s": "Assam",
+      "st": "Assam",
+      "sh": "असम",
+      "c": "folk",
+      "rg": "NE",
+      "d": 1,
+      "lat": 26.14,
+      "lng": 91.74,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Joyous spring/harvest dance",
+      "fth": "हर्षपूर्ण वसंत/फसल नृत्य",
+      "tag": "Joyous spring/harvest dance",
+      "tagh": "हर्षपूर्ण वसंत/फसल नृत्य",
+      "fact": "The brisk, joyous dance of Assam's Rongali Bihu, performed by young men and women.",
+      "facth": "असम के रंगाली बिहू का तेज, हर्षपूर्ण नृत्य, युवक-युवतियों द्वारा।"
+    },
+    {
+      "n": "Bagurumba",
+      "h": "बागुरुम्बा",
+      "s": "Assam",
+      "st": "Assam",
+      "sh": "असम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26.4,
+      "lng": 90.27,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Bodo 'butterfly dance'",
+      "fth": "बोडो 'तितली नृत्य'",
+      "tag": "Bodo 'butterfly dance'",
+      "tagh": "बोडो 'तितली नृत्य'",
+      "fact": "The graceful Bodo tribe 'butterfly dance', women's arms spread like wings.",
+      "facth": "बोडो जनजाति का सुंदर 'तितली नृत्य', स्त्रियों की भुजाएँ पंखों सी फैली।"
+    },
+    {
+      "n": "Cheraw",
+      "h": "चेरॉ",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 1,
+      "lat": 23.73,
+      "lng": 92.72,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Bamboo dance",
+      "fth": "बाँस नृत्य",
+      "tag": "Bamboo dance",
+      "tagh": "बाँस नृत्य",
+      "fact": "Mizoram's famous 'bamboo dance', dancers stepping between clapped bamboo poles.",
+      "facth": "मिज़ोरम का प्रसिद्ध 'बाँस नृत्य', तालबद्ध बाँसों के बीच कदम।"
+    },
+    {
+      "n": "Hojagiri",
+      "h": "होजागिरी",
+      "s": "Tripura",
+      "st": "Tripura",
+      "sh": "त्रिपुरा",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.83,
+      "lng": 91.28,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Balancing on a pitcher",
+      "fth": "घड़े पर संतुलन",
+      "tag": "Balancing on a pitcher",
+      "tagh": "घड़े पर संतुलन",
+      "fact": "Reang community women dance balancing pitchers and lamps atop a rolling earthen pot.",
+      "facth": "रियांग समुदाय की स्त्रियाँ लुढ़कते घड़े पर घड़ा व दीप संतुलित कर नाचती हैं।"
+    },
+    {
+      "n": "Singhi Chham",
+      "h": "सिंघी छम",
+      "s": "Sikkim",
+      "st": "Sikkim",
+      "sh": "सिक्किम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.33,
+      "lng": 88.61,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Snow-lion of Kanchenjunga",
+      "fth": "कंचनजंगा का हिम-सिंह",
+      "tag": "Snow-lion of Kanchenjunga",
+      "tagh": "कंचनजंगा का हिम-सिंह",
+      "fact": "Sikkim's masked 'snow-lion dance' honouring Mt Kanchenjunga, the guardian deity.",
+      "facth": "सिक्किम का मुखौटा 'हिम-सिंह नृत्य', संरक्षक देवता कंचनजंगा के सम्मान में।"
+    },
+    {
+      "n": "Nongkrem",
+      "h": "नोंगक्रेम",
+      "s": "Meghalaya",
+      "st": "Meghalaya",
+      "sh": "मेघालय",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.57,
+      "lng": 91.88,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Khasi thanksgiving dance",
+      "fth": "खासी धन्यवाद नृत्य",
+      "tag": "Khasi thanksgiving dance",
+      "tagh": "खासी धन्यवाद नृत्य",
+      "fact": "The Khasi 'Ka Pomblang Nongkrem' thanksgiving dance for a good harvest.",
+      "facth": "खासी 'का पोम्बलांग नोंगक्रेम' अच्छी फसल हेतु धन्यवाद नृत्य।"
+    },
+    {
+      "n": "Bardo Chham",
+      "h": "बार्डो छम",
+      "s": "Arunachal Pradesh",
+      "st": "Arunachal Pradesh",
+      "sh": "अरुणाचल",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 27.08,
+      "lng": 93.61,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Good vs evil, animal masks",
+      "fth": "शुभ-अशुभ, पशु मुखौटे",
+      "tag": "Good vs evil, animal masks",
+      "tagh": "शुभ-अशुभ, पशु मुखौटे",
+      "fact": "Sherdukpen tribe dance depicting the fight of good against evil with zodiac-animal masks.",
+      "facth": "शेरडुकपेन जनजाति का नृत्य, राशि-पशु मुखौटों से शुभ-अशुभ का युद्ध।"
+    },
+    {
+      "n": "Yakshagana",
+      "h": "यक्षगान",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "folk",
+      "rg": "S",
+      "d": 1,
+      "lat": 13.34,
+      "lng": 74.75,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Night-long epic dance-drama",
+      "fth": "रातभर महाकाव्य नृत्य-नाटक",
+      "tag": "Night-long epic dance-drama",
+      "tagh": "रातभर महाकाव्य नृत्य-नाटक",
+      "fact": "Coastal Karnataka's vibrant all-night dance-drama with vivid costumes and headgear.",
+      "facth": "तटीय कर्नाटक का जीवंत रातभर नृत्य-नाटक, रंगीन वेश व शिरोवस्त्र।"
+    },
+    {
+      "n": "Dollu Kunitha",
+      "h": "डोल्लू कुनिता",
+      "s": "Karnataka",
+      "st": "Karnataka",
+      "sh": "कर्नाटक",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 12.97,
+      "lng": 77.59,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Large drums slung on dancers",
+      "fth": "नर्तकों पर बँधे बड़े ढोल",
+      "tag": "Large drums slung on dancers",
+      "tagh": "नर्तकों पर बँधे बड़े ढोल",
+      "fact": "Karnataka's powerful drum dance of the Bereda community, large dollu drums on the chest.",
+      "facth": "कर्नाटक का दमदार ढोल नृत्य, बेरेडा समुदाय, छाती पर बड़े डोल्लू।"
+    },
+    {
+      "n": "Karagattam",
+      "h": "करगाट्टम",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 9.92,
+      "lng": 78.12,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Balancing a decorated pot",
+      "fth": "सजे घड़े का संतुलन",
+      "tag": "Balancing a decorated pot",
+      "tagh": "सजे घड़े का संतुलन",
+      "fact": "Tamil dance balancing a decorated 'karagam' pot on the head, honouring goddess Mariamman.",
+      "facth": "सिर पर सजा 'करगम' घड़ा संतुलित करता तमिल नृत्य, देवी मारीअम्मन को समर्पित।"
+    },
+    {
+      "n": "Theyyam",
+      "h": "तेय्यम",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.87,
+      "lng": 75.37,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Performer becomes the deity",
+      "fth": "कलाकार देवता बन जाता है",
+      "tag": "Performer becomes the deity",
+      "tagh": "कलाकार देवता बन जाता है",
+      "fact": "North Kerala's ritual dance where the costumed performer is worshipped as a living god.",
+      "facth": "उत्तरी केरल का अनुष्ठान नृत्य, सज्जित कलाकार जीवित देवता पूजित।"
+    },
+    {
+      "n": "Padayani",
+      "h": "पडयनि",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "folk",
+      "rg": "S",
+      "d": 3,
+      "lat": 9.26,
+      "lng": 76.78,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Giant painted kolam masks",
+      "fth": "विशाल चित्रित कोलम मुखौटे",
+      "tag": "Giant painted kolam masks",
+      "tagh": "विशाल चित्रित कोलम मुखौटे",
+      "fact": "Central Kerala's temple ritual with huge painted 'kolam' masks at Bhadrakali shrines.",
+      "facth": "मध्य केरल का मंदिर अनुष्ठान, भद्रकाली मंदिरों में विशाल चित्रित 'कोलम' मुखौटे।"
+    },
+    {
+      "n": "Dumhal",
+      "h": "दुमहल",
+      "s": "Jammu and Kashmir",
+      "st": "Kashmir valley",
+      "sh": "कश्मीर घाटी",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 34.05,
+      "lng": 74.85,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Performed by the men of the Wattal community",
+      "fth": "वट्टल समुदाय के पुरुषों द्वारा",
+      "tag": "Performed by the men of the Wattal community",
+      "tagh": "वट्टल समुदाय के पुरुषों द्वारा",
+      "fact": "Dumhal is a Kashmiri folk dance performed by men of the Wattal community in long colourful robes, around a banner planted in the ground.",
+      "facth": "दुमहल कश्मीर का लोक नृत्य है जिसे वट्टल समुदाय के पुरुष लंबे रंगीन चोगे पहनकर, ज़मीन में गाड़े ध्वज के चारों ओर करते हैं।"
+    },
+    {
+      "n": "Phag",
+      "h": "फाग",
+      "s": "Haryana",
+      "st": "Haryana",
+      "sh": "हरियाणा",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 29.1,
+      "lng": 76.2,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Spring dance of the Phalgun month",
+      "fth": "फाल्गुन मास का वसंत नृत्य",
+      "tag": "Spring dance of the Phalgun month",
+      "tagh": "फाल्गुन मास का वसंत नृत्य",
+      "fact": "Phag is a folk dance of Haryana performed by farmers in the month of Phalgun, after the harvest is sown.",
+      "facth": "फाग हरियाणा का लोक नृत्य है जिसे किसान फाल्गुन मास में करते हैं।"
+    },
+    {
+      "n": "Raslila",
+      "h": "रासलीला",
+      "s": "Uttar Pradesh",
+      "st": "Braj (Mathura and Vrindavan), Uttar Pradesh",
+      "sh": "ब्रज (मथुरा और वृंदावन), उत्तर प्रदेश",
+      "c": "folk",
+      "rg": "N",
+      "d": 1,
+      "lat": 27.55,
+      "lng": 77.68,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Enacts the life of Krishna",
+      "fth": "कृष्ण की लीलाओं का मंचन",
+      "tag": "Enacts the life of Krishna",
+      "tagh": "कृष्ण की लीलाओं का मंचन",
+      "fact": "Raslila is a dance-drama of the Braj region of Uttar Pradesh that enacts episodes from the life of Krishna and Radha.",
+      "facth": "रासलीला उत्तर प्रदेश के ब्रज क्षेत्र का नृत्य-नाट्य है जिसमें कृष्ण और राधा की लीलाओं का मंचन होता है।"
+    },
+    {
+      "n": "Charkula",
+      "h": "चरकुला",
+      "s": "Uttar Pradesh",
+      "st": "Braj region, Uttar Pradesh",
+      "sh": "ब्रज क्षेत्र, उत्तर प्रदेश",
+      "c": "folk",
+      "rg": "N",
+      "d": 2,
+      "lat": 27.4,
+      "lng": 77.85,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Women dance with lit lamps on the head",
+      "fth": "सिर पर जलते दीपों के साथ महिलाओं का नृत्य",
+      "tag": "Women dance with lit lamps on the head",
+      "tagh": "सिर पर जलते दीपों के साथ महिलाओं का नृत्य",
+      "fact": "Charkula is a Braj folk dance in which women dance balancing a large many-tiered wheel of lit lamps on the head.",
+      "facth": "चरकुला ब्रज का लोक नृत्य है जिसमें महिलाएँ सिर पर जलते दीपों का बहु-स्तरीय चक्र संतुलित करके नाचती हैं।"
+    },
+    {
+      "n": "Chari",
+      "h": "चरी",
+      "s": "Rajasthan",
+      "st": "Kishangarh and Ajmer, Rajasthan",
+      "sh": "किशनगढ़ और अजमेर, राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 26.5,
+      "lng": 74.8,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dancing with lit pots on the head",
+      "fth": "सिर पर जलते घड़ों के साथ नृत्य",
+      "tag": "Dancing with lit pots on the head",
+      "tagh": "सिर पर जलते घड़ों के साथ नृत्य",
+      "fact": "Chari is a Rajasthani folk dance in which women dance balancing brass pots (chari) with lit lamps on their heads.",
+      "facth": "चरी राजस्थान का लोक नृत्य है जिसमें महिलाएँ सिर पर जलते दीपों वाले पीतल के घड़े (चरी) संतुलित करके नाचती हैं।"
+    },
+    {
+      "n": "Kachchhi Ghodi",
+      "h": "कच्छी घोड़ी",
+      "s": "Rajasthan",
+      "st": "Shekhawati, Rajasthan",
+      "sh": "शेखावाटी, राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 27.8,
+      "lng": 75.3,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dancers ride dummy horses",
+      "fth": "नर्तक नकली घोड़ों पर",
+      "tag": "Dancers ride dummy horses",
+      "tagh": "नर्तक नकली घोड़ों पर",
+      "fact": "Kachchhi Ghodi is a Rajasthani folk dance in which male dancers ride elaborately dressed dummy horses and enact mock battles.",
+      "facth": "कच्छी घोड़ी राजस्थान का लोक नृत्य है जिसमें पुरुष नर्तक सजे हुए नकली घोड़ों पर सवार होकर नकली युद्ध दिखाते हैं।"
+    },
+    {
+      "n": "Bhavai",
+      "h": "भवाई",
+      "s": "Rajasthan",
+      "st": "Rajasthan",
+      "sh": "राजस्थान",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 25,
+      "lng": 74.5,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Balancing a tower of pots on the head",
+      "fth": "सिर पर घड़ों की मीनार संतुलित करना",
+      "tag": "Balancing a tower of pots on the head",
+      "tagh": "सिर पर घड़ों की मीनार संतुलित करना",
+      "fact": "Bhavai is a Rajasthani folk dance in which women balance a tall stack of earthen or brass pots on the head while dancing, sometimes on a sword edge or glass.",
+      "facth": "भवाई राजस्थान का लोक नृत्य है जिसमें महिलाएँ सिर पर मिट्टी या पीतल के घड़ों की ऊँची मीनार संतुलित करके नाचती हैं, कभी तलवार की धार या काँच पर।"
+    },
+    {
+      "n": "Terah Taali",
+      "h": "तेरह ताली",
+      "s": "Rajasthan",
+      "st": "Rajasthan (Kamad community)",
+      "sh": "राजस्थान (कामड़ समुदाय)",
+      "c": "folk",
+      "rg": "W",
+      "d": 3,
+      "lat": 27.2,
+      "lng": 72.2,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Thirteen cymbals tied to the body",
+      "fth": "शरीर पर बंधी तेरह मंजीरें",
+      "tag": "Thirteen cymbals tied to the body",
+      "tagh": "शरीर पर बंधी तेरह मंजीरें",
+      "fact": "Terah Taali is performed by Kamad women of Rajasthan, who strike thirteen small cymbals (manjeeras) tied to their bodies.",
+      "facth": "तेरह ताली राजस्थान की कामड़ समुदाय की महिलाएँ करती हैं, जो शरीर पर बंधी तेरह मंजीरों को बजाती हैं।"
+    },
+    {
+      "n": "Dandiya Raas",
+      "h": "डांडिया रास",
+      "s": "Gujarat",
+      "st": "Gujarat",
+      "sh": "गुजरात",
+      "c": "folk",
+      "rg": "W",
+      "d": 1,
+      "lat": 22.6,
+      "lng": 72.9,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Danced with pairs of sticks at Navratri",
+      "fth": "नवरात्रि पर डंडियों के साथ",
+      "tag": "Danced with pairs of sticks at Navratri",
+      "tagh": "नवरात्रि पर डंडियों के साथ",
+      "fact": "Dandiya Raas is a Navratri dance of Gujarat performed in circles with pairs of decorated sticks (dandiya).",
+      "facth": "डांडिया रास गुजरात का नवरात्रि नृत्य है जो सजी हुई डंडियों के जोड़ों के साथ घेरे में किया जाता है।"
+    },
+    {
+      "n": "Siddi Dhamal",
+      "h": "सिद्दी धमाल",
+      "s": "Gujarat",
+      "st": "Jambur, Gir region, Gujarat",
+      "sh": "जांबुर, गिर क्षेत्र, गुजरात",
+      "c": "tribal",
+      "rg": "W",
+      "d": 3,
+      "lat": 21.2,
+      "lng": 70.7,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Dance of the African-origin Siddi community",
+      "fth": "अफ़्रीकी मूल के सिद्दी समुदाय का नृत्य",
+      "tag": "Dance of the African-origin Siddi community",
+      "tagh": "अफ़्रीकी मूल के सिद्दी समुदाय का नृत्य",
+      "fact": "Siddi Dhamal is performed by the Siddi community of Gujarat, of African origin, to the beat of the drum.",
+      "facth": "सिद्दी धमाल गुजरात के अफ़्रीकी मूल के सिद्दी समुदाय द्वारा ढोल की थाप पर किया जाता है।"
+    },
+    {
+      "n": "Dhangari Gaja",
+      "h": "धनगरी गजा",
+      "s": "Maharashtra",
+      "st": "Solapur region, Maharashtra",
+      "sh": "सोलापुर क्षेत्र, महाराष्ट्र",
+      "c": "folk",
+      "rg": "W",
+      "d": 3,
+      "lat": 17.7,
+      "lng": 75.5,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dance of the Dhangar shepherds",
+      "fth": "धनगर चरवाहों का नृत्य",
+      "tag": "Dance of the Dhangar shepherds",
+      "tagh": "धनगर चरवाहों का नृत्य",
+      "fact": "Dhangari Gaja is the dance of the Dhangar shepherd community of Maharashtra.",
+      "facth": "धनगरी गजा महाराष्ट्र के धनगर चरवाहा समुदाय का नृत्य है।"
+    },
+    {
+      "n": "Fugdi",
+      "h": "फुगड़ी",
+      "s": "Goa",
+      "st": "Goa (also Konkan Maharashtra)",
+      "sh": "गोवा (कोंकण महाराष्ट्र में भी)",
+      "c": "folk",
+      "rg": "W",
+      "d": 2,
+      "lat": 15.35,
+      "lng": 74.05,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Women dance in circles",
+      "fth": "महिलाओं का घेरे में नृत्य",
+      "tag": "Women dance in circles",
+      "tagh": "महिलाओं का घेरे में नृत्य",
+      "fact": "Fugdi is a women's folk dance of Goa and the Konkan, danced in circles or rows during festivals.",
+      "facth": "फुगड़ी गोवा और कोंकण की महिलाओं का लोक नृत्य है जो त्योहारों पर घेरे या पंक्ति में किया जाता है।"
+    },
+    {
+      "n": "Dekhni",
+      "h": "देखणी",
+      "s": "Goa",
+      "st": "Goa",
+      "sh": "गोवा",
+      "c": "folk",
+      "rg": "W",
+      "d": 3,
+      "lat": 15.5,
+      "lng": 74,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Blend of Indian and Western music",
+      "fth": "भारतीय और पश्चिमी संगीत का मेल",
+      "tag": "Blend of Indian and Western music",
+      "tagh": "भारतीय और पश्चिमी संगीत का मेल",
+      "fact": "Dekhni is a Goan dance-song that blends Indian rhythm with Western melody.",
+      "facth": "देखणी गोवा का नृत्य-गीत है जिसमें भारतीय लय और पश्चिमी धुन का मेल है।"
+    },
+    {
+      "n": "Jawara",
+      "h": "जवारा",
+      "s": "Madhya Pradesh",
+      "st": "Bundelkhand, Madhya Pradesh",
+      "sh": "बुंदेलखंड, मध्य प्रदेश",
+      "c": "folk",
+      "rg": "C",
+      "d": 3,
+      "lat": 24.6,
+      "lng": 79,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Harvest dance with baskets of jawara",
+      "fth": "जवारे की टोकरियों के साथ फ़सल नृत्य",
+      "tag": "Harvest dance with baskets of jawara",
+      "tagh": "जवारे की टोकरियों के साथ फ़सल नृत्य",
+      "fact": "Jawara is a harvest dance of Bundelkhand in which women dance carrying baskets of sprouted grain (jawara) on their heads.",
+      "facth": "जवारा बुंदेलखंड का फ़सल नृत्य है जिसमें महिलाएँ सिर पर अंकुरित अनाज (जवारा) की टोकरियाँ लेकर नाचती हैं।"
+    },
+    {
+      "n": "Raut Nacha",
+      "h": "राउत नाचा",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh",
+      "sh": "छत्तीसगढ़",
+      "c": "folk",
+      "rg": "C",
+      "d": 2,
+      "lat": 22.1,
+      "lng": 82.15,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dance of the Yadav (Raut) community at Diwali",
+      "fth": "दिवाली पर यादव (राउत) समुदाय का नृत्य",
+      "tag": "Dance of the Yadav (Raut) community at Diwali",
+      "tagh": "दिवाली पर यादव (राउत) समुदाय का नृत्य",
+      "fact": "Raut Nacha is performed by the Yadav (Raut) cowherd community of Chhattisgarh around Diwali, honouring Krishna.",
+      "facth": "राउत नाचा छत्तीसगढ़ के यादव (राउत) ग्वाला समुदाय द्वारा दिवाली के आसपास कृष्ण के सम्मान में किया जाता है।"
+    },
+    {
+      "n": "Karma",
+      "h": "करमा",
+      "s": "Chhattisgarh",
+      "st": "Chhattisgarh, Jharkhand and Madhya Pradesh",
+      "sh": "छत्तीसगढ़, झारखंड और मध्य प्रदेश",
+      "c": "tribal",
+      "rg": "C",
+      "d": 2,
+      "lat": 21.5,
+      "lng": 81,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Tribal dance around the karam tree",
+      "fth": "करम वृक्ष के चारों ओर जनजातीय नृत्य",
+      "tag": "Tribal dance around the karam tree",
+      "tagh": "करम वृक्ष के चारों ओर जनजातीय नृत्य",
+      "fact": "Karma is a tribal dance of central India performed during the Karma festival around a branch of the karam tree.",
+      "facth": "करमा मध्य भारत का जनजातीय नृत्य है जो करमा पर्व में करम वृक्ष की डाली के चारों ओर किया जाता है।"
+    },
+    {
+      "n": "Jhumair",
+      "h": "झूमर (झुमइर)",
+      "s": "Jharkhand",
+      "st": "Jharkhand",
+      "sh": "झारखंड",
+      "c": "folk",
+      "rg": "E",
+      "d": 2,
+      "lat": 23.4,
+      "lng": 85.3,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Harvest-season group dance",
+      "fth": "फ़सल के मौसम का सामूहिक नृत्य",
+      "tag": "Harvest-season group dance",
+      "tagh": "फ़सल के मौसम का सामूहिक नृत्य",
+      "fact": "Jhumair (Jhumar) is a folk dance of Jharkhand, danced in groups at harvest time.",
+      "facth": "झुमइर (झूमर) झारखंड का लोक नृत्य है जो फ़सल के समय समूह में किया जाता है।"
+    },
+    {
+      "n": "Jat-Jatin",
+      "h": "जट-जटिन",
+      "s": "Bihar",
+      "st": "Mithila, Bihar",
+      "sh": "मिथिला, बिहार",
+      "c": "folk",
+      "rg": "E",
+      "d": 2,
+      "lat": 26.15,
+      "lng": 85.9,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Story of a husband and wife",
+      "fth": "पति-पत्नी की कथा",
+      "tag": "Story of a husband and wife",
+      "tagh": "पति-पत्नी की कथा",
+      "fact": "Jat-Jatin is a folk dance of Mithila in Bihar that tells the story of a married couple, performed on moonlit nights during the monsoon.",
+      "facth": "जट-जटिन बिहार के मिथिला क्षेत्र का लोक नृत्य है जो एक दंपती की कथा कहता है।"
+    },
+    {
+      "n": "Jhijhiya",
+      "h": "झिझिया",
+      "s": "Bihar",
+      "st": "Mithila, Bihar",
+      "sh": "मिथिला, बिहार",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 26,
+      "lng": 86.3,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Lamp pots on the head, prayed for rain",
+      "fth": "सिर पर दीप वाले घड़े, वर्षा की प्रार्थना",
+      "tag": "Lamp pots on the head, prayed for rain",
+      "tagh": "सिर पर दीप वाले घड़े, वर्षा की प्रार्थना",
+      "fact": "Jhijhiya is a women's folk dance of Mithila performed with perforated pots holding lamps on the head, as a prayer for rain.",
+      "facth": "झिझिया मिथिला का महिलाओं का लोक नृत्य है जो सिर पर दीपों वाले छिद्रित घड़ों के साथ वर्षा की प्रार्थना में किया जाता है।"
+    },
+    {
+      "n": "Bidesia",
+      "h": "बिदेसिया",
+      "s": "Bihar",
+      "st": "Bhojpuri region, Bihar",
+      "sh": "भोजपुरी क्षेत्र, बिहार",
+      "c": "theatre",
+      "rg": "E",
+      "d": 2,
+      "lat": 25.75,
+      "lng": 84.75,
+      "kd": "Folk theatre and dance",
+      "kdh": "लोक नाट्य और नृत्य",
+      "ft": "Bhikhari Thakur's dance-drama",
+      "fth": "भिखारी ठाकुर का नृत्य-नाट्य",
+      "tag": "Bhikhari Thakur's dance-drama",
+      "tagh": "भिखारी ठाकुर का नृत्य-नाट्य",
+      "fact": "Bidesia is a Bhojpuri dance-drama popularised by Bhikhari Thakur, about the pain of migrant workers and the women they leave behind.",
+      "facth": "बिदेसिया भिखारी ठाकुर द्वारा लोकप्रिय भोजपुरी नृत्य-नाट्य है, जो प्रवासी मज़दूरों और पीछे छूटी स्त्रियों के दुख के बारे में है।"
+    },
+    {
+      "n": "Raibenshe",
+      "h": "रायबेंशे",
+      "s": "West Bengal",
+      "st": "Birbhum and Bardhaman, West Bengal",
+      "sh": "बीरभूम और बर्धमान, पश्चिम बंगाल",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 23.6,
+      "lng": 87.7,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Martial dance with bamboo staves",
+      "fth": "बाँस के डंडों के साथ युद्ध नृत्य",
+      "tag": "Martial dance with bamboo staves",
+      "tagh": "बाँस के डंडों के साथ युद्ध नृत्य",
+      "fact": "Raibenshe is a martial folk dance of Bengal performed by men with bamboo staves.",
+      "facth": "रायबेंशे बंगाल का युद्ध-आधारित लोक नृत्य है जिसे पुरुष बाँस के डंडों के साथ करते हैं।"
+    },
+    {
+      "n": "Gotipua",
+      "h": "गोटिपुआ",
+      "s": "Odisha",
+      "st": "Raghurajpur, Puri, Odisha",
+      "sh": "रघुराजपुर, पुरी, ओडिशा",
+      "c": "folk",
+      "rg": "E",
+      "d": 2,
+      "lat": 19.95,
+      "lng": 85.8,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Boys dressed as girls; a forerunner of Odissi",
+      "fth": "लड़कियों के वेश में लड़के; ओडिसी का पूर्ववर्ती",
+      "tag": "Boys dressed as girls; a forerunner of Odissi",
+      "tagh": "लड़कियों के वेश में लड़के; ओडिसी का पूर्ववर्ती",
+      "fact": "Gotipua is danced in Odisha by young boys dressed as girls, with acrobatic poses; it is a forerunner of Odissi.",
+      "facth": "गोटिपुआ ओडिशा में लड़कियों के वेश में छोटे लड़के करते हैं, जिसमें कलाबाज़ी की मुद्राएँ होती हैं; यह ओडिसी का पूर्ववर्ती है।"
+    },
+    {
+      "n": "Dalkhai",
+      "h": "दलखाई",
+      "s": "Odisha",
+      "st": "Western Odisha (Sambalpur)",
+      "sh": "पश्चिमी ओडिशा (संबलपुर)",
+      "c": "folk",
+      "rg": "E",
+      "d": 3,
+      "lat": 21.4,
+      "lng": 83.6,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dussehra dance of western Odisha",
+      "fth": "पश्चिमी ओडिशा का दशहरा नृत्य",
+      "tag": "Dussehra dance of western Odisha",
+      "tagh": "पश्चिमी ओडिशा का दशहरा नृत्य",
+      "fact": "Dalkhai is a folk dance of western Odisha performed by young women during Dussehra.",
+      "facth": "दलखाई पश्चिमी ओडिशा का लोक नृत्य है जिसे युवतियाँ दशहरे पर करती हैं।"
+    },
+    {
+      "n": "Maruni",
+      "h": "मारुनी",
+      "s": "Sikkim",
+      "st": "Sikkim (also Darjeeling)",
+      "sh": "सिक्किम (दार्जिलिंग में भी)",
+      "c": "folk",
+      "rg": "NE",
+      "d": 2,
+      "lat": 27.3,
+      "lng": 88.5,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Nepali dance at Tihar and weddings",
+      "fth": "तिहार और विवाह पर नेपाली नृत्य",
+      "tag": "Nepali dance at Tihar and weddings",
+      "tagh": "तिहार और विवाह पर नेपाली नृत्य",
+      "fact": "Maruni is a Nepali folk dance of Sikkim performed at Tihar and at weddings.",
+      "facth": "मारुनी सिक्किम का नेपाली लोक नृत्य है जो तिहार और विवाहों पर किया जाता है।"
+    },
+    {
+      "n": "Ponung",
+      "h": "पोनुंग",
+      "s": "Arunachal Pradesh",
+      "st": "Siang valley, Arunachal Pradesh",
+      "sh": "सियांग घाटी, अरुणाचल प्रदेश",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 28.1,
+      "lng": 95.1,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Adi women's harvest dance",
+      "fth": "आदि महिलाओं का फ़सल नृत्य",
+      "tag": "Adi women's harvest dance",
+      "tagh": "आदि महिलाओं का फ़सल नृत्य",
+      "fact": "Ponung is a dance of Adi women of Arunachal Pradesh performed before the harvest, during the Solung festival.",
+      "facth": "पोनुंग अरुणाचल प्रदेश की आदि महिलाओं का नृत्य है जो फ़सल से पहले सोलुंग पर्व में किया जाता है।"
+    },
+    {
+      "n": "Chang Lo",
+      "h": "चांग लो",
+      "s": "Nagaland",
+      "st": "Tuensang, Nagaland",
+      "sh": "त्वेनसांग, नागालैंड",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 26.25,
+      "lng": 94.8,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Victory dance of the Chang Nagas",
+      "fth": "चांग नागाओं का विजय नृत्य",
+      "tag": "Victory dance of the Chang Nagas",
+      "tagh": "चांग नागाओं का विजय नृत्य",
+      "fact": "Chang Lo, or Sua Lua, is a dance of the Chang Naga tribe of Nagaland, once performed to celebrate victory in war.",
+      "facth": "चांग लो या सुआ लुआ नागालैंड की चांग नागा जनजाति का नृत्य है, जो कभी युद्ध में विजय के उत्सव में होता था।"
+    },
+    {
+      "n": "Pung Cholom",
+      "h": "पुंग चोलोम",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "folk",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.85,
+      "lng": 93.9,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dancing drummers of Sankirtana",
+      "fth": "संकीर्तन के नाचते ढोलवादक",
+      "tag": "Dancing drummers of Sankirtana",
+      "tagh": "संकीर्तन के नाचते ढोलवादक",
+      "fact": "Pung Cholom is a Manipuri dance in which drummers dance while playing the pung (drum); it is part of Manipuri Sankirtana.",
+      "facth": "पुंग चोलोम मणिपुरी नृत्य है जिसमें ढोलवादक पुंग (ढोल) बजाते हुए नाचते हैं; यह मणिपुरी संकीर्तन का भाग है।"
+    },
+    {
+      "n": "Lai Haraoba",
+      "h": "लाई हराओबा",
+      "s": "Manipur",
+      "st": "Manipur",
+      "sh": "मणिपुर",
+      "c": "folk",
+      "rg": "NE",
+      "d": 2,
+      "lat": 24.65,
+      "lng": 93.85,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Ritual dance of the Meitei festival",
+      "fth": "मैतेई पर्व का अनुष्ठान नृत्य",
+      "tag": "Ritual dance of the Meitei festival",
+      "tagh": "मैतेई पर्व का अनुष्ठान नृत्य",
+      "fact": "Lai Haraoba is the ritual dance of the Meitei festival of the same name, honouring the sylvan deities; it is a root of the Manipuri classical dance.",
+      "facth": "लाई हराओबा इसी नाम के मैतेई पर्व का अनुष्ठान नृत्य है, जो वन देवताओं को समर्पित है; यह मणिपुरी शास्त्रीय नृत्य का आधार है।"
+    },
+    {
+      "n": "Khuallam",
+      "h": "खुआललम",
+      "s": "Mizoram",
+      "st": "Mizoram",
+      "sh": "मिज़ोरम",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.4,
+      "lng": 92.8,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Dance of the guests",
+      "fth": "अतिथियों का नृत्य",
+      "tag": "Dance of the guests",
+      "tagh": "अतिथियों का नृत्य",
+      "fact": "Khuallam is a Mizo dance of guests, performed at the Khuangchawi celebration.",
+      "facth": "खुआललम अतिथियों का मिज़ो नृत्य है जो खुआंगचावी उत्सव में किया जाता है।"
+    },
+    {
+      "n": "Wangala",
+      "h": "वांगला",
+      "s": "Meghalaya",
+      "st": "Garo Hills, Meghalaya",
+      "sh": "गारो पहाड़ियाँ, मेघालय",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 2,
+      "lat": 25.5,
+      "lng": 90.3,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Garo harvest festival dance",
+      "fth": "गारो फ़सल पर्व नृत्य",
+      "tag": "Garo harvest festival dance",
+      "tagh": "गारो फ़सल पर्व नृत्य",
+      "fact": "Wangala is the harvest festival dance of the Garos of Meghalaya, in honour of the sun god Saljong.",
+      "facth": "वांगला मेघालय के गारो लोगों का फ़सल पर्व नृत्य है, जो सूर्य देव सालजोंग के सम्मान में होता है।"
+    },
+    {
+      "n": "Shad Suk Mynsiem",
+      "h": "शाद सुक मिनसिएम",
+      "s": "Meghalaya",
+      "st": "Khasi Hills, Meghalaya",
+      "sh": "खासी पहाड़ियाँ, मेघालय",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 25.6,
+      "lng": 91.75,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Khasi dance of the joyful heart",
+      "fth": "खासी लोगों का प्रसन्न हृदय का नृत्य",
+      "tag": "Khasi dance of the joyful heart",
+      "tagh": "खासी लोगों का प्रसन्न हृदय का नृत्य",
+      "fact": "Shad Suk Mynsiem is the spring thanksgiving dance of the Khasis of Meghalaya.",
+      "facth": "शाद सुक मिनसिएम मेघालय के खासी लोगों का वसंत धन्यवाद नृत्य है।"
+    },
+    {
+      "n": "Garia",
+      "h": "गरिया",
+      "s": "Tripura",
+      "st": "Tripura",
+      "sh": "त्रिपुरा",
+      "c": "tribal",
+      "rg": "NE",
+      "d": 3,
+      "lat": 23.75,
+      "lng": 91.5,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Dance of the Garia Puja",
+      "fth": "गरिया पूजा का नृत्य",
+      "tag": "Dance of the Garia Puja",
+      "tagh": "गरिया पूजा का नृत्य",
+      "fact": "The Garia dance is performed by the tribes of Tripura during Garia Puja, after the sowing season.",
+      "facth": "गरिया नृत्य त्रिपुरा की जनजातियाँ बुवाई के बाद गरिया पूजा में करती हैं।"
+    },
+    {
+      "n": "Bhuta Kola",
+      "h": "भूत कोला",
+      "s": "Karnataka",
+      "st": "Tulu Nadu, coastal Karnataka",
+      "sh": "तुलु नाडु, तटीय कर्नाटक",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 13,
+      "lng": 75.1,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Ritual spirit worship",
+      "fth": "आत्मा पूजा का अनुष्ठान",
+      "tag": "Ritual spirit worship",
+      "tagh": "आत्मा पूजा का अनुष्ठान",
+      "fact": "Bhuta Kola is a ritual dance of Tulu Nadu in coastal Karnataka in which a performer embodies a local spirit deity (bhuta).",
+      "facth": "भूत कोला तटीय कर्नाटक के तुलु नाडु का अनुष्ठानिक नृत्य है जिसमें कलाकार स्थानीय आत्मा देवता (भूत) का रूप धारण करता है।"
+    },
+    {
+      "n": "Veeragase",
+      "h": "वीरगासे",
+      "s": "Karnataka",
+      "st": "Mysuru region, Karnataka",
+      "sh": "मैसूरु क्षेत्र, कर्नाटक",
+      "c": "folk",
+      "rg": "S",
+      "d": 3,
+      "lat": 12.4,
+      "lng": 76.6,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Vigorous Shaiva dance",
+      "fth": "शैव परंपरा का ओजस्वी नृत्य",
+      "tag": "Vigorous Shaiva dance",
+      "tagh": "शैव परंपरा का ओजस्वी नृत्य",
+      "fact": "Veeragase is a vigorous dance of Karnataka based on Shaiva legend, performed during Dussehra and the Hindu month of Shravana.",
+      "facth": "वीरगासे कर्नाटक का ओजस्वी नृत्य है जो शैव कथा पर आधारित है और दशहरे तथा श्रावण मास में किया जाता है।"
+    },
+    {
+      "n": "Oppana",
+      "h": "ओप्पना",
+      "s": "Kerala",
+      "st": "Malabar, Kerala",
+      "sh": "मालाबार, केरल",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 11.1,
+      "lng": 76.1,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Muslim wedding dance",
+      "fth": "मुस्लिम विवाह नृत्य",
+      "tag": "Muslim wedding dance",
+      "tagh": "मुस्लिम विवाह नृत्य",
+      "fact": "Oppana is a dance of the Mappila Muslims of Kerala performed at weddings, with clapping and songs around the bride.",
+      "facth": "ओप्पना केरल के मप्पिला मुसलमानों का नृत्य है जो विवाहों पर दुल्हन के चारों ओर ताली और गीतों के साथ किया जाता है।"
+    },
+    {
+      "n": "Thiruvathirakali",
+      "h": "तिरुवातिरकली",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.5,
+      "lng": 76.3,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Women's group dance at Onam and Thiruvathira",
+      "fth": "ओणम और तिरुवातिरा पर महिलाओं का सामूहिक नृत्य",
+      "tag": "Women's group dance at Onam and Thiruvathira",
+      "tagh": "ओणम और तिरुवातिरा पर महिलाओं का सामूहिक नृत्य",
+      "fact": "Thiruvathirakali is a graceful group dance of Kerala women performed at Thiruvathira and Onam.",
+      "facth": "तिरुवातिरकली केरल की महिलाओं का सुरुचिपूर्ण सामूहिक नृत्य है जो तिरुवातिरा और ओणम पर किया जाता है।"
+    },
+    {
+      "n": "Ottamthullal",
+      "h": "ओट्टमतुल्लल",
+      "s": "Kerala",
+      "st": "Kerala",
+      "sh": "केरल",
+      "c": "theatre",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.75,
+      "lng": 76.6,
+      "kd": "Folk theatre and dance",
+      "kdh": "लोक नाट्य और नृत्य",
+      "ft": "Solo satirical dance created by Kunchan Nambiar",
+      "fth": "कुंचन नांबियार द्वारा रचित एकल व्यंग्य नृत्य",
+      "tag": "Solo satirical dance created by Kunchan Nambiar",
+      "tagh": "कुंचन नांबियार द्वारा रचित एकल व्यंग्य नृत्य",
+      "fact": "Ottamthullal is a solo dance-recital of Kerala, full of humour and social satire, created by the poet Kunchan Nambiar in the 18th century.",
+      "facth": "ओट्टमतुल्लल केरल का एकल नृत्य-पाठ है जिसमें हास्य और सामाजिक व्यंग्य है; इसे 18वीं सदी में कवि कुंचन नांबियार ने रचा।"
+    },
+    {
+      "n": "Kummi",
+      "h": "कुम्मी",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 11,
+      "lng": 77,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Women dance in a circle, clapping",
+      "fth": "ताली बजाते हुए घेरे में महिलाओं का नृत्य",
+      "tag": "Women dance in a circle, clapping",
+      "tagh": "ताली बजाते हुए घेरे में महिलाओं का नृत्य",
+      "fact": "Kummi is a Tamil women's dance performed in a circle with rhythmic clapping, at festivals such as Pongal.",
+      "facth": "कुम्मी तमिल महिलाओं का नृत्य है जो पोंगल जैसे त्योहारों पर लयबद्ध ताली के साथ घेरे में किया जाता है।"
+    },
+    {
+      "n": "Mayilattam",
+      "h": "मयिलाट्टम",
+      "s": "Tamil Nadu",
+      "st": "Tamil Nadu",
+      "sh": "तमिलनाडु",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 10.6,
+      "lng": 78.9,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Peacock dance",
+      "fth": "मोर नृत्य",
+      "tag": "Peacock dance",
+      "tagh": "मोर नृत्य",
+      "fact": "Mayilattam is the peacock dance of Tamil Nadu, performed in a peacock costume with a beak, in temple festivals of Murugan.",
+      "facth": "मयिलाट्टम तमिलनाडु का मोर नृत्य है जो मुरुगन के मंदिर उत्सवों में चोंच वाली मोर की वेशभूषा में किया जाता है।"
+    },
+    {
+      "n": "Oyilattam",
+      "h": "ओयिलाट्टम",
+      "s": "Tamil Nadu",
+      "st": "Southern Tamil Nadu",
+      "sh": "दक्षिणी तमिलनाडु",
+      "c": "folk",
+      "rg": "S",
+      "d": 3,
+      "lat": 9.6,
+      "lng": 78,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dance of grace with handkerchiefs",
+      "fth": "रूमालों के साथ सौंदर्य का नृत्य",
+      "tag": "Dance of grace with handkerchiefs",
+      "tagh": "रूमालों के साथ सौंदर्य का नृत्य",
+      "fact": "Oyilattam, the dance of grace, is performed by men in a row waving coloured handkerchiefs, in southern Tamil Nadu.",
+      "facth": "ओयिलाट्टम, यानी सौंदर्य का नृत्य, दक्षिणी तमिलनाडु में पुरुष पंक्ति में रंगीन रूमाल हिलाते हुए करते हैं।"
+    },
+    {
+      "n": "Veeranatyam",
+      "h": "वीरनाट्यम",
+      "s": "Andhra Pradesh",
+      "st": "Draksharamam, East Godavari, Andhra Pradesh",
+      "sh": "द्राक्षारामम, पूर्वी गोदावरी, आंध्र प्रदेश",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 16.8,
+      "lng": 82,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dance of the brave, for Shiva",
+      "fth": "शिव के लिए वीरों का नृत्य",
+      "tag": "Dance of the brave, for Shiva",
+      "tagh": "शिव के लिए वीरों का नृत्य",
+      "fact": "Veeranatyam, the dance of the brave, is performed in Andhra Pradesh in honour of Shiva's fury.",
+      "facth": "वीरनाट्यम, यानी वीरों का नृत्य, आंध्र प्रदेश में शिव के रौद्र रूप के सम्मान में किया जाता है।"
+    },
+    {
+      "n": "Butta Bommalu",
+      "h": "बुट्टा बोम्मलु",
+      "s": "Andhra Pradesh",
+      "st": "Tanuku, West Godavari, Andhra Pradesh",
+      "sh": "तनुकु, पश्चिमी गोदावरी, आंध्र प्रदेश",
+      "c": "folk",
+      "rg": "S",
+      "d": 3,
+      "lat": 16.7,
+      "lng": 81.6,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Dancers in large basket-doll masks",
+      "fth": "बड़े टोकरी-गुड़िया मुखौटों में नर्तक",
+      "tag": "Dancers in large basket-doll masks",
+      "tagh": "बड़े टोकरी-गुड़िया मुखौटों में नर्तक",
+      "fact": "Butta Bommalu, basket toys, is a dance of Andhra Pradesh in which dancers wear large masks of characters and move silently to music.",
+      "facth": "बुट्टा बोम्मलु (टोकरी के खिलौने) आंध्र प्रदेश का नृत्य है जिसमें नर्तक पात्रों के बड़े मुखौटे पहनकर संगीत पर मौन नाचते हैं।"
+    },
+    {
+      "n": "Perini Sivatandavam",
+      "h": "पेरिणी शिवतांडवम",
+      "s": "Telangana",
+      "st": "Warangal, Telangana",
+      "sh": "वारंगल, तेलंगाना",
+      "c": "folk",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.97,
+      "lng": 79.6,
+      "kd": "Folk dance",
+      "kdh": "लोक नृत्य",
+      "ft": "Kakatiya-era warrior dance",
+      "fth": "काकतीय काल का योद्धा नृत्य",
+      "tag": "Kakatiya-era warrior dance",
+      "tagh": "काकतीय काल का योद्धा नृत्य",
+      "fact": "Perini Sivatandavam is a vigorous warrior dance of the Kakatiya era, revived by Nataraja Ramakrishna; it was danced before battle.",
+      "facth": "पेरिणी शिवतांडवम काकतीय काल का ओजस्वी योद्धा नृत्य है जिसे नटराज रामकृष्ण ने पुनर्जीवित किया; यह युद्ध से पहले किया जाता था।"
+    },
+    {
+      "n": "Lambadi",
+      "h": "लंबाडी",
+      "s": "Telangana",
+      "st": "Telangana",
+      "sh": "तेलंगाना",
+      "c": "tribal",
+      "rg": "S",
+      "d": 2,
+      "lat": 17.2,
+      "lng": 78.4,
+      "kd": "Tribal dance",
+      "kdh": "जनजातीय नृत्य",
+      "ft": "Dance of the Banjara (Lambadi) tribe",
+      "fth": "बंजारा (लंबाडी) जनजाति का नृत्य",
+      "tag": "Dance of the Banjara (Lambadi) tribe",
+      "tagh": "बंजारा (लंबाडी) जनजाति का नृत्य",
+      "fact": "Lambadi is the dance of the Banjara (Lambadi) tribe, performed in mirror-work costumes and heavy ornaments.",
+      "facth": "लंबाडी बंजारा (लंबाडी) जनजाति का नृत्य है जो शीशे के काम वाली पोशाक और भारी आभूषणों में किया जाता है।"
+    }
+  ],
+  "notes": [
+    {
+      "id": "classical",
+      "icon": "🪷",
+      "t": [
+        "The eight classical dances (Sangeet Natak Akademi)",
+        "आठ शास्त्रीय नृत्य (संगीत नाटक अकादमी)"
+      ],
+      "cols": [
+        [
+          "Dance",
+          "नृत्य"
+        ],
+        [
+          "State and exponents",
+          "राज्य और प्रमुख कलाकार"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Bharatanatyam",
+            "भरतनाट्यम"
+          ],
+          [
+            "Tamil Nadu – Rukmini Devi Arundale, Yamini Krishnamurthy, Padma Subrahmanyam",
+            "तमिलनाडु – रुक्मिणी देवी अरुंडेल, यामिनी कृष्णमूर्ति, पद्मा सुब्रह्मण्यम"
+          ]
+        ],
+        [
+          [
+            "Kathak",
+            "कथक"
+          ],
+          [
+            "Uttar Pradesh – Birju Maharaj, Sitara Devi, Shambhu Maharaj",
+            "उत्तर प्रदेश – बिरजू महाराज, सितारा देवी, शंभू महाराज"
+          ]
+        ],
+        [
+          [
+            "Kathakali",
+            "कथकली"
+          ],
+          [
+            "Kerala – Kalamandalam Gopi; Kerala Kalamandalam founded by Vallathol (1930)",
+            "केरल – कलामंडलम गोपी; केरल कलामंडलम की स्थापना वल्लतोल ने की (1930)"
+          ]
+        ],
+        [
+          [
+            "Kuchipudi",
+            "कुचिपुड़ी"
+          ],
+          [
+            "Andhra Pradesh – Siddhendra Yogi (founder), Vempati Chinna Satyam, Raja and Radha Reddy",
+            "आंध्र प्रदेश – सिद्धेंद्र योगी (प्रवर्तक), वेम्पति चिन्ना सत्यम, राजा और राधा रेड्डी"
+          ]
+        ],
+        [
+          [
+            "Odissi",
+            "ओडिसी"
+          ],
+          [
+            "Odisha – Kelucharan Mohapatra, Sonal Mansingh, Sanjukta Panigrahi",
+            "ओडिशा – केलुचरण महापात्र, सोनल मानसिंह, संजुक्ता पाणिग्रही"
+          ]
+        ],
+        [
+          [
+            "Manipuri",
+            "मणिपुरी"
+          ],
+          [
+            "Manipur – Guru Bipin Singh, the Jhaveri sisters",
+            "मणिपुर – गुरु बिपिन सिंह, झवेरी बहनें"
+          ]
+        ],
+        [
+          [
+            "Mohiniyattam",
+            "मोहिनीअट्टम"
+          ],
+          [
+            "Kerala – Kalamandalam Kalyanikutty Amma, Bharati Shivaji",
+            "केरल – कलामंडलम कल्याणीकुट्टी अम्मा, भारती शिवाजी"
+          ]
+        ],
+        [
+          [
+            "Sattriya",
+            "सत्रिया"
+          ],
+          [
+            "Assam – founded by Srimanta Sankardev; recognised as classical in 2000",
+            "असम – श्रीमंत शंकरदेव द्वारा प्रवर्तित; 2000 में शास्त्रीय मान्यता"
+          ]
+        ],
+        [
+          [
+            "Also counted by the Ministry of Culture",
+            "संस्कृति मंत्रालय द्वारा भी गिना गया"
+          ],
+          [
+            "Chhau (Odisha, Jharkhand, West Bengal), making nine",
+            "छऊ (ओडिशा, झारखंड, पश्चिम बंगाल), कुल नौ"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "terms",
+      "icon": "📖",
+      "t": [
+        "Terms asked in exams",
+        "परीक्षा में पूछे जाने वाले शब्द"
+      ],
+      "cols": [
+        [
+          "Term",
+          "शब्द"
+        ],
+        [
+          "Meaning",
+          "अर्थ"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Natya Shastra",
+            "नाट्यशास्त्र"
+          ],
+          [
+            "Treatise on drama, dance and music by Bharata Muni",
+            "भरतमुनि का नाट्य, नृत्य और संगीत पर ग्रंथ"
+          ]
+        ],
+        [
+          [
+            "Alarippu",
+            "अलारिप्पु"
+          ],
+          [
+            "Opening item of a Bharatanatyam recital; means \"to adorn with flowers\"",
+            "भरतनाट्यम प्रस्तुति का पहला अंश; अर्थ \"फूलों से सजाना\""
+          ]
+        ],
+        [
+          [
+            "Tillana",
+            "तिल्लाना"
+          ],
+          [
+            "Lively closing piece of a Bharatanatyam recital",
+            "भरतनाट्यम प्रस्तुति का जीवंत समापन अंश"
+          ]
+        ],
+        [
+          [
+            "Tribhanga",
+            "त्रिभंग"
+          ],
+          [
+            "Three-bend posture of Odissi",
+            "ओडिसी की तीन मोड़ वाली मुद्रा"
+          ]
+        ],
+        [
+          [
+            "Tarangam",
+            "तरंगम"
+          ],
+          [
+            "Kuchipudi item danced on the rim of a brass plate",
+            "पीतल की थाली के किनारे पर किया जाने वाला कुचिपुड़ी अंश"
+          ]
+        ],
+        [
+          [
+            "Chakkar and tatkar",
+            "चक्कर और तत्कार"
+          ],
+          [
+            "Spins and footwork of Kathak",
+            "कथक के घुमाव और पदचाप"
+          ]
+        ],
+        [
+          [
+            "Mudra (hasta)",
+            "मुद्रा (हस्त)"
+          ],
+          [
+            "Hand gestures that carry meaning",
+            "अर्थ प्रकट करने वाले हाथ के संकेत"
+          ]
+        ],
+        [
+          [
+            "Tandava and lasya",
+            "तांडव और लास्य"
+          ],
+          [
+            "Vigorous (masculine) and graceful (feminine) styles",
+            "ओजस्वी (पुरुष) और कोमल (स्त्री) शैलियाँ"
+          ]
+        ],
+        [
+          [
+            "Rasa",
+            "रस"
+          ],
+          [
+            "Sentiment evoked in the audience; the Natya Shastra lists eight, a ninth (shanta) was added later",
+            "दर्शकों में जगाया गया भाव; नाट्यशास्त्र में आठ, नौवाँ (शांत) बाद में जोड़ा गया"
+          ]
+        ],
+        [
+          [
+            "Pacha",
+            "पच्चा"
+          ],
+          [
+            "Green make-up of noble characters in Kathakali",
+            "कथकली में उदात्त पात्रों का हरा श्रृंगार"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "festivals",
+      "icon": "🎭",
+      "t": [
+        "Dance festivals",
+        "नृत्य महोत्सव"
+      ],
+      "cols": [
+        [
+          "Festival",
+          "महोत्सव"
+        ],
+        [
+          "Place",
+          "स्थान"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Khajuraho Dance Festival",
+            "खजुराहो नृत्य महोत्सव"
+          ],
+          [
+            "Khajuraho, Madhya Pradesh",
+            "खजुराहो, मध्य प्रदेश"
+          ]
+        ],
+        [
+          [
+            "Konark Dance Festival",
+            "कोणार्क नृत्य महोत्सव"
+          ],
+          [
+            "Konark, Odisha",
+            "कोणार्क, ओडिशा"
+          ]
+        ],
+        [
+          [
+            "Mamallapuram Dance Festival",
+            "मामल्लपुरम नृत्य महोत्सव"
+          ],
+          [
+            "Mamallapuram, Tamil Nadu",
+            "मामल्लपुरम, तमिलनाडु"
+          ]
+        ],
+        [
+          [
+            "Nishagandhi Dance Festival",
+            "निशागंधी नृत्य महोत्सव"
+          ],
+          [
+            "Thiruvananthapuram, Kerala",
+            "तिरुवनंतपुरम, केरल"
+          ]
+        ],
+        [
+          [
+            "Hornbill Festival",
+            "हॉर्नबिल महोत्सव"
+          ],
+          [
+            "Kisama, Nagaland (tribal dances of all Naga tribes)",
+            "किसामा, नागालैंड (सभी नागा जनजातियों के नृत्य)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "confuse",
+      "icon": "⚖️",
+      "t": [
+        "Easily confused",
+        "आसानी से भ्रमित"
+      ],
+      "cols": [
+        [
+          "Pair",
+          "जोड़ी"
+        ],
+        [
+          "Tell them apart",
+          "अंतर"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Kathakali and Mohiniyattam",
+            "कथकली और मोहिनीअट्टम"
+          ],
+          [
+            "Both Kerala: Kathakali is a dramatic dance with heavy make-up; Mohiniyattam is a graceful solo by women",
+            "दोनों केरल: कथकली भारी श्रृंगार वाला नाटकीय नृत्य; मोहिनीअट्टम महिलाओं का कोमल एकल नृत्य"
+          ]
+        ],
+        [
+          [
+            "Garba and Dandiya Raas",
+            "गरबा और डांडिया रास"
+          ],
+          [
+            "Both Gujarat at Navratri: Garba is danced with clapping, Dandiya with sticks",
+            "दोनों गुजरात, नवरात्रि: गरबा ताली से, डांडिया डंडियों से"
+          ]
+        ],
+        [
+          [
+            "Chari and Bhavai",
+            "चरी और भवाई"
+          ],
+          [
+            "Both Rajasthan: Chari pots carry lit lamps; Bhavai stacks many pots",
+            "दोनों राजस्थान: चरी के घड़ों में दीप; भवाई में कई घड़ों की मीनार"
+          ]
+        ],
+        [
+          [
+            "Bihu and Bagurumba",
+            "बिहू और बागुरुम्बा"
+          ],
+          [
+            "Both Assam: Bihu is the Assamese festival dance; Bagurumba is the Bodo butterfly dance",
+            "दोनों असम: बिहू असमिया पर्व नृत्य; बागुरुम्बा बोडो लोगों का तितली नृत्य"
+          ]
+        ],
+        [
+          [
+            "Lavani and Tamasha",
+            "लावणी और तमाशा"
+          ],
+          [
+            "Both Maharashtra: Lavani is a song-dance; Tamasha is the folk theatre that features it",
+            "दोनों महाराष्ट्र: लावणी गीत-नृत्य; तमाशा वह लोक नाट्य जिसमें यह होता है"
+          ]
+        ]
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "t": "classical",
+      "q": [
+        "How many classical dances does the Sangeet Natak Akademi recognise?",
+        "संगीत नाटक अकादमी कितने शास्त्रीय नृत्यों को मान्यता देती है?"
+      ],
+      "o": [
+        [
+          "8",
+          "8"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "9",
+          "9"
+        ],
+        [
+          "10",
+          "10"
+        ]
+      ],
+      "e": [
+        "Eight: Bharatanatyam, Kathak, Kathakali, Kuchipudi, Odissi, Manipuri, Mohiniyattam and Sattriya. The Ministry of Culture also lists Chhau.",
+        "आठ: भरतनाट्यम, कथक, कथकली, कुचिपुड़ी, ओडिसी, मणिपुरी, मोहिनीअट्टम और सत्रिया। संस्कृति मंत्रालय छऊ को भी गिनता है।"
+      ]
+    },
+    {
+      "t": "classical",
+      "q": [
+        "Which classical dance was founded by Srimanta Sankardev?",
+        "किस शास्त्रीय नृत्य के प्रवर्तक श्रीमंत शंकरदेव थे?"
+      ],
+      "o": [
+        [
+          "Sattriya",
+          "सत्रिया"
+        ],
+        [
+          "Manipuri",
+          "मणिपुरी"
+        ],
+        [
+          "Odissi",
+          "ओडिसी"
+        ],
+        [
+          "Kuchipudi",
+          "कुचिपुड़ी"
+        ]
+      ],
+      "e": [
+        "Sattriya of Assam grew in the Vaishnava monasteries (sattras) founded by Sankardev; it was recognised as classical in 2000.",
+        "असम का सत्रिया शंकरदेव द्वारा स्थापित वैष्णव मठों (सत्रों) में विकसित हुआ; इसे 2000 में शास्त्रीय मान्यता मिली।"
+      ]
+    },
+    {
+      "t": "classical",
+      "q": [
+        "Birju Maharaj is associated with which dance?",
+        "बिरजू महाराज किस नृत्य से जुड़े हैं?"
+      ],
+      "o": [
+        [
+          "Kathak",
+          "कथक"
+        ],
+        [
+          "Odissi",
+          "ओडिसी"
+        ],
+        [
+          "Kathakali",
+          "कथकली"
+        ],
+        [
+          "Manipuri",
+          "मणिपुरी"
+        ]
+      ],
+      "e": [
+        "Birju Maharaj was a master of the Lucknow gharana of Kathak.",
+        "बिरजू महाराज कथक के लखनऊ घराने के महान कलाकार थे।"
+      ]
+    },
+    {
+      "t": "classical",
+      "q": [
+        "Kelucharan Mohapatra is associated with",
+        "केलुचरण महापात्र किस नृत्य से जुड़े हैं?"
+      ],
+      "o": [
+        [
+          "Odissi",
+          "ओडिसी"
+        ],
+        [
+          "Bharatanatyam",
+          "भरतनाट्यम"
+        ],
+        [
+          "Kuchipudi",
+          "कुचिपुड़ी"
+        ],
+        [
+          "Sattriya",
+          "सत्रिया"
+        ]
+      ],
+      "e": [
+        "Guru Kelucharan Mohapatra revived and shaped modern Odissi.",
+        "गुरु केलुचरण महापात्र ने आधुनिक ओडिसी को पुनर्जीवित और विकसित किया।"
+      ]
+    },
+    {
+      "t": "classical",
+      "q": [
+        "Who founded the Kerala Kalamandalam in 1930?",
+        "1930 में केरल कलामंडलम की स्थापना किसने की?"
+      ],
+      "o": [
+        [
+          "Vallathol Narayana Menon",
+          "वल्लतोल नारायण मेनन"
+        ],
+        [
+          "Kunchan Nambiar",
+          "कुंचन नांबियार"
+        ],
+        [
+          "Rukmini Devi Arundale",
+          "रुक्मिणी देवी अरुंडेल"
+        ],
+        [
+          "Uday Shankar",
+          "उदय शंकर"
+        ]
+      ],
+      "e": [
+        "The poet Vallathol founded the Kerala Kalamandalam to revive Kathakali.",
+        "कवि वल्लतोल ने कथकली को पुनर्जीवित करने के लिए केरल कलामंडलम की स्थापना की।"
+      ]
+    },
+    {
+      "t": "classical",
+      "q": [
+        "Rukmini Devi Arundale is known for reviving",
+        "रुक्मिणी देवी अरुंडेल किसके पुनरुद्धार के लिए जानी जाती हैं?"
+      ],
+      "o": [
+        [
+          "Bharatanatyam",
+          "भरतनाट्यम"
+        ],
+        [
+          "Kathak",
+          "कथक"
+        ],
+        [
+          "Mohiniyattam",
+          "मोहिनीअट्टम"
+        ],
+        [
+          "Odissi",
+          "ओडिसी"
+        ]
+      ],
+      "e": [
+        "She revived Bharatanatyam and founded Kalakshetra in Chennai (1936).",
+        "उन्होंने भरतनाट्यम का पुनरुद्धार किया और चेन्नई में कलाक्षेत्र (1936) की स्थापना की।"
+      ]
+    },
+    {
+      "t": "classical",
+      "q": [
+        "Which classical dance is linked with Siddhendra Yogi?",
+        "कौन-सा शास्त्रीय नृत्य सिद्धेंद्र योगी से जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Kuchipudi",
+          "कुचिपुड़ी"
+        ],
+        [
+          "Kathakali",
+          "कथकली"
+        ],
+        [
+          "Manipuri",
+          "मणिपुरी"
+        ],
+        [
+          "Odissi",
+          "ओडिसी"
+        ]
+      ],
+      "e": [
+        "Siddhendra Yogi is credited with shaping Kuchipudi in the village of Kuchipudi, Andhra Pradesh.",
+        "सिद्धेंद्र योगी को आंध्र प्रदेश के कुचिपुड़ी गाँव में कुचिपुड़ी को आकार देने का श्रेय है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "What does 'Alarippu' mean in Bharatanatyam?",
+        "भरतनाट्यम में ‘अलारिप्पु’ का अर्थ क्या है?"
+      ],
+      "o": [
+        [
+          "To adorn with flowers",
+          "फूलों से सजाना"
+        ],
+        [
+          "The closing piece",
+          "समापन अंश"
+        ],
+        [
+          "A hand gesture",
+          "हाथ का संकेत"
+        ],
+        [
+          "A spin",
+          "घुमाव"
+        ]
+      ],
+      "e": [
+        "Alarippu, the opening item, means to adorn with flowers.",
+        "प्रारंभिक अंश अलारिप्पु का अर्थ है फूलों से सजाना।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "Tribhanga, the three-bend posture, belongs to",
+        "त्रिभंग (तीन मोड़ वाली मुद्रा) किस नृत्य की है?"
+      ],
+      "o": [
+        [
+          "Odissi",
+          "ओडिसी"
+        ],
+        [
+          "Kathak",
+          "कथक"
+        ],
+        [
+          "Kathakali",
+          "कथकली"
+        ],
+        [
+          "Bharatanatyam",
+          "भरतनाट्यम"
+        ]
+      ],
+      "e": [
+        "Tribhanga, bending at the neck, torso and knee, is the signature posture of Odissi.",
+        "गर्दन, धड़ और घुटने पर मुड़ने वाली त्रिभंग मुद्रा ओडिसी की पहचान है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "In which dance is Tarangam performed on the rim of a brass plate?",
+        "किस नृत्य में तरंगम पीतल की थाली के किनारे पर किया जाता है?"
+      ],
+      "o": [
+        [
+          "Kuchipudi",
+          "कुचिपुड़ी"
+        ],
+        [
+          "Bharatanatyam",
+          "भरतनाट्यम"
+        ],
+        [
+          "Mohiniyattam",
+          "मोहिनीअट्टम"
+        ],
+        [
+          "Sattriya",
+          "सत्रिया"
+        ]
+      ],
+      "e": [
+        "Tarangam is a Kuchipudi item danced on a brass plate.",
+        "तरंगम कुचिपुड़ी का अंश है जो पीतल की थाली पर किया जाता है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "Who wrote the Natya Shastra?",
+        "नाट्यशास्त्र किसने लिखा?"
+      ],
+      "o": [
+        [
+          "Bharata Muni",
+          "भरतमुनि"
+        ],
+        [
+          "Kalidasa",
+          "कालिदास"
+        ],
+        [
+          "Jayadeva",
+          "जयदेव"
+        ],
+        [
+          "Abhinavagupta",
+          "अभिनवगुप्त"
+        ]
+      ],
+      "e": [
+        "The Natya Shastra, the ancient treatise on drama, dance and music, is ascribed to Bharata Muni.",
+        "नाट्य, नृत्य और संगीत का प्राचीन ग्रंथ नाट्यशास्त्र भरतमुनि का माना जाता है।"
+      ]
+    },
+    {
+      "t": "terms",
+      "q": [
+        "Chakkars (spins) and tatkar (footwork) are features of",
+        "चक्कर (घुमाव) और तत्कार (पदचाप) किस नृत्य की विशेषताएँ हैं?"
+      ],
+      "o": [
+        [
+          "Kathak",
+          "कथक"
+        ],
+        [
+          "Manipuri",
+          "मणिपुरी"
+        ],
+        [
+          "Odissi",
+          "ओडिसी"
+        ],
+        [
+          "Kuchipudi",
+          "कुचिपुड़ी"
+        ]
+      ],
+      "e": [
+        "Fast spins and rhythmic footwork with ankle bells mark Kathak.",
+        "तेज़ घुमाव और घुँघरुओं के साथ लयबद्ध पदचाप कथक की पहचान है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Gotipua, danced by boys dressed as girls, belongs to",
+        "लड़कियों के वेश में लड़कों द्वारा किया जाने वाला गोटिपुआ किस राज्य का है?"
+      ],
+      "o": [
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ],
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Andhra Pradesh",
+          "आंध्र प्रदेश"
+        ]
+      ],
+      "e": [
+        "Gotipua is from Odisha and is a forerunner of Odissi.",
+        "गोटिपुआ ओडिशा का है और ओडिसी का पूर्ववर्ती है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Oppana, a dance at Muslim weddings, belongs to",
+        "मुस्लिम विवाहों का नृत्य ओप्पना किस राज्य का है?"
+      ],
+      "o": [
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Goa",
+          "गोवा"
+        ]
+      ],
+      "e": [
+        "Oppana is a dance of the Mappila Muslims of Kerala.",
+        "ओप्पना केरल के मप्पिला मुसलमानों का नृत्य है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Maruni, performed at Tihar and weddings, is a dance of",
+        "तिहार और विवाहों पर होने वाला मारुनी किस राज्य का नृत्य है?"
+      ],
+      "o": [
+        [
+          "Sikkim",
+          "सिक्किम"
+        ],
+        [
+          "Meghalaya",
+          "मेघालय"
+        ],
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ],
+        [
+          "Himachal Pradesh",
+          "हिमाचल प्रदेश"
+        ]
+      ],
+      "e": [
+        "Maruni is a Nepali dance of Sikkim.",
+        "मारुनी सिक्किम का नेपाली नृत्य है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Dumhal, performed by the Wattal community, is a dance of",
+        "वट्टल समुदाय का दुमहल किस क्षेत्र का नृत्य है?"
+      ],
+      "o": [
+        [
+          "Jammu and Kashmir",
+          "जम्मू और कश्मीर"
+        ],
+        [
+          "Ladakh",
+          "लद्दाख"
+        ],
+        [
+          "Himachal Pradesh",
+          "हिमाचल प्रदेश"
+        ],
+        [
+          "Punjab",
+          "पंजाब"
+        ]
+      ],
+      "e": [
+        "Dumhal is from the Kashmir valley.",
+        "दुमहल कश्मीर घाटी का है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Raslila, enacting the life of Krishna, is a dance of",
+        "कृष्ण की लीलाओं का मंचन करने वाली रासलीला किस राज्य की है?"
+      ],
+      "o": [
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Bihar",
+          "बिहार"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ]
+      ],
+      "e": [
+        "Raslila comes from the Braj region (Mathura and Vrindavan) of Uttar Pradesh.",
+        "रासलीला उत्तर प्रदेश के ब्रज क्षेत्र (मथुरा और वृंदावन) की है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Panthi is a dance of the Satnami community of",
+        "पंथी किस राज्य के सतनामी समुदाय का नृत्य है?"
+      ],
+      "o": [
+        [
+          "Chhattisgarh",
+          "छत्तीसगढ़"
+        ],
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Jharkhand",
+          "झारखंड"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ]
+      ],
+      "e": [
+        "Panthi is performed by the Satnami community of Chhattisgarh.",
+        "पंथी छत्तीसगढ़ के सतनामी समुदाय द्वारा किया जाता है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Karakattam, danced with a decorated pot on the head before Mariamman, is from",
+        "मरियम्मन के सामने सिर पर सजा घड़ा रखकर किया जाने वाला करगट्टम कहाँ का है?"
+      ],
+      "o": [
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Andhra Pradesh",
+          "आंध्र प्रदेश"
+        ]
+      ],
+      "e": [
+        "Karakattam is a Tamil folk dance in honour of the rain goddess Mariamman.",
+        "करगट्टम वर्षा देवी मरियम्मन के सम्मान में तमिलनाडु का लोक नृत्य है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Bhavai, balancing a tower of pots, is a dance of",
+        "घड़ों की मीनार संतुलित करने वाला भवाई किस राज्य का नृत्य है?"
+      ],
+      "o": [
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Haryana",
+          "हरियाणा"
+        ],
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ]
+      ],
+      "e": [
+        "Bhavai is from Rajasthan (a related form exists in Gujarat).",
+        "भवाई राजस्थान का है (गुजरात में इससे जुड़ा रूप भी है)।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Tippani, danced with long sticks to pound floors, belongs to",
+        "लंबे डंडों से फ़र्श कूटते हुए किया जाने वाला टिप्पणी किस राज्य का है?"
+      ],
+      "o": [
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ],
+        [
+          "Goa",
+          "गोवा"
+        ]
+      ],
+      "e": [
+        "Tippani comes from the Saurashtra region of Gujarat.",
+        "टिप्पणी गुजरात के सौराष्ट्र क्षेत्र का है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Ottamthullal was created by",
+        "ओट्टमतुल्लल की रचना किसने की?"
+      ],
+      "o": [
+        [
+          "Kunchan Nambiar",
+          "कुंचन नांबियार"
+        ],
+        [
+          "Vallathol",
+          "वल्लतोल"
+        ],
+        [
+          "Swathi Thirunal",
+          "स्वाति तिरुनाल"
+        ],
+        [
+          "Kalamandalam Gopi",
+          "कलामंडलम गोपी"
+        ]
+      ],
+      "e": [
+        "The 18th-century poet Kunchan Nambiar created Ottamthullal.",
+        "18वीं सदी के कवि कुंचन नांबियार ने ओट्टमतुल्लल रचा।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Perini Sivatandavam is a warrior dance of",
+        "पेरिणी शिवतांडवम किस राज्य का योद्धा नृत्य है?"
+      ],
+      "o": [
+        [
+          "Telangana",
+          "तेलंगाना"
+        ],
+        [
+          "Andhra Pradesh",
+          "आंध्र प्रदेश"
+        ],
+        [
+          "Karnataka",
+          "कर्नाटक"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ]
+      ],
+      "e": [
+        "Perini comes from the Kakatiya era around Warangal, Telangana.",
+        "पेरिणी वारंगल, तेलंगाना के काकतीय काल से है।"
+      ]
+    },
+    {
+      "t": "folk",
+      "q": [
+        "Bidesia, the Bhojpuri dance-drama, is associated with",
+        "भोजपुरी नृत्य-नाट्य बिदेसिया किससे जुड़ा है?"
+      ],
+      "o": [
+        [
+          "Bhikhari Thakur",
+          "भिखारी ठाकुर"
+        ],
+        [
+          "Habib Tanvir",
+          "हबीब तनवीर"
+        ],
+        [
+          "Bhupen Hazarika",
+          "भूपेन हज़ारिका"
+        ],
+        [
+          "Teejan Bai",
+          "तीजन बाई"
+        ]
+      ],
+      "e": [
+        "Bhikhari Thakur, the \"Shakespeare of Bhojpuri\", popularised Bidesia.",
+        "\"भोजपुरी के शेक्सपियर\" भिखारी ठाकुर ने बिदेसिया को लोकप्रिय बनाया।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Bagurumba, the butterfly dance, is performed by the",
+        "तितली नृत्य बागुरुम्बा कौन करता है?"
+      ],
+      "o": [
+        [
+          "Bodos of Assam",
+          "असम के बोडो"
+        ],
+        [
+          "Khasis of Meghalaya",
+          "मेघालय के खासी"
+        ],
+        [
+          "Adis of Arunachal Pradesh",
+          "अरुणाचल के आदि"
+        ],
+        [
+          "Mizos of Mizoram",
+          "मिज़ोरम के मिज़ो"
+        ]
+      ],
+      "e": [
+        "Bagurumba is the dance of the Bodo people of Assam.",
+        "बागुरुम्बा असम के बोडो लोगों का नृत्य है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Cheraw, the bamboo dance, belongs to",
+        "बाँस नृत्य चेराव किस राज्य का है?"
+      ],
+      "o": [
+        [
+          "Mizoram",
+          "मिज़ोरम"
+        ],
+        [
+          "Nagaland",
+          "नागालैंड"
+        ],
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ],
+        [
+          "Manipur",
+          "मणिपुर"
+        ]
+      ],
+      "e": [
+        "Cheraw is the bamboo dance of Mizoram.",
+        "चेराव मिज़ोरम का बाँस नृत्य है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Hojagiri, balancing on a pitcher, is a dance of",
+        "घड़े पर संतुलन वाला होजागिरी किस राज्य का नृत्य है?"
+      ],
+      "o": [
+        [
+          "Tripura",
+          "त्रिपुरा"
+        ],
+        [
+          "Assam",
+          "असम"
+        ],
+        [
+          "Meghalaya",
+          "मेघालय"
+        ],
+        [
+          "Mizoram",
+          "मिज़ोरम"
+        ]
+      ],
+      "e": [
+        "Hojagiri is performed by the Reang community of Tripura.",
+        "होजागिरी त्रिपुरा के रियांग समुदाय द्वारा किया जाता है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Wangala is the harvest festival dance of the",
+        "वांगला किसका फ़सल पर्व नृत्य है?"
+      ],
+      "o": [
+        [
+          "Garos of Meghalaya",
+          "मेघालय के गारो"
+        ],
+        [
+          "Khasis of Meghalaya",
+          "मेघालय के खासी"
+        ],
+        [
+          "Nagas of Nagaland",
+          "नागालैंड के नागा"
+        ],
+        [
+          "Bodos of Assam",
+          "असम के बोडो"
+        ]
+      ],
+      "e": [
+        "Wangala honours the sun god Saljong of the Garos.",
+        "वांगला गारो लोगों के सूर्य देव सालजोंग के सम्मान में होता है।"
+      ]
+    },
+    {
+      "t": "tribal",
+      "q": [
+        "Siddi Dhamal is performed by a community of African origin in",
+        "अफ़्रीकी मूल का समुदाय सिद्दी धमाल कहाँ करता है?"
+      ],
+      "o": [
+        [
+          "Gujarat",
+          "गुजरात"
+        ],
+        [
+          "Goa",
+          "गोवा"
+        ],
+        [
+          "Kerala",
+          "केरल"
+        ],
+        [
+          "Maharashtra",
+          "महाराष्ट्र"
+        ]
+      ],
+      "e": [
+        "The Siddis of Gujarat perform Dhamal, especially around the Gir region.",
+        "गुजरात के सिद्दी, विशेषकर गिर क्षेत्र में, धमाल करते हैं।"
+      ]
+    },
+    {
+      "t": "fest",
+      "q": [
+        "The Khajuraho Dance Festival is held in",
+        "खजुराहो नृत्य महोत्सव कहाँ होता है?"
+      ],
+      "o": [
+        [
+          "Madhya Pradesh",
+          "मध्य प्रदेश"
+        ],
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "Uttar Pradesh",
+          "उत्तर प्रदेश"
+        ],
+        [
+          "Rajasthan",
+          "राजस्थान"
+        ]
+      ],
+      "e": [
+        "It is held at the Khajuraho temples in Madhya Pradesh.",
+        "यह मध्य प्रदेश के खजुराहो मंदिरों में होता है।"
+      ]
+    },
+    {
+      "t": "fest",
+      "q": [
+        "The Konark Dance Festival is held in",
+        "कोणार्क नृत्य महोत्सव कहाँ होता है?"
+      ],
+      "o": [
+        [
+          "Odisha",
+          "ओडिशा"
+        ],
+        [
+          "West Bengal",
+          "पश्चिम बंगाल"
+        ],
+        [
+          "Tamil Nadu",
+          "तमिलनाडु"
+        ],
+        [
+          "Andhra Pradesh",
+          "आंध्र प्रदेश"
+        ]
+      ],
+      "e": [
+        "It is held against the Sun Temple at Konark, Odisha.",
+        "यह ओडिशा के कोणार्क सूर्य मंदिर की पृष्ठभूमि में होता है।"
+      ]
+    }
+  ]
+}
