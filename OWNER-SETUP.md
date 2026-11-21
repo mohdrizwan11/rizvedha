@@ -1,13 +1,21 @@
-# Supabase setup — the slow, click-by-click version
+# Owner setup — Supabase (maintainer notes)
 
-This is the beginner-friendly walkthrough. The short version is in
-[`README.md`](./README.md#supabase-setup--establish-these-things-all-optional).
+> **For the person hosting Riz Vedha only.** Visitors never see or do any of
+> this. They open the site and start studying.
 
-**You do not need any of this to study.** Without it the whole app works and
-saves progress on the device. Supabase adds exactly two things:
+This is the beginner-friendly walkthrough. Supabase does two jobs for the hosted
+app:
 
-1. **Google sign-in**, so progress follows you to another phone or laptop.
+1. **Google sign-in**, so a learner's progress follows them to another phone or
+   laptop.
 2. **Anonymous usage counts**, so you can see how many people opened the site.
+
+Neither job is needed to use the app; it works, and saves progress on the
+device, without a backend. Your project is already created:
+
+- Dashboard: <https://supabase.com/dashboard/project/zpebfonidmviatxaosic>
+- Project URL: `https://zpebfonidmviatxaosic.supabase.co`
+- The public key is already inside `.env.local` in this folder. Do not touch it.
 
 There are three jobs:
 
@@ -16,12 +24,6 @@ There are three jobs:
 | 1 | Create the tables | ~2 min | Supabase → SQL Editor |
 | 2 | Turn on Google sign-in | ~10 min | Google Cloud + Supabase |
 | 3 | Tell Supabase the site address | ~1 min | Supabase → Authentication → URL Configuration |
-
-Your project is already created:
-
-- Dashboard: <https://supabase.com/dashboard/project/zpebfonidmviatxaosic>
-- Project URL: `https://zpebfonidmviatxaosic.supabase.co`
-- The public key is already inside `.env.local` in this folder. Do not touch it.
 
 ---
 

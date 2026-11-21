@@ -135,7 +135,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signIn = useCallback(async () => {
     const sb = await getSupabase();
     if (!sb) {
-      setError("Sign-in is not configured yet. Add your Supabase keys to .env.");
+      setError("Sign-in isn't available right now. Please try again in a moment.");
       return;
     }
     setError(null);
@@ -143,7 +143,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       provider: "google",
       options: { redirectTo: window.location.origin },
     });
-    if (err) setError(err.message);
+    if (err) {
+      console.warn("Google sign-in could not start:", err.message);
+      setError("Google sign-in could not start. Please try again in a moment.");
+    }
   }, []);
 
   const signOut = useCallback(async () => {
